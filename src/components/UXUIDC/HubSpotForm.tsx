@@ -7,7 +7,7 @@
 
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface HubSpotFormProps {
   /** HubSpot form ID */
@@ -36,8 +36,9 @@ export default function HubSpotForm({
   style = {},
 }: HubSpotFormProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const generatedId = useRef(`hubspot-form-${Math.random().toString(36).substr(2, 9)}`);
-  const targetId = containerId || generatedId.current;
+  // Use useState with lazy initializer to avoid calling Math.random() during render
+  const [generatedId] = useState(() => `hubspot-form-${Math.random().toString(36).substr(2, 9)}`);
+  const targetId = containerId || generatedId;
 
   useEffect(() => {
     // Load HubSpot form script
