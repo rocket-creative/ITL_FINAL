@@ -1,0 +1,16 @@
+Point Mutation Mice: https://getargeting-2026.vercel.app/point-mutation-mice
+
+
+
+This page itself is fine but on the links on the bottom of the page, these two links and click through pages have to be removed completely:
+
+https://getargeting-2026.vercel.app/derivative-alleles
+
+https://getargeting-2026.vercel.app/es-cell-gene-targeting
+
+
+
+
+
+
+
