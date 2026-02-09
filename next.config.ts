@@ -68,11 +68,8 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['gsap', '@headlessui/react'],
   },
 
-  // Turbopack configuration (Next.js 16+)
-  // Note: Webpack config below only applies when using webpack bundler
-  turbopack: {
-    root: process.cwd(), // Fix workspace root detection
-  },
+  // Turbopack configuration removed - not supported in Next.js 15.x
+  // This option is only available in Next.js 16+
 
   // Security headers for all routes
   async headers() {
