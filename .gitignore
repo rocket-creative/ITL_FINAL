@@ -1,4 +1,5 @@
 .ai-errors.log
+.DS_Store
 
 # Change documents (source files, not needed in repo)
 changes/
@@ -8,3 +9,4 @@ Services-Corrections/
 # Extracted content (generated from source docs)
 itl-website/extracted-changes/
 .vercel
+node_modules
