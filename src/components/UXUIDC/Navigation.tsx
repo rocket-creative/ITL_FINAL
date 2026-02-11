@@ -74,21 +74,31 @@ const navigationItems: NavItem[] = [
     categorizedChildren: {
       categories: [
         {
-          title: 'Immune Checkpoint',
+          title: 'All Models',
           items: [
-            { label: 'All Checkpoint Models', href: '/humanized-immune-checkpoint-mice' },
+            { label: 'All Catalog Models', href: '/all-catalog-mouse-models' },
+          ],
+        },
+        {
+          title: 'Single Checkpoint',
+          items: [
+            { label: 'All Single Checkpoint', href: '/single-checkpoint-mice' },
             { label: 'PD1 Humanized', href: '/pd1-humanized-mice' },
             { label: 'PDL1 Humanized', href: '/pdl1-humanized-mice' },
             { label: 'CTLA4 Humanized', href: '/ctla4-humanized-mice' },
             { label: 'LAG3 Humanized', href: '/lag3-humanized-mice' },
             { label: 'TIM3 Humanized', href: '/tim3-humanized-mice' },
+          ],
+        },
+        {
+          title: 'Double Checkpoint',
+          items: [
             { label: 'Double Checkpoint', href: '/double-checkpoint-mice' },
           ],
         },
         {
           title: 'Disease Models',
           items: [
-            { label: 'All Catalog Models', href: '/all-catalog-mouse-models' },
             { label: 'Disease Model Catalog', href: '/disease-model-catalog' },
             { label: 'Syngeneic Tumors', href: '/syngeneic-tumor-models' },
           ],
@@ -219,10 +229,8 @@ const navigationItems: NavItem[] = [
       { label: 'Lab Signals Newsletter', href: '/lab-signals' },
       { label: 'Ingenious Blog', href: '/ingenious-blog' },
       { label: 'Breeding Architect', href: '/breeding-scheme-architect' },
-      { label: 'Model Generation Guide', href: '/mouse-model-generation-guide' },
       { label: 'Strain Backgrounds', href: '/mouse-strain-backgrounds' },
       { label: 'Glossary', href: '/glossary' },
-      { label: 'Video Library', href: '/video-library' },
     ],
   },
   {

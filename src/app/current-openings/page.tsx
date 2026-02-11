@@ -187,7 +187,7 @@ export default function CurrentOpeningsPage() {
                 },
                 {
                   title: 'Long Island Location',
-                  description: 'Our facility in Ronkonkoma, NY offers easy access to NYC and Long Island communities.',
+                  description: 'Our facility in Holbrook, NY offers easy access to NYC and Long Island communities.',
                 },
                 {
                   title: '26+ Years of Excellence',

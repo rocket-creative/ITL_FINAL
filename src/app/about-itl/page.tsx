@@ -17,7 +17,7 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "About ingenious targeting laboratory",
-  intro: "Since 1998, ingenious targeting laboratory has been generating custom mouse, rat, and rabbit models for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,500 gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
+  intro: "Since 1998, ingenious targeting laboratory has been generating custom mouse, rat, and rabbit models for researchers worldwide. From our facilities in Holbrook, New York, we have completed more than 2,500 gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
   description: ""
 };
 

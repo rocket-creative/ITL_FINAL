@@ -88,7 +88,7 @@ export default function CustomRabbitModelsPage() {
                 marginBottom: '20px',
               }}
             >
-              Custom Rabbit Models
+              Rabbit Knockout Models
             </h1>
             <p
               className="hero-animate"

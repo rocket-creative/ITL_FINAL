@@ -750,51 +750,6 @@ function BreedingSchemeArchitectContent() {
         </div>
       </section>
 
-      {/* ========== TESTIMONIAL SECTION ========== */}
-      <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-          <div
-            className="animate-in"
-            style={{
-              backgroundColor: 'rgba(255,255,255,0.05)',
-              border: '1px solid rgba(255,255,255,0.1)',
-              padding: '40px',
-            }}
-          >
-            <IconMessageCircle
-              size={40}
-              color="#00d4d4"
-              style={{ marginBottom: '20px' }}
-            />
-            <p
-              style={{
-                color: 'rgba(255,255,255,0.9)',
-                fontFamily: 'var(--system-ui)',
-                fontSize: '1.1rem',
-                fontWeight: 400,
-                lineHeight: '1.8rem',
-                fontStyle: 'italic',
-                marginBottom: '20px',
-              }}
-            >
-              &quot;Planning the breeding scheme for our triple transgenic model seemed
-              overwhelming. This tool helped us visualize the entire process and estimate
-              resources before we started.&quot;
-            </p>
-            <p
-              style={{
-                color: '#00d4d4',
-                fontFamily: 'var(--system-ui)',
-                fontSize: '.9rem',
-                fontWeight: 500,
-              }}
-            >
-              — Michaela Ballas, Research Scientist
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ========== START YOUR PROJECT CTA ========== */}
       <UXUIDCStartProjectCTA
         title="Ready to Start Your Custom Model Project?"
