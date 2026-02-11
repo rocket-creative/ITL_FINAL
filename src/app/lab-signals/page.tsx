@@ -19,6 +19,7 @@ import {
   IconTarget,
   IconFlask,
   IconMail,
+  BreadcrumbSchema,
 } from '@/components/UXUIDC';
 import { 
   newsletterArticles, 
@@ -629,6 +630,14 @@ export default function LabSignalsPage() {
         </section>
 
       </div>
+
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Lab Signals', path: '/lab-signals' },
+        ]}
+      />
     </div>
   );
 }
