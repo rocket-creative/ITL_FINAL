@@ -45,7 +45,7 @@ const relatedLinks = [
   { title: "Cryopreservation Services", href: "/cryopreservation-services" },
   { title: "Speed Expansion Breeding", href: "/speed-expansion-breeding" },
   { title: "C57bl6 Mouse Background", href: "/c57bl6-mouse-background" },
-  { title: "Strain Selection Guide", href: "/strain-selection-guide" },
+  { title: "Mouse Strain Backgrounds", href: "/mouse-strain-backgrounds" },
   { title: "Knockout Mouse Models", href: "/knockout-mouse-models" },
   { title: "Knockin Mouse Models", href: "/knockin-mouse-models" }
 ];

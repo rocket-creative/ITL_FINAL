@@ -179,6 +179,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "A well-characterized safe harbor site in the mouse genome, located on chromosome 6. It supports stable and ubiquitous expression of inserted genes without interfering with nearby genomic functions and is the standard integration site for transgenic constructs.",
     category: "Mouse Model Strategies & Allele Types",
   },
+  {
+    term: "Rosa26",
+    slug: "rosa26",
+    definition: "A ubiquitously expressed safe harbor locus on mouse chromosome 6 used for targeted transgene insertion. The Rosa26 locus supports stable, position-independent expression without disrupting neighboring genes, making it the most commonly used integration site for constitutive or conditional transgene expression, Cre driver lines, and reporter alleles.",
+    category: "Mouse Model Strategies & Allele Types",
+  },
+  {
+    term: "Reporter Knockin",
+    slug: "reporter-knockin",
+    definition: "A genetically engineered mouse in which a reporter gene (GFP, tdTomato, LacZ, or luciferase) is inserted at an endogenous locus to visualize gene expression under native regulatory control. Unlike transgenic reporters, knockin reporters are subject to all endogenous transcriptional and post-transcriptional regulation, providing accurate spatiotemporal expression patterns.",
+    category: "Mouse Model Strategies & Allele Types",
+  },
 
   // ═══════════════════════════════════════════════════════════════════════════
   // CATEGORY 3: Recombination Systems & Tools (10 terms)
@@ -229,6 +241,12 @@ export const glossaryTerms: GlossaryTerm[] = [
     term: "Inducible Cre (Cre-ERT2 / Tamoxifen)",
     slug: "inducible-cre-ert2",
     definition: "A system that fuses Cre recombinase to a modified estrogen-receptor ligand-binding domain (ERT2), confining it to the cytoplasm until activation by tamoxifen, thus providing temporal control of recombination.",
+    category: "Recombination Systems & Tools",
+  },
+  {
+    term: "Tamoxifen Inducible Cre",
+    slug: "tamoxifen-inducible-cre",
+    definition: "A temporal gene deletion system using CreERT2 fusion protein—Cre recombinase fused to a mutant estrogen receptor ligand-binding domain (ERT2). Without tamoxifen, CreERT2 is sequestered in the cytoplasm by HSP90 chaperones. Tamoxifen administration triggers nuclear translocation and LoxP recombination, enabling gene deletion at defined timepoints in adult animals.",
     category: "Recombination Systems & Tools",
   },
   {

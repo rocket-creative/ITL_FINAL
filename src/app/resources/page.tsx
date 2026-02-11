@@ -105,8 +105,8 @@ const technicalResourcesData = {
     {
       title: "Strain Background Information",
       links: [
+        { href: "/mouse-strain-backgrounds", label: "Mouse Strain Backgrounds" },
         { href: "/c57bl6-mouse-background", label: "C57BL/6 Mouse Background" },
-        { href: "/strain-selection-guide", label: "Strain Selection Guide" },
         { href: "/backcrossing-services", label: "Backcrossing Services" }
       ]
     }

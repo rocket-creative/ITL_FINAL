@@ -43,7 +43,6 @@ const faqData = [
 const relatedLinks = [
   { title: "C57bl6 Mouse Background", href: "/c57bl6-mouse-background" },
   { title: "Mouse Strain Backgrounds", href: "/mouse-strain-backgrounds" },
-  { title: "Strain Selection Guide", href: "/strain-selection-guide" },
   { title: "Balbc Mouse Background", href: "/balbc-mouse-background" },
   { title: "Custom Mouse Models", href: "/custom-mouse-models" },
   { title: "Backcrossing Services", href: "/backcrossing-services" },

@@ -232,8 +232,8 @@ const relatedTherapeuticAreas = [
 
 const projectResources = [
   { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines" },
-  { title: "Strain Selection Guide", href: "/strain-selection-guide" },
-  { title: "FAQs", href: "/faqs" }
+  { title: "Mouse Strain Backgrounds", href: "/mouse-strain-backgrounds" },
+  { title: "FAQs", href: "/faq" }
 ];
 
 // FAQ Data

@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/scientific-leadership',
     '/quality-control',
     '/conditional-knockout-vs-conventional-knockout',
+    '/mouse-strain-backgrounds',
 
     // Custom Mouse Models (18)
     '/custom-mouse-models',
@@ -85,7 +86,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/c57bl6j-vs-c57bl6n',
     '/balbc-mouse-background',
     '/backcrossing-services',
-    '/strain-selection-guide',
 
     // Applications (10)
     '/research-applications',

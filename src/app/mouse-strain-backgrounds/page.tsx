@@ -653,6 +653,7 @@ export default function MouseStrainBackgroundsPage() {
                   fontSize: '1.3rem',
                   fontWeight: 600,
                   marginBottom: '15px',
+                  whiteSpace: 'nowrap',
                 }}>
                   Immunological Characteristics
                 </h3>
@@ -1077,7 +1078,7 @@ export default function MouseStrainBackgroundsPage() {
 
               <div style={{ marginTop: '30px', textAlign: 'center' }}>
                 <Link 
-                  href="/strain-selection-guide"
+                  href="/contact"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -1092,7 +1093,7 @@ export default function MouseStrainBackgroundsPage() {
                     transition: 'all 0.3s ease',
                   }}
                 >
-                  View Complete Strain Selection Guide
+                  Consult with Our Scientists
                   <IconChevronRight size={16} color={BRAND.white} />
                 </Link>
               </div>
@@ -1124,7 +1125,6 @@ export default function MouseStrainBackgroundsPage() {
                 { title: 'C57BL/6J vs C57BL/6N', href: '/c57bl6j-vs-c57bl6n', description: 'Detailed substrain comparison and selection guidance' },
                 { title: 'BALB/c Background', href: '/balbc-mouse-background', description: 'Th2 biased strain ideal for immunology and allergy research' },
                 { title: 'Backcrossing Services', href: '/backcrossing-services', description: 'Transfer your model to the optimal genetic background' },
-                { title: 'Strain Selection Guide', href: '/strain-selection-guide', description: 'Comprehensive guide to choosing the right background' },
               ].map((link, index) => (
                 <Link
                   key={index}
