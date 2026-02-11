@@ -381,11 +381,12 @@ export default function FAQPage() {
   }, [filteredFAQs]);
 
   return (
-    <>
+    <div>
       <UXUIDCNavigation />
       
-      {/* Hero Section */}
-      <section 
+      <main id="main-content">
+        {/* Hero Section */}
+        <section 
         className="flex flex-col justify-center items-center"
         style={{ 
           backgroundColor: BRAND.navy, 
@@ -671,8 +672,9 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <UXUIDCStartProjectCTA />
+        {/* CTA */}
+        <UXUIDCStartProjectCTA />
+      </main>
 
       <UXUIDCFooter />
       <UXUIDCCookieConsent />
