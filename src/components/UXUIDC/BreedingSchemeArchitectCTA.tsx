@@ -193,7 +193,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
                   alignItems: 'center',
                   gap: '8px',
                   background: 'linear-gradient(135deg, #ffb800 0%, #ff8c00 100%)',
-                  color: '#000000',
+                  color: '#ffffff',
                   padding: '12px 24px',
                   borderRadius: '6px',
                   fontFamily: 'var(--system-ui)',
@@ -202,10 +202,11 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
                   textDecoration: 'none',
                   transition: 'all 0.3s ease',
                   boxShadow: '0 2px 8px rgba(255,184,0,0.3)',
+                  textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
                 }}
               >
                 <span>Try It Free</span>
-                <IconArrowRight size={16} color="#000000" />
+                <IconArrowRight size={16} color="#ffffff" />
               </Link>
               <Link
                 href="/schedule-meeting"
