@@ -798,7 +798,15 @@ export default function KnockinMouseModelsPage() {
       </main>
 
       <UXUIDCFooter />
-
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Knockin Mouse Models', path: '/knockin-mouse-models' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

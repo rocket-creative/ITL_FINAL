@@ -343,6 +343,14 @@ export default function ResearchApplicationsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Research Applications', path: '/research-applications' },
+        ]}
+      />
     </div>
   );
 }

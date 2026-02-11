@@ -226,6 +226,15 @@ export default function SingleCheckpointMicePage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Single Checkpoint Mice', path: '/single-checkpoint-mice' },
+        ]}
+      />
     </div>
   );
 }

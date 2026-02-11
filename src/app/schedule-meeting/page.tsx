@@ -546,6 +546,14 @@ export default function ScheduleMeetingPage() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Schedule Meeting', path: '/schedule-meeting' },
+        ]}
+      />
     </div>
   );
 }

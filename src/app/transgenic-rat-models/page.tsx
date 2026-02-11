@@ -392,6 +392,15 @@ export default function TransgenicRatModelsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Rat Models', path: '/rat-models' },
+          { name: 'Transgenic Rat Models', path: '/transgenic-rat-models' },
+        ]}
+      />
     </div>
   );
 }

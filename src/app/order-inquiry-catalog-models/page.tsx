@@ -150,7 +150,16 @@ export default function OrderInquiryCatalogModelsPage() {
           </div>
         </main>
         <UXUIDCFooter />
-      </div>
+            
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'Order Inquiry Catalog Models', path: '/order-inquiry-catalog-models' },
+        ]}
+      />
+    </div>
     );
   }
 

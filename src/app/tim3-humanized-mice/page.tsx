@@ -937,7 +937,15 @@ export default function TIM3HumanizedMicePage() {
       </main>
 
       <UXUIDCFooter />
-
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'TIM3 Humanized Mice', path: '/tim3-humanized-mice' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

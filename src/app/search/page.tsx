@@ -385,6 +385,14 @@ export default function SearchPage() {
       </main>
 
       <UXUIDCFooter />
+            
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Search', path: '/search' },
+        ]}
+      />
       <UXUIDCCookieConsent />
     </div>
   );

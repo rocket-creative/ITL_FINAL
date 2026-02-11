@@ -463,6 +463,14 @@ export default function RequestQuotePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Request Quote', path: '/request-quote' },
+        ]}
+      />
     </div>
   );
 }

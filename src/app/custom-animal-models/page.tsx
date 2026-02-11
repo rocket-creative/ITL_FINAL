@@ -337,6 +337,14 @@ export default function CustomAnimalModelsPage() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Animal Models', path: '/custom-animal-models' },
+        ]}
+      />
     </div>
   );
 }

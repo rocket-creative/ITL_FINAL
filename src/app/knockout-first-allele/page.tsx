@@ -344,6 +344,15 @@ export default function KnockoutFirstAllelePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Knockout First Allele', path: '/knockout-first-allele' },
+        ]}
+      />
     </div>
   );
 }

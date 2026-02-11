@@ -1068,6 +1068,15 @@ export default function C57BL6MouseBackgroundPage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Mouse Strain Backgrounds', path: '/mouse-strain-backgrounds' },
+          { name: 'C57BL/6 Mouse Background', path: '/c57bl6-mouse-background' },
+        ]}
+      />
     </div>
   );
 }

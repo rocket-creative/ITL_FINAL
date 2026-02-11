@@ -302,6 +302,15 @@ export default function InducibleRosa26Page() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'Inducible Rosa26', path: '/inducible-rosa26' },
+        ]}
+      />
     </div>
   );
 }

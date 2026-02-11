@@ -14,6 +14,7 @@ import {
   UXUIDCFooter,
   UXUIDCAnimatedFAQ,
   UXUIDCStartProjectCTA,
+  BreadcrumbSchema,
 } from '@/components/UXUIDC';
 import {
   IconDNA,
@@ -881,6 +882,14 @@ function BreedingSchemeArchitectContent() {
       </section>
 
       <UXUIDCFooter />
+
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Breeding Scheme Architect', path: '/breeding-scheme-architect' },
+        ]}
+      />
 
       {/* AI Assistant Panel */}
       <AIAssistantPanel

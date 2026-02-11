@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Temporal Gene Control",
@@ -282,6 +282,15 @@ export default function TamoxifenInducibleCrePage() {
         </section>
       </main>
       <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Tamoxifen Inducible Cre', path: '/tamoxifen-inducible-cre' },
+        ]}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tamoxifen Inducible Cre", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Tamoxifen inducible Cre systems for temporal gene control. CreERT2 for time controlled gene activation since 1998.", "serviceType": "Tamoxifen Inducible Cre" }) }} />
     </div>
   );

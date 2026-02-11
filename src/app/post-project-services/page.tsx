@@ -302,6 +302,15 @@ export default function PostProjectServicesPage() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Support Services', path: '/support-services' },
+          { name: 'Post Project Services', path: '/post-project-services' },
+        ]}
+      />
     </div>
   );
 }

@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
-import { GlossaryTermLink } from '@/components/UXUIDC';
+import { GlossaryTermLink, BreadcrumbSchema } from '@/components/UXUIDC';
 
 // Note: Metadata exported from metadata.ts for this client component
 
@@ -305,6 +305,15 @@ export default function FlpFrtSystemPage() {
         </section>
       </main>
       <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'FLP FRT System', path: '/flp-frt-system' },
+        ]}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "FLP FRT System", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "FLP FRT recombination system for conditional gene targeting and selection cassette removal since 1998.", "serviceType": "FLP FRT System" }) }} />
     </div>
   );

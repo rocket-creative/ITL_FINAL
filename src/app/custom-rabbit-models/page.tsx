@@ -253,6 +253,14 @@ export default function CustomRabbitModelsPage() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Rabbit Models', path: '/custom-rabbit-models' },
+        ]}
+      />
     </div>
   );
 }

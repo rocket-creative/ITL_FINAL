@@ -887,6 +887,14 @@ export default function StartYourProjectPage() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Start Your Project', path: '/start-your-project' },
+        ]}
+      />
     </div>
   );
 }

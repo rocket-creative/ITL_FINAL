@@ -361,6 +361,15 @@ export default function FastMicePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'FAST Mice', path: '/fast-mice' },
+        ]}
+      />
     </div>
   );
 }

@@ -627,7 +627,15 @@ export default function TechnologyOverviewPage() {
       </main>
 
       <UXUIDCFooter />
-
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'Technology Overview', path: '/technology-overview' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

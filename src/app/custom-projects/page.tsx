@@ -686,6 +686,14 @@ export default function CustomProjectsPage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Projects', path: '/custom-projects' },
+        ]}
+      />
     </div>
   );
 }

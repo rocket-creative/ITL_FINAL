@@ -347,6 +347,14 @@ export default function CurrentOpeningsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Current Openings', path: '/current-openings' },
+        ]}
+      />
     </div>
   );
 }

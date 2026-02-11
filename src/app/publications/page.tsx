@@ -806,6 +806,14 @@ export default function PublicationsPage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Publications', path: '/publications' },
+        ]}
+      />
     </div>
   );
 }

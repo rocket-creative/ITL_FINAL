@@ -1095,6 +1095,15 @@ export default function ConditionalVsConventionalGuidePage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'Conditional vs Conventional Guide', path: '/conditional-vs-conventional-guide' },
+        ]}
+      />
     </div>
   );
 }

@@ -883,6 +883,15 @@ export default function BALBcMouseBackgroundPage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Mouse Strain Backgrounds', path: '/mouse-strain-backgrounds' },
+          { name: 'BALB/c Mouse Background', path: '/balbc-mouse-background' },
+        ]}
+      />
     </div>
   );
 }

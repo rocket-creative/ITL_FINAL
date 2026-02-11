@@ -439,6 +439,14 @@ export default function RatModelsPage() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Rat Models', path: '/rat-models' },
+        ]}
+      />
     </div>
   );
 }

@@ -389,6 +389,15 @@ export default function KnockoutRatModelsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Rat Models', path: '/rat-models' },
+          { name: 'Knockout Rat Models', path: '/knockout-rat-models' },
+        ]}
+      />
     </div>
   );
 }

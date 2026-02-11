@@ -389,6 +389,15 @@ export default function KnockinRatModelsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Rat Models', path: '/rat-models' },
+          { name: 'Knockin Rat Models', path: '/knockin-rat-models' },
+        ]}
+      />
     </div>
   );
 }

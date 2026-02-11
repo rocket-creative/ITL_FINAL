@@ -347,6 +347,15 @@ export default function KnockoutStrategyGuidePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'Knockout Strategy Guide', path: '/knockout-strategy-guide' },
+        ]}
+      />
     </div>
   );
 }

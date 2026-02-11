@@ -161,6 +161,15 @@ export default function ReporterMouseCatalogPage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'Reporter Mouse Catalog', path: '/reporter-mouse-catalog' },
+        ]}
+      />
     </div>
   );
 }

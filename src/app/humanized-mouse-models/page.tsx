@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles, GlossaryTermLink, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles, GlossaryTermLink, BreedingSchemeArchitectCTA, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconZap } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -999,6 +999,13 @@ export default function HumanizedMouseModelsPage() {
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Humanized Mouse Models', path: '/humanized-mouse-models' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

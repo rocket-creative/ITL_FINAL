@@ -362,6 +362,15 @@ export default function C57bl6jVsC57bl6nPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Mouse Strain Backgrounds', path: '/mouse-strain-backgrounds' },
+          { name: 'C57BL/6J vs C57BL/6N', path: '/c57bl6j-vs-c57bl6n' },
+        ]}
+      />
     </div>
   );
 }

@@ -365,6 +365,15 @@ export default function ReporterSelectionGuidePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'Reporter Selection Guide', path: '/reporter-selection-guide' },
+        ]}
+      />
     </div>
   );
 }

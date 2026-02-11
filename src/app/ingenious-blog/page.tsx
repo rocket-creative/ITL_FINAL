@@ -216,6 +216,14 @@ export default function IngeniousBlogPage() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Blog', path: '/ingenious-blog' },
+        ]}
+      />
     </div>
   );
 }

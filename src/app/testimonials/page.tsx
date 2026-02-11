@@ -184,6 +184,14 @@ export default function TestimonialsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Testimonials', path: '/testimonials' },
+        ]}
+      />
     </div>
   );
 }

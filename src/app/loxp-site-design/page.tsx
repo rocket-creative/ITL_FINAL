@@ -7,6 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
+import { BreadcrumbSchema } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Conditional Allele Architecture",
@@ -204,6 +205,15 @@ export default function LoxPSiteDesignPage() {
         </section>
       </main>
       <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'LoxP Site Design', path: '/loxp-site-design' },
+        ]}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "LoxP Site Design", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "LoxP site design for conditional knockout alleles since 1998.", "serviceType": "LoxP Site Design" }) }} />
     </div>
   );

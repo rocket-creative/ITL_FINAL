@@ -190,6 +190,15 @@ export default function AllCatalogMouseModelsPage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'All Catalog Mouse Models', path: '/all-catalog-mouse-models' },
+        ]}
+      />
     </div>
   );
 }

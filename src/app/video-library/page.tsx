@@ -404,6 +404,14 @@ export default function VideoLibraryPage() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Video Library', path: '/video-library' },
+        ]}
+      />
     </div>
   );
 }

@@ -713,6 +713,15 @@ export default function DoubleCheckpointMicePage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Double Checkpoint Mice', path: '/double-checkpoint-mice' },
+        ]}
+      />
     </div>
   );
 }

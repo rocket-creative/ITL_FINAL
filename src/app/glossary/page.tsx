@@ -490,6 +490,14 @@ export default function GlossaryPage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Glossary', path: '/glossary' },
+        ]}
+      />
     </div>
   );
 }

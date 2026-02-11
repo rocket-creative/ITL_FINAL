@@ -924,6 +924,15 @@ export default function CreLineSelectionGuidePage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'Cre Line Selection Guide', path: '/cre-line-selection-guide' },
+        ]}
+      />
     </div>
   );
 }

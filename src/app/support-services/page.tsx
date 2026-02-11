@@ -644,7 +644,14 @@ export default function SupportServicesPage() {
       </main>
 
       <UXUIDCFooter />
-
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Support Services', path: '/support-services' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

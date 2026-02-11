@@ -356,6 +356,15 @@ export default function HumanizationStrategyGuidePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'Humanization Strategy Guide', path: '/humanization-strategy-guide' },
+        ]}
+      />
     </div>
   );
 }

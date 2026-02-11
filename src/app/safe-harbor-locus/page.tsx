@@ -355,6 +355,15 @@ export default function SafeHarborLocusPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'Safe Harbor Locus', path: '/safe-harbor-locus' },
+        ]}
+      />
     </div>
   );
 }

@@ -429,6 +429,14 @@ export default function GeneralContactPage() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Contact', path: '/general-contact' },
+        ]}
+      />
     </div>
   );
 }

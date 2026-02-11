@@ -799,7 +799,15 @@ export default function TransgenicMouseServicePage() {
       </main>
       
       <UXUIDCFooter />
-      
+            
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Transgenic Mouse Service', path: '/transgenic-mouse-service' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

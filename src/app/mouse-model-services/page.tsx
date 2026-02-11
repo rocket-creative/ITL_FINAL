@@ -752,7 +752,14 @@ export default function MouseModelServicesPage() {
       </main>
       
       <UXUIDCFooter />
-      
+            
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Mouse Model Services', path: '/mouse-model-services' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

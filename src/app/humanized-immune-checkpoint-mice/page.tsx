@@ -6,6 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import { IconQuote, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { BreadcrumbSchema } from '@/components/UXUIDC';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 
 const heroData = {
@@ -236,6 +237,15 @@ export default function HumanizedImmuneCheckpointMicePage() {
         </section>
       </main>
       <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Humanized Immune Checkpoint Mice', path: '/humanized-immune-checkpoint-mice' },
+        ]}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Humanized Immune Checkpoint Mice", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Humanized immune checkpoint mouse models for immunotherapy testing since 1998.", "serviceType": "Humanized Immune Checkpoint Mice" }) }} />
     </div>
   );

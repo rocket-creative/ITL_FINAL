@@ -23,6 +23,7 @@ import {
   IconBriefcase,
   IconPackage,
   IconArrowRight,
+  BreadcrumbSchema,
 } from '@/components/UXUIDC';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -553,7 +554,13 @@ export default function ContactPage() {
       
       <UXUIDCFooter />
 
-      {/* SEO: Schema.org ContactPage */}
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Contact', path: '/contact' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
