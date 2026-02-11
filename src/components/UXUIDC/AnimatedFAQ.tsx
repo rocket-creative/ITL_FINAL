@@ -6,9 +6,10 @@
  */
 
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { IconChevronDown } from './Icons';
+import { IconChevronDown, IconChevronRight } from './Icons';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,12 +22,14 @@ interface AnimatedFAQProps {
   title?: string;
   faqs: FAQ[];
   backgroundColor?: string;
+  showViewAllLink?: boolean;
 }
 
 export function UXUIDCAnimatedFAQ({ 
   title, 
   faqs, 
-  backgroundColor = 'white' 
+  backgroundColor = 'white',
+  showViewAllLink = true
 }: AnimatedFAQProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -189,6 +192,40 @@ export function UXUIDCAnimatedFAQ({
           </div>
         ))}
       </div>
+
+      {/* View All FAQs Link */}
+      {showViewAllLink && (
+        <div style={{ maxWidth: '800px', width: '100%', marginTop: '30px', textAlign: 'center' }}>
+          <Link 
+            href="/faq"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              color: '#008080',
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '1rem',
+              fontWeight: 600,
+              textDecoration: 'none',
+              padding: '12px 24px',
+              border: '2px solid #008080',
+              borderRadius: '4px',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#008080';
+              e.currentTarget.style.color = 'white';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.color = '#008080';
+            }}
+          >
+            View All FAQs
+            <IconChevronRight size={16} color="currentColor" />
+          </Link>
+        </div>
+      )}
     </section>
   );
 }

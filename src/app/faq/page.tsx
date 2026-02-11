@@ -496,18 +496,18 @@ export default function FAQPage() {
 
               return (
                 <div key={category} style={{ marginBottom: '50px' }}>
-                  <h2 style={{
-                    color: BRAND.blue,
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1.8rem',
-                    fontWeight: 700,
-                    marginBottom: '25px',
-                    paddingBottom: '10px',
-                    borderBottom: `2px solid ${BRAND.teal}`,
-                  }}>
-                    {category}
-                  </h2>
-                  <UXUIDCAnimatedFAQ faqs={categoryFAQs} />
+              <h2 style={{
+                color: BRAND.blue,
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '1.8rem',
+                fontWeight: 700,
+                marginBottom: '25px',
+                paddingBottom: '10px',
+                borderBottom: `2px solid ${BRAND.teal}`,
+              }}>
+                {category}
+              </h2>
+              <UXUIDCAnimatedFAQ faqs={categoryFAQs} showViewAllLink={false} />
                 </div>
               );
             })
@@ -522,11 +522,11 @@ export default function FAQPage() {
                 marginBottom: '25px',
                 paddingBottom: '10px',
                 borderBottom: `2px solid ${BRAND.teal}`,
-              }}>
+              }}              >
                 {selectedCategory}
               </h2>
               {filteredFAQs.length > 0 ? (
-                <UXUIDCAnimatedFAQ faqs={filteredFAQs} />
+                <UXUIDCAnimatedFAQ faqs={filteredFAQs} showViewAllLink={false} />
               ) : (
                 <p style={{
                   textAlign: 'center',
