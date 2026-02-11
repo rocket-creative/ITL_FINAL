@@ -335,7 +335,7 @@ export default function CryopreservationServicesPage() {
         </section>
 
         {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
@@ -343,7 +343,7 @@ export default function CryopreservationServicesPage() {
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -351,7 +351,7 @@ export default function CryopreservationServicesPage() {
         </section>
 
         {/* Cryopreservation Options */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               Cryopreservation Options
@@ -404,7 +404,7 @@ export default function CryopreservationServicesPage() {
         </section>
 
         {/* Choosing Between Methods */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               Choosing Between Methods
@@ -539,7 +539,7 @@ export default function CryopreservationServicesPage() {
         </section>
 
         {/* Why Cryopreserve */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               Why Cryopreserve
@@ -685,7 +685,7 @@ export default function CryopreservationServicesPage() {
         </section>
 
         {/* Integration with Model Generation */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               Integration with Model Generation
@@ -760,7 +760,7 @@ export default function CryopreservationServicesPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               What Researchers Say
@@ -857,7 +857,7 @@ export default function CryopreservationServicesPage() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               Frequently Asked Questions
@@ -869,14 +869,14 @@ export default function CryopreservationServicesPage() {
         </section>
 
         {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup title="Cryopreservation Service Insights" />
           </div>
         </section>
 
         {/* Related Links Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="animate-in">

@@ -212,7 +212,7 @@ export default function HuntingtonsMouseModelsPage() {
         </section>
 
         {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
@@ -220,9 +220,46 @@ export default function HuntingtonsMouseModelsPage() {
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial Section */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <h2
+              className="animate-in text-center"
+              style={{
+                color: '#2384da',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2rem',
+                fontWeight: 700,
+                marginBottom: '40px',
+              }}
+            >
+              Trusted for Huntington's Research
+            </h2>
+            <div
+              className="animate-in"
+              style={{
+                backgroundColor: '#f8f9fa',
+                padding: '40px',
+                borderLeft: '4px solid #008080',
+                borderRadius: '4px',
+              }}
+            >
+              <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '25px' }}>
+                &ldquo;ingenious has developed multiple Huntington's mouse models tailored for the CHDI Foundation that faithfully recapitulate HD progression for advanced preclinical testing and therapeutic evaluation&rdquo;
+              </p>
+              <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '1rem', marginBottom: '5px' }}>
+                — Richard Chen, PhD
+              </p>
+              <p style={{ color: '#666', fontSize: '.9rem' }}>
+                CHDI Foundation
+              </p>
             </div>
           </div>
         </section>

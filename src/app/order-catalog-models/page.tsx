@@ -403,7 +403,7 @@ export default function OrderInquiryCatalogModelsPage() {
                       <div style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 700 }}>
                         {stat.num}
                       </div>
-                      <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.65rem', fontFamily: 'var(--system-ui)' }}>
+                      <div style={{ color: '#666', fontSize: '.65rem', fontFamily: 'var(--system-ui)' }}>
                         {stat.label}
                       </div>
                     </div>

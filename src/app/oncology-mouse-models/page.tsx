@@ -437,7 +437,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
@@ -445,7 +445,7 @@ export default function OncologyMouseModelsPage() {
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -453,7 +453,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Introduction Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <p className="animate-in" style={{ color: '#555', fontSize: '1rem', lineHeight: '1.8rem', marginBottom: '20px' }}>
               {introData.text}
@@ -465,7 +465,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Tumor Suppressor Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               {tumorSuppressorData.title}
@@ -509,7 +509,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Tumor Suppressor Table */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h3 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.5rem', fontWeight: 600, marginBottom: '25px' }}>
               Common Tumor Suppressor Targets
@@ -547,7 +547,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Oncogene Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
               Oncogene Models
@@ -605,7 +605,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Cancer Type Specific Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px', textAlign: 'center' }}>
               Cancer Type Specific Models
@@ -692,7 +692,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Research Applications Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px', textAlign: 'center' }}>
               Research Applications
@@ -728,7 +728,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Technical Considerations Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px', textAlign: 'center' }}>
               Technical Considerations
@@ -817,7 +817,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Publications Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '10px' }}>
               Selected Publications
@@ -894,7 +894,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               What Researchers Say
@@ -987,7 +987,7 @@ export default function OncologyMouseModelsPage() {
         <BreedingSchemeArchitectCTA variant="gradient" />
 
         {/* Lab Signals Newsletter Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               variant="banner"
@@ -1000,7 +1000,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               Frequently Asked Questions
@@ -1012,7 +1012,7 @@ export default function OncologyMouseModelsPage() {
         </section>
 
         {/* Related Links Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="animate-in">

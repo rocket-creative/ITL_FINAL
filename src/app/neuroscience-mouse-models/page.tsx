@@ -473,7 +473,7 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
 
         {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
@@ -481,7 +481,7 @@ export default function NeuroscienceMouseModelsPage() {
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -489,7 +489,7 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
 
         {/* Introduction Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <p className="animate-in" style={{ color: '#555', fontSize: '1rem', lineHeight: '1.8rem', marginBottom: '20px' }}>
               {introData.text}
@@ -501,7 +501,7 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
 
         {/* Cell Type Specific Approaches Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               Cell Type Specific Approaches
@@ -635,7 +635,7 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
 
         {/* Neurodegenerative Disease Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px', textAlign: 'center' }}>
               Neurodegenerative Disease Models
@@ -721,7 +721,7 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
 
         {/* Model Types Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px', textAlign: 'center' }}>
               Model Types for Neuroscience
@@ -768,7 +768,7 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
 
         {/* Technical Considerations Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px', textAlign: 'center' }}>
               Technical Considerations
@@ -858,7 +858,7 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
 
         {/* Publications Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '10px' }}>
               Selected Publications
@@ -938,7 +938,7 @@ export default function NeuroscienceMouseModelsPage() {
         <BreedingSchemeArchitectCTA />
 
         {/* Testimonials Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               What Researchers Say
@@ -1028,7 +1028,7 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               Frequently Asked Questions
@@ -1040,14 +1040,14 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
 
         {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup title="Neuroscience Mouse Model Insights" />
           </div>
         </section>
 
         {/* Related Links Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="animate-in">

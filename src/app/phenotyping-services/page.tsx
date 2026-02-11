@@ -333,7 +333,7 @@ export default function PhenotypingServicesPage() {
         </section>
 
         {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
@@ -341,7 +341,7 @@ export default function PhenotypingServicesPage() {
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -349,7 +349,7 @@ export default function PhenotypingServicesPage() {
         </section>
 
         {/* Basic Phenotyping */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
               Basic Phenotyping
@@ -374,7 +374,7 @@ export default function PhenotypingServicesPage() {
         </section>
 
         {/* Clinical Chemistry and Hematology */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               Clinical Chemistry and Hematology
@@ -472,7 +472,7 @@ export default function PhenotypingServicesPage() {
         </section>
 
         {/* Disease Specific Phenotyping */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
               Disease Specific Phenotyping
@@ -609,7 +609,7 @@ export default function PhenotypingServicesPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
             <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
@@ -674,7 +674,7 @@ export default function PhenotypingServicesPage() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               Frequently Asked Questions
@@ -686,14 +686,14 @@ export default function PhenotypingServicesPage() {
         </section>
 
         {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup title="Phenotyping Service Insights" />
           </div>
         </section>
 
         {/* Related Links Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="animate-in">

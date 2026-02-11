@@ -1067,7 +1067,7 @@ export default function InducibleConditionalKnockoutPage() {
         </section>
 
         {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               variant="banner"

@@ -425,7 +425,7 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
@@ -433,7 +433,7 @@ export default function CardiovascularMouseModelsPage() {
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -441,7 +441,7 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Challenge Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '20px' }}>
               The Challenge of Cardiovascular Disease Modeling
@@ -512,7 +512,7 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Model Types Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               Model Types for Cardiovascular Research
@@ -655,7 +655,7 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Model Design Considerations */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               Model Design Considerations
@@ -882,7 +882,7 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Complex Model Design Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '20px' }}>
               Complex Cardiovascular Model Design
@@ -932,7 +932,7 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Publications Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '10px' }}>
               Selected Publications in Cardiovascular Research
@@ -1009,7 +1009,7 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               What Researchers Say
@@ -1113,14 +1113,14 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Breeding Scheme Architect CTA */}
-        <section style={{ padding: '60px 20px', backgroundColor: '#ffffff' }}>
+        <section style={{ padding: '60px 20px', backgroundColor: '#f8f9fa' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <BreedingSchemeArchitectCTA variant="gradient" />
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               Frequently Asked Questions
@@ -1132,7 +1132,7 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Lab Signals Newsletter CTA */}
-        <section style={{ backgroundColor: '#ffffff', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               variant="banner"
@@ -1143,7 +1143,7 @@ export default function CardiovascularMouseModelsPage() {
         </section>
 
         {/* Related Links Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="animate-in">

@@ -204,7 +204,7 @@ export default function DepressionAnxietyMouseModelsPage() {
         </section>
 
         {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
@@ -212,7 +212,7 @@ export default function DepressionAnxietyMouseModelsPage() {
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -267,7 +267,7 @@ export default function DepressionAnxietyMouseModelsPage() {
 
         {/* FAQ Section */}
         {faqData.length > 0 && (
-          <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
             <div style={{ maxWidth: '800px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
                 Frequently asked questions
@@ -280,7 +280,7 @@ export default function DepressionAnxietyMouseModelsPage() {
         )}
 
         {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               title="Stay Current on Depression and Anxiety Research"
@@ -291,7 +291,7 @@ export default function DepressionAnxietyMouseModelsPage() {
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
-          <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.5rem', fontWeight: 600, marginBottom: '30px', textAlign: 'center' }}>
                 Related resources

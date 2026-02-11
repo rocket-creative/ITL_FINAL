@@ -263,6 +263,22 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
     affiliation: "King's College London",
     tags: ['conditional-knockout', 'project-management', 'international', 'quality'],
   },
+  {
+    id: 'rothlin-yale',
+    quote: 'The rat knock-in model from ingenious was reliable, precise, and accelerated our immunology research significantly.',
+    author: 'Carla Rothlin',
+    credentials: 'Professor and Director of Center of Immunology',
+    affiliation: 'Yale University',
+    tags: ['rat-models', 'knockin', 'immunology', 'precision'],
+  },
+  {
+    id: 'chen-chdi',
+    quote: "ingenious has developed multiple Huntington's mouse models tailored for the CHDI Foundation that faithfully recapitulate HD progression for advanced preclinical testing and therapeutic evaluation",
+    author: 'Richard Chen',
+    credentials: 'PhD',
+    affiliation: 'CHDI Foundation',
+    tags: ['huntingtons', 'disease-models', 'neuroscience', 'preclinical', 'custom-models'],
+  },
 ];
 
 /**
@@ -349,6 +365,7 @@ export function formatAuthorWithCredentials(testimonial: Testimonial): string {
  */
 export const FEATURED_TESTIMONIALS: Testimonial[] = [
   VERIFIED_TESTIMONIALS.find(t => t.id === 'dunaief-upenn')!,
+  VERIFIED_TESTIMONIALS.find(t => t.id === 'rothlin-yale')!,
   VERIFIED_TESTIMONIALS.find(t => t.id === 'plumley-warren')!,
   VERIFIED_TESTIMONIALS.find(t => t.id === 'basson-kings')!,
 ];
@@ -410,7 +427,15 @@ export const CATALOG_TESTIMONIALS = [
 ];
 
 export const IMMUNOLOGY_TESTIMONIALS = [
-  VERIFIED_TESTIMONIALS.find(t => t.id === 'said-uci')!,
+  VERIFIED_TESTIMONIALS.find(t => t.id === 'rothlin-yale')!,
+];
+
+export const RAT_MODELS_TESTIMONIALS = [
+  VERIFIED_TESTIMONIALS.find(t => t.id === 'rothlin-yale')!,
+];
+
+export const HUNTINGTONS_TESTIMONIALS = [
+  VERIFIED_TESTIMONIALS.find(t => t.id === 'chen-chdi')!,
 ];
 
 export const CRE_LOX_TESTIMONIALS = [
@@ -431,5 +456,7 @@ export const SINGLE_MIRMIRA = VERIFIED_TESTIMONIALS.find(t => t.id === 'mirmira-
 export const SINGLE_SAID = VERIFIED_TESTIMONIALS.find(t => t.id === 'said-uci')!;
 export const SINGLE_FRANCO = VERIFIED_TESTIMONIALS.find(t => t.id === 'franco-colorado')!;
 export const SINGLE_RATERI = VERIFIED_TESTIMONIALS.find(t => t.id === 'rateri-kentucky')!;
+export const SINGLE_ROTHLIN = VERIFIED_TESTIMONIALS.find(t => t.id === 'rothlin-yale')!;
+export const SINGLE_CHEN_CHDI = VERIFIED_TESTIMONIALS.find(t => t.id === 'chen-chdi')!;
 
 export default VERIFIED_TESTIMONIALS;

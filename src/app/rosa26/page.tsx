@@ -342,7 +342,7 @@ export default function Rosa26Page() {
         </section>
 
         {/* Downloadable Resources Section */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <UXUIDCResourceLinks
               title="Rosa26 Resources"
@@ -354,7 +354,7 @@ export default function Rosa26Page() {
         </section>
 
         {/* Related Links */}
-        <section style={{ backgroundColor: 'white', padding: '40px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '40px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '20px' }}>
               Related Services

@@ -387,7 +387,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
@@ -395,7 +395,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -403,7 +403,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* Key Benefits Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="animate-in text-center" style={{ marginBottom: '40px' }}>
               <h2 style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
@@ -422,7 +422,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                     key={index}
                     className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                     style={{
-                      backgroundColor: '#f8f9fa',
+                      backgroundColor: 'white',
                       padding: '30px',
                       borderRadius: '8px',
                       borderTop: '4px solid #008080'
@@ -454,7 +454,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* How It Works Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="animate-in" style={{ marginBottom: '40px' }}>
               <h2 style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '10px' }}>
@@ -485,7 +485,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* Tissue Specific Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="animate-in" style={{ marginBottom: '30px' }}>
               <h2 style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 700, marginBottom: '15px' }}>
@@ -539,7 +539,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* Inducible Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="animate-in">
               <div style={{
@@ -591,7 +591,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* Allele Design Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               {alleleDesignData.title}
@@ -726,7 +726,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* Publications Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '10px' }}>
               Selected Publications
@@ -803,7 +803,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
             <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
               What Researchers Say
@@ -918,7 +918,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         />
 
         {/* Downloadable Resources Section */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <UXUIDCResourceLinks
               title="Conditional Knockout Resources"
@@ -930,7 +930,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* Lab Signals Newsletter Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <LabSignalsSignup 
               variant="banner"
@@ -943,7 +943,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         </section>
 
         {/* FAQ Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
               Frequently Asked Questions

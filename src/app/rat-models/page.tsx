@@ -312,6 +312,43 @@ export default function RatModelsPage() {
         {/* Breeding Scheme Architect CTA */}
         <BreedingSchemeArchitectCTA />
 
+        {/* Testimonial Section */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <h2
+              className="animate-in text-center"
+              style={{
+                color: '#2384da',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2rem',
+                fontWeight: 700,
+                marginBottom: '40px',
+              }}
+            >
+              Trusted by Leading Researchers
+            </h2>
+            <div
+              className="animate-in"
+              style={{
+                backgroundColor: '#f8f9fa',
+                padding: '40px',
+                borderLeft: '4px solid #008080',
+                borderRadius: '4px',
+              }}
+            >
+              <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '25px' }}>
+                &ldquo;The rat knock-in model from ingenious was reliable, precise, and accelerated our immunology research significantly.&rdquo;
+              </p>
+              <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '1rem', marginBottom: '5px' }}>
+                — Carla Rothlin, Professor and Director of Center of Immunology
+              </p>
+              <p style={{ color: '#666', fontSize: '.9rem' }}>
+                Yale University
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -362,7 +399,7 @@ export default function RatModelsPage() {
         </section>
 
         {/* Downloadable Resources Section */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <UXUIDCResourceLinks
               title="Rat Model Resources"
@@ -374,7 +411,7 @@ export default function RatModelsPage() {
         </section>
 
         {/* Related Links */}
-        <section style={{ backgroundColor: 'white', padding: '40px 20px' }}>
+        <section style={{ backgroundColor: '#f8f9fa', padding: '40px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '20px' }}>
               Related Services

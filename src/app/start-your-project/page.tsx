@@ -748,7 +748,7 @@ export default function StartYourProjectPage() {
                   <div style={{ fontSize: '2.2rem', fontWeight: 700, color: '#00d4d4', marginBottom: '8px' }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ fontSize: '.85rem', color: 'rgba(255,255,255,0.7)' }}>{stat.label}</div>
+                  <div style={{ fontSize: '.85rem', color: '#666' }}>{stat.label}</div>
                 </div>
               ))}
             </div>

@@ -67,10 +67,10 @@ export default function UXUIDCTrustBadges() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-10 bg-[#134978]">
+    <section ref={sectionRef} className="py-10" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid #e0e0e0' }}>
       <div className="container">
         <div className="text-center mb-6">
-          <h2 ref={titleRef} className="text-white text-lg font-semibold" style={{ opacity: 0 }}>
+          <h2 ref={titleRef} className="text-lg font-semibold" style={{ opacity: 0, color: '#333' }}>
             Trusted by Researchers Worldwide
           </h2>
         </div>
@@ -78,14 +78,14 @@ export default function UXUIDCTrustBadges() {
         <div ref={statsRef} className="flex flex-wrap justify-center gap-8 lg:gap-16">
           {stats.map((stat) => (
             <div key={stat.label} className="stat-item text-center" style={{ opacity: 0 }}>
-              <div className="text-white text-2xl lg:text-3xl font-bold">{stat.value}</div>
-              <div className="text-[#ccc] text-xs">{stat.label}</div>
+              <div className="text-2xl lg:text-3xl font-bold" style={{ color: '#008080' }}>{stat.value}</div>
+              <div className="text-xs" style={{ color: '#666' }}>{stat.label}</div>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-6">
-          <p className="text-[#ccc] text-xs">
+          <p className="text-xs" style={{ color: '#666' }}>
             Featured in: <span className="italic">Nature · Science · Cell</span>
           </p>
         </div>

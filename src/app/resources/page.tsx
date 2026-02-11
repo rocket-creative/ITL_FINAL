@@ -535,7 +535,7 @@ export default function ResourcesPage() {
               </Link>
               <p style={{
                 fontSize: '.85rem',
-                color: 'rgba(255,255,255,0.7)',
+                color: '#666',
                 marginTop: '16px'
               }}>
                 Free to use • No account required

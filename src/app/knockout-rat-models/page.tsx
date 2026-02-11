@@ -202,7 +202,7 @@ export default function KnockoutRatModelsPage() {
         </section>
 
         {/* Stats Bar */}
-        <section style={{ backgroundColor: '#0a253c', padding: '30px 20px' }}>
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
@@ -210,7 +210,7 @@ export default function KnockoutRatModelsPage() {
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '.85rem' }}>{stat.label}</div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -219,6 +219,43 @@ export default function KnockoutRatModelsPage() {
 
         {/* Breeding Scheme Architect CTA */}
         <BreedingSchemeArchitectCTA />
+
+        {/* Testimonial Section */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <h2
+              className="animate-in text-center"
+              style={{
+                color: '#2384da',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2rem',
+                fontWeight: 700,
+                marginBottom: '40px',
+              }}
+            >
+              Trusted by Leading Researchers
+            </h2>
+            <div
+              className="animate-in"
+              style={{
+                backgroundColor: '#f8f9fa',
+                padding: '40px',
+                borderLeft: '4px solid #008080',
+                borderRadius: '4px',
+              }}
+            >
+              <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '25px' }}>
+                &ldquo;The rat knock-in model from ingenious was reliable, precise, and accelerated our immunology research significantly.&rdquo;
+              </p>
+              <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '1rem', marginBottom: '5px' }}>
+                — Carla Rothlin, Professor and Director of Center of Immunology
+              </p>
+              <p style={{ color: '#666', fontSize: '.9rem' }}>
+                Yale University
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
