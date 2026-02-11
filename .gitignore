@@ -8,5 +8,9 @@ Services-Corrections/
 
 # Extracted content (generated from source docs)
 itl-website/extracted-changes/
+
+# Next.js
+.next
 .vercel
 node_modules
+tsconfig.tsbuildinfo
