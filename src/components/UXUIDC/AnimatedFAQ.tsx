@@ -221,7 +221,7 @@ export function UXUIDCAnimatedFAQ({
               e.currentTarget.style.color = '#008080';
             }}
           >
-            View All FAQs
+            All FAQs
             <IconChevronRight size={16} color="currentColor" />
           </Link>
         </div>
