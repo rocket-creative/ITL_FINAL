@@ -1,11 +1,11 @@
 # Robots.txt for ingenious targeting laboratory
-# https://www.ingenious.com
+# https://www.genetargeting.com
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.ingenious.com/sitemap.xml
+Sitemap: https://www.genetargeting.com/sitemap.xml
 
 # Disallow admin/private areas
 Disallow: /api/

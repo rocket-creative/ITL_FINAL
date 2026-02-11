@@ -27,12 +27,12 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | ingenious targeting laboratory',
   description: 'Privacy policy for ingenious targeting laboratory. Learn how we collect, use, and protect your personal information when you use our website and services.',
   alternates: {
-    canonical: 'https://www.ingenious.com/privacy',
+    canonical: 'https://www.genetargeting.com/privacy',
   },
   openGraph: {
     title: 'Privacy Policy | ingenious targeting laboratory',
     description: 'Learn how we collect, use, and protect your personal information.',
-    url: 'https://www.ingenious.com/privacy',
+    url: 'https://www.genetargeting.com/privacy',
     siteName: 'ingenious targeting laboratory',
     locale: 'en_US',
     type: 'website',
