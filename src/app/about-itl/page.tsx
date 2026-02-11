@@ -221,6 +221,201 @@ export default function AboutItlPage() {
           </div>
         </section>
 
+        {/* Company History Section */}
+        <section style={{ backgroundColor: 'white', padding: '80px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
+              History of ingenious targeting laboratory
+            </h2>
+            <div className="animate-in" style={{ color: '#333', fontSize: '1rem', lineHeight: '1.8rem', marginBottom: '25px' }}>
+              <p style={{ marginBottom: '20px' }}>
+                ingenious targeting laboratory's story began in the early 1990s. The founders worked as researchers in the same lab at Rockefeller University. During their time at Rockefeller, they developed custom atherosclerotic knockout mouse models for studying heart disease. In 1998, they founded ingenious targeting laboratory and still continue to work directly in the lab, oversee mouse model production, and also handle the operation and business side of things.
+              </p>
+              <p style={{ marginBottom: '20px' }}>
+                As ingenious targeting laboratory, we first settled in at the Long Island High Technology Incubator (LIHTI) at Stony Brook University, discussing and sharing ideas with other researchers and companies in that space. A little over 10 years later, we expanded and moved to a larger facility on Long Island with 20,000 square feet. We still work closely with Stony Brook's Division of Laboratory Animal Resources (DLAR) to house many of our mice.
+              </p>
+              <p>
+                From our small beginnings as one of the very first mouse gene targeting companies in the world, we've grown and streamlined our model generation process. Today ingenious uses both traditional and cutting edge technologies to design custom mouse lines for our clients globally.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Location Section */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '80px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>
+              Our Location
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="animate-in">
+                <h3 style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
+                  Holbrook, New York
+                </h3>
+                <p style={{ color: '#333', fontSize: '1rem', lineHeight: '1.8rem', marginBottom: '15px' }}>
+                  Our corporate headquarters and laboratories are located in Holbrook, New York, USA. We are fortunate to be surrounded by, and enjoy relationships with, world class research institutions such as Stony Brook University, Cold Spring Harbor and Brookhaven National Laboratory.
+                </p>
+                <p style={{ color: '#333', fontSize: '1rem', lineHeight: '1.8rem', marginBottom: '15px' }}>
+                  In addition, being located near New York City places us at a global hub of travel, providing us with a gateway to our clients across the USA and the world. Our convenient location also gives us the opportunity to bring top talent to the ingenious team.
+                </p>
+                <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '8px', marginTop: '20px' }}>
+                  <p style={{ color: '#0a253c', fontSize: '.95rem', fontWeight: 600, marginBottom: '8px' }}>
+                    761-80 Coates Avenue<br/>
+                    Holbrook, NY 11741
+                  </p>
+                  <p style={{ color: '#666', fontSize: '.9rem' }}>
+                    All Work Performed in the USA 🇺🇸
+                  </p>
+                </div>
+              </div>
+              <div className="animate-in">
+                <h3 style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '15px' }}>
+                  Research Partnerships
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                  <div style={{ padding: '15px', backgroundColor: 'white', borderRadius: '8px', borderLeft: '3px solid #008080' }}>
+                    <p style={{ color: '#0a253c', fontSize: '.95rem', fontWeight: 600, marginBottom: '5px' }}>Stony Brook University</p>
+                    <p style={{ color: '#666', fontSize: '.85rem' }}>Division of Laboratory Animal Resources (DLAR)</p>
+                  </div>
+                  <div style={{ padding: '15px', backgroundColor: 'white', borderRadius: '8px', borderLeft: '3px solid #008080' }}>
+                    <p style={{ color: '#0a253c', fontSize: '.95rem', fontWeight: 600, marginBottom: '5px' }}>Cold Spring Harbor Laboratory</p>
+                    <p style={{ color: '#666', fontSize: '.85rem' }}>World renowned research institution</p>
+                  </div>
+                  <div style={{ padding: '15px', backgroundColor: 'white', borderRadius: '8px', borderLeft: '3px solid #008080' }}>
+                    <p style={{ color: '#0a253c', fontSize: '.95rem', fontWeight: 600, marginBottom: '5px' }}>Brookhaven National Laboratory</p>
+                    <p style={{ color: '#666', fontSize: '.85rem' }}>Leading scientific research center</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Team Section */}
+        <section style={{ backgroundColor: 'white', padding: '80px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '20px' }}>
+              Dedicated scientists are with you from start to finish
+            </h2>
+            <p className="animate-in" style={{ color: '#666', fontSize: '1rem', lineHeight: '1.8rem', marginBottom: '30px', maxWidth: '700px', margin: '0 auto 30px' }}>
+              Drs. Jennifer Parla, Milen Kirilov, and Arielle Bryan are part of our team of scientific experts who work directly in the lab and oversee every aspect of your project.
+            </p>
+          </div>
+        </section>
+
+        {/* Our Guarantee Section */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '80px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '20px', textAlign: 'center' }}>
+              Our Guarantee
+            </h2>
+            <p className="animate-in" style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7rem', marginBottom: '40px', textAlign: 'center', maxWidth: '700px', margin: '0 auto 40px' }}>
+              As part of our commitment to you, we guarantee delivery of your germline confirmed F1 heterozygous mice. We achieve our guarantee by providing the following:
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="animate-in" style={{ padding: '30px', backgroundColor: 'white', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
+                  Best Quality Constructs
+                </h3>
+                <p style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7rem' }}>
+                  Best quality targeting vector constructs, ranging in sizes from plasmid to BAC.
+                </p>
+              </div>
+              <div className="animate-in" style={{ padding: '30px', backgroundColor: 'white', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
+                  Proprietary ES Cell Lines
+                </h3>
+                <p style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7rem' }}>
+                  Proprietary mouse ES cell lines that consistently and reliably transmit to germline.
+                </p>
+              </div>
+              <div className="animate-in" style={{ padding: '30px', backgroundColor: 'white', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
+                  FLP ES Cell Technology
+                </h3>
+                <p style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7rem' }}>
+                  Our own FLP ES cell technology for streamlined deletion of antibiotic selection cassette without extra steps.
+                </p>
+              </div>
+            </div>
+            <p className="animate-in" style={{ color: '#0a253c', fontSize: '1rem', lineHeight: '1.7rem', marginTop: '30px', textAlign: 'center', fontWeight: 500 }}>
+              With our guarantee, you can be confident in knowing that you will receive the mice you need at the cost you agreed to.
+            </p>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section style={{ backgroundColor: 'white', padding: '80px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px', textAlign: 'center' }}>
+              Why researchers choose ingenious targeting laboratory
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="animate-in" style={{ textAlign: 'center' }}>
+                <div style={{ width: '60px', height: '60px', backgroundColor: '#008080', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', color: 'white', fontSize: '1.5rem', fontWeight: 700 }}>
+                  ✓
+                </div>
+                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '12px' }}>
+                  Certainty
+                </h3>
+                <p style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7rem' }}>
+                  The model you design is the model we deliver.
+                </p>
+              </div>
+              <div className="animate-in" style={{ textAlign: 'center' }}>
+                <div style={{ width: '60px', height: '60px', backgroundColor: '#008080', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', color: 'white', fontSize: '1.5rem', fontWeight: 700 }}>
+                  ✓
+                </div>
+                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '12px' }}>
+                  Guaranteed Delivery
+                </h3>
+                <p style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7rem' }}>
+                  Assurance of your mouse model, not just your money back.
+                </p>
+              </div>
+              <div className="animate-in" style={{ textAlign: 'center' }}>
+                <div style={{ width: '60px', height: '60px', backgroundColor: '#008080', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', color: 'white', fontSize: '1.5rem', fontWeight: 700 }}>
+                  ✓
+                </div>
+                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 600, marginBottom: '12px' }}>
+                  Value
+                </h3>
+                <p style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7rem' }}>
+                  Our proprietary technologies save time and money.
+                </p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="animate-in" style={{ textAlign: 'center', padding: '20px' }}>
+                <p style={{ color: '#008080', fontSize: '1rem', fontWeight: 600 }}>Trusted Precision</p>
+                <p style={{ color: '#666', fontSize: '.9rem' }}>Exactly what you need, our experts make it happen.</p>
+              </div>
+              <div className="animate-in" style={{ textAlign: 'center', padding: '20px' }}>
+                <p style={{ color: '#008080', fontSize: '1rem', fontWeight: 600 }}>Fast Timelines</p>
+                <p style={{ color: '#666', fontSize: '.9rem' }}>Germline in less time than ever before.</p>
+              </div>
+              <div className="animate-in" style={{ textAlign: 'center', padding: '20px' }}>
+                <p style={{ color: '#008080', fontSize: '1rem', fontWeight: 600 }}>Assured Quality</p>
+                <p style={{ color: '#666', fontSize: '.9rem' }}>The quality you need, the value you seek.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Testimonial Section */}
+        <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <div className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '40px', borderRadius: '8px' }}>
+              <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '20px' }}>
+                "iTL generated our angiotensin II type 1a receptor conditional mouse. We found this company very responsive. The project started with discussions on possible construct designs. Following approval, a project manager sent monthly reports alerting us to project milestones. Our experience with iTL was so positive that we have generated more conditional mice with them."
+              </p>
+              <p style={{ color: '#00d4d4', fontSize: '.95rem', fontWeight: 500 }}>
+                — Debra Rateri, BS, University of Kentucky
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -304,6 +499,68 @@ export default function AboutItlPage() {
         )}
       
       {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ingenious targeting laboratory",
+            "alternateName": "ITL",
+            "url": "https://www.genetargeting.com",
+            "logo": "https://www.genetargeting.com/images/logo.png",
+            "description": "Leading provider of custom genetically modified mouse, rat, and rabbit models since 1998",
+            "foundingDate": "1998",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "761-80 Coates Avenue",
+              "addressLocality": "Holbrook",
+              "addressRegion": "NY",
+              "postalCode": "11741",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-631-468-8530",
+              "contactType": "customer service",
+              "email": "inquiry@genetargeting.com",
+              "areaServed": "US",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/ingenious-targeting-laboratory",
+              "https://www.youtube.com/@ingeniouslab"
+            ]
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "ingenious targeting laboratory",
+            "image": "https://www.genetargeting.com/images/mouse-hero-blue.jpg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "761-80 Coates Avenue",
+              "addressLocality": "Holbrook",
+              "addressRegion": "NY",
+              "postalCode": "11741",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 40.8117,
+              "longitude": -73.0779
+            },
+            "telephone": "+1-631-468-8530",
+            "openingHours": "Mo-Fr 09:00-17:00",
+            "priceRange": "$$$$"
+          })
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
