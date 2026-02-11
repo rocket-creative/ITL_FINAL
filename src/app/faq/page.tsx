@@ -385,25 +385,33 @@ export default function FAQPage() {
       <UXUIDCNavigation />
       
       {/* Hero Section */}
-      <section style={{ backgroundColor: BRAND.navy, padding: '80px 20px 60px', textAlign: 'center' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+      <section 
+        className="flex flex-col justify-center items-center"
+        style={{ 
+          backgroundColor: BRAND.navy, 
+          padding: '100px 20px 80px',
+          minHeight: '400px',
+        }}
+      >
+        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <h1 style={{
             color: BRAND.white,
             fontFamily: 'Poppins, sans-serif',
-            fontSize: '2.8rem',
+            fontSize: '3.5rem',
             fontWeight: 700,
-            lineHeight: 1.2,
-            marginBottom: '20px',
-            letterSpacing: '-.5px',
+            lineHeight: 1.1,
+            marginBottom: '25px',
+            letterSpacing: '-1px',
           }}>
             Frequently Asked Questions
           </h1>
           <p style={{
-            color: '#b0c4d4',
-            fontSize: '1.1rem',
-            lineHeight: '1.6',
+            color: 'rgba(255, 255, 255, 0.9)',
+            fontSize: '1.2rem',
+            lineHeight: '1.7',
             maxWidth: '700px',
-            margin: '0 auto 40px',
+            margin: '0 auto 50px',
+            fontFamily: 'var(--system-ui)',
           }}>
             Everything you need to know about custom mouse models, gene targeting technology, and our services
           </p>
@@ -416,26 +424,41 @@ export default function FAQPage() {
           }}>
             <div style={{
               position: 'absolute',
-              left: '15px',
+              left: '20px',
               top: '50%',
               transform: 'translateY(-50%)',
               pointerEvents: 'none',
+              zIndex: 10,
             }}>
-              <IconSearch size={20} color="#666" />
+              <IconSearch size={24} color="#999" />
             </div>
             <input
               type="text"
-              placeholder="Search FAQs..."
+              placeholder="Search all questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               style={{
                 width: '100%',
-                padding: '15px 15px 15px 45px',
-                fontSize: '1rem',
-                border: 'none',
-                borderRadius: '4px',
+                padding: '18px 20px 18px 60px',
+                fontSize: '1.05rem',
+                border: '2px solid rgba(255, 255, 255, 0.2)',
+                borderRadius: '8px',
                 fontFamily: 'var(--system-ui)',
                 outline: 'none',
+                backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                color: BRAND.text,
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+                transition: 'all 0.3s ease',
+              }}
+              onFocus={(e) => {
+                e.target.style.backgroundColor = '#ffffff';
+                e.target.style.borderColor = BRAND.teal;
+                e.target.style.boxShadow = '0 6px 16px rgba(0, 128, 128, 0.15)';
+              }}
+              onBlur={(e) => {
+                e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                e.target.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
               }}
             />
           </div>
