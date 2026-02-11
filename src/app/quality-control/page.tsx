@@ -1,9 +1,9 @@
-'use client';
-
 /**
  * Quality Control Page
  * Authority page detailing QC processes, germline verification, and characterization protocols
  */
+
+export { metadata } from './metadata';
 
 import {
   UXUIDCNavigation,

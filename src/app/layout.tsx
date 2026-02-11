@@ -49,7 +49,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable}>
       <head>
-        <link rel="canonical" href="https://www.genetargeting.com" />
         {/* Preload critical hero image */}
         <link
           rel="preload"

@@ -16,6 +16,7 @@ import {
   IconSearch,
   IconChevronRight,
   UXUIDCStartProjectCTA,
+  FAQPageSchema,
 } from '@/components/UXUIDC';
 
 // Brand colors

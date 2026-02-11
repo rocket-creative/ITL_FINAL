@@ -427,6 +427,18 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: "How effectively a mouse model replicates key aspects of human biology, ensuring findings are predictive of clinical outcomes. Disease modeling involves engineering mice to mimic specific human pathological conditions for studying mechanisms and testing therapies.",
     category: "Study Design & Applications",
   },
+  {
+    term: "C57BL/6 Mouse Background",
+    slug: "c57bl6-mouse-background",
+    definition: "The most widely used inbred mouse strain in biomedical research and the reference strain for the mouse genome sequence. C57BL/6 mice are preferred for gene targeting due to extensive phenotypic characterization, ES cell compatibility, robust breeding performance, and compatibility with the majority of tissue-specific Cre driver lines.",
+    category: "Study Design & Applications",
+  },
+  {
+    term: "C57BL/6J vs C57BL/6N",
+    slug: "c57bl6j-vs-c57bl6n",
+    definition: "Two major substrains of C57BL/6 mice that diverged decades ago through separate breeding programs at Jackson Laboratory (J) and NIH (N). Key differences include: C57BL/6J carries an Nnt deletion affecting glucose metabolism and insulin secretion; C57BL/6N has intact Nnt but some colonies carry the rd8 Crb1 retinal degeneration allele. C57BL/6N is the standard background for IKMC knockout resources.",
+    category: "Study Design & Applications",
+  },
 ];
 
 // Helper function to get terms by category

@@ -19,6 +19,7 @@ import {
   GlossaryTermLink,
   BreedingSchemeArchitectCTA,
   LabSignalsSignup,
+  FAQPageSchema,
   IconDNA,
   IconCheckCircle,
   IconChevronRight,

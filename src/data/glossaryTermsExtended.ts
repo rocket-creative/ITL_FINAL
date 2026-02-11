@@ -1173,6 +1173,187 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
       { title: "Disease Model Catalog", href: "/disease-model-catalog" },
       { title: "Preclinical Services", href: "/preclinical-services" }
     ]
+  },
+
+  "c57bl6-mouse-background": {
+    metaTitle: "C57BL/6 Mouse Background | The Reference Strain for Gene Targeting",
+    metaDescription: "Learn why C57BL/6 is the most widely used mouse strain for gene targeting, knockout models, and biomedical research with extensive phenotypic characterization.",
+    introduction: "C57BL/6 is the most widely used inbred mouse strain in biomedical research and serves as the reference strain for the mouse genome sequence. Since its establishment in 1921, C57BL/6 has become the standard background for gene targeting due to extensive phenotypic characterization, excellent breeding performance, ES cell compatibility, and widespread availability of Cre driver lines on this background.",
+    sections: [
+      {
+        title: "Why C57BL/6 is Preferred for Gene Targeting",
+        content: "C57BL/6 mice dominate gene targeting projects for several key reasons: (1) They are the reference strain for the mouse genome sequence, ensuring accurate targeting vector design. (2) ES cell lines derived from C57BL/6N substrains (JM8 cells) have high germline transmission efficiency. (3) The majority of tissue-specific Cre driver lines are maintained on C57BL/6 backgrounds, enabling direct crosses without mixed background effects. (4) Extensive baseline phenotypic data exists for comparison across laboratories and publications."
+      },
+      {
+        title: "C57BL/6 Substrain Considerations",
+        content: "Two major substrains exist: C57BL/6J (Jackson Laboratory) and C57BL/6N (NIH/Taconic). C57BL/6J carries an Nnt deletion affecting glucose metabolism. C57BL/6N has intact Nnt but some colonies carry the rd8 retinal degeneration allele. C57BL/6N is the standard background for IKMC knockout resources using JM8 ES cells. Researchers should specify substrain in publications for reproducibility."
+      }
+    ],
+    faqs: [
+      {
+        question: "What makes C57BL/6 the reference strain?",
+        answer: "C57BL/6J was the first mouse strain to have its complete genome sequenced (published 2002). This extensive genomic characterization, combined with decades of phenotypic data and widespread research community adoption, established C57BL/6 as the de facto reference strain for comparative genomics and gene targeting."
+      },
+      {
+        question: "Can I use C57BL/6 for all research applications?",
+        answer: "C57BL/6 is suitable for most applications including gene targeting, neuroscience, cancer, metabolism, and immunology. However, some specialized studies may benefit from alternative backgrounds. For example, BALB/c is preferred for myeloma production, FVB/N for pronuclear injection transgenics, and 129 strains for some ES cell applications."
+      },
+      {
+        question: "How do I maintain genetic purity on C57BL/6 background?",
+        answer: "Maintain lines through sibling crosses or backcross to C57BL/6 periodically. After ES cell targeting, backcross at least 5 generations (N5) to achieve >97% genetic purity. For critical studies, use speed backcrossing with SNP marker panels to accelerate background conversion while retaining the targeted allele."
+      }
+    ],
+    relatedTermSlugs: ["c57bl6j-vs-c57bl6n", "colony-management-backcrossing", "blastocyst-injection-chimera", "cre-driver-line"],
+    relatedServices: [
+      { title: "C57BL/6 Mouse Background", href: "/c57bl6-mouse-background" },
+      { title: "Backcrossing Services", href: "/backcrossing-services" },
+      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
+    ]
+  },
+
+  "c57bl6j-vs-c57bl6n": {
+    metaTitle: "C57BL/6J vs C57BL/6N | Understanding Mouse Substrain Differences",
+    metaDescription: "Compare C57BL/6J and C57BL/6N substrains with key genetic and phenotypic differences including Nnt deletion, metabolic phenotypes, and research implications.",
+    introduction: "C57BL/6J and C57BL/6N are two major substrains of C57BL/6 mice that diverged decades ago through separate breeding programs at Jackson Laboratory and NIH. Although >99% genetically identical, these substrains carry distinct genetic variants that produce measurable phenotypic differences in metabolism, behavior, and other traits. Understanding these differences is essential for experimental design, model selection, and research reproducibility.",
+    sections: [
+      {
+        title: "Key Genetic Differences",
+        content: "C57BL/6J carries a spontaneous deletion in the Nnt (nicotinamide nucleotide transhydrogenase) gene affecting mitochondrial redox balance and glucose-stimulated insulin secretion. C57BL/6N retains intact Nnt but some colonies carry the rd8 mutation in Crb1 causing retinal degeneration. Additional single nucleotide polymorphisms exist between substrains, detectable by SNP panels."
+      },
+      {
+        title: "Metabolic and Behavioral Phenotypes",
+        content: "C57BL/6J shows impaired glucose-stimulated insulin secretion and increased susceptibility to diet-induced obesity and glucose intolerance compared to C57BL/6N. Behavioral studies report subtle differences in anxiety-like behavior and activity levels. These phenotypic differences should be considered when interpreting experimental results or comparing across published studies."
+      }
+    ],
+    faqs: [
+      {
+        question: "Which substrain should I use for metabolic studies?",
+        answer: "C57BL/6N is generally preferred for metabolic studies due to intact Nnt and normal glucose-stimulated insulin secretion. The Nnt deletion in C57BL/6J can confound interpretation of metabolic phenotypes, particularly those involving pancreatic beta cell function, mitochondrial metabolism, or oxidative stress responses."
+      },
+      {
+        question: "Are Cre driver lines available on both substrains?",
+        answer: "Most tissue-specific Cre driver lines were originally generated on C57BL/6J background. However, many have been backcrossed to C57BL/6N or are available on both backgrounds. When crossing conditional alleles with Cre drivers, verify substrain compatibility or plan backcrossing to match backgrounds."
+      },
+      {
+        question: "How do I convert my model from one substrain to the other?",
+        answer: "Backcross your model to the desired substrain for at least 5 generations (N5) to achieve >97% genetic conversion, or 10 generations (N10) for >99.9% purity. Speed backcrossing using genome-wide SNP marker panels can accelerate this process while ensuring retention of your targeted allele."
+      }
+    ],
+    relatedTermSlugs: ["c57bl6-mouse-background", "colony-management-backcrossing", "baseline-phenotyping"],
+    relatedServices: [
+      { title: "C57BL/6J vs C57BL/6N", href: "/c57bl6j-vs-c57bl6n" },
+      { title: "C57BL/6 Mouse Background", href: "/c57bl6-mouse-background" },
+      { title: "Backcrossing Services", href: "/backcrossing-services" }
+    ]
+  },
+
+  "reporter-knockin": {
+    metaTitle: "Reporter Knockin Mouse Models | Visualizing Gene Expression with Native Regulation",
+    metaDescription: "Learn how reporter knockin mice use GFP, tdTomato, LacZ, and luciferase to track gene expression, cell lineage, and protein localization under endogenous control.",
+    introduction: "Reporter knockin mice are genetically engineered models in which a reporter gene is inserted at an endogenous locus, placing reporter expression under complete native regulatory control. Unlike transgenic reporters that may not fully recapitulate endogenous expression patterns, knockin reporters are subject to all normal transcriptional regulation, alternative splicing, and post-transcriptional control mechanisms, providing accurate spatiotemporal readouts of gene expression.",
+    sections: [
+      {
+        title: "Reporter Gene Selection",
+        content: "Common reporter genes include fluorescent proteins (GFP, EGFP, tdTomato, mCherry, YFP), enzymatic reporters (LacZ beta-galactosidase), and bioluminescent reporters (firefly luciferase, Renilla luciferase). Selection depends on application: fluorescent proteins enable live imaging and flow cytometry; LacZ provides high-resolution histological detection; luciferase enables noninvasive in vivo imaging of living animals."
+      },
+      {
+        title: "Knockin Design Strategies",
+        content: "Replacement knockins insert the reporter in place of the coding sequence, disrupting gene function while reporting expression (useful for knockout-reporter combinations). Fusion reporters create in-frame fusions preserving protein function while enabling visualization. IRES or 2A-mediated bicistronic designs produce both endogenous protein and separate reporter. Conditional reporters use Cre-lox systems for lineage tracing."
+      }
+    ],
+    faqs: [
+      {
+        question: "What is the advantage of knockin reporters over transgenic reporters?",
+        answer: "Knockin reporters are inserted at the native locus and subject to all endogenous regulatory elements, ensuring accurate spatiotemporal expression patterns. Transgenic reporters driven by isolated promoter fragments may lack critical enhancers or silencing elements, producing ectopic or incomplete expression patterns that do not reflect true gene expression."
+      },
+      {
+        question: "Can I generate a reporter knockin without disrupting gene function?",
+        answer: "Yes, using in-frame fusion reporters (reporter fused to protein C-terminus or N-terminus), IRES elements (internal ribosome entry site allowing translation of both endogenous protein and separate reporter), or 2A peptide sequences (self-cleaving peptides producing equimolar amounts of protein and reporter). These designs preserve gene function while enabling visualization."
+      },
+      {
+        question: "How do I choose between GFP, tdTomato, and LacZ reporters?",
+        answer: "GFP: direct fluorescence, live imaging, flow cytometry, but can be dim in some tissues. tdTomato: brighter than GFP, more photostable, red channel separation, excellent for lineage tracing. LacZ: colorimetric detection, high sensitivity, cellular resolution, fixed tissues only. Choice depends on downstream applications (live vs fixed, imaging vs FACS, single vs multiplex)."
+      }
+    ],
+    relatedTermSlugs: ["knockin-mouse-models", "reporter-gene-reporter-allele", "reporter-readouts", "cre-lox-system"],
+    relatedServices: [
+      { title: "Reporter Knockin Mouse Models", href: "/reporter-knockin" },
+      { title: "GFP Knockin Mice", href: "/gfp-knockin-mice" },
+      { title: "tdTomato Knockin Mice", href: "/tdtomato-knockin-mice" },
+      { title: "LacZ Knockin Mice", href: "/lacz-knockin-mice" }
+    ]
+  },
+
+  "rosa26": {
+    metaTitle: "Rosa26 Locus | Safe Harbor Targeting for Stable Transgene Expression",
+    metaDescription: "Discover the Rosa26 safe harbor locus on chromosome 6 for targeted transgene insertion, enabling predictable expression without disrupting endogenous genes.",
+    introduction: "The Rosa26 locus (Gt(ROSA)26Sor) is a ubiquitously expressed safe harbor site on mouse chromosome 6 that has become the standard integration site for targeted transgene expression. Rosa26 supports stable, position-independent expression without disrupting neighboring genes or causing insertional mutagenesis, making it ideal for constitutive transgenes, conditional expression systems, Cre driver lines, and reporter alleles.",
+    sections: [
+      {
+        title: "Why Rosa26 is a Safe Harbor",
+        content: "Rosa26 was identified as a gene trap integration site with ubiquitous expression and no discernible phenotype when disrupted. The locus is transcriptionally active in all tissues, preventing transgene silencing. Integration at Rosa26 does not disrupt neighboring genes. Expression from Rosa26 is consistent across generations without position effect variegation. These properties make Rosa26 superior to random integration approaches."
+      },
+      {
+        title: "Rosa26 Targeting Applications",
+        content: "Common applications include: constitutive transgene expression using CAG or Rosa26 promoter; conditional expression using lox-STOP-lox cassettes; tissue-specific Cre or CreERT2 driver lines; reporter alleles for lineage tracing; inducible systems (Tet-On/Tet-Off); and humanization of cytokines or receptors requiring ubiquitous expression."
+      }
+    ],
+    faqs: [
+      {
+        question: "What promoters are used for Rosa26 transgene expression?",
+        answer: "The CAG promoter (hybrid CMV enhancer/chicken beta-actin promoter) is most commonly used for strong, ubiquitous expression from Rosa26. The endogenous Rosa26 promoter provides moderate, ubiquitous expression. Tissue-specific promoters can also be used at Rosa26 for defined expression patterns without position effects."
+      },
+      {
+        question: "How does Rosa26 targeting compare to pronuclear injection?",
+        answer: "Rosa26 targeting provides single-copy integration at a defined location with predictable expression levels, while pronuclear injection produces random multi-copy integration with variable expression and potential insertional mutagenesis. Rosa26 is preferred when consistent expression, defined copy number, and germline stability are required."
+      },
+      {
+        question: "Are there other safe harbor loci besides Rosa26?",
+        answer: "Yes. The H11 (Hipp11) locus on chromosome 11 and Hprt locus on the X chromosome are alternative safe harbors. Col1a1 is also used for some applications. However, Rosa26 remains the most widely used due to extensive validation, ubiquitous expression, autosomal location (avoiding X-linked sex effects), and broad community adoption."
+      }
+    ],
+    relatedTermSlugs: ["rosa26-locus", "safe-harbor-locus", "safe-harbor-targeted-transgenesis", "single-copy-integration"],
+    relatedServices: [
+      { title: "Rosa26 Locus Targeting", href: "/rosa26" },
+      { title: "Rapid-Rosa26 Targeting", href: "/rapid-rosa26-targeting" },
+      { title: "Inducible Rosa26", href: "/inducible-rosa26" }
+    ]
+  },
+
+  "tamoxifen-inducible-cre": {
+    metaTitle: "Tamoxifen Inducible Cre (CreERT2) | Temporal Control of Gene Deletion",
+    metaDescription: "Learn how tamoxifen inducible Cre provides precise temporal control over gene deletion in adult mice, avoiding developmental lethality and compensation.",
+    introduction: "Tamoxifen inducible Cre (CreERT2) is a temporal gene deletion system that fuses Cre recombinase to a mutant estrogen receptor ligand-binding domain (ERT2). This fusion protein remains sequestered in the cytoplasm by HSP90 chaperones until tamoxifen administration triggers nuclear translocation and LoxP recombination. This system enables gene deletion at defined timepoints in adult animals, bypassing embryonic lethality and avoiding developmental compensation mechanisms.",
+    sections: [
+      {
+        title: "Mechanism of CreERT2 Activation",
+        content: "In the absence of ligand, the ERT2 domain binds HSP90 chaperone proteins, sequestering the CreERT2 fusion protein in the cytoplasm away from nuclear DNA. Tamoxifen (or its active metabolite 4-hydroxytamoxifen) binds to ERT2, displacing HSP90 and exposing a nuclear localization signal. CreERT2 translocates to the nucleus where Cre catalyzes recombination between LoxP sites, permanently deleting the floxed sequence. Recombination is heritable through subsequent cell divisions."
+      },
+      {
+        title: "Tamoxifen Dosing and Administration",
+        content: "Common administration routes include intraperitoneal injection (75-100 mg/kg in corn oil, most common), oral gavage (similar dosing), or tamoxifen-containing chow (250-500 mg/kg diet for extended dosing). Typical protocols use 3-5 consecutive daily injections. Recombination efficiency varies by tissue and Cre driver line. Researchers should verify deletion efficiency in target tissues by PCR, qPCR, or immunoblotting."
+      }
+    ],
+    faqs: [
+      {
+        question: "What are the advantages of CreERT2 over constitutive Cre?",
+        answer: "CreERT2 enables temporal control, allowing gene deletion at defined timepoints after normal development. This bypasses embryonic lethality of essential genes, avoids developmental compensation that can mask adult phenotypes, enables comparison of early versus late gene deletion effects, and provides matched controls (same genotype with and without tamoxifen treatment)."
+      },
+      {
+        question: "How quickly does gene deletion occur after tamoxifen administration?",
+        answer: "Recombination at the DNA level occurs within 24-72 hours after tamoxifen administration. However, protein turnover determines functional knockout kinetics. For stable proteins, complete depletion may take 7-14 days. For rapidly turning over proteins, functional effects can be observed within 2-3 days. Researchers should verify both DNA recombination and protein loss in target tissues."
+      },
+      {
+        question: "Is there background Cre activity without tamoxifen?",
+        answer: "Most CreERT2 systems show minimal leakiness (background activity without tamoxifen), but this varies by Cre driver line and tissue. Some CreERT2 lines show detectable background recombination (1-10%) in sensitive reporter assays. For critical experiments, include tamoxifen-only and Cre-only controls to quantify background activity. Second-generation ERT2 systems have reduced leakiness compared to original ER fusions."
+      }
+    ],
+    relatedTermSlugs: ["inducible-cre-ert2", "cre-lox-system", "conditional-knockout-mouse-models", "temporal-control"],
+    relatedServices: [
+      { title: "Tamoxifen Inducible Cre", href: "/tamoxifen-inducible-cre" },
+      { title: "Inducible Conditional Knockout", href: "/inducible-conditional-knockout" },
+      { title: "Tissue-Specific Cre Lines", href: "/tissue-specific-cre-lines" }
+    ]
   }
 };
 
