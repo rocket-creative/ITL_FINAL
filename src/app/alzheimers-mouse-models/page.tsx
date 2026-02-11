@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconTarget, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 
 // Hero Data
@@ -902,6 +902,14 @@ export default function AlzheimersMouseModelsPage() {
 
       <UXUIDCFooter />
 
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Disease Models', path: '/therapeutic-areas' },
+          { name: 'Alzheimer Mouse Models', path: '/alzheimers-mouse-models' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

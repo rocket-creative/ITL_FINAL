@@ -17,6 +17,7 @@ import {
   IconChevronRight,
   UXUIDCStartProjectCTA,
   FAQPageSchema,
+  BreadcrumbSchema,
 } from '@/components/UXUIDC';
 
 // Brand colors
@@ -680,7 +681,13 @@ export default function FAQPage() {
       <UXUIDCFooter />
       <UXUIDCCookieConsent />
 
-      {/* FAQPage Schema */}
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'FAQ', path: '/faq' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

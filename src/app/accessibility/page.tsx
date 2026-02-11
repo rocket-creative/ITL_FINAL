@@ -16,6 +16,7 @@ import {
   IconKeyboard,
   IconMessageCircle,
   IconCheckCircle,
+  BreadcrumbSchema,
 } from '@/components/UXUIDC';
 
 // Brand colors
@@ -363,6 +364,14 @@ export default function AccessibilityPage() {
 
         <UXUIDCFooter />
         <UXUIDCCookieConsent />
+        
+        {/* Schema.org Structured Data */}
+        <BreadcrumbSchema 
+          items={[
+            { name: 'Home', path: '/' },
+            { name: 'Accessibility Statement', path: '/accessibility' },
+          ]}
+        />
       </div>
     </>
   );

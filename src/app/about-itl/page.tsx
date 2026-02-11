@@ -11,6 +11,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
+import { BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Hero Data
@@ -499,6 +500,12 @@ export default function AboutItlPage() {
         )}
       
       {/* JSON-LD Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'About ingenious targeting laboratory', path: '/about-itl' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -558,29 +565,6 @@ export default function AboutItlPage() {
             "telephone": "+1-631-468-8530",
             "openingHours": "Mo-Fr 09:00-17:00",
             "priceRange": "$$$$"
-          })
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.genetargeting.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "About itl",
-                "item": "https://www.genetargeting.com/about-itl"
-              }
-            ]
           })
         }}
       />

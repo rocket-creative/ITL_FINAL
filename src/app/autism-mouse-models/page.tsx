@@ -12,7 +12,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -365,6 +365,15 @@ export default function AutismMouseModelsPage() {
       </main>
       
       <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Disease Models', path: '/therapeutic-areas' },
+          { name: 'Autism Mouse Models', path: '/autism-mouse-models' },
+        ]}
+      />
     </div>
   );
 }

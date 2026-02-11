@@ -12,6 +12,7 @@ import {
   UXUIDCCookieConsent,
   IconChevronRight,
   IconShield,
+  BreadcrumbSchema,
 } from '@/components/UXUIDC';
 
 // Brand colors
@@ -396,6 +397,14 @@ export default function PrivacyPage() {
 
         <UXUIDCFooter />
         <UXUIDCCookieConsent />
+        
+        {/* Schema.org Structured Data */}
+        <BreadcrumbSchema 
+          items={[
+            { name: 'Home', path: '/' },
+            { name: 'Privacy Policy', path: '/privacy' },
+          ]}
+        />
       </div>
     </>
   );

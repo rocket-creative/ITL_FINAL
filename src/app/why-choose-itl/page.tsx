@@ -12,7 +12,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconCheckCircle, IconChevronRight, IconAward, IconUsers, IconGlobe } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
 
 // Import verified testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
@@ -623,30 +623,13 @@ export default function WhyChooseItlPage() {
             </div>
           </div>
         </section>
-      
+
         {/* JSON-LD Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://www.genetargeting.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Why Choose ingenious targeting laboratory",
-                  "item": "https://www.genetargeting.com/why-choose-itl"
-                }
-              ]
-            })
-          }}
+        <BreadcrumbSchema 
+          items={[
+            { name: 'Home', path: '/' },
+            { name: 'Why Choose ingenious targeting laboratory', path: '/why-choose-itl' },
+          ]}
         />
         <script
           type="application/ld+json"

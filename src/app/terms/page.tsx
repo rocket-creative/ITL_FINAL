@@ -12,6 +12,7 @@ import {
   UXUIDCCookieConsent,
   IconChevronRight,
   IconScale,
+  BreadcrumbSchema,
 } from '@/components/UXUIDC';
 
 // Brand colors
@@ -397,6 +398,14 @@ export default function TermsPage() {
 
         <UXUIDCFooter />
         <UXUIDCCookieConsent />
+        
+        {/* Schema.org Structured Data */}
+        <BreadcrumbSchema 
+          items={[
+            { name: 'Home', path: '/' },
+            { name: 'Terms of Service', path: '/terms' },
+          ]}
+        />
       </div>
     </>
   );

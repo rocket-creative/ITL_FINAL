@@ -26,6 +26,7 @@ import {
   getRelatedLabSignalsArticles,
   GlossaryTermLink,
   BreedingSchemeArchitectCTA,
+  BreadcrumbSchema,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -1027,6 +1028,14 @@ export default function KnockoutMouseModelsPage() {
 
       <UXUIDCFooter />
 
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Knockout Mouse Models', path: '/knockout-mouse-models' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

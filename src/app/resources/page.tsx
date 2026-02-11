@@ -6,7 +6,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { LabSignalsSignup, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
+import { LabSignalsSignup, BreedingSchemeArchitectCTA, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconChevronRight, IconCheckCircle, IconLayers, IconImage, IconDocument, IconDownload, IconBarChart, IconBookOpen, IconFileText, IconSparkle, IconGitBranch } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -279,22 +279,6 @@ export default function ResourcesPage() {
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Mouse Model Resources",
-            "description": "Mouse model selection guides, case studies, FAQs, and technical resources. Expert guidance for knockout, knockin, and humanized model projects since 1998.",
-            "publisher": {
-              "@type": "Organization",
-              "name": "ingenious targeting laboratory",
-              "url": "https://www.genetargeting.com"
-            }
-          })
-        }}
-      />
       <UXUIDCNavigation />
       <main ref={animatedElementsRef}>
         {/* Hero Section */}
@@ -1290,6 +1274,30 @@ export default function ResourcesPage() {
         </section>
       </main>
       <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Mouse Model Resources",
+            "description": "Mouse model selection guides, case studies, FAQs, and technical resources. Expert guidance for knockout, knockin, and humanized model projects since 1998.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "ingenious targeting laboratory",
+              "url": "https://www.genetargeting.com"
+            }
+          })
+        }}
+      />
     </div>
   );
 }
