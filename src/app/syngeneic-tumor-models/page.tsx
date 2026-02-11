@@ -191,6 +191,15 @@ export default function SyngeneicTumorModelsPage() {
         </section>
       </main>
       <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Disease Models', path: '/therapeutic-areas' },
+          { name: 'Syngeneic Tumor Models', path: '/syngeneic-tumor-models' },
+        ]}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Syngeneic Tumor Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Syngeneic tumor mouse models for immuno oncology research since 1998.", "serviceType": "Syngeneic Tumor Models" }) }} />
     </div>
   );

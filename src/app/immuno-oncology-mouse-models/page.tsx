@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
-import { GlossaryTermLink, BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { GlossaryTermLink, BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -909,8 +909,15 @@ export default function ImmunoOncologyMouseModelsPage() {
         </section>
       </main>
       
-      <UXUIDCFooter />
       
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Disease Models', path: '/therapeutic-areas' },
+          { name: 'Immuno Oncology Mouse Models', path: '/immuno-oncology-mouse-models' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -910,8 +910,15 @@ export default function OphthalmologyMouseModelsPage() {
         </section>
       </main>
 
-      <UXUIDCFooter />
-
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Disease Models', path: '/therapeutic-areas' },
+          { name: 'Ophthalmology Mouse Models', path: '/ophthalmology-mouse-models' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

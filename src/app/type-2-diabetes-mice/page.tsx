@@ -343,7 +343,15 @@ export default function Type2DiabetesMicePage() {
       />
       </main>
       
-      <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Disease Models', path: '/therapeutic-areas' },
+          { name: 'Type 2 Diabetes Mice', path: '/type-2-diabetes-mice' },
+        ]}
+      />
     </div>
   );
 }

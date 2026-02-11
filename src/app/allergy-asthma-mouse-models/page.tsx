@@ -598,8 +598,15 @@ export default function AllergyAsthmaMouseModelsPage() {
         </section>
       </main>
 
-      <UXUIDCFooter />
-
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Disease Models', path: '/therapeutic-areas' },
+          { name: 'Allergy Asthma Mouse Models', path: '/allergy-asthma-mouse-models' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -347,7 +347,15 @@ export default function RheumatoidArthritisMicePage() {
       />
       </main>
       
-      <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Disease Models', path: '/therapeutic-areas' },
+          { name: 'Rheumatoid Arthritis Mice', path: '/rheumatoid-arthritis-mice' },
+        ]}
+      />
     </div>
   );
 }

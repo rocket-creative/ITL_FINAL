@@ -198,6 +198,15 @@ export default function ObesityMouseModelsPage() {
         </section>
       </main>
       <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Disease Models', path: '/therapeutic-areas' },
+          { name: 'Obesity Mouse Models', path: '/obesity-mouse-models' },
+        ]}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Obesity Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Custom obesity mouse models for metabolic research since 1998.", "serviceType": "Obesity Mouse Models" }) }} />
     </div>
   );
