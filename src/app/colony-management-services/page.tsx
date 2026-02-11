@@ -816,7 +816,15 @@ export default function ColonyManagementServicesPage() {
       </main>
 
       <UXUIDCFooter />
-
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Support Services', path: '/support-services' },
+          { name: 'Colony Management Services', path: '/colony-management-services' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

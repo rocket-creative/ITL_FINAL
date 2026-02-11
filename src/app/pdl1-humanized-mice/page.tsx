@@ -1088,6 +1088,15 @@ export default function PDL1HumanizedMicePage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'PDL1 Humanized Mice', path: '/pdl1-humanized-mice' },
+        ]}
+      />
     </div>
   );
 }

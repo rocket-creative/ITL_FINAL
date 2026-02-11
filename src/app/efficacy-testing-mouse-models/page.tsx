@@ -357,6 +357,15 @@ export default function EfficacyTestingMouseModelsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Research Applications', path: '/research-applications' },
+          { name: 'Efficacy Testing Mouse Models', path: '/efficacy-testing-mouse-models' },
+        ]}
+      />
     </div>
   );
 }

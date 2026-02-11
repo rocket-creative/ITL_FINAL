@@ -701,7 +701,15 @@ export default function PreclinicalServicesPage() {
       </main>
 
       <UXUIDCFooter />
-
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Support Services', path: '/support-services' },
+          { name: 'Preclinical Services', path: '/preclinical-services' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

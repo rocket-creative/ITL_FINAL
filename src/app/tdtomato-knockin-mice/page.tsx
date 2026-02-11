@@ -13,6 +13,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreadcrumbSchema } from "@/components/UXUIDC";
 
 // Hero Data
 const heroData = {
@@ -366,6 +367,15 @@ export default function TdtomatoKnockinMicePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'tdTomato Knockin Mice', path: '/tdtomato-knockin-mice' },
+        ]}
+      />
     </div>
   );
 }

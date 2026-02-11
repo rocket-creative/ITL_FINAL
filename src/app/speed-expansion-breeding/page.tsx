@@ -623,7 +623,15 @@ export default function SpeedExpansionBreedingPage() {
       </main>
 
       <UXUIDCFooter />
-
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Support Services', path: '/support-services' },
+          { name: 'Speed Expansion Breeding', path: '/speed-expansion-breeding' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -349,6 +349,15 @@ export default function TargetValidationMouseModelsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Research Applications', path: '/research-applications' },
+          { name: 'Target Validation Mouse Models', path: '/target-validation-mouse-models' },
+        ]}
+      />
     </div>
   );
 }

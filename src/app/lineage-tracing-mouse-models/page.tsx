@@ -358,6 +358,15 @@ export default function LineageTracingMouseModelsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'Lineage Tracing Mouse Models', path: '/lineage-tracing-mouse-models' },
+        ]}
+      />
     </div>
   );
 }

@@ -1170,6 +1170,15 @@ export default function InducibleConditionalKnockoutPage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Inducible Conditional Knockout', path: '/inducible-conditional-knockout' },
+        ]}
+      />
     </div>
   );
 }

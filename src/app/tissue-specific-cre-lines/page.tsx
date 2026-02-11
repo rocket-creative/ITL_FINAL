@@ -215,6 +215,15 @@ export default function TissueSpecificCreLinesPage() {
         </section>
       </main>
       <UXUIDCFooter />
+      
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Tissue Specific Cre Lines', path: '/tissue-specific-cre-lines' },
+        ]}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tissue Specific Cre Lines", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Tissue specific Cre driver lines for conditional gene targeting since 1998.", "serviceType": "Tissue Specific Cre Lines" }) }} />
     </div>
   );

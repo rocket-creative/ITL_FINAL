@@ -353,6 +353,15 @@ export default function AntibodyTherapeuticsMouseModelsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Research Applications', path: '/research-applications' },
+          { name: 'Antibody Therapeutics Mouse Models', path: '/antibody-therapeutics-mouse-models' },
+        ]}
+      />
     </div>
   );
 }

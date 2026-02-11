@@ -360,6 +360,15 @@ export default function RapidRosa26TargetingPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'Rapid Rosa26 Targeting', path: '/rapid-rosa26-targeting' },
+        ]}
+      />
     </div>
   );
 }

@@ -356,6 +356,15 @@ export default function CellTherapyMouseModelsPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Research Applications', path: '/research-applications' },
+          { name: 'Cell Therapy Mouse Models', path: '/cell-therapy-mouse-models' },
+        ]}
+      />
     </div>
   );
 }

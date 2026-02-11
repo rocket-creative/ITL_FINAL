@@ -357,6 +357,15 @@ export default function PathwayAnalysisMicePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Research Applications', path: '/research-applications' },
+          { name: 'Pathway Analysis Mice', path: '/pathway-analysis-mice' },
+        ]}
+      />
     </div>
   );
 }

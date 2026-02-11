@@ -8,6 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreadcrumbSchema } from "@/components/UXUIDC";
 
 // Hero Data
 const heroData = {
@@ -770,6 +771,14 @@ export default function CDNAKnockinPage() {
       
       <UXUIDCFooter />
       
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'cDNA Knockin', path: '/cdna-knockin' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -1066,7 +1066,15 @@ export default function CreLoxSystemPage() {
       </main>
 
       <UXUIDCFooter />
-      
+            
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'Cre Lox System', path: '/cre-lox-system' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

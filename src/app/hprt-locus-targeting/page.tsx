@@ -358,6 +358,15 @@ export default function HprtLocusTargetingPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'HPRT Locus Targeting', path: '/hprt-locus-targeting' },
+        ]}
+      />
     </div>
   );
 }

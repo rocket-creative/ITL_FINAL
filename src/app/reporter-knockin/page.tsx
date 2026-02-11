@@ -8,6 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 import { UXUIDCResourceLinks, reporterResources, BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreadcrumbSchema } from "@/components/UXUIDC";
 
 // Hero Data
 const heroData = {
@@ -937,7 +938,15 @@ export default function ReporterKnockinPage() {
       </main>
       
       <UXUIDCFooter />
-      
+            
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Reporter Knockin', path: '/reporter-knockin' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

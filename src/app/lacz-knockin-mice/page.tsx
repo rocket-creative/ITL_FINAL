@@ -350,6 +350,15 @@ export default function LaczKnockinMicePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'LacZ Knockin Mice', path: '/lacz-knockin-mice' },
+        ]}
+      />
     </div>
   );
 }

@@ -350,6 +350,15 @@ export default function HaTagKnockinPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'HA Tag Knockin', path: '/ha-tag-knockin' },
+        ]}
+      />
     </div>
   );
 }

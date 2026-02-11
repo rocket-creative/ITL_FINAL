@@ -1079,6 +1079,15 @@ export default function LAG3HumanizedMicePage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'LAG3 Humanized Mice', path: '/lag3-humanized-mice' },
+        ]}
+      />
     </div>
   );
 }

@@ -356,6 +356,15 @@ export default function BiomarkerDiscoveryMicePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Research Applications', path: '/research-applications' },
+          { name: 'Biomarker Discovery Mice', path: '/biomarker-discovery-mice' },
+        ]}
+      />
     </div>
   );
 }

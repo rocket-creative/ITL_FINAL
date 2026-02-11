@@ -351,6 +351,15 @@ export default function GfpKnockinMicePage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'GFP Knockin Mice', path: '/gfp-knockin-mice' },
+        ]}
+      />
     </div>
   );
 }

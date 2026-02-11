@@ -357,6 +357,15 @@ export default function H11SafeHarborPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'H11 Safe Harbor', path: '/h11-safe-harbor' },
+        ]}
+      />
     </div>
   );
 }

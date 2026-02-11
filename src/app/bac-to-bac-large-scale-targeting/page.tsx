@@ -793,6 +793,15 @@ export default function BACTargetingPage() {
         </section>
       </main>
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'BAC to BAC Large Scale Targeting', path: '/bac-to-bac-large-scale-targeting' },
+        ]}
+      />
     </div>
   );
 }

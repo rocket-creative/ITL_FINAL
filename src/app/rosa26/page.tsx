@@ -382,6 +382,15 @@ export default function Rosa26Page() {
       </main>
 
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Technologies', path: '/technologies' },
+          { name: 'Rosa26', path: '/rosa26' },
+        ]}
+      />
     </div>
   );
 }

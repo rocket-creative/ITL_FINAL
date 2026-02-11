@@ -9,6 +9,7 @@ import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import LabSignalsSignup, { getRelatedLabSignalsArticles } from '@/components/UXUIDC/LabSignalsSignup';
 import { IconDNA, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import { UXUIDCResourceLinks, pointMutationResources, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
+import { BreadcrumbSchema } from "@/components/UXUIDC";
 
 // Hero Data
 const heroData = {
@@ -897,6 +898,14 @@ export default function PointMutationMicePage() {
       
       <UXUIDCFooter />
       
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Point Mutation Mice', path: '/point-mutation-mice' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

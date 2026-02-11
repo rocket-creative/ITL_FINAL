@@ -358,6 +358,15 @@ export default function GeneFunctionStudiesPage() {
       </main>
       
       <UXUIDCFooter />
+          
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Research Applications', path: '/research-applications' },
+          { name: 'Gene Function Studies', path: '/gene-function-studies' },
+        ]}
+      />
     </div>
   );
 }
