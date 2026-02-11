@@ -93,3 +93,4 @@ export {
 
 // Utilities
 export { default as UXUIDCCookieConsent } from './CookieConsent';
+export { default as BreadcrumbSchema } from './BreadcrumbSchema';

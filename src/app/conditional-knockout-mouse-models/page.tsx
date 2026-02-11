@@ -6,7 +6,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconEye, IconQuote, IconChevronRight, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -1046,6 +1046,13 @@ export default function ConditionalKnockoutMouseModelsPage() {
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Conditional Knockout Mouse Models', path: '/conditional-knockout-mouse-models' },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

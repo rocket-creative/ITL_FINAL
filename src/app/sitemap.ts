@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // All 130 pages from START-HERE document
   const allPages = [
-    // Core Pages (9)
+    // Core Pages (13)
     '',
     '/about-itl',
     '/request-quote',
@@ -19,6 +19,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/current-openings',
     '/faq',
+    '/scientific-leadership',
+    '/quality-control',
+    '/conditional-knockout-vs-conventional-knockout',
 
     // Custom Mouse Models (18)
     '/custom-mouse-models',
