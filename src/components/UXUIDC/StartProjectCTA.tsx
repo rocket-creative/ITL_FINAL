@@ -13,12 +13,19 @@ interface CTAButton {
 }
 
 interface StartProjectCTAProps {
-  title: string;
-  content: string;
-  buttons: CTAButton[];
+  title?: string;
+  content?: string;
+  buttons?: CTAButton[];
 }
 
-export default function UXUIDCStartProjectCTA({ title, content, buttons }: StartProjectCTAProps) {
+export default function UXUIDCStartProjectCTA({ 
+  title = 'Ready to Start Your Project?',
+  content = 'Our scientific team is ready to help design your custom mouse model. Get expert guidance from initial consultation through germline transmission.',
+  buttons = [
+    { label: 'Request Quote', href: '/request-quote' },
+    { label: 'Schedule Consultation', href: '/contact' },
+  ]
+}: StartProjectCTAProps = {}) {
   return (
     <section
       className="flex flex-col justify-center items-center"
