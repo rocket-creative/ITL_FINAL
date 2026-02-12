@@ -104,7 +104,7 @@ export default function AlleleInputPanel({
         >
           Your Starting Alleles
         </h3>
-        {!isAdding && (
+        {!isAdding && alleles.length === 0 && (
           <button
             onClick={() => setIsAdding(true)}
             style={{
@@ -126,6 +126,18 @@ export default function AlleleInputPanel({
             <IconPlus size={16} color="white" />
             Add Allele
           </button>
+        )}
+        {alleles.length > 0 && (
+          <div
+            style={{
+              fontFamily: 'var(--system-ui)',
+              fontSize: '.85rem',
+              color: '#666',
+              fontStyle: 'italic',
+            }}
+          >
+            Limit: 1 allele maximum
+          </div>
         )}
       </div>
 

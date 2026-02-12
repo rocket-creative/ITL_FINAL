@@ -1,0 +1,154 @@
+Old URL (genetargeting.com),New URL,Status,Category
+/,/,301,Homepage
+/search,/search/,301,Search
+/knockout-mouse-models,/knockout-mouse-models/,301,Mouse Models
+/conventional-knockout-mouse-models,/conventional-knockout-mouse-models/,301,Mouse Models
+/conditional-knockout-mouse-models,/conditional-knockout-mouse-models/,301,Mouse Models
+/conditional-ko-reporter,/conditional-knockout-mouse-models/,301,Mouse Models - Legacy Variant
+/standard-conditional-knockout,/conditional-knockout-mouse-models/,301,Mouse Models - Legacy Variant
+/truview-conditional-knockout,/conditional-knockout-mouse-models/,301,Mouse Models - Legacy Variant
+/knockin-mouse-models,/knockin-mouse-models/,301,Mouse Models
+/cdna-knockin,/cdna-knockin/,301,Mouse Models
+/safe-harbor-locus,/safe-harbor-locus/,301,Technology
+/rosa26,/rosa26/,301,Technology
+/rapid-rosa26-targeting,/rapid-rosa26-targeting/,301,Technology
+/inducible-rosa26,/inducible-rosa26/,301,Technology
+/fast-mice,/fast-mice/,301,Technology
+/humanized-mouse-models,/humanized-mouse-models/,301,Mouse Models
+/gene-replacement,/gene-replacement/,301,Mouse Models
+/p53-humanized-mouse-models,/humanized-mouse-models/,301,Mouse Models - Consolidated
+/bac-to-bac-large-scale-targeting,/bac-to-bac-large-scale-targeting/,301,Technology
+/transgenic-mouse-models,/mouse-model-services/,301,Services
+/custom-mouse-models,/custom-mouse-models/,301,Mouse Models
+/rat-models,/rat-models/,301,Mouse Models
+/custom-rabbit-models,/custom-rabbit-models/,301,Mouse Models
+/transgenic-animal-models,/custom-animal-models/,301,Mouse Models
+/buy-transgenic-mice,/catalog-mouse-models/,301,Catalog
+/humanized-immune-checkpoint-mice,/humanized-immune-checkpoint-mice/,301,Catalog
+/single-immune-checkpoint-humanized-mice,/single-checkpoint-mice/,301,Catalog
+/double-immune-checkpoint-humanized-mice,/double-checkpoint-mice/,301,Catalog
+/order-inquiry-catalog-models,/order-catalog-models/,301,Catalog
+/humanized-immune-target-mice,/humanized-immune-checkpoint-mice/,301,Catalog - Consolidated
+/humanized-catalog-mouse-models,/catalog-mouse-models/,301,Catalog - Consolidated
+/point-mutation-mice,/point-mutation-mice/,301,Mouse Models
+/custom-animal-models,/custom-animal-models/,301,Mouse Models
+/about-ingenious,/about-itl/,301,Company
+/technology-overview,/technology-overview/,301,Company
+/current-openings,/current-openings/,301,Company
+/partners,/about-itl/,301,Company - Consolidated
+/testimonials,/testimonials/,301,Company
+/pharma-biotech-mouse-models,/therapeutic-areas/,301,Company
+/resources,/resources/,301,Resources
+/project-faqs-resources,/resources/,301,Resources - Consolidated
+/publications,/publications/,301,Resources
+/video-library,/video-library/,301,Resources
+/mouse-model-generation-guide,/mouse-model-generation-guide/,301,Resources
+/service-steps,/mouse-model-services/,301,Services
+/transgenic-mouse-service,/transgenic-mouse-service/,301,Services
+/preclinical-services,/preclinical-services/,301,Services
+/mouse-genotyping-service,/mouse-genotyping-service/,301,Services
+/partial-services,/mouse-model-services/,301,Services - Consolidated
+/post-project-services,/post-project-services/,301,Services
+/quote-request-form,/request-quote/,301,Contact
+/general-contact,/contact/,301,Contact
+/schedule-meeting,/schedule-meeting/,301,Contact
+/start-your-project,/start-your-project/,301,Contact
+/cre-mice,/cre-recombinase-mice/,301,Tools
+/es-cells,/technology-overview/,301,Tools - Consolidated
+/ingenious-process-2,/mouse-model-services/,301,Services - Consolidated
+/ingenious-blog,/ingenious-blog/,301,Blog
+/lab-signals,/lab-signals/,301,Newsletter
+/ingenious-blog/4-reasons-to-use-targeted-transgenic-mice-over-random-insertion,/ingenious-blog/4-reasons-to-use-targeted-transgenic-mice-over-random-insertion/,301,Blog Post
+/ingenious-blog/a-new-mouse-line-for-tissue-specific-expression,/ingenious-blog/a-new-mouse-line-for-tissue-specific-expression/,301,Blog Post
+/ingenious-blog/ace2-transgenic-mice,/ingenious-blog/ace2-transgenic-mice/,301,Blog Post
+/ingenious-blog/bac-transgenic,/ingenious-blog/bac-transgenic/,301,Blog Post
+/ingenious-blog/cell-strains,/ingenious-blog/cell-strains/,301,Blog Post
+/ingenious-blog/cl,/ingenious-blog/cl/,301,Blog Post
+/ingenious-blog/conditional-gene-knockout-mouse,/ingenious-blog/conditional-gene-knockout-mouse/,301,Blog Post
+/ingenious-blog/conditional-knockout-mice,/ingenious-blog/conditional-knockout-mice/,301,Blog Post
+/ingenious-blog/conditional-knockout-mouse-and-global-knockout-mouse,/ingenious-blog/conditional-knockout-mouse-and-global-knockout-mouse/,301,Blog Post
+/ingenious-blog/conditional-knockout-mouse-protocol,/ingenious-blog/conditional-knockout-mouse-protocol/,301,Blog Post
+/ingenious-blog/conditional-mutation,/ingenious-blog/conditional-mutation/,301,Blog Post
+/ingenious-blog/congratulations-to-our-clients,/ingenious-blog/congratulations-to-our-clients/,301,Blog Post
+/ingenious-blog/conventional-knockout,/ingenious-blog/conventional-knockout/,301,Blog Post
+/ingenious-blog/conventional-vs-conditional-knockout,/ingenious-blog/conventional-vs-conditional-knockout/,301,Blog Post
+/ingenious-blog/cre-flox,/ingenious-blog/cre-flox/,301,Blog Post
+/ingenious-blog/cre-floxed-mice,/ingenious-blog/cre-floxed-mice/,301,Blog Post
+/ingenious-blog/cre-lox-conditional-knockout-mouse-models,/ingenious-blog/cre-lox-conditional-knockout-mouse-models/,301,Blog Post
+/ingenious-blog/cre-lox-facts,/ingenious-blog/cre-lox-facts/,301,Blog Post
+/ingenious-blog/cre-recombinase,/ingenious-blog/cre-recombinase/,301,Blog Post
+/ingenious-blog/crispr-cas9,/ingenious-blog/crispr-cas9/,301,Blog Post
+/ingenious-blog/crispr-gene-knockout,/ingenious-blog/crispr-gene-knockout/,301,Blog Post
+/ingenious-blog/crispr-gene-targeting,/ingenious-blog/crispr-gene-targeting/,301,Blog Post
+/ingenious-blog/crispr-knockdown,/ingenious-blog/crispr-knockdown/,301,Blog Post
+/ingenious-blog/crispr-knockout,/ingenious-blog/crispr-knockout/,301,Blog Post
+/ingenious-blog/crispr-transgenic-mice,/ingenious-blog/crispr-transgenic-mice/,301,Blog Post
+/ingenious-blog/difference-between-knock-in-and-knockout,/ingenious-blog/difference-between-knock-in-and-knockout/,301,Blog Post
+/ingenious-blog/flox-design,/ingenious-blog/flox-design/,301,Blog Post
+/ingenious-blog/flox-sequence,/ingenious-blog/flox-sequence/,301,Blog Post
+/ingenious-blog/floxed-allele,/ingenious-blog/floxed-allele/,301,Blog Post
+/ingenious-blog/floxed-cre-lox-flox,/ingenious-blog/floxed-cre-lox-flox/,301,Blog Post
+/ingenious-blog/floxed-mice-cre,/ingenious-blog/floxed-mice-cre/,301,Blog Post
+/ingenious-blog/floxing,/ingenious-blog/floxing/,301,Blog Post
+/ingenious-blog/gaining-inducible-control,/ingenious-blog/gaining-inducible-control/,301,Blog Post
+/ingenious-blog/gene-knockout,/ingenious-blog/gene-knockout/,301,Blog Post
+/ingenious-blog/gene-knockout-method,/ingenious-blog/gene-knockout-method/,301,Blog Post
+/ingenious-blog/hace2-transgenic-mice,/ingenious-blog/hace2-transgenic-mice/,301,Blog Post
+/ingenious-blog/history-of-creating-genetically-humanized-mice,/ingenious-blog/history-of-creating-genetically-humanized-mice/,301,Blog Post
+/ingenious-blog/how-a-knockout-mouse-is-made,/ingenious-blog/how-a-knockout-mouse-is-made/,301,Blog Post
+/ingenious-blog/how-to-make-a-knock-in-mouse,/ingenious-blog/how-to-make-a-knock-in-mouse/,301,Blog Post
+/ingenious-blog/how-to-make-a-transgenic-mouse,/ingenious-blog/how-to-make-a-transgenic-mouse/,301,Blog Post
+/ingenious-blog/humanized-mice,/ingenious-blog/humanized-mice/,301,Blog Post
+/ingenious-blog/ingenious-and-smoc-catalog-humanized-mouse-models,/ingenious-blog/ingenious-and-smoc-catalog-humanized-mouse-models/,301,Blog Post
+/ingenious-blog/ingenious-targeting-laboratory-receives-3m-phase-ii-small-business-innovation-research-sbir-award,/ingenious-blog/ingenious-targeting-laboratory-receives-3m-phase-ii-small-business-innovation-research-sbir-award/,301,Blog Post
+/ingenious-blog/knock-in-knock-out-mice,/ingenious-blog/knock-in-knock-out-mice/,301,Blog Post
+/ingenious-blog/knock-in-mice-protocol,/ingenious-blog/knock-in-mice-protocol/,301,Blog Post
+/ingenious-blog/knock-in-mice-vs-transgenic-mice,/ingenious-blog/knock-in-mice-vs-transgenic-mice/,301,Blog Post
+/ingenious-blog/knockdown-mice,/ingenious-blog/knockdown-mice/,301,Blog Post
+/ingenious-blog/knockout-mice-in-the-study-of-human-genetic-disease,/ingenious-blog/knockout-mice-in-the-study-of-human-genetic-disease/,301,Blog Post
+/ingenious-blog/knockout-mice-in-the-study-of-human-genetic-disease-2,/ingenious-blog/knockout-mice-in-the-study-of-human-genetic-disease/,301,Blog Post - Duplicate
+/ingenious-blog/knockout-mice-purpose,/ingenious-blog/knockout-mice-purpose/,301,Blog Post
+/ingenious-blog/meet-ingenious-scientist-jennifer-parla,/ingenious-blog/meet-ingenious-scientist-jennifer-parla/,301,Blog Post
+/ingenious-blog/meet-ingenious-scientist-kristen-coughlin,/ingenious-blog/meet-ingenious-scientist-kristen-coughlin/,301,Blog Post
+/ingenious-blog/meet-ingenious-scientist-richard-row,/ingenious-blog/meet-ingenious-scientist-richard-row/,301,Blog Post
+/ingenious-blog/mouse-cell-line,/ingenious-blog/mouse-cell-line/,301,Blog Post
+/ingenious-blog/nih-grant-covid-19-ace2-mice,/ingenious-blog/nih-grant-covid-19-ace2-mice/,301,Blog Post
+/ingenious-blog/nih-grant-to-generate-exclusive-covid-19-ace2-mouse-models,/ingenious-blog/nih-grant-to-generate-exclusive-covid-19-ace2-mouse-models/,301,Blog Post
+/ingenious-blog/point-mutation-diseases,/ingenious-blog/point-mutation-diseases/,301,Blog Post
+/ingenious-blog/rat-models-of-cardiac-disease,/ingenious-blog/rat-models-of-cardiac-disease/,301,Blog Post
+/ingenious-blog/rosa26-mice,/ingenious-blog/rosa26-mice/,301,Blog Post
+/ingenious-blog/the-advantages-of-rat-models,/ingenious-blog/the-advantages-of-rat-models/,301,Blog Post
+/ingenious-blog/top-5-lab-mouse-colony-management-software-options-for-2023,/ingenious-blog/top-5-lab-mouse-colony-management-software-options-for-2023/,301,Blog Post
+/ingenious-blog/top-five-reasons-mouse-models-fail-mistakes-to-avoid,/ingenious-blog/top-five-reasons-mouse-models-fail-mistakes-to-avoid/,301,Blog Post
+/ingenious-blog/transgenic-mice,/ingenious-blog/transgenic-mice/,301,Blog Post
+/ingenious-blog/transgenic-mouse-model,/ingenious-blog/transgenic-mouse-model/,301,Blog Post
+/ingenious-blog/transgenic-rats-vs-mice,/ingenious-blog/transgenic-rats-vs-mice/,301,Blog Post
+/ingenious-blog/types-of-point-mutations,/ingenious-blog/types-of-point-mutations/,301,Blog Post
+/ingenious-blog/what-is-a-conditional-allele,/ingenious-blog/what-is-a-conditional-allele/,301,Blog Post
+/ingenious-blog/what-is-a-knockin,/ingenious-blog/what-is-a-knockin/,301,Blog Post
+/ingenious-blog/what-is-a-knockout-rat,/ingenious-blog/what-is-a-knockout-rat/,301,Blog Post
+/ingenious-blog/what-is-a-point-mutation,/ingenious-blog/what-is-a-point-mutation/,301,Blog Post
+/ingenious-blog/what-is-a-stem-cell-line,/ingenious-blog/what-is-a-stem-cell-line/,301,Blog Post
+/ingenious-blog/what-is-a-transgene,/ingenious-blog/what-is-a-transgene/,301,Blog Post
+/ingenious-blog/what-is-the-mouse-knockout-timeline,/ingenious-blog/what-is-the-mouse-knockout-timeline/,301,Blog Post
+/ingenious-blog/why-make-a-humanized-mouse,/ingenious-blog/why-make-a-humanized-mouse/,301,Blog Post
+/exclusive-newsletter-content/:slug*,/lab-signals/,301,Newsletter - Catch-all
+/exclusive-newsletter-content/article-2-advances-in-metabolic-disorders-research-obesity-and-diabetes,/lab-signals/article-2-advances-in-metabolic-disorders-research-obesity-and-diabetes/,301,Newsletter Article
+/exclusive-newsletter-content/article-3-developments-in-immune-and-infectious-diseases-insights-from-humanized-models,/lab-signals/article-3-developments-in-immune-and-infectious-diseases-insights-from-humanized-models/,301,Newsletter Article
+/exclusive-newsletter-content/article-4-breakthroughs-in-cancer-research-innovations-in-immunotherapy,/lab-signals/article-4-breakthroughs-in-cancer-research-innovations-in-immunotherapy/,301,Newsletter Article
+/exclusive-newsletter-content/article-5-advancements-in-gene-editing-technologies-enhancements-in-crispr-cas9,/lab-signals/article-5-advancements-in-gene-editing-technologies-enhancements-in-crispr-cas9/,301,Newsletter Article
+/exclusive-newsletter-content/building-better-floxed-alleles-for-conditional-knockout-mice,/lab-signals/building-better-floxed-alleles-for-conditional-knockout-mice/,301,Newsletter Article
+/exclusive-newsletter-content/conventional-vs-conditional-knockout-mice,/lab-signals/conventional-vs-conditional-knockout-mice/,301,Newsletter Article
+/exclusive-newsletter-content/cre-lox-6-facts-you-may-not-know,/lab-signals/cre-lox-6-facts-you-may-not-know/,301,Newsletter Article
+/exclusive-newsletter-content/how-a-knockout-mouse-is-made,/lab-signals/how-a-knockout-mouse-is-made/,301,Newsletter Article
+/exclusive-newsletter-content/how-humanized-mouse-models-are-transforming-pre-clinical-r-d,/lab-signals/how-humanized-mouse-models-are-transforming-pre-clinical-r-d/,301,Newsletter Article
+/exclusive-newsletter-content/how-to-obtain-a-conditional-knockout,/lab-signals/how-to-obtain-a-conditional-knockout/,301,Newsletter Article
+/exclusive-newsletter-content/inside-the-humanized-mouse-engineering-the-human-immune-system,/lab-signals/inside-the-humanized-mouse-engineering-the-human-immune-system/,301,Newsletter Article
+/exclusive-newsletter-content/insights-into-neurodegenerative-diseases-alzheimers-disease-progression-and-treatments,/lab-signals/insights-into-neurodegenerative-diseases-alzheimers-disease-progression-and-treatments/,301,Newsletter Article
+/exclusive-newsletter-content/knock-in-mice-vs-transgenic-mice-what-you-need-to-know,/lab-signals/knock-in-mice-vs-transgenic-mice-what-you-need-to-know/,301,Newsletter Article
+/exclusive-newsletter-content/leveraging-mouse-models-for-point-mutation-diseases-r-d-landscape,/lab-signals/leveraging-mouse-models-for-point-mutation-diseases-r-d-landscape/,301,Newsletter Article
+/exclusive-newsletter-content/model-vs-model-humanized-mice-compared-to-organoids-chips-and-ai,/lab-signals/model-vs-model-humanized-mice-compared-to-organoids-chips-and-ai/,301,Newsletter Article
+/exclusive-newsletter-content/modeling-complexity-multi-cytokine-and-multi-organ-humanization,/lab-signals/modeling-complexity-multi-cytokine-and-multi-organ-humanization/,301,Newsletter Article
+/exclusive-newsletter-content/the-impact-of-knockout-and-knock-in-mouse-models-on-biomedical-research,/lab-signals/the-impact-of-knockout-and-knock-in-mouse-models-on-biomedical-research/,301,Newsletter Article
+/exclusive-newsletter-content/top-5-lab-mouse-colony-management-software-options-for-2025,/lab-signals/top-5-lab-mouse-colony-management-software-options-for-2025/,301,Newsletter Article
+/exclusive-newsletter-content/translating-promise-into-practice---clinical-applications-cros-and-the-future,/lab-signals/translating-promise-into-practice---clinical-applications-cros-and-the-future/,301,Newsletter Article

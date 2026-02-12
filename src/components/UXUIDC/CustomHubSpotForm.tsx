@@ -121,8 +121,16 @@ export default function CustomHubSpotForm({
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    // #region agent log
+    console.log('[DEBUG] Form submit started', {portalId, formGuid});
+    fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'CustomHubSpotForm.tsx:122',message:'handleSubmit started',data:{portalId,formGuid},timestamp:Date.now()})}).catch(()=>{});
+    // #endregion
 
     if (!validate()) {
+      // #region agent log
+      console.log('[DEBUG] Validation failed');
+      fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'CustomHubSpotForm.tsx:130',message:'Validation failed',data:{},timestamp:Date.now()})}).catch(()=>{});
+      // #endregion
       return;
     }
 
@@ -130,19 +138,43 @@ export default function CustomHubSpotForm({
     setSubmitStatus('idle');
 
     try {
+      // #region agent log
+      console.log('[DEBUG] About to call submitToHubSpot');
+      fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'CustomHubSpotForm.tsx:141',message:'Calling submitToHubSpot',data:{},timestamp:Date.now()})}).catch(()=>{});
+      // #endregion
       const result = await submitToHubSpot(portalId, formGuid, formData);
+      // #region agent log
+      console.log('[DEBUG] submitToHubSpot returned', {success: result.success});
+      fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'CustomHubSpotForm.tsx:147',message:'submitToHubSpot returned',data:{success:result.success,hasErrors:!!result.errors},timestamp:Date.now()})}).catch(()=>{});
+      // #endregion
 
       if (result.success) {
+        // #region agent log
+        console.log('[DEBUG] Setting success state');
+        fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'CustomHubSpotForm.tsx:154',message:'Setting success state',data:{},timestamp:Date.now()})}).catch(()=>{});
+        // #endregion
         setSubmitStatus('success');
         setFormData({}); // Clear form
       } else {
+        // #region agent log
+        console.log('[DEBUG] Setting error state', result.errors);
+        fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'CustomHubSpotForm.tsx:161',message:'Setting error state',data:{errors:result.errors},timestamp:Date.now()})}).catch(()=>{});
+        // #endregion
         setSubmitStatus('error');
         console.error('HubSpot submission failed:', result.errors);
       }
     } catch (error) {
+      // #region agent log
+      console.log('[DEBUG] Exception caught', error);
+      fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'CustomHubSpotForm.tsx:170',message:'Exception in handleSubmit',data:{error:error instanceof Error?error.message:'unknown'},timestamp:Date.now()})}).catch(()=>{});
+      // #endregion
       setSubmitStatus('error');
       console.error('Form submission error:', error);
     } finally {
+      // #region agent log
+      console.log('[DEBUG] Finally block - setIsSubmitting(false)');
+      fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'CustomHubSpotForm.tsx:178',message:'Finally block',data:{},timestamp:Date.now()})}).catch(()=>{});
+      // #endregion
       setIsSubmitting(false);
     }
   };

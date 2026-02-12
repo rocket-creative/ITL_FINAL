@@ -12,8 +12,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import CustomHubSpotForm from '@/components/UXUIDC/CustomHubSpotForm';
-import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
+import HubSpotForm from '@/components/UXUIDC/HubSpotForm';
 import { IconDNA, IconCheckCircle, IconChevronRight, IconMail, IconPhone } from '@/components/UXUIDC/Icons';
 
 // Hero Data
@@ -44,85 +43,6 @@ const faqData = [
 // Related Links
 const relatedLinks: Array<{ title: string; href: string }> = [];
 
-// Quote Request Form Fields
-const quoteFormFields: FormField[] = [
-  {
-    name: 'firstname',
-    label: 'First Name',
-    type: 'text',
-    required: true,
-    placeholder: 'John',
-  },
-  {
-    name: 'lastname',
-    label: 'Last Name',
-    type: 'text',
-    required: true,
-    placeholder: 'Doe',
-  },
-  {
-    name: 'email',
-    label: 'Email',
-    type: 'email',
-    required: true,
-    placeholder: 'john.doe@university.edu',
-  },
-  {
-    name: 'phone',
-    label: 'Phone',
-    type: 'tel',
-    required: false,
-    placeholder: '(555) 123-4567',
-  },
-  {
-    name: 'company',
-    label: 'Institution/Company',
-    type: 'text',
-    required: true,
-    placeholder: 'University of Research',
-  },
-  {
-    name: 'gene_target',
-    label: 'Gene Target',
-    type: 'text',
-    required: false,
-    placeholder: 'e.g., Brca1, Tp53',
-  },
-  {
-    name: 'model_type',
-    label: 'Model Type',
-    type: 'select',
-    required: true,
-    options: [
-      { value: 'knockout', label: 'Knockout (Conventional or Conditional)' },
-      { value: 'knockin', label: 'Knockin (Point Mutation, Reporter, Tag, cDNA)' },
-      { value: 'humanized', label: 'Humanized Mouse Model' },
-      { value: 'transgenic', label: 'Transgenic Mouse Model' },
-      { value: 'not_sure', label: 'Not Sure - Need Consultation' },
-    ],
-  },
-  {
-    name: 'strain_background',
-    label: 'Strain Background',
-    type: 'select',
-    required: false,
-    options: [
-      { value: 'c57bl6', label: 'C57BL/6' },
-      { value: 'balbc', label: 'BALB/c' },
-      { value: '129', label: '129' },
-      { value: 'other', label: 'Other' },
-      { value: 'no_preference', label: 'No Preference' },
-    ],
-  },
-  {
-    name: 'project_description',
-    label: 'Project Description',
-    type: 'textarea',
-    required: true,
-    placeholder: 'Please describe your project goals, experimental design, and any specific requirements...',
-    rows: 5,
-  },
-];
 
 export default function RequestQuotePage() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -308,13 +228,10 @@ export default function RequestQuotePage() {
                   padding: '32px',
                   boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
                 }}>
-                  <CustomHubSpotForm
-                    portalId="242707"
-                    formGuid="b854ed46-fed3-4b54-9d01-62173106ad8c"
-                    fields={quoteFormFields}
-                    submitButtonText="Request Quote"
-                    successMessage="Thank you for your quote request! Our scientific consultants will review your project and respond within 1 business day."
-                    errorMessage="We're having trouble submitting your request. Please email us directly at inquiry@genetargeting.com or call (631) 468-8534."
+                  <HubSpotForm
+                    portalId="3977953"
+                    formId="b854ed46-fed3-4b54-9d01-62173106ad8c"
+                    region="na1"
                   />
                 </div>
               </div>
