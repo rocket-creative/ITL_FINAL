@@ -80,26 +80,28 @@ function updateAllPlatformConsent(prefs: CookiePreferences, shouldReload = false
 export default function UXUIDCCookieConsent() {
   const [show, setShow] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
-  const [preferences, setPreferences] = useState<CookiePreferences>(() => {
-    const defaultPrefs = {
-      necessary: true,
-      analytics: false,
-      marketing: false,
-      functional: false,
-    };
-    if (typeof window === 'undefined') return defaultPrefs;
-    const saved = localStorage.getItem('itl-cookie-preferences');
-    if (saved) {
-      try {
-        return { ...defaultPrefs, ...JSON.parse(saved) };
-      } catch {
-        return defaultPrefs;
-      }
-    }
-    return defaultPrefs;
+  // Initialize with default values to ensure hydration matches
+  // localStorage is read in useEffect to avoid SSR/client mismatch
+  const [preferences, setPreferences] = useState<CookiePreferences>({
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false,
   });
 
   useEffect(() => {
+    // Load saved preferences from localStorage AFTER hydration
+    const saved = localStorage.getItem('itl-cookie-preferences');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        setPreferences(prev => ({ ...prev, ...parsed }));
+      } catch {
+        // Keep defaults on parse error
+      }
+    }
+
+    // Check if consent was already given
     const consent = localStorage.getItem('itl-cookie-consent');
     if (!consent) {
       // Delay showing the banner slightly for better UX
