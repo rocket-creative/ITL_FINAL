@@ -6,7 +6,6 @@
  */
 
 import { useEffect, useRef } from 'react';
-import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

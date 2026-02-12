@@ -7,7 +7,6 @@
  */
 
 import { useState, useMemo } from 'react';
-import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
