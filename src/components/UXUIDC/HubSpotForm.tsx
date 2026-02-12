@@ -36,6 +36,7 @@ export default function HubSpotForm({
   style = {},
 }: HubSpotFormProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isLoading, setIsLoading] = useState(true);
   // Use useState with lazy initializer to avoid calling Math.random() during render
   const [generatedId] = useState(() => `hubspot-form-${Math.random().toString(36).substr(2, 9)}`);
   const targetId = containerId || generatedId;
@@ -57,6 +58,9 @@ export default function HubSpotForm({
           portalId,
           formId,
           target: `#${targetId}`,
+          onFormReady: () => {
+            setIsLoading(false);
+          },
         });
       }
     };
@@ -83,19 +87,21 @@ export default function HubSpotForm({
       }}
     >
       {/* Loading state */}
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '300px',
-          color: '#666',
-          fontFamily: 'var(--system-ui)',
-          fontSize: '.9rem',
-        }}
-      >
-        {loadingMessage}
-      </div>
+      {isLoading && (
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '300px',
+            color: '#666',
+            fontFamily: 'var(--system-ui)',
+            fontSize: '.9rem',
+          }}
+        >
+          {loadingMessage}
+        </div>
+      )}
     </div>
   );
 }
