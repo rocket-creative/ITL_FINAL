@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ITL 2026 Website
 
-## Getting Started
+Next.js website for ITL 2026, built with TypeScript, Tailwind CSS, and modern web standards.
 
-First, run the development server:
+## Quick Start
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view in browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+ITL_2026/
+├── src/                    # Application source code
+├── public/                 # Static assets
+├── scripts/                # Build and utility scripts
+├── docs-important/         # Current active documentation
+├── archive/                # Historical docs and test files (git-ignored)
+└── docs/                   # Additional documentation
+```
+
+## Documentation
+
+### Active Documentation
+All current, relevant documentation is in `docs-important/`:
+- Launch checklists and plans
+- SEO audits and implementation guides
+- HubSpot and analytics integration
+- Redirect management
+- OG image and alt text guidelines
+- Design system documentation
+
+See `docs-important/README.md` for the complete index.
+
+### Historical Archive
+Old reports, test files, and deprecated documentation are in `archive/` (excluded from Git).
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript (strict mode)
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+- **Database:** PostgreSQL (Vercel Postgres)
+
+## Development
+
+```bash
+npm run dev          # Start dev server
+npm run build        # Production build
+npm run start        # Start production server
+npm run lint         # Run ESLint
+```
+
+## Git Workflow
+
+**Branches:**
+- `ITL_MAIN` - Production (default)
+- `ITL_DEV` - Development work
+
+**Commit Format:** `NNN_type_brief-description`
+
+Types: chore, feat, fix, update, refactor, docs, test, style, perf
+
+**Examples:**
+- `001_chore_initial-setup`
+- `002_feat_homepage`
+- `003_fix_nav-mobile`
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [TypeScript](https://www.typescriptlang.org/docs)

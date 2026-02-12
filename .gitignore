@@ -1,6 +1,13 @@
 .ai-errors.log
 .DS_Store
 
+# Environment variables (NEVER commit these!)
+.env.local
+.env*.local
+
+# Archive folder for old/unnecessary files
+archive/
+
 # Change documents (source files, not needed in repo)
 changes/
 Services-*.zip

@@ -12,8 +12,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch } from '@/components/UXUIDC';
-import CustomHubSpotForm from '@/components/UXUIDC/CustomHubSpotForm';
-import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
+import HubSpotForm from '@/components/UXUIDC/HubSpotForm';
 import {
   IconCheckCircle,
   IconMessageCircle,
@@ -72,86 +71,6 @@ const deliverableOptions = [
 ];
 
 // Catalog Order Form Fields
-const catalogFormFields: FormField[] = [
-  {
-    name: 'firstname',
-    label: 'First Name',
-    type: 'text',
-    required: true,
-    placeholder: 'John',
-  },
-  {
-    name: 'lastname',
-    label: 'Last Name',
-    type: 'text',
-    required: true,
-    placeholder: 'Doe',
-  },
-  {
-    name: 'email',
-    label: 'Email',
-    type: 'email',
-    required: true,
-    placeholder: 'john.doe@university.edu',
-  },
-  {
-    name: 'phone',
-    label: 'Phone',
-    type: 'tel',
-    required: false,
-    placeholder: '(555) 123-4567',
-  },
-  {
-    name: 'company',
-    label: 'Institution/Company',
-    type: 'text',
-    required: true,
-    placeholder: 'University of Research',
-  },
-  {
-    name: 'model_name',
-    label: 'Model Name or Gene Symbol',
-    type: 'text',
-    required: true,
-    placeholder: 'e.g., PD-1 Humanized, Brca1 KO',
-  },
-  {
-    name: 'model_category',
-    label: 'Model Type',
-    type: 'select',
-    required: false,
-    options: modelCategoryOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
-  },
-  {
-    name: 'strain_background',
-    label: 'Strain Background',
-    type: 'select',
-    required: false,
-    options: strainOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
-  },
-  {
-    name: 'quantity',
-    label: 'Quantity Needed',
-    type: 'select',
-    required: true,
-    options: quantityOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
-  },
-  {
-    name: 'timeline',
-    label: 'Timeline',
-    type: 'select',
-    required: false,
-    options: urgencyOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
-  },
-  {
-    name: 'additional_info',
-    label: 'Additional Information',
-    type: 'textarea',
-    required: false,
-    placeholder: 'Please provide any additional details about your order, specific requirements, or questions...',
-    rows: 4,
-  },
-];
 
 const faqData = [
   {
@@ -481,13 +400,10 @@ export default function OrderInquiryCatalogModelsPage() {
                     </button>
                   </div>
                 )}
-                <CustomHubSpotForm
-                  portalId="242707"
-                  formGuid="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
-                  fields={catalogFormFields}
-                  submitButtonText="Submit Order Inquiry"
-                  successMessage="Thank you! Your catalog model inquiry has been submitted. Our team will contact you within 1 business day with availability and pricing."
-                  errorMessage="We're having trouble submitting your request. Please email us directly at inquiry@genetargeting.com or call (631) 468-8534."
+                <HubSpotForm
+                  portalId="3977953"
+                  formId="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
+                  region="na1"
                 />
                 <button
                   onClick={() => setShowCatalogSearch(!showCatalogSearch)}

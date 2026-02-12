@@ -141,6 +141,10 @@ export async function submitToHubSpot(
     
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
+      // #region agent log
+      console.error('🔴 HUBSPOT ERROR DETAILS:', JSON.stringify({status: response.status, errorData}, null, 2));
+      fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'hubspot.ts:127',message:'HubSpot error response',data:{status:response.status,errorData:errorData},timestamp:Date.now()})}).catch(()=>{});
+      // #endregion
       return {
         success: false,
         errors: errorData.errors || [{

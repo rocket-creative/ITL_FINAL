@@ -18,13 +18,9 @@ import {
   IconCheckCircle,
   IconArrowRight,
   IconFlask,
-  IconDownload,
 } from '@/components/UXUIDC';
 
 gsap.registerPlugin(ScrollTrigger);
-
-// PDF Download URL (legacy link)
-const PRICING_GUIDE_PDF = 'https://3977953.fs1.hubspotusercontent-na1.net/hubfs/3977953/Pricing%20Guide%202024.pdf';
 
 // What's Inside the Guide
 const guideContents = [
@@ -123,12 +119,12 @@ export default function StartYourProjectPage() {
     };
   }, []);
 
-  const handlePdfDownload = (e: React.FormEvent) => {
+  const handlePricingGuideAccess = (e: React.FormEvent) => {
     e.preventDefault();
     if (email.includes('@')) {
       setFormSubmitted(true);
-      // Open PDF in new tab
-      window.open(PRICING_GUIDE_PDF, '_blank');
+      // Redirect to pricing guide page
+      window.location.href = '/pricing-guide';
     }
   };
 
@@ -296,7 +292,7 @@ export default function StartYourProjectPage() {
                 </p>
 
                 {!formSubmitted ? (
-                  <form onSubmit={handlePdfDownload}>
+                  <form onSubmit={handlePricingGuideAccess}>
                     <input
                       type="email"
                       placeholder="Enter your work email to unlock the guide"
@@ -334,28 +330,16 @@ export default function StartYourProjectPage() {
                       onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#006666')}
                       onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#008080')}
                     >
-                      <IconDownload size={18} color="white" />
-                      Download Pricing Guide
+                      <IconArrowRight size={18} color="white" />
+                      Access Pricing Guide
                     </button>
                   </form>
                 ) : (
                   <div style={{ textAlign: 'center', padding: '20px 0' }}>
                     <IconCheckCircle size={48} color="#008080" />
                     <p style={{ color: '#333', fontWeight: 600, marginTop: '15px' }}>
-                      Your download should start automatically.
+                      Redirecting to pricing guide...
                     </p>
-                    <a
-                      href={PRICING_GUIDE_PDF}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        color: '#008080',
-                        fontSize: '.9rem',
-                        textDecoration: 'underline',
-                      }}
-                    >
-                      Click here if it doesn&apos;t start
-                    </a>
                   </div>
                 )}
 
