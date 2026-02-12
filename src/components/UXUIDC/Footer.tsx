@@ -1,15 +1,36 @@
 /**
  * |UXUIDC| Footer - Dark grey background with white text
- * @version 2.3.0
+ * @version 2.4.0
  * Fixed padding/margin, all text white
- * Fixed hydration mismatch by using useEffect for currentYear
+ * Fixed hydration mismatch using useSyncExternalStore for currentYear
  */
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
+/**
+ * Hook to safely get current year without hydration mismatch
+ * Uses useSyncExternalStore to avoid setState-in-effect ESLint error
+ */
+function useCurrentYear() {
+  const subscribe = useCallback(() => {
+    // Year doesn't change during a session, but we need a subscribe function
+    return () => {};
+  }, []);
+
+  const getSnapshot = useCallback(() => {
+    return new Date().getFullYear();
+  }, []);
+
+  const getServerSnapshot = useCallback(() => {
+    return 2026; // Server-side fallback
+  }, []);
+
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+}
 
 const footerSections = [
   {
@@ -82,13 +103,9 @@ const footerSections = [
 ];
 
 export function UXUIDCFooter() {
-  // Use state with default fallback to prevent hydration mismatch
-  // Server renders 2026, client updates to actual year after hydration
-  const [currentYear, setCurrentYear] = useState(2026);
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
+  // Use useSyncExternalStore to get current year safely
+  // Avoids hydration mismatch and setState-in-effect ESLint error
+  const currentYear = useCurrentYear();
 
   return (
     <footer 
