@@ -1,13 +1,13 @@
 /**
  * |UXUIDC| HubSpot Form Component
- * @version 1.0.0
+ * @version 1.1.0
  * @created 2026
  * @description Reusable HubSpot form embed component for contact forms
  */
 
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useId } from 'react';
 
 interface HubSpotFormProps {
   /** HubSpot form ID */
@@ -37,11 +37,24 @@ export default function HubSpotForm({
 }: HubSpotFormProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
-  // Use useState with lazy initializer to avoid calling Math.random() during render
-  const [generatedId] = useState(() => `hubspot-form-${Math.random().toString(36).substr(2, 9)}`);
-  const targetId = containerId || generatedId;
+  const [formCreated, setFormCreated] = useState(false);
+  // Use React's useId hook for stable, consistent IDs across renders (React 18+)
+  const reactId = useId();
+  // Convert React's ID format (e.g., ":r1:") to a valid HTML ID (e.g., "hubspot-form-r1")
+  const stableId = `hubspot-form-${reactId.replace(/:/g, '')}`;
+  const targetId = containerId || stableId;
 
   useEffect(() => {
+    // Prevent duplicate form creation
+    if (formCreated) return;
+
+    // Verify container exists in DOM before proceeding
+    const container = document.getElementById(targetId);
+    if (!container) {
+      console.warn(`HubSpot form container #${targetId} not found in DOM`);
+      return;
+    }
+
     // Load HubSpot form script
     const script = document.createElement('script');
     script.src = '//js.hsforms.net/forms/embed/v2.js';
@@ -50,6 +63,13 @@ export default function HubSpotForm({
     script.async = true;
 
     script.onload = () => {
+      // Double-check container still exists after script loads
+      const containerCheck = document.getElementById(targetId);
+      if (!containerCheck) {
+        console.warn(`HubSpot form container #${targetId} no longer exists`);
+        return;
+      }
+
       // @ts-expect-error - HubSpot global object
       if (window.hbspt) {
         // @ts-expect-error - HubSpot forms API
@@ -60,6 +80,7 @@ export default function HubSpotForm({
           target: `#${targetId}`,
           onFormReady: () => {
             setIsLoading(false);
+            setFormCreated(true);
           },
         });
       }
@@ -74,7 +95,7 @@ export default function HubSpotForm({
         existingScript.remove();
       }
     };
-  }, [formId, portalId, region, targetId]);
+  }, [formId, portalId, region, targetId, formCreated]);
 
   return (
     <div
