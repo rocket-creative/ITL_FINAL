@@ -47,11 +47,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+    <html lang="en" className={poppins.variable}>
       <head>
         {/* Hero image preload moved to pages that use it to avoid unused preload warnings */}
       </head>
-      <body className="antialiased" suppressHydrationWarning>
+      <body className="antialiased">
         {/* All Tracking Pixels: GA4, Facebook, LinkedIn, Twitter, AdRoll */}
         <AllPixels />
         
