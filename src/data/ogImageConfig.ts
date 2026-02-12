@@ -1056,13 +1056,6 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
     line3: 'Learn More',
     tier: 2,
   },
-  '/safe-harbor-locus': {
-    slug: 'safe-harbor-locus',
-    line1: 'Safe Harbor Targeting',
-    line2: 'Predictable Gene Expression',
-    line3: 'Learn More',
-    tier: 2,
-  },
   '/inducible-rosa26': {
     slug: 'inducible-rosa26',
     line1: 'Inducible ROSA26',

@@ -1,10 +1,10 @@
 'use client';
 
 import {
-import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
   UXUIDCNavigation,
   UXUIDCFooter,
   CatalogSearch,
+  BreadcrumbSchema,
 } from '@/components/UXUIDC';
 import Link from 'next/link';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';

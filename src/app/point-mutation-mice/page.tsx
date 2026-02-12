@@ -8,8 +8,9 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import LabSignalsSignup, { getRelatedLabSignalsArticles } from '@/components/UXUIDC/LabSignalsSignup';
 import { IconDNA, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, pointMutationResources, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
-import { BreadcrumbSchema } from "@/components/UXUIDC";
+import { UXUIDCResourceLinks, pointMutationResources, BreedingSchemeArchitectCTA ,
+  BreadcrumbSchema,
+} from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {

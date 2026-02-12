@@ -7,8 +7,9 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, reporterResources, BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
-import { BreadcrumbSchema } from "@/components/UXUIDC";
+import { UXUIDCResourceLinks, reporterResources, BreedingSchemeArchitectCTA, LabSignalsSignup ,
+  BreadcrumbSchema,
+} from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {

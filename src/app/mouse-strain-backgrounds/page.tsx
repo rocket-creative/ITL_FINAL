@@ -7,7 +7,6 @@
  */
 
 import { useEffect, useRef } from 'react';
-import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
   UXUIDCNavigation,
@@ -752,12 +751,11 @@ export default function MouseStrainBackgroundsPage() {
               C57BL/6 vs BALB/c: Key Differences
             </h2>
 
-            <div className="animate-in" style={{
+            <div className="animate-in md:grid-cols-2 grid-cols-1" style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
               gap: '30px',
             }}
-            className="md:grid-cols-2 grid-cols-1"
             >
               <div style={{
                 backgroundColor: BRAND.white,

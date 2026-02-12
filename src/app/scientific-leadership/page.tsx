@@ -7,7 +7,6 @@
  */
 
 import {
-import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
   UXUIDCNavigation,
   UXUIDCFooter,
   UXUIDCCookieConsent,
