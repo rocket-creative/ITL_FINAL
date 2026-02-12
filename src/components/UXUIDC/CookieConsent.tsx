@@ -14,7 +14,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useSyncExternalStore, useCallback } from 'react';
 import Link from 'next/link';
 import { gtag, updateFBConsent } from '@/components/analytics';
 
@@ -23,6 +23,41 @@ interface CookiePreferences {
   analytics: boolean;
   marketing: boolean;
   functional: boolean;
+}
+
+const DEFAULT_PREFERENCES: CookiePreferences = {
+  necessary: true,
+  analytics: false,
+  marketing: false,
+  functional: false,
+};
+
+/**
+ * Hook to safely read cookie preferences from localStorage
+ * Uses useSyncExternalStore to avoid hydration mismatches and setState-in-effect issues
+ */
+function useCookiePreferences() {
+  const subscribe = useCallback((callback: () => void) => {
+    window.addEventListener('storage', callback);
+    return () => window.removeEventListener('storage', callback);
+  }, []);
+
+  const getSnapshot = useCallback(() => {
+    const saved = localStorage.getItem('itl-cookie-preferences');
+    return saved || JSON.stringify(DEFAULT_PREFERENCES);
+  }, []);
+
+  const getServerSnapshot = useCallback(() => {
+    return JSON.stringify(DEFAULT_PREFERENCES);
+  }, []);
+
+  const prefsString = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  
+  try {
+    return JSON.parse(prefsString) as CookiePreferences;
+  } catch {
+    return DEFAULT_PREFERENCES;
+  }
 }
 
 /**
@@ -80,27 +115,27 @@ function updateAllPlatformConsent(prefs: CookiePreferences, shouldReload = false
 export default function UXUIDCCookieConsent() {
   const [show, setShow] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
-  // Initialize with default values to ensure hydration matches
-  // localStorage is read in useEffect to avoid SSR/client mismatch
-  const [preferences, setPreferences] = useState<CookiePreferences>({
-    necessary: true,
-    analytics: false,
-    marketing: false,
-    functional: false,
-  });
+  
+  // Use useSyncExternalStore to read saved preferences (avoids hydration + setState-in-effect issues)
+  const savedPreferences = useCookiePreferences();
+  
+  // Local state for editing preferences in the UI (only used when preferences panel is open)
+  // Initialize from saved preferences - useSyncExternalStore handles hydration safely
+  const [editingPreferences, setEditingPreferences] = useState<CookiePreferences | null>(null);
+  
+  // Use editing preferences when panel is open, otherwise use saved
+  const preferences = editingPreferences ?? savedPreferences;
+  
+  // Setter that updates local editing state
+  const setPreferences = (newPrefs: CookiePreferences | ((prev: CookiePreferences) => CookiePreferences)) => {
+    if (typeof newPrefs === 'function') {
+      setEditingPreferences(prev => newPrefs(prev ?? savedPreferences));
+    } else {
+      setEditingPreferences(newPrefs);
+    }
+  };
 
   useEffect(() => {
-    // Load saved preferences from localStorage AFTER hydration
-    const saved = localStorage.getItem('itl-cookie-preferences');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        setPreferences(prev => ({ ...prev, ...parsed }));
-      } catch {
-        // Keep defaults on parse error
-      }
-    }
-
     // Check if consent was already given
     const consent = localStorage.getItem('itl-cookie-consent');
     if (!consent) {
