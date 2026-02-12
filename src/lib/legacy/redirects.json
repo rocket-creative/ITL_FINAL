@@ -1,35 +1,5 @@
 [
   {
-    "comment": "Homepage",
-    "source": "/",
-    "destination": "/",
-    "permanent": true
-  },
-  {
-    "comment": "Search - exact match",
-    "source": "/search",
-    "destination": "/search/",
-    "permanent": true
-  },
-  {
-    "comment": "=== KNOCKOUT MOUSE MODELS ===",
-    "source": "/knockout-mouse-models",
-    "destination": "/knockout-mouse-models/",
-    "permanent": true
-  },
-  {
-    "comment": "Conventional knockout",
-    "source": "/conventional-knockout-mouse-models",
-    "destination": "/conventional-knockout-mouse-models/",
-    "permanent": true
-  },
-  {
-    "comment": "Conditional knockout - main page",
-    "source": "/conditional-knockout-mouse-models",
-    "destination": "/conditional-knockout-mouse-models/",
-    "permanent": true
-  },
-  {
     "comment": "Conditional KO Reporter variant",
     "source": "/conditional-ko-reporter",
     "destination": "/conditional-knockout-mouse-models/",
@@ -48,93 +18,15 @@
     "permanent": true
   },
   {
-    "comment": "=== KNOCKIN MOUSE MODELS ===",
-    "source": "/knockin-mouse-models",
-    "destination": "/knockin-mouse-models/",
-    "permanent": true
-  },
-  {
-    "comment": "cDNA knockin",
-    "source": "/cdna-knockin",
-    "destination": "/cdna-knockin/",
-    "permanent": true
-  },
-  {
-    "comment": "=== SAFE HARBOR & ROSA26 ===",
-    "source": "/safe-harbor-locus",
-    "destination": "/safe-harbor-locus/",
-    "permanent": true
-  },
-  {
-    "comment": "Rosa26 main page",
-    "source": "/rosa26",
-    "destination": "/rosa26/",
-    "permanent": true
-  },
-  {
-    "comment": "Rapid Rosa26 targeting",
-    "source": "/rapid-rosa26-targeting",
-    "destination": "/rapid-rosa26-targeting/",
-    "permanent": true
-  },
-  {
-    "comment": "Inducible Rosa26",
-    "source": "/inducible-rosa26",
-    "destination": "/inducible-rosa26/",
-    "permanent": true
-  },
-  {
-    "comment": "=== FAST MICE ===",
-    "source": "/fast-mice",
-    "destination": "/fast-mice/",
-    "permanent": true
-  },
-  {
-    "comment": "=== HUMANIZED MOUSE MODELS ===",
-    "source": "/humanized-mouse-models",
-    "destination": "/humanized-mouse-models/",
-    "permanent": true
-  },
-  {
-    "comment": "Gene replacement",
-    "source": "/gene-replacement",
-    "destination": "/gene-replacement/",
-    "permanent": true
-  },
-  {
     "comment": "p53 humanized mice",
     "source": "/p53-humanized-mouse-models",
     "destination": "/humanized-mouse-models/",
     "permanent": true
   },
   {
-    "comment": "BAC to BAC large scale",
-    "source": "/bac-to-bac-large-scale-targeting",
-    "destination": "/bac-to-bac-large-scale-targeting/",
-    "permanent": true
-  },
-  {
     "comment": "=== TRANSGENIC & CUSTOM MODELS ===",
     "source": "/transgenic-mouse-models",
     "destination": "/mouse-model-services/",
-    "permanent": true
-  },
-  {
-    "comment": "Custom mouse models",
-    "source": "/custom-mouse-models",
-    "destination": "/custom-mouse-models/",
-    "permanent": true
-  },
-  {
-    "comment": "Rat models",
-    "source": "/rat-models",
-    "destination": "/rat-models/",
-    "permanent": true
-  },
-  {
-    "comment": "Custom rabbit models",
-    "source": "/custom-rabbit-models",
-    "destination": "/custom-rabbit-models/",
     "permanent": true
   },
   {
@@ -147,12 +39,6 @@
     "comment": "=== CATALOG MOUSE MODELS ===",
     "source": "/buy-transgenic-mice",
     "destination": "/catalog-mouse-models/",
-    "permanent": true
-  },
-  {
-    "comment": "Humanized immune checkpoint mice",
-    "source": "/humanized-immune-checkpoint-mice",
-    "destination": "/humanized-immune-checkpoint-mice/",
     "permanent": true
   },
   {
@@ -186,33 +72,9 @@
     "permanent": true
   },
   {
-    "comment": "Point mutation mice",
-    "source": "/point-mutation-mice",
-    "destination": "/point-mutation-mice/",
-    "permanent": true
-  },
-  {
-    "comment": "Custom animal models",
-    "source": "/custom-animal-models",
-    "destination": "/custom-animal-models/",
-    "permanent": true
-  },
-  {
     "comment": "=== ABOUT & COMPANY ===",
     "source": "/about-ingenious",
     "destination": "/about-itl/",
-    "permanent": true
-  },
-  {
-    "comment": "Technology overview",
-    "source": "/technology-overview",
-    "destination": "/technology-overview/",
-    "permanent": true
-  },
-  {
-    "comment": "Current openings",
-    "source": "/current-openings",
-    "destination": "/current-openings/",
     "permanent": true
   },
   {
@@ -222,21 +84,9 @@
     "permanent": true
   },
   {
-    "comment": "Testimonials",
-    "source": "/testimonials",
-    "destination": "/testimonials/",
-    "permanent": true
-  },
-  {
     "comment": "Pharma biotech",
     "source": "/pharma-biotech-mouse-models",
     "destination": "/therapeutic-areas/",
-    "permanent": true
-  },
-  {
-    "comment": "=== RESOURCES ===",
-    "source": "/resources",
-    "destination": "/resources/",
     "permanent": true
   },
   {
@@ -246,57 +96,15 @@
     "permanent": true
   },
   {
-    "comment": "Publications",
-    "source": "/publications",
-    "destination": "/publications/",
-    "permanent": true
-  },
-  {
-    "comment": "Video library",
-    "source": "/video-library",
-    "destination": "/video-library/",
-    "permanent": true
-  },
-  {
-    "comment": "Mouse model generation guide",
-    "source": "/mouse-model-generation-guide",
-    "destination": "/mouse-model-generation-guide/",
-    "permanent": true
-  },
-  {
     "comment": "=== SERVICES ===",
     "source": "/service-steps",
     "destination": "/mouse-model-services/",
     "permanent": true
   },
   {
-    "comment": "Transgenic mouse service",
-    "source": "/transgenic-mouse-service",
-    "destination": "/transgenic-mouse-service/",
-    "permanent": true
-  },
-  {
-    "comment": "Preclinical services",
-    "source": "/preclinical-services",
-    "destination": "/preclinical-services/",
-    "permanent": true
-  },
-  {
-    "comment": "Mouse genotyping service",
-    "source": "/mouse-genotyping-service",
-    "destination": "/mouse-genotyping-service/",
-    "permanent": true
-  },
-  {
     "comment": "Partial services",
     "source": "/partial-services",
     "destination": "/mouse-model-services/",
-    "permanent": true
-  },
-  {
-    "comment": "Post project services",
-    "source": "/post-project-services",
-    "destination": "/post-project-services/",
     "permanent": true
   },
   {
@@ -309,18 +117,6 @@
     "comment": "General contact",
     "source": "/general-contact",
     "destination": "/contact/",
-    "permanent": true
-  },
-  {
-    "comment": "Schedule meeting",
-    "source": "/schedule-meeting",
-    "destination": "/schedule-meeting/",
-    "permanent": true
-  },
-  {
-    "comment": "Start your project",
-    "source": "/start-your-project",
-    "destination": "/start-your-project/",
     "permanent": true
   },
   {
@@ -342,386 +138,8 @@
     "permanent": true
   },
   {
-    "comment": "=== BLOG ===",
-    "source": "/ingenious-blog",
-    "destination": "/ingenious-blog/",
-    "permanent": true
-  },
-  {
-    "comment": "Lab signals newsletter",
-    "source": "/lab-signals",
-    "destination": "/lab-signals/",
-    "permanent": true
-  },
-  {
-    "comment": "=== BLOG POSTS - Individual Articles ===",
-    "source": "/ingenious-blog/4-reasons-to-use-targeted-transgenic-mice-over-random-insertion",
-    "destination": "/ingenious-blog/4-reasons-to-use-targeted-transgenic-mice-over-random-insertion/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/a-new-mouse-line-for-tissue-specific-expression",
-    "destination": "/ingenious-blog/a-new-mouse-line-for-tissue-specific-expression/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/ace2-transgenic-mice",
-    "destination": "/ingenious-blog/ace2-transgenic-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/bac-transgenic",
-    "destination": "/ingenious-blog/bac-transgenic/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/cell-strains",
-    "destination": "/ingenious-blog/cell-strains/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/cl",
-    "destination": "/ingenious-blog/cl/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/conditional-gene-knockout-mouse",
-    "destination": "/ingenious-blog/conditional-gene-knockout-mouse/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/conditional-knockout-mice",
-    "destination": "/ingenious-blog/conditional-knockout-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/conditional-knockout-mouse-and-global-knockout-mouse",
-    "destination": "/ingenious-blog/conditional-knockout-mouse-and-global-knockout-mouse/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/conditional-knockout-mouse-protocol",
-    "destination": "/ingenious-blog/conditional-knockout-mouse-protocol/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/conditional-mutation",
-    "destination": "/ingenious-blog/conditional-mutation/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/congratulations-to-our-clients",
-    "destination": "/ingenious-blog/congratulations-to-our-clients/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/conventional-knockout",
-    "destination": "/ingenious-blog/conventional-knockout/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/conventional-vs-conditional-knockout",
-    "destination": "/ingenious-blog/conventional-vs-conditional-knockout/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/cre-flox",
-    "destination": "/ingenious-blog/cre-flox/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/cre-floxed-mice",
-    "destination": "/ingenious-blog/cre-floxed-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/cre-lox-conditional-knockout-mouse-models",
-    "destination": "/ingenious-blog/cre-lox-conditional-knockout-mouse-models/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/cre-lox-facts",
-    "destination": "/ingenious-blog/cre-lox-facts/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/cre-recombinase",
-    "destination": "/ingenious-blog/cre-recombinase/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/crispr-cas9",
-    "destination": "/ingenious-blog/crispr-cas9/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/crispr-gene-knockout",
-    "destination": "/ingenious-blog/crispr-gene-knockout/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/crispr-gene-targeting",
-    "destination": "/ingenious-blog/crispr-gene-targeting/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/crispr-knockdown",
-    "destination": "/ingenious-blog/crispr-knockdown/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/crispr-knockout",
-    "destination": "/ingenious-blog/crispr-knockout/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/crispr-transgenic-mice",
-    "destination": "/ingenious-blog/crispr-transgenic-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/difference-between-knock-in-and-knockout",
-    "destination": "/ingenious-blog/difference-between-knock-in-and-knockout/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/flox-design",
-    "destination": "/ingenious-blog/flox-design/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/flox-sequence",
-    "destination": "/ingenious-blog/flox-sequence/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/floxed-allele",
-    "destination": "/ingenious-blog/floxed-allele/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/floxed-cre-lox-flox",
-    "destination": "/ingenious-blog/floxed-cre-lox-flox/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/floxed-mice-cre",
-    "destination": "/ingenious-blog/floxed-mice-cre/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/floxing",
-    "destination": "/ingenious-blog/floxing/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/gaining-inducible-control",
-    "destination": "/ingenious-blog/gaining-inducible-control/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/gene-knockout",
-    "destination": "/ingenious-blog/gene-knockout/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/gene-knockout-method",
-    "destination": "/ingenious-blog/gene-knockout-method/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/hace2-transgenic-mice",
-    "destination": "/ingenious-blog/hace2-transgenic-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/history-of-creating-genetically-humanized-mice",
-    "destination": "/ingenious-blog/history-of-creating-genetically-humanized-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/how-a-knockout-mouse-is-made",
-    "destination": "/ingenious-blog/how-a-knockout-mouse-is-made/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/how-to-make-a-knock-in-mouse",
-    "destination": "/ingenious-blog/how-to-make-a-knock-in-mouse/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/how-to-make-a-transgenic-mouse",
-    "destination": "/ingenious-blog/how-to-make-a-transgenic-mouse/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/humanized-mice",
-    "destination": "/ingenious-blog/humanized-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/ingenious-and-smoc-catalog-humanized-mouse-models",
-    "destination": "/ingenious-blog/ingenious-and-smoc-catalog-humanized-mouse-models/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/ingenious-targeting-laboratory-receives-3m-phase-ii-small-business-innovation-research-sbir-award",
-    "destination": "/ingenious-blog/ingenious-targeting-laboratory-receives-3m-phase-ii-small-business-innovation-research-sbir-award/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/knock-in-knock-out-mice",
-    "destination": "/ingenious-blog/knock-in-knock-out-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/knock-in-mice-protocol",
-    "destination": "/ingenious-blog/knock-in-mice-protocol/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/knock-in-mice-vs-transgenic-mice",
-    "destination": "/ingenious-blog/knock-in-mice-vs-transgenic-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/knockdown-mice",
-    "destination": "/ingenious-blog/knockdown-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/knockout-mice-in-the-study-of-human-genetic-disease",
-    "destination": "/ingenious-blog/knockout-mice-in-the-study-of-human-genetic-disease/",
-    "permanent": true
-  },
-  {
     "source": "/ingenious-blog/knockout-mice-in-the-study-of-human-genetic-disease-2",
     "destination": "/ingenious-blog/knockout-mice-in-the-study-of-human-genetic-disease/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/knockout-mice-purpose",
-    "destination": "/ingenious-blog/knockout-mice-purpose/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/meet-ingenious-scientist-jennifer-parla",
-    "destination": "/ingenious-blog/meet-ingenious-scientist-jennifer-parla/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/meet-ingenious-scientist-kristen-coughlin",
-    "destination": "/ingenious-blog/meet-ingenious-scientist-kristen-coughlin/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/meet-ingenious-scientist-richard-row",
-    "destination": "/ingenious-blog/meet-ingenious-scientist-richard-row/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/mouse-cell-line",
-    "destination": "/ingenious-blog/mouse-cell-line/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/nih-grant-covid-19-ace2-mice",
-    "destination": "/ingenious-blog/nih-grant-covid-19-ace2-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/nih-grant-to-generate-exclusive-covid-19-ace2-mouse-models",
-    "destination": "/ingenious-blog/nih-grant-to-generate-exclusive-covid-19-ace2-mouse-models/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/point-mutation-diseases",
-    "destination": "/ingenious-blog/point-mutation-diseases/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/rat-models-of-cardiac-disease",
-    "destination": "/ingenious-blog/rat-models-of-cardiac-disease/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/rosa26-mice",
-    "destination": "/ingenious-blog/rosa26-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/the-advantages-of-rat-models",
-    "destination": "/ingenious-blog/the-advantages-of-rat-models/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/top-5-lab-mouse-colony-management-software-options-for-2023",
-    "destination": "/ingenious-blog/top-5-lab-mouse-colony-management-software-options-for-2023/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/top-five-reasons-mouse-models-fail-mistakes-to-avoid",
-    "destination": "/ingenious-blog/top-five-reasons-mouse-models-fail-mistakes-to-avoid/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/transgenic-mice",
-    "destination": "/ingenious-blog/transgenic-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/transgenic-mouse-model",
-    "destination": "/ingenious-blog/transgenic-mouse-model/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/transgenic-rats-vs-mice",
-    "destination": "/ingenious-blog/transgenic-rats-vs-mice/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/types-of-point-mutations",
-    "destination": "/ingenious-blog/types-of-point-mutations/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/what-is-a-conditional-allele",
-    "destination": "/ingenious-blog/what-is-a-conditional-allele/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/what-is-a-knockin",
-    "destination": "/ingenious-blog/what-is-a-knockin/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/what-is-a-knockout-rat",
-    "destination": "/ingenious-blog/what-is-a-knockout-rat/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/what-is-a-point-mutation",
-    "destination": "/ingenious-blog/what-is-a-point-mutation/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/what-is-a-stem-cell-line",
-    "destination": "/ingenious-blog/what-is-a-stem-cell-line/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/what-is-a-transgene",
-    "destination": "/ingenious-blog/what-is-a-transgene/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/what-is-the-mouse-knockout-timeline",
-    "destination": "/ingenious-blog/what-is-the-mouse-knockout-timeline/",
-    "permanent": true
-  },
-  {
-    "source": "/ingenious-blog/why-make-a-humanized-mouse",
-    "destination": "/ingenious-blog/why-make-a-humanized-mouse/",
     "permanent": true
   },
   {
