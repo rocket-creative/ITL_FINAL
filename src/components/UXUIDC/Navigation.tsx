@@ -183,6 +183,7 @@ const navigationItems: NavItem[] = [
             { label: 'Conditional vs Conventional', href: '/conditional-vs-conventional-guide' },
             { label: 'Critical Exon Selection', href: '/critical-exon-selection' },
             { label: 'LoxP Site Design', href: '/loxp-site-design' },
+            { label: 'Strain Backgrounds', href: '/mouse-strain-backgrounds' },
           ],
         },
       ],
@@ -225,12 +226,12 @@ const navigationItems: NavItem[] = [
     label: 'Resources',
     href: '/resources',
     children: [
-      { label: 'All FAQs', href: '/faq' },
-      { label: 'Lab Signals Newsletter', href: '/lab-signals' },
+      { label: 'Downloadables', href: '/resources' },
       { label: 'Ingenious Blog', href: '/ingenious-blog' },
+      { label: 'Lab Signals Newsletter', href: '/lab-signals' },
       { label: 'Breeding Architect', href: '/breeding-scheme-architect' },
-      { label: 'Strain Backgrounds', href: '/mouse-strain-backgrounds' },
       { label: 'Glossary', href: '/glossary' },
+      { label: 'All FAQs', href: '/faq' },
     ],
   },
   {
@@ -250,7 +251,7 @@ const navigationItems: NavItem[] = [
     label: 'Contact',
     href: '/contact',
     children: [
-      { label: 'Contact Us', href: '/general-contact' },
+      { label: 'Contact Us', href: '/contact' },
       { label: 'Request Quote', href: '/request-quote' },
       { label: 'Order Catalog Models', href: '/order-catalog-models' },
       { label: 'Schedule Meeting', href: '/schedule-meeting' },

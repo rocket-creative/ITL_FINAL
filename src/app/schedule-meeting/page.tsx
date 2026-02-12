@@ -262,7 +262,7 @@ export default function ScheduleMeetingPage() {
                 boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
               }}>
                 <CustomHubSpotForm
-                  portalId="242707"
+                  portalId="3977953"
                   formGuid="c0c02dc8-960c-4d14-acff-eaa43b8c7b6a"
                   fields={meetingFormFields}
                   submitButtonText="Schedule Consultation"
@@ -435,7 +435,7 @@ export default function ScheduleMeetingPage() {
                     </div>
                   </Link>
                   <Link
-                    href="/general-contact"
+                    href="/contact"
                     style={{
                       display: 'flex',
                       alignItems: 'center',
