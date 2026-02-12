@@ -1,9 +1,13 @@
 /**
  * |UXUIDC| Footer - Dark grey background with white text
- * @version 2.2.0
+ * @version 2.3.0
  * Fixed padding/margin, all text white
+ * Fixed hydration mismatch by using useEffect for currentYear
  */
 
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -78,7 +82,13 @@ const footerSections = [
 ];
 
 export function UXUIDCFooter() {
-  const currentYear = new Date().getFullYear();
+  // Use state with default fallback to prevent hydration mismatch
+  // Server renders 2026, client updates to actual year after hydration
+  const [currentYear, setCurrentYear] = useState(2026);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer 
