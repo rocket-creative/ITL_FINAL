@@ -10,11 +10,11 @@ const securityHeaders = [
     key: 'Content-Security-Policy',
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googleads.g.doubleclick.net https://connect.facebook.net",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googleads.g.doubleclick.net https://connect.facebook.net https://js.hs-scripts.com https://js.hsforms.net",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "img-src 'self' data: https: blob:",
       "font-src 'self' https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://www.google.com https://googleads.g.doubleclick.net https://api.hubspot.com",
+      "connect-src 'self' https://www.google-analytics.com https://www.google.com https://googleads.g.doubleclick.net https://api.hubspot.com https://api.hsforms.com http://127.0.0.1:7244",
       "frame-src https://www.googletagmanager.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
