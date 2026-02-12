@@ -49,13 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable}>
       <head>
-        {/* Preload critical hero image */}
-        <link
-          rel="preload"
-          href="/images/mouse-hero-blue.jpg"
-          as="image"
-          fetchPriority="high"
-        />
+        {/* Hero image preload moved to pages that use it to avoid unused preload warnings */}
       </head>
       <body className="antialiased">
         {/* All Tracking Pixels: GA4, Facebook, LinkedIn, Twitter, AdRoll */}
