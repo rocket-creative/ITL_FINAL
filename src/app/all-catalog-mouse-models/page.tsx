@@ -5,6 +5,7 @@ import {
   UXUIDCFooter,
   CatalogSearch,
 } from '@/components/UXUIDC';
+import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import { IconChevronRight, IconLayers } from '@/components/UXUIDC/Icons';
 
