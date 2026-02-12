@@ -1,5 +1,5 @@
 # Robots.txt for ingenious targeting laboratory
-# https://www.genetargeting.com
+# Production Site
 
 User-agent: *
 Allow: /
@@ -11,9 +11,33 @@ Sitemap: https://www.genetargeting.com/sitemap.xml
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: /og-preview/
 
-# Allow search engines to crawl all public pages
-Allow: /catalog/
-Allow: /services/
-Allow: /about/
-Allow: /resources/
+# Crawl-delay for politeness (optional)
+# Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block AI scrapers (optional - uncomment if desired)
+# User-agent: GPTBot
+# Disallow: /
+# 
+# User-agent: ChatGPT-User
+# Disallow: /
+# 
+# User-agent: CCBot
+# Disallow: /
+# 
+# User-agent: anthropic-ai
+# Disallow: /
+# 
+# User-agent: Claude-Web
+# Disallow: /

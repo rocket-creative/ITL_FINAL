@@ -1,6 +1,8 @@
 # Complete Tracking Pixels Setup Guide
 
-Quick reference for setting up all tracking platforms.
+Quick reference for setting up all tracking platforms including HubSpot.
+
+**Platforms Covered:** Google Analytics, Facebook, LinkedIn, Twitter, AdRoll, HubSpot
 
 ---
 
@@ -257,6 +259,42 @@ identifyUserAllPlatforms(email)
 
 ---
 
+## 6. HubSpot (B2B CRM + Analytics)
+
+### Create Your Account
+1. Go to [HubSpot.com](https://www.hubspot.com)
+2. Sign up for free account (Marketing Hub Free)
+3. Complete onboarding
+4. Go to **Settings** (gear icon) → **Account Setup**
+5. Find your **Hub ID** or **Portal ID** (7-8 digit number)
+
+### Add to Environment
+```bash
+NEXT_PUBLIC_HUBSPOT_PORTAL_ID=12345678
+```
+
+### Events Tracked
+| Event | When Triggered |
+|-------|---------------|
+| Page View | Automatic on every page |
+| Lead Conversion | Quote request submitted |
+| Contact Conversion | Contact form submitted |
+| Phone Click | Phone number clicked |
+| Email Click | Email link clicked |
+
+### Why HubSpot Matters for B2B
+- **Lead Identification:** Know who visits your site
+- **CRM Integration:** All leads auto-sync to CRM
+- **Company Insights:** See which universities/labs visit
+- **Lead Scoring:** Automatically prioritize hot leads
+- **Email Marketing:** Nurture leads automatically
+- **Chat Widget:** Live chat with researchers
+
+### See Full Guide
+Complete setup instructions in `HUBSPOT-SETUP.md`
+
+---
+
 ## Platform Links
 
 | Platform | Dashboard | Documentation |
@@ -267,3 +305,4 @@ identifyUserAllPlatforms(email)
 | LinkedIn | [linkedin.com/campaignmanager](https://www.linkedin.com/campaignmanager) | [Docs](https://www.linkedin.com/help/lms/answer/a418880) |
 | Twitter/X Ads | [ads.twitter.com](https://ads.twitter.com) | [Docs](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) |
 | AdRoll | [app.adroll.com](https://app.adroll.com) | [Docs](https://help.adroll.com/) |
+| HubSpot | [app.hubspot.com](https://app.hubspot.com) | [Docs](https://developers.hubspot.com/docs/api/analytics) |

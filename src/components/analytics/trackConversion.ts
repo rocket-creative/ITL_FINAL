@@ -1,7 +1,8 @@
 /**
  * Unified Conversion Tracking
- * @version 1.0.0
+ * @version 1.1.0
  * @description Track conversions across ALL platforms with a single call
+ * Includes: Google, Facebook, LinkedIn, Twitter, AdRoll, HubSpot
  */
 
 import { trackQuoteRequest, trackContactSubmission } from './GoogleAnalytics';
@@ -9,6 +10,7 @@ import { trackFBLead, trackFBContact } from './FacebookPixel';
 import { trackLinkedInLead, trackLinkedInContact } from './LinkedInInsight';
 import { trackTwitterLead, trackTwitterCompleteRegistration } from './TwitterPixel';
 import { trackAdRollConversion } from './AdRollPixel';
+import { trackHubSpotQuoteRequest, trackHubSpotContact, trackHubSpotPhoneCall, trackHubSpotEmailClick, identifyHubSpotUser } from './HubSpotTracking';
 
 interface ConversionData {
   value?: number;
@@ -17,6 +19,8 @@ interface ConversionData {
   contentCategory?: string;
   modelType?: string;
   serviceType?: string;
+  email?: string;
+  timeline?: string;
 }
 
 /**
@@ -54,7 +58,16 @@ export function trackQuoteRequestAllPlatforms(data?: ConversionData) {
     currency,
   });
 
-  console.log('[Analytics] Quote request tracked on all platforms');
+  // HubSpot
+  trackHubSpotQuoteRequest({
+    email: data?.email,
+    modelType: data?.modelType,
+    serviceType: data?.serviceType,
+    timeline: data?.timeline,
+    value,
+  });
+
+  console.log('[Analytics] Quote request tracked on all platforms (incl. HubSpot)');
 }
 
 /**
@@ -62,6 +75,11 @@ export function trackQuoteRequestAllPlatforms(data?: ConversionData) {
  */
 export function trackContactAllPlatforms(data?: {
   inquiryType?: string;
+  email?: string;
+  name?: string;
+  company?: string;
+  phone?: string;
+  message?: string;
 }) {
   // Google Analytics + Ads
   trackContactSubmission(data?.inquiryType);
@@ -81,7 +99,16 @@ export function trackContactAllPlatforms(data?: {
     currency: 'USD',
   });
 
-  console.log('[Analytics] Contact form tracked on all platforms');
+  // HubSpot
+  trackHubSpotContact({
+    email: data?.email,
+    name: data?.name,
+    company: data?.company,
+    phone: data?.phone,
+    message: data?.message,
+  });
+
+  console.log('[Analytics] Contact form tracked on all platforms (incl. HubSpot)');
 }
 
 /**
@@ -104,7 +131,10 @@ export function trackPhoneCallAllPlatforms() {
     currency: 'USD',
   });
 
-  console.log('[Analytics] Phone call tracked on all platforms');
+  // HubSpot
+  trackHubSpotPhoneCall();
+
+  console.log('[Analytics] Phone call tracked on all platforms (incl. HubSpot)');
 }
 
 /**
@@ -121,18 +151,29 @@ export function trackEmailClickAllPlatforms() {
     trackFBCustomEvent('EmailClick');
   });
 
-  console.log('[Analytics] Email click tracked on all platforms');
+  // HubSpot
+  trackHubSpotEmailClick();
+
+  console.log('[Analytics] Email click tracked on all platforms (incl. HubSpot)');
 }
 
 /**
  * Identify user across platforms (after form submission with email)
  * Use carefully - only after user provides email and consents
  */
-export function identifyUserAllPlatforms(email: string) {
+export function identifyUserAllPlatforms(email: string, properties?: {
+  firstname?: string;
+  lastname?: string;
+  company?: string;
+  phone?: string;
+}) {
   // AdRoll
   import('./AdRollPixel').then(({ identifyAdRollUser }) => {
     identifyAdRollUser(email);
   });
 
-  console.log('[Analytics] User identified for personalization');
+  // HubSpot - Most important for B2B lead tracking
+  identifyHubSpotUser(email, properties);
+
+  console.log('[Analytics] User identified for personalization (incl. HubSpot CRM)');
 }

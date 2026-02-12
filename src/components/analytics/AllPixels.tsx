@@ -1,8 +1,8 @@
 /**
  * All Tracking Pixels Combined
- * @version 1.0.0
+ * @version 1.1.0
  * @description Unified component that loads all tracking pixels
- * Includes: Google Analytics, Facebook, LinkedIn, Twitter, AdRoll
+ * Includes: Google Analytics, Facebook, LinkedIn, Twitter, AdRoll, HubSpot
  */
 
 'use client';
@@ -12,6 +12,7 @@ import FacebookPixel from './FacebookPixel';
 import LinkedInInsight from './LinkedInInsight';
 import TwitterPixel from './TwitterPixel';
 import AdRollPixel from './AdRollPixel';
+import HubSpotTracking from './HubSpotTracking';
 
 export default function AllPixels() {
   return (
@@ -30,6 +31,9 @@ export default function AllPixels() {
       
       {/* AdRoll Retargeting */}
       <AdRollPixel />
+      
+      {/* HubSpot Analytics + CRM */}
+      <HubSpotTracking />
     </>
   );
 }

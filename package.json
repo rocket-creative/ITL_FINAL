@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:redirects": "./test-redirects.sh http://localhost:3000",
+    "test:redirects:prod": "./test-redirects.sh https://www.genetargeting.com",
+    "submit:google": "node scripts/submit-to-google.js",
+    "verify:launch": "node scripts/verify-launch.js",
+    "prelaunch": "npm run build && npm run verify:launch"
   },
   "dependencies": {
     "@vercel/og": "^0.8.6",
@@ -26,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.8",
     "eslint-plugin-react-hooks": "^7.0.1",
+    "googleapis": "^144.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

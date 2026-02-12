@@ -1,6 +1,6 @@
 /**
  * Analytics Module Exports
- * Includes: Google Analytics, Facebook, LinkedIn, Twitter, AdRoll
+ * Includes: Google Analytics, Facebook, LinkedIn, Twitter, AdRoll, HubSpot
  */
 
 // ============================================
@@ -16,6 +16,7 @@ export { default as FacebookPixel } from './FacebookPixel';
 export { default as LinkedInInsight } from './LinkedInInsight';
 export { default as TwitterPixel } from './TwitterPixel';
 export { default as AdRollPixel } from './AdRollPixel';
+export { default as HubSpotTracking } from './HubSpotTracking';
 
 // ============================================
 // Google Analytics Functions
@@ -75,6 +76,23 @@ export {
   identifyAdRollUser,
   trackAdRollSegment,
 } from './AdRollPixel';
+
+// ============================================
+// HubSpot Functions
+// ============================================
+export {
+  hsq,
+  identifyHubSpotUser,
+  trackHubSpotEvent,
+  trackHubSpotQuoteRequest,
+  trackHubSpotContact,
+  trackHubSpotPhoneCall,
+  trackHubSpotEmailClick,
+  trackHubSpotCatalogDownload,
+  trackHubSpotServiceView,
+  openHubSpotChat,
+  closeHubSpotChat,
+} from './HubSpotTracking';
 
 // ============================================
 // Unified Conversion Tracking (tracks ALL platforms)
