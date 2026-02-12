@@ -1,25 +1,34 @@
 /**
  * |UXUIDC| Announcement Bar - Matches Screenshot
- * @version 2.0.0
+ * @version 2.1.0
+ * Fixed hydration mismatch by reading sessionStorage in useEffect
  */
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function UXUIDCAnnouncementBar() {
-  const [isDismissed, setIsDismissed] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    return sessionStorage.getItem('announcement-dismissed') === 'true';
-  });
+  // Start with false to match server render, check sessionStorage after hydration
+  const [isDismissed, setIsDismissed] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    // Check sessionStorage after hydration to avoid mismatch
+    const dismissed = sessionStorage.getItem('announcement-dismissed') === 'true';
+    setIsDismissed(dismissed);
+    setHasMounted(true);
+  }, []);
 
   const handleDismiss = () => {
     setIsDismissed(true);
     sessionStorage.setItem('announcement-dismissed', 'true');
   };
 
-  if (isDismissed) return null;
+  // Don't render until we've checked sessionStorage (prevents flash)
+  // But render on server for SEO
+  if (hasMounted && isDismissed) return null;
 
   return (
     <div className="bg-[#008080] text-white py-2 px-4">
