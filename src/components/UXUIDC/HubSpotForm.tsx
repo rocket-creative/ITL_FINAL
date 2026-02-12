@@ -28,7 +28,7 @@ interface HubSpotFormProps {
 
 export default function HubSpotForm({
   formId,
-  portalId = '242707',
+  portalId = '3977953',
   region = 'na1',
   containerId,
   loadingMessage = 'Loading form...',
@@ -41,6 +41,10 @@ export default function HubSpotForm({
   const targetId = containerId || generatedId;
 
   useEffect(() => {
+    // #region agent log
+    console.log('[HubSpot Debug] useEffect starting', {formId,portalId,region,targetId});
+    // #endregion
+
     // Load HubSpot form script
     const script = document.createElement('script');
     script.src = '//js.hsforms.net/forms/embed/v2.js';
@@ -48,18 +52,60 @@ export default function HubSpotForm({
     script.type = 'text/javascript';
     script.async = true;
 
+    // #region agent log
+    script.onerror = (err) => {
+      console.error('[HubSpot Debug] Script load error', {error:String(err),src:script.src});
+    };
+    // #endregion
+
     script.onload = () => {
+      // #region agent log
+      console.log('[HubSpot Debug] Script loaded successfully', {hbsptExists:!!(window as any).hbspt,hbsptFormsExists:!!((window as any).hbspt?.forms)});
+      // #endregion
+
       // @ts-expect-error - HubSpot global object
       if (window.hbspt) {
-        // @ts-expect-error - HubSpot forms API
-        window.hbspt.forms.create({
-          region,
-          portalId,
-          formId,
-          target: `#${targetId}`,
-        });
+        // #region agent log
+        const targetElement = document.querySelector(`#${targetId}`);
+        console.log('[HubSpot Debug] About to create form', {targetId,targetExists:!!targetElement,targetHTML:targetElement?.outerHTML.substring(0,200)});
+        // #endregion
+
+        try {
+          // @ts-expect-error - HubSpot forms API
+          window.hbspt.forms.create({
+            region,
+            portalId,
+            formId,
+            target: `#${targetId}`,
+            onFormReady: () => {
+              // #region agent log
+              console.log('[HubSpot Debug] Form ready callback fired', {targetId});
+              // #endregion
+            },
+            onFormSubmit: () => {
+              // #region agent log
+              console.log('[HubSpot Debug] Form submitted', {targetId});
+              // #endregion
+            },
+          });
+          // #region agent log
+          console.log('[HubSpot Debug] Form create called successfully', {targetId});
+          // #endregion
+        } catch (error) {
+          // #region agent log
+          console.error('[HubSpot Debug] Form create threw error', {error:String(error),errorName:error instanceof Error ? error.name : 'unknown',errorMessage:error instanceof Error ? error.message : String(error)});
+          // #endregion
+        }
+      } else {
+        // #region agent log
+        console.error('[HubSpot Debug] window.hbspt not available', {windowKeys:Object.keys(window).filter(k=>k.includes('hbs') || k.includes('hub'))});
+        // #endregion
       }
     };
+
+    // #region agent log
+    console.log('[HubSpot Debug] About to append script', {scriptSrc:script.src});
+    // #endregion
 
     document.head.appendChild(script);
 
