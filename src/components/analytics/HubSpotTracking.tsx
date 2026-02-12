@@ -1,6 +1,6 @@
 /**
  * HubSpot Tracking Code
- * @version 1.0.0
+ * @version 1.1.0
  * @description HubSpot analytics and CRM integration
  * @features
  * - Page view tracking
@@ -8,6 +8,9 @@
  * - Lead identification
  * - CRM integration
  * - Email tracking
+ * @notes
+ * - Uses lazyOnload strategy to prevent hydration conflicts
+ * - Chat widget loads during browser idle time after hydration
  */
 
 'use client';
@@ -71,7 +74,7 @@ export default function HubSpotTracking() {
     <>
       <Script
         id="hubspot-tracking"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src={`//js.hs-scripts.com/${HUBSPOT_PORTAL_ID}.js`}
       />
       
