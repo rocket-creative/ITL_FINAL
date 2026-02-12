@@ -6,6 +6,7 @@
  */
 
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,

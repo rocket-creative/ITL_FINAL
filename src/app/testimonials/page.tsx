@@ -5,6 +5,7 @@
  */
 
 import {
+import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
   UXUIDCNavigation,
   UXUIDCFooter,
 } from '@/components/UXUIDC';

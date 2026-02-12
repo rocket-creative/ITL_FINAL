@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import fs from 'fs';
 import path from 'path';
 import { Metadata } from 'next';

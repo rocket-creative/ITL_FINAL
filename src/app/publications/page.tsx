@@ -11,6 +11,7 @@
  */
 
 import { useEffect, useRef, useState, useMemo } from 'react';
+import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';

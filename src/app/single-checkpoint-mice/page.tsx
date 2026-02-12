@@ -1,6 +1,7 @@
 'use client';
 
 import {
+import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
   UXUIDCNavigation,
   UXUIDCFooter,
   CatalogSearch,
