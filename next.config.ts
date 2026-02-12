@@ -52,6 +52,9 @@ const nextConfig: NextConfig = {
   // Performance optimizations
   compress: true,
   
+  // Enforce trailing slashes on all URLs (SEO best practice)
+  trailingSlash: true,
+  
   // Image optimization
   images: {
     formats: ['image/avif', 'image/webp'],
