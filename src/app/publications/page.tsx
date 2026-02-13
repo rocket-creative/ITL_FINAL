@@ -60,7 +60,15 @@ export default function PublicationsPage() {
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [expandedYears, setExpandedYears] = useState<Set<string>>(new Set(['2025']));
   
-  const years = useMemo(() => getYears(), []);
+  const years = useMemo(() => {
+    const allYears = getYears();
+    console.log('📅 All years from data:', allYears);
+    console.log('📊 Total years count:', allYears.length);
+    console.log('📚 Publications by year keys:', Object.keys(publicationsByYear));
+    console.log('📖 Sample year data - 2014:', publicationsByYear['2014']?.length || 0, 'publications');
+    console.log('📖 Sample year data - 2010:', publicationsByYear['2010']?.length || 0, 'publications');
+    return allYears;
+  }, []);
   const totalCount = useMemo(() => getTotalPublicationCount(), []);
 
   // Filter publications based on search and year
@@ -69,6 +77,7 @@ export default function PublicationsPage() {
     const result: { [year: string]: Publication[] } = {};
     
     const yearsToFilter = selectedYear === 'all' ? years : [selectedYear];
+    console.log('🔍 Filtering for years:', yearsToFilter);
     
     yearsToFilter.forEach(year => {
       const pubs = publicationsByYear[year] || [];
@@ -84,6 +93,9 @@ export default function PublicationsPage() {
         result[year] = filtered;
       }
     });
+    
+    console.log('📋 Filtered publications years:', Object.keys(result).sort((a, b) => parseInt(b) - parseInt(a)));
+    console.log('📊 Filtered publications count:', Object.keys(result).length, 'years visible');
     
     return result;
   }, [searchQuery, selectedYear, years]);
@@ -113,39 +125,7 @@ export default function PublicationsPage() {
   };
 
   useEffect(() => {
-    const initGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
 
-      const heroElements = document.querySelectorAll('.hero-animate');
-      heroElements.forEach((el, index) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, delay: index * 0.15, ease: "power2.out" }
-        );
-      });
-
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 85%",
-              toggleActions: "play none none none"
-            }
-          }
-        );
-      });
-    };
-
-    initGSAP();
   }, []);
 
   return (

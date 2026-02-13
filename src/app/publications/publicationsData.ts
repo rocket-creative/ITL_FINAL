@@ -2941,6 +2941,7 @@ export const publicationsByYear: PublicationsByYear = {
       link: "https://pubmed.ncbi.nlm.nih.gov/12773571/"
     }
   ],
+  "2002": [],
   "2001": [
     {
       authors: "Peterson EJ, Woods ML, Dmowski SA, Derimanov G, Jordan MS, Wu JN, Myung PS, Liu QH, Pribila JT, Freedman BD, Shimizu Y, Koretzky GA.",
