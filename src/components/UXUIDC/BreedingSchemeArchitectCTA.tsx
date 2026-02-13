@@ -59,7 +59,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
       />
 
       <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-        <div className="grid grid-cols-1 lg:grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
           {/* Left: Content */}
           <div>
             {/* New for 2026 Badge */}
