@@ -49,14 +49,20 @@ export default function UXUIDCAnnouncementBar() {
   if (isDismissed) return null;
 
   return (
-    <div className="bg-[#008080] text-white py-4 sm:py-2 px-4 min-h-[60px]">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
-        <Link href="/contact" className="flex-1 text-center hover:underline">
-          {/* Mobile: More complete version */}
-          <span className="block md:hidden text-xs leading-relaxed">
+    <div className="bg-[#008080] text-white py-3 px-4">
+      <div className="max-w-7xl mx-auto flex items-start sm:items-center justify-between gap-3">
+        <Link href="/contact" className="flex-1 text-center hover:underline py-1">
+          {/* Mobile: Stacked version for better readability */}
+          <span className="block sm:hidden text-xs leading-relaxed">
+            Is uncertain NIH funding holding you back?
+            <br />
+            <span className="font-medium">Start now, pay later.</span>
+          </span>
+          {/* Tablet: Condensed version */}
+          <span className="hidden sm:block md:hidden text-sm leading-relaxed">
             Is uncertain NIH funding holding you back? <span className="font-medium">Start now, pay later.</span>
           </span>
-          {/* Tablet+: Full version */}
+          {/* Desktop: Full version */}
           <span className="hidden md:block text-sm leading-relaxed">
             Is uncertain NIH funding holding you back from starting a much needed mouse model project?{' '}
             <span className="font-medium">We have ways for you to start your project now and pay later.</span>
@@ -64,7 +70,7 @@ export default function UXUIDCAnnouncementBar() {
         </Link>
         <button
           onClick={handleDismiss}
-          className="flex-shrink-0 p-1 hover:bg-white/20 rounded"
+          className="flex-shrink-0 p-1 hover:bg-white/20 rounded mt-1 sm:mt-0"
           aria-label="Dismiss"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
