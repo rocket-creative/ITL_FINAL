@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Tamoxifen Inducible Cre',
-  description: 'Tamoxifen Inducible Cre from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Tamoxifen Inducible Cre Systems',
+  description: 'Tamoxifen inducible CreERT2 for temporal control of gene deletion. Activate recombination at any developmental stage with drug administration.',
   path: '/tamoxifen-inducible-cre',
 });
 

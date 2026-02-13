@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Obesity Mouse Models',
-  description: 'Obesity Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Obesity Mouse Models | ITL',
+  description: 'Obesity mouse models for studying energy homeostasis, adipose biology, and weight regulation. Leptin pathway, metabolic genes, and diet induced models.',
   path: '/obesity-mouse-models',
 });
 

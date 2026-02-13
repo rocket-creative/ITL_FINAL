@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Gene Replacement Models',
-  description: 'Gene Replacement Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Gene Replacement Mouse Models',
+  description: 'Gene replacement mice to swap mouse genes with human or modified sequences. Study human gene function and test therapeutics in vivo. Since 1998.',
   path: '/gene-replacement',
 });
 

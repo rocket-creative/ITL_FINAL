@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Transgenic Mouse Service',
-  description: 'Transgenic Mouse Service from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Transgenic Mouse Models | Custom Services',
+  description: 'Transgenic mouse models for overexpression studies. Express genes of interest under tissue specific or ubiquitous promoters. 2,500+ projects since 1998.',
   path: '/transgenic-mouse-service',
 });
 

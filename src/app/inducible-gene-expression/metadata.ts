@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Inducible Gene Expression',
-  description: 'Inducible Gene Expression from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Inducible Gene Expression Systems',
+  description: 'Inducible gene expression systems for temporal control of transgenes. Tet on, Tet off, and tamoxifen inducible approaches for controlled studies.',
   path: '/inducible-gene-expression',
 });
 

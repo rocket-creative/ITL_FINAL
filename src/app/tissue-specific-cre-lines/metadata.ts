@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Tissue Specific Cre Lines',
-  description: 'Tissue Specific Cre Lines from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Tissue Specific Cre Driver Lines',
+  description: 'Tissue specific Cre lines for targeted gene deletion in specific cell types. Restrict knockouts to liver, brain, heart, or immune cells.',
   path: '/tissue-specific-cre-lines',
 });
 

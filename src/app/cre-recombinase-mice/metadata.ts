@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Cre Recombinase Mice',
-  description: 'Cre Recombinase Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Cre Recombinase Mouse Lines',
+  description: 'Cre recombinase mice for conditional gene targeting experiments. Cross with floxed alleles to achieve tissue specific or inducible knockouts.',
   path: '/cre-recombinase-mice',
 });
 

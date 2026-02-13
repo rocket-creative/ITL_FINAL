@@ -1,14 +1,21 @@
-import type { Metadata } from 'next';
+/**
+ * SEO Metadata for Knockout Rat Models
+ * Auto-generated for canonical URLs and structured data
+ */
 
-export const metadata: Metadata = {
-  title: 'Knockout Rat Models | ingenious targeting laboratory',
-  description: 'Custom knockout rat models for research applications. Gene deletion and modification in rat models with guaranteed transmission.',
-  alternates: {
-    canonical: 'https://www.genetargeting.com/knockout-rat-models',
-  },
-  openGraph: {
-    title: 'Knockout Rat Models | ingenious targeting laboratory',
-    description: 'Custom knockout rat models for research applications. Gene deletion and modification in rat models with guaranteed transmission.',
-    type: 'website',
-  },
-};
+import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
+
+export const metadata = generateMetadata({
+  title: 'Knockout Rat Models',
+  description: 'Custom knockout rat models with complete gene deletion. Ideal for cardiovascular, metabolic, and behavioral research requiring larger animal size.',
+  path: '/knockout-rat-models',
+});
+
+// BreadcrumbList structured data
+export const breadcrumbSchema = generateBreadcrumbs({
+  items: [
+    { name: 'Home', path: '/' },
+    { name: 'Rat Models', path: '/rat-models' },
+    { name: 'Knockout Rat Models', path: '/knockout-rat-models' },
+  ],
+});

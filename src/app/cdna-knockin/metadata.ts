@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Cdna Knockin',
-  description: 'Cdna Knockin from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'cDNA Knockin Mouse Models',
+  description: 'cDNA knockin mice for expressing genes under endogenous regulatory control. Insert coding sequences at specific loci. Germline confirmed delivery.',
   path: '/cdna-knockin',
 });
 

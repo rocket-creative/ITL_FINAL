@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Metabolic Disease Mouse Models',
-  description: 'Metabolic Disease Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Metabolic Disease Mouse Models | ITL',
+  description: 'Metabolic disease mouse models for studying lipid metabolism, energy balance, and metabolic syndrome. Diabetes, obesity, and NAFLD research platforms.',
   path: '/metabolic-disease-mouse-models',
 });
 

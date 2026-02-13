@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Cre Line Selection Guide',
-  description: 'Cre Line Selection Guide from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Cre Driver Line Selection Guide',
+  description: 'Guide to selecting the right Cre driver for your floxed allele. Compare constitutive, inducible, and tissue specific Cre lines for your experiment.',
   path: '/cre-line-selection-guide',
 });
 

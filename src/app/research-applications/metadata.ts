@@ -1,14 +1,20 @@
-import type { Metadata } from 'next';
+/**
+ * SEO Metadata for Research Applications
+ * Auto-generated for canonical URLs and structured data
+ */
 
-export const metadata: Metadata = {
-  title: 'Mouse Model Research Applications | ingenious targeting laboratory',
-  description: 'Custom mouse models for oncology, neuroscience, metabolic disease, immunology, cardiovascular, and rare disease research. 800+ publications since 1998.',
-  alternates: {
-    canonical: 'https://www.genetargeting.com/research-applications',
-  },
-  openGraph: {
-    title: 'Mouse Model Research Applications | ingenious targeting laboratory',
-    description: 'Custom mouse models for oncology, neuroscience, metabolic disease, immunology, cardiovascular, and rare disease research. 800+ publications since 1998.',
-    type: 'website',
-  },
-};
+import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
+
+export const metadata = generateMetadata({
+  title: 'Mouse Model Research Applications',
+  description: 'Custom mouse models for target validation, drug discovery, biomarker research, and mechanistic studies. 800+ publications since 1998.',
+  path: '/research-applications',
+});
+
+// BreadcrumbList structured data
+export const breadcrumbSchema = generateBreadcrumbs({
+  items: [
+    { name: 'Home', path: '/' },
+    { name: 'Research Applications', path: '/research-applications' },
+  ],
+});

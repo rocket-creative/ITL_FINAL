@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Cryopreservation Services',
-  description: 'Cryopreservation Services from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Mouse Cryopreservation Services',
+  description: 'Mouse embryo and sperm cryopreservation for long term colony preservation. Protect valuable lines, reduce housing costs, ship worldwide.',
   path: '/cryopreservation-services',
 });
 

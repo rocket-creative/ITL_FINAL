@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Resources',
-  description: 'Research resources including guides, FAQs, and educational content for mouse model development.',
+  title: 'Mouse Model Research Resources',
+  description: 'Guides, FAQs, and educational content for planning mouse model experiments. Knockout strategies, Cre lines, and strain selection.',
   path: '/resources',
 });
 

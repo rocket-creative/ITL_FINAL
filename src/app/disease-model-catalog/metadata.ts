@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Disease Model Catalog',
-  description: 'Disease Model Catalog from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Disease Mouse Model Catalog',
+  description: 'Ready made disease models for cancer, metabolic, autoimmune, and neurological research. Validated phenotypes with faster delivery.',
   path: '/disease-model-catalog',
 });
 

@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Flp FRT System',
-  description: 'Flp FRT System from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Flp FRT Recombination System',
+  description: 'Flp FRT recombination for removing selection cassettes and creating dual recombinase models. Combine with Cre lox for sequential gene modifications.',
   path: '/flp-frt-system',
 });
 

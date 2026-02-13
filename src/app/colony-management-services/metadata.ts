@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Colony Management Services',
-  description: 'Colony Management Services from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Mouse Colony Management Services',
+  description: 'Full service mouse colony management including breeding, health monitoring, and record keeping. Reduce internal costs while maintaining quality control.',
   path: '/colony-management-services',
 });
 

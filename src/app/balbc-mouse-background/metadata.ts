@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'BALB/c Mouse Background',
-  description: 'BALB/c Mouse Background from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'BALB/c Mouse Strain Background',
+  description: 'BALB/c mouse background for immunology and cancer research. Known for monoclonal antibody production and distinct immune response characteristics.',
   path: '/balbc-mouse-background',
 });
 

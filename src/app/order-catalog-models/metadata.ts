@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Order Catalog Models',
-  description: 'Order Catalog Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Order Mouse Models',
+  description: 'Place your order for catalog mouse models. Request a quote for humanized checkpoint, reporter, or disease model strains.',
   path: '/order-catalog-models',
 });
 

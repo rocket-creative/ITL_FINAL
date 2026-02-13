@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Reporter Knockin Models',
-  description: 'Reporter Knockin Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Reporter Knockin Mouse Models',
+  description: 'Reporter knockin mice for tracking gene expression and cell lineage. Insert GFP, lacZ, luciferase, or Cre at endogenous loci. Since 1998.',
   path: '/reporter-knockin',
 });
 

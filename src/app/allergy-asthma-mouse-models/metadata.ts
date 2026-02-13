@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Allergy and Asthma Mouse Models',
-  description: 'Allergy and Asthma Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Allergy and Asthma Mouse Models | ITL',
+  description: 'Allergy and asthma mouse models for studying airway inflammation, IgE responses, and hypersensitivity. Test therapeutics targeting Th2 immunity pathways.',
   path: '/allergy-asthma-mouse-models',
 });
 

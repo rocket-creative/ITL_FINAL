@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Reporter Mouse Catalog',
-  description: 'Reporter Mouse Catalog from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Reporter Mouse Strain Catalog',
+  description: 'GFP, tdTomato, LacZ, and luciferase reporter mice for gene expression studies. Track cell populations and lineage in vivo.',
   path: '/reporter-mouse-catalog',
 });
 

@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Inducible ROSA26',
-  description: 'Inducible ROSA26 from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Inducible ROSA26 Expression Systems',
+  description: 'Inducible ROSA26 systems for controlled transgene expression. Combine safe harbor reliability with temporal control using Cre or drug induction.',
   path: '/inducible-rosa26',
 });
 

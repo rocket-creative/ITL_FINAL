@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Autoimmune Disease Mice',
-  description: 'Autoimmune Disease Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Autoimmune Disease Mice | ITL',
+  description: 'Autoimmune disease mice for studying immune tolerance breakdown and self reactive immunity. Lupus, arthritis, and multiple sclerosis model platforms.',
   path: '/autoimmune-disease-mice',
 });
 

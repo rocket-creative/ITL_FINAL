@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Tag Knockin Mice',
-  description: 'Tag Knockin Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Epitope Tag Knockin Mouse Models',
+  description: 'Tag knockin mice for protein detection and purification. Insert FLAG, HA, V5, or Myc tags at endogenous loci. Study native protein expression in vivo.',
   path: '/tag-knockin-mice',
 });
 

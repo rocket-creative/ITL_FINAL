@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Rederivation Services',
-  description: 'Rederivation Services from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Mouse Rederivation Services',
+  description: 'Eliminate pathogens and clean up mouse lines with embryo transfer rederivation. Restore SPF status for facility import and animal health.',
   path: '/rederivation-services',
 });
 

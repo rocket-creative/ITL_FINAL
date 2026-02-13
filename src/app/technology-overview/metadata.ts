@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Technology Overview',
-  description: 'Technology Overview from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Gene Targeting Technology Overview',
+  description: 'Overview of gene targeting technologies for mouse model generation. ES cell targeting, CRISPR, Cre lox, and knockin strategies explained.',
   path: '/technology-overview',
 });
 

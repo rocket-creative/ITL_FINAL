@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Syngeneic Tumor Models',
-  description: 'Syngeneic Tumor Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Syngeneic Tumor Models | ITL',
+  description: 'Syngeneic tumor models for immunotherapy testing with intact immune systems. Study tumor microenvironment and immune checkpoint responses in vivo.',
   path: '/syngeneic-tumor-models',
 });
 

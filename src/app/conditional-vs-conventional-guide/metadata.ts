@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Conditional vs Conventional Guide',
-  description: 'Conditional vs Conventional Guide from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Conditional vs Conventional Knockout Guide',
+  description: 'Compare conditional and conventional knockout strategies. Learn when to choose tissue specific or inducible knockouts over global gene deletion.',
   path: '/conditional-vs-conventional-guide',
 });
 

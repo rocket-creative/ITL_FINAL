@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'LAG3 Humanized Mice',
-  description: 'LAG3 Humanized Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'LAG3 Humanized Mouse Models',
+  description: 'LAG3 humanized mice expressing human LAG3 for testing anti LAG3 checkpoint inhibitor antibodies. Next generation immuno oncology target validation.',
   path: '/lag3-humanized-mice',
 });
 

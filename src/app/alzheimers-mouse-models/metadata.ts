@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Alzheimer\'s Mouse Models',
-  description: 'Alzheimer\'s Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: "Alzheimer's Mouse Models | ITL",
+  description: "Alzheimer's mouse models for studying amyloid pathology, tau tangles, and cognitive decline. Custom designs targeting APP, PSEN1, MAPT, and related genes.",
   path: '/alzheimers-mouse-models',
 });
 

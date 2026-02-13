@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'CTLA4 Humanized Mice',
-  description: 'CTLA4 Humanized Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'CTLA4 Humanized Mouse Models',
+  description: 'CTLA4 humanized mice expressing human CTLA4 for testing anti CTLA4 checkpoint inhibitor antibodies. Validated for immuno oncology drug development.',
   path: '/ctla4-humanized-mice',
 });
 

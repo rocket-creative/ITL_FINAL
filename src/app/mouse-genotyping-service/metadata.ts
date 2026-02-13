@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Mouse Genotyping Service',
-  description: 'Mouse Genotyping Service from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Mouse Genotyping Services',
+  description: 'Fast, accurate PCR genotyping for mouse colonies. Get results in 48 hours with validated assays for knockouts, knockins, and transgenics.',
   path: '/mouse-genotyping-service',
 });
 

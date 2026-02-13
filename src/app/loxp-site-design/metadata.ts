@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'LoxP Site Design',
-  description: 'LoxP Site Design from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'LoxP Site Design and Placement',
+  description: 'LoxP site design principles for conditional alleles. Proper placement flanking critical exons ensures complete gene inactivation upon Cre recombination.',
   path: '/loxp-site-design',
 });
 

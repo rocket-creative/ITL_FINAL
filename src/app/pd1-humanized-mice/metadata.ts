@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'PD1 Humanized Mice',
-  description: 'PD1 Humanized Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'PD1 Humanized Mouse Models',
+  description: 'PD1 humanized mice expressing human PDCD1 for testing anti PD1 checkpoint inhibitor antibodies. Validated for immuno oncology research.',
   path: '/pd1-humanized-mice',
 });
 

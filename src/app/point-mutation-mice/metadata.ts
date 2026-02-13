@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Point Mutation Mice',
-  description: 'Point Mutation Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Point Mutation Mouse Models',
+  description: 'Point mutation mice to model human disease variants. Introduce SNPs or amino acid changes at endogenous loci. ES cell and CRISPR approaches available.',
   path: '/point-mutation-mice',
 });
 

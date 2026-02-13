@@ -1,20 +1,20 @@
 /**
- * SEO Metadata for Glossary
+ * SEO Metadata for Thank You Page
  * Auto-generated for canonical URLs and structured data
  */
 
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Mouse Genetics Glossary',
-  description: 'Definitions for knockout, knockin, Cre lox, CRISPR, and other mouse genetics terms. Learn the terminology for your research.',
-  path: '/glossary',
+  title: 'Thank You',
+  description: 'Thank you for your inquiry. Our team will review your request and respond within one business day.',
+  path: '/thank-you',
 });
 
 // BreadcrumbList structured data
 export const breadcrumbSchema = generateBreadcrumbs({
   items: [
     { name: 'Home', path: '/' },
-    { name: 'Glossary', path: '/glossary' },
+    { name: 'Thank You', path: '/thank-you' },
   ],
 });

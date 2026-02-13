@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'BAC to BAC Large Scale Targeting',
-  description: 'BAC to BAC Large Scale Targeting from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'BAC Recombineering for Large Modifications',
+  description: 'BAC recombineering for large scale genomic modifications. Engineer complex alleles and humanize entire gene loci with bacterial artificial chromosomes.',
   path: '/bac-to-bac-large-scale-targeting',
 });
 

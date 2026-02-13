@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Lab Signals',
-  description: 'Lab Signals from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Lab Signals Blog',
+  description: 'Technical articles on mouse model design, gene targeting strategies, and research applications. Tips from iTL scientists.',
   path: '/lab-signals',
 });
 

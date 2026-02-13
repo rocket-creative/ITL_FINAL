@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Speed Expansion Breeding',
-  description: 'Speed Expansion Breeding from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Speed Expansion Mouse Breeding',
+  description: 'Accelerate colony expansion with optimized breeding strategies. Build experimental cohorts faster with superovulation and IVF techniques.',
   path: '/speed-expansion-breeding',
 });
 

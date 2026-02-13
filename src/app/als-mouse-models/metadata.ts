@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'ALS Mouse Models',
-  description: 'ALS Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'ALS Mouse Models | ITL',
+  description: 'ALS mouse models for studying motor neuron degeneration and disease mechanisms. SOD1, TDP43, FUS, and C9orf72 gene targeting for therapeutic research.',
   path: '/als-mouse-models',
 });
 

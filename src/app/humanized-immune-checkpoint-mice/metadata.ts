@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Humanized Immune Checkpoint Mice',
-  description: 'Humanized Immune Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  description: 'Humanized immune checkpoint mice for immuno oncology drug development. Test human PD1, PDL1, CTLA4, and other checkpoint antibodies in vivo.',
   path: '/humanized-immune-checkpoint-mice',
 });
 

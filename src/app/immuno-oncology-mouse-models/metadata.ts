@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Immuno Oncology Mouse Models',
-  description: 'Immuno Oncology Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Immuno Oncology Mouse Models | ITL',
+  description: 'Immuno oncology mouse models for studying tumor immunity and checkpoint inhibitors. Humanized immune checkpoint mice for cancer immunotherapy research.',
   path: '/immuno-oncology-mouse-models',
 });
 

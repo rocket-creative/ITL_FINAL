@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Lupus Mouse Models',
-  description: 'Lupus Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Lupus Mouse Models | ITL',
+  description: 'Lupus mouse models for studying systemic autoimmunity, nephritis, and autoantibody production. Test therapeutics targeting B cells and immune complexes.',
   path: '/lupus-mouse-models',
 });
 

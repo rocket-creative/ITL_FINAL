@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Inducible Conditional Knockout',
-  description: 'Inducible Conditional Knockout from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Inducible Conditional Knockout Mice',
+  description: 'Inducible knockout mice with temporal control of gene deletion. Activate knockouts with tamoxifen or doxycycline at specific timepoints. Since 1998.',
   path: '/inducible-conditional-knockout',
 });
 

@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'C57BL6 Mouse Background',
-  description: 'C57BL6 Mouse Background from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'C57BL/6 Mouse Strain Background',
+  description: 'C57BL/6 mouse background for gene targeting research. The most used inbred strain with well characterized genetics and extensive phenotype data.',
   path: '/c57bl6-mouse-background',
 });
 

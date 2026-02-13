@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Parkinson\'s Mouse Models',
-  description: 'Parkinson\'s Mouse Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: "Parkinson's Mouse Models | ITL",
+  description: "Parkinson's mouse models for studying dopaminergic neurodegeneration, alpha synuclein pathology, and motor dysfunction. SNCA, LRRK2, and PINK1 targeting.",
   path: '/parkinsons-mouse-models',
 });
 

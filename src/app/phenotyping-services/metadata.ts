@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Phenotyping Services',
-  description: 'Phenotyping Services from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Mouse Phenotyping Services',
+  description: 'Characterize mouse model phenotypes with behavioral, metabolic, and histological analysis. Validate gene function and disease relevance.',
   path: '/phenotyping-services',
 });
 

@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Tissue Specific Knockout Models',
-  description: 'Tissue Specific Knockout Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  description: 'Tissue specific knockout mice using Cre LoxP to delete genes in targeted cell types. Study gene function without embryonic lethality. Since 1998.',
   path: '/tissue-specific-knockout',
 });
 

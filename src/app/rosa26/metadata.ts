@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'ROSA26 Locus',
-  description: 'ROSA26 Locus from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'ROSA26 Safe Harbor Locus',
+  description: 'ROSA26 safe harbor locus for reliable transgene expression. Ubiquitous expression without disrupting endogenous genes. Proven in thousands of models.',
   path: '/rosa26',
 });
 
