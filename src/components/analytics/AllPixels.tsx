@@ -1,13 +1,15 @@
 /**
  * All Tracking Pixels Combined
- * @version 1.3.0
- * @description Unified component that loads all tracking pixels
- * Includes: Google Analytics, Facebook, LinkedIn, Twitter, AdRoll, HubSpot
+ * @version 1.4.0
+ * @description Unified component that loads additional tracking pixels
+ * Note: Google Analytics is loaded directly in layout.tsx for Google verification
+ * Includes: HubSpot (others available when configured)
  */
 
 'use client';
 
-import GoogleAnalytics from './GoogleAnalytics';
+// Google Analytics moved to layout.tsx with beforeInteractive for Google verification
+// import GoogleAnalytics from './GoogleAnalytics';
 // import FacebookPixel from './FacebookPixel';
 // import LinkedInInsight from './LinkedInInsight';
 // import TwitterPixel from './TwitterPixel';
@@ -17,7 +19,7 @@ import HubSpotTracking from './HubSpotTracking';
 export default function AllPixels() {
   return (
     <>
-      <GoogleAnalytics />
+      {/* Google Analytics loaded in layout.tsx for verification compatibility */}
       {/* FacebookPixel, LinkedInInsight, TwitterPixel, AdRollPixel disabled until IDs configured */}
       <HubSpotTracking />
     </>

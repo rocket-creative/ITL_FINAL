@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { AllPixels } from "@/components/analytics";
@@ -11,6 +12,9 @@ const poppins = Poppins({
   preload: true,
   adjustFontFallback: true,
 });
+
+// Google Analytics 4 Measurement ID
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '';
 
 export const metadata: Metadata = {
   title: {
@@ -49,11 +53,30 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <head>
-        {/* Hero image preload moved to pages that use it to avoid unused preload warnings */}
-        {/* HubSpot Forms Script - loaded dynamically by HubSpotForm component to avoid hydration errors */}
+        {/* Google tag (gtag.js) - placed immediately after head for Google verification */}
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="beforeInteractive"
+            />
+            <Script
+              id="google-analytics"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="antialiased">
-        {/* All Tracking Pixels: GA4, Facebook, LinkedIn, Twitter, AdRoll */}
+        {/* Additional Tracking Pixels: HubSpot, etc */}
         <AllPixels />
         
         {/* Skip to main content link for accessibility */}
