@@ -546,7 +546,7 @@ export default function DiseaseModelCatalogPage() {
                 }}>
                   {shippingData.description}
                 </p>
-                <div style={{ display: 'grid', className="grid grid-cols-1 md:grid-cols-2", gap: '12px', maxWidth: '500px', margin: '0 auto' }}>
+                <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '12px', maxWidth: '500px', margin: '0 auto' }}>
                   {shippingData.points.map((point, index) => (
                     <div key={index} style={{
                       display: 'flex',

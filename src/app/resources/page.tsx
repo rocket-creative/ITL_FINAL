@@ -741,7 +741,7 @@ export default function ResourcesPage() {
             }}>
               {strategyGuidesData.description}
             </p>
-            <div style={{ display: 'grid', className="grid grid-cols-1 md:grid-cols-2", gap: '20px', marginBottom: '40px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '20px', marginBottom: '40px' }}>
               {strategyGuidesData.guides.map((guide, index) => (
                 <Link key={index} href={guide.href} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   display: 'block',
@@ -943,7 +943,7 @@ export default function ResourcesPage() {
                 }}>
                   {publicationsData.description}
                 </p>
-                <div style={{ display: 'grid', className="grid grid-cols-1 md:grid-cols-2", gap: '12px', maxWidth: '500px', margin: '0 auto 24px' }}>
+                <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '12px', maxWidth: '500px', margin: '0 auto 24px' }}>
                   {publicationsData.features.map((feature, index) => (
                     <div key={index} style={{
                       display: 'flex',

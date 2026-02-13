@@ -618,12 +618,12 @@ export function CatalogSearch({
 
       {/* Initial State - Show stats when not searching */}
       {!hasSearched && !isLoading && !error && !compact && (
-        <div style={{
-          display: 'grid',
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
-          gap: '16px',
-          marginTop: '24px',
-        }}>
+        <div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+          style={{
+            gap: '16px',
+            marginTop: '24px',
+          }}>
           {[
             { label: 'Total Models', value: allModels.length > 0 ? `${allModels.length.toLocaleString()}+` : '10,000+' },
             { label: 'Model Types', value: allModels.length > 0 ? `${new Set(allModels.map(m => m.modelType).filter(Boolean)).size}+` : '6+' },

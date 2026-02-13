@@ -587,9 +587,7 @@ export default function PublicationsPage() {
         {/* Info Section */}
         <section style={{ background: '#ffffff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="animate-in" style={{
-              display: 'grid',
-              className="grid grid-cols-1 md:grid-cols-3",
+            <div className="animate-in grid grid-cols-1 md:grid-cols-3" style={{
               gap: '24px'
             }}>
               <div style={{

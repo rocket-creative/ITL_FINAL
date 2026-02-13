@@ -381,9 +381,8 @@ export default function StartYourProjectPage() {
             </div>
 
             <div
+              className="grid grid-cols-1 md:grid-cols-2"
               style={{
-                display: 'grid',
-                className="grid grid-cols-1 md:grid-cols-2",
                 gap: '20px',
                 marginBottom: '30px',
               }}
@@ -689,9 +688,8 @@ export default function StartYourProjectPage() {
             </p>
 
             <div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
               style={{
-                display: 'grid',
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
                 gap: '30px',
                 marginBottom: '40px',
               }}

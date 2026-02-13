@@ -801,7 +801,7 @@ export default function LAG3HumanizedMicePage() {
                   }}>
                     {itlApproachData.title}
                   </h2>
-                  <div style={{ display: 'grid', className="grid grid-cols-1 md:grid-cols-2", gap: '12px', marginBottom: '20px' }}>
+                  <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '12px', marginBottom: '20px' }}>
                     {itlApproachData.points.map((point, index) => (
                       <div key={index} style={{
                         display: 'flex',
