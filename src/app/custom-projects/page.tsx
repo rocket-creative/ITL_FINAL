@@ -296,7 +296,7 @@ export default function CustomProjectsPage() {
             }}>
               Our Custom Approach
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {customApproachData.map((item, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
