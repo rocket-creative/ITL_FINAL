@@ -360,7 +360,7 @@ export default function PD1HumanizedMicePage() {
             }}>
               {whyHumanizeData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {whyHumanizeData.sections.map((section, index) => (
                 <div key={index} className="animate-in hover-card hover-card-teal group" style={{
                   background: '#ffffff',
@@ -442,7 +442,7 @@ export default function PD1HumanizedMicePage() {
                   <p style={{ fontSize: '.9rem', color: '#666', marginBottom: '16px', lineHeight: 1.6 }}>
                     {strategy.description}
                   </p>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px' }}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {strategy.features.map((feature, fIndex) => (
                       <div key={fIndex} style={{
                         display: 'flex',
@@ -481,7 +481,7 @@ export default function PD1HumanizedMicePage() {
             }}>
               {applicationsData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {applicationsData.applications.map((app, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
@@ -893,7 +893,7 @@ export default function PD1HumanizedMicePage() {
         {/* Related Links Section */}
         <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="animate-in">
                 <h3 style={{
                   fontFamily: 'Poppins, sans-serif',

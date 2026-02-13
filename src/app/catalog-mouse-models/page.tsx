@@ -306,7 +306,7 @@ export default function CatalogMouseModelsPage() {
         {/* Stats Section */}
         <section style={{ background: '#f7f7f7', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
                 <div key={index} className="animate-in" style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: '2rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>
@@ -342,7 +342,7 @@ export default function CatalogMouseModelsPage() {
             }}>
               {checkpointModelsData.intro}
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {checkpointModelsData.categories.map((category, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
@@ -431,7 +431,7 @@ export default function CatalogMouseModelsPage() {
             }}>
               {creDriverData.intro}
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {creDriverData.categories.map((category, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
@@ -492,7 +492,7 @@ export default function CatalogMouseModelsPage() {
             }}>
               {reporterData.intro}
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {reporterData.types.map((type, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
@@ -543,7 +543,7 @@ export default function CatalogMouseModelsPage() {
             }}>
               {orderingData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {orderingData.sections.map((section, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
@@ -646,7 +646,7 @@ export default function CatalogMouseModelsPage() {
         {/* Related Links Section */}
         <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="animate-in">
                 <h3 style={{
                   fontFamily: 'Poppins, sans-serif',

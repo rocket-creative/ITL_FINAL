@@ -378,7 +378,7 @@ export default function C57BL6MouseBackgroundPage() {
         {/* Stats Section */}
         <section style={{ background: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
                 <div key={index} className="animate-in" style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: '2rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>
@@ -415,7 +415,7 @@ export default function C57BL6MouseBackgroundPage() {
             }}>
               {substrainData.intro}
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {substrainData.substrains.map((substrain, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
@@ -524,7 +524,7 @@ export default function C57BL6MouseBackgroundPage() {
             }}>
               {whyC57BL6Data.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {whyC57BL6Data.sections.map((section, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
@@ -608,7 +608,7 @@ export default function C57BL6MouseBackgroundPage() {
             }}>
               {applicationsData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {applicationsData.applications.map((app, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
@@ -945,7 +945,7 @@ export default function C57BL6MouseBackgroundPage() {
         {/* Related Links Section */}
         <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="animate-in">
                 <h3 style={{
                   fontFamily: 'Poppins, sans-serif',

@@ -255,7 +255,7 @@ export default function PublicationsPage() {
         {/* Stats Section */}
         <section style={{ background: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
                 <div key={index} className="animate-in" style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: '2rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>
@@ -589,7 +589,7 @@ export default function PublicationsPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="animate-in" style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
+              className="grid grid-cols-1 md:grid-cols-3",
               gap: '24px'
             }}>
               <div style={{

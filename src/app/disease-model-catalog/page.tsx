@@ -306,7 +306,7 @@ export default function DiseaseModelCatalogPage() {
         {/* Stats Section */}
         <section style={{ background: '#f7f7f7', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
                 <div key={index} className="animate-in" style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: '2rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>
@@ -332,7 +332,7 @@ export default function DiseaseModelCatalogPage() {
             }}>
               Catalog Categories
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {catalogCategoriesData.map((category, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
@@ -398,7 +398,7 @@ export default function DiseaseModelCatalogPage() {
             }}>
               Catalog Features
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {catalogFeaturesData.map((feature, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
@@ -464,7 +464,7 @@ export default function DiseaseModelCatalogPage() {
             }}>
               {orderingProcessData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {orderingProcessData.steps.map((step, index) => (
                 <div key={index} className="animate-in" style={{
                   background: '#ffffff',
@@ -546,7 +546,7 @@ export default function DiseaseModelCatalogPage() {
                 }}>
                   {shippingData.description}
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', maxWidth: '500px', margin: '0 auto' }}>
+                <div style={{ display: 'grid', className="grid grid-cols-1 md:grid-cols-2", gap: '12px', maxWidth: '500px', margin: '0 auto' }}>
                   {shippingData.points.map((point, index) => (
                     <div key={index} style={{
                       display: 'flex',
@@ -581,7 +581,7 @@ export default function DiseaseModelCatalogPage() {
             }}>
               Browse by Category
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {browseCategoriesData.map((category, index) => (
                 <Link key={index} href={category.href} className="animate-in" style={{
                   display: 'flex',

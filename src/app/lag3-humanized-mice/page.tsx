@@ -400,7 +400,7 @@ export default function LAG3HumanizedMicePage() {
             }}>
               {lag3BiologyData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {lag3BiologyData.sections.map((section, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
@@ -474,7 +474,7 @@ export default function LAG3HumanizedMicePage() {
             }}>
               {strategiesData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {strategiesData.strategies.map((strategy, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
@@ -534,7 +534,7 @@ export default function LAG3HumanizedMicePage() {
             }}>
               {designConsiderationsData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {designConsiderationsData.considerations.map((consideration, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
@@ -601,7 +601,7 @@ export default function LAG3HumanizedMicePage() {
             }}>
               {applicationsData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {applicationsData.applications.map((app, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
@@ -727,7 +727,7 @@ export default function LAG3HumanizedMicePage() {
             }}>
               {modelDesignData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {modelDesignData.sections.map((section, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
@@ -801,7 +801,7 @@ export default function LAG3HumanizedMicePage() {
                   }}>
                     {itlApproachData.title}
                   </h2>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', marginBottom: '20px' }}>
+                  <div style={{ display: 'grid', className="grid grid-cols-1 md:grid-cols-2", gap: '12px', marginBottom: '20px' }}>
                     {itlApproachData.points.map((point, index) => (
                       <div key={index} style={{
                         display: 'flex',
@@ -956,7 +956,7 @@ export default function LAG3HumanizedMicePage() {
         {/* Related Links Section */}
         <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="animate-in">
                 <h3 style={{
                   fontFamily: 'Poppins, sans-serif',

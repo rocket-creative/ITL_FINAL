@@ -359,7 +359,7 @@ export default function ConditionalVsConventionalGuidePage() {
         {/* Stats Section */}
         <section style={{ background: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
                 <div key={index} className="animate-in" style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: '2rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>
@@ -416,7 +416,7 @@ export default function ConditionalVsConventionalGuidePage() {
         {/* Conventional vs Conditional Details Section */}
         <section style={{ background: '#ffffff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Conventional Knockout */}
               <div className="animate-in">
                 <div style={{
@@ -716,7 +716,7 @@ export default function ConditionalVsConventionalGuidePage() {
                 <p style={{ fontSize: '.95rem', color: 'rgba(255,255,255,0.9)', lineHeight: 1.7, marginBottom: '24px' }}>
                   {derivativeAlleleData.intro}
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px' }}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <h4 style={{ fontSize: '.95rem', fontWeight: 600, color: '#ffffff', marginBottom: '12px' }}>Allele Types Generated</h4>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -793,7 +793,7 @@ export default function ConditionalVsConventionalGuidePage() {
             }}>
               Quick Decision Guide
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                 background: '#ffffff',
                 borderRadius: '8px',
@@ -974,7 +974,7 @@ export default function ConditionalVsConventionalGuidePage() {
         {/* Related Links Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '40px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="animate-in">
                 <h3 style={{
                   fontFamily: 'Poppins, sans-serif',

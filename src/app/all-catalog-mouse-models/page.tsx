@@ -106,7 +106,7 @@ export default function AllCatalogMouseModelsPage() {
             }}>
               Browse by Category
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { href: '/humanized-immune-checkpoint-mice', label: 'Humanized Checkpoint Mice' },
                 { href: '/disease-model-catalog', label: 'Disease Model Catalog' },

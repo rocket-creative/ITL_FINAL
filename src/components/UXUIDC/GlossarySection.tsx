@@ -82,11 +82,7 @@ export function UXUIDCGlossarySection({
         )}
 
         {/* Terms Grid */}
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: columns === 2 ? 'repeat(2, 1fr)' : '1fr', 
-          gap: '20px' 
-        }}>
+        <div className={columns === 2 ? 'grid grid-cols-1 md:grid-cols-2 gap-5' : 'grid grid-cols-1 gap-5'}>
           {terms.map((item, index) => (
             <div 
               key={index} 

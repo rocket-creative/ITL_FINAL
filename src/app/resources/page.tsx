@@ -358,7 +358,7 @@ export default function ResourcesPage() {
         {/* Stats Section */}
         <section style={{ background: '#ffffff', padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
                 <div key={index} className="animate-in" style={{ textAlign: 'center' }}>
                   <div style={{ fontSize: '2rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>
@@ -533,7 +533,7 @@ export default function ResourcesPage() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {downloadableResourcesData.categories.map((category, index) => {
                 const getCategoryIcon = (iconType: string) => {
                   switch (iconType) {
@@ -741,7 +741,7 @@ export default function ResourcesPage() {
             }}>
               {strategyGuidesData.description}
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '40px' }}>
+            <div style={{ display: 'grid', className="grid grid-cols-1 md:grid-cols-2", gap: '20px', marginBottom: '40px' }}>
               {strategyGuidesData.guides.map((guide, index) => (
                 <Link key={index} href={guide.href} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   display: 'block',
@@ -795,7 +795,7 @@ export default function ResourcesPage() {
                 }}>
                   {planningGuidesData.title}
                 </h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {planningGuidesData.guides.map((guide, index) => (
                     <Link key={index} href={guide.href} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                       display: 'block',
@@ -854,7 +854,7 @@ export default function ResourcesPage() {
             }}>
               {technicalResourcesData.title}
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {technicalResourcesData.categories.map((category, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
@@ -943,7 +943,7 @@ export default function ResourcesPage() {
                 }}>
                   {publicationsData.description}
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px', maxWidth: '500px', margin: '0 auto 24px' }}>
+                <div style={{ display: 'grid', className="grid grid-cols-1 md:grid-cols-2", gap: '12px', maxWidth: '500px', margin: '0 auto 24px' }}>
                   {publicationsData.features.map((feature, index) => (
                     <div key={index} style={{
                       display: 'flex',
@@ -985,7 +985,7 @@ export default function ResourcesPage() {
         {/* Video Library & Glossary Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Video Library */}
               <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                 background: '#ffffff',

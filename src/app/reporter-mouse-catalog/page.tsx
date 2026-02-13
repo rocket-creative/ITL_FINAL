@@ -91,7 +91,7 @@ export default function ReporterMouseCatalogPage() {
             }}>
               Reporter Types
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { title: 'Fluorescent Reporters', desc: 'GFP, tdTomato, mCherry, and other fluorescent proteins for live imaging.' },
                 { title: 'Enzymatic Reporters', desc: 'LacZ (beta-galactosidase) and luciferase for histochemical and bioluminescent detection.' },

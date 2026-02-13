@@ -383,7 +383,7 @@ export default function StartYourProjectPage() {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)',
+                className="grid grid-cols-1 md:grid-cols-2",
                 gap: '20px',
                 marginBottom: '30px',
               }}
@@ -691,7 +691,7 @@ export default function StartYourProjectPage() {
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
                 gap: '30px',
                 marginBottom: '40px',
               }}

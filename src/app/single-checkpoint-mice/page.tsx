@@ -165,7 +165,7 @@ export default function SingleCheckpointMicePage() {
                 Complete list of available humanized checkpoint models. Click any model to view details or <Link href="/order-catalog-models" style={{ color: '#008080', fontWeight: 600, textDecoration: 'underline' }}>request an order inquiry</Link>.
               </p>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { name: 'PD1 Humanized', href: '/pd1-humanized-mice' },
                 { name: 'PDL1 Humanized', href: '/pdl1-humanized-mice' },
