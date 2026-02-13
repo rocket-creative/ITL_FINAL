@@ -86,7 +86,7 @@ export default function ContactPage() {
                     <a 
                       href={`mailto:${contactInfo.email}`}
                       style={{
-                        color: '#00d4d4',
+                        color: '#ffffff',
                         fontSize: '.95rem',
                         textDecoration: 'none',
                         display: 'flex',
@@ -101,7 +101,7 @@ export default function ContactPage() {
                     <a 
                       href={`tel:${contactInfo.phone.replace(/[^\d+]/g, '')}`}
                       style={{
-                        color: '#00d4d4',
+                        color: '#ffffff',
                         fontSize: '.95rem',
                         textDecoration: 'none',
                         display: 'flex',
@@ -276,7 +276,7 @@ export default function ContactPage() {
                 <div 
                   className="flex items-center gap-2 transition-all duration-300 group-hover:gap-3"
                   style={{ 
-                    color: '#00d4d4',
+                    color: '#ffffff',
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
                     fontWeight: 600,

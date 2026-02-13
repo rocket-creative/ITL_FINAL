@@ -285,8 +285,8 @@ export default function ResourcesPage() {
               padding: '6px 14px',
               marginBottom: '20px'
             }}>
-              <IconLayers size={14} color="#00d4d4" />
-              <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
+              <IconLayers size={14} color="#ffffff" />
+              <span style={{ color: '#ffffff', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
             </div>
             <h1 className="hero-animate" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -311,7 +311,7 @@ export default function ResourcesPage() {
             <p className="hero-animate" style={{
               fontSize: '.9rem',
               fontWeight: 400,
-              color: 'rgba(255,255,255,0.8)',
+              color: 'rgba(255,255,255,0.95)',
               marginBottom: '30px',
               lineHeight: 1.7,
               maxWidth: '800px'
@@ -347,7 +347,7 @@ export default function ResourcesPage() {
                   fontSize: '.9rem',
                   fontWeight: 600,
                   textDecoration: 'none',
-                  border: '2px solid rgba(255,255,255,0.3)'
+                  border: '2px solid rgba(255,255,255,0.9)'
                 }}>
                 View All Resources
               </Link>

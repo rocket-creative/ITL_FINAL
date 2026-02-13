@@ -96,7 +96,7 @@ export default function AdminLoginPage() {
             </button>
           </form>
 
-          <p className="text-center text-xs text-gray-400 mt-6">
+          <p className="text-center text-xs text-gray-600 mt-6">
             ITL Admin Dashboard • Secure Access Only
           </p>
         </div>

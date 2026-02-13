@@ -163,7 +163,7 @@ export default function PricingGuideClient() {
             <p
               className="hero-animate"
               style={{
-                color: '#00d4d4',
+                color: '#ffffff',
                 fontSize: '1.3rem',
                 fontWeight: 600,
                 lineHeight: 1.4,

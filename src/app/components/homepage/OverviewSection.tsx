@@ -97,7 +97,7 @@ export default function OverviewSection({ data }: { data: OverviewData }) {
           </h3>
           <p
             style={{
-              color: '#666',
+              color: '#4a4a4a',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
               fontWeight: 400,
@@ -137,7 +137,7 @@ export default function OverviewSection({ data }: { data: OverviewData }) {
               <li
                 key={index}
                 style={{
-                  color: '#666',
+                  color: '#4a4a4a',
                   marginBottom: '10px',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '.9rem',

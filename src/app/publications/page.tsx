@@ -185,7 +185,7 @@ export default function PublicationsPage() {
               marginBottom: '20px'
             }}>
               <IconBookOpen size={14} color="#00d4d4" />
-              <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
+              <span style={{ color: '#ffffff', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
             </div>
             <h1 className="hero-animate" style={{
               fontFamily: 'Poppins, sans-serif',

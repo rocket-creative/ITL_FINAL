@@ -118,7 +118,7 @@ export default function RequestQuotePage() {
                     <a 
                       href="mailto:inquiry@genetargeting.com"
                       style={{
-                        color: '#00d4d4',
+                        color: '#ffffff',
                         fontSize: '.95rem',
                         textDecoration: 'none',
                         display: 'flex',
@@ -132,7 +132,7 @@ export default function RequestQuotePage() {
                     <a 
                       href="tel:+16314688534"
                       style={{
-                        color: '#00d4d4',
+                        color: '#ffffff',
                         fontSize: '.95rem',
                         textDecoration: 'none',
                         display: 'flex',

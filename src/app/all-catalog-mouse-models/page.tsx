@@ -31,7 +31,7 @@ export default function AllCatalogMouseModelsPage() {
               marginBottom: '20px'
             }}>
               <IconLayers size={14} color="#00d4d4" />
-              <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 500 }}>10,000+ Models</span>
+              <span style={{ color: '#ffffff', fontSize: '.85rem', fontWeight: 500 }}>10,000+ Models</span>
             </div>
             <h1 style={{
               fontFamily: 'Poppins, sans-serif',

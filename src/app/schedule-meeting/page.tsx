@@ -70,7 +70,7 @@ export default function ScheduleMeetingPage() {
                 }}
               >
                 <IconUsers size={14} color="#00d4d4" />
-                <span style={{ color: '#00d4d4', fontSize: '.75rem', fontWeight: 500 }}>
+                <span style={{ color: '#ffffff', fontSize: '.75rem', fontWeight: 500 }}>
                   Free Scientific Consultation
                 </span>
               </div>
@@ -125,7 +125,7 @@ export default function ScheduleMeetingPage() {
               </p>
 
               <div style={{ marginBottom: '25px' }}>
-                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.9rem', marginBottom: '12px', fontWeight: 600 }}>
+                <p style={{ color: 'rgba(255,255,255,0.95)', fontSize: '.9rem', marginBottom: '12px', fontWeight: 600 }}>
                   What We&apos;ll Discuss:
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -156,7 +156,7 @@ export default function ScheduleMeetingPage() {
                   <a 
                     href="mailto:inquiry@genetargeting.com"
                     style={{
-                      color: '#00d4d4',
+                      color: '#ffffff',
                       fontSize: '.95rem',
                       textDecoration: 'none',
                       display: 'flex',
@@ -171,7 +171,7 @@ export default function ScheduleMeetingPage() {
                   <a 
                     href="tel:+16314688534"
                     style={{
-                      color: '#00d4d4',
+                      color: '#ffffff',
                       fontSize: '.95rem',
                       textDecoration: 'none',
                       display: 'flex',

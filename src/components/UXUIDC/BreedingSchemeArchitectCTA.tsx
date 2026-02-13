@@ -277,7 +277,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
                 >
                   <span
                     style={{
-                      color: variant === 'light' ? '#666' : 'rgba(255,255,255,0.6)',
+                      color: variant === 'light' ? '#4a4a4a' : 'rgba(255,255,255,0.95)',
                       fontFamily: 'var(--system-ui)',
                       fontSize: '.8rem',
                     }}

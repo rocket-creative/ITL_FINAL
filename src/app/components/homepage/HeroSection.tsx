@@ -39,7 +39,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
           ref={h1Ref}
           className="animate-initial animate-fade-in-up animate-delay-300"
           style={{
-            color: '#666',
+            color: '#4a4a4a',
             letterSpacing: '-3px',
             fontFamily: 'Poppins, sans-serif',
             fontSize: '3rem',
@@ -58,7 +58,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
             ref={p1Ref}
             className="animate-initial animate-fade-in-up animate-delay-400"
             style={{
-              color: '#666',
+              color: '#4a4a4a',
               marginTop: '5px',
               marginBottom: '15px',
               fontFamily: 'var(--system-ui)',
@@ -75,7 +75,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
             ref={p2Ref}
             className="animate-initial animate-fade-in-up animate-delay-450"
             style={{
-              color: '#666',
+              color: '#4a4a4a',
               marginTop: '5px',
               marginBottom: '15px',
               fontFamily: 'var(--system-ui)',

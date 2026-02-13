@@ -289,7 +289,7 @@ export default function ConditionalVsConventionalGuidePage() {
               marginBottom: '20px'
             }}>
               <IconLayers size={14} color="#00d4d4" />
-              <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
+              <span style={{ color: '#ffffff', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
             </div>
             <h1 className="hero-animate" style={{
               fontFamily: 'Poppins, sans-serif',
@@ -718,7 +718,7 @@ export default function ConditionalVsConventionalGuidePage() {
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px' }}>
                   <div>
-                    <h4 style={{ fontSize: '.95rem', fontWeight: 600, color: '#00d4d4', marginBottom: '12px' }}>Allele Types Generated</h4>
+                    <h4 style={{ fontSize: '.95rem', fontWeight: 600, color: '#ffffff', marginBottom: '12px' }}>Allele Types Generated</h4>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                       {derivativeAlleleData.alleles.map((item, idx) => (
                         <li key={idx} style={{
@@ -737,7 +737,7 @@ export default function ConditionalVsConventionalGuidePage() {
                     </ul>
                   </div>
                   <div>
-                    <h4 style={{ fontSize: '.95rem', fontWeight: 600, color: '#00d4d4', marginBottom: '12px' }}>Benefits</h4>
+                    <h4 style={{ fontSize: '.95rem', fontWeight: 600, color: '#ffffff', marginBottom: '12px' }}>Benefits</h4>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                       {derivativeAlleleData.benefits.map((item, idx) => (
                         <li key={idx} style={{

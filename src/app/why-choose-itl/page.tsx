@@ -159,7 +159,7 @@ export default function WhyChooseItlPage() {
               }}
             >
               <IconAward size={16} color="#00d4d4" />
-              <span style={{ color: '#00d4d4', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
+              <span style={{ color: '#ffffff', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
             </div>
             
             <h1 
@@ -459,7 +459,7 @@ export default function WhyChooseItlPage() {
                   <p style={{
                     fontSize: '.9rem',
                     fontWeight: 600,
-                    color: '#00d4d4',
+                    color: '#ffffff',
                     marginBottom: '4px'
                   }}>
                     — {testimonial.name}
@@ -480,7 +480,7 @@ export default function WhyChooseItlPage() {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '8px',
-                  color: '#00d4d4',
+                  color: '#ffffff',
                   fontSize: '.9rem',
                   fontWeight: 600,
                   textDecoration: 'none'

@@ -106,7 +106,7 @@ export default function LegacyPageTemplate({
               <p
                 className="hero-animate"
                 style={{
-                  color: 'rgba(255,255,255,0.5)',
+                  color: 'rgba(255,255,255,0.95)',
                   fontSize: '.75rem',
                   marginTop: '20px',
                 }}

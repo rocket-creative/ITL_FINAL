@@ -154,7 +154,7 @@ export default function StartYourProjectPage() {
             <p
               className="hero-animate"
               style={{
-                color: '#00d4d4',
+                color: '#ffffff',
                 fontSize: '1.1rem',
                 fontWeight: 600,
                 lineHeight: '1.7rem',
@@ -698,7 +698,7 @@ export default function StartYourProjectPage() {
             >
               {stats.map((stat, i) => (
                 <div key={i} className="animate-in" style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '2.2rem', fontWeight: 700, color: '#00d4d4', marginBottom: '8px' }}>
+                  <div style={{ fontSize: '2.2rem', fontWeight: 700, color: '#ffffff', marginBottom: '8px' }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
                   <div style={{ fontSize: '.85rem', color: '#666' }}>{stat.label}</div>

@@ -210,7 +210,7 @@ export default function OrderInquiryCatalogModelsPage() {
                   marginBottom: '16px',
                 }}>
                   <IconPackage size={14} color="#00d4d4" />
-                  <span style={{ color: '#00d4d4', fontSize: '.75rem', fontWeight: 500 }}>
+                  <span style={{ color: '#ffffff', fontSize: '.75rem', fontWeight: 500 }}>
                     Ready Made Models
                   </span>
                 </div>
@@ -252,7 +252,7 @@ export default function OrderInquiryCatalogModelsPage() {
                     <a 
                       href="mailto:inquiry@genetargeting.com"
                       style={{
-                        color: '#00d4d4',
+                        color: '#ffffff',
                         fontSize: '.95rem',
                         textDecoration: 'none',
                         display: 'flex',
@@ -267,7 +267,7 @@ export default function OrderInquiryCatalogModelsPage() {
                     <a 
                       href="tel:+16314688534"
                       style={{
-                        color: '#00d4d4',
+                        color: '#ffffff',
                         fontSize: '.95rem',
                         textDecoration: 'none',
                         display: 'flex',

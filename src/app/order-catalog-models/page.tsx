@@ -158,7 +158,7 @@ export default function OrderInquiryCatalogModelsPage() {
               }}
             >
               <IconLayers size={14} color="#00d4d4" />
-              <span style={{ color: '#00d4d4', fontSize: '.75rem', fontWeight: 500 }}>
+              <span style={{ color: '#ffffff', fontSize: '.75rem', fontWeight: 500 }}>
                 10,000+ Models Available
               </span>
             </div>
@@ -176,7 +176,7 @@ export default function OrderInquiryCatalogModelsPage() {
             </h1>
             <p
               style={{
-                color: 'rgba(255,255,255,0.8)',
+                color: 'rgba(255,255,255,0.95)',
                 fontFamily: 'var(--system-ui)',
                 fontSize: '.875rem',
                 fontWeight: 400,
@@ -243,7 +243,7 @@ export default function OrderInquiryCatalogModelsPage() {
                         {item.step}
                       </div>
                       <div>
-                        <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 600, fontFamily: 'var(--system-ui)', display: 'block', marginBottom: '2px' }}>
+                        <span style={{ color: '#ffffff', fontSize: '.85rem', fontWeight: 600, fontFamily: 'var(--system-ui)', display: 'block', marginBottom: '2px' }}>
                           {item.label}
                         </span>
                         <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', fontFamily: 'var(--system-ui)', margin: 0, lineHeight: '1.4' }}>
@@ -277,7 +277,7 @@ export default function OrderInquiryCatalogModelsPage() {
                       <div style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 700, marginBottom: '4px' }}>
                         {stat.num}
                       </div>
-                      <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.75rem', fontFamily: 'var(--system-ui)' }}>
+                      <div style={{ color: 'rgba(255,255,255,0.95)', fontSize: '.75rem', fontFamily: 'var(--system-ui)' }}>
                         {stat.label}
                       </div>
                     </div>
@@ -299,14 +299,14 @@ export default function OrderInquiryCatalogModelsPage() {
                 <p style={{ color: 'white', fontSize: '.9rem', marginBottom: '8px', fontWeight: 600 }}>
                   Need a Custom Model?
                 </p>
-                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.85rem', marginBottom: '12px', lineHeight: '1.5' }}>
+                <p style={{ color: 'rgba(255,255,255,0.95)', fontSize: '.85rem', marginBottom: '12px', lineHeight: '1.5' }}>
                   Request a custom project quote for knockout, knockin, humanized, or transgenic models.
                 </p>
                 <Link
                   href="/request-quote"
                   className="inline-flex items-center gap-2 transition-all duration-300 hover:gap-3"
                   style={{
-                    color: '#00d4d4',
+                    color: '#ffffff',
                     fontSize: '.85rem',
                     fontWeight: 600,
                     textDecoration: 'none',
@@ -541,7 +541,7 @@ export default function OrderInquiryCatalogModelsPage() {
                 <p style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'Lato, sans-serif', fontSize: testimonials.length === 1 ? '1.1rem' : '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: testimonials.length > 1 ? 1 : undefined }}>&ldquo;{testimonial.quote}&rdquo;</p>
                 <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
                   <p style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
-                  <p style={{ color: 'rgba(255,255,255,0.6)', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
+                  <p style={{ color: 'rgba(255,255,255,0.95)', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
                 </div>
               </div>
             ))}
@@ -604,7 +604,7 @@ export default function OrderInquiryCatalogModelsPage() {
                 fontSize: '.9rem',
                 fontWeight: 600,
                 textDecoration: 'none',
-                border: '2px solid rgba(255,255,255,0.5)',
+                border: '2px solid rgba(255,255,255,0.9)',
               }}
             >
               Request Custom Quote

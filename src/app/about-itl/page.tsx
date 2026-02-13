@@ -372,7 +372,7 @@ export default function AboutItlPage() {
               <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '20px' }}>
                 "iTL generated our angiotensin II type 1a receptor conditional mouse. We found this company very responsive. The project started with discussions on possible construct designs. Following approval, a project manager sent monthly reports alerting us to project milestones. Our experience with iTL was so positive that we have generated more conditional mice with them."
               </p>
-              <p style={{ color: '#00d4d4', fontSize: '.95rem', fontWeight: 500 }}>
+              <p style={{ color: '#ffffff', fontSize: '.95rem', fontWeight: 500 }}>
                 — Debra Rateri, BS, University of Kentucky
               </p>
             </div>

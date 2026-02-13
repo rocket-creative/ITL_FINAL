@@ -50,7 +50,7 @@ export default function CurrentOpeningsPage() {
               marginBottom: '16px',
             }}>
               <IconBriefcase size={14} color="#00d4d4" />
-              <span style={{ color: '#00d4d4', fontSize: '.75rem', fontWeight: 500 }}>
+              <span style={{ color: '#ffffff', fontSize: '.75rem', fontWeight: 500 }}>
                 Careers
               </span>
             </div>

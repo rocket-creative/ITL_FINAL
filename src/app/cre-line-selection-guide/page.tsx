@@ -312,7 +312,7 @@ export default function CreLineSelectionGuidePage() {
               marginBottom: '20px'
             }}>
               <IconTarget size={14} color="#00d4d4" />
-              <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
+              <span style={{ color: '#ffffff', fontSize: '.85rem', fontWeight: 500 }}>{heroData.badge}</span>
             </div>
             <h1 className="hero-animate" style={{
               fontFamily: 'Poppins, sans-serif',

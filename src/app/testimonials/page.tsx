@@ -51,7 +51,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
           — {formatAuthorWithCredentials(testimonial)}
         </p>
         <p 
-          className="text-gray-600"
+          className="text-gray-700"
           style={{ fontSize: '0.85rem' }}
         >
           {testimonial.affiliation}
@@ -97,7 +97,7 @@ export default function TestimonialsPage() {
             </h1>
             <p 
               className="max-w-3xl mx-auto"
-              style={{ fontSize: '1.1rem', lineHeight: '1.7', color: 'rgba(255,255,255,0.9)' }}
+              style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#ffffff' }}
             >
               For over 26 years, ingenious targeting laboratory has partnered with researchers 
               at leading academic institutions, pharmaceutical companies, and biotechnology 
@@ -105,12 +105,12 @@ export default function TestimonialsPage() {
             </p>
             <div 
               className="mt-8 flex flex-wrap justify-center gap-8"
-              style={{ fontSize: '0.95rem', color: '#00d4d4', fontWeight: 500 }}
+              style={{ fontSize: '0.95rem', color: '#ffffff', fontWeight: 500 }}
             >
               <span>2,500+ Projects Completed</span>
-              <span style={{ color: 'rgba(255,255,255,0.5)' }}>•</span>
+              <span style={{ color: 'rgba(255,255,255,0.9)' }}>•</span>
               <span>800+ Publications</span>
-              <span style={{ color: 'rgba(255,255,255,0.5)' }}>•</span>
+              <span style={{ color: 'rgba(255,255,255,0.9)' }}>•</span>
               <span>Global Research Community</span>
             </div>
           </div>
@@ -147,7 +147,8 @@ export default function TestimonialsPage() {
               Client Testimonials
             </h2>
             <p 
-              className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+              className="text-center mb-12 max-w-2xl mx-auto"
+              style={{ color: '#4a4a4a' }}
             >
               Read what researchers from around the world have shared about their 
               experience partnering with ingenious targeting laboratory.

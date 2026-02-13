@@ -647,7 +647,7 @@ export default function KnockinMouseModelsPage() {
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
-                    <p style={{ color: '#00d4d4', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>
+                    <p style={{ color: '#ffffff', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>
                       — {testimonial.name}
                     </p>
                     <p style={{ color: '#666', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>

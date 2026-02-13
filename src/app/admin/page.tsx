@@ -507,7 +507,7 @@ export default function AdminDashboardPage() {
                   <span className={`w-2 h-2 rounded-full ${pixel.configured ? 'bg-green-500' : 'bg-gray-300'}`} />
                   <span className="text-xs font-medium text-gray-700">{pixel.name}</span>
                 </div>
-                <p className={`text-xs ${pixel.configured ? 'text-green-600' : 'text-gray-400'}`}>
+                <p className={`text-xs ${pixel.configured ? 'text-green-600' : 'text-gray-600'}`}>
                   {pixel.configured ? 'Active' : 'Not configured'}
                 </p>
               </div>

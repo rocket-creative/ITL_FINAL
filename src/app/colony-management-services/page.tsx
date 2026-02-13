@@ -245,8 +245,8 @@ export default function ColonyManagementServicesPage() {
                     href="/request-quote"
                     className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{
-                      backgroundColor: 'white',
-                      color: '#0a253c',
+                      backgroundColor: '#008080',
+                      color: 'white',
                       padding: '10px 20px',
                       minWidth: '160px',
                       fontSize: '.85rem',
