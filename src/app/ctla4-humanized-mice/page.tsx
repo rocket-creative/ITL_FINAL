@@ -266,7 +266,7 @@ export default function CTLA4HumanizedMicePage() {
               CTLA4 humanized mice are generated on the C57BL/6 background, providing compatibility with established syngeneic tumor models for checkpoint inhibitor efficacy studies.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {tumorLines.map((tumor, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '20px', borderRadius: '8px', textAlign: 'center' }}>
                   <h4 style={{ color: '#008080', fontSize: '1rem', fontWeight: 600, marginBottom: '5px' }}>{tumor.name}</h4>
@@ -317,14 +317,14 @@ export default function CTLA4HumanizedMicePage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Ready to discuss humanized mice for your immunotherapy research? Our scientific team provides complimentary consultation to help you select the optimal checkpoint model design.
             </p>
-            <div className="animate-in flex flex-wrap justify-center gap-4">
+            <div className="animate-in flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <Link
                 href="/request-quote"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
                   backgroundColor: '#008080',
                   color: 'white',
-                  padding: '12px 30px',
+                  padding: '12px 24px',
                   fontSize: '.9rem',
                   fontWeight: 500
                 }}
@@ -338,7 +338,7 @@ export default function CTLA4HumanizedMicePage() {
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
-                  padding: '12px 30px',
+                  padding: '12px 24px',
                   border: '2px solid white',
                   fontSize: '.9rem',
                   fontWeight: 500

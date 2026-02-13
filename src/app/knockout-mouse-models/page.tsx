@@ -316,14 +316,14 @@ export default function KnockoutMouseModelsPage() {
             >
               {heroData.description}
             </p>
-            <div className="hero-animate flex flex-wrap gap-4">
+            <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Link
                 href="/request-quote"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
                   backgroundColor: 'white',
                   color: '#0a253c',
-                  padding: '10px 20px',
+                  padding: '10px 16px',
                   minWidth: '160px',
                   fontSize: '.85rem',
                   fontWeight: 500,
@@ -338,7 +338,7 @@ export default function KnockoutMouseModelsPage() {
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
-                  padding: '10px 20px',
+                  padding: '10px 16px',
                   minWidth: '160px',
                   border: '2px solid white',
                   fontSize: '.85rem',
@@ -439,7 +439,7 @@ export default function KnockoutMouseModelsPage() {
                     style={{
                       backgroundColor: '#008080',
                       color: 'white',
-                      padding: '10px 20px',
+                      padding: '10px 16px',
                       fontSize: '.85rem',
                       fontWeight: 500,
                       alignSelf: 'flex-start',
@@ -491,7 +491,7 @@ export default function KnockoutMouseModelsPage() {
                 style={{
                   backgroundColor: '#134978',
                   color: 'white',
-                  padding: '10px 20px',
+                  padding: '10px 16px',
                   minWidth: '160px',
                   fontSize: '.85rem',
                   fontWeight: 500,
@@ -625,7 +625,7 @@ export default function KnockoutMouseModelsPage() {
                 style={{
                   backgroundColor: '#134978',
                   color: 'white',
-                  padding: '10px 20px',
+                  padding: '10px 16px',
                   minWidth: '160px',
                   fontSize: '.85rem',
                   fontWeight: 500,

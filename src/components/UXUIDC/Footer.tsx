@@ -118,7 +118,7 @@ export function UXUIDCFooter() {
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Main Footer */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 lg:gap-8 mb-8">
           {/* Logo & Contact */}
           <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">

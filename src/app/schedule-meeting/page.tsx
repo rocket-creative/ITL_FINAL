@@ -340,7 +340,7 @@ export default function ScheduleMeetingPage() {
                 >
                   Quick Links
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-3">
                   <Link
                     href="/request-quote"
                     style={{
@@ -403,7 +403,7 @@ export default function ScheduleMeetingPage() {
                   textAlign: 'center',
                 }}
               >
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <p style={{ color: 'white', fontSize: '2rem', fontFamily: 'Poppins, sans-serif', fontWeight: 700, margin: '0 0 8px 0' }}>
                       26+

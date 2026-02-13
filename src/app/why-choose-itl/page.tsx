@@ -231,7 +231,7 @@ export default function WhyChooseItlPage() {
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
@@ -543,7 +543,7 @@ export default function WhyChooseItlPage() {
             }}>
               Start your next mouse model project with a team you can trust.
             </p>
-            <div className="animate-in flex flex-wrap justify-center gap-4">
+            <div className="animate-in flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <Link 
                 href="/request-quote"
                 style={{

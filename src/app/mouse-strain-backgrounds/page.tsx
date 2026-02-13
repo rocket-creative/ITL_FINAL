@@ -191,7 +191,7 @@ export default function MouseStrainBackgroundsPage() {
         {/* Stats Bar */}
         <section style={{ backgroundColor: BRAND.white, padding: '40px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {statsData.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div style={{ color: BRAND.teal, fontFamily: 'Poppins, sans-serif', fontSize: '2.5rem', fontWeight: 700 }}>

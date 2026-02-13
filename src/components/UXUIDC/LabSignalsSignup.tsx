@@ -121,20 +121,16 @@ export default function LabSignalsSignup({
   
   if (variant === 'sidebar') {
     return (
-      <div style={{
+      <div       style={{
         background: '#ffffff',
         borderRadius: '0',
         padding: '20px',
         margin: '0',
         border: '4px solid #fb0',
-        display: 'grid',
-        gridTemplateColumns: 'auto 1fr auto',
-        gap: '16px',
-        alignItems: 'end',
         transition: 'box-shadow 0.3s ease',
         cursor: 'pointer'
       }}
-      className="hover:shadow-lg"
+      className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-4 items-end hover:shadow-lg"
       onMouseEnter={(e) => {
         e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
       }}
@@ -193,11 +189,9 @@ export default function LabSignalsSignup({
       onMouseLeave={(e) => {
         e.currentTarget.style.boxShadow = 'none';
       }}>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'auto 1fr auto', 
-          gap: '20px', 
-          alignItems: 'end',
+        <div 
+          className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-5 items-end"
+          style={{ 
           marginBottom: showArticles && relatedArticles.length > 0 ? '16px' : '0'
         }}>
           <div style={{ width: 'auto', height: '100px', maxHeight: '100px' }}>
@@ -290,11 +284,9 @@ export default function LabSignalsSignup({
       onMouseLeave={(e) => {
         e.currentTarget.style.boxShadow = 'none';
       }}>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'auto 1fr auto', 
-          gap: '20px', 
-          alignItems: 'end',
+        <div 
+          className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-5 items-end"
+          style={{ 
           marginBottom: '20px'
         }}>
           <div style={{ width: 'auto', height: '110px', maxHeight: '110px' }}>
@@ -393,12 +385,7 @@ export default function LabSignalsSignup({
     onMouseLeave={(e) => {
       e.currentTarget.style.boxShadow = 'none';
     }}>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'auto 1fr auto',
-        gap: '32px',
-        alignItems: 'end'
-      }} className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto]">
+      <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-8 items-end">
         <div style={{ width: 'auto', height: '125px', maxHeight: '125px' }}>
           <Image 
             src="/images/lab-signals-logo.svg" 

@@ -28,17 +28,17 @@ export default function UXUIDCStartProjectCTA({
 }: StartProjectCTAProps = {}) {
   return (
     <section
-      className="flex flex-col justify-center items-center"
-      style={{ backgroundColor: '#0a253c', padding: '70px 20px' }}
+      className="flex flex-col justify-center items-center py-12 sm:py-16 lg:py-20 px-5"
+      style={{ backgroundColor: '#0a253c' }}
     >
       {/* Content */}
       <div className="text-center" style={{ maxWidth: '650px' }}>
         <h2
+          className="text-2xl sm:text-3xl lg:text-4xl"
           style={{
             color: 'white',
             letterSpacing: '-.5px',
             fontFamily: 'Poppins, sans-serif',
-            fontSize: '2rem',
             fontWeight: 700,
             lineHeight: 1.2,
             marginBottom: '15px',
@@ -60,7 +60,7 @@ export default function UXUIDCStartProjectCTA({
           {content}
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center">
           {buttons.map((btn, i) => (
             <Link
               key={i}

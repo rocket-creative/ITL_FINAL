@@ -25,10 +25,9 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
 
   return (
     <section
-      className="animate-initial animate-fade-in-up"
+      className="animate-initial animate-fade-in-up py-8 sm:py-12 lg:py-16 px-5"
       style={{
         background: bgStyles[variant],
-        padding: '50px 20px',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -60,15 +59,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
       />
 
       <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '40px',
-            alignItems: 'center',
-          }}
-          className="lg:grid-cols-2 grid-cols-1"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
           {/* Left: Content */}
           <div>
             {/* New for 2026 Badge */}
@@ -98,10 +89,10 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
             </div>
 
             <h2
+              className="text-2xl sm:text-3xl"
               style={{
                 color: textColor,
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '1.8rem',
                 fontWeight: 700,
                 lineHeight: 1.2,
                 marginBottom: '14px',
@@ -161,14 +152,11 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
             </div>
 
             {/* CTA Buttons */}
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 flex-wrap">
               <Link
                 href="/breeding-scheme-architect"
-                className="group"
+                className="group inline-flex items-center gap-2"
                 style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
                   background: 'linear-gradient(135deg, #ffb800 0%, #ff8c00 100%)',
                   color: '#ffffff',
                   padding: '12px 24px',
@@ -187,10 +175,8 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
               </Link>
               <Link
                 href="/schedule-meeting"
+                className="inline-flex items-center gap-2"
                 style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
                   background: 'transparent',
                   color: textColor,
                   padding: '12px 24px',

@@ -266,7 +266,7 @@ export default function OrderInquiryCatalogModelsPage() {
                   marginBottom: '25px',
                 }}
               >
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     { num: '10,000+', label: 'Models' },
                     { num: '25+', label: 'Years' },
@@ -398,7 +398,7 @@ export default function OrderInquiryCatalogModelsPage() {
             Popular Model Categories
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { label: 'Humanized Checkpoint', href: '/humanized-immune-checkpoint-mice', icon: IconUsers },
               { label: 'Disease Models', href: '/disease-model-catalog', icon: IconClipboard },

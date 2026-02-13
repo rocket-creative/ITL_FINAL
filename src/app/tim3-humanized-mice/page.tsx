@@ -773,14 +773,14 @@ export default function TIM3HumanizedMicePage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Ready to discuss TIM3 humanization for your immuno oncology research? Our scientific team provides complimentary consultation to design the optimal model for your program.
             </p>
-            <div className="animate-in flex flex-wrap justify-center gap-4">
+            <div className="animate-in flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <Link
                 href="/request-quote"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
                   backgroundColor: '#008080',
                   color: 'white',
-                  padding: '12px 30px',
+                  padding: '12px 24px',
                   fontSize: '.9rem',
                   fontWeight: 500
                 }}
@@ -794,7 +794,7 @@ export default function TIM3HumanizedMicePage() {
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
-                  padding: '12px 30px',
+                  padding: '12px 24px',
                   border: '2px solid white',
                   fontSize: '.9rem',
                   fontWeight: 500

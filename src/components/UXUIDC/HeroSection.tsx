@@ -25,24 +25,22 @@ export default function UXUIDCHeroSection({
 }: HeroSectionProps) {
   return (
     <section 
-      className="relative overflow-hidden"
+      className="relative overflow-hidden min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]"
       style={{
         backgroundImage: 'url(/images/mouse-hero-blue.jpg)',
         backgroundPosition: '0 0',
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        minHeight: '600px'
+        backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Content - 50% width, left side */}
-      <div className="w-1/2 p-5">
+      {/* Content - full width on mobile, 50% on desktop */}
+      <div className="w-full lg:w-1/2 p-4 sm:p-6 lg:p-8">
         <h1 
-          className="animate-initial animate-fade-in-up animate-delay-300"
+          className="animate-initial animate-fade-in-up animate-delay-300 text-3xl sm:text-4xl lg:text-5xl"
           style={{ 
             color: '#666',
             letterSpacing: '-3px',
             fontFamily: 'Poppins, sans-serif',
-            fontSize: '3rem',
             fontWeight: 400,
             lineHeight: 1,
             marginTop: 0,
@@ -87,15 +85,15 @@ export default function UXUIDCHeroSection({
           </div>
         )}
         
-        {/* CTA Buttons wrapper - horizontal flex with gap */}
-        <div className="flex flex-row gap-5">
+        {/* CTA Buttons wrapper - stack on mobile, horizontal on desktop */}
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">
           {primaryCta && (
             <Link
               href={primaryCta.href}
-              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-initial animate-fade-in-up animate-delay-500"
+              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-initial animate-fade-in-up animate-delay-500 px-6 sm:px-10"
               style={{ 
                 backgroundColor: 'teal',
-                padding: '10px 40px',
+                padding: '10px 24px',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
                 fontWeight: 400,
                 marginTop: 'auto',
@@ -110,10 +108,10 @@ export default function UXUIDCHeroSection({
           {secondaryCta && (
             <Link
               href={secondaryCta.href}
-              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-initial animate-fade-in-up animate-delay-600"
+              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-initial animate-fade-in-up animate-delay-600 px-6 sm:px-10"
               style={{ 
                 backgroundColor: '#134978',
-                padding: '10px 40px',
+                padding: '10px 24px',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
                 fontWeight: 400,
                 marginTop: 'auto',

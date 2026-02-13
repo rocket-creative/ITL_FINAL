@@ -238,7 +238,7 @@ export default function AdminDashboardPage() {
         </div>
 
         {/* Overview Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
           <StatCard
             label="Total Users"
             value={data?.overview.totalUsers ?? 0}
@@ -289,7 +289,7 @@ export default function AdminDashboardPage() {
               </svg>
               Conversions
             </h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-green-50 rounded-lg p-4">
                 <p className="text-sm text-gray-600">Quote Requests</p>
                 <p className="text-2xl font-bold text-green-600">
@@ -325,7 +325,7 @@ export default function AdminDashboardPage() {
               </svg>
               Google Ads Performance
             </h2>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center p-3 bg-gray-50 rounded-lg">
                 <p className="text-xs text-gray-500">Clicks</p>
                 <p className="text-xl font-bold text-[#002B5C]">
@@ -497,7 +497,7 @@ export default function AdminDashboardPage() {
             )}
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {pixelsData?.pixels && Object.entries(pixelsData.pixels).map(([key, pixel]) => (
               <div 
                 key={key}

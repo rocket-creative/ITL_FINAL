@@ -310,14 +310,14 @@ export default function ConditionalKnockoutMouseModelsPage() {
               {heroData.description}
             </p>
             
-            <div className="hero-animate flex flex-wrap gap-4">
+            <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Link 
                 href="/request-quote"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
                   backgroundColor: 'white',
                   color: '#0a253c',
-                  padding: '10px 20px',
+                  padding: '10px 16px',
                   minWidth: '160px',
                   fontSize: '.85rem',
                   fontWeight: 500
@@ -332,7 +332,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
-                  padding: '10px 20px',
+                  padding: '10px 16px',
                   minWidth: '160px',
                   border: '2px solid white',
                   fontSize: '.85rem',
@@ -349,7 +349,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
@@ -833,14 +833,14 @@ export default function ConditionalKnockoutMouseModelsPage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Our scientific consultants are ready to discuss your research requirements and recommend the optimal conditional allele design for your experimental goals. Initial consultation is provided at no charge and includes exon analysis, configuration recommendations, and Cre driver line guidance.
             </p>
-            <div className="animate-in flex flex-wrap justify-center gap-4">
+            <div className="animate-in flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <Link 
                 href="/request-quote"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
                   backgroundColor: '#008080',
                   color: 'white',
-                  padding: '12px 30px',
+                  padding: '12px 24px',
                   fontSize: '.9rem',
                   fontWeight: 500
                 }}
@@ -854,7 +854,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
-                  padding: '12px 30px',
+                  padding: '12px 24px',
                   border: '2px solid white',
                   fontSize: '.9rem',
                   fontWeight: 500

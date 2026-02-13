@@ -25,24 +25,22 @@ export default function HeroSection({ data }: { data: HeroData }) {
 
   return (
     <section
-      className="relative overflow-hidden"
+      className="relative overflow-hidden min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]"
       style={{
         backgroundImage: 'url(/images/mouse-hero-glove.jpg)',
         backgroundPosition: '0 0',
         backgroundSize: 'auto',
-        minHeight: '600px',
       }}
     >
-      <div className="w-1/2 p-5">
+      <div className="w-full lg:w-1/2 p-4 sm:p-6 lg:p-8">
         {/* H1 - MASTER TEXT */}
         <h1
           ref={h1Ref}
-          className="animate-initial animate-fade-in-up animate-delay-300"
+          className="animate-initial animate-fade-in-up animate-delay-300 text-3xl sm:text-4xl lg:text-5xl"
           style={{
             color: '#4a4a4a',
             letterSpacing: '-3px',
             fontFamily: 'Poppins, sans-serif',
-            fontSize: '3rem',
             fontWeight: 400,
             lineHeight: 1,
             marginTop: 0,
@@ -88,13 +86,13 @@ export default function HeroSection({ data }: { data: HeroData }) {
           </p>
 
           {/* CTA Buttons */}
-          <div ref={ctasRef} className="flex flex-row gap-5 animate-initial animate-fade-in-up animate-delay-500">
+          <div ref={ctasRef} className="flex flex-col sm:flex-row gap-3 sm:gap-5 animate-initial animate-fade-in-up animate-delay-500">
             <Link
               href={data.cta1.href}
-              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl px-6 sm:px-10"
               style={{
                 backgroundColor: 'teal',
-                padding: '10px 40px',
+                padding: '10px 24px',
                 fontFamily: 'var(--system-ui)',
                 fontWeight: 400,
               }}
@@ -104,10 +102,10 @@ export default function HeroSection({ data }: { data: HeroData }) {
             </Link>
             <Link
               href={data.cta2.href}
-              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl px-6 sm:px-10"
               style={{
                 backgroundColor: '#134978',
-                padding: '10px 40px',
+                padding: '10px 24px',
                 fontFamily: 'var(--system-ui)',
                 fontWeight: 400,
               }}

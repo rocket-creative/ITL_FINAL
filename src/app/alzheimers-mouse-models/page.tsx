@@ -279,14 +279,14 @@ export default function AlzheimersMouseModelsPage() {
               {heroData.description}
             </p>
 
-            <div className="hero-animate flex flex-wrap gap-4">
+            <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Link
                 href="/request-quote"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg px-4 sm:px-5"
                 style={{
                   backgroundColor: 'white',
                   color: '#0a253c',
-                  padding: '10px 20px',
+                  padding: '10px 16px',
                   minWidth: '160px',
                   fontSize: '.85rem',
                   fontWeight: 500
@@ -297,11 +297,11 @@ export default function AlzheimersMouseModelsPage() {
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md px-4 sm:px-5"
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
-                  padding: '10px 20px',
+                  padding: '10px 16px',
                   minWidth: '160px',
                   border: '2px solid white',
                   fontSize: '.85rem',
@@ -318,7 +318,7 @@ export default function AlzheimersMouseModelsPage() {
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {statsData.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}>
@@ -420,7 +420,7 @@ export default function AlzheimersMouseModelsPage() {
               <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '20px' }}>
                 APP knockin models express familial AD mutations from the endogenous App locus, providing physiological expression levels and normal regulatory control. APP knockin models develop amyloid pathology progressively, better modeling the age dependent nature of AD compared to high expressing transgenic approaches.
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {appKnockinAdvantages.map((advantage, index) => (
                   <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <IconCheckCircle size={14} color="#008080" style={{ flexShrink: 0 }} />
@@ -730,14 +730,14 @@ export default function AlzheimersMouseModelsPage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Our scientific consultants are ready to discuss your Alzheimer disease research requirements and recommend the optimal model design for your program. Initial consultation is provided at no charge and includes target analysis, model strategy recommendations, and timeline estimates.
             </p>
-            <div className="animate-in flex flex-wrap justify-center gap-4">
+            <div className="animate-in flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <Link
                 href="/request-quote"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
                   backgroundColor: '#008080',
                   color: 'white',
-                  padding: '12px 30px',
+                  padding: '12px 24px',
                   fontSize: '.9rem',
                   fontWeight: 500
                 }}
@@ -751,7 +751,7 @@ export default function AlzheimersMouseModelsPage() {
                 style={{
                   backgroundColor: 'transparent',
                   color: 'white',
-                  padding: '12px 30px',
+                  padding: '12px 24px',
                   border: '2px solid white',
                   fontSize: '.9rem',
                   fontWeight: 500
