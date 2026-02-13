@@ -340,7 +340,7 @@ export default function AccessibilityPage() {
                 marginBottom: '32px',
                 opacity: 0.95
               }}>
-                Email: <a href="mailto:inquiry@genetargeting.com" style={{ color: BRAND.white, fontWeight: 600 }}>inquiry@genetargeting.com</a><br />
+                Email: <a href="/contact" style={{ color: BRAND.white, fontWeight: 600 }}>inquiry@genetargeting.com</a><br />
                 Phone: <a href="tel:+16314688534" style={{ color: BRAND.white, fontWeight: 600 }}>(631) 468-8534</a>
               </p>
               <p style={{ 

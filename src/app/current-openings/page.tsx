@@ -138,7 +138,7 @@ export default function CurrentOpeningsPage() {
               </p>
               
               <a
-                href="mailto:inquiry@genetargeting.com?subject=Career Inquiry"
+                href="/contact?subject=Career"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -307,7 +307,7 @@ export default function CurrentOpeningsPage() {
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
               <a
-                href="mailto:inquiry@genetargeting.com?subject=Career Inquiry"
+                href="/contact?subject=Career"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',

@@ -150,24 +150,9 @@ export default function ScheduleMeetingPage() {
                 }}
               >
                 <p style={{ color: 'white', fontSize: '.9rem', marginBottom: '12px', fontWeight: 600 }}>
-                  Prefer to contact us directly?
+                  Questions? Call us directly:
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <a 
-                    href="mailto:inquiry@genetargeting.com"
-                    style={{
-                      color: '#ffffff',
-                      fontSize: '.95rem',
-                      textDecoration: 'none',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                      fontWeight: 500,
-                    }}
-                  >
-                    <IconMail size={18} color="#00d4d4" />
-                    <span>inquiry@genetargeting.com</span>
-                  </a>
                   <a 
                     href="tel:+16314688534"
                     style={{
@@ -288,7 +273,7 @@ export default function ScheduleMeetingPage() {
                 </h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   <a 
-                    href={`mailto:${contactInfo.email}`}
+                    href="/contact"
                     style={{
                       display: 'flex',
                       alignItems: 'center',

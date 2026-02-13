@@ -250,7 +250,7 @@ export default function OrderInquiryCatalogModelsPage() {
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     <a 
-                      href="mailto:inquiry@genetargeting.com"
+                      href="/request-quote"
                       style={{
                         color: '#ffffff',
                         fontSize: '.95rem',

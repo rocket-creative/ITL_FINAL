@@ -137,7 +137,7 @@ export function UXUIDCFooter() {
                 <a href="tel:+16314688534" style={{ textDecoration: 'none' }} className="hover:underline">(631) 468-8534</a>
               </p>
               <p style={{ margin: 0 }}>
-                <a href="mailto:inquiry@genetargeting.com" style={{ textDecoration: 'none' }} className="hover:underline">inquiry@genetargeting.com</a>
+                <a href="/contact" style={{ textDecoration: 'none' }} className="hover:underline">inquiry@genetargeting.com</a>
               </p>
             </div>
           </div>

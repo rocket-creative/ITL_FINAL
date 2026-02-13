@@ -80,24 +80,9 @@ export default function ContactPage() {
                   marginBottom: '30px',
                 }}>
                   <p style={{ color: 'white', fontSize: '.9rem', marginBottom: '12px', fontWeight: 600 }}>
-                    Prefer to contact us directly?
+                    Questions? Call us directly:
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                    <a 
-                      href={`mailto:${contactInfo.email}`}
-                      style={{
-                        color: '#ffffff',
-                        fontSize: '.95rem',
-                        textDecoration: 'none',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '10px',
-                        fontWeight: 500,
-                      }}
-                    >
-                      <IconMail size={18} color="#00d4d4" />
-                      <span>{contactInfo.email}</span>
-                    </a>
                     <a 
                       href={`tel:${contactInfo.phone.replace(/[^\d+]/g, '')}`}
                       style={{
@@ -349,7 +334,7 @@ export default function ContactPage() {
 
               {/* Card 4: Partnership Inquiries */}
               <a
-                href={`mailto:${contactInfo.email}?subject=Partnership Inquiry`}
+                href="/contact?subject=Partnership"
                 className="animate-initial animate-fade-in-up animate-delay-700 group"
                 style={{
                   backgroundColor: 'white',
@@ -437,7 +422,7 @@ export default function ContactPage() {
                       <IconMail size={18} color="#008080" style={{ marginTop: '2px', flexShrink: 0 }} />
                       <div>
                         <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>Email</p>
-                        <a href={`mailto:${contactInfo.email}`} style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'var(--system-ui)', textDecoration: 'none' }}>
+                        <a href="/contact" style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'var(--system-ui)', textDecoration: 'none' }}>
                           {contactInfo.email}
                         </a>
                       </div>
