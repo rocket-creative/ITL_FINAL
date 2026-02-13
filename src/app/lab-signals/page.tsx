@@ -69,198 +69,185 @@ export default function LabSignalsPage() {
         borderTop: 'none',
       }}>
         
-        {/* Hero Section - Header Image with Overlay Content */}
-        <section style={{ position: 'relative' }}>
-        {/* Back to Ingenious - floating top right */}
-        <Link
-          href="/"
-          style={{
-            position: 'absolute',
-            top: '20px',
-            right: '20px',
-            zIndex: 10,
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
+        {/* Hero Section - Header Image with Content Below on Mobile */}
+        <section>
+          {/* Back to Ingenious - top bar */}
+          <div style={{ 
+            display: 'flex', 
+            justifyContent: 'flex-end', 
+            padding: '12px 16px',
             backgroundColor: BRAND.white,
-            color: BRAND.black,
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: '1rem',
-            fontWeight: 600,
-            textDecoration: 'none',
-            padding: '12px 24px',
-            borderRadius: '8px',
-            border: `2px solid ${BRAND.black}`,
-            transition: 'all 0.2s ease',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = BRAND.black;
-            e.currentTarget.style.color = BRAND.white;
-            e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = BRAND.white;
-            e.currentTarget.style.color = BRAND.black;
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
-          }}
-        >
-          ← Back to Ingenious
-        </Link>
-
-        {/* Header Image */}
-        <Image
-          src="/images/lab-signals-header.png"
-          alt="Lab Signals"
-          width={1200}
-          height={500}
-          style={{ 
-            width: '100%', 
-            height: 'auto',
-            display: 'block',
-          }}
-          priority
-        />
-
-        {/* Floating Content - Right Justified with Glass Box */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          bottom: 0,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'flex-end',
-          padding: '40px',
-        }}>
-          <div style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.15)',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            borderRadius: '12px',
-            padding: '32px',
-            maxWidth: '480px',
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
           }}>
-            <div className="animate-initial animate-fade-in-up" style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              backgroundColor: BRAND.gold,
-              padding: '6px 16px',
-              borderRadius: '20px',
-              marginBottom: '16px',
-            }}>
-              <IconMail size={14} color={BRAND.black} />
-              <span style={{ 
-                color: BRAND.black, 
+            <Link
+              href="/"
+              className="hover:bg-black hover:text-white transition-all duration-200"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: BRAND.white,
+                color: BRAND.black,
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '.7rem', 
-                fontWeight: 700, 
-                letterSpacing: '0.5px',
-                textTransform: 'uppercase',
+                fontSize: '.9rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                padding: '10px 20px',
+                borderRadius: '6px',
+                border: `2px solid ${BRAND.black}`,
+              }}
+            >
+              ← Back to Ingenious
+            </Link>
+          </div>
+
+          {/* Header Image */}
+          <Image
+            src="/images/lab-signals-header.png"
+            alt="Lab Signals"
+            width={1200}
+            height={500}
+            style={{ 
+              width: '100%', 
+              height: 'auto',
+              display: 'block',
+            }}
+            priority
+          />
+
+          {/* Hero Content - Below image on mobile, overlay on desktop */}
+          <div 
+            className="relative md:absolute md:top-0 md:right-0 md:bottom-0"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: '24px 20px',
+              backgroundColor: BRAND.lightGray,
+            }}
+          >
+            {/* Desktop: position absolute with glass effect */}
+            <div 
+              className="md:mr-8 md:bg-white/90 md:backdrop-blur-md md:rounded-xl md:shadow-lg"
+              style={{
+                padding: '24px',
+                maxWidth: '480px',
+                width: '100%',
+              }}
+            >
+              <div className="animate-initial animate-fade-in-up" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: BRAND.gold,
+                padding: '6px 16px',
+                borderRadius: '20px',
+                marginBottom: '16px',
               }}>
-                Biweekly Newsletter
-              </span>
-            </div>
-            <h1 className="animate-initial animate-fade-in-up" style={{
-              color: BRAND.black,
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
-              fontWeight: 700,
-              lineHeight: 1.1,
-              marginBottom: '12px',
-            }}>
-              Lab Signals
-            </h1>
-            <p className="animate-initial animate-fade-in-up" style={{
-              color: BRAND.black,
-              fontFamily: 'Lato, sans-serif',
-              fontSize: 'clamp(.9rem, 2vw, 1.05rem)',
-              lineHeight: 1.5,
-              marginBottom: '24px',
-            }}>
-              Your Biweekly Source for Life Science Research Insights
-            </p>
-            <div className="animate-initial animate-fade-in-up" style={{ 
-              display: 'flex', 
-              gap: '10px', 
-              flexWrap: 'wrap',
-              width: '100%',
-            }}>
-              <a
-                href="#signup"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: BRAND.gold,
-                  color: BRAND.black,
-                  padding: '12px 24px',
-                  borderRadius: '6px',
+                <IconMail size={14} color={BRAND.black} />
+                <span style={{ 
+                  color: BRAND.black, 
                   fontFamily: 'Poppins, sans-serif',
-                  fontSize: '.85rem',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                  flex: '1 1 auto',
-                  minWidth: '140px',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(255,187,0,0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                Subscribe Free
-              </a>
-              <a
-                href="/api/rss/lab-signals"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '6px',
-                  backgroundColor: 'rgba(255,255,255,0.3)',
-                  backdropFilter: 'blur(4px)',
-                  WebkitBackdropFilter: 'blur(4px)',
-                  color: BRAND.black,
-                  padding: '12px 20px',
-                  borderRadius: '6px',
-                  fontFamily: 'Poppins, sans-serif',
-                  fontSize: '.85rem',
-                  fontWeight: 500,
-                  textDecoration: 'none',
-                  border: '1px solid rgba(0, 0, 0, 0.1)',
-                  transition: 'background-color 0.2s ease',
-                  flex: '0 1 auto',
-                  minWidth: '100px',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.5)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.3)';
-                }}
-              >
-                <RSSIcon color={BRAND.black} /> RSS
-              </a>
+                  fontSize: '.7rem', 
+                  fontWeight: 700, 
+                  letterSpacing: '0.5px',
+                  textTransform: 'uppercase',
+                }}>
+                  Biweekly Newsletter
+                </span>
+              </div>
+              <h1 className="animate-initial animate-fade-in-up" style={{
+                color: BRAND.black,
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+                fontWeight: 700,
+                lineHeight: 1.1,
+                marginBottom: '12px',
+              }}>
+                Lab Signals
+              </h1>
+              <p className="animate-initial animate-fade-in-up" style={{
+                color: BRAND.darkGray,
+                fontFamily: 'Lato, sans-serif',
+                fontSize: 'clamp(.9rem, 2vw, 1.05rem)',
+                lineHeight: 1.5,
+                marginBottom: '24px',
+              }}>
+                Your Biweekly Source for Life Science Research Insights
+              </p>
+              <div className="animate-initial animate-fade-in-up" style={{ 
+                display: 'flex', 
+                gap: '10px', 
+                flexWrap: 'wrap',
+                width: '100%',
+              }}>
+                <a
+                  href="#signup"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: BRAND.gold,
+                    color: BRAND.black,
+                    padding: '12px 24px',
+                    borderRadius: '6px',
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '.85rem',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                    flex: '1 1 auto',
+                    minWidth: '140px',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(255,187,0,0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  Subscribe Free
+                </a>
+                <a
+                  href="/api/rss/lab-signals"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '6px',
+                    backgroundColor: BRAND.white,
+                    color: BRAND.black,
+                    padding: '12px 20px',
+                    borderRadius: '6px',
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '.85rem',
+                    fontWeight: 500,
+                    textDecoration: 'none',
+                    border: `1px solid ${BRAND.borderGray}`,
+                    transition: 'background-color 0.2s ease',
+                    flex: '0 1 auto',
+                    minWidth: '100px',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = BRAND.lightGray;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = BRAND.white;
+                  }}
+                >
+                  <RSSIcon color={BRAND.black} /> RSS
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Section: Synopsis - Get Excited */}
-        <section style={{ backgroundColor: BRAND.black, padding: '50px 20px' }}>
+        <section style={{ backgroundColor: BRAND.white, padding: '50px 20px' }}>
           <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{
               color: BRAND.gold,
@@ -273,7 +260,7 @@ export default function LabSignalsPage() {
               Cutting-Edge Research. Practical Insights. Biweekly.
             </h2>
             <p style={{
-              color: BRAND.white,
+              color: BRAND.darkGray,
               fontFamily: 'Lato, sans-serif',
               fontSize: '1.1rem',
               lineHeight: 1.8,
@@ -319,7 +306,7 @@ export default function LabSignalsPage() {
         </section>
 
         {/* Section: Video */}
-        <section style={{ backgroundColor: BRAND.white, padding: '40px 20px', borderRadius: '0' }}>
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px' }}>
           <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{
             borderRadius: '8px',
@@ -344,7 +331,7 @@ export default function LabSignalsPage() {
         </section>
 
         {/* Section: Signup */}
-        <section id="signup" style={{ backgroundColor: BRAND.lightGray, padding: '35px 20px 40px' }}>
+        <section id="signup" style={{ backgroundColor: BRAND.white, padding: '35px 20px 40px' }}>
           <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{
               color: BRAND.black,
@@ -369,7 +356,7 @@ export default function LabSignalsPage() {
         </section>
 
         {/* Section: Why Subscribe */}
-        <section style={{ backgroundColor: BRAND.white, padding: '40px 20px', borderRadius: '0' }}>
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px' }}>
           <div>
             <h2 className="animate-initial animate-fade-in-up" style={{
               color: BRAND.black,
@@ -446,7 +433,7 @@ export default function LabSignalsPage() {
         </section>
 
         {/* Section: All Articles */}
-        <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px' }}>
+        <section style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>
           <div>
           <div className="animate-initial animate-fade-in-up" style={{ 
             display: 'flex', 
