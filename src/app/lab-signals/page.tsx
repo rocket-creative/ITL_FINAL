@@ -242,28 +242,23 @@ export default function LabSignalsPage() {
         <section style={{ backgroundColor: BRAND.white, padding: '40px 20px', borderRadius: '0' }}>
           <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{
-            position: 'relative',
-            paddingBottom: '56.25%',
-            height: 0,
             borderRadius: '8px',
             overflow: 'hidden',
             boxShadow: '0 8px 30px rgba(0,0,0,0.12)',
           }}>
-            <iframe
+            <video
               style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
                 width: '100%',
-                height: '100%',
-                border: 'none',
+                height: 'auto',
+                display: 'block',
               }}
-              src="https://mediazilla.com/xxexlvtJRB"
-              frameBorder="0"
-              allowFullScreen
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-              title="Lab Signals Video"
-            />
+              controls
+              preload="metadata"
+              poster="/images/lab-signals-header.png"
+            >
+              <source src="/videos/lab-signals-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
         </section>
