@@ -10,8 +10,8 @@ import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
+  HubSpotForm,
 } from '@/components/UXUIDC';
-import HubSpotForm from '@/components/UXUIDC/HubSpotForm';
 import {
   IconPhone,
   IconMail,
@@ -195,9 +195,9 @@ export default function ScheduleMeetingPage() {
                 padding: '32px',
                 boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
               }}>
-                <HubSpotForm
-                  portalId="3977953"
+<HubSpotForm
                   formId="c0c02dc8-960c-4d14-acff-eaa43b8c7b6a"
+                  portalId="3977953"
                   region="na1"
                 />
               </div>

@@ -9,10 +9,7 @@
 import { useEffect, useRef, useState } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch } from '@/components/UXUIDC';
-import HubSpotForm from '@/components/UXUIDC/HubSpotForm';
+import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch, HubSpotForm } from '@/components/UXUIDC';
 import {
   IconCheckCircle,
   IconMessageCircle,
@@ -26,7 +23,6 @@ import {
   IconUsers,
 } from '@/components/UXUIDC/Icons';
 
-gsap.registerPlugin(ScrollTrigger);
 
 // ========== FORM FIELD OPTIONS ==========
 const modelCategoryOptions = [
@@ -134,33 +130,7 @@ const testimonials = [
 export default function OrderInquiryCatalogModelsPage() {
   const [showCatalogSearch, setShowCatalogSearch] = useState(false);
 
-  useEffect(() => {
-    const animateElements = document.querySelectorAll('.animate-in');
-    animateElements.forEach((el) => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 20 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          delay: 0,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 90%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
-    };
-  }, []);
-
-  return (
+    return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       
@@ -400,9 +370,9 @@ export default function OrderInquiryCatalogModelsPage() {
                     </button>
                   </div>
                 )}
-                <HubSpotForm
-                  portalId="3977953"
+<HubSpotForm
                   formId="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
+                  portalId="3977953"
                   region="na1"
                 />
                 <button

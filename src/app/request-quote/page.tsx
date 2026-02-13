@@ -5,14 +5,14 @@
 
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import HubSpotForm from '@/components/UXUIDC/HubSpotForm';
+import HubSpotForm from '@/components/UXUIDC/HubSpotFormSimple';
 import { IconDNA, IconCheckCircle, IconChevronRight, IconMail, IconPhone } from '@/components/UXUIDC/Icons';
 
 // Hero Data
@@ -45,45 +45,7 @@ const relatedLinks: Array<{ title: string; href: string }> = [];
 
 
 export default function RequestQuotePage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-      
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-      
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-    
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       
@@ -147,8 +109,7 @@ export default function RequestQuotePage() {
                     backgroundColor: 'rgba(0, 212, 212, 0.15)',
                     border: '1px solid rgba(0, 212, 212, 0.4)',
                     borderRadius: '10px',
-                    padding: '16px 20px',
-                  }}
+                    padding: '16px 20px'}}
                 >
                   <p style={{ color: 'white', fontSize: '.9rem', marginBottom: '12px', fontWeight: 600 }}>
                     Prefer to contact us directly?
@@ -163,8 +124,7 @@ export default function RequestQuotePage() {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '10px',
-                        fontWeight: 500,
-                      }}
+                        fontWeight: 500}}
                     >
                       <IconMail size={18} color="#00d4d4" />
                       <span>inquiry@genetargeting.com</span>
@@ -178,8 +138,7 @@ export default function RequestQuotePage() {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '10px',
-                        fontWeight: 500,
-                      }}
+                        fontWeight: 500}}
                     >
                       <IconPhone size={18} color="#00d4d4" />
                       <span>(631) 468-8534</span>
@@ -226,13 +185,12 @@ export default function RequestQuotePage() {
                   backgroundColor: 'white',
                   borderRadius: '12px',
                   padding: '32px',
-                  boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
-                }}>
-                  <HubSpotForm
-                    portalId="3977953"
-                    formId="b854ed46-fed3-4b54-9d01-62173106ad8c"
-                    region="na1"
-                  />
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.15)'}}>
+<HubSpotForm
+                  formId="b854ed46-fed3-4b54-9d01-62173106ad8c"
+                  portalId="3977953"
+                  region="na1"
+                />
                 </div>
               </div>
             </div>

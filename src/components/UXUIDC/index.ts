@@ -76,7 +76,7 @@ export {
 
 // Forms
 export { default as FlodeskForm } from './FlodeskForm';
-export { default as HubSpotForm } from './HubSpotForm';
+export { default as HubSpotForm } from './HubSpotFormSimple';
 
 // Newsletter Components
 export { default as NewsletterGate } from './NewsletterGate';

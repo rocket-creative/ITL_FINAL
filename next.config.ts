@@ -18,7 +18,7 @@ const securityHeaders = [
       "frame-src https://*.googletagmanager.com https://*.hubspot.com https://*.hsforms.net https://*.hsforms.com https://*.google.com https://*.recaptcha.net",
       "frame-ancestors 'none'",
       "base-uri 'self'",
-      "form-action 'self' https://api.hsforms.com",
+      "form-action 'self' https://api.hsforms.com https://forms.hsforms.com",
       "upgrade-insecure-requests",
     ].join('; '),
   },
@@ -71,8 +71,8 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['gsap', '@headlessui/react'],
   },
 
-  // Turbopack configuration removed - not supported in Next.js 15.x
-  // This option is only available in Next.js 16+
+  // Next.js 16: Turbopack config (empty to silence warning)
+  turbopack: {},
 
   // Security headers for all routes
   async headers() {
