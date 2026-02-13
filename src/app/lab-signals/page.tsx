@@ -79,14 +79,35 @@ export default function LabSignalsPage() {
             top: '20px',
             right: '20px',
             zIndex: 10,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '8px',
+            backgroundColor: BRAND.white,
             color: BRAND.black,
             fontFamily: 'Poppins, sans-serif',
-            fontSize: '.85rem',
-            fontWeight: 500,
+            fontSize: '1rem',
+            fontWeight: 600,
             textDecoration: 'none',
+            padding: '12px 24px',
+            borderRadius: '8px',
+            border: `2px solid ${BRAND.black}`,
+            transition: 'all 0.2s ease',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = BRAND.black;
+            e.currentTarget.style.color = BRAND.white;
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = BRAND.white;
+            e.currentTarget.style.color = BRAND.black;
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
           }}
         >
-          Back to Ingenious →
+          ← Back to Ingenious
         </Link>
 
         {/* Header Image */}
