@@ -100,23 +100,25 @@ export default function LabSignalsPage() {
             </Link>
           </div>
 
-          {/* Header Image */}
-          <Image
-            src="/images/lab-signals-header.png"
-            alt="Lab Signals"
-            width={1200}
-            height={500}
-            style={{ 
-              width: '100%', 
-              height: 'auto',
-              display: 'block',
-            }}
-            priority
-          />
+          {/* Image + Overlay Container */}
+          <div style={{ position: 'relative' }}>
+            {/* Header Image */}
+            <Image
+              src="/images/lab-signals-header.png"
+              alt="Lab Signals"
+              width={1200}
+              height={500}
+              style={{ 
+                width: '100%', 
+                height: 'auto',
+                display: 'block',
+              }}
+              priority
+            />
 
-          {/* Hero Content - Below image on mobile, overlay on desktop */}
-          <div 
-            className="relative md:absolute md:top-0 md:right-0 md:bottom-0"
+            {/* Hero Content - Below image on mobile, overlay on desktop */}
+            <div 
+              className="relative md:absolute md:top-0 md:right-0 md:bottom-0"
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -243,6 +245,7 @@ export default function LabSignalsPage() {
                 </a>
               </div>
             </div>
+          </div>
           </div>
         </section>
 
