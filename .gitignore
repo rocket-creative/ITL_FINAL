@@ -5,6 +5,11 @@
 .env.local
 .env*.local
 
+# Google service account credentials (NEVER commit!)
+scripts/google-service-account.json
+google-service-account.json
+*-service-account.json
+
 # Archive folder for old/unnecessary files
 archive/
 

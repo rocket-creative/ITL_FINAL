@@ -194,7 +194,7 @@ function BreedingSchemeArchitectContent() {
       <section
         className="animate-initial animate-fade-in-up"
         style={{
-          background: 'linear-gradient(135deg, #134978 0%, #2384da 50%, #008080 100%)',
+          background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',
           padding: '80px 20px 60px',
           position: 'relative',
           overflow: 'hidden',
@@ -348,7 +348,7 @@ function BreedingSchemeArchitectContent() {
           <p
             className="animate-initial animate-fade-in-up"
             style={{
-              color: '#666',
+              color: '#4a4a4a',
               textAlign: 'center',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
@@ -554,7 +554,7 @@ function BreedingSchemeArchitectContent() {
           <p
             className="animate-initial animate-fade-in-up"
             style={{
-              color: '#666',
+              color: '#4a4a4a',
               textAlign: 'center',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
@@ -628,7 +628,7 @@ function BreedingSchemeArchitectContent() {
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
                     fontWeight: 400,
-                    color: '#666',
+                    color: '#4a4a4a',
                     lineHeight: '1.6rem',
                   }}
                 >
@@ -707,7 +707,7 @@ function BreedingSchemeArchitectContent() {
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
                     fontWeight: 400,
-                    color: '#666',
+                    color: '#4a4a4a',
                     lineHeight: '1.6rem',
                   }}
                 >
@@ -757,7 +757,7 @@ function BreedingSchemeArchitectContent() {
           <p
             className="animate-initial animate-fade-in-up"
             style={{
-              color: '#666',
+              color: '#4a4a4a',
               textAlign: 'center',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
@@ -821,7 +821,7 @@ function BreedingSchemeArchitectContent() {
                     fontFamily: 'var(--system-ui)',
                     fontSize: '.9rem',
                     fontWeight: 400,
-                    color: '#666',
+                    color: '#4a4a4a',
                     lineHeight: '1.6rem',
                     flex: 1,
                   }}

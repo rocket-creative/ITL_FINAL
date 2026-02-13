@@ -637,6 +637,30 @@ export default function LabSignalsPage() {
               Join thousands of researchers receiving biweekly insights.
             </p>
             <FlodeskForm />
+            
+            {/* Back to Ingenious Button */}
+            <div style={{ marginTop: '30px', paddingTop: '30px', borderTop: '1px solid rgba(0,0,0,0.15)' }}>
+              <Link
+                href="/"
+                className="hover:bg-black hover:text-white transition-all duration-200"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: BRAND.white,
+                  color: BRAND.black,
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '.9rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  padding: '12px 24px',
+                  borderRadius: '6px',
+                  border: `2px solid ${BRAND.black}`,
+                }}
+              >
+                ← Back to Ingenious
+              </Link>
+            </div>
           </div>
         </section>
 

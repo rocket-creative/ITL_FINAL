@@ -21,7 +21,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
   };
 
   const textColor = variant === 'light' ? '#0a253c' : '#ffffff';
-  const subtextColor = variant === 'light' ? '#666' : 'rgba(255,255,255,0.85)';
+  const subtextColor = variant === 'light' ? '#4a4a4a' : 'rgba(255,255,255,0.85)';
 
   return (
     <section

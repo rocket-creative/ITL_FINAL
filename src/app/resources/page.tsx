@@ -364,7 +364,7 @@ export default function ResourcesPage() {
                   <div style={{ fontSize: '2rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>
                     <UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div style={{ fontSize: '.85rem', color: '#666' }}>{stat.label}</div>
+                  <div style={{ fontSize: '.85rem', color: '#4a4a4a' }}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -373,7 +373,7 @@ export default function ResourcesPage() {
 
         {/* Featured Tool Section - New for 2026 */}
         <section style={{ 
-          background: 'linear-gradient(135deg, #008080 0%, #00a0a0 100%)', 
+          background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)', 
           padding: '60px 20px',
           position: 'relative',
           overflow: 'hidden'
@@ -487,7 +487,7 @@ export default function ResourcesPage() {
               </Link>
               <p style={{
                 fontSize: '.85rem',
-                color: '#666',
+                color: '#4a4a4a',
                 marginTop: '16px'
               }}>
                 Free to use • No account required
@@ -524,7 +524,7 @@ export default function ResourcesPage() {
               </h2>
               <p style={{
                 fontSize: '.95rem',
-                color: '#666',
+                color: '#4a4a4a',
                 maxWidth: '700px',
                 margin: '0 auto',
                 lineHeight: 1.7
@@ -735,7 +735,7 @@ export default function ResourcesPage() {
             </h3>
             <p className="animate-in" style={{
               fontSize: '.9rem',
-              color: '#666',
+              color: '#4a4a4a',
               marginBottom: '24px',
               lineHeight: 1.6
             }}>
@@ -762,7 +762,7 @@ export default function ResourcesPage() {
                   </h4>
                   <p style={{
                     fontSize: '.85rem',
-                    color: '#666',
+                    color: '#4a4a4a',
                     lineHeight: 1.6,
                     marginBottom: '12px'
                   }}>
@@ -816,7 +816,7 @@ export default function ResourcesPage() {
                       </h4>
                       <p style={{
                         fontSize: '.85rem',
-                        color: '#666',
+                        color: '#4a4a4a',
                         lineHeight: 1.6,
                         marginBottom: '12px'
                       }}>
@@ -874,7 +874,7 @@ export default function ResourcesPage() {
                   {category.description && (
                     <p style={{
                       fontSize: '.9rem',
-                      color: '#666',
+                      color: '#4a4a4a',
                       marginBottom: '16px'
                     }}>
                       {category.description}
@@ -1016,7 +1016,7 @@ export default function ResourcesPage() {
                 </h3>
                 <p style={{
                   fontSize: '.9rem',
-                  color: '#666',
+                  color: '#4a4a4a',
                   marginBottom: '14px'
                 }}>
                   {videoLibraryData.description}
@@ -1028,7 +1028,7 @@ export default function ResourcesPage() {
                       alignItems: 'center',
                       gap: '8px',
                       fontSize: '.85rem',
-                      color: '#666',
+                      color: '#4a4a4a',
                       marginBottom: '8px'
                     }}>
                       <IconCheckCircle size={14} color="#00d4d4" />
@@ -1080,7 +1080,7 @@ export default function ResourcesPage() {
                 </h3>
                 <p style={{
                   fontSize: '.9rem',
-                  color: '#666',
+                  color: '#4a4a4a',
                   marginBottom: '14px'
                 }}>
                   {glossaryData.description}
@@ -1092,7 +1092,7 @@ export default function ResourcesPage() {
                       alignItems: 'center',
                       gap: '8px',
                       fontSize: '.85rem',
-                      color: '#666',
+                      color: '#4a4a4a',
                       marginBottom: '8px'
                     }}>
                       <IconCheckCircle size={14} color="#134978" />

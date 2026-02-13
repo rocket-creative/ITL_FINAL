@@ -1,0 +1,4055 @@
+{
+  "exportDate": "2026-02-13T17:12:51.858Z",
+  "totalPages": 100,
+  "baseUrl": "https://www.genetargeting.com",
+  "byAdGroup": {
+    "Disease Models": [
+      {
+        "title": "All Catalog Mouse Models",
+        "description": "Complete list of ready made mouse models available for immediate order. Humanized, reporter, and disease models with fast delivery.",
+        "path": "/all-catalog-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/all-catalog-mouse-models",
+        "category": "All Catalog Mouse Models",
+        "headline1": "All Catalog Mouse Models",
+        "headline2": "Complete list of ready made",
+        "headline3": "Request a Quote",
+        "description1": "Complete list of ready made mouse models available for immediate order. Humanized,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "all-catalog-mouse-models/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"catalog mouse model\"",
+          "\"catalog mouse\""
+        ]
+      },
+      {
+        "title": "Allergy and Asthma Mouse Models | ITL",
+        "description": "Allergy and asthma mouse models for studying airway inflammation, IgE responses, and hypersensitivity. Test therapeutics targeting Th2 immunity pathways.",
+        "path": "/allergy-asthma-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/allergy-asthma-mouse-models",
+        "category": "General",
+        "headline1": "Allergy and Asthma Mouse",
+        "headline2": "Allergy and asthma mouse",
+        "headline3": "Request a Quote",
+        "description1": "Allergy and asthma mouse models for studying airway inflammation, IgE responses, and",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "allergy-asthma-mouse-models/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"allergy mouse model\"",
+          "\"allergy mouse\"",
+          "\"asthma mouse model\"",
+          "\"asthma mouse\""
+        ]
+      },
+      {
+        "title": "ALS Mouse Models | ITL",
+        "description": "ALS mouse models for studying motor neuron degeneration and disease mechanisms. SOD1, TDP43, FUS, and C9orf72 gene targeting for therapeutic research.",
+        "path": "/als-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/als-mouse-models",
+        "category": "General",
+        "headline1": "ALS Mouse Models | ITL",
+        "headline2": "ALS mouse models for studying",
+        "headline3": "Request a Quote",
+        "description1": "ALS mouse models for studying motor neuron degeneration and disease mechanisms. SOD1,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "als-mouse-models/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": []
+      },
+      {
+        "title": "Ready Made Mouse Model Catalog",
+        "description": "Browse ready made mouse models including humanized checkpoint mice and reporter strains. Faster timelines than custom projects.",
+        "path": "/catalog-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/catalog-mouse-models",
+        "category": "Catalog Mouse Models",
+        "headline1": "Ready Made Mouse Model Catalog",
+        "headline2": "custom projects",
+        "headline3": "Request a Quote",
+        "description1": "Browse ready made mouse models including humanized checkpoint mice and reporter strains.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "catalog-mouse-models/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"ready mouse model\"",
+          "\"ready mouse\"",
+          "\"made mouse model\"",
+          "\"made mouse\"",
+          "\"catalog mouse model\"",
+          "\"catalog mouse\""
+        ]
+      },
+      {
+        "title": "Custom Mouse Models | Gene Targeting",
+        "description": "Custom mouse models designed and engineered for your research. Knockouts, knockins, humanized, and transgenic models. 2,500+ projects delivered since 1998.",
+        "path": "/custom-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/custom-mouse-models",
+        "category": "General",
+        "headline1": "Custom Mouse Models | Gene",
+        "headline2": "2,500+ projects",
+        "headline3": "Request a Quote",
+        "description1": "Custom mouse models designed and engineered for your research. Knockouts, knockins,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "custom-mouse-models/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"custom mouse model\"",
+          "\"custom mouse\"",
+          "\"gene mouse model\"",
+          "\"gene mouse\"",
+          "\"targeting mouse model\"",
+          "\"targeting mouse\""
+        ]
+      },
+      {
+        "title": "Double Checkpoint Mice",
+        "description": "Double Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+        "path": "/double-checkpoint-mice",
+        "fullUrl": "https://www.genetargeting.com/double-checkpoint-mice",
+        "category": "Double Checkpoint Mice",
+        "headline1": "Double Checkpoint Mice",
+        "headline2": "Custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Double Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "double-checkpoint-mice/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"double mouse model\"",
+          "\"double mouse\"",
+          "\"checkpoint mouse model\"",
+          "\"checkpoint mouse\""
+        ]
+      },
+      {
+        "title": "IBD Mouse Models | ITL",
+        "description": "IBD mouse models for studying inflammatory bowel disease, colitis, and gut barrier function. Crohn",
+        "path": "/ibd-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/ibd-mouse-models",
+        "category": "General",
+        "headline1": "IBD Mouse Models | ITL",
+        "headline2": "IBD mouse models for studying",
+        "headline3": "Request a Quote",
+        "description1": "IBD mouse models for studying inflammatory bowel disease, colitis, and gut barrier",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "ibd-mouse-models/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": []
+      },
+      {
+        "title": "Lupus Mouse Models | ITL",
+        "description": "Lupus mouse models for studying systemic autoimmunity, nephritis, and autoantibody production. Test therapeutics targeting B cells and immune complexes.",
+        "path": "/lupus-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/lupus-mouse-models",
+        "category": "General",
+        "headline1": "Lupus Mouse Models | ITL",
+        "headline2": "Lupus mouse models for",
+        "headline3": "Request a Quote",
+        "description1": "Lupus mouse models for studying systemic autoimmunity, nephritis, and autoantibody",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "lupus-mouse-models/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"lupus mouse model\"",
+          "\"lupus mouse\""
+        ]
+      },
+      {
+        "title": "Muscular Dystrophy Mouse Models | ITL",
+        "description": "Muscular dystrophy mouse models for studying muscle degeneration and dystrophin pathology. DMD, LGMD, and myopathy models for therapy development.",
+        "path": "/muscular-dystrophy-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/muscular-dystrophy-mouse-models",
+        "category": "General",
+        "headline1": "Muscular Dystrophy Mouse",
+        "headline2": "Muscular dystrophy mouse",
+        "headline3": "Request a Quote",
+        "description1": "Muscular dystrophy mouse models for studying muscle degeneration and dystrophin pathology.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "muscular-dystrophy-mouse-models/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"muscular mouse model\"",
+          "\"muscular mouse\"",
+          "\"dystrophy mouse model\"",
+          "\"dystrophy mouse\""
+        ]
+      },
+      {
+        "title": "Ophthalmology Mouse Models | ITL",
+        "description": "Ophthalmology mouse models for studying retinal degeneration, glaucoma, and vision disorders. Gene therapy testing for inherited eye diseases.",
+        "path": "/ophthalmology-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/ophthalmology-mouse-models",
+        "category": "Ophthalmology Mouse Models",
+        "headline1": "Ophthalmology Mouse Models |",
+        "headline2": "Ophthalmology mouse models",
+        "headline3": "Request a Quote",
+        "description1": "Ophthalmology mouse models for studying retinal degeneration, glaucoma, and vision",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "ophthalmology-mouse-models/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"ophthalmology mouse model\"",
+          "\"ophthalmology mouse\""
+        ]
+      },
+      {
+        "title": "Point Mutation Mouse Models",
+        "description": "Point mutation mice to model human disease variants. Introduce SNPs or amino acid changes at endogenous loci. ES cell and CRISPR approaches available.",
+        "path": "/point-mutation-mice",
+        "fullUrl": "https://www.genetargeting.com/point-mutation-mice",
+        "category": "General",
+        "headline1": "Point Mutation Mouse Models",
+        "headline2": "Point mutation mice to model",
+        "headline3": "Request a Quote",
+        "description1": "Point mutation mice to model human disease variants. Introduce SNPs or amino acid changes",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "point-mutation-mice/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"point mouse model\"",
+          "\"point mouse\"",
+          "\"mutation mouse model\"",
+          "\"mutation mouse\""
+        ]
+      },
+      {
+        "title": "Single Checkpoint Mice",
+        "description": "Single Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+        "path": "/single-checkpoint-mice",
+        "fullUrl": "https://www.genetargeting.com/single-checkpoint-mice",
+        "category": "Single Checkpoint Mice",
+        "headline1": "Single Checkpoint Mice",
+        "headline2": "Custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Single Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "single-checkpoint-mice/metadata.ts",
+        "adGroup": "Disease Models",
+        "keywords": [
+          "\"single mouse model\"",
+          "\"single mouse\"",
+          "\"checkpoint mouse model\"",
+          "\"checkpoint mouse\""
+        ]
+      }
+    ],
+    "Neuroscience": [
+      {
+        "title": "Alzheimer",
+        "description": "Alzheimer",
+        "path": "/alzheimers-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/alzheimers-mouse-models",
+        "category": "General",
+        "headline1": "Alzheimer",
+        "headline2": "Alzheimer",
+        "headline3": "Request a Quote",
+        "description1": "Alzheimer",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "alzheimers-mouse-models/metadata.ts",
+        "adGroup": "Neuroscience",
+        "keywords": [
+          "\"alzheimer mouse model\"",
+          "\"alzheimer mouse\""
+        ]
+      },
+      {
+        "title": "Neuroscience Mouse Models | ITL",
+        "description": "Mouse models for neurodegeneration, synaptic function, and CNS disorders. Study disease mechanisms in Alzheimer",
+        "path": "/neuroscience-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/neuroscience-mouse-models",
+        "category": "Neuroscience Mouse Models",
+        "headline1": "Neuroscience Mouse Models |",
+        "headline2": "Mouse models for neurodegenera",
+        "headline3": "Request a Quote",
+        "description1": "Mouse models for neurodegeneration, synaptic function, and CNS disorders. Study disease",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "neuroscience-mouse-models/metadata.ts",
+        "adGroup": "Neuroscience",
+        "keywords": [
+          "\"neuroscience mouse model\"",
+          "\"neuroscience mouse\""
+        ]
+      },
+      {
+        "title": "Parkinson",
+        "description": "Parkinson",
+        "path": "/parkinsons-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/parkinsons-mouse-models",
+        "category": "General",
+        "headline1": "Parkinson",
+        "headline2": "Parkinson",
+        "headline3": "Request a Quote",
+        "description1": "Parkinson",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "parkinsons-mouse-models/metadata.ts",
+        "adGroup": "Neuroscience",
+        "keywords": [
+          "\"parkinson mouse model\"",
+          "\"parkinson mouse\""
+        ]
+      }
+    ],
+    "Cardiovascular": [
+      {
+        "title": "Atherosclerosis Mouse Models | ITL",
+        "description": "Atherosclerosis mouse models for studying plaque formation, lipid metabolism, and vascular inflammation. ApoE and LDLR knockout backgrounds available.",
+        "path": "/atherosclerosis-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/atherosclerosis-mouse-models",
+        "category": "General",
+        "headline1": "Atherosclerosis Mouse Models",
+        "headline2": "Atherosclerosis mouse models",
+        "headline3": "Request a Quote",
+        "description1": "Atherosclerosis mouse models for studying plaque formation, lipid metabolism, and",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "atherosclerosis-mouse-models/metadata.ts",
+        "adGroup": "Cardiovascular",
+        "keywords": [
+          "\"atherosclerosis mouse model\"",
+          "\"atherosclerosis mouse\""
+        ]
+      },
+      {
+        "title": "Cardiovascular Mouse Models | ITL",
+        "description": "Cardiovascular mouse models for studying heart disease, vascular biology, and cardiac function. Atherosclerosis, cardiomyopathy, and arrhythmia platforms.",
+        "path": "/cardiovascular-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/cardiovascular-mouse-models",
+        "category": "Cardiovascular Mouse Models",
+        "headline1": "Cardiovascular Mouse Models |",
+        "headline2": "Cardiovascular mouse models",
+        "headline3": "Request a Quote",
+        "description1": "Cardiovascular mouse models for studying heart disease, vascular biology, and cardiac",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "cardiovascular-mouse-models/metadata.ts",
+        "adGroup": "Cardiovascular",
+        "keywords": [
+          "\"cardiovascular mouse model\"",
+          "\"cardiovascular mouse\""
+        ]
+      },
+      {
+        "title": "Heart Failure Mouse Models | ITL",
+        "description": "Heart failure mouse models for studying cardiac remodeling, contractile dysfunction, and myocardial stress responses. Therapeutic testing platforms.",
+        "path": "/heart-failure-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/heart-failure-mouse-models",
+        "category": "General",
+        "headline1": "Heart Failure Mouse Models |",
+        "headline2": "Heart failure mouse models",
+        "headline3": "Request a Quote",
+        "description1": "Heart failure mouse models for studying cardiac remodeling, contractile dysfunction, and",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "heart-failure-mouse-models/metadata.ts",
+        "adGroup": "Cardiovascular",
+        "keywords": [
+          "\"heart mouse model\"",
+          "\"heart mouse\"",
+          "\"failure mouse model\"",
+          "\"failure mouse\""
+        ]
+      }
+    ],
+    "Immunology": [
+      {
+        "title": "Autoimmune Disease Mice | ITL",
+        "description": "Autoimmune disease mice for studying immune tolerance breakdown and self reactive immunity. Lupus, arthritis, and multiple sclerosis model platforms.",
+        "path": "/autoimmune-disease-mice",
+        "fullUrl": "https://www.genetargeting.com/autoimmune-disease-mice",
+        "category": "General",
+        "headline1": "Autoimmune Disease Mice | ITL",
+        "headline2": "Autoimmune disease mice for",
+        "headline3": "Request a Quote",
+        "description1": "Autoimmune disease mice for studying immune tolerance breakdown and self reactive",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "autoimmune-disease-mice/metadata.ts",
+        "adGroup": "Immunology",
+        "keywords": [
+          "\"autoimmune mouse model\"",
+          "\"autoimmune mouse\"",
+          "\"disease mouse model\"",
+          "\"disease mouse\""
+        ]
+      },
+      {
+        "title": "Immunology Mouse Models | ITL",
+        "description": "Immunology mouse models for studying immune cell function, cytokine signaling, and immune responses. Autoimmune, inflammation, and checkpoint platforms.",
+        "path": "/immunology-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/immunology-mouse-models",
+        "category": "Immunology Mouse Models",
+        "headline1": "Immunology Mouse Models | ITL",
+        "headline2": "Immunology mouse models for",
+        "headline3": "Request a Quote",
+        "description1": "Immunology mouse models for studying immune cell function, cytokine signaling, and immune",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "immunology-mouse-models/metadata.ts",
+        "adGroup": "Immunology",
+        "keywords": [
+          "\"immunology mouse model\"",
+          "\"immunology mouse\""
+        ]
+      }
+    ],
+    "General": [
+      {
+        "title": "BAC Recombineering for Large Modifications",
+        "description": "BAC recombineering for large scale genomic modifications. Engineer complex alleles and humanize entire gene loci with bacterial artificial chromosomes.",
+        "path": "/bac-to-bac-large-scale-targeting",
+        "fullUrl": "https://www.genetargeting.com/bac-to-bac-large-scale-targeting",
+        "category": "General",
+        "headline1": "BAC Recombineering for Large",
+        "headline2": "BAC recombineering for large",
+        "headline3": "Request a Quote",
+        "description1": "BAC recombineering for large scale genomic modifications. Engineer complex alleles and",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "bac-to-bac-large-scale-targeting/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"recombineering mouse model\"",
+          "\"recombineering mouse\"",
+          "\"large mouse model\"",
+          "\"large mouse\"",
+          "\"modifications mouse model\"",
+          "\"modifications mouse\""
+        ]
+      },
+      {
+        "title": "BALB/c Mouse Strain Background",
+        "description": "BALB/c mouse background for immunology and cancer research. Known for monoclonal antibody production and distinct immune response characteristics.",
+        "path": "/balbc-mouse-background",
+        "fullUrl": "https://www.genetargeting.com/balbc-mouse-background",
+        "category": "General",
+        "headline1": "BALB/c Mouse Strain Background",
+        "headline2": "BALB/c mouse background for",
+        "headline3": "Request a Quote",
+        "description1": "BALB/c mouse background for immunology and cancer research. Known for monoclonal antibody",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "balbc-mouse-background/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"balb/c mouse model\"",
+          "\"balb/c mouse\"",
+          "\"strain mouse model\"",
+          "\"strain mouse\"",
+          "\"background mouse model\"",
+          "\"background mouse\""
+        ]
+      },
+      {
+        "title": "Breeding Scheme Architect",
+        "description": "Breeding Scheme Architect from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+        "path": "/breeding-scheme-architect",
+        "fullUrl": "https://www.genetargeting.com/breeding-scheme-architect",
+        "category": "Breeding Scheme Architect",
+        "headline1": "Breeding Scheme Architect",
+        "headline2": "Custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Breeding Scheme Architect from ingenious targeting laboratory. Custom mouse model",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "breeding-scheme-architect/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"breeding mouse model\"",
+          "\"breeding mouse\"",
+          "\"scheme mouse model\"",
+          "\"scheme mouse\"",
+          "\"architect mouse model\"",
+          "\"architect mouse\""
+        ]
+      },
+      {
+        "title": "C57BL/6 Mouse Strain Background",
+        "description": "C57BL/6 mouse background for gene targeting research. The most used inbred strain with well characterized genetics and extensive phenotype data.",
+        "path": "/c57bl6-mouse-background",
+        "fullUrl": "https://www.genetargeting.com/c57bl6-mouse-background",
+        "category": "General",
+        "headline1": "C57BL/6 Mouse Strain Backgroun",
+        "headline2": "C57BL/6 mouse background for",
+        "headline3": "Request a Quote",
+        "description1": "C57BL/6 mouse background for gene targeting research. The most used inbred strain with",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "c57bl6-mouse-background/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"c57bl/6 mouse model\"",
+          "\"c57bl/6 mouse\"",
+          "\"strain mouse model\"",
+          "\"strain mouse\"",
+          "\"background mouse model\"",
+          "\"background mouse\""
+        ]
+      },
+      {
+        "title": "Critical Exon Selection for Knockouts",
+        "description": "Critical exon selection for effective gene knockouts. Target exons essential for protein function to ensure complete loss of gene activity.",
+        "path": "/critical-exon-selection",
+        "fullUrl": "https://www.genetargeting.com/critical-exon-selection",
+        "category": "Critical Exon Selection",
+        "headline1": "Critical Exon Selection for",
+        "headline2": "Critical exon selection for",
+        "headline3": "Request a Quote",
+        "description1": "Critical exon selection for effective gene knockouts. Target exons essential for protein",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "critical-exon-selection/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"critical mouse model\"",
+          "\"critical mouse\"",
+          "\"exon mouse model\"",
+          "\"exon mouse\"",
+          "\"selection mouse model\"",
+          "\"selection mouse\"",
+          "\"knockouts mouse model\"",
+          "\"knockouts mouse\""
+        ]
+      },
+      {
+        "title": "Careers at iTL",
+        "description": "Join the iTL team. Career opportunities in mouse genetics, molecular biology, animal care, and laboratory operations.",
+        "path": "/current-openings",
+        "fullUrl": "https://www.genetargeting.com/current-openings",
+        "category": "General",
+        "headline1": "Careers at iTL",
+        "headline2": "Join the iTL team",
+        "headline3": "Request a Quote",
+        "description1": "Join the iTL team. Career opportunities in mouse genetics, molecular biology, animal",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "current-openings/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"careers mouse model\"",
+          "\"careers mouse\""
+        ]
+      },
+      {
+        "title": "Custom Animal Models",
+        "description": "Custom Animal Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+        "path": "/custom-animal-models",
+        "fullUrl": "https://www.genetargeting.com/custom-animal-models",
+        "category": "General",
+        "headline1": "Custom Animal Models",
+        "headline2": "Custom Animal",
+        "headline3": "Request a Quote",
+        "description1": "Custom Animal Models from ingenious targeting laboratory. Custom mouse model engineering",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "custom-animal-models/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"custom mouse model\"",
+          "\"custom mouse\"",
+          "\"animal mouse model\"",
+          "\"animal mouse\""
+        ]
+      },
+      {
+        "title": "Custom Mouse Model Projects",
+        "description": "Design and build custom knockout, knockin, and transgenic mouse models for your research. Expert consultation and guaranteed results.",
+        "path": "/custom-projects",
+        "fullUrl": "https://www.genetargeting.com/custom-projects",
+        "category": "General",
+        "headline1": "Custom Mouse Model Projects",
+        "headline2": "guaranteed results",
+        "headline3": "Request a Quote",
+        "description1": "Design and build custom knockout, knockin, and transgenic mouse models for your research.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "custom-projects/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"custom mouse model\"",
+          "\"custom mouse\"",
+          "\"projects mouse model\"",
+          "\"projects mouse\""
+        ]
+      },
+      {
+        "title": "Custom Rabbit Models",
+        "description": "Custom Rabbit Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+        "path": "/custom-rabbit-models",
+        "fullUrl": "https://www.genetargeting.com/custom-rabbit-models",
+        "category": "General",
+        "headline1": "Custom Rabbit Models",
+        "headline2": "Custom Rabbit",
+        "headline3": "Request a Quote",
+        "description1": "Custom Rabbit Models from ingenious targeting laboratory. Custom mouse model engineering",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "custom-rabbit-models/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"custom mouse model\"",
+          "\"custom mouse\"",
+          "\"rabbit mouse model\"",
+          "\"rabbit mouse\""
+        ]
+      },
+      {
+        "title": "Disease Mouse Model Catalog",
+        "description": "Ready made disease models for cancer, metabolic, autoimmune, and neurological research. Validated phenotypes with faster delivery.",
+        "path": "/disease-model-catalog",
+        "fullUrl": "https://www.genetargeting.com/disease-model-catalog",
+        "category": "Disease Model Catalog",
+        "headline1": "Disease Mouse Model Catalog",
+        "headline2": "Ready made disease models for",
+        "headline3": "Request a Quote",
+        "description1": "Ready made disease models for cancer, metabolic, autoimmune, and neurological research.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "disease-model-catalog/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"disease mouse model\"",
+          "\"disease mouse\"",
+          "\"catalog mouse model\"",
+          "\"catalog mouse\""
+        ]
+      },
+      {
+        "title": "Gene Replacement Mouse Models",
+        "description": "Gene replacement mice to swap mouse genes with human or modified sequences. Study human gene function and test therapeutics in vivo. Since 1998.",
+        "path": "/gene-replacement",
+        "fullUrl": "https://www.genetargeting.com/gene-replacement",
+        "category": "General",
+        "headline1": "Gene Replacement Mouse Models",
+        "headline2": "Gene replacement mice to swap",
+        "headline3": "Request a Quote",
+        "description1": "Gene replacement mice to swap mouse genes with human or modified sequences. Study human",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "gene-replacement/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"gene mouse model\"",
+          "\"gene mouse\"",
+          "\"replacement mouse model\"",
+          "\"replacement mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Genetics Glossary",
+        "description": "Definitions for knockout, knockin, Cre lox, CRISPR, and other mouse genetics terms. Learn the terminology for your research.",
+        "path": "/glossary",
+        "fullUrl": "https://www.genetargeting.com/glossary",
+        "category": "General",
+        "headline1": "Mouse Genetics Glossary",
+        "headline2": "Definitions for knockout,",
+        "headline3": "Request a Quote",
+        "description1": "Definitions for knockout, knockin, Cre lox, CRISPR, and other mouse genetics terms. Learn",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "glossary/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"genetics mouse model\"",
+          "\"genetics mouse\"",
+          "\"glossary mouse model\"",
+          "\"glossary mouse\""
+        ]
+      },
+      {
+        "title": "Inducible Gene Expression Systems",
+        "description": "Inducible gene expression systems for temporal control of transgenes. Tet on, Tet off, and tamoxifen inducible approaches for controlled studies.",
+        "path": "/inducible-gene-expression",
+        "fullUrl": "https://www.genetargeting.com/inducible-gene-expression",
+        "category": "General",
+        "headline1": "Inducible Gene Expression",
+        "headline2": "Inducible gene expression",
+        "headline3": "Request a Quote",
+        "description1": "Inducible gene expression systems for temporal control of transgenes. Tet on, Tet off,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "inducible-gene-expression/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"inducible mouse model\"",
+          "\"inducible mouse\"",
+          "\"gene mouse model\"",
+          "\"gene mouse\"",
+          "\"expression mouse model\"",
+          "\"expression mouse\"",
+          "\"systems mouse model\"",
+          "\"systems mouse\""
+        ]
+      },
+      {
+        "title": "Lab Signals Blog",
+        "description": "Technical articles on mouse model design, gene targeting strategies, and research applications. Tips from iTL scientists.",
+        "path": "/lab-signals",
+        "fullUrl": "https://www.genetargeting.com/lab-signals",
+        "category": "General",
+        "headline1": "Lab Signals Blog",
+        "headline2": "Technical articles on mouse",
+        "headline3": "Request a Quote",
+        "description1": "Technical articles on mouse model design, gene targeting strategies, and research",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "lab-signals/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"signals mouse model\"",
+          "\"signals mouse\"",
+          "\"blog mouse model\"",
+          "\"blog mouse\""
+        ]
+      },
+      {
+        "title": "LoxP Site Design and Placement",
+        "description": "LoxP site design principles for conditional alleles. Proper placement flanking critical exons ensures complete gene inactivation upon Cre recombination.",
+        "path": "/loxp-site-design",
+        "fullUrl": "https://www.genetargeting.com/loxp-site-design",
+        "category": "LoxP Site Design",
+        "headline1": "LoxP Site Design and Placement",
+        "headline2": "LoxP site design principles",
+        "headline3": "Request a Quote",
+        "description1": "LoxP site design principles for conditional alleles. Proper placement flanking critical",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "loxp-site-design/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"loxp mouse model\"",
+          "\"loxp mouse\"",
+          "\"site mouse model\"",
+          "\"site mouse\"",
+          "\"design mouse model\"",
+          "\"design mouse\"",
+          "\"placement mouse model\"",
+          "\"placement mouse\""
+        ]
+      },
+      {
+        "title": "Order Mouse Models",
+        "description": "Place your order for catalog mouse models. Request a quote for humanized checkpoint, reporter, or disease model strains.",
+        "path": "/order-catalog-models",
+        "fullUrl": "https://www.genetargeting.com/order-catalog-models",
+        "category": "Order Catalog Models",
+        "headline1": "Order Mouse Models",
+        "headline2": "Place your order for catalog",
+        "headline3": "Request a Quote",
+        "description1": "Place your order for catalog mouse models. Request a quote for humanized checkpoint,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "order-catalog-models/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"order mouse model\"",
+          "\"order mouse\""
+        ]
+      },
+      {
+        "title": "Model Inquiry Form",
+        "description": "Request pricing, availability, and technical details for catalog mouse models. Our team responds within one business day.",
+        "path": "/order-inquiry-catalog-models",
+        "fullUrl": "https://www.genetargeting.com/order-inquiry-catalog-models",
+        "category": "Order Inquiry Catalog Models",
+        "headline1": "Model Inquiry Form",
+        "headline2": "Request pricing, availability,",
+        "headline3": "Request a Quote",
+        "description1": "Request pricing, availability, and technical details for catalog mouse models. Our team",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "order-inquiry-catalog-models/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"inquiry mouse model\"",
+          "\"inquiry mouse\"",
+          "\"form mouse model\"",
+          "\"form mouse\""
+        ]
+      },
+      {
+        "title": "Pricing Overview",
+        "description": "Pricing Overview from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+        "path": "/pricing-overview",
+        "fullUrl": "https://www.genetargeting.com/pricing-overview",
+        "category": "General",
+        "headline1": "Pricing Overview",
+        "headline2": "Custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Pricing Overview from ingenious targeting laboratory. Custom mouse model engineering",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "pricing-overview/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"pricing mouse model\"",
+          "\"pricing mouse\"",
+          "\"overview mouse model\"",
+          "\"overview mouse\""
+        ]
+      },
+      {
+        "title": "Scientific Publications",
+        "description": "Scientific publications featuring iTL mouse models. Over 800 peer reviewed papers across neuroscience, oncology, immunology, and more.",
+        "path": "/publications",
+        "fullUrl": "https://www.genetargeting.com/publications",
+        "category": "General",
+        "headline1": "Scientific Publications",
+        "headline2": "Scientific publications",
+        "headline3": "Request a Quote",
+        "description1": "Scientific publications featuring iTL mouse models. Over 800 peer reviewed papers across",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "publications/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"scientific mouse model\"",
+          "\"scientific mouse\"",
+          "\"publications mouse model\"",
+          "\"publications mouse\""
+        ]
+      },
+      {
+        "title": "Custom Rat Models",
+        "description": "Custom knockout, knockin, and transgenic rat models for research. Larger size and physiology advantages for cardiovascular and neuro studies.",
+        "path": "/rat-models",
+        "fullUrl": "https://www.genetargeting.com/rat-models",
+        "category": "General",
+        "headline1": "Custom Rat Models",
+        "headline2": "Custom knockout",
+        "headline3": "Request a Quote",
+        "description1": "Custom knockout, knockin, and transgenic rat models for research. Larger size and",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "rat-models/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"custom mouse model\"",
+          "\"custom mouse\""
+        ]
+      },
+      {
+        "title": "Reporter Mouse Strain Catalog",
+        "description": "GFP, tdTomato, LacZ, and luciferase reporter mice for gene expression studies. Track cell populations and lineage in vivo.",
+        "path": "/reporter-mouse-catalog",
+        "fullUrl": "https://www.genetargeting.com/reporter-mouse-catalog",
+        "category": "Reporter Mouse Catalog",
+        "headline1": "Reporter Mouse Strain Catalog",
+        "headline2": "GFP, tdTomato, LacZ, and",
+        "headline3": "Request a Quote",
+        "description1": "GFP, tdTomato, LacZ, and luciferase reporter mice for gene expression studies. Track cell",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "reporter-mouse-catalog/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"reporter mouse model\"",
+          "\"reporter mouse\"",
+          "\"strain mouse model\"",
+          "\"strain mouse\"",
+          "\"catalog mouse model\"",
+          "\"catalog mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Model Research Applications",
+        "description": "Custom mouse models for target validation, drug discovery, biomarker research, and mechanistic studies. 800+ publications since 1998.",
+        "path": "/research-applications",
+        "fullUrl": "https://www.genetargeting.com/research-applications",
+        "category": "General",
+        "headline1": "Mouse Model Research Applicati",
+        "headline2": "Custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Custom mouse models for target validation, drug discovery, biomarker research, and",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "research-applications/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"research mouse model\"",
+          "\"research mouse\"",
+          "\"applications mouse model\"",
+          "\"applications mouse\""
+        ]
+      },
+      {
+        "title": "Search",
+        "description": "Search from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+        "path": "/search",
+        "fullUrl": "https://www.genetargeting.com/search",
+        "category": "General",
+        "headline1": "Search",
+        "headline2": "Custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Search from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "search/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"search mouse model\"",
+          "\"search mouse\""
+        ]
+      },
+      {
+        "title": "Speed Expansion Mouse Breeding",
+        "description": "Accelerate colony expansion with optimized breeding strategies. Build experimental cohorts faster with superovulation and IVF techniques.",
+        "path": "/speed-expansion-breeding",
+        "fullUrl": "https://www.genetargeting.com/speed-expansion-breeding",
+        "category": "Speed Expansion Breeding",
+        "headline1": "Speed Expansion Mouse Breeding",
+        "headline2": "Accelerate colony expansion",
+        "headline3": "Request a Quote",
+        "description1": "Accelerate colony expansion with optimized breeding strategies. Build experimental",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "speed-expansion-breeding/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"speed mouse model\"",
+          "\"speed mouse\"",
+          "\"expansion mouse model\"",
+          "\"expansion mouse\"",
+          "\"breeding mouse model\"",
+          "\"breeding mouse\""
+        ]
+      },
+      {
+        "title": "Start Your Mouse Model Project",
+        "description": "Request a consultation for your custom mouse model. Our scientists will help design the optimal strategy for your research goals.",
+        "path": "/start-your-project",
+        "fullUrl": "https://www.genetargeting.com/start-your-project",
+        "category": "General",
+        "headline1": "Start Your Mouse Model Project",
+        "headline2": "custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Request a consultation for your custom mouse model. Our scientists will help design the",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "start-your-project/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"start mouse model\"",
+          "\"start mouse\"",
+          "\"your mouse model\"",
+          "\"your mouse\"",
+          "\"project mouse model\"",
+          "\"project mouse\""
+        ]
+      },
+      {
+        "title": "Technologies",
+        "description": "Gene targeting technologies including Cre LoxP, Flp FRT, ES cell targeting, and CRISPR genome editing.",
+        "path": "/technologies",
+        "fullUrl": "https://www.genetargeting.com/technologies",
+        "category": "General",
+        "headline1": "Technologies",
+        "headline2": "Gene targeting technologies",
+        "headline3": "Request a Quote",
+        "description1": "Gene targeting technologies including Cre LoxP, Flp FRT, ES cell targeting, and CRISPR",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "technologies/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"technologies mouse model\"",
+          "\"technologies mouse\""
+        ]
+      },
+      {
+        "title": "Gene Targeting Technology Overview",
+        "description": "Overview of gene targeting technologies for mouse model generation. ES cell targeting, CRISPR, Cre lox, and knockin strategies explained.",
+        "path": "/technology-overview",
+        "fullUrl": "https://www.genetargeting.com/technology-overview",
+        "category": "General",
+        "headline1": "Gene Targeting Technology",
+        "headline2": "Overview of gene targeting",
+        "headline3": "Request a Quote",
+        "description1": "Overview of gene targeting technologies for mouse model generation. ES cell targeting,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "technology-overview/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"gene mouse model\"",
+          "\"gene mouse\"",
+          "\"targeting mouse model\"",
+          "\"targeting mouse\"",
+          "\"technology mouse model\"",
+          "\"technology mouse\"",
+          "\"overview mouse model\"",
+          "\"overview mouse\""
+        ]
+      },
+      {
+        "title": "Thank You",
+        "description": "Thank you for your inquiry. Our team will review your request and respond within one business day.",
+        "path": "/thank-you",
+        "fullUrl": "https://www.genetargeting.com/thank-you",
+        "category": "General",
+        "headline1": "Thank You",
+        "headline2": "Thank you for your inquiry",
+        "headline3": "Request a Quote",
+        "description1": "Thank you for your inquiry. Our team will review your request and respond within one",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "thank-you/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"thank mouse model\"",
+          "\"thank mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Models by Therapeutic Area",
+        "description": "Custom mouse models for oncology, neuroscience, immunology, cardiovascular, and metabolic disease research. Disease specific expertise.",
+        "path": "/therapeutic-areas",
+        "fullUrl": "https://www.genetargeting.com/therapeutic-areas",
+        "category": "General",
+        "headline1": "Mouse Models by Therapeutic",
+        "headline2": "Custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Custom mouse models for oncology, neuroscience, immunology, cardiovascular, and metabolic",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "therapeutic-areas/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"therapeutic mouse model\"",
+          "\"therapeutic mouse\"",
+          "\"area mouse model\"",
+          "\"area mouse\""
+        ]
+      },
+      {
+        "title": "Transgenic Rat Models",
+        "description": "Custom transgenic rat models expressing your gene of interest. Overexpression and tissue specific promoters in rat backgrounds.",
+        "path": "/transgenic-rat-models",
+        "fullUrl": "https://www.genetargeting.com/transgenic-rat-models",
+        "category": "Transgenic Rat Models",
+        "headline1": "Transgenic Rat Models",
+        "headline2": "Custom transgenic",
+        "headline3": "Request a Quote",
+        "description1": "Custom transgenic rat models expressing your gene of interest. Overexpression and tissue",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "transgenic-rat-models/metadata.ts",
+        "adGroup": "General",
+        "keywords": [
+          "\"transgenic mouse model\"",
+          "\"transgenic mouse\""
+        ]
+      }
+    ],
+    "Services": [
+      {
+        "title": "Mouse Backcrossing Services",
+        "description": "Transfer genetic modifications to C57BL/6, BALB/c, or other backgrounds. Speed congenic breeding with marker assisted selection.",
+        "path": "/backcrossing-services",
+        "fullUrl": "https://www.genetargeting.com/backcrossing-services",
+        "category": "Backcrossing Services",
+        "headline1": "Mouse Backcrossing Services",
+        "headline2": "Transfer genetic modifications",
+        "headline3": "Request a Quote",
+        "description1": "Transfer genetic modifications to C57BL/6, BALB/c, or other backgrounds. Speed congenic",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "backcrossing-services/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"backcrossing mouse model\"",
+          "\"backcrossing mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Colony Management Services",
+        "description": "Full service mouse colony management including breeding, health monitoring, and record keeping. Reduce internal costs while maintaining quality control.",
+        "path": "/colony-management-services",
+        "fullUrl": "https://www.genetargeting.com/colony-management-services",
+        "category": "Colony Management Services",
+        "headline1": "Mouse Colony Management",
+        "headline2": "Full service mouse colony",
+        "headline3": "Request a Quote",
+        "description1": "Full service mouse colony management including breeding, health monitoring, and record",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "colony-management-services/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"colony mouse model\"",
+          "\"colony mouse\"",
+          "\"management mouse model\"",
+          "\"management mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Cryopreservation Services",
+        "description": "Mouse embryo and sperm cryopreservation for long term colony preservation. Protect valuable lines, reduce housing costs, ship worldwide.",
+        "path": "/cryopreservation-services",
+        "fullUrl": "https://www.genetargeting.com/cryopreservation-services",
+        "category": "Cryopreservation Services",
+        "headline1": "Mouse Cryopreservation",
+        "headline2": "Mouse embryo and sperm",
+        "headline3": "Request a Quote",
+        "description1": "Mouse embryo and sperm cryopreservation for long term colony preservation. Protect",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "cryopreservation-services/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"cryopreservation mouse model\"",
+          "\"cryopreservation mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Genotyping Services",
+        "description": "Fast, accurate PCR genotyping for mouse colonies. Get results in 48 hours with validated assays for knockouts, knockins, and transgenics.",
+        "path": "/mouse-genotyping-service",
+        "fullUrl": "https://www.genetargeting.com/mouse-genotyping-service",
+        "category": "Mouse Genotyping Service",
+        "headline1": "Mouse Genotyping Services",
+        "headline2": "Fast, accurate PCR genotyping",
+        "headline3": "Request a Quote",
+        "description1": "Fast, accurate PCR genotyping for mouse colonies. Get results in 48 hours with validated",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "mouse-genotyping-service/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"genotyping mouse model\"",
+          "\"genotyping mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Model Services",
+        "description": "Comprehensive mouse model services from design through delivery. Colony management, breeding, genotyping.",
+        "path": "/mouse-model-services",
+        "fullUrl": "https://www.genetargeting.com/mouse-model-services",
+        "category": "Mouse Model Services",
+        "headline1": "Mouse Model Services",
+        "headline2": "Comprehensive mouse model",
+        "headline3": "Request a Quote",
+        "description1": "Comprehensive mouse model services from design through delivery. Colony management,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "mouse-model-services/metadata.ts",
+        "adGroup": "Services",
+        "keywords": []
+      },
+      {
+        "title": "Mouse Phenotyping Services",
+        "description": "Characterize mouse model phenotypes with behavioral, metabolic, and histological analysis. Validate gene function and disease relevance.",
+        "path": "/phenotyping-services",
+        "fullUrl": "https://www.genetargeting.com/phenotyping-services",
+        "category": "Phenotyping Services",
+        "headline1": "Mouse Phenotyping Services",
+        "headline2": "Characterize mouse model",
+        "headline3": "Request a Quote",
+        "description1": "Characterize mouse model phenotypes with behavioral, metabolic, and histological analysis.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "phenotyping-services/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"phenotyping mouse model\"",
+          "\"phenotyping mouse\""
+        ]
+      },
+      {
+        "title": "Post Project Services",
+        "description": "Post Project Services from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+        "path": "/post-project-services",
+        "fullUrl": "https://www.genetargeting.com/post-project-services",
+        "category": "Post Project Services",
+        "headline1": "Post Project Services",
+        "headline2": "Custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Post Project Services from ingenious targeting laboratory. Custom mouse model engineering",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "post-project-services/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"post mouse model\"",
+          "\"post mouse\"",
+          "\"project mouse model\"",
+          "\"project mouse\""
+        ]
+      },
+      {
+        "title": "Preclinical Mouse Study Services",
+        "description": "Preclinical efficacy studies using custom and catalog mouse models. Drug screening, target validation, and pharmacology in disease models.",
+        "path": "/preclinical-services",
+        "fullUrl": "https://www.genetargeting.com/preclinical-services",
+        "category": "Preclinical Services",
+        "headline1": "Preclinical Mouse Study",
+        "headline2": "custom and",
+        "headline3": "Request a Quote",
+        "description1": "Preclinical efficacy studies using custom and catalog mouse models. Drug screening,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "preclinical-services/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"preclinical mouse model\"",
+          "\"preclinical mouse\"",
+          "\"study mouse model\"",
+          "\"study mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Rederivation Services",
+        "description": "Eliminate pathogens and clean up mouse lines with embryo transfer rederivation. Restore SPF status for facility import and animal health.",
+        "path": "/rederivation-services",
+        "fullUrl": "https://www.genetargeting.com/rederivation-services",
+        "category": "Rederivation Services",
+        "headline1": "Mouse Rederivation Services",
+        "headline2": "Eliminate pathogens and clean",
+        "headline3": "Request a Quote",
+        "description1": "Eliminate pathogens and clean up mouse lines with embryo transfer rederivation. Restore",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "rederivation-services/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"rederivation mouse model\"",
+          "\"rederivation mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Model Support Services",
+        "description": "Colony management, breeding, genotyping, cryopreservation, and rederivation services. Full support for your mouse model research.",
+        "path": "/support-services",
+        "fullUrl": "https://www.genetargeting.com/support-services",
+        "category": "Support Services",
+        "headline1": "Mouse Model Support Services",
+        "headline2": "Colony management, breeding,",
+        "headline3": "Request a Quote",
+        "description1": "Colony management, breeding, genotyping, cryopreservation, and rederivation services.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "support-services/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"support mouse model\"",
+          "\"support mouse\""
+        ]
+      },
+      {
+        "title": "Transgenic Mouse Models | Custom Services",
+        "description": "Transgenic mouse models for overexpression studies. Express genes of interest under tissue specific or ubiquitous promoters. 2,500+ projects since 1998.",
+        "path": "/transgenic-mouse-service",
+        "fullUrl": "https://www.genetargeting.com/transgenic-mouse-service",
+        "category": "Transgenic Mouse Service",
+        "headline1": "Transgenic Mouse Models |",
+        "headline2": "2,500+ projects",
+        "headline3": "Request a Quote",
+        "description1": "Transgenic mouse models for overexpression studies. Express genes of interest under",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "transgenic-mouse-service/metadata.ts",
+        "adGroup": "Services",
+        "keywords": [
+          "\"transgenic mouse model\"",
+          "\"transgenic mouse\"",
+          "\"custom mouse model\"",
+          "\"custom mouse\""
+        ]
+      }
+    ],
+    "Knockin Services": [
+      {
+        "title": "cDNA Knockin Mouse Models",
+        "description": "cDNA knockin mice for expressing genes under endogenous regulatory control. Insert coding sequences at specific loci. Germline confirmed delivery.",
+        "path": "/cdna-knockin",
+        "fullUrl": "https://www.genetargeting.com/cdna-knockin",
+        "category": "Cdna Knockin",
+        "headline1": "cDNA Knockin Mouse Models",
+        "headline2": "cDNA knockin mice for",
+        "headline3": "Request a Quote",
+        "description1": "cDNA knockin mice for expressing genes under endogenous regulatory control. Insert coding",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "cdna-knockin/metadata.ts",
+        "adGroup": "Knockin Services",
+        "keywords": [
+          "\"cdna mouse model\"",
+          "\"cdna mouse\"",
+          "\"knockin mouse model\"",
+          "\"knockin mouse\"",
+          "\"gene knockin\"",
+          "\"custom knockin mouse\""
+        ]
+      },
+      {
+        "title": "Conditional Knockin Mouse Models",
+        "description": "Conditional knockin mice for controlled gene expression. Activate transgenes in specific tissues or timepoints using Cre LoxP. 2,500+ projects since 1998.",
+        "path": "/conditional-knockin-mice",
+        "fullUrl": "https://www.genetargeting.com/conditional-knockin-mice",
+        "category": "Conditional Knockin Mice",
+        "headline1": "Conditional Knockin Mouse",
+        "headline2": "2,500+ projects",
+        "headline3": "Request a Quote",
+        "description1": "Conditional knockin mice for controlled gene expression. Activate transgenes in specific",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "conditional-knockin-mice/metadata.ts",
+        "adGroup": "Knockin Services",
+        "keywords": [
+          "\"conditional mouse model\"",
+          "\"conditional mouse\"",
+          "\"knockin mouse model\"",
+          "\"knockin mouse\"",
+          "\"gene knockin\"",
+          "\"custom knockin mouse\""
+        ]
+      },
+      {
+        "title": "Knockin Mouse Models",
+        "description": "Custom knockin mouse models including point mutations, reporters, and humanization. Precise genetic modifications for research.",
+        "path": "/knockin-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/knockin-mouse-models",
+        "category": "Knockin Mouse Models",
+        "headline1": "Knockin Mouse Models",
+        "headline2": "Custom knockin",
+        "headline3": "Request a Quote",
+        "description1": "Custom knockin mouse models including point mutations, reporters, and humanization.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "knockin-mouse-models/metadata.ts",
+        "adGroup": "Knockin Services",
+        "keywords": [
+          "\"knockin mouse model\"",
+          "\"knockin mouse\"",
+          "\"gene knockin\"",
+          "\"custom knockin mouse\""
+        ]
+      },
+      {
+        "title": "Knockin Rat Models",
+        "description": "Custom knockin rat models for gene insertion and modification. Point mutations, reporters, and humanization in rat backgrounds.",
+        "path": "/knockin-rat-models",
+        "fullUrl": "https://www.genetargeting.com/knockin-rat-models",
+        "category": "Knockin Rat Models",
+        "headline1": "Knockin Rat Models",
+        "headline2": "Custom knockin",
+        "headline3": "Request a Quote",
+        "description1": "Custom knockin rat models for gene insertion and modification. Point mutations, reporters,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "knockin-rat-models/metadata.ts",
+        "adGroup": "Knockin Services",
+        "keywords": [
+          "\"knockin mouse model\"",
+          "\"knockin mouse\"",
+          "\"gene knockin\"",
+          "\"custom knockin mouse\""
+        ]
+      },
+      {
+        "title": "Reporter Knockin Mouse Models",
+        "description": "Reporter knockin mice for tracking gene expression and cell lineage. Insert GFP, lacZ, luciferase, or Cre at endogenous loci. Since 1998.",
+        "path": "/reporter-knockin",
+        "fullUrl": "https://www.genetargeting.com/reporter-knockin",
+        "category": "Reporter Knockin Models",
+        "headline1": "Reporter Knockin Mouse Models",
+        "headline2": "Reporter knockin mice for",
+        "headline3": "Request a Quote",
+        "description1": "Reporter knockin mice for tracking gene expression and cell lineage. Insert GFP, lacZ,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "reporter-knockin/metadata.ts",
+        "adGroup": "Knockin Services",
+        "keywords": [
+          "\"reporter mouse model\"",
+          "\"reporter mouse\"",
+          "\"knockin mouse model\"",
+          "\"knockin mouse\"",
+          "\"gene knockin\"",
+          "\"custom knockin mouse\""
+        ]
+      },
+      {
+        "title": "Epitope Tag Knockin Mouse Models",
+        "description": "Tag knockin mice for protein detection and purification. Insert FLAG, HA, V5, or Myc tags at endogenous loci. Study native protein expression in vivo.",
+        "path": "/tag-knockin-mice",
+        "fullUrl": "https://www.genetargeting.com/tag-knockin-mice",
+        "category": "Tag Knockin Mice",
+        "headline1": "Epitope Tag Knockin Mouse",
+        "headline2": "Tag knockin mice for protein",
+        "headline3": "Request a Quote",
+        "description1": "Tag knockin mice for protein detection and purification. Insert FLAG, HA, V5, or Myc tags",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "tag-knockin-mice/metadata.ts",
+        "adGroup": "Knockin Services",
+        "keywords": [
+          "\"epitope mouse model\"",
+          "\"epitope mouse\"",
+          "\"knockin mouse model\"",
+          "\"knockin mouse\"",
+          "\"gene knockin\"",
+          "\"custom knockin mouse\""
+        ]
+      }
+    ],
+    "Knockout Services": [
+      {
+        "title": "Conditional Knockout Mouse Models",
+        "description": "Conditional knockout mice with tissue specific or inducible gene deletion using Cre LoxP technology. Precise spatiotemporal control.",
+        "path": "/conditional-knockout-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/conditional-knockout-mouse-models",
+        "category": "Conditional Knockout Mouse Models",
+        "headline1": "Conditional Knockout Mouse",
+        "headline2": "Conditional knockout mice",
+        "headline3": "Request a Quote",
+        "description1": "Conditional knockout mice with tissue specific or inducible gene deletion using Cre LoxP",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "conditional-knockout-mouse-models/metadata.ts",
+        "adGroup": "Knockout Services",
+        "keywords": [
+          "\"conditional mouse model\"",
+          "\"conditional mouse\"",
+          "\"knockout mouse model\"",
+          "\"knockout mouse\"",
+          "\"gene knockout\"",
+          "\"custom knockout mouse\""
+        ]
+      },
+      {
+        "title": "Conventional Knockout Mouse Models",
+        "description": "Conventional knockout mice for studying complete gene loss of function. Global gene deletion in all tissues. Germline confirmed, 2,500+ projects delivered.",
+        "path": "/conventional-knockout-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/conventional-knockout-mouse-models",
+        "category": "Conventional Knockout Mouse Models",
+        "headline1": "Conventional Knockout Mouse",
+        "headline2": "2,500+ projects",
+        "headline3": "Request a Quote",
+        "description1": "Conventional knockout mice for studying complete gene loss of function. Global gene",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "conventional-knockout-mouse-models/metadata.ts",
+        "adGroup": "Knockout Services",
+        "keywords": [
+          "\"conventional mouse model\"",
+          "\"conventional mouse\"",
+          "\"knockout mouse model\"",
+          "\"knockout mouse\"",
+          "\"gene knockout\"",
+          "\"custom knockout mouse\""
+        ]
+      },
+      {
+        "title": "Inducible Conditional Knockout Mice",
+        "description": "Inducible knockout mice with temporal control of gene deletion. Activate knockouts with tamoxifen or doxycycline at specific timepoints. Since 1998.",
+        "path": "/inducible-conditional-knockout",
+        "fullUrl": "https://www.genetargeting.com/inducible-conditional-knockout",
+        "category": "Inducible Conditional Knockout",
+        "headline1": "Inducible Conditional",
+        "headline2": "Inducible knockout mice with",
+        "headline3": "Request a Quote",
+        "description1": "Inducible knockout mice with temporal control of gene deletion. Activate knockouts with",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "inducible-conditional-knockout/metadata.ts",
+        "adGroup": "Knockout Services",
+        "keywords": [
+          "\"inducible mouse model\"",
+          "\"inducible mouse\"",
+          "\"conditional mouse model\"",
+          "\"conditional mouse\"",
+          "\"knockout mouse model\"",
+          "\"knockout mouse\"",
+          "\"gene knockout\"",
+          "\"custom knockout mouse\""
+        ]
+      },
+      {
+        "title": "Knockout Mouse Models",
+        "description": "Custom knockout mouse models for research. Complete gene deletion using ES cell or CRISPR technology. 26+ years experience, 2500+ projects.",
+        "path": "/knockout-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/knockout-mouse-models",
+        "category": "Knockout Mouse Models",
+        "headline1": "Knockout Mouse Models",
+        "headline2": "26+ years experience",
+        "headline3": "Request a Quote",
+        "description1": "Custom knockout mouse models for research. Complete gene deletion using ES cell or CRISPR",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "knockout-mouse-models/metadata.ts",
+        "adGroup": "Knockout Services",
+        "keywords": [
+          "\"knockout mouse model\"",
+          "\"knockout mouse\"",
+          "\"gene knockout\"",
+          "\"custom knockout mouse\""
+        ]
+      },
+      {
+        "title": "Knockout Rat Models",
+        "description": "Custom knockout rat models with complete gene deletion. Ideal for cardiovascular, metabolic, and behavioral research requiring larger animal size.",
+        "path": "/knockout-rat-models",
+        "fullUrl": "https://www.genetargeting.com/knockout-rat-models",
+        "category": "Knockout Rat Models",
+        "headline1": "Knockout Rat Models",
+        "headline2": "Custom knockout",
+        "headline3": "Request a Quote",
+        "description1": "Custom knockout rat models with complete gene deletion. Ideal for cardiovascular,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "knockout-rat-models/metadata.ts",
+        "adGroup": "Knockout Services",
+        "keywords": [
+          "\"knockout mouse model\"",
+          "\"knockout mouse\"",
+          "\"gene knockout\"",
+          "\"custom knockout mouse\""
+        ]
+      },
+      {
+        "title": "Tissue Specific Knockout Models",
+        "description": "Tissue specific knockout mice using Cre LoxP to delete genes in targeted cell types. Study gene function without embryonic lethality. Since 1998.",
+        "path": "/tissue-specific-knockout",
+        "fullUrl": "https://www.genetargeting.com/tissue-specific-knockout",
+        "category": "Tissue Specific Knockout Models",
+        "headline1": "Tissue Specific Knockout",
+        "headline2": "Tissue specific knockout mice",
+        "headline3": "Request a Quote",
+        "description1": "Tissue specific knockout mice using Cre LoxP to delete genes in targeted cell types.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "tissue-specific-knockout/metadata.ts",
+        "adGroup": "Knockout Services",
+        "keywords": [
+          "\"tissue mouse model\"",
+          "\"tissue mouse\"",
+          "\"specific mouse model\"",
+          "\"specific mouse\"",
+          "\"knockout mouse model\"",
+          "\"knockout mouse\"",
+          "\"gene knockout\"",
+          "\"custom knockout mouse\""
+        ]
+      },
+      {
+        "title": "Tumor Suppressor Knockout Mice | ITL",
+        "description": "Tumor suppressor knockout mice for cancer mechanism studies. P53, Rb, PTEN, and other cancer gene models for tumorigenesis and drug development.",
+        "path": "/tumor-suppressor-knockout-mice",
+        "fullUrl": "https://www.genetargeting.com/tumor-suppressor-knockout-mice",
+        "category": "Tumor Suppressor Knockout Mice",
+        "headline1": "Tumor Suppressor Knockout",
+        "headline2": "Tumor suppressor knockout",
+        "headline3": "Request a Quote",
+        "description1": "Tumor suppressor knockout mice for cancer mechanism studies. P53, Rb, PTEN, and other",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "tumor-suppressor-knockout-mice/metadata.ts",
+        "adGroup": "Knockout Services",
+        "keywords": [
+          "\"tumor mouse model\"",
+          "\"tumor mouse\"",
+          "\"suppressor mouse model\"",
+          "\"suppressor mouse\"",
+          "\"knockout mouse model\"",
+          "\"knockout mouse\"",
+          "\"gene knockout\"",
+          "\"custom knockout mouse\""
+        ]
+      }
+    ],
+    "Resources": [
+      {
+        "title": "Conditional vs Conventional Knockout Guide",
+        "description": "Compare conditional and conventional knockout strategies. Learn when to choose tissue specific or inducible knockouts over global gene deletion.",
+        "path": "/conditional-vs-conventional-guide",
+        "fullUrl": "https://www.genetargeting.com/conditional-vs-conventional-guide",
+        "category": "General",
+        "headline1": "Conditional vs Conventional",
+        "headline2": "Compare conditional and",
+        "headline3": "Request a Quote",
+        "description1": "Compare conditional and conventional knockout strategies. Learn when to choose tissue",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "conditional-vs-conventional-guide/metadata.ts",
+        "adGroup": "Resources",
+        "keywords": [
+          "\"conditional mouse model\"",
+          "\"conditional mouse\"",
+          "\"conventional mouse model\"",
+          "\"conventional mouse\"",
+          "\"knockout mouse model\"",
+          "\"knockout mouse\"",
+          "\"guide mouse model\"",
+          "\"guide mouse\""
+        ]
+      },
+      {
+        "title": "FAQ | Mouse Model Questions",
+        "description": "Answers to common questions about custom mouse models, gene targeting, timelines, costs, and model selection. Get the info you need.",
+        "path": "/faq",
+        "fullUrl": "https://www.genetargeting.com/faq",
+        "category": "FAQ",
+        "headline1": "FAQ | Mouse Model Questions",
+        "headline2": "custom mouse",
+        "headline3": "Request a Quote",
+        "description1": "Answers to common questions about custom mouse models, gene targeting, timelines, costs,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "faq/metadata.ts",
+        "adGroup": "Resources",
+        "keywords": [
+          "\"questions mouse model\"",
+          "\"questions mouse\""
+        ]
+      },
+      {
+        "title": "Mouse Model Research Resources",
+        "description": "Guides, FAQs, and educational content for planning mouse model experiments. Knockout strategies, Cre lines, and strain selection.",
+        "path": "/resources",
+        "fullUrl": "https://www.genetargeting.com/resources",
+        "category": "General",
+        "headline1": "Mouse Model Research Resources",
+        "headline2": "Guides, FAQs, and educational",
+        "headline3": "Request a Quote",
+        "description1": "Guides, FAQs, and educational content for planning mouse model experiments. Knockout",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "resources/metadata.ts",
+        "adGroup": "Resources",
+        "keywords": [
+          "\"research mouse model\"",
+          "\"research mouse\"",
+          "\"resources mouse model\"",
+          "\"resources mouse\""
+        ]
+      }
+    ],
+    "Conditional Systems": [
+      {
+        "title": "Cre Driver Line Selection Guide",
+        "description": "Guide to selecting the right Cre driver for your floxed allele. Compare constitutive, inducible, and tissue specific Cre lines for your experiment.",
+        "path": "/cre-line-selection-guide",
+        "fullUrl": "https://www.genetargeting.com/cre-line-selection-guide",
+        "category": "Cre Line Selection Guide",
+        "headline1": "Cre Driver Line Selection",
+        "headline2": "Guide to selecting the right",
+        "headline3": "Request a Quote",
+        "description1": "Guide to selecting the right Cre driver for your floxed allele. Compare constitutive,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "cre-line-selection-guide/metadata.ts",
+        "adGroup": "Conditional Systems",
+        "keywords": [
+          "\"driver mouse model\"",
+          "\"driver mouse\"",
+          "\"line mouse model\"",
+          "\"line mouse\"",
+          "\"selection mouse model\"",
+          "\"selection mouse\"",
+          "\"guide mouse model\"",
+          "\"guide mouse\""
+        ]
+      },
+      {
+        "title": "Cre Lox System",
+        "description": "Cre LoxP recombination system for conditional gene targeting. Tissue specific and inducible knockouts.",
+        "path": "/cre-lox-system",
+        "fullUrl": "https://www.genetargeting.com/cre-lox-system",
+        "category": "Cre Lox System",
+        "headline1": "Cre Lox System",
+        "headline2": "Cre LoxP recombination system",
+        "headline3": "Request a Quote",
+        "description1": "Cre LoxP recombination system for conditional gene targeting. Tissue specific and",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "cre-lox-system/metadata.ts",
+        "adGroup": "Conditional Systems",
+        "keywords": [
+          "\"system mouse model\"",
+          "\"system mouse\""
+        ]
+      },
+      {
+        "title": "Cre Recombinase Mouse Lines",
+        "description": "Cre recombinase mice for conditional gene targeting experiments. Cross with floxed alleles to achieve tissue specific or inducible knockouts.",
+        "path": "/cre-recombinase-mice",
+        "fullUrl": "https://www.genetargeting.com/cre-recombinase-mice",
+        "category": "Cre Recombinase Mice",
+        "headline1": "Cre Recombinase Mouse Lines",
+        "headline2": "Cre recombinase mice for",
+        "headline3": "Request a Quote",
+        "description1": "Cre recombinase mice for conditional gene targeting experiments. Cross with floxed",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "cre-recombinase-mice/metadata.ts",
+        "adGroup": "Conditional Systems",
+        "keywords": [
+          "\"recombinase mouse model\"",
+          "\"recombinase mouse\"",
+          "\"lines mouse model\"",
+          "\"lines mouse\""
+        ]
+      },
+      {
+        "title": "Flp FRT Recombination System",
+        "description": "Flp FRT recombination for removing selection cassettes and creating dual recombinase models. Combine with Cre lox for sequential gene modifications.",
+        "path": "/flp-frt-system",
+        "fullUrl": "https://www.genetargeting.com/flp-frt-system",
+        "category": "Flp FRT System",
+        "headline1": "Flp FRT Recombination System",
+        "headline2": "Flp FRT recombination for",
+        "headline3": "Request a Quote",
+        "description1": "Flp FRT recombination for removing selection cassettes and creating dual recombinase",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "flp-frt-system/metadata.ts",
+        "adGroup": "Conditional Systems",
+        "keywords": [
+          "\"recombination mouse model\"",
+          "\"recombination mouse\"",
+          "\"system mouse model\"",
+          "\"system mouse\""
+        ]
+      },
+      {
+        "title": "Inducible ROSA26 Expression Systems",
+        "description": "Inducible ROSA26 systems for controlled transgene expression. Combine safe harbor reliability with temporal control using Cre or drug induction.",
+        "path": "/inducible-rosa26",
+        "fullUrl": "https://www.genetargeting.com/inducible-rosa26",
+        "category": "General",
+        "headline1": "Inducible ROSA26 Expression",
+        "headline2": "Inducible ROSA26 systems for",
+        "headline3": "Request a Quote",
+        "description1": "Inducible ROSA26 systems for controlled transgene expression. Combine safe harbor",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "inducible-rosa26/metadata.ts",
+        "adGroup": "Conditional Systems",
+        "keywords": [
+          "\"inducible mouse model\"",
+          "\"inducible mouse\"",
+          "\"rosa26 mouse model\"",
+          "\"rosa26 mouse\"",
+          "\"expression mouse model\"",
+          "\"expression mouse\"",
+          "\"systems mouse model\"",
+          "\"systems mouse\""
+        ]
+      },
+      {
+        "title": "ROSA26 Safe Harbor Locus",
+        "description": "ROSA26 safe harbor locus for reliable transgene expression. Ubiquitous expression without disrupting endogenous genes. Proven in thousands of models.",
+        "path": "/rosa26",
+        "fullUrl": "https://www.genetargeting.com/rosa26",
+        "category": "General",
+        "headline1": "ROSA26 Safe Harbor Locus",
+        "headline2": "ROSA26 safe harbor locus for",
+        "headline3": "Request a Quote",
+        "description1": "ROSA26 safe harbor locus for reliable transgene expression. Ubiquitous expression without",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "rosa26/metadata.ts",
+        "adGroup": "Conditional Systems",
+        "keywords": [
+          "\"rosa26 mouse model\"",
+          "\"rosa26 mouse\"",
+          "\"safe mouse model\"",
+          "\"safe mouse\"",
+          "\"harbor mouse model\"",
+          "\"harbor mouse\"",
+          "\"locus mouse model\"",
+          "\"locus mouse\""
+        ]
+      },
+      {
+        "title": "Tamoxifen Inducible Cre Systems",
+        "description": "Tamoxifen inducible CreERT2 for temporal control of gene deletion. Activate recombination at any developmental stage with drug administration.",
+        "path": "/tamoxifen-inducible-cre",
+        "fullUrl": "https://www.genetargeting.com/tamoxifen-inducible-cre",
+        "category": "Tamoxifen Inducible Cre",
+        "headline1": "Tamoxifen Inducible Cre",
+        "headline2": "Tamoxifen inducible CreERT2",
+        "headline3": "Request a Quote",
+        "description1": "Tamoxifen inducible CreERT2 for temporal control of gene deletion. Activate recombination",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "tamoxifen-inducible-cre/metadata.ts",
+        "adGroup": "Conditional Systems",
+        "keywords": [
+          "\"tamoxifen mouse model\"",
+          "\"tamoxifen mouse\"",
+          "\"inducible mouse model\"",
+          "\"inducible mouse\"",
+          "\"systems mouse model\"",
+          "\"systems mouse\""
+        ]
+      },
+      {
+        "title": "Tissue Specific Cre Driver Lines",
+        "description": "Tissue specific Cre lines for targeted gene deletion in specific cell types. Restrict knockouts to liver, brain, heart, or immune cells.",
+        "path": "/tissue-specific-cre-lines",
+        "fullUrl": "https://www.genetargeting.com/tissue-specific-cre-lines",
+        "category": "Tissue Specific Cre Lines",
+        "headline1": "Tissue Specific Cre Driver",
+        "headline2": "Tissue specific Cre lines for",
+        "headline3": "Request a Quote",
+        "description1": "Tissue specific Cre lines for targeted gene deletion in specific cell types. Restrict",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "tissue-specific-cre-lines/metadata.ts",
+        "adGroup": "Conditional Systems",
+        "keywords": [
+          "\"tissue mouse model\"",
+          "\"tissue mouse\"",
+          "\"specific mouse model\"",
+          "\"specific mouse\"",
+          "\"driver mouse model\"",
+          "\"driver mouse\"",
+          "\"lines mouse model\"",
+          "\"lines mouse\""
+        ]
+      }
+    ],
+    "Humanized Models": [
+      {
+        "title": "CTLA4 Humanized Mouse Models",
+        "description": "CTLA4 humanized mice expressing human CTLA4 for testing anti CTLA4 checkpoint inhibitor antibodies. Validated for immuno oncology drug development.",
+        "path": "/ctla4-humanized-mice",
+        "fullUrl": "https://www.genetargeting.com/ctla4-humanized-mice",
+        "category": "CTLA4 Humanized Mice",
+        "headline1": "CTLA4 Humanized Mouse Models",
+        "headline2": "CTLA4 humanized mice expressin",
+        "headline3": "Request a Quote",
+        "description1": "CTLA4 humanized mice expressing human CTLA4 for testing anti CTLA4 checkpoint inhibitor",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "ctla4-humanized-mice/metadata.ts",
+        "adGroup": "Humanized Models",
+        "keywords": [
+          "\"ctla4 mouse model\"",
+          "\"ctla4 mouse\"",
+          "\"humanized mouse model\"",
+          "\"humanized mouse\""
+        ]
+      },
+      {
+        "title": "Humanized Immune Checkpoint Mice",
+        "description": "Humanized immune checkpoint mice for immuno oncology drug development. Test human PD1, PDL1, CTLA4, and other checkpoint antibodies in vivo.",
+        "path": "/humanized-immune-checkpoint-mice",
+        "fullUrl": "https://www.genetargeting.com/humanized-immune-checkpoint-mice",
+        "category": "Humanized Immune Checkpoint Mice",
+        "headline1": "Humanized Immune Checkpoint",
+        "headline2": "Humanized immune checkpoint",
+        "headline3": "Request a Quote",
+        "description1": "Humanized immune checkpoint mice for immuno oncology drug development. Test human PD1,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "humanized-immune-checkpoint-mice/metadata.ts",
+        "adGroup": "Humanized Models",
+        "keywords": [
+          "\"humanized mouse model\"",
+          "\"humanized mouse\"",
+          "\"immune mouse model\"",
+          "\"immune mouse\"",
+          "\"checkpoint mouse model\"",
+          "\"checkpoint mouse\""
+        ]
+      },
+      {
+        "title": "Humanized Mouse Models",
+        "description": "Humanized mouse models replacing mouse genes with human orthologs. Ideal for drug development and translational research.",
+        "path": "/humanized-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/humanized-mouse-models",
+        "category": "Humanized Mouse Models",
+        "headline1": "Humanized Mouse Models",
+        "headline2": "Humanized mouse models",
+        "headline3": "Request a Quote",
+        "description1": "Humanized mouse models replacing mouse genes with human orthologs. Ideal for drug",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "humanized-mouse-models/metadata.ts",
+        "adGroup": "Humanized Models",
+        "keywords": [
+          "\"humanized mouse model\"",
+          "\"humanized mouse\""
+        ]
+      },
+      {
+        "title": "LAG3 Humanized Mouse Models",
+        "description": "LAG3 humanized mice expressing human LAG3 for testing anti LAG3 checkpoint inhibitor antibodies. Next generation immuno oncology target validation.",
+        "path": "/lag3-humanized-mice",
+        "fullUrl": "https://www.genetargeting.com/lag3-humanized-mice",
+        "category": "LAG3 Humanized Mice",
+        "headline1": "LAG3 Humanized Mouse Models",
+        "headline2": "LAG3 humanized mice expressing",
+        "headline3": "Request a Quote",
+        "description1": "LAG3 humanized mice expressing human LAG3 for testing anti LAG3 checkpoint inhibitor",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "lag3-humanized-mice/metadata.ts",
+        "adGroup": "Humanized Models",
+        "keywords": [
+          "\"lag3 mouse model\"",
+          "\"lag3 mouse\"",
+          "\"humanized mouse model\"",
+          "\"humanized mouse\""
+        ]
+      },
+      {
+        "title": "PD1 Humanized Mouse Models",
+        "description": "PD1 humanized mice expressing human PDCD1 for testing anti PD1 checkpoint inhibitor antibodies. Validated for immuno oncology research.",
+        "path": "/pd1-humanized-mice",
+        "fullUrl": "https://www.genetargeting.com/pd1-humanized-mice",
+        "category": "PD1 Humanized Mice",
+        "headline1": "PD1 Humanized Mouse Models",
+        "headline2": "PD1 humanized mice expressing",
+        "headline3": "Request a Quote",
+        "description1": "PD1 humanized mice expressing human PDCD1 for testing anti PD1 checkpoint inhibitor",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "pd1-humanized-mice/metadata.ts",
+        "adGroup": "Humanized Models",
+        "keywords": [
+          "\"humanized mouse model\"",
+          "\"humanized mouse\""
+        ]
+      },
+      {
+        "title": "PDL1 Humanized Mouse Models",
+        "description": "PDL1 humanized mice expressing human CD274 for testing anti PDL1 checkpoint inhibitor antibodies. Validated for cancer immunotherapy studies.",
+        "path": "/pdl1-humanized-mice",
+        "fullUrl": "https://www.genetargeting.com/pdl1-humanized-mice",
+        "category": "PDL1 Humanized Mice",
+        "headline1": "PDL1 Humanized Mouse Models",
+        "headline2": "PDL1 humanized mice expressing",
+        "headline3": "Request a Quote",
+        "description1": "PDL1 humanized mice expressing human CD274 for testing anti PDL1 checkpoint inhibitor",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "pdl1-humanized-mice/metadata.ts",
+        "adGroup": "Humanized Models",
+        "keywords": [
+          "\"pdl1 mouse model\"",
+          "\"pdl1 mouse\"",
+          "\"humanized mouse model\"",
+          "\"humanized mouse\""
+        ]
+      },
+      {
+        "title": "TIM3 Humanized Mouse Models",
+        "description": "TIM3 humanized mice expressing human HAVCR2 for testing anti TIM3 checkpoint inhibitor antibodies. Emerging target for cancer immunotherapy research.",
+        "path": "/tim3-humanized-mice",
+        "fullUrl": "https://www.genetargeting.com/tim3-humanized-mice",
+        "category": "TIM3 Humanized Mice",
+        "headline1": "TIM3 Humanized Mouse Models",
+        "headline2": "TIM3 humanized mice expressing",
+        "headline3": "Request a Quote",
+        "description1": "TIM3 humanized mice expressing human HAVCR2 for testing anti TIM3 checkpoint inhibitor",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "tim3-humanized-mice/metadata.ts",
+        "adGroup": "Humanized Models",
+        "keywords": [
+          "\"tim3 mouse model\"",
+          "\"tim3 mouse\"",
+          "\"humanized mouse model\"",
+          "\"humanized mouse\""
+        ]
+      }
+    ],
+    "Metabolic": [
+      {
+        "title": "Diabetes Mouse Models | ITL",
+        "description": "Diabetes mouse models for studying insulin signaling, beta cell function, and glucose metabolism. Type 1 and Type 2 disease mechanisms.",
+        "path": "/diabetes-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/diabetes-mouse-models",
+        "category": "General",
+        "headline1": "Diabetes Mouse Models | ITL",
+        "headline2": "Diabetes mouse models for",
+        "headline3": "Request a Quote",
+        "description1": "Diabetes mouse models for studying insulin signaling, beta cell function, and glucose",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "diabetes-mouse-models/metadata.ts",
+        "adGroup": "Metabolic",
+        "keywords": [
+          "\"diabetes mouse model\"",
+          "\"diabetes mouse\""
+        ]
+      },
+      {
+        "title": "Metabolic Disease Mouse Models | ITL",
+        "description": "Metabolic disease mouse models for studying lipid metabolism, energy balance, and metabolic syndrome. Diabetes, obesity, and NAFLD research platforms.",
+        "path": "/metabolic-disease-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/metabolic-disease-mouse-models",
+        "category": "Metabolic Disease Mouse Models",
+        "headline1": "Metabolic Disease Mouse",
+        "headline2": "Metabolic disease mouse",
+        "headline3": "Request a Quote",
+        "description1": "Metabolic disease mouse models for studying lipid metabolism, energy balance, and",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "metabolic-disease-mouse-models/metadata.ts",
+        "adGroup": "Metabolic",
+        "keywords": [
+          "\"metabolic mouse model\"",
+          "\"metabolic mouse\"",
+          "\"disease mouse model\"",
+          "\"disease mouse\""
+        ]
+      },
+      {
+        "title": "NASH and MASH Mouse Models | ITL",
+        "description": "NASH and MASH mouse models for studying liver steatosis, fibrosis, and hepatic inflammation. Drug testing platforms for fatty liver disease research.",
+        "path": "/nash-mash-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/nash-mash-mouse-models",
+        "category": "General",
+        "headline1": "NASH and MASH Mouse Models |",
+        "headline2": "NASH and MASH mouse models",
+        "headline3": "Request a Quote",
+        "description1": "NASH and MASH mouse models for studying liver steatosis, fibrosis, and hepatic inflammatio",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "nash-mash-mouse-models/metadata.ts",
+        "adGroup": "Metabolic",
+        "keywords": [
+          "\"nash mouse model\"",
+          "\"nash mouse\"",
+          "\"mash mouse model\"",
+          "\"mash mouse\""
+        ]
+      },
+      {
+        "title": "Obesity Mouse Models | ITL",
+        "description": "Obesity mouse models for studying energy homeostasis, adipose biology, and weight regulation. Leptin pathway, metabolic genes, and diet induced models.",
+        "path": "/obesity-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/obesity-mouse-models",
+        "category": "General",
+        "headline1": "Obesity Mouse Models | ITL",
+        "headline2": "Obesity mouse models for",
+        "headline3": "Request a Quote",
+        "description1": "Obesity mouse models for studying energy homeostasis, adipose biology, and weight",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "obesity-mouse-models/metadata.ts",
+        "adGroup": "Metabolic",
+        "keywords": [
+          "\"obesity mouse model\"",
+          "\"obesity mouse\""
+        ]
+      }
+    ],
+    "Oncology": [
+      {
+        "title": "Immuno Oncology Mouse Models | ITL",
+        "description": "Immuno oncology mouse models for studying tumor immunity and checkpoint inhibitors. Humanized immune checkpoint mice for cancer immunotherapy research.",
+        "path": "/immuno-oncology-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/immuno-oncology-mouse-models",
+        "category": "Immuno Oncology Mouse Models",
+        "headline1": "Immuno Oncology Mouse Models",
+        "headline2": "Immuno oncology mouse models",
+        "headline3": "Request a Quote",
+        "description1": "Immuno oncology mouse models for studying tumor immunity and checkpoint inhibitors.",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "immuno-oncology-mouse-models/metadata.ts",
+        "adGroup": "Oncology",
+        "keywords": [
+          "\"immuno mouse model\"",
+          "\"immuno mouse\"",
+          "\"oncology mouse model\"",
+          "\"oncology mouse\""
+        ]
+      },
+      {
+        "title": "Oncology Mouse Models | ITL",
+        "description": "Oncology mouse models for cancer research and drug development. Tumor suppressors, oncogenes, and genetically engineered mouse model platforms.",
+        "path": "/oncology-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/oncology-mouse-models",
+        "category": "Oncology Mouse Models",
+        "headline1": "Oncology Mouse Models | ITL",
+        "headline2": "Oncology mouse models for",
+        "headline3": "Request a Quote",
+        "description1": "Oncology mouse models for cancer research and drug development. Tumor suppressors,",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "oncology-mouse-models/metadata.ts",
+        "adGroup": "Oncology",
+        "keywords": [
+          "\"oncology mouse model\"",
+          "\"oncology mouse\""
+        ]
+      },
+      {
+        "title": "Syngeneic Tumor Models | ITL",
+        "description": "Syngeneic tumor models for immunotherapy testing with intact immune systems. Study tumor microenvironment and immune checkpoint responses in vivo.",
+        "path": "/syngeneic-tumor-models",
+        "fullUrl": "https://www.genetargeting.com/syngeneic-tumor-models",
+        "category": "General",
+        "headline1": "Syngeneic Tumor Models | ITL",
+        "headline2": "Syngeneic tumor models for",
+        "headline3": "Request a Quote",
+        "description1": "Syngeneic tumor models for immunotherapy testing with intact immune systems. Study tumor",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "syngeneic-tumor-models/metadata.ts",
+        "adGroup": "Oncology",
+        "keywords": [
+          "\"syngeneic mouse model\"",
+          "\"syngeneic mouse\"",
+          "\"tumor mouse model\"",
+          "\"tumor mouse\""
+        ]
+      }
+    ],
+    "Rare Disease": [
+      {
+        "title": "Rare Disease Mouse Models | ITL",
+        "description": "Rare disease mouse models for studying orphan diseases and genetic disorders. Patient mutation knockins for gene therapy and drug development testing.",
+        "path": "/rare-disease-mouse-models",
+        "fullUrl": "https://www.genetargeting.com/rare-disease-mouse-models",
+        "category": "Rare Disease Mouse Models",
+        "headline1": "Rare Disease Mouse Models |",
+        "headline2": "Rare disease mouse models for",
+        "headline3": "Request a Quote",
+        "description1": "Rare disease mouse models for studying orphan diseases and genetic disorders. Patient",
+        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+        "sourcePath": "rare-disease-mouse-models/metadata.ts",
+        "adGroup": "Rare Disease",
+        "keywords": [
+          "\"rare mouse model\"",
+          "\"rare mouse\"",
+          "\"disease mouse model\"",
+          "\"disease mouse\""
+        ]
+      }
+    ]
+  },
+  "pages": [
+    {
+      "title": "All Catalog Mouse Models",
+      "description": "Complete list of ready made mouse models available for immediate order. Humanized, reporter, and disease models with fast delivery.",
+      "path": "/all-catalog-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/all-catalog-mouse-models",
+      "category": "All Catalog Mouse Models",
+      "headline1": "All Catalog Mouse Models",
+      "headline2": "Complete list of ready made",
+      "headline3": "Request a Quote",
+      "description1": "Complete list of ready made mouse models available for immediate order. Humanized,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "all-catalog-mouse-models/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"catalog mouse model\"",
+        "\"catalog mouse\""
+      ]
+    },
+    {
+      "title": "Allergy and Asthma Mouse Models | ITL",
+      "description": "Allergy and asthma mouse models for studying airway inflammation, IgE responses, and hypersensitivity. Test therapeutics targeting Th2 immunity pathways.",
+      "path": "/allergy-asthma-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/allergy-asthma-mouse-models",
+      "category": "General",
+      "headline1": "Allergy and Asthma Mouse",
+      "headline2": "Allergy and asthma mouse",
+      "headline3": "Request a Quote",
+      "description1": "Allergy and asthma mouse models for studying airway inflammation, IgE responses, and",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "allergy-asthma-mouse-models/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"allergy mouse model\"",
+        "\"allergy mouse\"",
+        "\"asthma mouse model\"",
+        "\"asthma mouse\""
+      ]
+    },
+    {
+      "title": "ALS Mouse Models | ITL",
+      "description": "ALS mouse models for studying motor neuron degeneration and disease mechanisms. SOD1, TDP43, FUS, and C9orf72 gene targeting for therapeutic research.",
+      "path": "/als-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/als-mouse-models",
+      "category": "General",
+      "headline1": "ALS Mouse Models | ITL",
+      "headline2": "ALS mouse models for studying",
+      "headline3": "Request a Quote",
+      "description1": "ALS mouse models for studying motor neuron degeneration and disease mechanisms. SOD1,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "als-mouse-models/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": []
+    },
+    {
+      "title": "Alzheimer",
+      "description": "Alzheimer",
+      "path": "/alzheimers-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/alzheimers-mouse-models",
+      "category": "General",
+      "headline1": "Alzheimer",
+      "headline2": "Alzheimer",
+      "headline3": "Request a Quote",
+      "description1": "Alzheimer",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "alzheimers-mouse-models/metadata.ts",
+      "adGroup": "Neuroscience",
+      "keywords": [
+        "\"alzheimer mouse model\"",
+        "\"alzheimer mouse\""
+      ]
+    },
+    {
+      "title": "Atherosclerosis Mouse Models | ITL",
+      "description": "Atherosclerosis mouse models for studying plaque formation, lipid metabolism, and vascular inflammation. ApoE and LDLR knockout backgrounds available.",
+      "path": "/atherosclerosis-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/atherosclerosis-mouse-models",
+      "category": "General",
+      "headline1": "Atherosclerosis Mouse Models",
+      "headline2": "Atherosclerosis mouse models",
+      "headline3": "Request a Quote",
+      "description1": "Atherosclerosis mouse models for studying plaque formation, lipid metabolism, and",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "atherosclerosis-mouse-models/metadata.ts",
+      "adGroup": "Cardiovascular",
+      "keywords": [
+        "\"atherosclerosis mouse model\"",
+        "\"atherosclerosis mouse\""
+      ]
+    },
+    {
+      "title": "Autoimmune Disease Mice | ITL",
+      "description": "Autoimmune disease mice for studying immune tolerance breakdown and self reactive immunity. Lupus, arthritis, and multiple sclerosis model platforms.",
+      "path": "/autoimmune-disease-mice",
+      "fullUrl": "https://www.genetargeting.com/autoimmune-disease-mice",
+      "category": "General",
+      "headline1": "Autoimmune Disease Mice | ITL",
+      "headline2": "Autoimmune disease mice for",
+      "headline3": "Request a Quote",
+      "description1": "Autoimmune disease mice for studying immune tolerance breakdown and self reactive",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "autoimmune-disease-mice/metadata.ts",
+      "adGroup": "Immunology",
+      "keywords": [
+        "\"autoimmune mouse model\"",
+        "\"autoimmune mouse\"",
+        "\"disease mouse model\"",
+        "\"disease mouse\""
+      ]
+    },
+    {
+      "title": "BAC Recombineering for Large Modifications",
+      "description": "BAC recombineering for large scale genomic modifications. Engineer complex alleles and humanize entire gene loci with bacterial artificial chromosomes.",
+      "path": "/bac-to-bac-large-scale-targeting",
+      "fullUrl": "https://www.genetargeting.com/bac-to-bac-large-scale-targeting",
+      "category": "General",
+      "headline1": "BAC Recombineering for Large",
+      "headline2": "BAC recombineering for large",
+      "headline3": "Request a Quote",
+      "description1": "BAC recombineering for large scale genomic modifications. Engineer complex alleles and",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "bac-to-bac-large-scale-targeting/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"recombineering mouse model\"",
+        "\"recombineering mouse\"",
+        "\"large mouse model\"",
+        "\"large mouse\"",
+        "\"modifications mouse model\"",
+        "\"modifications mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Backcrossing Services",
+      "description": "Transfer genetic modifications to C57BL/6, BALB/c, or other backgrounds. Speed congenic breeding with marker assisted selection.",
+      "path": "/backcrossing-services",
+      "fullUrl": "https://www.genetargeting.com/backcrossing-services",
+      "category": "Backcrossing Services",
+      "headline1": "Mouse Backcrossing Services",
+      "headline2": "Transfer genetic modifications",
+      "headline3": "Request a Quote",
+      "description1": "Transfer genetic modifications to C57BL/6, BALB/c, or other backgrounds. Speed congenic",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "backcrossing-services/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"backcrossing mouse model\"",
+        "\"backcrossing mouse\""
+      ]
+    },
+    {
+      "title": "BALB/c Mouse Strain Background",
+      "description": "BALB/c mouse background for immunology and cancer research. Known for monoclonal antibody production and distinct immune response characteristics.",
+      "path": "/balbc-mouse-background",
+      "fullUrl": "https://www.genetargeting.com/balbc-mouse-background",
+      "category": "General",
+      "headline1": "BALB/c Mouse Strain Background",
+      "headline2": "BALB/c mouse background for",
+      "headline3": "Request a Quote",
+      "description1": "BALB/c mouse background for immunology and cancer research. Known for monoclonal antibody",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "balbc-mouse-background/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"balb/c mouse model\"",
+        "\"balb/c mouse\"",
+        "\"strain mouse model\"",
+        "\"strain mouse\"",
+        "\"background mouse model\"",
+        "\"background mouse\""
+      ]
+    },
+    {
+      "title": "Breeding Scheme Architect",
+      "description": "Breeding Scheme Architect from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+      "path": "/breeding-scheme-architect",
+      "fullUrl": "https://www.genetargeting.com/breeding-scheme-architect",
+      "category": "Breeding Scheme Architect",
+      "headline1": "Breeding Scheme Architect",
+      "headline2": "Custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Breeding Scheme Architect from ingenious targeting laboratory. Custom mouse model",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "breeding-scheme-architect/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"breeding mouse model\"",
+        "\"breeding mouse\"",
+        "\"scheme mouse model\"",
+        "\"scheme mouse\"",
+        "\"architect mouse model\"",
+        "\"architect mouse\""
+      ]
+    },
+    {
+      "title": "C57BL/6 Mouse Strain Background",
+      "description": "C57BL/6 mouse background for gene targeting research. The most used inbred strain with well characterized genetics and extensive phenotype data.",
+      "path": "/c57bl6-mouse-background",
+      "fullUrl": "https://www.genetargeting.com/c57bl6-mouse-background",
+      "category": "General",
+      "headline1": "C57BL/6 Mouse Strain Backgroun",
+      "headline2": "C57BL/6 mouse background for",
+      "headline3": "Request a Quote",
+      "description1": "C57BL/6 mouse background for gene targeting research. The most used inbred strain with",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "c57bl6-mouse-background/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"c57bl/6 mouse model\"",
+        "\"c57bl/6 mouse\"",
+        "\"strain mouse model\"",
+        "\"strain mouse\"",
+        "\"background mouse model\"",
+        "\"background mouse\""
+      ]
+    },
+    {
+      "title": "Cardiovascular Mouse Models | ITL",
+      "description": "Cardiovascular mouse models for studying heart disease, vascular biology, and cardiac function. Atherosclerosis, cardiomyopathy, and arrhythmia platforms.",
+      "path": "/cardiovascular-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/cardiovascular-mouse-models",
+      "category": "Cardiovascular Mouse Models",
+      "headline1": "Cardiovascular Mouse Models |",
+      "headline2": "Cardiovascular mouse models",
+      "headline3": "Request a Quote",
+      "description1": "Cardiovascular mouse models for studying heart disease, vascular biology, and cardiac",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "cardiovascular-mouse-models/metadata.ts",
+      "adGroup": "Cardiovascular",
+      "keywords": [
+        "\"cardiovascular mouse model\"",
+        "\"cardiovascular mouse\""
+      ]
+    },
+    {
+      "title": "Ready Made Mouse Model Catalog",
+      "description": "Browse ready made mouse models including humanized checkpoint mice and reporter strains. Faster timelines than custom projects.",
+      "path": "/catalog-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/catalog-mouse-models",
+      "category": "Catalog Mouse Models",
+      "headline1": "Ready Made Mouse Model Catalog",
+      "headline2": "custom projects",
+      "headline3": "Request a Quote",
+      "description1": "Browse ready made mouse models including humanized checkpoint mice and reporter strains.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "catalog-mouse-models/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"ready mouse model\"",
+        "\"ready mouse\"",
+        "\"made mouse model\"",
+        "\"made mouse\"",
+        "\"catalog mouse model\"",
+        "\"catalog mouse\""
+      ]
+    },
+    {
+      "title": "cDNA Knockin Mouse Models",
+      "description": "cDNA knockin mice for expressing genes under endogenous regulatory control. Insert coding sequences at specific loci. Germline confirmed delivery.",
+      "path": "/cdna-knockin",
+      "fullUrl": "https://www.genetargeting.com/cdna-knockin",
+      "category": "Cdna Knockin",
+      "headline1": "cDNA Knockin Mouse Models",
+      "headline2": "cDNA knockin mice for",
+      "headline3": "Request a Quote",
+      "description1": "cDNA knockin mice for expressing genes under endogenous regulatory control. Insert coding",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "cdna-knockin/metadata.ts",
+      "adGroup": "Knockin Services",
+      "keywords": [
+        "\"cdna mouse model\"",
+        "\"cdna mouse\"",
+        "\"knockin mouse model\"",
+        "\"knockin mouse\"",
+        "\"gene knockin\"",
+        "\"custom knockin mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Colony Management Services",
+      "description": "Full service mouse colony management including breeding, health monitoring, and record keeping. Reduce internal costs while maintaining quality control.",
+      "path": "/colony-management-services",
+      "fullUrl": "https://www.genetargeting.com/colony-management-services",
+      "category": "Colony Management Services",
+      "headline1": "Mouse Colony Management",
+      "headline2": "Full service mouse colony",
+      "headline3": "Request a Quote",
+      "description1": "Full service mouse colony management including breeding, health monitoring, and record",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "colony-management-services/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"colony mouse model\"",
+        "\"colony mouse\"",
+        "\"management mouse model\"",
+        "\"management mouse\""
+      ]
+    },
+    {
+      "title": "Conditional Knockin Mouse Models",
+      "description": "Conditional knockin mice for controlled gene expression. Activate transgenes in specific tissues or timepoints using Cre LoxP. 2,500+ projects since 1998.",
+      "path": "/conditional-knockin-mice",
+      "fullUrl": "https://www.genetargeting.com/conditional-knockin-mice",
+      "category": "Conditional Knockin Mice",
+      "headline1": "Conditional Knockin Mouse",
+      "headline2": "2,500+ projects",
+      "headline3": "Request a Quote",
+      "description1": "Conditional knockin mice for controlled gene expression. Activate transgenes in specific",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "conditional-knockin-mice/metadata.ts",
+      "adGroup": "Knockin Services",
+      "keywords": [
+        "\"conditional mouse model\"",
+        "\"conditional mouse\"",
+        "\"knockin mouse model\"",
+        "\"knockin mouse\"",
+        "\"gene knockin\"",
+        "\"custom knockin mouse\""
+      ]
+    },
+    {
+      "title": "Conditional Knockout Mouse Models",
+      "description": "Conditional knockout mice with tissue specific or inducible gene deletion using Cre LoxP technology. Precise spatiotemporal control.",
+      "path": "/conditional-knockout-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/conditional-knockout-mouse-models",
+      "category": "Conditional Knockout Mouse Models",
+      "headline1": "Conditional Knockout Mouse",
+      "headline2": "Conditional knockout mice",
+      "headline3": "Request a Quote",
+      "description1": "Conditional knockout mice with tissue specific or inducible gene deletion using Cre LoxP",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "conditional-knockout-mouse-models/metadata.ts",
+      "adGroup": "Knockout Services",
+      "keywords": [
+        "\"conditional mouse model\"",
+        "\"conditional mouse\"",
+        "\"knockout mouse model\"",
+        "\"knockout mouse\"",
+        "\"gene knockout\"",
+        "\"custom knockout mouse\""
+      ]
+    },
+    {
+      "title": "Conditional vs Conventional Knockout Guide",
+      "description": "Compare conditional and conventional knockout strategies. Learn when to choose tissue specific or inducible knockouts over global gene deletion.",
+      "path": "/conditional-vs-conventional-guide",
+      "fullUrl": "https://www.genetargeting.com/conditional-vs-conventional-guide",
+      "category": "General",
+      "headline1": "Conditional vs Conventional",
+      "headline2": "Compare conditional and",
+      "headline3": "Request a Quote",
+      "description1": "Compare conditional and conventional knockout strategies. Learn when to choose tissue",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "conditional-vs-conventional-guide/metadata.ts",
+      "adGroup": "Resources",
+      "keywords": [
+        "\"conditional mouse model\"",
+        "\"conditional mouse\"",
+        "\"conventional mouse model\"",
+        "\"conventional mouse\"",
+        "\"knockout mouse model\"",
+        "\"knockout mouse\"",
+        "\"guide mouse model\"",
+        "\"guide mouse\""
+      ]
+    },
+    {
+      "title": "Conventional Knockout Mouse Models",
+      "description": "Conventional knockout mice for studying complete gene loss of function. Global gene deletion in all tissues. Germline confirmed, 2,500+ projects delivered.",
+      "path": "/conventional-knockout-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/conventional-knockout-mouse-models",
+      "category": "Conventional Knockout Mouse Models",
+      "headline1": "Conventional Knockout Mouse",
+      "headline2": "2,500+ projects",
+      "headline3": "Request a Quote",
+      "description1": "Conventional knockout mice for studying complete gene loss of function. Global gene",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "conventional-knockout-mouse-models/metadata.ts",
+      "adGroup": "Knockout Services",
+      "keywords": [
+        "\"conventional mouse model\"",
+        "\"conventional mouse\"",
+        "\"knockout mouse model\"",
+        "\"knockout mouse\"",
+        "\"gene knockout\"",
+        "\"custom knockout mouse\""
+      ]
+    },
+    {
+      "title": "Cre Driver Line Selection Guide",
+      "description": "Guide to selecting the right Cre driver for your floxed allele. Compare constitutive, inducible, and tissue specific Cre lines for your experiment.",
+      "path": "/cre-line-selection-guide",
+      "fullUrl": "https://www.genetargeting.com/cre-line-selection-guide",
+      "category": "Cre Line Selection Guide",
+      "headline1": "Cre Driver Line Selection",
+      "headline2": "Guide to selecting the right",
+      "headline3": "Request a Quote",
+      "description1": "Guide to selecting the right Cre driver for your floxed allele. Compare constitutive,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "cre-line-selection-guide/metadata.ts",
+      "adGroup": "Conditional Systems",
+      "keywords": [
+        "\"driver mouse model\"",
+        "\"driver mouse\"",
+        "\"line mouse model\"",
+        "\"line mouse\"",
+        "\"selection mouse model\"",
+        "\"selection mouse\"",
+        "\"guide mouse model\"",
+        "\"guide mouse\""
+      ]
+    },
+    {
+      "title": "Cre Lox System",
+      "description": "Cre LoxP recombination system for conditional gene targeting. Tissue specific and inducible knockouts.",
+      "path": "/cre-lox-system",
+      "fullUrl": "https://www.genetargeting.com/cre-lox-system",
+      "category": "Cre Lox System",
+      "headline1": "Cre Lox System",
+      "headline2": "Cre LoxP recombination system",
+      "headline3": "Request a Quote",
+      "description1": "Cre LoxP recombination system for conditional gene targeting. Tissue specific and",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "cre-lox-system/metadata.ts",
+      "adGroup": "Conditional Systems",
+      "keywords": [
+        "\"system mouse model\"",
+        "\"system mouse\""
+      ]
+    },
+    {
+      "title": "Cre Recombinase Mouse Lines",
+      "description": "Cre recombinase mice for conditional gene targeting experiments. Cross with floxed alleles to achieve tissue specific or inducible knockouts.",
+      "path": "/cre-recombinase-mice",
+      "fullUrl": "https://www.genetargeting.com/cre-recombinase-mice",
+      "category": "Cre Recombinase Mice",
+      "headline1": "Cre Recombinase Mouse Lines",
+      "headline2": "Cre recombinase mice for",
+      "headline3": "Request a Quote",
+      "description1": "Cre recombinase mice for conditional gene targeting experiments. Cross with floxed",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "cre-recombinase-mice/metadata.ts",
+      "adGroup": "Conditional Systems",
+      "keywords": [
+        "\"recombinase mouse model\"",
+        "\"recombinase mouse\"",
+        "\"lines mouse model\"",
+        "\"lines mouse\""
+      ]
+    },
+    {
+      "title": "Critical Exon Selection for Knockouts",
+      "description": "Critical exon selection for effective gene knockouts. Target exons essential for protein function to ensure complete loss of gene activity.",
+      "path": "/critical-exon-selection",
+      "fullUrl": "https://www.genetargeting.com/critical-exon-selection",
+      "category": "Critical Exon Selection",
+      "headline1": "Critical Exon Selection for",
+      "headline2": "Critical exon selection for",
+      "headline3": "Request a Quote",
+      "description1": "Critical exon selection for effective gene knockouts. Target exons essential for protein",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "critical-exon-selection/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"critical mouse model\"",
+        "\"critical mouse\"",
+        "\"exon mouse model\"",
+        "\"exon mouse\"",
+        "\"selection mouse model\"",
+        "\"selection mouse\"",
+        "\"knockouts mouse model\"",
+        "\"knockouts mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Cryopreservation Services",
+      "description": "Mouse embryo and sperm cryopreservation for long term colony preservation. Protect valuable lines, reduce housing costs, ship worldwide.",
+      "path": "/cryopreservation-services",
+      "fullUrl": "https://www.genetargeting.com/cryopreservation-services",
+      "category": "Cryopreservation Services",
+      "headline1": "Mouse Cryopreservation",
+      "headline2": "Mouse embryo and sperm",
+      "headline3": "Request a Quote",
+      "description1": "Mouse embryo and sperm cryopreservation for long term colony preservation. Protect",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "cryopreservation-services/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"cryopreservation mouse model\"",
+        "\"cryopreservation mouse\""
+      ]
+    },
+    {
+      "title": "CTLA4 Humanized Mouse Models",
+      "description": "CTLA4 humanized mice expressing human CTLA4 for testing anti CTLA4 checkpoint inhibitor antibodies. Validated for immuno oncology drug development.",
+      "path": "/ctla4-humanized-mice",
+      "fullUrl": "https://www.genetargeting.com/ctla4-humanized-mice",
+      "category": "CTLA4 Humanized Mice",
+      "headline1": "CTLA4 Humanized Mouse Models",
+      "headline2": "CTLA4 humanized mice expressin",
+      "headline3": "Request a Quote",
+      "description1": "CTLA4 humanized mice expressing human CTLA4 for testing anti CTLA4 checkpoint inhibitor",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "ctla4-humanized-mice/metadata.ts",
+      "adGroup": "Humanized Models",
+      "keywords": [
+        "\"ctla4 mouse model\"",
+        "\"ctla4 mouse\"",
+        "\"humanized mouse model\"",
+        "\"humanized mouse\""
+      ]
+    },
+    {
+      "title": "Careers at iTL",
+      "description": "Join the iTL team. Career opportunities in mouse genetics, molecular biology, animal care, and laboratory operations.",
+      "path": "/current-openings",
+      "fullUrl": "https://www.genetargeting.com/current-openings",
+      "category": "General",
+      "headline1": "Careers at iTL",
+      "headline2": "Join the iTL team",
+      "headline3": "Request a Quote",
+      "description1": "Join the iTL team. Career opportunities in mouse genetics, molecular biology, animal",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "current-openings/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"careers mouse model\"",
+        "\"careers mouse\""
+      ]
+    },
+    {
+      "title": "Custom Animal Models",
+      "description": "Custom Animal Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+      "path": "/custom-animal-models",
+      "fullUrl": "https://www.genetargeting.com/custom-animal-models",
+      "category": "General",
+      "headline1": "Custom Animal Models",
+      "headline2": "Custom Animal",
+      "headline3": "Request a Quote",
+      "description1": "Custom Animal Models from ingenious targeting laboratory. Custom mouse model engineering",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "custom-animal-models/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"custom mouse model\"",
+        "\"custom mouse\"",
+        "\"animal mouse model\"",
+        "\"animal mouse\""
+      ]
+    },
+    {
+      "title": "Custom Mouse Models | Gene Targeting",
+      "description": "Custom mouse models designed and engineered for your research. Knockouts, knockins, humanized, and transgenic models. 2,500+ projects delivered since 1998.",
+      "path": "/custom-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/custom-mouse-models",
+      "category": "General",
+      "headline1": "Custom Mouse Models | Gene",
+      "headline2": "2,500+ projects",
+      "headline3": "Request a Quote",
+      "description1": "Custom mouse models designed and engineered for your research. Knockouts, knockins,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "custom-mouse-models/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"custom mouse model\"",
+        "\"custom mouse\"",
+        "\"gene mouse model\"",
+        "\"gene mouse\"",
+        "\"targeting mouse model\"",
+        "\"targeting mouse\""
+      ]
+    },
+    {
+      "title": "Custom Mouse Model Projects",
+      "description": "Design and build custom knockout, knockin, and transgenic mouse models for your research. Expert consultation and guaranteed results.",
+      "path": "/custom-projects",
+      "fullUrl": "https://www.genetargeting.com/custom-projects",
+      "category": "General",
+      "headline1": "Custom Mouse Model Projects",
+      "headline2": "guaranteed results",
+      "headline3": "Request a Quote",
+      "description1": "Design and build custom knockout, knockin, and transgenic mouse models for your research.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "custom-projects/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"custom mouse model\"",
+        "\"custom mouse\"",
+        "\"projects mouse model\"",
+        "\"projects mouse\""
+      ]
+    },
+    {
+      "title": "Custom Rabbit Models",
+      "description": "Custom Rabbit Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+      "path": "/custom-rabbit-models",
+      "fullUrl": "https://www.genetargeting.com/custom-rabbit-models",
+      "category": "General",
+      "headline1": "Custom Rabbit Models",
+      "headline2": "Custom Rabbit",
+      "headline3": "Request a Quote",
+      "description1": "Custom Rabbit Models from ingenious targeting laboratory. Custom mouse model engineering",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "custom-rabbit-models/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"custom mouse model\"",
+        "\"custom mouse\"",
+        "\"rabbit mouse model\"",
+        "\"rabbit mouse\""
+      ]
+    },
+    {
+      "title": "Diabetes Mouse Models | ITL",
+      "description": "Diabetes mouse models for studying insulin signaling, beta cell function, and glucose metabolism. Type 1 and Type 2 disease mechanisms.",
+      "path": "/diabetes-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/diabetes-mouse-models",
+      "category": "General",
+      "headline1": "Diabetes Mouse Models | ITL",
+      "headline2": "Diabetes mouse models for",
+      "headline3": "Request a Quote",
+      "description1": "Diabetes mouse models for studying insulin signaling, beta cell function, and glucose",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "diabetes-mouse-models/metadata.ts",
+      "adGroup": "Metabolic",
+      "keywords": [
+        "\"diabetes mouse model\"",
+        "\"diabetes mouse\""
+      ]
+    },
+    {
+      "title": "Disease Mouse Model Catalog",
+      "description": "Ready made disease models for cancer, metabolic, autoimmune, and neurological research. Validated phenotypes with faster delivery.",
+      "path": "/disease-model-catalog",
+      "fullUrl": "https://www.genetargeting.com/disease-model-catalog",
+      "category": "Disease Model Catalog",
+      "headline1": "Disease Mouse Model Catalog",
+      "headline2": "Ready made disease models for",
+      "headline3": "Request a Quote",
+      "description1": "Ready made disease models for cancer, metabolic, autoimmune, and neurological research.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "disease-model-catalog/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"disease mouse model\"",
+        "\"disease mouse\"",
+        "\"catalog mouse model\"",
+        "\"catalog mouse\""
+      ]
+    },
+    {
+      "title": "Double Checkpoint Mice",
+      "description": "Double Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+      "path": "/double-checkpoint-mice",
+      "fullUrl": "https://www.genetargeting.com/double-checkpoint-mice",
+      "category": "Double Checkpoint Mice",
+      "headline1": "Double Checkpoint Mice",
+      "headline2": "Custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Double Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "double-checkpoint-mice/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"double mouse model\"",
+        "\"double mouse\"",
+        "\"checkpoint mouse model\"",
+        "\"checkpoint mouse\""
+      ]
+    },
+    {
+      "title": "FAQ | Mouse Model Questions",
+      "description": "Answers to common questions about custom mouse models, gene targeting, timelines, costs, and model selection. Get the info you need.",
+      "path": "/faq",
+      "fullUrl": "https://www.genetargeting.com/faq",
+      "category": "FAQ",
+      "headline1": "FAQ | Mouse Model Questions",
+      "headline2": "custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Answers to common questions about custom mouse models, gene targeting, timelines, costs,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "faq/metadata.ts",
+      "adGroup": "Resources",
+      "keywords": [
+        "\"questions mouse model\"",
+        "\"questions mouse\""
+      ]
+    },
+    {
+      "title": "Flp FRT Recombination System",
+      "description": "Flp FRT recombination for removing selection cassettes and creating dual recombinase models. Combine with Cre lox for sequential gene modifications.",
+      "path": "/flp-frt-system",
+      "fullUrl": "https://www.genetargeting.com/flp-frt-system",
+      "category": "Flp FRT System",
+      "headline1": "Flp FRT Recombination System",
+      "headline2": "Flp FRT recombination for",
+      "headline3": "Request a Quote",
+      "description1": "Flp FRT recombination for removing selection cassettes and creating dual recombinase",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "flp-frt-system/metadata.ts",
+      "adGroup": "Conditional Systems",
+      "keywords": [
+        "\"recombination mouse model\"",
+        "\"recombination mouse\"",
+        "\"system mouse model\"",
+        "\"system mouse\""
+      ]
+    },
+    {
+      "title": "Gene Replacement Mouse Models",
+      "description": "Gene replacement mice to swap mouse genes with human or modified sequences. Study human gene function and test therapeutics in vivo. Since 1998.",
+      "path": "/gene-replacement",
+      "fullUrl": "https://www.genetargeting.com/gene-replacement",
+      "category": "General",
+      "headline1": "Gene Replacement Mouse Models",
+      "headline2": "Gene replacement mice to swap",
+      "headline3": "Request a Quote",
+      "description1": "Gene replacement mice to swap mouse genes with human or modified sequences. Study human",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "gene-replacement/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"gene mouse model\"",
+        "\"gene mouse\"",
+        "\"replacement mouse model\"",
+        "\"replacement mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Genetics Glossary",
+      "description": "Definitions for knockout, knockin, Cre lox, CRISPR, and other mouse genetics terms. Learn the terminology for your research.",
+      "path": "/glossary",
+      "fullUrl": "https://www.genetargeting.com/glossary",
+      "category": "General",
+      "headline1": "Mouse Genetics Glossary",
+      "headline2": "Definitions for knockout,",
+      "headline3": "Request a Quote",
+      "description1": "Definitions for knockout, knockin, Cre lox, CRISPR, and other mouse genetics terms. Learn",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "glossary/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"genetics mouse model\"",
+        "\"genetics mouse\"",
+        "\"glossary mouse model\"",
+        "\"glossary mouse\""
+      ]
+    },
+    {
+      "title": "Heart Failure Mouse Models | ITL",
+      "description": "Heart failure mouse models for studying cardiac remodeling, contractile dysfunction, and myocardial stress responses. Therapeutic testing platforms.",
+      "path": "/heart-failure-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/heart-failure-mouse-models",
+      "category": "General",
+      "headline1": "Heart Failure Mouse Models |",
+      "headline2": "Heart failure mouse models",
+      "headline3": "Request a Quote",
+      "description1": "Heart failure mouse models for studying cardiac remodeling, contractile dysfunction, and",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "heart-failure-mouse-models/metadata.ts",
+      "adGroup": "Cardiovascular",
+      "keywords": [
+        "\"heart mouse model\"",
+        "\"heart mouse\"",
+        "\"failure mouse model\"",
+        "\"failure mouse\""
+      ]
+    },
+    {
+      "title": "Humanized Immune Checkpoint Mice",
+      "description": "Humanized immune checkpoint mice for immuno oncology drug development. Test human PD1, PDL1, CTLA4, and other checkpoint antibodies in vivo.",
+      "path": "/humanized-immune-checkpoint-mice",
+      "fullUrl": "https://www.genetargeting.com/humanized-immune-checkpoint-mice",
+      "category": "Humanized Immune Checkpoint Mice",
+      "headline1": "Humanized Immune Checkpoint",
+      "headline2": "Humanized immune checkpoint",
+      "headline3": "Request a Quote",
+      "description1": "Humanized immune checkpoint mice for immuno oncology drug development. Test human PD1,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "humanized-immune-checkpoint-mice/metadata.ts",
+      "adGroup": "Humanized Models",
+      "keywords": [
+        "\"humanized mouse model\"",
+        "\"humanized mouse\"",
+        "\"immune mouse model\"",
+        "\"immune mouse\"",
+        "\"checkpoint mouse model\"",
+        "\"checkpoint mouse\""
+      ]
+    },
+    {
+      "title": "Humanized Mouse Models",
+      "description": "Humanized mouse models replacing mouse genes with human orthologs. Ideal for drug development and translational research.",
+      "path": "/humanized-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/humanized-mouse-models",
+      "category": "Humanized Mouse Models",
+      "headline1": "Humanized Mouse Models",
+      "headline2": "Humanized mouse models",
+      "headline3": "Request a Quote",
+      "description1": "Humanized mouse models replacing mouse genes with human orthologs. Ideal for drug",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "humanized-mouse-models/metadata.ts",
+      "adGroup": "Humanized Models",
+      "keywords": [
+        "\"humanized mouse model\"",
+        "\"humanized mouse\""
+      ]
+    },
+    {
+      "title": "IBD Mouse Models | ITL",
+      "description": "IBD mouse models for studying inflammatory bowel disease, colitis, and gut barrier function. Crohn",
+      "path": "/ibd-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/ibd-mouse-models",
+      "category": "General",
+      "headline1": "IBD Mouse Models | ITL",
+      "headline2": "IBD mouse models for studying",
+      "headline3": "Request a Quote",
+      "description1": "IBD mouse models for studying inflammatory bowel disease, colitis, and gut barrier",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "ibd-mouse-models/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": []
+    },
+    {
+      "title": "Immuno Oncology Mouse Models | ITL",
+      "description": "Immuno oncology mouse models for studying tumor immunity and checkpoint inhibitors. Humanized immune checkpoint mice for cancer immunotherapy research.",
+      "path": "/immuno-oncology-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/immuno-oncology-mouse-models",
+      "category": "Immuno Oncology Mouse Models",
+      "headline1": "Immuno Oncology Mouse Models",
+      "headline2": "Immuno oncology mouse models",
+      "headline3": "Request a Quote",
+      "description1": "Immuno oncology mouse models for studying tumor immunity and checkpoint inhibitors.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "immuno-oncology-mouse-models/metadata.ts",
+      "adGroup": "Oncology",
+      "keywords": [
+        "\"immuno mouse model\"",
+        "\"immuno mouse\"",
+        "\"oncology mouse model\"",
+        "\"oncology mouse\""
+      ]
+    },
+    {
+      "title": "Immunology Mouse Models | ITL",
+      "description": "Immunology mouse models for studying immune cell function, cytokine signaling, and immune responses. Autoimmune, inflammation, and checkpoint platforms.",
+      "path": "/immunology-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/immunology-mouse-models",
+      "category": "Immunology Mouse Models",
+      "headline1": "Immunology Mouse Models | ITL",
+      "headline2": "Immunology mouse models for",
+      "headline3": "Request a Quote",
+      "description1": "Immunology mouse models for studying immune cell function, cytokine signaling, and immune",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "immunology-mouse-models/metadata.ts",
+      "adGroup": "Immunology",
+      "keywords": [
+        "\"immunology mouse model\"",
+        "\"immunology mouse\""
+      ]
+    },
+    {
+      "title": "Inducible Conditional Knockout Mice",
+      "description": "Inducible knockout mice with temporal control of gene deletion. Activate knockouts with tamoxifen or doxycycline at specific timepoints. Since 1998.",
+      "path": "/inducible-conditional-knockout",
+      "fullUrl": "https://www.genetargeting.com/inducible-conditional-knockout",
+      "category": "Inducible Conditional Knockout",
+      "headline1": "Inducible Conditional",
+      "headline2": "Inducible knockout mice with",
+      "headline3": "Request a Quote",
+      "description1": "Inducible knockout mice with temporal control of gene deletion. Activate knockouts with",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "inducible-conditional-knockout/metadata.ts",
+      "adGroup": "Knockout Services",
+      "keywords": [
+        "\"inducible mouse model\"",
+        "\"inducible mouse\"",
+        "\"conditional mouse model\"",
+        "\"conditional mouse\"",
+        "\"knockout mouse model\"",
+        "\"knockout mouse\"",
+        "\"gene knockout\"",
+        "\"custom knockout mouse\""
+      ]
+    },
+    {
+      "title": "Inducible Gene Expression Systems",
+      "description": "Inducible gene expression systems for temporal control of transgenes. Tet on, Tet off, and tamoxifen inducible approaches for controlled studies.",
+      "path": "/inducible-gene-expression",
+      "fullUrl": "https://www.genetargeting.com/inducible-gene-expression",
+      "category": "General",
+      "headline1": "Inducible Gene Expression",
+      "headline2": "Inducible gene expression",
+      "headline3": "Request a Quote",
+      "description1": "Inducible gene expression systems for temporal control of transgenes. Tet on, Tet off,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "inducible-gene-expression/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"inducible mouse model\"",
+        "\"inducible mouse\"",
+        "\"gene mouse model\"",
+        "\"gene mouse\"",
+        "\"expression mouse model\"",
+        "\"expression mouse\"",
+        "\"systems mouse model\"",
+        "\"systems mouse\""
+      ]
+    },
+    {
+      "title": "Inducible ROSA26 Expression Systems",
+      "description": "Inducible ROSA26 systems for controlled transgene expression. Combine safe harbor reliability with temporal control using Cre or drug induction.",
+      "path": "/inducible-rosa26",
+      "fullUrl": "https://www.genetargeting.com/inducible-rosa26",
+      "category": "General",
+      "headline1": "Inducible ROSA26 Expression",
+      "headline2": "Inducible ROSA26 systems for",
+      "headline3": "Request a Quote",
+      "description1": "Inducible ROSA26 systems for controlled transgene expression. Combine safe harbor",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "inducible-rosa26/metadata.ts",
+      "adGroup": "Conditional Systems",
+      "keywords": [
+        "\"inducible mouse model\"",
+        "\"inducible mouse\"",
+        "\"rosa26 mouse model\"",
+        "\"rosa26 mouse\"",
+        "\"expression mouse model\"",
+        "\"expression mouse\"",
+        "\"systems mouse model\"",
+        "\"systems mouse\""
+      ]
+    },
+    {
+      "title": "Knockin Mouse Models",
+      "description": "Custom knockin mouse models including point mutations, reporters, and humanization. Precise genetic modifications for research.",
+      "path": "/knockin-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/knockin-mouse-models",
+      "category": "Knockin Mouse Models",
+      "headline1": "Knockin Mouse Models",
+      "headline2": "Custom knockin",
+      "headline3": "Request a Quote",
+      "description1": "Custom knockin mouse models including point mutations, reporters, and humanization.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "knockin-mouse-models/metadata.ts",
+      "adGroup": "Knockin Services",
+      "keywords": [
+        "\"knockin mouse model\"",
+        "\"knockin mouse\"",
+        "\"gene knockin\"",
+        "\"custom knockin mouse\""
+      ]
+    },
+    {
+      "title": "Knockin Rat Models",
+      "description": "Custom knockin rat models for gene insertion and modification. Point mutations, reporters, and humanization in rat backgrounds.",
+      "path": "/knockin-rat-models",
+      "fullUrl": "https://www.genetargeting.com/knockin-rat-models",
+      "category": "Knockin Rat Models",
+      "headline1": "Knockin Rat Models",
+      "headline2": "Custom knockin",
+      "headline3": "Request a Quote",
+      "description1": "Custom knockin rat models for gene insertion and modification. Point mutations, reporters,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "knockin-rat-models/metadata.ts",
+      "adGroup": "Knockin Services",
+      "keywords": [
+        "\"knockin mouse model\"",
+        "\"knockin mouse\"",
+        "\"gene knockin\"",
+        "\"custom knockin mouse\""
+      ]
+    },
+    {
+      "title": "Knockout Mouse Models",
+      "description": "Custom knockout mouse models for research. Complete gene deletion using ES cell or CRISPR technology. 26+ years experience, 2500+ projects.",
+      "path": "/knockout-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/knockout-mouse-models",
+      "category": "Knockout Mouse Models",
+      "headline1": "Knockout Mouse Models",
+      "headline2": "26+ years experience",
+      "headline3": "Request a Quote",
+      "description1": "Custom knockout mouse models for research. Complete gene deletion using ES cell or CRISPR",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "knockout-mouse-models/metadata.ts",
+      "adGroup": "Knockout Services",
+      "keywords": [
+        "\"knockout mouse model\"",
+        "\"knockout mouse\"",
+        "\"gene knockout\"",
+        "\"custom knockout mouse\""
+      ]
+    },
+    {
+      "title": "Knockout Rat Models",
+      "description": "Custom knockout rat models with complete gene deletion. Ideal for cardiovascular, metabolic, and behavioral research requiring larger animal size.",
+      "path": "/knockout-rat-models",
+      "fullUrl": "https://www.genetargeting.com/knockout-rat-models",
+      "category": "Knockout Rat Models",
+      "headline1": "Knockout Rat Models",
+      "headline2": "Custom knockout",
+      "headline3": "Request a Quote",
+      "description1": "Custom knockout rat models with complete gene deletion. Ideal for cardiovascular,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "knockout-rat-models/metadata.ts",
+      "adGroup": "Knockout Services",
+      "keywords": [
+        "\"knockout mouse model\"",
+        "\"knockout mouse\"",
+        "\"gene knockout\"",
+        "\"custom knockout mouse\""
+      ]
+    },
+    {
+      "title": "Lab Signals Blog",
+      "description": "Technical articles on mouse model design, gene targeting strategies, and research applications. Tips from iTL scientists.",
+      "path": "/lab-signals",
+      "fullUrl": "https://www.genetargeting.com/lab-signals",
+      "category": "General",
+      "headline1": "Lab Signals Blog",
+      "headline2": "Technical articles on mouse",
+      "headline3": "Request a Quote",
+      "description1": "Technical articles on mouse model design, gene targeting strategies, and research",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "lab-signals/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"signals mouse model\"",
+        "\"signals mouse\"",
+        "\"blog mouse model\"",
+        "\"blog mouse\""
+      ]
+    },
+    {
+      "title": "LAG3 Humanized Mouse Models",
+      "description": "LAG3 humanized mice expressing human LAG3 for testing anti LAG3 checkpoint inhibitor antibodies. Next generation immuno oncology target validation.",
+      "path": "/lag3-humanized-mice",
+      "fullUrl": "https://www.genetargeting.com/lag3-humanized-mice",
+      "category": "LAG3 Humanized Mice",
+      "headline1": "LAG3 Humanized Mouse Models",
+      "headline2": "LAG3 humanized mice expressing",
+      "headline3": "Request a Quote",
+      "description1": "LAG3 humanized mice expressing human LAG3 for testing anti LAG3 checkpoint inhibitor",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "lag3-humanized-mice/metadata.ts",
+      "adGroup": "Humanized Models",
+      "keywords": [
+        "\"lag3 mouse model\"",
+        "\"lag3 mouse\"",
+        "\"humanized mouse model\"",
+        "\"humanized mouse\""
+      ]
+    },
+    {
+      "title": "LoxP Site Design and Placement",
+      "description": "LoxP site design principles for conditional alleles. Proper placement flanking critical exons ensures complete gene inactivation upon Cre recombination.",
+      "path": "/loxp-site-design",
+      "fullUrl": "https://www.genetargeting.com/loxp-site-design",
+      "category": "LoxP Site Design",
+      "headline1": "LoxP Site Design and Placement",
+      "headline2": "LoxP site design principles",
+      "headline3": "Request a Quote",
+      "description1": "LoxP site design principles for conditional alleles. Proper placement flanking critical",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "loxp-site-design/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"loxp mouse model\"",
+        "\"loxp mouse\"",
+        "\"site mouse model\"",
+        "\"site mouse\"",
+        "\"design mouse model\"",
+        "\"design mouse\"",
+        "\"placement mouse model\"",
+        "\"placement mouse\""
+      ]
+    },
+    {
+      "title": "Lupus Mouse Models | ITL",
+      "description": "Lupus mouse models for studying systemic autoimmunity, nephritis, and autoantibody production. Test therapeutics targeting B cells and immune complexes.",
+      "path": "/lupus-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/lupus-mouse-models",
+      "category": "General",
+      "headline1": "Lupus Mouse Models | ITL",
+      "headline2": "Lupus mouse models for",
+      "headline3": "Request a Quote",
+      "description1": "Lupus mouse models for studying systemic autoimmunity, nephritis, and autoantibody",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "lupus-mouse-models/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"lupus mouse model\"",
+        "\"lupus mouse\""
+      ]
+    },
+    {
+      "title": "Metabolic Disease Mouse Models | ITL",
+      "description": "Metabolic disease mouse models for studying lipid metabolism, energy balance, and metabolic syndrome. Diabetes, obesity, and NAFLD research platforms.",
+      "path": "/metabolic-disease-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/metabolic-disease-mouse-models",
+      "category": "Metabolic Disease Mouse Models",
+      "headline1": "Metabolic Disease Mouse",
+      "headline2": "Metabolic disease mouse",
+      "headline3": "Request a Quote",
+      "description1": "Metabolic disease mouse models for studying lipid metabolism, energy balance, and",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "metabolic-disease-mouse-models/metadata.ts",
+      "adGroup": "Metabolic",
+      "keywords": [
+        "\"metabolic mouse model\"",
+        "\"metabolic mouse\"",
+        "\"disease mouse model\"",
+        "\"disease mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Genotyping Services",
+      "description": "Fast, accurate PCR genotyping for mouse colonies. Get results in 48 hours with validated assays for knockouts, knockins, and transgenics.",
+      "path": "/mouse-genotyping-service",
+      "fullUrl": "https://www.genetargeting.com/mouse-genotyping-service",
+      "category": "Mouse Genotyping Service",
+      "headline1": "Mouse Genotyping Services",
+      "headline2": "Fast, accurate PCR genotyping",
+      "headline3": "Request a Quote",
+      "description1": "Fast, accurate PCR genotyping for mouse colonies. Get results in 48 hours with validated",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "mouse-genotyping-service/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"genotyping mouse model\"",
+        "\"genotyping mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Model Services",
+      "description": "Comprehensive mouse model services from design through delivery. Colony management, breeding, genotyping.",
+      "path": "/mouse-model-services",
+      "fullUrl": "https://www.genetargeting.com/mouse-model-services",
+      "category": "Mouse Model Services",
+      "headline1": "Mouse Model Services",
+      "headline2": "Comprehensive mouse model",
+      "headline3": "Request a Quote",
+      "description1": "Comprehensive mouse model services from design through delivery. Colony management,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "mouse-model-services/metadata.ts",
+      "adGroup": "Services",
+      "keywords": []
+    },
+    {
+      "title": "Muscular Dystrophy Mouse Models | ITL",
+      "description": "Muscular dystrophy mouse models for studying muscle degeneration and dystrophin pathology. DMD, LGMD, and myopathy models for therapy development.",
+      "path": "/muscular-dystrophy-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/muscular-dystrophy-mouse-models",
+      "category": "General",
+      "headline1": "Muscular Dystrophy Mouse",
+      "headline2": "Muscular dystrophy mouse",
+      "headline3": "Request a Quote",
+      "description1": "Muscular dystrophy mouse models for studying muscle degeneration and dystrophin pathology.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "muscular-dystrophy-mouse-models/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"muscular mouse model\"",
+        "\"muscular mouse\"",
+        "\"dystrophy mouse model\"",
+        "\"dystrophy mouse\""
+      ]
+    },
+    {
+      "title": "NASH and MASH Mouse Models | ITL",
+      "description": "NASH and MASH mouse models for studying liver steatosis, fibrosis, and hepatic inflammation. Drug testing platforms for fatty liver disease research.",
+      "path": "/nash-mash-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/nash-mash-mouse-models",
+      "category": "General",
+      "headline1": "NASH and MASH Mouse Models |",
+      "headline2": "NASH and MASH mouse models",
+      "headline3": "Request a Quote",
+      "description1": "NASH and MASH mouse models for studying liver steatosis, fibrosis, and hepatic inflammatio",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "nash-mash-mouse-models/metadata.ts",
+      "adGroup": "Metabolic",
+      "keywords": [
+        "\"nash mouse model\"",
+        "\"nash mouse\"",
+        "\"mash mouse model\"",
+        "\"mash mouse\""
+      ]
+    },
+    {
+      "title": "Neuroscience Mouse Models | ITL",
+      "description": "Mouse models for neurodegeneration, synaptic function, and CNS disorders. Study disease mechanisms in Alzheimer",
+      "path": "/neuroscience-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/neuroscience-mouse-models",
+      "category": "Neuroscience Mouse Models",
+      "headline1": "Neuroscience Mouse Models |",
+      "headline2": "Mouse models for neurodegenera",
+      "headline3": "Request a Quote",
+      "description1": "Mouse models for neurodegeneration, synaptic function, and CNS disorders. Study disease",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "neuroscience-mouse-models/metadata.ts",
+      "adGroup": "Neuroscience",
+      "keywords": [
+        "\"neuroscience mouse model\"",
+        "\"neuroscience mouse\""
+      ]
+    },
+    {
+      "title": "Obesity Mouse Models | ITL",
+      "description": "Obesity mouse models for studying energy homeostasis, adipose biology, and weight regulation. Leptin pathway, metabolic genes, and diet induced models.",
+      "path": "/obesity-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/obesity-mouse-models",
+      "category": "General",
+      "headline1": "Obesity Mouse Models | ITL",
+      "headline2": "Obesity mouse models for",
+      "headline3": "Request a Quote",
+      "description1": "Obesity mouse models for studying energy homeostasis, adipose biology, and weight",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "obesity-mouse-models/metadata.ts",
+      "adGroup": "Metabolic",
+      "keywords": [
+        "\"obesity mouse model\"",
+        "\"obesity mouse\""
+      ]
+    },
+    {
+      "title": "Oncology Mouse Models | ITL",
+      "description": "Oncology mouse models for cancer research and drug development. Tumor suppressors, oncogenes, and genetically engineered mouse model platforms.",
+      "path": "/oncology-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/oncology-mouse-models",
+      "category": "Oncology Mouse Models",
+      "headline1": "Oncology Mouse Models | ITL",
+      "headline2": "Oncology mouse models for",
+      "headline3": "Request a Quote",
+      "description1": "Oncology mouse models for cancer research and drug development. Tumor suppressors,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "oncology-mouse-models/metadata.ts",
+      "adGroup": "Oncology",
+      "keywords": [
+        "\"oncology mouse model\"",
+        "\"oncology mouse\""
+      ]
+    },
+    {
+      "title": "Ophthalmology Mouse Models | ITL",
+      "description": "Ophthalmology mouse models for studying retinal degeneration, glaucoma, and vision disorders. Gene therapy testing for inherited eye diseases.",
+      "path": "/ophthalmology-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/ophthalmology-mouse-models",
+      "category": "Ophthalmology Mouse Models",
+      "headline1": "Ophthalmology Mouse Models |",
+      "headline2": "Ophthalmology mouse models",
+      "headline3": "Request a Quote",
+      "description1": "Ophthalmology mouse models for studying retinal degeneration, glaucoma, and vision",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "ophthalmology-mouse-models/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"ophthalmology mouse model\"",
+        "\"ophthalmology mouse\""
+      ]
+    },
+    {
+      "title": "Order Mouse Models",
+      "description": "Place your order for catalog mouse models. Request a quote for humanized checkpoint, reporter, or disease model strains.",
+      "path": "/order-catalog-models",
+      "fullUrl": "https://www.genetargeting.com/order-catalog-models",
+      "category": "Order Catalog Models",
+      "headline1": "Order Mouse Models",
+      "headline2": "Place your order for catalog",
+      "headline3": "Request a Quote",
+      "description1": "Place your order for catalog mouse models. Request a quote for humanized checkpoint,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "order-catalog-models/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"order mouse model\"",
+        "\"order mouse\""
+      ]
+    },
+    {
+      "title": "Model Inquiry Form",
+      "description": "Request pricing, availability, and technical details for catalog mouse models. Our team responds within one business day.",
+      "path": "/order-inquiry-catalog-models",
+      "fullUrl": "https://www.genetargeting.com/order-inquiry-catalog-models",
+      "category": "Order Inquiry Catalog Models",
+      "headline1": "Model Inquiry Form",
+      "headline2": "Request pricing, availability,",
+      "headline3": "Request a Quote",
+      "description1": "Request pricing, availability, and technical details for catalog mouse models. Our team",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "order-inquiry-catalog-models/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"inquiry mouse model\"",
+        "\"inquiry mouse\"",
+        "\"form mouse model\"",
+        "\"form mouse\""
+      ]
+    },
+    {
+      "title": "Parkinson",
+      "description": "Parkinson",
+      "path": "/parkinsons-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/parkinsons-mouse-models",
+      "category": "General",
+      "headline1": "Parkinson",
+      "headline2": "Parkinson",
+      "headline3": "Request a Quote",
+      "description1": "Parkinson",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "parkinsons-mouse-models/metadata.ts",
+      "adGroup": "Neuroscience",
+      "keywords": [
+        "\"parkinson mouse model\"",
+        "\"parkinson mouse\""
+      ]
+    },
+    {
+      "title": "PD1 Humanized Mouse Models",
+      "description": "PD1 humanized mice expressing human PDCD1 for testing anti PD1 checkpoint inhibitor antibodies. Validated for immuno oncology research.",
+      "path": "/pd1-humanized-mice",
+      "fullUrl": "https://www.genetargeting.com/pd1-humanized-mice",
+      "category": "PD1 Humanized Mice",
+      "headline1": "PD1 Humanized Mouse Models",
+      "headline2": "PD1 humanized mice expressing",
+      "headline3": "Request a Quote",
+      "description1": "PD1 humanized mice expressing human PDCD1 for testing anti PD1 checkpoint inhibitor",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "pd1-humanized-mice/metadata.ts",
+      "adGroup": "Humanized Models",
+      "keywords": [
+        "\"humanized mouse model\"",
+        "\"humanized mouse\""
+      ]
+    },
+    {
+      "title": "PDL1 Humanized Mouse Models",
+      "description": "PDL1 humanized mice expressing human CD274 for testing anti PDL1 checkpoint inhibitor antibodies. Validated for cancer immunotherapy studies.",
+      "path": "/pdl1-humanized-mice",
+      "fullUrl": "https://www.genetargeting.com/pdl1-humanized-mice",
+      "category": "PDL1 Humanized Mice",
+      "headline1": "PDL1 Humanized Mouse Models",
+      "headline2": "PDL1 humanized mice expressing",
+      "headline3": "Request a Quote",
+      "description1": "PDL1 humanized mice expressing human CD274 for testing anti PDL1 checkpoint inhibitor",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "pdl1-humanized-mice/metadata.ts",
+      "adGroup": "Humanized Models",
+      "keywords": [
+        "\"pdl1 mouse model\"",
+        "\"pdl1 mouse\"",
+        "\"humanized mouse model\"",
+        "\"humanized mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Phenotyping Services",
+      "description": "Characterize mouse model phenotypes with behavioral, metabolic, and histological analysis. Validate gene function and disease relevance.",
+      "path": "/phenotyping-services",
+      "fullUrl": "https://www.genetargeting.com/phenotyping-services",
+      "category": "Phenotyping Services",
+      "headline1": "Mouse Phenotyping Services",
+      "headline2": "Characterize mouse model",
+      "headline3": "Request a Quote",
+      "description1": "Characterize mouse model phenotypes with behavioral, metabolic, and histological analysis.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "phenotyping-services/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"phenotyping mouse model\"",
+        "\"phenotyping mouse\""
+      ]
+    },
+    {
+      "title": "Point Mutation Mouse Models",
+      "description": "Point mutation mice to model human disease variants. Introduce SNPs or amino acid changes at endogenous loci. ES cell and CRISPR approaches available.",
+      "path": "/point-mutation-mice",
+      "fullUrl": "https://www.genetargeting.com/point-mutation-mice",
+      "category": "General",
+      "headline1": "Point Mutation Mouse Models",
+      "headline2": "Point mutation mice to model",
+      "headline3": "Request a Quote",
+      "description1": "Point mutation mice to model human disease variants. Introduce SNPs or amino acid changes",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "point-mutation-mice/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"point mouse model\"",
+        "\"point mouse\"",
+        "\"mutation mouse model\"",
+        "\"mutation mouse\""
+      ]
+    },
+    {
+      "title": "Post Project Services",
+      "description": "Post Project Services from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+      "path": "/post-project-services",
+      "fullUrl": "https://www.genetargeting.com/post-project-services",
+      "category": "Post Project Services",
+      "headline1": "Post Project Services",
+      "headline2": "Custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Post Project Services from ingenious targeting laboratory. Custom mouse model engineering",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "post-project-services/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"post mouse model\"",
+        "\"post mouse\"",
+        "\"project mouse model\"",
+        "\"project mouse\""
+      ]
+    },
+    {
+      "title": "Preclinical Mouse Study Services",
+      "description": "Preclinical efficacy studies using custom and catalog mouse models. Drug screening, target validation, and pharmacology in disease models.",
+      "path": "/preclinical-services",
+      "fullUrl": "https://www.genetargeting.com/preclinical-services",
+      "category": "Preclinical Services",
+      "headline1": "Preclinical Mouse Study",
+      "headline2": "custom and",
+      "headline3": "Request a Quote",
+      "description1": "Preclinical efficacy studies using custom and catalog mouse models. Drug screening,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "preclinical-services/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"preclinical mouse model\"",
+        "\"preclinical mouse\"",
+        "\"study mouse model\"",
+        "\"study mouse\""
+      ]
+    },
+    {
+      "title": "Pricing Overview",
+      "description": "Pricing Overview from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+      "path": "/pricing-overview",
+      "fullUrl": "https://www.genetargeting.com/pricing-overview",
+      "category": "General",
+      "headline1": "Pricing Overview",
+      "headline2": "Custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Pricing Overview from ingenious targeting laboratory. Custom mouse model engineering",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "pricing-overview/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"pricing mouse model\"",
+        "\"pricing mouse\"",
+        "\"overview mouse model\"",
+        "\"overview mouse\""
+      ]
+    },
+    {
+      "title": "Scientific Publications",
+      "description": "Scientific publications featuring iTL mouse models. Over 800 peer reviewed papers across neuroscience, oncology, immunology, and more.",
+      "path": "/publications",
+      "fullUrl": "https://www.genetargeting.com/publications",
+      "category": "General",
+      "headline1": "Scientific Publications",
+      "headline2": "Scientific publications",
+      "headline3": "Request a Quote",
+      "description1": "Scientific publications featuring iTL mouse models. Over 800 peer reviewed papers across",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "publications/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"scientific mouse model\"",
+        "\"scientific mouse\"",
+        "\"publications mouse model\"",
+        "\"publications mouse\""
+      ]
+    },
+    {
+      "title": "Rare Disease Mouse Models | ITL",
+      "description": "Rare disease mouse models for studying orphan diseases and genetic disorders. Patient mutation knockins for gene therapy and drug development testing.",
+      "path": "/rare-disease-mouse-models",
+      "fullUrl": "https://www.genetargeting.com/rare-disease-mouse-models",
+      "category": "Rare Disease Mouse Models",
+      "headline1": "Rare Disease Mouse Models |",
+      "headline2": "Rare disease mouse models for",
+      "headline3": "Request a Quote",
+      "description1": "Rare disease mouse models for studying orphan diseases and genetic disorders. Patient",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "rare-disease-mouse-models/metadata.ts",
+      "adGroup": "Rare Disease",
+      "keywords": [
+        "\"rare mouse model\"",
+        "\"rare mouse\"",
+        "\"disease mouse model\"",
+        "\"disease mouse\""
+      ]
+    },
+    {
+      "title": "Custom Rat Models",
+      "description": "Custom knockout, knockin, and transgenic rat models for research. Larger size and physiology advantages for cardiovascular and neuro studies.",
+      "path": "/rat-models",
+      "fullUrl": "https://www.genetargeting.com/rat-models",
+      "category": "General",
+      "headline1": "Custom Rat Models",
+      "headline2": "Custom knockout",
+      "headline3": "Request a Quote",
+      "description1": "Custom knockout, knockin, and transgenic rat models for research. Larger size and",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "rat-models/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"custom mouse model\"",
+        "\"custom mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Rederivation Services",
+      "description": "Eliminate pathogens and clean up mouse lines with embryo transfer rederivation. Restore SPF status for facility import and animal health.",
+      "path": "/rederivation-services",
+      "fullUrl": "https://www.genetargeting.com/rederivation-services",
+      "category": "Rederivation Services",
+      "headline1": "Mouse Rederivation Services",
+      "headline2": "Eliminate pathogens and clean",
+      "headline3": "Request a Quote",
+      "description1": "Eliminate pathogens and clean up mouse lines with embryo transfer rederivation. Restore",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "rederivation-services/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"rederivation mouse model\"",
+        "\"rederivation mouse\""
+      ]
+    },
+    {
+      "title": "Reporter Knockin Mouse Models",
+      "description": "Reporter knockin mice for tracking gene expression and cell lineage. Insert GFP, lacZ, luciferase, or Cre at endogenous loci. Since 1998.",
+      "path": "/reporter-knockin",
+      "fullUrl": "https://www.genetargeting.com/reporter-knockin",
+      "category": "Reporter Knockin Models",
+      "headline1": "Reporter Knockin Mouse Models",
+      "headline2": "Reporter knockin mice for",
+      "headline3": "Request a Quote",
+      "description1": "Reporter knockin mice for tracking gene expression and cell lineage. Insert GFP, lacZ,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "reporter-knockin/metadata.ts",
+      "adGroup": "Knockin Services",
+      "keywords": [
+        "\"reporter mouse model\"",
+        "\"reporter mouse\"",
+        "\"knockin mouse model\"",
+        "\"knockin mouse\"",
+        "\"gene knockin\"",
+        "\"custom knockin mouse\""
+      ]
+    },
+    {
+      "title": "Reporter Mouse Strain Catalog",
+      "description": "GFP, tdTomato, LacZ, and luciferase reporter mice for gene expression studies. Track cell populations and lineage in vivo.",
+      "path": "/reporter-mouse-catalog",
+      "fullUrl": "https://www.genetargeting.com/reporter-mouse-catalog",
+      "category": "Reporter Mouse Catalog",
+      "headline1": "Reporter Mouse Strain Catalog",
+      "headline2": "GFP, tdTomato, LacZ, and",
+      "headline3": "Request a Quote",
+      "description1": "GFP, tdTomato, LacZ, and luciferase reporter mice for gene expression studies. Track cell",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "reporter-mouse-catalog/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"reporter mouse model\"",
+        "\"reporter mouse\"",
+        "\"strain mouse model\"",
+        "\"strain mouse\"",
+        "\"catalog mouse model\"",
+        "\"catalog mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Model Research Applications",
+      "description": "Custom mouse models for target validation, drug discovery, biomarker research, and mechanistic studies. 800+ publications since 1998.",
+      "path": "/research-applications",
+      "fullUrl": "https://www.genetargeting.com/research-applications",
+      "category": "General",
+      "headline1": "Mouse Model Research Applicati",
+      "headline2": "Custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Custom mouse models for target validation, drug discovery, biomarker research, and",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "research-applications/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"research mouse model\"",
+        "\"research mouse\"",
+        "\"applications mouse model\"",
+        "\"applications mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Model Research Resources",
+      "description": "Guides, FAQs, and educational content for planning mouse model experiments. Knockout strategies, Cre lines, and strain selection.",
+      "path": "/resources",
+      "fullUrl": "https://www.genetargeting.com/resources",
+      "category": "General",
+      "headline1": "Mouse Model Research Resources",
+      "headline2": "Guides, FAQs, and educational",
+      "headline3": "Request a Quote",
+      "description1": "Guides, FAQs, and educational content for planning mouse model experiments. Knockout",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "resources/metadata.ts",
+      "adGroup": "Resources",
+      "keywords": [
+        "\"research mouse model\"",
+        "\"research mouse\"",
+        "\"resources mouse model\"",
+        "\"resources mouse\""
+      ]
+    },
+    {
+      "title": "ROSA26 Safe Harbor Locus",
+      "description": "ROSA26 safe harbor locus for reliable transgene expression. Ubiquitous expression without disrupting endogenous genes. Proven in thousands of models.",
+      "path": "/rosa26",
+      "fullUrl": "https://www.genetargeting.com/rosa26",
+      "category": "General",
+      "headline1": "ROSA26 Safe Harbor Locus",
+      "headline2": "ROSA26 safe harbor locus for",
+      "headline3": "Request a Quote",
+      "description1": "ROSA26 safe harbor locus for reliable transgene expression. Ubiquitous expression without",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "rosa26/metadata.ts",
+      "adGroup": "Conditional Systems",
+      "keywords": [
+        "\"rosa26 mouse model\"",
+        "\"rosa26 mouse\"",
+        "\"safe mouse model\"",
+        "\"safe mouse\"",
+        "\"harbor mouse model\"",
+        "\"harbor mouse\"",
+        "\"locus mouse model\"",
+        "\"locus mouse\""
+      ]
+    },
+    {
+      "title": "Search",
+      "description": "Search from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+      "path": "/search",
+      "fullUrl": "https://www.genetargeting.com/search",
+      "category": "General",
+      "headline1": "Search",
+      "headline2": "Custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Search from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "search/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"search mouse model\"",
+        "\"search mouse\""
+      ]
+    },
+    {
+      "title": "Single Checkpoint Mice",
+      "description": "Single Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.",
+      "path": "/single-checkpoint-mice",
+      "fullUrl": "https://www.genetargeting.com/single-checkpoint-mice",
+      "category": "Single Checkpoint Mice",
+      "headline1": "Single Checkpoint Mice",
+      "headline2": "Custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Single Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "single-checkpoint-mice/metadata.ts",
+      "adGroup": "Disease Models",
+      "keywords": [
+        "\"single mouse model\"",
+        "\"single mouse\"",
+        "\"checkpoint mouse model\"",
+        "\"checkpoint mouse\""
+      ]
+    },
+    {
+      "title": "Speed Expansion Mouse Breeding",
+      "description": "Accelerate colony expansion with optimized breeding strategies. Build experimental cohorts faster with superovulation and IVF techniques.",
+      "path": "/speed-expansion-breeding",
+      "fullUrl": "https://www.genetargeting.com/speed-expansion-breeding",
+      "category": "Speed Expansion Breeding",
+      "headline1": "Speed Expansion Mouse Breeding",
+      "headline2": "Accelerate colony expansion",
+      "headline3": "Request a Quote",
+      "description1": "Accelerate colony expansion with optimized breeding strategies. Build experimental",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "speed-expansion-breeding/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"speed mouse model\"",
+        "\"speed mouse\"",
+        "\"expansion mouse model\"",
+        "\"expansion mouse\"",
+        "\"breeding mouse model\"",
+        "\"breeding mouse\""
+      ]
+    },
+    {
+      "title": "Start Your Mouse Model Project",
+      "description": "Request a consultation for your custom mouse model. Our scientists will help design the optimal strategy for your research goals.",
+      "path": "/start-your-project",
+      "fullUrl": "https://www.genetargeting.com/start-your-project",
+      "category": "General",
+      "headline1": "Start Your Mouse Model Project",
+      "headline2": "custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Request a consultation for your custom mouse model. Our scientists will help design the",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "start-your-project/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"start mouse model\"",
+        "\"start mouse\"",
+        "\"your mouse model\"",
+        "\"your mouse\"",
+        "\"project mouse model\"",
+        "\"project mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Model Support Services",
+      "description": "Colony management, breeding, genotyping, cryopreservation, and rederivation services. Full support for your mouse model research.",
+      "path": "/support-services",
+      "fullUrl": "https://www.genetargeting.com/support-services",
+      "category": "Support Services",
+      "headline1": "Mouse Model Support Services",
+      "headline2": "Colony management, breeding,",
+      "headline3": "Request a Quote",
+      "description1": "Colony management, breeding, genotyping, cryopreservation, and rederivation services.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "support-services/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"support mouse model\"",
+        "\"support mouse\""
+      ]
+    },
+    {
+      "title": "Syngeneic Tumor Models | ITL",
+      "description": "Syngeneic tumor models for immunotherapy testing with intact immune systems. Study tumor microenvironment and immune checkpoint responses in vivo.",
+      "path": "/syngeneic-tumor-models",
+      "fullUrl": "https://www.genetargeting.com/syngeneic-tumor-models",
+      "category": "General",
+      "headline1": "Syngeneic Tumor Models | ITL",
+      "headline2": "Syngeneic tumor models for",
+      "headline3": "Request a Quote",
+      "description1": "Syngeneic tumor models for immunotherapy testing with intact immune systems. Study tumor",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "syngeneic-tumor-models/metadata.ts",
+      "adGroup": "Oncology",
+      "keywords": [
+        "\"syngeneic mouse model\"",
+        "\"syngeneic mouse\"",
+        "\"tumor mouse model\"",
+        "\"tumor mouse\""
+      ]
+    },
+    {
+      "title": "Epitope Tag Knockin Mouse Models",
+      "description": "Tag knockin mice for protein detection and purification. Insert FLAG, HA, V5, or Myc tags at endogenous loci. Study native protein expression in vivo.",
+      "path": "/tag-knockin-mice",
+      "fullUrl": "https://www.genetargeting.com/tag-knockin-mice",
+      "category": "Tag Knockin Mice",
+      "headline1": "Epitope Tag Knockin Mouse",
+      "headline2": "Tag knockin mice for protein",
+      "headline3": "Request a Quote",
+      "description1": "Tag knockin mice for protein detection and purification. Insert FLAG, HA, V5, or Myc tags",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "tag-knockin-mice/metadata.ts",
+      "adGroup": "Knockin Services",
+      "keywords": [
+        "\"epitope mouse model\"",
+        "\"epitope mouse\"",
+        "\"knockin mouse model\"",
+        "\"knockin mouse\"",
+        "\"gene knockin\"",
+        "\"custom knockin mouse\""
+      ]
+    },
+    {
+      "title": "Tamoxifen Inducible Cre Systems",
+      "description": "Tamoxifen inducible CreERT2 for temporal control of gene deletion. Activate recombination at any developmental stage with drug administration.",
+      "path": "/tamoxifen-inducible-cre",
+      "fullUrl": "https://www.genetargeting.com/tamoxifen-inducible-cre",
+      "category": "Tamoxifen Inducible Cre",
+      "headline1": "Tamoxifen Inducible Cre",
+      "headline2": "Tamoxifen inducible CreERT2",
+      "headline3": "Request a Quote",
+      "description1": "Tamoxifen inducible CreERT2 for temporal control of gene deletion. Activate recombination",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "tamoxifen-inducible-cre/metadata.ts",
+      "adGroup": "Conditional Systems",
+      "keywords": [
+        "\"tamoxifen mouse model\"",
+        "\"tamoxifen mouse\"",
+        "\"inducible mouse model\"",
+        "\"inducible mouse\"",
+        "\"systems mouse model\"",
+        "\"systems mouse\""
+      ]
+    },
+    {
+      "title": "Technologies",
+      "description": "Gene targeting technologies including Cre LoxP, Flp FRT, ES cell targeting, and CRISPR genome editing.",
+      "path": "/technologies",
+      "fullUrl": "https://www.genetargeting.com/technologies",
+      "category": "General",
+      "headline1": "Technologies",
+      "headline2": "Gene targeting technologies",
+      "headline3": "Request a Quote",
+      "description1": "Gene targeting technologies including Cre LoxP, Flp FRT, ES cell targeting, and CRISPR",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "technologies/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"technologies mouse model\"",
+        "\"technologies mouse\""
+      ]
+    },
+    {
+      "title": "Gene Targeting Technology Overview",
+      "description": "Overview of gene targeting technologies for mouse model generation. ES cell targeting, CRISPR, Cre lox, and knockin strategies explained.",
+      "path": "/technology-overview",
+      "fullUrl": "https://www.genetargeting.com/technology-overview",
+      "category": "General",
+      "headline1": "Gene Targeting Technology",
+      "headline2": "Overview of gene targeting",
+      "headline3": "Request a Quote",
+      "description1": "Overview of gene targeting technologies for mouse model generation. ES cell targeting,",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "technology-overview/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"gene mouse model\"",
+        "\"gene mouse\"",
+        "\"targeting mouse model\"",
+        "\"targeting mouse\"",
+        "\"technology mouse model\"",
+        "\"technology mouse\"",
+        "\"overview mouse model\"",
+        "\"overview mouse\""
+      ]
+    },
+    {
+      "title": "Thank You",
+      "description": "Thank you for your inquiry. Our team will review your request and respond within one business day.",
+      "path": "/thank-you",
+      "fullUrl": "https://www.genetargeting.com/thank-you",
+      "category": "General",
+      "headline1": "Thank You",
+      "headline2": "Thank you for your inquiry",
+      "headline3": "Request a Quote",
+      "description1": "Thank you for your inquiry. Our team will review your request and respond within one",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "thank-you/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"thank mouse model\"",
+        "\"thank mouse\""
+      ]
+    },
+    {
+      "title": "Mouse Models by Therapeutic Area",
+      "description": "Custom mouse models for oncology, neuroscience, immunology, cardiovascular, and metabolic disease research. Disease specific expertise.",
+      "path": "/therapeutic-areas",
+      "fullUrl": "https://www.genetargeting.com/therapeutic-areas",
+      "category": "General",
+      "headline1": "Mouse Models by Therapeutic",
+      "headline2": "Custom mouse",
+      "headline3": "Request a Quote",
+      "description1": "Custom mouse models for oncology, neuroscience, immunology, cardiovascular, and metabolic",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "therapeutic-areas/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"therapeutic mouse model\"",
+        "\"therapeutic mouse\"",
+        "\"area mouse model\"",
+        "\"area mouse\""
+      ]
+    },
+    {
+      "title": "TIM3 Humanized Mouse Models",
+      "description": "TIM3 humanized mice expressing human HAVCR2 for testing anti TIM3 checkpoint inhibitor antibodies. Emerging target for cancer immunotherapy research.",
+      "path": "/tim3-humanized-mice",
+      "fullUrl": "https://www.genetargeting.com/tim3-humanized-mice",
+      "category": "TIM3 Humanized Mice",
+      "headline1": "TIM3 Humanized Mouse Models",
+      "headline2": "TIM3 humanized mice expressing",
+      "headline3": "Request a Quote",
+      "description1": "TIM3 humanized mice expressing human HAVCR2 for testing anti TIM3 checkpoint inhibitor",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "tim3-humanized-mice/metadata.ts",
+      "adGroup": "Humanized Models",
+      "keywords": [
+        "\"tim3 mouse model\"",
+        "\"tim3 mouse\"",
+        "\"humanized mouse model\"",
+        "\"humanized mouse\""
+      ]
+    },
+    {
+      "title": "Tissue Specific Cre Driver Lines",
+      "description": "Tissue specific Cre lines for targeted gene deletion in specific cell types. Restrict knockouts to liver, brain, heart, or immune cells.",
+      "path": "/tissue-specific-cre-lines",
+      "fullUrl": "https://www.genetargeting.com/tissue-specific-cre-lines",
+      "category": "Tissue Specific Cre Lines",
+      "headline1": "Tissue Specific Cre Driver",
+      "headline2": "Tissue specific Cre lines for",
+      "headline3": "Request a Quote",
+      "description1": "Tissue specific Cre lines for targeted gene deletion in specific cell types. Restrict",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "tissue-specific-cre-lines/metadata.ts",
+      "adGroup": "Conditional Systems",
+      "keywords": [
+        "\"tissue mouse model\"",
+        "\"tissue mouse\"",
+        "\"specific mouse model\"",
+        "\"specific mouse\"",
+        "\"driver mouse model\"",
+        "\"driver mouse\"",
+        "\"lines mouse model\"",
+        "\"lines mouse\""
+      ]
+    },
+    {
+      "title": "Tissue Specific Knockout Models",
+      "description": "Tissue specific knockout mice using Cre LoxP to delete genes in targeted cell types. Study gene function without embryonic lethality. Since 1998.",
+      "path": "/tissue-specific-knockout",
+      "fullUrl": "https://www.genetargeting.com/tissue-specific-knockout",
+      "category": "Tissue Specific Knockout Models",
+      "headline1": "Tissue Specific Knockout",
+      "headline2": "Tissue specific knockout mice",
+      "headline3": "Request a Quote",
+      "description1": "Tissue specific knockout mice using Cre LoxP to delete genes in targeted cell types.",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "tissue-specific-knockout/metadata.ts",
+      "adGroup": "Knockout Services",
+      "keywords": [
+        "\"tissue mouse model\"",
+        "\"tissue mouse\"",
+        "\"specific mouse model\"",
+        "\"specific mouse\"",
+        "\"knockout mouse model\"",
+        "\"knockout mouse\"",
+        "\"gene knockout\"",
+        "\"custom knockout mouse\""
+      ]
+    },
+    {
+      "title": "Transgenic Mouse Models | Custom Services",
+      "description": "Transgenic mouse models for overexpression studies. Express genes of interest under tissue specific or ubiquitous promoters. 2,500+ projects since 1998.",
+      "path": "/transgenic-mouse-service",
+      "fullUrl": "https://www.genetargeting.com/transgenic-mouse-service",
+      "category": "Transgenic Mouse Service",
+      "headline1": "Transgenic Mouse Models |",
+      "headline2": "2,500+ projects",
+      "headline3": "Request a Quote",
+      "description1": "Transgenic mouse models for overexpression studies. Express genes of interest under",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "transgenic-mouse-service/metadata.ts",
+      "adGroup": "Services",
+      "keywords": [
+        "\"transgenic mouse model\"",
+        "\"transgenic mouse\"",
+        "\"custom mouse model\"",
+        "\"custom mouse\""
+      ]
+    },
+    {
+      "title": "Transgenic Rat Models",
+      "description": "Custom transgenic rat models expressing your gene of interest. Overexpression and tissue specific promoters in rat backgrounds.",
+      "path": "/transgenic-rat-models",
+      "fullUrl": "https://www.genetargeting.com/transgenic-rat-models",
+      "category": "Transgenic Rat Models",
+      "headline1": "Transgenic Rat Models",
+      "headline2": "Custom transgenic",
+      "headline3": "Request a Quote",
+      "description1": "Custom transgenic rat models expressing your gene of interest. Overexpression and tissue",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "transgenic-rat-models/metadata.ts",
+      "adGroup": "General",
+      "keywords": [
+        "\"transgenic mouse model\"",
+        "\"transgenic mouse\""
+      ]
+    },
+    {
+      "title": "Tumor Suppressor Knockout Mice | ITL",
+      "description": "Tumor suppressor knockout mice for cancer mechanism studies. P53, Rb, PTEN, and other cancer gene models for tumorigenesis and drug development.",
+      "path": "/tumor-suppressor-knockout-mice",
+      "fullUrl": "https://www.genetargeting.com/tumor-suppressor-knockout-mice",
+      "category": "Tumor Suppressor Knockout Mice",
+      "headline1": "Tumor Suppressor Knockout",
+      "headline2": "Tumor suppressor knockout",
+      "headline3": "Request a Quote",
+      "description1": "Tumor suppressor knockout mice for cancer mechanism studies. P53, Rb, PTEN, and other",
+      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
+      "sourcePath": "tumor-suppressor-knockout-mice/metadata.ts",
+      "adGroup": "Knockout Services",
+      "keywords": [
+        "\"tumor mouse model\"",
+        "\"tumor mouse\"",
+        "\"suppressor mouse model\"",
+        "\"suppressor mouse\"",
+        "\"knockout mouse model\"",
+        "\"knockout mouse\"",
+        "\"gene knockout\"",
+        "\"custom knockout mouse\""
+      ]
+    }
+  ]
+}

@@ -130,7 +130,7 @@ export default function LabSignalsSignup({
         transition: 'box-shadow 0.3s ease',
         cursor: 'pointer'
       }}
-      className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-4 items-end hover:shadow-lg"
+      className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-4 items-center hover:shadow-lg"
       onMouseEnter={(e) => {
         e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
       }}
@@ -190,7 +190,7 @@ export default function LabSignalsSignup({
         e.currentTarget.style.boxShadow = 'none';
       }}>
         <div 
-          className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-5 items-end"
+          className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-5 items-center"
           style={{ 
           marginBottom: showArticles && relatedArticles.length > 0 ? '16px' : '0'
         }}>
@@ -285,7 +285,7 @@ export default function LabSignalsSignup({
         e.currentTarget.style.boxShadow = 'none';
       }}>
         <div 
-          className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-5 items-end"
+          className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-5 items-center"
           style={{ 
           marginBottom: '20px'
         }}>
@@ -385,7 +385,7 @@ export default function LabSignalsSignup({
     onMouseLeave={(e) => {
       e.currentTarget.style.boxShadow = 'none';
     }}>
-      <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-8 items-end">
+      <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-8 items-center">
         <div style={{ width: 'auto', height: '125px', maxHeight: '125px' }}>
           <Image 
             src="/images/lab-signals-logo.svg" 
