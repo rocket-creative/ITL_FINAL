@@ -73,6 +73,12 @@ export default function FlodeskForm({ formId = '689e278b40db38a14e1ffe6b' }: Flo
   }, [formId, containerId]);
 
   return (
-    <div id={containerId}></div>
+    <div 
+      id={containerId}
+      style={{
+        minHeight: '120px',
+        width: '100%',
+      }}
+    ></div>
   );
 }
