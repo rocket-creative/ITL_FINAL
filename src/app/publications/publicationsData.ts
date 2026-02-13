@@ -2259,6 +2259,230 @@ export const publicationsByYear: PublicationsByYear = {
       journal: "Front Physiol",
       volume: "5: 507",
       link: "https://www.ncbi.nlm.nih.gov/pubmed/25601839"
+    },
+    {
+      authors: "Jiang R, Hua C, Wan Y, Jiang B, Hu H, Zheng J, Fuqua BK, Dunaief JL, Anderson GJ, David S, Vulpe CD, Chen H.",
+      year: 2015,
+      title: "Hephaestin and ceruloplasmin play distinct but interrelated roles in iron homeostasis in mouse brain",
+      journal: "The Journal of Nutrition",
+      volume: "145(5): 1003–1009",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25809685/"
+    },
+    {
+      authors: "Zemen BG, Lai MH, Whitt JP, Khan Z, Zhao G, Meredith AL.",
+      year: 2015,
+      title: "Generation of Kcnma1fl-tdTomato, a conditional deletion of the BK channel alpha subunit in mouse",
+      journal: "Physiol Rep",
+      volume: "3",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26296761/"
+    },
+    {
+      authors: "Ghosh S, Geahlen RL.",
+      year: 2015,
+      title: "Stress Granules Modulate SYK to Cause Microglial Cell Dysfunction in Alzheimer's Disease",
+      journal: "EBioMedicine",
+      volume: "2: 1785-1798",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26870802/"
+    },
+    {
+      authors: "Zulliger R, Conley SM, Mwoyosvi ML, Stuck MW, Azadi S, Naash MI.",
+      year: 2015,
+      title: "SNAREs Interact with Retinal Degeneration Slow and Rod Outer Segment Membrane Protein-1 during Conventional and Unconventional Outer Segment Targeting",
+      journal: "PLoS One",
+      volume: "10: e0138508",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26384024/"
+    },
+    {
+      authors: "Joly AL, Liu S, Dahlberg CI, Mailer RK, Westerberg LS, Andersson J.",
+      year: 2015,
+      title: "Foxp3 lacking exons 2 and 7 is unable to confer suppressive ability to regulatory T cells in vivo",
+      journal: "J Autoimmun",
+      volume: "63: 23-30",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26255250/"
+    },
+    {
+      authors: "Igoucheva O, Alexeev V, Halabi CM, Adams SM, Stoilov I, Sasaki T, Arita M, Donahue A, Mecham RP, Birk DE, Chu ML.",
+      year: 2015,
+      title: "Fibulin-4 E57K Knock-in Mice Recapitulate Cutaneous, Vascular and Skeletal Defects of Recessive Cutis Laxa 1B with both Elastic Fiber and Collagen Fibril Abnormalities",
+      journal: "J Biol Chem",
+      volume: "290: 21443-21459",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26163519/"
+    },
+    {
+      authors: "Sciaccaluga M, Moriconi C, Martinello K, Catalano M, Bermudez I, Stitzel JA, Maskos U, Fucile S.",
+      year: 2015,
+      title: "Crucial role of nicotinic alpha5 subunit variants for Ca2+ fluxes in ventral midbrain neurons",
+      journal: "FASEB J",
+      volume: "29: 3389-3398",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25911613/"
+    },
+    {
+      authors: "Wilson JE, Petrucelli AS, Chen L, Koblansky AA, Truax AD, Oyama Y, Rogers AB, Brickey WJ, Wang Y, Schneider M, Mühlbauer M, Chou WC, Barker BR, Jobin C, Allbritton NL, Ramsden DA, Davis BK, Ting JP.",
+      year: 2015,
+      title: "Inflammasome-independent role of AIM2 in suppressing colon tumorigenesis via DNA-PK and Akt",
+      journal: "Nat Med",
+      volume: "21: 906-913",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26168292/"
+    },
+    {
+      authors: "Yoon KW, Byun S, Kwon E, Hwang SY, Chu K, Hiraki M, Jo SH, Weins A, Hakroush S, Cebulla A, Sykes DB, Greka A, Mundel P, Fisher DE, Mandinova A, Lee SW.",
+      year: 2015,
+      title: "Control of signaling-mediated clearance of apoptotic cells by the tumor suppressor p53",
+      journal: "Science",
+      volume: "349: 1261669",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26228159/"
+    },
+    {
+      authors: "Causton B, Ramadas RA, Cho JL, Jones K, Pardo-Saganta A, Rajagopal J, Xavier RJ, Medoff BD.",
+      year: 2015,
+      title: "CARMA3 Is Critical for the Initiation of Allergic Airway Inflammation",
+      journal: "J Immunol",
+      volume: "195: 683-694",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26091717/"
+    },
+    {
+      authors: "Lin WJ, Jiang C, Sadahiro M, Bozdagi O, Vulchanova L, Alberini CM, Salton SR.",
+      year: 2015,
+      title: "VGF and Its C-Terminal Peptide TLQP-62 Regulate Memory Formation in Hippocampus via a BDNF-TrkB-Dependent Mechanism",
+      journal: "J Neurosci",
+      volume: "35: 10343-10356",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26180209/"
+    },
+    {
+      authors: "Gong W, Gohla RM, Bowlin KM, Koyano-Nakagawa N, Garry DJ, Shi X.",
+      year: 2015,
+      title: "Kelch Repeat and BTB Domain Containing Protein 5 (Kbtbd5) Regulates Skeletal Muscle Myogenesis through the E2F1-DP1 Complex",
+      journal: "J Biol Chem",
+      volume: "290: 15350-15361",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25944904/"
+    },
+    {
+      authors: "Seehus CR, Aliahmad P, de la Torre B, Iliev ID, Spurka L, Funari VA, Kaye J.",
+      year: 2015,
+      title: "The development of innate lymphoid cells requires TOX-dependent generation of a common innate lymphoid cell progenitor",
+      journal: "Nat Immunol",
+      volume: "16: 599-608",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25915733/"
+    },
+    {
+      authors: "Bavik C, Henry SH, Zhang Y, Mitts K, McGinn T, Budzynski E, Pashko A, Lieu KL, Zhong S, Blumberg B, Kuksa V, Orme M, Scott I, Fawzi A, Kubota R.",
+      year: 2015,
+      title: "Visual Cycle Modulation as an Approach toward Preservation of Retinal Integrity",
+      journal: "PLoS One",
+      volume: "10: e0124940",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25927682/"
+    },
+    {
+      authors: "Jeanne M, Jorgensen J, Gould DB.",
+      year: 2015,
+      title: "Molecular and Genetic Analyses of Collagen Type IV Mutant Mouse Models of Spontaneous Intracerebral Hemorrhage Identify Mechanisms for Stroke Prevention",
+      journal: "Circulation",
+      volume: "131: 1555-1565",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25753864/"
+    },
+    {
+      authors: "Schmidt AM, Lu W, Sindhava VJ, Huang Y, Burkhardt JK, Yang E, Riese MJ, Maltzman JS, Jordan MS, Kambayashi T.",
+      year: 2015,
+      title: "Regulatory T cells require TCR signaling for their suppressive function",
+      journal: "J Immunol",
+      volume: "194: 4362-4370",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25825447/"
+    },
+    {
+      authors: "Luna-Sanchez M, Diaz-Casado E, Barca E, Tejada MA, Montilla-Garcia A, Cobos EJ, Escames G, Acuna-Castroviejo D, Quinzii CM, Lopez LC.",
+      year: 2015,
+      title: "The clinical heterogeneity of coenzyme Q10 deficiency results from genotypic differences in the Coq9 gene",
+      journal: "EMBO Mol Med",
+      volume: "7: 670-687",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25872941/"
+    },
+    {
+      authors: "Sadahiro M, Erickson C, Lin WJ, Shin AC, Razzoli M, Jiang C, Fargali S, Gurney A, Kelley KA, Buettner C, Bartolomucci A, Salton SR.",
+      year: 2015,
+      title: "Role of VGF-derived carboxy-terminal peptides in energy balance and reproduction: analysis of \"humanized\" knockin mice expressing full-length or truncated VGF",
+      journal: "Endocrinology",
+      volume: "156: 1724-1738",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25710278/"
+    },
+    {
+      authors: "Bolte C, Ren X, Tomley T, Ustiyan V, Pradhan A, Hoggatt A, Kalin TV, Herring BP, Kalinichenko VV.",
+      year: 2015,
+      title: "Forkhead box F2 regulation of platelet-derived growth factor and myocardin/serum response factor signaling is essential for intestinal development",
+      journal: "J Biol Chem",
+      volume: "290: 7563-7575",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25648893/"
+    },
+    {
+      authors: "Pircher H, von Grafenstein S, Diener T, Metzger C, Albertini E, Taferner A, Unterluggauer H, Kramer C, Liedl KR, Jansen-Durr P.",
+      year: 2015,
+      title: "Identification of FAH domain-containing protein 1 (FAHD1) as oxaloacetate decarboxylase",
+      journal: "J Biol Chem",
+      volume: "290: 6755-6762",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25614632/"
+    },
+    {
+      authors: "Dincheva I, Drysdale AT, Hartley CA, Johnson DC, Jing D, King EC, Ra S, Gray JM, Yang R, DeGruccio AM, Huang C, Cravatt BF, Glatt CE, Hill MN, Casey BJ, Lee FS.",
+      year: 2015,
+      title: "FAAH genetic variation enhances fronto-amygdala function in mouse and human",
+      journal: "Nat Commun",
+      volume: "6: 6395",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25731744/"
+    },
+    {
+      authors: "Thakur C, Wolfarth M, Sun J, Zhang Y, Lu Y, Battelli L, Porter DW, Chen F.",
+      year: 2015,
+      title: "Oncoprotein mdig contributes to silica-induced pulmonary fibrosis by altering balance between Th17 and Treg T cells",
+      journal: "Oncotarget",
+      volume: "6: 3722-3736",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25682873/"
+    },
+    {
+      authors: "Sag D, Cekic C, Wu R, Linden J, Hedrick CC.",
+      year: 2015,
+      title: "The cholesterol transporter ABCG1 links cholesterol homeostasis and tumour immunity",
+      journal: "Nat Commun",
+      volume: "6: 6354",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25695838/"
+    },
+    {
+      authors: "Emmanuele V, Kubota A, Garcia-Diaz B, Garone C, Akman HO, Sanchez-Gutierrez D, Escudero LM, Kariya S, Homma S, Tanji K, Quinzii CM, Hirano M.",
+      year: 2015,
+      title: "Fhl1 W122S causes loss of protein function and late-onset mild myopathy",
+      journal: "Hum Mol Genet",
+      volume: "24: 714-726",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25274779/"
+    },
+    {
+      authors: "Nalbandian A, Ghimbovschi S, Wang Z, Knoblach S, Llewellyn KJ, Vesa J, Hoffman EP, Kimonis VE.",
+      year: 2015,
+      title: "Global gene expression profiling in R155H knock-in murine model of VCP disease",
+      journal: "Clin Transl Sci",
+      volume: "8: 8-16",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25403919/"
+    },
+    {
+      authors: "Talabot-Ayer D, Martin P, Vesin C, Seemayer CA, Vigne S, Gabay C, Palmer G.",
+      year: 2015,
+      title: "Severe neutrophil-dominated inflammation and enhanced myelopoiesis in IL-33-overexpressing CMV/IL33 mice",
+      journal: "J Immunol",
+      volume: "194: 750-760",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25505286/"
+    },
+    {
+      authors: "Dabovic B, Robertson IB, Zilberberg L, Vassallo M, Davis EC, Rifkin DB.",
+      year: 2015,
+      title: "Function of latent TGFbeta binding protein 4 and fibulin 5 in elastogenesis and lung development",
+      journal: "J Cell Physiol",
+      volume: "230: 226-236",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24911260/"
+    },
+    {
+      authors: "Hillmer RE, Boisvert JP, Cucciare MJ, Dwinell MB, Joksimovic M.",
+      year: 2015,
+      title: "Generation and characterization of mice harboring a conditional CXCL12 allele",
+      journal: "Int J Dev Biol",
+      volume: "59: 205-209",
+      link: "https://pubmed.ncbi.nlm.nih.gov/26198135/"
     }
   ],
   "2014": [
@@ -2325,6 +2549,198 @@ export const publicationsByYear: PublicationsByYear = {
       journal: "J Neurosci",
       volume: "34(18): 6377-88",
       link: "https://www.ncbi.nlm.nih.gov/pubmed/24790208"
+    },
+    {
+      authors: "Fuqua BK, Lu Y, Darshan D, Frazer DM, Wilkins SJ, Wolkow N, Bell AG, Hsu J, Yu CC, Chen H, Dunaief JL, Anderson GJ, Vulpe CD.",
+      year: 2014,
+      title: "The multicopper ferroxidase hephaestin enhances intestinal iron absorption in mice",
+      journal: "PLOS One",
+      volume: "9(6)",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24967813/"
+    },
+    {
+      authors: "Jaworski M, Marsland BJ, Gehrig J, Held W, Favre S, Luther SA, Perroud M, Golshayan D, Gaide O, Thome M.",
+      year: 2014,
+      title: "Malt1 protease inactivation efficiently dampens immune responses but causes spontaneous autoimmunity",
+      journal: "EMBO J",
+      volume: "33: 2765-2781",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25366343/"
+    },
+    {
+      authors: "Stuck MW, Conley SM, Naash MI.",
+      year: 2014,
+      title: "The Y141C knockin mutation in RDS leads to complex phenotypes in the mouse",
+      journal: "Hum Mol Genet",
+      volume: "23: 6260-6274",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25008109/"
+    },
+    {
+      authors: "Mei Y, Thompson MD, Shiraishi Y, Cohen RA, Tong X.",
+      year: 2014,
+      title: "Sarcoplasmic/endoplasmic reticulum Ca2+ ATPase C674 promotes ischemia- and hypoxia-induced angiogenesis via coordinated endothelial cell and macrophage function",
+      journal: "J Mol Cell Cardiol",
+      volume: "76: 275-282",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25257915/"
+    },
+    {
+      authors: "Amengual J, Zhang N, Kemerer M, Maeda T, Palczewski K, Von Lintig J.",
+      year: 2014,
+      title: "STRA6 is critical for cellular vitamin A uptake and homeostasis",
+      journal: "Hum Mol Genet",
+      volume: "23: 5402-5417",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24852372/"
+    },
+    {
+      authors: "Schatz O, Langer E, Ben-Arie N.",
+      year: 2014,
+      title: "Gene dosage of the transcription factor Fingerin (bHLHA9) affects digit development and links syndactyly to ectrodactyly",
+      journal: "Hum Mol Genet",
+      volume: "23: 5394-5401",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24861551/"
+    },
+    {
+      authors: "Min SH, Suzuki A, Stalker TJ, Zhao L, Wang Y, McKennan C, Riese MJ, Guzman JF, Zhang S, Lian L, Joshi R, Meng R, Seeholzer SH, Choi JK, Koretzky G, Marks MS, Abrams CS.",
+      year: 2014,
+      title: "Loss of PIKfyve in platelets causes a lysosomal disease leading to inflammation and thrombosis in mice",
+      journal: "Nat Commun",
+      volume: "5: 4691",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25144430/"
+    },
+    {
+      authors: "Cantu C, Zimmerli D, Hausmann G, Valenta T, Moor A, Aguet M, Basler K.",
+      year: 2014,
+      title: "Pax6-dependent, but beta-catenin-independent, function of Bcl9 proteins in mouse lens development",
+      journal: "Genes Dev",
+      volume: "28: 1879-1884",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25184676/"
+    },
+    {
+      authors: "Bluteau G, Zhuang L, Amann R, Trueb B.",
+      year: 2014,
+      title: "Targeted disruption of the intracellular domain of receptor FgfrL1 in mice",
+      journal: "PLoS One",
+      volume: "9: e105210",
+      link: "https://pubmed.ncbi.nlm.nih.gov/25137044/"
+    },
+    {
+      authors: "Thompson MD, Mei Y, Weisbrod RM, Silver M, Shukla PC, Bolotina VM, Cohen RA, Tong X.",
+      year: 2014,
+      title: "Glutathione adducts on sarcoplasmic/endoplasmic reticulum Ca2+ ATPase Cys-674 regulate endothelial cell calcium stores and angiogenic function as well as promote ischemic blood flow recovery",
+      journal: "J Biol Chem",
+      volume: "289: 19907-19916",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24878960/"
+    },
+    {
+      authors: "Dubail J, Aramaki-Hattori N, Bader HL, Nelson CM, Katebi N, Matuska B, Olsen BR, Apte SS.",
+      year: 2014,
+      title: "A new Adamts9 conditional mouse allele identifies its non-redundant role in interdigital web regression",
+      journal: "Genesis",
+      volume: "52: 702-712",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24838598/"
+    },
+    {
+      authors: "Oliver KH, Jessen T, Crawford EL, Chung CY, Sutcliffe JS, Carneiro AM.",
+      year: 2014,
+      title: "Pro32Pro33 mutations in the integrin beta3 PSI domain result in alphaIIbbeta3 priming and enhanced adhesion: reversal of the hypercoagulability phenotype by the Src inhibitor SKI-606",
+      journal: "Mol Pharmacol",
+      volume: "85: 921-931",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24681868/"
+    },
+    {
+      authors: "Vannoy CH, Xu L, Keramaris E, Lu P, Xiao X, Lu QL.",
+      year: 2014,
+      title: "Adeno-associated virus-mediated overexpression of LARGE rescues alpha-dystroglycan function in dystrophic mice with mutations in the fukutin-related protein",
+      journal: "Hum Gene Ther Methods",
+      volume: "25: 187-196",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24568198/"
+    },
+    {
+      authors: "Tai TS, Pai SY, Ho IC.",
+      year: 2014,
+      title: "Itm2a, a target gene of GATA-3, plays a minimal role in regulating the development and function of T cells",
+      journal: "PLoS One",
+      volume: "9: e96535",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24797666/"
+    },
+    {
+      authors: "Tabata M, Rodgers JT, Hall JA, Lee Y, Jedrychowski MP, Gygi SP, Puigserver P.",
+      year: 2014,
+      title: "Cdc2-like kinase 2 suppresses hepatic fatty acid oxidation and ketogenesis through disruption of the PGC-1alpha and MED1 complex",
+      journal: "Diabetes",
+      volume: "63: 1519-1532",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24458359/"
+    },
+    {
+      authors: "Song WJ, Mondal P, Wolfe A, Alonso LC, Stamateris R, Ong BW, Lim OC, Yang KS, Radovick S, Novaira HJ, Farber EA, Farber CR, Turner SD, Hussain MA.",
+      year: 2014,
+      title: "Glucagon regulates hepatic kisspeptin to impair insulin secretion",
+      journal: "Cell Metab",
+      volume: "19: 667-681",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24703698/"
+    },
+    {
+      authors: "Zhu Z, Todorova K, Lee KK, Wang J, Kwon E, Kehayov I, Kim HG, Kolev V, Dotto GP, Lee SW, Mandinova A.",
+      year: 2014,
+      title: "Small GTPase RhoE/Rnd3 is a critical regulator of Notch1 signaling",
+      journal: "Cancer Res",
+      volume: "74: 2082-2093",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24520076/"
+    },
+    {
+      authors: "Hiebler S, Masuda T, Hacia JG, Moser AB, Faust PL, Liu A, Chowdhury N, Huang N, Lauer A, Bennett J, Watkins PA, Zack DJ, Braverman NE, Raymond GV, Steinberg SJ.",
+      year: 2014,
+      title: "The Pex1-G844D mouse: a model for mild human Zellweger spectrum disorder",
+      journal: "Mol Genet Metab",
+      volume: "111: 522-532",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24685552/"
+    },
+    {
+      authors: "Nakamura Y, Bryan J.",
+      year: 2014,
+      title: "Targeting SUR1/Abcc8-type neuroendocrine KATP channels in pancreatic islet cells",
+      journal: "PLoS One",
+      volume: "9: e91525",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24632822/"
+    },
+    {
+      authors: "Coleman JA, Zhu X, Djajadi HR, Molday LL, Smith RS, Libby RT, John SW, Molday RS.",
+      year: 2014,
+      title: "Phospholipid flippase ATP8A2 is required for normal visual and auditory function and photoreceptor and spiral ganglion cell survival",
+      journal: "J Cell Sci",
+      volume: "127: 1138-1149",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24413168/"
+    },
+    {
+      authors: "Kohara K, Pignatelli M, Rivest AJ, Jung HY, Kitamura T, Suh J, Frank D, Kajikawa K, Mise N, Obata Y, Wickersham IR, Tonegawa S.",
+      year: 2014,
+      title: "Cell type-specific genetic and optogenetic tools reveal hippocampal CA2 circuits",
+      journal: "Nat Neurosci",
+      volume: "17: 269-279",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24336151/"
+    },
+    {
+      authors: "Mansour AA, Khazanov-Zisman S, Netser Y, Klar A, Ben-Arie N.",
+      year: 2014,
+      title: "Nato3 plays an integral role in dorsoventral patterning of the spinal cord by segregating floor plate/p3 fates via Nkx2.2 suppression and Foxa2 maintenance",
+      journal: "Development",
+      volume: "141: 574-584",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24449838/"
+    },
+    {
+      authors: "Yun B, Lee H, Ghosh M, Cravatt BF, Hsu KL, Bonventre JV, Ewing H, Gelb MH, Leslie CC.",
+      year: 2014,
+      title: "Serine hydrolase inhibitors block necrotic cell death by preventing calcium overload of the mitochondria and permeability transition pore formation",
+      journal: "J Biol Chem",
+      volume: "289: 1491-1504",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24285547/"
+    },
+    {
+      authors: "Gaidamakov S, Maximova OA, Chon H, Blewett NH, Wang H, Crawford AK, Day A, Tulchin N, Crouch RJ, Morse HC, 3rd, Blitzer RD, Maraia RJ.",
+      year: 2014,
+      title: "Targeted deletion of the gene encoding the La autoantigen (Sjogren's syndrome antigen B) in B cells or the frontal brain causes extensive tissue loss",
+      journal: "Mol Cell Biol",
+      volume: "34: 123-131",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24190969/"
     }
   ],
   "2013": [
@@ -2359,9 +2775,361 @@ export const publicationsByYear: PublicationsByYear = {
       journal: "J Neuropathol Exp Neurol",
       volume: "72(6): 489-504",
       link: "https://www.ncbi.nlm.nih.gov/pubmed/23656992"
+    },
+    {
+      authors: "Wang Y, Hekimi S.",
+      year: 2013,
+      title: "Mitochondrial respiration without ubiquinone biosynthesis",
+      journal: "Hum Mol Genet",
+      volume: "22: 4768-4783",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23847048/"
+    },
+    {
+      authors: "Chen M, Zhang W, Lu X, Hoggatt AM, Gunst SJ, Kassab GS, Tune JD, Herring BP.",
+      year: 2013,
+      title: "Regulation of 130-kDa smooth muscle myosin light chain kinase expression by an intronic CArG element",
+      journal: "J Biol Chem",
+      volume: "288: 34647-34657",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24106274/"
+    },
+    {
+      authors: "Fu Y, Westenbroek RE, Scheuer T, Catterall WA.",
+      year: 2013,
+      title: "Phosphorylation sites required for regulation of cardiac calcium channels in the fight-or-flight response",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "110: 19621-19626",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24218612/"
+    },
+    {
+      authors: "Yang J, Wheeler SE, Velikoff M, Kleaveland KR, LaFemina MJ, Frank JA, Chapman HA, Christensen PJ, Kim KK.",
+      year: 2013,
+      title: "Activated alveolar epithelial cells initiate fibrosis through secretion of mesenchymal proteins",
+      journal: "Am J Pathol",
+      volume: "183: 1559-1570",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24012677/"
+    },
+    {
+      authors: "Huang ZM, Gao E, Fonseca FV, Hayashi H, Shang X, Hoffman NE, Chuprun JK, Tian X, Tilley DG, Madesh M, Lefer DJ, Stamler JS, Koch WJ.",
+      year: 2013,
+      title: "Convergence of G protein-coupled receptor and S-nitrosylation signaling determines the outcome to cardiac ischemic injury",
+      journal: "Sci Signal",
+      volume: "6: ra95",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24194583/"
+    },
+    {
+      authors: "Zheng H, Gupta V, Patterson-Fortin J, Bhattacharya S, Katlinski K, Wu J, Varghese B, Carbone CJ, Aressy B, Fuchs SY, Greenberg RA.",
+      year: 2013,
+      title: "A BRISC-SHMT complex deubiquitinates IFNAR1 and regulates interferon responses",
+      journal: "Cell Rep",
+      volume: "5(1): 180-93",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24120765/"
+    },
+    {
+      authors: "Tsukamoto K, Mani DR, Shi J, Zhang S, Haagensen DE, Otsuka F, Guan J, Smith JD, Weng W, Liao R, Kolodgie FD, Virmani R, Krieger M.",
+      year: 2013,
+      title: "Identification of apolipoprotein D as a cardioprotective gene using a mouse model of lethal atherosclerotic coronary artery disease",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "110: 17023-17028",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24082124/"
+    },
+    {
+      authors: "Johansson JU, Pradhan S, Lokteva LA, Woodling NS, Ko N, Brown HD, Wang Q, Loh C, Cekanaviciute E, Buckwalter M, Manning-Bog AB, Andreasson KI.",
+      year: 2013,
+      title: "Suppression of inflammation with conditional deletion of the prostaglandin E2 EP2 receptor in macrophages and brain microglia",
+      journal: "J Neurosci",
+      volume: "33: 16016-16032",
+      link: "https://pubmed.ncbi.nlm.nih.gov/24089506/"
+    },
+    {
+      authors: "Schlehe JS, Journel MS, Taylor KP, Amodeo KD, LaVoie MJ.",
+      year: 2013,
+      title: "The mitochondrial disease associated protein Ndufaf2 is dispensable for Complex-1 assembly but critical for the regulation of oxidative stress",
+      journal: "Neurobiol Dis",
+      volume: "58: 57-67",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23643841/"
+    },
+    {
+      authors: "Xu L, Lu PJ, Wang CH, Keramaris E, Qiao C, Xiao B, Blake DJ, Xiao X, Lu QL.",
+      year: 2013,
+      title: "Adeno-associated virus 9 mediated FKRP gene therapy restores functional glycosylation of alpha-dystroglycan and improves muscle functions",
+      journal: "Mol Ther",
+      volume: "21: 1832-1840",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23903577/"
+    },
+    {
+      authors: "Ota T, Doyle-Cooper C, Cooper AB, Doores KJ, Aoki-Ota M, Le K, Schief WR, Wyatt RT, Burton DR, Nemazee D.",
+      year: 2013,
+      title: "B cells from knock-in mice expressing broadly neutralizing HIV antibody b12 carry an innocuous B cell receptor responsive to HIV vaccine candidates",
+      journal: "J Immunol",
+      volume: "191: 3179-3185",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23940270/"
+    },
+    {
+      authors: "Ramirez-Ortiz ZG, Pendergraft WF, 3rd, Prasad A, Byrne MH, Iram T, Blanchette CJ, Luster AD, Hacohen N, El Khoury J, Means TK.",
+      year: 2013,
+      title: "The scavenger receptor SCARF1 mediates the clearance of apoptotic cells and prevents autoimmunity",
+      journal: "Nat Immunol",
+      volume: "14: 917-926",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23892722/"
+    },
+    {
+      authors: "Blaeser A, Keramaris E, Chan YM, Sparks S, Cowley D, Xiao X, Lu QL.",
+      year: 2013,
+      title: "Mouse models of fukutin-related protein mutations show a wide range of disease phenotypes",
+      journal: "Hum Genet",
+      volume: "132: 923-934",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23604678/"
+    },
+    {
+      authors: "Jun JC, Kertesy S, Jones MB, Marinis JM, Cobb BA, Tigno-Aranjuez JT, Abbott DW.",
+      year: 2013,
+      title: "Innate immune-directed NF-kappaB signaling requires site-specific NEMO ubiquitination",
+      journal: "Cell Rep",
+      volume: "4: 352-361",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23872165/"
+    },
+    {
+      authors: "Hanel W, Marchenko N, Xu S, Yu SX, Weng W, Moll U.",
+      year: 2013,
+      title: "Two hot spot mutant p53 mouse models display differential gain of function in tumorigenesis",
+      journal: "Cell Death Differ",
+      volume: "20: 898-909",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23538418/"
+    },
+    {
+      authors: "Lindley LE, Briegel KJ.",
+      year: 2013,
+      title: "Generation of mice with a conditional Lbh null allele",
+      journal: "Genesis",
+      volume: "51: 491-497",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23554159/"
+    },
+    {
+      authors: "Van't Veer A, Bechtholt AJ, Onvani S, Potter D, Wang Y, Liu-Chen LY, Schutz G, Chartoff EH, Rudolph U, Cohen BM, Carlezon WA Jr.",
+      year: 2013,
+      title: "Ablation of kappa-opioid receptors from brain dopamine neurons has anxiolytic-like effects and enhances cocaine-induced plasticity",
+      journal: "Neuropsychopharmacology",
+      volume: "38: 1585-1597",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23446450/"
+    },
+    {
+      authors: "Wiig H, Schroder A, Neuhofer W, Jantsch J, Kopp C, Karlsen TV, Boschmann M, Goss J, Bry M, Rakova N, Dahlmann A, Brenner S, Tenstad O, Nurmi H, Mervaala E, Wagner H, Beck FX, Müller DN, Kerjaschki D, Luft FC, Harrison DG, Alitalo K, Titze J.",
+      year: 2013,
+      title: "Immune cells control skin lymphatic electrolyte homeostasis and blood pressure",
+      journal: "J Clin Invest",
+      volume: "123: 2803-2815",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23722907/"
+    },
+    {
+      authors: "Edwards JP, Fujii H, Zhou AX, Creemers J, Unutmaz D, Shevach EM.",
+      year: 2013,
+      title: "Regulation of the expression of GARP/latent TGF-beta1 complexes on mouse T cells and their role in regulatory T cell and Th17 differentiation",
+      journal: "J Immunol",
+      volume: "190: 5506-5515",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23636057/"
+    },
+    {
+      authors: "Cantu C, Valenta T, Hausmann G, Vilain N, Aguet M, Basler K.",
+      year: 2013,
+      title: "The Pygo2-H3K4me2/3 interaction is dispensable for mouse development and Wnt signaling-dependent transcription",
+      journal: "Development",
+      volume: "140: 2377-2386",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23637336/"
+    },
+    {
+      authors: "Caruso N, Herberth B, Bartoli M, Puppo F, Dumonceaux J, Zimmermann A, Denadai S, Lebosse M, Roche S, Geng L, Magdinier F, Attarian S, Bernard R, Maina F, Levy N, Helmbacher F.",
+      year: 2013,
+      title: "Deregulation of the protocadherin gene FAT1 alters muscle shapes: implications for the pathogenesis of facioscapulohumeral dystrophy",
+      journal: "PLoS Genet",
+      volume: "9: e1003550",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23785299/"
+    },
+    {
+      authors: "Nandar W, Neely EB, Unger E, Connor JR.",
+      year: 2013,
+      title: "A mutation in the HFE gene is associated with altered brain iron profiles and increased oxidative stress in mice",
+      journal: "Biochim Biophys Acta",
+      volume: "1832: 729-741",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23425617/"
+    },
+    {
+      authors: "Lee GS, He Y, Dougherty EJ, Jimenez-Movilla M, Avella M, Grullon S, Sharlin DS, Guo C, Blackford JA, Jr., Awasthi S, Zhang Z, Armstrong SP, London EC, Chen W, Dean J, Simons SS Jr.",
+      year: 2013,
+      title: "Disruption of Ttll5/stamp gene (tubulin tyrosine ligase-like protein 5/SRC-1 and TIF2-associated modulatory protein gene) in male mice causes sperm malformation and infertility",
+      journal: "J Biol Chem",
+      volume: "288: 15167-15180",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23572529/"
+    },
+    {
+      authors: "Lee PC, Dodart JC, Aron L, Finley LW, Bronson RT, Haigis MC, Yankner BA, Harper JW.",
+      year: 2013,
+      title: "Altered social behavior and neuronal development in mice lacking the Uba6-Use1 ubiquitin transfer system",
+      journal: "Mol Cell",
+      volume: "50: 172-184",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23562325/"
+    },
+    {
+      authors: "Poddar D, Basu A, Baldwin WM, 3rd, Kondratov RV, Barik S, Mazumder B.",
+      year: 2013,
+      title: "An extraribosomal function of ribosomal protein L13a in macrophages resolves inflammation",
+      journal: "J Immunol",
+      volume: "190: 3600-3612",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23467936/"
+    },
+    {
+      authors: "Moghadaszadeh B, Rider BE, Lawlor MW, Childers MK, Grange RW, Gupta K, Boukedes SS, Owen CA, Beggs AH.",
+      year: 2013,
+      title: "Selenoprotein N deficiency in mice is associated with abnormal lung development",
+      journal: "FASEB J",
+      volume: "27: 1585-1599",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23322167/"
+    },
+    {
+      authors: "Herring BE, Shi Y, Suh YH, Zheng CY, Blankenship SM, Roche KW, Nicoll RA.",
+      year: 2013,
+      title: "Cornichon proteins determine the subunit composition of synaptic AMPA receptors",
+      journal: "Neuron",
+      volume: "77: 1083-1096",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23522044/"
+    },
+    {
+      authors: "Garcia-Corzo L, Luna-Sanchez M, Doerrier C, Garcia JA, Guaras A, Acin-Perez R, Bullejos-Peregrin J, Lopez A, Escames G, Enriquez JA, Acuña-Castroviejo D, López LC.",
+      year: 2013,
+      title: "Dysfunctional Coq9 protein causes predominant encephalomyopathy associated with CoQ deficiency",
+      journal: "Hum Mol Genet",
+      volume: "22: 1233-1248",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23255292/"
+    },
+    {
+      authors: "Ferrer M, Cornwall G, Oko R.",
+      year: 2013,
+      title: "A population of CRES resides in the outer dense fibers of spermatozoa",
+      journal: "Biol Reprod",
+      volume: "88: 65",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23303686/"
+    },
+    {
+      authors: "Kim MH, de Beer MC, Wroblewski JM, Webb NR, de Beer FC.",
+      year: 2013,
+      title: "SAA does not induce cytokine production in physiological conditions",
+      journal: "Cytokine",
+      volume: "61: 506-512",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23199809/"
+    },
+    {
+      authors: "Nalbandian A, Llewellyn KJ, Badadani M, Yin HZ, Nguyen C, Katheria V, Watts G, Mukherjee J, Vesa J, Caiozzo V, Mozaffar T, Weiss JH, Kimonis VE.",
+      year: 2013,
+      title: "A progressive translational mouse model of human valosin-containing protein disease: the VCP(R155H/+) mouse",
+      journal: "Muscle Nerve",
+      volume: "47: 260-270",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23169451/"
+    },
+    {
+      authors: "Ghosal A, Lambrecht N, Subramanya SB, Kapadia R, Said HM.",
+      year: 2013,
+      title: "Conditional knockout of the Slc5a6 gene in mouse intestine impairs biotin absorption",
+      journal: "Am J Physiol Gastrointest Liver Physiol",
+      volume: "304: G64-71",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23139221/"
+    },
+    {
+      authors: "Zhang N, Kolesnikov AV, Jastrzebska B, Mustafi D, Sawada O, Maeda T, Genoud C, Engel A, Kefalov VJ, Palczewski K.",
+      year: 2013,
+      title: "Autosomal recessive retinitis pigmentosa E150K opsin mice exhibit photoreceptor disorganization",
+      journal: "J Clin Invest",
+      volume: "123: 121-137",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23221346/"
+    },
+    {
+      authors: "de Beer MC, Wroblewski JM, Noffsinger VP, Ji A, Meyer JM, van der Westhuyzen DR, de Beer FC, Webb NR.",
+      year: 2013,
+      title: "The Impairment of Macrophage-to-Feces Reverse Cholesterol Transport during Inflammation Does Not Depend on Serum Amyloid A",
+      journal: "J Lipids",
+      volume: "2013: 283486",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23533715/"
     }
   ],
   "2012": [
+    {
+      authors: "Andersson DC, Betzenhauser MJ, Reiken S, Umanskaya A, Shiomi T, Marks AR.",
+      year: 2012,
+      title: "Stress-induced increase in skeletal muscle force requires protein kinase A phosphorylation of the ryanodine receptor",
+      journal: "J Physiol",
+      volume: "590: 6381-6387",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23045347/"
+    },
+    {
+      authors: "Vanleeuwen JE, Penzes P.",
+      year: 2012,
+      title: "Long-term perturbation of spine plasticity results in distinct impairments of cognitive function",
+      journal: "J Neurochem",
+      volume: "123: 781-789",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23016950/"
+    },
+    {
+      authors: "Guillemot L, Schneider Y, Brun P, Castagliuolo I, Pizzuti D, Martines D, Jond L, Bongiovanni M, Citi S.",
+      year: 2012,
+      title: "Cingulin is dispensable for epithelial barrier function and tight junction structure, and plays a role in the control of claudin-2 expression and response to duodenal mucosa injury",
+      journal: "J Cell Sci",
+      volume: "125: 5005-5014",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22946052/"
+    },
+    {
+      authors: "Xiang F, Cui B, Gao Q, Zhang J, Zhang J, Li W.",
+      year: 2012,
+      title: "Decreased levels of Ca(2)(+)-calmodulin-dependent protein kinase IV in the testis as a contributing factor to reduced fertility in male Crybb2(-)/(-) mice",
+      journal: "Int J Mol Med",
+      volume: "30: 1145-1151",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22922632/"
+    },
+    {
+      authors: "Lapointe J, Wang Y, Bigras E, Hekimi S.",
+      year: 2012,
+      title: "The submitochondrial distribution of ubiquinone affects respiration in long-lived Mclk1+/- mice",
+      journal: "J Cell Biol",
+      volume: "199: 215-224",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23045546/"
+    },
+    {
+      authors: "Huang H, Kong D, Byun KH, Ye C, Koda S, Lee DH, Oh BC, Lee SW, Lee B, Zabolotny JM, Kim MS, Bjørbæk C, Lowell BB, Kim YB.",
+      year: 2012,
+      title: "Rho-kinase regulates energy balance by targeting hypothalamic leptin receptor signaling",
+      journal: "Nat Neurosci",
+      volume: "15: 1391-1398",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22941107/"
+    },
+    {
+      authors: "Konsavage WM, Jr., Jin G, Yochum GS.",
+      year: 2012,
+      title: "The Myc 3′ Wnt-responsive element regulates homeostasis and regeneration in the mouse intestinal tract",
+      journal: "Mol Cell Biol",
+      volume: "32: 3891-3902",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22826437/"
+    },
+    {
+      authors: "Wang C, Lee JE, Cho YW, Xiao Y, Jin Q, Liu C, Ge K.",
+      year: 2012,
+      title: "UTX regulates mesoderm differentiation of embryonic stem cells independent of H3K27 demethylase activity",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "109: 15324-15329",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22949634/"
+    },
+    {
+      authors: "Zhang J, Neal J, Lian G, Shi B, Ferland RJ, Sheen V.",
+      year: 2012,
+      title: "Brefeldin A-inhibited guanine exchange factor 2 regulates filamin A phosphorylation and neuronal migration",
+      journal: "J Neurosci",
+      volume: "32: 12619-12629",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22956851/"
+    },
+    {
+      authors: "Zou C, Levine EM.",
+      year: 2012,
+      title: "Vsx2 controls eye organogenesis and retinal progenitor identity via homeodomain and non-homeodomain residues required for high affinity DNA binding",
+      journal: "PLoS Genet",
+      volume: "8: e1002924",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23028341/"
+    },
     {
       authors: "Suthar MS, Ramos HJ, Brassil MM, Netland J, Chappell CP, Blahnik G, McMillan A, Diamond MS, Clark EA, Bevan MJ, Gale M Jr.",
       year: 2012,
@@ -2371,12 +3139,196 @@ export const publicationsByYear: PublicationsByYear = {
       link: "https://www.ncbi.nlm.nih.gov/pubmed/22841161"
     },
     {
+      authors: "Yin HZ, Nalbandian A, Hsu CI, Li S, Llewellyn KJ, Mozaffar T, Kimonis VE, Weiss JH.",
+      year: 2012,
+      title: "Slow development of ALS-like spinal cord pathology in mutant valosin-containing protein gene knock-in mice",
+      journal: "Cell Death Dis",
+      volume: "3: e374",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22898872/"
+    },
+    {
+      authors: "Cook JR, Smaldone S, Cozzolino C, del Solar M, Lee-Arteaga S, Nistala H, Ramirez F.",
+      year: 2012,
+      title: "Generation of Fbn1 conditional null mice implicates the extracellular microfibrils in osteoprogenitor recruitment",
+      journal: "Genesis",
+      volume: "50: 635-641",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22522880/"
+    },
+    {
+      authors: "Robbins GR, Truax AD, Davis BK, Zhang L, Brickey WJ, Ting JP.",
+      year: 2012,
+      title: "Regulation of class I major histocompatibility complex (MHC) by nucleotide-binding domain, leucine-rich repeat-containing (NLR) proteins",
+      journal: "J Biol Chem",
+      volume: "287: 24294-24303",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22621927/"
+    },
+    {
+      authors: "Geng R, Melki S, Chen DH, Tian G, Furness DN, Oshima-Takago T, Neef J, Moser T, Askew C, Horwitz G, Holt JR, Imanishi Y, Alagramam KN.",
+      year: 2012,
+      title: "The mechanosensory structure of the hair cell requires clarin-1, a protein encoded by Usher syndrome III causative gene",
+      journal: "J Neurosci",
+      volume: "32: 9485-9498",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22787034/"
+    },
+    {
+      authors: "Gonzalez S, Rangel-Barajas C, Peper M, Lorenzo R, Moreno E, Ciruela F, Borycz J, Ortiz J, Lluis C, Franco R, McCormick PJ, Volkow ND, Rubinstein M, Floran B, Ferré S.",
+      year: 2012,
+      title: "Dopamine D4 receptor, but not the ADHD-associated D4.7 variant, forms functional heteromers with the dopamine D2S receptor in the brain",
+      journal: "Mol Psychiatry",
+      volume: "17: 650-662",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21577214/"
+    },
+    {
+      authors: "Zhang Y, Rubin GR, Fineberg N, Huisingh C, McGwin G, Pittler SJ, Kraft TW.",
+      year: 2012,
+      title: "Age-related changes in Cngb1-X1 knockout mice: prolonged cone survival",
+      journal: "Doc Ophthalmol",
+      volume: "124: 163-175",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22418597/"
+    },
+    {
+      authors: "Zinzow-Kramer WM, Long AB, Youngblood BA, Rosenthal KM, Butler R, Mohammed AU, Skountzou I, Ahmed R, Evavold BD, Boss JM.",
+      year: 2012,
+      title: "CIITA promoter I CARD-deficient mice express functional MHC class II genes in myeloid and lymphoid compartments",
+      journal: "Genes Immun",
+      volume: "13: 299-310",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22218226/"
+    },
+    {
+      authors: "Zhang X, Thatcher SE, Rateri DL, Bruemmer D, Charnigo R, Daugherty A, Cassis LA.",
+      year: 2012,
+      title: "Transient exposure of neonatal female mice to testosterone abrogates the sexual dimorphism of abdominal aortic aneurysms",
+      journal: "Circ Res",
+      volume: "110: e73-85",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22539766/"
+    },
+    {
+      authors: "Agrawal PB, Joshi M, Savic T, Chen Z, Beggs AH.",
+      year: 2012,
+      title: "Normal myofibrillar development followed by progressive sarcomeric disruption with actin accumulations in a mouse Cfl2 knockout demonstrates requirement of cofilin-2 for muscle maintenance",
+      journal: "Hum Mol Genet",
+      volume: "21: 2341-2356",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22343408/"
+    },
+    {
+      authors: "Popmihajlov Z, Xu D, Morgan H, Milligan Z, Smith KA.",
+      year: 2012,
+      title: "Conditional IL-2 Gene Deletion: Consequences for T Cell Proliferation",
+      journal: "Front Immunol",
+      volume: "3: 102",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22566963/"
+    },
+    {
+      authors: "Shim H, Wang CT, Chen YL, Chau VQ, Fu KG, Yang J, McQuiston AR, Fisher RA, Chen CK.",
+      year: 2012,
+      title: "Defective retinal depolarizing bipolar cells in regulators of G protein signaling (RGS) 7 and 11 double null mice",
+      journal: "J Biol Chem",
+      volume: "287: 14873-14879",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22396541/"
+    },
+    {
+      authors: "Wolkow N, Song D, Song Y, Chu S, Hadziahmetovic M, Lee JC, Iacovelli J, Grieco S, Dunaief JL.",
+      year: 2012,
+      title: "Ferroxidase hephaestin's cell-autonomous role in the retinal pigment epithelium",
+      journal: "Am J Pathol",
+      volume: "180: 1614-1624",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22326755/"
+    },
+    {
+      authors: "Ukarapong S, Bao Y, Perera EM, Berkovitz GD.",
+      year: 2012,
+      title: "Megakaryocyte development is normal in mice with targeted disruption of Tescalcin",
+      journal: "Exp Cell Res",
+      volume: "318: 662-669",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22245583/"
+    },
+    {
+      authors: "Yang G, Li H, Tang G, Wu L, Zhao K, Cao Q, Xu C, Wang R.",
+      year: 2012,
+      title: "Increased neointimal formation in cystathionine gamma-lyase deficient mice: role of hydrogen sulfide in alpha5beta1-integrin and matrix metalloproteinase-2 expression in smooth muscle cells",
+      journal: "J Mol Cell Cardiol",
+      volume: "52: 677-688",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22155238/"
+    },
+    {
+      authors: "Pierson CR, Dulin-Smith AN, Durban AN, Marshall ML, Marshall JT, Snyder AD, Naiyer N, Gladman JT, Chandler DS, Lawlor MW, Buj-Bello A, Dowling JJ, Beggs AH.",
+      year: 2012,
+      title: "Modeling the human MTM1 p.R69C mutation in murine Mtm1 results in exon 4 skipping and a less severe myotubular myopathy phenotype",
+      journal: "Hum Mol Genet",
+      volume: "21: 811-825",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22046032/"
+    },
+    {
       authors: "Rajadhyaksha AM, Ra S, Kishinevsky S, Lee AS, Romanienko P, DuBoff M, Yang C, Zupan B, Byrne M, Daruwalla ZR, Mark W, Kosofsky BE, Toth M, Higgins JJ.",
       year: 2012,
       title: "Behavioral characterization of cereblon forebrain-specific conditional null mice: a model for human non-syndromic intellectual disability",
       journal: "Behav Brain Res",
       volume: "226(2): 428-34",
       link: "https://www.ncbi.nlm.nih.gov/pubmed/21995942"
+    },
+    {
+      authors: "Yiannikouris F, Karounos M, Charnigo R, English VL, Rateri DL, Daugherty A, Cassis LA.",
+      year: 2012,
+      title: "Adipocyte-specific deficiency of angiotensinogen decreases plasma angiotensinogen concentration and systolic blood pressure in mice",
+      journal: "Am J Physiol Regul Integr Comp Physiol",
+      volume: "302: R244-251",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22071156/"
+    },
+    {
+      authors: "Eliyahu E, Shtraizent N, Shalgi R, Schuchman EH.",
+      year: 2012,
+      title: "Construction of conditional acid ceramidase knockout mice and in vivo effects on oocyte development and fertility",
+      journal: "Cell Physiol Biochem",
+      volume: "30: 735-748",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22832328/"
+    },
+    {
+      authors: "Makino CL, Wen XH, Olshevskaya EV, Peshenko IV, Savchenko AB, Dizhoor AM.",
+      year: 2012,
+      title: "Enzymatic relay mechanism stimulates cyclic GMP synthesis in rod photoresponse: biochemical and physiological study in guanylyl cyclase activating protein 1 knockout mice",
+      journal: "PLoS One",
+      volume: "7: e47637",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23112828/"
+    },
+    {
+      authors: "Miller NL, Lawson C, Chen XL, Lim ST, Schlaepfer DD.",
+      year: 2012,
+      title: "Rgnef (p190RhoGEF) knockout inhibits RhoA activity, focal adhesion establishment, and cell motility downstream of integrins",
+      journal: "PLoS One",
+      volume: "7(5): e37830",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22662233/"
+    },
+    {
+      authors: "Nalbandian A, Llewellyn KJ, Kitazawa M, Yin HZ, Badadani M, Khanlou N, Edwards R, Nguyen C, Mukherjee J, Mozaffar T, Watts G, Weiss J, Kimonis VE.",
+      year: 2012,
+      title: "The homozygote VCP(R(1)(5)(5)H/R(1)(5)(5)H) mouse model exhibits accelerated human VCP-associated disease pathology",
+      journal: "PLoS One",
+      volume: "7: e46308",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23056283/"
+    },
+    {
+      authors: "Rateri DL, Moorleghen JJ, Knight V, Balakrishnan A, Howatt DA, Cassis LA, Daugherty A.",
+      year: 2012,
+      title: "Depletion of endothelial or smooth muscle cell-specific angiotensin II type 1a receptors does not influence aortic aneurysms or atherosclerosis in LDL receptor deficient mice",
+      journal: "PLoS One",
+      volume: "7: e51483",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23284702/"
+    },
+    {
+      authors: "Soberman RJ, MacKay CR, Vaine CA, Ryan GB, Cerny AM, Thompson MR, Nikolic B, Primo V, Christmas P, Sheiffele P, Aronov L, Knipe DM, Kurt-Jones EA.",
+      year: 2012,
+      title: "CD200R1 supports HSV-1 viral replication and licenses pro-inflammatory signaling functions of TLR2",
+      journal: "PLoS One",
+      volume: "7: e47740",
+      link: "https://pubmed.ncbi.nlm.nih.gov/23112839/"
+    },
+    {
+      authors: "Wang Y, Zhu S, Weisman GA, Gitlin JD, Petris MJ.",
+      year: 2012,
+      title: "Conditional knockout of the Menkes disease copper transporter demonstrates its critical role in embryogenesis",
+      journal: "PLoS One",
+      volume: "7: e43039",
+      link: "https://pubmed.ncbi.nlm.nih.gov/22912783/"
     }
   ],
   "2011": [
@@ -2435,6 +3387,190 @@ export const publicationsByYear: PublicationsByYear = {
       journal: "J Lipid Res",
       volume: "52(2): 345-53",
       link: "https://www.ncbi.nlm.nih.gov/pubmed/21138980"
+    },
+    {
+      authors: "Peng Y, Clark C, Luong R, Tu WH, Lee J, Johnson DT, Das A, Carroll TJ, Sun Z.",
+      year: 2011,
+      title: "The leucine zipper putative tumor suppressor 2 protein LZTS2 regulates kidney development",
+      journal: "J Biol Chem",
+      volume: "286: 40331-40342",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21969366/"
+    },
+    {
+      authors: "Nielsen JA, Chambers MA, Romm E, Lee LY, Berndt JA, Hudson LD.",
+      year: 2011,
+      title: "Mouse transmembrane BAX inhibitor motif 3 (Tmbim3) encodes a 38 kDa transmembrane protein expressed in the central nervous system",
+      journal: "Mol Cell Biochem",
+      volume: "357: 73-81",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21625951/"
+    },
+    {
+      authors: "Tsuboi K, Okamoto Y, Ikematsu N, Inoue M, Shimizu Y, Uyama T, Wang J, Deutsch DG, Burns MP, Ulloa NM, Tokumura A, Ueda N.",
+      year: 2011,
+      title: "Enzymatic formation of N-acylethanolamines from N-acylethanolamine plasmalogen through N-acylphosphatidylethanolamine-hydrolyzing phospholipase D-dependent and -independent pathways",
+      journal: "Biochim Biophys Acta",
+      volume: "1811: 565-577",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21801852/"
+    },
+    {
+      authors: "Chew LJ, Shen W, Ming X, Senatorov VV, Jr., Chen HL, Cheng Y, Hong E, Knoblach S, Gallo V.",
+      year: 2011,
+      title: "SRY-box containing gene 17 regulates the Wnt/beta-catenin signaling pathway in oligodendrocyte progenitor cells",
+      journal: "J Neurosci",
+      volume: "31: 13921-13935",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21957254/"
+    },
+    {
+      authors: "Kennedy PC, Zhu R, Huang T, Tomsig JL, Mathews TP, David M, Peyruchaud O, Macdonald TL, Lynch KR.",
+      year: 2011,
+      title: "Characterization of a sphingosine 1-phosphate receptor antagonist prodrug",
+      journal: "J Pharmacol Exp Ther",
+      volume: "338: 879-889",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21622733/"
+    },
+    {
+      authors: "Wellner N, Tsuboi K, Madsen AN, Holst B, Diep TA, Nakao M, Tokumura A, Burns MP, Deutsch DG, Ueda N, Hansen HS.",
+      year: 2011,
+      title: "Studies on the anorectic effect of N-acylphosphatidylethanolamine and phosphatidylethanolamine in mice",
+      journal: "Biochim Biophys Acta",
+      volume: "1811: 508-512",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21704732/"
+    },
+    {
+      authors: "Parent AD, Cornwall GA, Liu LY, Smith CE, Hermo L.",
+      year: 2011,
+      title: "Alterations in the testis and epididymis associated with loss of function of the cystatin-related epididymal spermatogenic (CRES) protein",
+      journal: "J Androl",
+      volume: "32: 444-463",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21164141/"
+    },
+    {
+      authors: "Shridas P, Bailey WM, Talbott KR, Oslund RC, Gelb MH, Webb NR.",
+      year: 2011,
+      title: "Group X secretory phospholipase A2 enhances TLR4 signaling in macrophages",
+      journal: "J Immunol",
+      volume: "187: 482-489",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21622856/"
+    },
+    {
+      authors: "Huang S, Ling JJ, Yang S, Li XJ, Li S.",
+      year: 2011,
+      title: "Neuronal expression of TATA box-binding protein containing expanded polyglutamine in knock-in mice reduces chaperone protein response by impairing the function of nuclear factor-Y transcription factor",
+      journal: "Brain",
+      volume: "134: 1943-1958",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21576111/"
+    },
+    {
+      authors: "Zubenko GS, Hughes HB, 3rd.",
+      year: 2011,
+      title: "Replacement of homologous mouse DNA sequence with pathogenic 6-base human CREB1 promoter sequence creates murine model of major depressive disorder",
+      journal: "Am J Med Genet B Neuropsychiatr Genet",
+      volume: "156B: 517-531",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21480499/"
+    },
+    {
+      authors: "Allen IC, Moore CB, Schneider M, Lei Y, Davis BK, Scull MA, Gris D, Roney KE, Zimmermann AG, Bowzard JB, Ranjan P, Monroe KM, Pickles RJ, Sambhara S, Ting JP.",
+      year: 2011,
+      title: "NLRX1 protein attenuates inflammatory responses to infection by interfering with the RIG-I-MAVS and TRAF6-NF-kappaB signaling pathways",
+      journal: "Immunity",
+      volume: "34: 854-865",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21703540/"
+    },
+    {
+      authors: "Ma X, Kumar M, Choudhury SN, Becker Buscaglia LE, Barker JR, Kanakamedala K, Liu MF, Li Y.",
+      year: 2011,
+      title: "Loss of the miR-21 allele elevates the expression of its target genes and reduces tumorigenesis",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "108: 10144-10149",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21646541/"
+    },
+    {
+      authors: "Kolesnikov AV, Rikimaru L, Hennig AK, Lukasiewicz PD, Fliesler SJ, Govardovskii VI, Kefalov VJ, Kisselev OG.",
+      year: 2011,
+      title: "G-protein betagamma-complex is crucial for efficient signal amplification in vision",
+      journal: "J Neurosci",
+      volume: "31: 8067-8077",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21632928/"
+    },
+    {
+      authors: "Bacchelli C, Buckland KF, Buckridge S, Salzer U, Schneider P, Thrasher AJ, Gaspar HB.",
+      year: 2011,
+      title: "The C76R transmembrane activator and calcium modulator cyclophilin ligand interactor mutation disrupts antibody production and B-cell homeostasis in heterozygous and homozygous mice",
+      journal: "J Allergy Clin Immunol",
+      volume: "127: 1253-1259",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21315434/"
+    },
+    {
+      authors: "Fu Y, Westenbroek RE, Yu FH, Clark JP, 3rd, Marshall MR, Scheuer T, Catterall WA.",
+      year: 2011,
+      title: "Deletion of the distal C terminus of CaV1.2 channels leads to loss of beta-adrenergic regulation and heart failure in vivo",
+      journal: "J Biol Chem",
+      volume: "286: 12617-12626",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21216954/"
+    },
+    {
+      authors: "Templin AT, Maier B, Nishiki Y, Tersey SA, Mirmira RG.",
+      year: 2011,
+      title: "Deoxyhypusine synthase haploinsufficiency attenuates acute cytokine signaling",
+      journal: "Cell Cycle",
+      volume: "10: 1043-1049",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21386662/"
+    },
+    {
+      authors: "Rateri DL, Moorleghen JJ, Balakrishnan A, Owens AP, 3rd, Howatt DA, Subramanian V, Poduri A, Charnigo R, Cassis LA, Daugherty A.",
+      year: 2011,
+      title: "Endothelial cell-specific deficiency of Ang II type 1a receptors attenuates Ang II-induced ascending aortic aneurysms in LDL receptor-/- mice",
+      journal: "Circ Res",
+      volume: "108: 574-581",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21252156/"
+    },
+    {
+      authors: "Verma S, Hoffmann FW, Kumar M, Huang Z, Roe K, Nguyen-Wu E, Hashimoto AS, Hoffmann PR.",
+      year: 2011,
+      title: "Selenoprotein K knockout mice exhibit deficient calcium flux in immune cells and impaired immune responses",
+      journal: "J Immunol",
+      volume: "186: 2127-2137",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21220ivamente/"
+    },
+    {
+      authors: "Lionnet T, Czaplinski K, Darzacq X, Shav-Tal Y, Wells AL, Chao JA, Park HY, de Turris V, Lopez-Jones M, Singer RH.",
+      year: 2011,
+      title: "A transgenic mouse for in vivo detection of endogenous labeled mRNA",
+      journal: "Nat Methods",
+      volume: "8: 165-170",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21240280/"
+    },
+    {
+      authors: "Jimenez T, McDermott JP, Sanchez G, Blanco G.",
+      year: 2011,
+      title: "Na,K-ATPase alpha4 isoform is essential for sperm fertility",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "108: 644-649",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21187Myers/"
+    },
+    {
+      authors: "Chau KM, Cornwall GA.",
+      year: 2011,
+      title: "Reduced fertility in vitro in mice lacking the cystatin CRES (cystatin-related epididymal spermatogenic): rescue by exposure of spermatozoa to dibutyryl cAMP and isobutylmethylxanthine",
+      journal: "Biol Reprod",
+      volume: "84: 140-152",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20811016/"
+    },
+    {
+      authors: "Xie Z, Cahill ME, Radulovic J, Wang J, Campbell SL, Miller CA, Sweatt JD, Penzes P.",
+      year: 2011,
+      title: "Hippocampal phenotypes in kalirin-deficient mice",
+      journal: "Mol Cell Neurosci",
+      volume: "46: 45-54",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20708081/"
+    },
+    {
+      authors: "Zack M, Boyanovsky BB, Shridas P, Bailey W, Forrest K, Howatt DA, Gelb MH, de Beer FC, Daugherty A, Webb NR.",
+      year: 2011,
+      title: "Group X secretory phospholipase A(2) augments angiotensin II-induced inflammatory responses and abdominal aortic aneurysm formation in apoE-deficient mice",
+      journal: "Atherosclerosis",
+      volume: "214: 58-64",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20926078/"
     }
   ],
   "2010": [
@@ -2477,6 +3613,254 @@ export const publicationsByYear: PublicationsByYear = {
       journal: "J Biol Chem",
       volume: "285(26): 20031-9",
       link: "https://www.ncbi.nlm.nih.gov/pubmed/20421306"
+    },
+    {
+      authors: "Liang J, Saad Y, Lei T, Wang J, Qi D, Yang Q, Kolattukudy PE, Fu M.",
+      year: 2010,
+      title: "MCP-induced protein 1 deubiquitinates TRAF proteins and negatively regulates JNK and NF-kappaB signaling",
+      journal: "J Exp Med",
+      volume: "207: 2959-2973",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21115688/"
+    },
+    {
+      authors: "Gao X, Eladari D, Leviel F, Tew BY, Miro-Julia C, Cheema FH, Miller L, Nelson R, Paunescu TG, McKee M, Brown D, Al-Awqati Q.",
+      year: 2010,
+      title: "Deletion of hensin/DMBT1 blocks conversion of beta- to alpha-intercalated cells and induces distal renal tubular acidosis",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "107: 21872-21877",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21098291/"
+    },
+    {
+      authors: "Eckhardt ER, Witta J, Zhong J, Arsenescu R, Arsenescu V, Wang Y, Ghoshal S, de Beer MC, de Beer FC, de Villiers WJ.",
+      year: 2010,
+      title: "Intestinal epithelial serum amyloid A modulates bacterial growth in vitro and pro-inflammatory responses in mouse experimental colitis",
+      journal: "BMC Gastroenterol",
+      volume: "10: 133",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21073731/"
+    },
+    {
+      authors: "Slee EA, Benassi B, Goldin R, Zhong S, Ratnayaka I, Blandino G, Lu X.",
+      year: 2010,
+      title: "Phosphorylation of Ser312 contributes to tumor suppression by p53 in vivo",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "107: 19479-19484",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20974942/"
+    },
+    {
+      authors: "Xu X, Yang H, Lin YF, Li X, Cape A, Ressler KJ, Li S, Li XJ.",
+      year: 2010,
+      title: "Neuronal Abelson helper integration site-1 (Ahi1) deficiency in mice alters TrkB signaling with a depressive phenotype",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "107: 19126-19131",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20956280/"
+    },
+    {
+      authors: "de Beer MC, Webb NR, Wroblewski JM, Noffsinger VP, Rateri DL, Ji A, van der Westhuyzen DR, de Beer FC.",
+      year: 2010,
+      title: "Impact of serum amyloid A on high density lipoprotein composition and levels",
+      journal: "J Lipid Res",
+      volume: "51: 3117-3125",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20698971/"
+    },
+    {
+      authors: "Klover PJ, Muller WJ, Robinson GW, Pfeiffer RM, Yamaji D, Hennighausen L.",
+      year: 2010,
+      title: "Loss of STAT1 from mouse mammary epithelium results in an increased Neu-induced tumor burden",
+      journal: "Neoplasia",
+      volume: "12: 899-905",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21076615/"
+    },
+    {
+      authors: "Chan YM, Keramaris-Vrantsis E, Lidov HG, Norton JH, Zinchenko N, Gruber HE, Thresher R, Blake DJ, Ashar J, Rosenfeld J, Lu QL.",
+      year: 2010,
+      title: "Fukutin-related protein is essential for mouse muscle, brain and eye development and mutation recapitulates the wide clinical spectrums of dystroglycanopathies",
+      journal: "Hum Mol Genet",
+      volume: "19: 3995-4006",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20656788/"
+    },
+    {
+      authors: "Badadani M, Nalbandian A, Watts GD, Vesa J, Kitazawa M, Su H, Tanaja J, Dec E, Wallace DC, Mukherjee J, Caiozzo V, Warman M, Kimonis VE.",
+      year: 2010,
+      title: "VCP associated inclusion body myopathy and paget disease of bone knock-in mouse model exhibits tissue pathology typical of human disease",
+      journal: "PLoS One",
+      volume: "5",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21209853/"
+    },
+    {
+      authors: "Toyoda R, Assimacopoulos S, Wilcoxon J, Taylor A, Feldman P, Suzuki-Hirano A, Shimogori T, Grove EA.",
+      year: 2010,
+      title: "FGF8 acts as a classic diffusible morphogen to pattern the neocortex",
+      journal: "Development",
+      volume: "137: 3439-3448",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20843859/"
+    },
+    {
+      authors: "Fairbridge NA, Dawe CE, Niri FH, Kooistra MK, King-Jones K, McDermid HE.",
+      year: 2010,
+      title: "Cecr2 mutations causing exencephaly trigger misregulation of mesenchymal/ectodermal transcription factors",
+      journal: "Birth Defects Res A Clin Mol Teratol",
+      volume: "88: 619-625",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20589883/"
+    },
+    {
+      authors: "Geva M, Cabilly Y, Assaf Y, Mindroul N, Marom L, Raini G, Pinchasi D, Elroy-Stein O.",
+      year: 2010,
+      title: "A mouse model for eukaryotic translation initiation factor 2B-leucodystrophy reveals abnormal development of brain white matter",
+      journal: "Brain",
+      volume: "133: 2448-2461",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20826431/"
+    },
+    {
+      authors: "Zhou Y, Cheunsuchon P, Nakayama Y, Lawlor MW, Zhong Y, Rice KA, Zhang L, Zhang X, Gordon FE, Lidov HG, Bronson RT, Klibanski A.",
+      year: 2010,
+      title: "Activation of paternally expressed genes and perinatal death caused by deletion of the Gtl2 gene",
+      journal: "Development",
+      volume: "137: 2643-2652",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20610493/"
+    },
+    {
+      authors: "Lim ST, Chen XL, Tomar A, Miller NL, Yoo J, Schlaepfer DD.",
+      year: 2010,
+      title: "Knock-in mutation reveals an essential role for focal adhesion kinase activity in blood vessel morphogenesis and cell motility-polarity but not cell proliferation",
+      journal: "J Biol Chem",
+      volume: "285: 21526-21536",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20442curl/"
+    },
+    {
+      authors: "Kushnir A, Shan J, Betzenhauser MJ, Reiken S, Marks AR.",
+      year: 2010,
+      title: "Role of CaMKIIdelta phosphorylation of the cardiac ryanodine receptor in the force frequency relationship and heart failure",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "107: 10274-10279",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20479225/"
+    },
+    {
+      authors: "Markert CD, Meaney MP, Voelker KA, Grange RW, Dalley HW, Cann JK, Ahmed M, Bishwokarma B, Walker SJ, Yu SX, Brown M, Lawlor MW, Beggs AH, Childers MK.",
+      year: 2010,
+      title: "Functional muscle analysis of the Tcap knockout mouse",
+      journal: "Hum Mol Genet",
+      volume: "19: 2268-2283",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20360306/"
+    },
+    {
+      authors: "Yang G, Wu L, Bryan S, Khaper N, Mani S, Wang R.",
+      year: 2010,
+      title: "Cystathionine gamma-lyase deficiency and overproliferation of smooth muscle cells",
+      journal: "Cardiovasc Res",
+      volume: "86: 487-495",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20051385/"
+    },
+    {
+      authors: "Bahrami J, Yusta B, Drucker DJ.",
+      year: 2010,
+      title: "ErbB activity links the glucagon-like peptide-2 receptor to refeeding-induced adaptation in the murine small bowel",
+      journal: "Gastroenterology",
+      volume: "138: 2447-2456",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20226187/"
+    },
+    {
+      authors: "Besnard V, Matsuzaki Y, Clark J, Xu Y, Wert SE, Ikegami M, Stahlman MT, Weaver TE, Hunt AN, Postle AD, Whitsett JA.",
+      year: 2010,
+      title: "Conditional deletion of Abca3 in alveolar type II cells alters surfactant homeostasis in newborn and adult mice",
+      journal: "Am J Physiol Lung Cell Mol Physiol",
+      volume: "298: L646-659",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20190033/"
+    },
+    {
+      authors: "Reidling JC, Lambrecht N, Kassir M, Said HM.",
+      year: 2010,
+      title: "Impaired intestinal vitamin B1 (thiamin) uptake in thiamin transporter-2-deficient mice",
+      journal: "Gastroenterology",
+      volume: "138: 1802-1809",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20138037/"
+    },
+    {
+      authors: "Tornqvist G, Sandberg A, Hagglund AC, Carlsson L.",
+      year: 2010,
+      title: "Cyclic expression of lhx2 regulates hair formation",
+      journal: "PLoS Genet",
+      volume: "6: e1000904",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20386745/"
+    },
+    {
+      authors: "McCalmon SA, Desjardins DM, Ahmad S, Davidoff KS, Snyder CM, Sato K, Ohashi K, Kielbasa OM, Mathew M, Ewen EP, Walsh K, Gavras H, Naya FJ.",
+      year: 2010,
+      title: "Modulation of angiotensin II-mediated cardiac remodeling by the MEF2A target gene Xirp2",
+      journal: "Circ Res",
+      volume: "106: 952-960",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20093629/"
+    },
+    {
+      authors: "Gibb DR, El Shikh M, Kang DJ, Rowe WJ, El Sayed R, Cichy J, Yagita H, Tew JG, Dempsey PJ, Crawford HC, Conrad DH.",
+      year: 2010,
+      title: "ADAM10 is essential for Notch2-dependent marginal zone B cell development and CD23 cleavage in vivo",
+      journal: "J Exp Med",
+      volume: "207: 623-635",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20156971/"
+    },
+    {
+      authors: "Harashima A, Guettouche T, Barber GN.",
+      year: 2010,
+      title: "Phosphorylation of the NFAR proteins by the dsRNA-dependent protein kinase PKR constitutes a novel mechanism of translational regulation and cellular defense",
+      journal: "Genes Dev",
+      volume: "24: 2640-2653",
+      link: "https://pubmed.ncbi.nlm.nih.gov/21123653/"
+    },
+    {
+      authors: "Herrmann R, Lobanova ES, Hammond T, Kessler C, Burns ME, Frishman LJ, Arshavsky VY.",
+      year: 2010,
+      title: "Phosducin regulates transmission at the photoreceptor-to-ON-bipolar cell synapse",
+      journal: "J Neurosci",
+      volume: "30: 3239-3253",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20203183/"
+    },
+    {
+      authors: "Fukata Y, Lovero KL, Iwanaga T, Watanabe A, Yokoi N, Tabuchi K, Shigemoto R, Nicoll RA, Fukata M.",
+      year: 2010,
+      title: "Disruption of LGI1-linked synaptic complex causes abnormal synaptic transmission and epilepsy",
+      journal: "Proc Natl Acad Sci U S A",
+      volume: "107: 3799-3804",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20133599/"
+    },
+    {
+      authors: "Jentarra GM, Olfers SL, Rice SG, Srivastava N, Homanics GE, Blue M, Naidu S, Narayanan V.",
+      year: 2010,
+      title: "Abnormalities of cell packing density and dendritic complexity in the MeCP2 A140V mouse model of Rett syndrome/X-linked mental retardation",
+      journal: "BMC Neurosci",
+      volume: "11: 19",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20163734/"
+    },
+    {
+      authors: "Howng SY, Avila RL, Emery B, Traka M, Lin W, Watkins T, Cook S, Bronson R, Davisson M, Barres BA, Popko B.",
+      year: 2010,
+      title: "ZFP191 is required by oligodendrocytes for CNS myelination",
+      journal: "Genes Dev",
+      volume: "24: 301-311",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20123908/"
+    },
+    {
+      authors: "Tischfield MA, Baris HN, Wu C, Rudolph G, Van Maldergem L, He W, Chan WM, Andrews C, Demer JL, Robertson RL, Mackey DA, Ruddle JB, Bird TD, Gottlob I, Pieh C, Traboulsi EI, Pomeroy SL, Hunter DG, Soul JS, Newlin A, Sabol LJ, Doherty EJ, de Uzcátegui CE, de Uzcátegui N, Collins ML, Sener EC, Wabbels B, Hellebrand H, Meitinger T, de Berardinis T, Magli A, Schiavi C, Pastore-Trossello M, Koc F, Wong AM, Levin AV, Geraghty MT, Descartes M, Flaherty M, Jamieson RV, Møller HU, Meuthen I, Callen DF, Kerwin J, Lindsay S, Meindl A, Gupta ML Jr, Pellman D, Engle EC.",
+      year: 2010,
+      title: "Human TUBB3 mutations perturb microtubule dynamics, kinesin interactions, and axon guidance",
+      journal: "Cell",
+      volume: "140: 74-87",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20074521/"
+    },
+    {
+      authors: "Powers SE, Taniguchi K, Yen W, Melhuish TA, Shen J, Walsh CA, Sutherland AE, Wotton D.",
+      year: 2010,
+      title: "Tgif1 and Tgif2 regulate Nodal signaling and are required for gastrulation",
+      journal: "Development",
+      volume: "137: 249-259",
+      link: "https://pubmed.ncbi.nlm.nih.gov/20040492/"
+    },
+    {
+      authors: "Xie Z, Cahill ME, Penzes P.",
+      year: 2010,
+      title: "Kalirin loss results in cortical morphological alterations",
+      journal: "Mol Cell Neurosci",
+      volume: "43: 81-89",
+      link: "https://pubmed.ncbi.nlm.nih.gov/19800004/"
     }
   ],
   "2009": [
