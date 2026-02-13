@@ -238,6 +238,65 @@ export default function LabSignalsPage() {
         </div>
       </section>
 
+        {/* Section: Synopsis - Get Excited */}
+        <section style={{ backgroundColor: BRAND.black, padding: '50px 20px' }}>
+          <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{
+              color: BRAND.gold,
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: 'clamp(1.8rem, 4vw, 2.3rem)',
+              fontWeight: 700,
+              marginBottom: '20px',
+              letterSpacing: '-0.02em',
+            }}>
+              Cutting-Edge Research. Practical Insights. Biweekly.
+            </h2>
+            <p style={{
+              color: BRAND.white,
+              fontFamily: 'Lato, sans-serif',
+              fontSize: '1.1rem',
+              lineHeight: 1.8,
+              marginBottom: '25px',
+            }}>
+              Lab Signals delivers the latest breakthroughs in mouse genetics, CRISPR technology, 
+              and disease modeling straight to your inbox. Each issue features expert analysis 
+              of new research, practical applications for your lab, and technical guides you can 
+              implement immediately.
+            </p>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))',
+              gap: '20px',
+              marginTop: '35px',
+            }}>
+              {[
+                { number: '1,200+', label: 'Active Subscribers' },
+                { number: '20+', label: 'Expert Articles' },
+                { number: '6', label: 'Research Areas' },
+              ].map((stat, i) => (
+                <div key={i} style={{ textAlign: 'center' }}>
+                  <div style={{
+                    color: BRAND.gold,
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '2.2rem',
+                    fontWeight: 700,
+                    marginBottom: '5px',
+                  }}>
+                    {stat.number}
+                  </div>
+                  <div style={{
+                    color: BRAND.mediumGray,
+                    fontFamily: 'Lato, sans-serif',
+                    fontSize: '.9rem',
+                  }}>
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Section: Video */}
         <section style={{ backgroundColor: BRAND.white, padding: '40px 20px', borderRadius: '0' }}>
           <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -485,14 +544,23 @@ export default function LabSignalsPage() {
                     color: BRAND.black,
                     fontFamily: 'Lato, sans-serif',
                     fontSize: '.95rem',
-                    fontWeight: 400,
-                    lineHeight: 1.5,
-                    marginBottom: '12px',
-                    flex: 1,
+                    fontWeight: 600,
+                    lineHeight: 1.4,
+                    marginBottom: '10px',
                     letterSpacing: '0.01em',
                   }}>
                     {article.title}
                   </h3>
+                  <p style={{
+                    color: BRAND.mediumGray,
+                    fontFamily: 'Lato, sans-serif',
+                    fontSize: '.85rem',
+                    lineHeight: 1.5,
+                    marginBottom: '16px',
+                    flex: 1,
+                  }}>
+                    {article.description}
+                  </p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <span style={{ 
                       color: BRAND.darkGray, 
