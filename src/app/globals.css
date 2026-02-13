@@ -887,3 +887,9 @@ li {
   opacity: 0;
   transform: translateY(-20px);
 }
+
+/* Footer text override - ensure white text on dark background */
+footer p,
+footer a {
+  color: white !important;
+}
