@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
@@ -24,8 +24,7 @@ const basson = getTestimonialById('roth-upenn');
 const heroData = {
   badge: "28 Years of Excellence",
   title: "Why Choose ingenious targeting laboratory",
-  intro: "Selecting a mouse model provider is a consequential decision that affects research timelines, budgets, and scientific outcomes. ingenious targeting laboratory has earned the trust of researchers worldwide through 28 years of consistent performance, scientific expertise, and commitment to project success.",
-};
+  intro: "Selecting a mouse model provider is a consequential decision that affects research timelines, budgets, and scientific outcomes. ingenious targeting laboratory has earned the trust of researchers worldwide through 28 years of consistent performance, scientific expertise, and commitment to project success."};
 
 // Stats Data
 const statsData = [
@@ -120,45 +119,7 @@ const faqData = [
 ];
 
 export default function WhyChooseItlPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-      
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-      
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-    
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       

@@ -1,13 +1,13 @@
 /**
  * Hero Section - displays MASTER TEXT exactly
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  * Source: homepage.md lines 8-13
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface HeroData {
   headline: string;
@@ -18,27 +18,13 @@ interface HeroData {
 }
 
 export default function HeroSection({ data }: { data: HeroData }) {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headlineRef = useRef<HTMLHeadingElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-      
-      tl.fromTo(headlineRef.current, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, 0.3);
-      
-      if (contentRef.current) {
-        tl.fromTo(contentRef.current.children, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.15 }, '-=0.5');
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const h1Ref = useScrollAnimation<HTMLHeadingElement>(0.1);
+  const p1Ref = useScrollAnimation<HTMLParagraphElement>(0.1);
+  const p2Ref = useScrollAnimation<HTMLParagraphElement>(0.1);
+  const ctasRef = useScrollAnimation<HTMLDivElement>(0.1);
 
   return (
     <section
-      ref={sectionRef}
       className="relative overflow-hidden"
       style={{
         backgroundImage: 'url(/images/mouse-hero-glove.jpg)',
@@ -50,9 +36,9 @@ export default function HeroSection({ data }: { data: HeroData }) {
       <div className="w-1/2 p-5">
         {/* H1 - MASTER TEXT */}
         <h1
-          ref={headlineRef}
+          ref={h1Ref}
+          className="animate-initial animate-fade-in-up animate-delay-300"
           style={{
-            opacity: 0,
             color: '#666',
             letterSpacing: '-3px',
             fontFamily: 'Poppins, sans-serif',
@@ -66,11 +52,12 @@ export default function HeroSection({ data }: { data: HeroData }) {
           {data.headline}
         </h1>
 
-        <div ref={contentRef}>
+        <div>
           {/* Description 1 - MASTER TEXT */}
           <p
+            ref={p1Ref}
+            className="animate-initial animate-fade-in-up animate-delay-400"
             style={{
-              opacity: 0,
               color: '#666',
               marginTop: '5px',
               marginBottom: '15px',
@@ -85,8 +72,9 @@ export default function HeroSection({ data }: { data: HeroData }) {
 
           {/* Description 2 - MASTER TEXT */}
           <p
+            ref={p2Ref}
+            className="animate-initial animate-fade-in-up animate-delay-450"
             style={{
-              opacity: 0,
               color: '#666',
               marginTop: '5px',
               marginBottom: '15px',
@@ -100,7 +88,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-row gap-5" style={{ opacity: 0 }}>
+          <div ref={ctasRef} className="flex flex-row gap-5 animate-initial animate-fade-in-up animate-delay-500">
             <Link
               href={data.cta1.href}
               className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"

@@ -1,14 +1,12 @@
 /**
  * |UXUIDC| Service Card - Matches Webflow Design Exactly
- * @version 3.0.0
+ * @version 4.0.0 - Removed GSAP, using CSS animations only
  * services-card styling with h3 blue, card-button med-blue
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from '@/lib/UXUIDC/gsap';
 
 interface ServiceCardProps {
   title: string;
@@ -81,75 +79,23 @@ export default function UXUIDCServiceCard({
   );
 }
 
-// Service Card Grid wrapper with scroll animations
+// Service Card Grid wrapper with CSS animations
 interface ServiceCardGridProps {
   children: React.ReactNode;
   title?: string;
 }
 
 export function UXUIDCServiceCardGrid({ children, title }: ServiceCardGridProps) {
-  const sectionRef = useRef<HTMLElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Title animation
-      if (titleRef.current) {
-        gsap.fromTo(
-          titleRef.current,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: titleRef.current,
-              start: 'top 85%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-
-      // Cards stagger animation
-      if (gridRef.current) {
-        const cards = gridRef.current.querySelectorAll('.service-card');
-        gsap.fromTo(
-          cards,
-          { y: 40, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.12,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: gridRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section 
-      ref={sectionRef} 
       className="bg-white"
       style={{ padding: '20px 0' }}
     >
       <div className="container">
         {title && (
           <h2 
-            ref={titleRef}
+            className="animate-initial animate-fade-in-up"
             style={{ 
-              opacity: 0,
               color: '#2384da',
               textAlign: 'center',
               letterSpacing: '-.05px',
@@ -164,7 +110,6 @@ export function UXUIDCServiceCardGrid({ children, title }: ServiceCardGridProps)
           </h2>
         )}
         <div 
-          ref={gridRef} 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
           style={{ gap: '20px', padding: '20px' }}
         >

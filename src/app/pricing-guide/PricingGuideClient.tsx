@@ -8,8 +8,6 @@
 import { useEffect, useRef } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -17,7 +15,6 @@ import {
   IconCheckCircle,
 } from '@/components/UXUIDC';
 
-gsap.registerPlugin(ScrollTrigger);
 
 // Pricing Data
 const pricingTiers = [
@@ -98,34 +95,6 @@ const whyChooseItems = [
 export default function PricingGuideClient() {
   const heroRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (heroRef.current) {
-      gsap.fromTo(
-        heroRef.current.querySelectorAll('.hero-animate'),
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-      );
-    }
-
-    const animateElements = document.querySelectorAll('.animate-in');
-    animateElements.forEach((el) => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: 'power2.out',
-          scrollTrigger: { trigger: el, start: 'top 85%' },
-        }
-      );
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -343,11 +312,11 @@ export default function PricingGuideClient() {
         </section>
 
         {/* Funding Banner */}
-        <section style={{ backgroundColor: '#00d4d4', padding: '40px 20px', textAlign: 'center' }}>
+        <section style={{ backgroundColor: '#008080', padding: '40px 20px', textAlign: 'center' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <p
               style={{
-                color: '#0a253c',
+                color: 'white',
                 fontSize: '1.1rem',
                 fontWeight: 600,
                 lineHeight: 1.7,
@@ -362,8 +331,8 @@ export default function PricingGuideClient() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                backgroundColor: '#0a253c',
-                color: 'white',
+                backgroundColor: 'white',
+                color: '#008080',
                 padding: '12px 28px',
                 borderRadius: '6px',
                 fontSize: '.95rem',
@@ -372,11 +341,11 @@ export default function PricingGuideClient() {
                 transition: 'all 0.2s ease',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#134978';
+                e.currentTarget.style.backgroundColor = '#f0f0f0';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#0a253c';
+                e.currentTarget.style.backgroundColor = 'white';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >

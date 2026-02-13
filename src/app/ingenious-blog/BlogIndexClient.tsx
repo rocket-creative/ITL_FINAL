@@ -2,11 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { IconArrowRight } from '@/components/UXUIDC';
 
-gsap.registerPlugin(ScrollTrigger);
 
 interface BlogPostMeta {
   slug: string;
@@ -49,27 +46,28 @@ export default function BlogIndexClient({ blogPosts }: BlogIndexClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
+    // Simple animation approach using Intersection Observer
     if (gridRef.current) {
       const cards = gridRef.current.querySelectorAll('.blog-card');
-      cards.forEach((card, i) => {
-        gsap.fromTo(
-          card,
-          { opacity: 0, y: 20 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.4,
-            delay: i * 0.03,
-            ease: 'power2.out',
-            scrollTrigger: { trigger: card, start: 'top 90%' },
-          }
-        );
-      });
-    }
+      
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove('animate-initial');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+      );
 
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
+      cards.forEach((card) => {
+        observer.observe(card);
+      });
+
+      return () => observer.disconnect();
+    }
   }, [selectedCategory, searchQuery]);
 
   const filteredPosts = blogPosts.filter((post) => {
@@ -156,11 +154,11 @@ export default function BlogIndexClient({ blogPosts }: BlogIndexClientProps) {
               gap: '24px',
             }}
           >
-            {filteredPosts.map((post) => (
+            {filteredPosts.map((post, index) => (
               <Link
                 key={post.slug}
                 href={`/ingenious-blog/${post.slug}`}
-                className="blog-card"
+                className={`blog-card animate-initial animate-fade-in-up animate-delay-${Math.min(index * 50 + 100, 800)}`}
                 style={{
                   display: 'flex',
                   flexDirection: 'column',

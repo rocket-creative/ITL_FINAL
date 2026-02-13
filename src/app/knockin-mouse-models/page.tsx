@@ -9,8 +9,6 @@
 import { useEffect, useRef } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -32,7 +30,6 @@ import {
   IconArrowRight,
 } from '@/components/UXUIDC';
 
-gsap.registerPlugin(ScrollTrigger);
 
 // ============================================
 // MASTER TEXT DATA - from knockin-mouse-models.md
@@ -209,36 +206,7 @@ const relatedResources = [
 export default function KnockinMouseModelsPage() {
   const heroRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (heroRef.current) {
-      gsap.fromTo(
-        heroRef.current.querySelectorAll('.hero-animate'),
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-      );
-    }
-
-    const animateElements = document.querySelectorAll('.animate-in');
-    animateElements.forEach((el) => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: 'power2.out',
-          scrollTrigger: { trigger: el, start: 'top 85%' },
-        }
-      );
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
-
-  return (
+    return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
 

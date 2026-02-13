@@ -1,13 +1,12 @@
 /**
  * Conceptual Workflow Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 48-60
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface WorkflowStep {
   number: number;
@@ -23,38 +22,17 @@ interface WorkflowData {
 }
 
 export default function WorkflowSection({ data }: { data: WorkflowData }) {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const steps = sectionRef.current?.querySelectorAll('.workflow-step');
-      if (steps) {
-        gsap.fromTo(
-          steps,
-          { y: 30, opacity: 0, scale: 0.9 },
-          {
-            y: 0,
-            opacity: 1,
-            scale: 1,
-            duration: 0.5,
-            stagger: 0.1,
-            ease: 'back.out(1.7)',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  // Create refs for animated elements
+  const stepRefs = [
+    useScrollAnimation<HTMLDivElement>(0.1),
+    useScrollAnimation<HTMLDivElement>(0.1),
+    useScrollAnimation<HTMLDivElement>(0.1),
+    useScrollAnimation<HTMLDivElement>(0.1),
+    useScrollAnimation<HTMLDivElement>(0.1)
+  ];
 
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col items-center"
       style={{ backgroundColor: '#f7f7f7', padding: '50px 20px' }}
     >
@@ -103,11 +81,11 @@ export default function WorkflowSection({ data }: { data: WorkflowData }) {
 
         {/* Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
-          {data.steps.map((step) => (
+          {data.steps.map((step, index) => (
             <div
               key={step.number}
-              className="workflow-step group cursor-pointer text-center"
-              style={{ opacity: 0 }}
+              ref={stepRefs[index]}
+              className={`animate-initial animate-fade-in-up animate-delay-${Math.min(100 + index * 100, 800)} group cursor-pointer text-center`}
             >
               {/* Step Number */}
               <div

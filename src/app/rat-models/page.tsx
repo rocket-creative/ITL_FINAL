@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
@@ -10,8 +10,7 @@ import {
   UXUIDCResourceLinks,
   ratModelResources,
   BreedingSchemeArchitectCTA,
-  LabSignalsSignup,
-} from '@/components/UXUIDC';
+  LabSignalsSignup} from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -21,8 +20,7 @@ const heroData = {
   badge: 'Custom Animal Models',
   title: 'Rat Models',
   intro: 'Get your custom rat model in less time & with more certainty.',
-  description: 'Our process ensures faster germline transmission modifications. We offer custom rat models, including conventional knockouts, conditional knockouts, reporter knockins, and humanized cDNA knockins, tailored to your research needs.',
-};
+  description: 'Our process ensures faster germline transmission modifications. We offer custom rat models, including conventional knockouts, conditional knockouts, reporter knockins, and humanized cDNA knockins, tailored to your research needs.'};
 
 const modelTypes = [
   { title: 'Conventional Knockout', description: 'Standard gene deletion for loss-of-function studies' },
@@ -41,45 +39,7 @@ const strains = [
 ];
 
 export default function RatModelsPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
 
@@ -91,8 +51,7 @@ export default function RatModelsPage() {
             background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',
             padding: '80px 20px 60px',
             position: 'relative',
-            overflow: 'hidden',
-          }}
+            overflow: 'hidden'}}
         >
           <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
             <div
@@ -104,8 +63,7 @@ export default function RatModelsPage() {
                 backgroundColor: 'rgba(255,255,255,0.15)',
                 padding: '6px 16px',
                 borderRadius: '20px',
-                marginBottom: '20px',
-              }}
+                marginBottom: '20px'}}
             >
               <IconDNA size={16} color="white" />
               <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
@@ -119,8 +77,7 @@ export default function RatModelsPage() {
                 fontSize: '2.8rem',
                 fontWeight: 700,
                 lineHeight: 1.1,
-                marginBottom: '20px',
-              }}
+                marginBottom: '20px'}}
             >
               {heroData.title}
             </h1>
@@ -133,8 +90,7 @@ export default function RatModelsPage() {
                 fontWeight: 400,
                 lineHeight: '1.7rem',
                 marginBottom: '15px',
-                maxWidth: '800px',
-              }}
+                maxWidth: '800px'}}
             >
               {heroData.intro}
             </p>
@@ -147,8 +103,7 @@ export default function RatModelsPage() {
                 fontWeight: 400,
                 lineHeight: '1.6rem',
                 marginBottom: '25px',
-                maxWidth: '800px',
-              }}
+                maxWidth: '800px'}}
             >
               {heroData.description}
             </p>
@@ -163,8 +118,7 @@ export default function RatModelsPage() {
                   padding: '10px 20px',
                   minWidth: '160px',
                   fontSize: '.85rem',
-                  fontWeight: 500,
-                }}
+                  fontWeight: 500}}
               >
                 <span>Request a Quote</span>
                 <span>→</span>
@@ -179,8 +133,7 @@ export default function RatModelsPage() {
                   minWidth: '160px',
                   border: '2px solid white',
                   fontSize: '.85rem',
-                  fontWeight: 500,
-                }}
+                  fontWeight: 500}}
               >
                 <span>Talk to a Scientist</span>
                 <span>→</span>
@@ -199,8 +152,7 @@ export default function RatModelsPage() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2rem',
                 fontWeight: 700,
-                marginBottom: '40px',
-              }}
+                marginBottom: '40px'}}
             >
               Types of Rat Models Available
             </h2>
@@ -214,8 +166,7 @@ export default function RatModelsPage() {
                     backgroundColor: '#f8f9fa',
                     padding: '25px',
                     borderTop: '4px solid #008080',
-                    borderRadius: '4px',
-                  }}
+                    borderRadius: '4px'}}
                 >
                   <div
                     style={{
@@ -226,8 +177,7 @@ export default function RatModelsPage() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      marginBottom: '15px',
-                    }}
+                      marginBottom: '15px'}}
                   >
                     <IconTarget size={22} color="#008080" />
                   </div>
@@ -253,8 +203,7 @@ export default function RatModelsPage() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2rem',
                 fontWeight: 700,
-                marginBottom: '15px',
-              }}
+                marginBottom: '15px'}}
             >
               Available Rat Strains
             </h2>
@@ -271,8 +220,7 @@ export default function RatModelsPage() {
                     backgroundColor: 'white',
                     padding: '20px',
                     borderRadius: '8px',
-                    border: '1px solid #e0e0e0',
-                  }}
+                    border: '1px solid #e0e0e0'}}
                 >
                   <h4 style={{ color: '#0a253c', fontWeight: 600, fontSize: '1rem', marginBottom: '5px' }}>
                     {strain.name}
@@ -296,8 +244,7 @@ export default function RatModelsPage() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2rem',
                 fontWeight: 700,
-                marginBottom: '20px',
-              }}
+                marginBottom: '20px'}}
             >
               Why Rat Models?
             </h2>
@@ -323,8 +270,7 @@ export default function RatModelsPage() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2rem',
                 fontWeight: 700,
-                marginBottom: '40px',
-              }}
+                marginBottom: '40px'}}
             >
               Trusted by Leading Researchers
             </h2>
@@ -334,8 +280,7 @@ export default function RatModelsPage() {
                 backgroundColor: '#f8f9fa',
                 padding: '40px',
                 borderLeft: '4px solid #008080',
-                borderRadius: '4px',
-              }}
+                borderRadius: '4px'}}
             >
               <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '25px' }}>
                 &ldquo;The rat knock-in model from ingenious was reliable, precise, and accelerated our immunology research significantly.&rdquo;
@@ -368,8 +313,7 @@ export default function RatModelsPage() {
                   color: 'white',
                   padding: '12px 30px',
                   fontSize: '.9rem',
-                  fontWeight: 500,
-                }}
+                  fontWeight: 500}}
               >
                 <span>Request a Quote</span>
                 <span>→</span>

@@ -9,7 +9,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { gsap } from '@/lib/UXUIDC/gsap';
 
 interface NavItem {
   label: string;
@@ -287,15 +286,8 @@ export function UXUIDCNavigation() {
     };
   }, [activeDropdown]);
 
-  useEffect(() => {
-    if (navRef.current) {
-      gsap.fromTo(
-        navRef.current,
-        { y: -20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }
-      );
-    }
-  }, []);
+  // Animation removed - using CSS animations instead of GSAP
+  // No useEffect needed, no DOM manipulation, no cleanup issues
 
   const handleKeyDown = (e: React.KeyboardEvent, itemLabel: string, hasDropdown: boolean) => {
     if (hasDropdown) {
@@ -491,7 +483,7 @@ export function UXUIDCNavigation() {
         </div>
 
         {/* Announcement bar - full width edge to edge */}
-        <div className="w-full flex justify-center items-center h-7" style={{ backgroundColor: 'teal' }}>
+        <div className="w-full flex justify-center items-center h-7" style={{ backgroundColor: '#008080' }}>
           <span className="text-center text-xs px-4 leading-7" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
             Is uncertain NIH funding holding you back from starting a much needed mouse model project? We have ways for you to start your project now and pay later.
           </span>

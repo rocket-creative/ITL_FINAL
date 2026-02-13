@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
@@ -10,8 +10,7 @@ import {
   UXUIDCResourceLinks,
   rosa26Resources,
   BreedingSchemeArchitectCTA,
-  LabSignalsSignup,
-} from '@/components/UXUIDC';
+  LabSignalsSignup} from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconCheckCircle, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -21,8 +20,7 @@ const heroData = {
   badge: 'Safe Harbor Targeting',
   title: 'Rosa26 Locus Targeting',
   intro: 'Targeted transgenic mice using the Rosa26 locus.',
-  description: 'Rapid-Rosa26™ Targeting technology is ingenious\' solution for custom targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.',
-};
+  description: 'Rapid-Rosa26™ Targeting technology is ingenious\' solution for custom targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.'};
 
 const benefits = [
   'Predictable targeting',
@@ -39,45 +37,7 @@ const modelTypes = [
 ];
 
 export default function Rosa26Page() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
 
@@ -89,8 +49,7 @@ export default function Rosa26Page() {
             background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',
             padding: '80px 20px 60px',
             position: 'relative',
-            overflow: 'hidden',
-          }}
+            overflow: 'hidden'}}
         >
           <div style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
             <div
@@ -102,8 +61,7 @@ export default function Rosa26Page() {
                 backgroundColor: 'rgba(255,255,255,0.15)',
                 padding: '6px 16px',
                 borderRadius: '20px',
-                marginBottom: '20px',
-              }}
+                marginBottom: '20px'}}
             >
               <IconDNA size={16} color="white" />
               <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
@@ -117,8 +75,7 @@ export default function Rosa26Page() {
                 fontSize: '2.8rem',
                 fontWeight: 700,
                 lineHeight: 1.1,
-                marginBottom: '20px',
-              }}
+                marginBottom: '20px'}}
             >
               {heroData.title}
             </h1>
@@ -131,8 +88,7 @@ export default function Rosa26Page() {
                 fontWeight: 400,
                 lineHeight: '1.7rem',
                 marginBottom: '15px',
-                maxWidth: '800px',
-              }}
+                maxWidth: '800px'}}
             >
               {heroData.intro}
             </p>
@@ -145,8 +101,7 @@ export default function Rosa26Page() {
                 fontWeight: 400,
                 lineHeight: '1.6rem',
                 marginBottom: '25px',
-                maxWidth: '800px',
-              }}
+                maxWidth: '800px'}}
             >
               {heroData.description}
             </p>
@@ -161,8 +116,7 @@ export default function Rosa26Page() {
                   padding: '10px 20px',
                   minWidth: '160px',
                   fontSize: '.85rem',
-                  fontWeight: 500,
-                }}
+                  fontWeight: 500}}
               >
                 <span>Request a Quote</span>
                 <span>→</span>
@@ -181,8 +135,7 @@ export default function Rosa26Page() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2rem',
                 fontWeight: 700,
-                marginBottom: '30px',
-              }}
+                marginBottom: '30px'}}
             >
               Why Target the Rosa26 Locus?
             </h2>
@@ -197,8 +150,7 @@ export default function Rosa26Page() {
                     gap: '12px',
                     marginBottom: '15px',
                     color: '#555',
-                    fontSize: '1rem',
-                  }}
+                    fontSize: '1rem'}}
                 >
                   <IconCheckCircle size={20} color="#008080" />
                   <span>{benefit}</span>
@@ -218,8 +170,7 @@ export default function Rosa26Page() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2rem',
                 fontWeight: 700,
-                marginBottom: '40px',
-              }}
+                marginBottom: '40px'}}
             >
               Rosa26 Mouse Model Types
             </h2>
@@ -233,8 +184,7 @@ export default function Rosa26Page() {
                     backgroundColor: 'white',
                     padding: '30px',
                     borderTop: '4px solid #008080',
-                    borderRadius: '4px',
-                  }}
+                    borderRadius: '4px'}}
                 >
                   <div
                     style={{
@@ -245,8 +195,7 @@ export default function Rosa26Page() {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      marginBottom: '15px',
-                    }}
+                      marginBottom: '15px'}}
                   >
                     <IconSettings size={24} color="#008080" />
                   </div>
@@ -272,8 +221,7 @@ export default function Rosa26Page() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '1.8rem',
                 fontWeight: 700,
-                marginBottom: '20px',
-              }}
+                marginBottom: '20px'}}
             >
               What is the Rosa26 Locus?
             </h2>
@@ -307,8 +255,7 @@ export default function Rosa26Page() {
                   color: 'white',
                   padding: '12px 30px',
                   fontSize: '.9rem',
-                  fontWeight: 500,
-                }}
+                  fontWeight: 500}}
               >
                 <span>Request a Quote</span>
                 <span>→</span>

@@ -1,8 +1,9 @@
 'use client';
 
 /**
- * |UXUIDC| Animated Counter Component
- * Counts up to the target number when scrolled into view
+ * |UXUIDC| Animated Counter Component  
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
+ * Displays stats with CSS fade-in animation
  * Used for stats like "2,500+ Projects", "800+ Publications"
  * 
  * Supports two usage patterns:
@@ -10,11 +11,8 @@
  * 2. Single value mode: <UXUIDCAnimatedCounter end={2500} suffix="+" />
  */
 
-import { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { useState } from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface Stat {
   number: string; // e.g., "2,500+", "800+", "25+"
@@ -39,116 +37,32 @@ type AnimatedCounterProps = AnimatedCounterPropsArray | AnimatedCounterPropsSing
 
 // Single counter component for end/suffix usage
 function SingleCounter({ end, suffix = '' }: { end: number; suffix?: string }) {
-  const containerRef = useRef<HTMLSpanElement>(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const [displayValue, setDisplayValue] = useState('0');
+  // Format number with commas
+  const formatted = end >= 1000 ? end.toLocaleString() : end.toString();
+  const displayValue = formatted + suffix;
 
-  useEffect(() => {
-    if (!containerRef.current || hasAnimated) return;
-
-    const trigger = ScrollTrigger.create({
-      trigger: containerRef.current,
-      start: 'top 80%',
-      onEnter: () => {
-        if (hasAnimated) return;
-        setHasAnimated(true);
-
-        const startNum = Math.floor(end * 0.7);
-        const counter = { value: startNum };
-
-        gsap.to(counter, {
-          value: end,
-          duration: 2.5,
-          ease: 'power1.out',
-          onUpdate: () => {
-            let displayVal = Math.floor(counter.value).toString();
-            
-            // Add comma formatting for thousands
-            if (counter.value >= 1000) {
-              displayVal = Math.floor(counter.value).toLocaleString();
-            }
-            
-            setDisplayValue(displayVal + suffix);
-          },
-        });
-      },
-    });
-
-    return () => {
-      trigger.kill();
-    };
-  }, [end, suffix, hasAnimated]);
-
-  return <span ref={containerRef}>{displayValue}</span>;
+  return (
+    <span className="animate-initial animate-fade-in">
+      {displayValue}
+    </span>
+  );
 }
 
 // Full stats grid component
 function StatsGrid({ stats, className = '' }: { stats: Stat[]; className?: string }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const [displayValues, setDisplayValues] = useState<string[]>(stats.map(() => '0'));
-
-  useEffect(() => {
-    if (!containerRef.current || hasAnimated) return;
-
-    const trigger = ScrollTrigger.create({
-      trigger: containerRef.current,
-      start: 'top 80%',
-      onEnter: () => {
-        if (hasAnimated) return;
-        setHasAnimated(true);
-
-        stats.forEach((stat, index) => {
-          // Parse the number from string like "2,500+" or "100%"
-          const numStr = stat.number.replace(/[^0-9.]/g, '');
-          const targetNum = parseFloat(numStr);
-          const hasPlus = stat.number.includes('+');
-          const hasPercent = stat.number.includes('%');
-          const hasComma = stat.number.includes(',');
-
-          // Start from a reasonable lower bound (about 70-80% of target)
-          const startNum = Math.floor(targetNum * 0.7);
-          const counter = { value: startNum };
-
-          gsap.to(counter, {
-            value: targetNum,
-            duration: 3.5,
-            ease: 'power1.out',
-            onUpdate: () => {
-              let displayVal = Math.floor(counter.value).toString();
-              
-              // Add comma formatting for thousands
-              if (hasComma || counter.value >= 1000) {
-                displayVal = Math.floor(counter.value).toLocaleString();
-              }
-              
-              // Add suffix
-              if (hasPlus) displayVal += '+';
-              if (hasPercent) displayVal += '%';
-
-              setDisplayValues(prev => {
-                const newValues = [...prev];
-                newValues[index] = displayVal;
-                return newValues;
-              });
-            },
-          });
-        });
-      },
-    });
-
-    return () => {
-      trigger.kill();
-    };
-  }, [stats, hasAnimated]);
+  // Create refs for each stat
+  const statRefs = stats.map(() => useScrollAnimation<HTMLDivElement>(0.1));
 
   return (
     <div 
-      ref={containerRef}
       className={`grid grid-cols-2 md:grid-cols-4 gap-6 ${className}`}
     >
       {stats.map((stat, i) => (
-        <div key={i} className="stat-item text-center">
+        <div 
+          key={i}
+          ref={statRefs[i]}
+          className={`stat-item text-center animate-initial animate-fade-in-up animate-delay-${Math.min(i * 100 + 100, 400)}`}
+        >
           <div
             style={{
               color: '#008080',
@@ -158,7 +72,7 @@ function StatsGrid({ stats, className = '' }: { stats: Stat[]; className?: strin
               lineHeight: 1,
             }}
           >
-            {displayValues[i]}
+            {stat.number}
           </div>
           <div
             style={{

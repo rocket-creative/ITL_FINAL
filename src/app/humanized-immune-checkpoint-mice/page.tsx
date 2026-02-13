@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
@@ -64,26 +64,14 @@ const faqData = [
 ];
 
 export default function HumanizedImmuneCheckpointMicePage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-      document.querySelectorAll('.animate-in').forEach((el) => { gsap.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } }); });
-    };
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       <main id="main-content">
         {/* Hero Section */}
         <section style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
-          padding: '80px 20px 60px',
-        }}>
+          padding: '80px 20px 60px'}}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div style={{
               display: 'inline-flex',
@@ -102,8 +90,7 @@ export default function HumanizedImmuneCheckpointMicePage() {
               fontSize: '2.5rem',
               fontWeight: 700,
               color: '#ffffff',
-              marginBottom: '20px',
-            }}>
+              marginBottom: '20px'}}>
               {heroData.title}
             </h1>
             <p style={{

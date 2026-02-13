@@ -1,14 +1,12 @@
 /**
  * |UXUIDC| Feature Grid - Matches Webflow Design Exactly
- * @version 3.0.0
+ * @version 4.0.0 - Removed GSAP, using CSS animations only
  * high-level container with overview-card styling
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { gsap } from '@/lib/UXUIDC/gsap';
 
 interface Feature {
   title: string;
@@ -28,79 +26,8 @@ export default function UXUIDCFeatureGrid({
   showImage = true,
   imageSrc = '/images/sm-3x4-mouse-lab.jpg',
 }: FeatureGridProps) {
-  const sectionRef = useRef<HTMLElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const featuresRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Title animation
-      if (titleRef.current) {
-        gsap.fromTo(
-          titleRef.current,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: titleRef.current,
-              start: 'top 85%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-
-      // Features stagger animation
-      if (featuresRef.current) {
-        const featureItems = featuresRef.current.querySelectorAll('.feature-item');
-        gsap.fromTo(
-          featureItems,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.1,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: featuresRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-
-      // Image animation
-      if (imageRef.current) {
-        gsap.fromTo(
-          imageRef.current,
-          { scale: 0.95, opacity: 0 },
-          {
-            scale: 1,
-            opacity: 1,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: imageRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section 
-      ref={sectionRef} 
       className="flex flex-col justify-start items-center"
       style={{ 
         backgroundColor: '#f7f7f7',
@@ -110,9 +37,8 @@ export default function UXUIDCFeatureGrid({
       {/* h2-blue title */}
       {title && (
         <h2 
-          ref={titleRef}
+          className="animate-initial animate-fade-in-up"
           style={{ 
-            opacity: 0,
             color: '#2384da',
             textAlign: 'center',
             letterSpacing: '-.5px',
@@ -128,7 +54,6 @@ export default function UXUIDCFeatureGrid({
       
       {/* 3-column layout: 2 cols of cards + 1 col image spanning rows */}
       <div 
-        ref={featuresRef}
         className="grid grid-cols-1 lg:grid-cols-3"
         style={{ gap: '20px', padding: '20px' }}
       >
@@ -136,9 +61,8 @@ export default function UXUIDCFeatureGrid({
         {features.slice(0, 2).map((feature, index) => (
           <div 
             key={index} 
-            className="feature-item overview-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            className={`overview-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-initial animate-fade-in-up animate-delay-${(index + 1) * 100}`}
             style={{ 
-              opacity: 0,
               border: '.5px solid #e0e0e0',
               backgroundColor: 'white',
               padding: '20px'
@@ -176,10 +100,8 @@ export default function UXUIDCFeatureGrid({
         {/* Image spanning 2 rows in last column */}
         {showImage && (
           <div 
-            ref={imageRef}
-            className="lg:row-span-2 overview-card-image flex justify-center items-center overflow-hidden transition-shadow duration-300 hover:shadow-lg"
+            className="lg:row-span-2 overview-card-image flex justify-center items-center overflow-hidden transition-shadow duration-300 hover:shadow-lg animate-initial animate-fade-in animate-delay-300"
             style={{ 
-              opacity: 0,
               border: '.5px solid #e0e0e0',
               backgroundColor: 'white',
               padding: '20px'
@@ -199,9 +121,8 @@ export default function UXUIDCFeatureGrid({
         {features.slice(2, 4).map((feature, index) => (
           <div 
             key={index + 2} 
-            className="feature-item overview-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            className={`overview-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-initial animate-fade-in-up animate-delay-${(index + 3) * 100}`}
             style={{ 
-              opacity: 0,
               border: '.5px solid #e0e0e0',
               backgroundColor: 'white',
               padding: '20px'

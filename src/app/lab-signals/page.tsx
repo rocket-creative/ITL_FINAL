@@ -2,16 +2,15 @@
 
 /**
  * Lab Signals Page - Newsletter Hub
+ * @version 2.0.0 - Removed GSAP, using CSS animations only
  * NO nav, NO footer (except gold CTA)
  * Colors: gold #fb0, black, grey, white only
  * Same fonts/animations as Ingenious site
  */
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   FlodeskForm,
   IconFileText,
@@ -25,8 +24,6 @@ import {
   newsletterArticles, 
   getAllCategories,
 } from '@/data/newsletterArticles';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Lab Signals colors - gold, black, grey, white only
 const BRAND = {
@@ -48,67 +45,10 @@ const RSSIcon = ({ color = BRAND.mediumGray }: { color?: string }) => (
 );
 
 export default function LabSignalsPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   
   const categories = getAllCategories();
-
-  useEffect(() => {
-    // Hero animations
-    if (heroRef.current) {
-      gsap.fromTo(
-        heroRef.current.querySelectorAll('.hero-animate'),
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-      );
-    }
-
-    // Scroll animations for sections
-    const sections = document.querySelectorAll('.section-animate');
-    sections.forEach((section) => {
-      gsap.fromTo(
-        section,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    });
-
-    // Card animations
-    const cards = document.querySelectorAll('.card-animate');
-    cards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          delay: index * 0.05,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 90%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
 
   // Filter articles
   const filteredArticles = newsletterArticles.filter((article) => {
@@ -130,7 +70,7 @@ export default function LabSignalsPage() {
       }}>
         
         {/* Hero Section - Header Image with Overlay Content */}
-        <section ref={heroRef} style={{ position: 'relative' }}>
+        <section style={{ position: 'relative' }}>
         {/* Back to Ingenious - floating top right */}
         <Link
           href="/"
@@ -185,7 +125,7 @@ export default function LabSignalsPage() {
             maxWidth: '480px',
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
           }}>
-            <div className="hero-animate" style={{
+            <div className="animate-initial animate-fade-in-up" style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
@@ -206,7 +146,7 @@ export default function LabSignalsPage() {
                 Biweekly Newsletter
               </span>
             </div>
-            <h1 className="hero-animate" style={{
+            <h1 className="animate-initial animate-fade-in-up" style={{
               color: BRAND.black,
               fontFamily: 'Poppins, sans-serif',
               fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
@@ -216,7 +156,7 @@ export default function LabSignalsPage() {
             }}>
               Lab Signals
             </h1>
-            <p className="hero-animate" style={{
+            <p className="animate-initial animate-fade-in-up" style={{
               color: BRAND.black,
               fontFamily: 'Lato, sans-serif',
               fontSize: 'clamp(.9rem, 2vw, 1.05rem)',
@@ -225,7 +165,7 @@ export default function LabSignalsPage() {
             }}>
               Your Biweekly Source for Life Science Research Insights
             </p>
-            <div className="hero-animate" style={{ 
+            <div className="animate-initial animate-fade-in-up" style={{ 
               display: 'flex', 
               gap: '10px', 
               flexWrap: 'wrap',
@@ -300,7 +240,7 @@ export default function LabSignalsPage() {
 
         {/* Section: Video */}
         <section style={{ backgroundColor: BRAND.white, padding: '40px 20px', borderRadius: '0' }}>
-          <div className="section-animate" style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div style={{
             position: 'relative',
             paddingBottom: '56.25%',
@@ -330,7 +270,7 @@ export default function LabSignalsPage() {
 
         {/* Section: Signup */}
         <section id="signup" style={{ backgroundColor: BRAND.lightGray, padding: '35px 20px 40px' }}>
-          <div className="section-animate" style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
+          <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{
               color: BRAND.black,
               fontFamily: 'Poppins, sans-serif',
@@ -356,7 +296,7 @@ export default function LabSignalsPage() {
         {/* Section: Why Subscribe */}
         <section style={{ backgroundColor: BRAND.white, padding: '40px 20px', borderRadius: '0' }}>
           <div>
-            <h2 className="section-animate" style={{
+            <h2 className="animate-initial animate-fade-in-up" style={{
               color: BRAND.black,
               fontFamily: 'Poppins, sans-serif',
               fontSize: 'clamp(1.2rem, 2.5vw, 1.4rem)',
@@ -378,7 +318,7 @@ export default function LabSignalsPage() {
             ].map((item, i) => (
               <div 
                 key={i} 
-                className="card-animate"
+                className="animate-initial animate-fade-in-up"
                 style={{
                   textAlign: 'center',
                   padding: '30px 20px',
@@ -433,7 +373,7 @@ export default function LabSignalsPage() {
         {/* Section: All Articles */}
         <section style={{ backgroundColor: BRAND.lightGray, padding: '60px 20px' }}>
           <div>
-          <div className="section-animate" style={{ 
+          <div className="animate-initial animate-fade-in-up" style={{ 
             display: 'flex', 
             justifyContent: 'space-between', 
             alignItems: 'flex-start',
@@ -511,7 +451,7 @@ export default function LabSignalsPage() {
               <Link
                 key={article.id}
                 href={`/lab-signals/${article.slug}`}
-                className="card-animate"
+                className="animate-initial animate-fade-in-up"
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
@@ -605,7 +545,7 @@ export default function LabSignalsPage() {
 
         {/* Section: Final CTA - Gold */}
         <section style={{ backgroundColor: BRAND.gold, padding: '40px 20px' }}>
-          <div className="section-animate" style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
+          <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
             <IconMail size={32} color={BRAND.black} />
             <h2 style={{
               color: BRAND.black,

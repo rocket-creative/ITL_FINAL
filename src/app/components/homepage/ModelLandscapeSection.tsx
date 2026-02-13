@@ -1,12 +1,12 @@
 /**
  * Modern Model-Generation Landscape Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 37-38
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface LandscapeData {
   title: string;
@@ -14,40 +14,14 @@ interface LandscapeData {
 }
 
 export default function ModelLandscapeSection({ data }: { data: LandscapeData }) {
-  const sectionRef = useRef<HTMLElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (contentRef.current) {
-        gsap.fromTo(
-          contentRef.current,
-          { y: 40, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 75%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const contentRef = useScrollAnimation<HTMLDivElement>(0.1);
 
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col justify-start items-center"
       style={{ backgroundColor: '#0a253c', padding: '50px 20px' }}
     >
-      <div ref={contentRef} className="text-center" style={{ opacity: 0, maxWidth: '900px' }}>
+      <div ref={contentRef} className="animate-initial animate-fade-in-up text-center" style={{ maxWidth: '900px' }}>
         {/* Section Title - MASTER TEXT */}
         <h2
           style={{

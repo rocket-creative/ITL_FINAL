@@ -2,13 +2,12 @@
  * What Researchers Say - Testimonials Section
  * Supports both light and dark background variants
  * Cards are always solid white with dark text for maximum legibility
+ * - Removed GSAP, using CSS animations only
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from '@/lib/UXUIDC/gsap';
 
 interface Testimonial {
   quote: string;
@@ -28,34 +27,7 @@ export default function TestimonialsSection({
   variant = 'light',
   showCta = true 
 }: TestimonialsSectionProps) {
-  const sectionRef = useRef<HTMLElement>(null);
   const isDark = variant === 'dark';
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const cards = sectionRef.current?.querySelectorAll('.testimonial-card');
-      if (cards) {
-        gsap.fromTo(
-          cards,
-          { y: 40, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.2,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
 
   // Styles based on variant
   const sectionStyle = isDark 
@@ -88,7 +60,6 @@ export default function TestimonialsSection({
 
   return (
     <section
-      ref={sectionRef}
       style={{
         ...sectionStyle,
         display: 'flex',
@@ -97,6 +68,7 @@ export default function TestimonialsSection({
       }}
     >
       <h2
+        className="animate-initial animate-fade-in-up"
         style={{
           ...titleStyle,
           textAlign: 'center',
@@ -124,10 +96,9 @@ export default function TestimonialsSection({
         {testimonials.slice(0, 6).map((testimonial, index) => (
           <div
             key={index}
-            className="testimonial-card"
+            className={`animate-initial animate-fade-in-up animate-delay-${Math.min(150 + index * 150, 800)}`}
             style={{
               ...cardStyle,
-              opacity: 0,
               padding: '32px',
               display: 'flex',
               flexDirection: 'column',
@@ -180,6 +151,7 @@ export default function TestimonialsSection({
       {showCta && (
         <Link
           href="/testimonials"
+          className="animate-initial animate-fade-in-up animate-delay-300"
           style={{
             ...buttonStyle,
             marginTop: '30px',
@@ -198,13 +170,6 @@ export default function TestimonialsSection({
           <span>→</span>
         </Link>
       )}
-
-      <style jsx>{`
-        .testimonial-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-      `}</style>
     </section>
   );
 }

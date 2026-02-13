@@ -1,14 +1,12 @@
 /**
  * |UXUIDC| Hero Section - Matches Webflow Design Exactly
- * @version 3.0.0
+ * @version 4.0.0 - Removed GSAP, using CSS animations only
  * Full background image, H1 grey, buttons teal + med-blue
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from '@/lib/UXUIDC/gsap';
 
 interface HeroSectionProps {
   headline: string;
@@ -25,50 +23,8 @@ export default function UXUIDCHeroSection({
   primaryCta,
   secondaryCta,
 }: HeroSectionProps) {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headlineRef = useRef<HTMLHeadingElement>(null);
-  const descriptionRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-      // Headline animation
-      tl.fromTo(
-        headlineRef.current,
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8 },
-        0.3
-      );
-
-      // Description animation
-      if (descriptionRef.current) {
-        tl.fromTo(
-          descriptionRef.current,
-          { y: 30, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6 },
-          '-=0.5'
-        );
-      }
-
-      // CTA buttons animation
-      if (ctaRef.current) {
-        tl.fromTo(
-          ctaRef.current.children,
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5, stagger: 0.15 },
-          '-=0.3'
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section 
-      ref={sectionRef} 
       className="relative overflow-hidden"
       style={{
         backgroundImage: 'url(/images/mouse-hero-blue.jpg)',
@@ -81,9 +37,8 @@ export default function UXUIDCHeroSection({
       {/* Content - 50% width, left side */}
       <div className="w-1/2 p-5">
         <h1 
-          ref={headlineRef}
+          className="animate-initial animate-fade-in-up animate-delay-300"
           style={{ 
-            opacity: 0, 
             color: '#666',
             letterSpacing: '-3px',
             fontFamily: 'Poppins, sans-serif',
@@ -98,7 +53,7 @@ export default function UXUIDCHeroSection({
         </h1>
         
         {(description || subDescription) && (
-          <div ref={descriptionRef} style={{ opacity: 0 }}>
+          <div className="animate-initial animate-fade-in-up animate-delay-400">
             {description && (
               <p 
                 style={{ 
@@ -133,13 +88,12 @@ export default function UXUIDCHeroSection({
         )}
         
         {/* CTA Buttons wrapper - horizontal flex with gap */}
-        <div ref={ctaRef} className="flex flex-row gap-5">
+        <div className="flex flex-row gap-5">
           {primaryCta && (
             <Link
               href={primaryCta.href}
-              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-initial animate-fade-in-up animate-delay-500"
               style={{ 
-                opacity: 0, 
                 backgroundColor: 'teal',
                 padding: '10px 40px',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
@@ -156,9 +110,8 @@ export default function UXUIDCHeroSection({
           {secondaryCta && (
             <Link
               href={secondaryCta.href}
-              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group inline-flex items-center gap-2 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-initial animate-fade-in-up animate-delay-600"
               style={{ 
-                opacity: 0,
                 backgroundColor: '#134978',
                 padding: '10px 40px',
                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',

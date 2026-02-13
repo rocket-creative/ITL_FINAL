@@ -1,13 +1,13 @@
 /**
  * Overview Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 28-36
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface OverviewData {
   sectionTitle: string;
@@ -22,86 +22,21 @@ interface OverviewData {
 }
 
 export default function OverviewSection({ data }: { data: OverviewData }) {
-  const sectionRef = useRef<HTMLElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Title animation
-      if (titleRef.current) {
-        gsap.fromTo(
-          titleRef.current,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: titleRef.current,
-              start: 'top 85%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-
-      // Image animation
-      if (imageRef.current) {
-        gsap.fromTo(
-          imageRef.current,
-          { x: -50, opacity: 0 },
-          {
-            x: 0,
-            opacity: 1,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: imageRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-
-      // Cards animation
-      const cards = sectionRef.current?.querySelectorAll('.overview-card');
-      if (cards) {
-        gsap.fromTo(
-          cards,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 75%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const titleRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const imageRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const card1Ref = useScrollAnimation<HTMLDivElement>(0.1);
+  const card2Ref = useScrollAnimation<HTMLDivElement>(0.1);
 
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col items-center"
       style={{ backgroundColor: '#f7f7f7', padding: '50px 20px' }}
     >
       {/* Section Title - MASTER TEXT */}
       <h2
         ref={titleRef}
+        className="animate-initial animate-fade-in-up"
         style={{
-          opacity: 0,
           color: '#2384da',
           textAlign: 'center',
           letterSpacing: '-.5px',
@@ -120,9 +55,8 @@ export default function OverviewSection({ data }: { data: OverviewData }) {
         {/* Image */}
         <div
           ref={imageRef}
-          className="lg:row-span-2 flex justify-center items-center overflow-hidden transition-shadow duration-300 hover:shadow-lg"
+          className="animate-initial animate-fade-in-up animate-delay-150 lg:row-span-2 flex justify-center items-center overflow-hidden transition-shadow duration-300 hover:shadow-lg"
           style={{
-            opacity: 0,
             border: '.5px solid #e0e0e0',
             backgroundColor: 'white',
             padding: '20px',
@@ -139,9 +73,9 @@ export default function OverviewSection({ data }: { data: OverviewData }) {
 
         {/* Card 1: Why Researchers Choose - MASTER TEXT */}
         <div
-          className="overview-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          ref={card1Ref}
+          className="animate-initial animate-fade-in-up animate-delay-300 overview-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           style={{
-            opacity: 0,
             border: '.5px solid #e0e0e0',
             backgroundColor: 'white',
             padding: '20px',
@@ -176,9 +110,9 @@ export default function OverviewSection({ data }: { data: OverviewData }) {
 
         {/* Card 2: What We Provide - MASTER TEXT */}
         <div
-          className="overview-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          ref={card2Ref}
+          className="animate-initial animate-fade-in-up animate-delay-450 overview-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           style={{
-            opacity: 0,
             border: '.5px solid #e0e0e0',
             backgroundColor: 'white',
             padding: '20px',

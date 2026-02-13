@@ -2,12 +2,11 @@
 
 /**
  * Breeding Scheme Architect CTA Component
+ * @version 2.0.0 - Removed GSAP, using CSS animations only
  * Reusable CTA block with "New for 2026" badge
  */
 
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
-import { gsap } from '@/lib/UXUIDC/gsap';
 import { IconDNA, IconArrowRight } from './Icons';
 
 interface BreedingSchemeArchitectCTAProps {
@@ -15,28 +14,6 @@ interface BreedingSchemeArchitectCTAProps {
 }
 
 export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSchemeArchitectCTAProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      gsap.fromTo(
-        containerRef.current,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    }
-  }, []);
-
   const bgStyles = {
     dark: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
     light: '#f7f7f7',
@@ -48,7 +25,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
 
   return (
     <section
-      ref={containerRef}
+      className="animate-initial animate-fade-in-up"
       style={{
         background: bgStyles[variant],
         padding: '50px 20px',

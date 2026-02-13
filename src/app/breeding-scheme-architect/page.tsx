@@ -5,10 +5,8 @@
  * Master text from: /breeding-scheme-architect.md
  */
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -39,8 +37,6 @@ import TargetGenotypePanel from './components/TargetGenotypePanel';
 import BreedingPathVisualizer from './components/BreedingPathVisualizer';
 import StatisticsPanel from './components/StatisticsPanel';
 import { AIAccessProvider, AIAssistantPanel, ConsultationModal } from './components/ai';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // ========== FAQ DATA ==========
 const faqs = [
@@ -156,39 +152,11 @@ const relatedResources = [
 ];
 
 function BreedingSchemeArchitectContent() {
-  const heroRef = useRef<HTMLElement>(null);
   const [alleles, setAlleles] = useState<Allele[]>([]);
   const [targetGenotypes, setTargetGenotypes] = useState<TargetGenotype[]>([]);
   const [breedingPlan, setBreedingPlan] = useState<BreedingPlan | null>(null);
   const [isCalculating, setIsCalculating] = useState(false);
   const [isAICollapsed, setIsAICollapsed] = useState(true);
-
-  // GSAP Animations
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animate sections on scroll
-      const sections = document.querySelectorAll('.animate-in');
-      sections.forEach((el) => {
-        gsap.fromTo(
-          el,
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none',
-            },
-          }
-        );
-      });
-    });
-
-    return () => ctx.revert();
-  }, []);
 
   const handleGeneratePlan = () => {
     if (alleles.length === 0) return;
@@ -224,7 +192,7 @@ function BreedingSchemeArchitectContent() {
 
       {/* ========== HERO SECTION ========== */}
       <section
-        ref={heroRef}
+        className="animate-initial animate-fade-in-up"
         style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',
           padding: '80px 20px 60px',
@@ -363,7 +331,7 @@ function BreedingSchemeArchitectContent() {
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2
-            className="animate-in"
+            className="animate-initial animate-fade-in-up"
             style={{
               color: '#2384da',
               textAlign: 'center',
@@ -378,7 +346,7 @@ function BreedingSchemeArchitectContent() {
             Design Your Breeding Strategy
           </h2>
           <p
-            className="animate-in"
+            className="animate-initial animate-fade-in-up"
             style={{
               color: '#666',
               textAlign: 'center',
@@ -397,12 +365,12 @@ function BreedingSchemeArchitectContent() {
           </p>
 
           {/* Allele Input */}
-          <div className="animate-in">
+          <div className="animate-initial animate-fade-in-up">
             <AlleleInputPanel alleles={alleles} onAllelesChange={setAlleles} />
           </div>
 
           {/* Target Genotypes */}
-          <div className="animate-in">
+          <div className="animate-initial animate-fade-in-up">
             <TargetGenotypePanel
               alleles={alleles}
               targetGenotypes={targetGenotypes}
@@ -411,7 +379,7 @@ function BreedingSchemeArchitectContent() {
           </div>
 
           {/* Generate Button */}
-          <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
+          <div className="animate-initial animate-fade-in-up" style={{ textAlign: 'center', marginTop: '30px' }}>
             <button
               onClick={handleGeneratePlan}
               disabled={alleles.length === 0 || isCalculating}
@@ -569,7 +537,7 @@ function BreedingSchemeArchitectContent() {
       <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2
-            className="animate-in"
+            className="animate-initial animate-fade-in-up"
             style={{
               color: '#2384da',
               textAlign: 'center',
@@ -584,7 +552,7 @@ function BreedingSchemeArchitectContent() {
             How the Breeding Scheme Architect Works
           </h2>
           <p
-            className="animate-in"
+            className="animate-initial animate-fade-in-up"
             style={{
               color: '#666',
               textAlign: 'center',
@@ -611,7 +579,7 @@ function BreedingSchemeArchitectContent() {
             {howItWorksSteps.map((step, index) => (
               <div
                 key={index}
-                className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="animate-initial animate-fade-in-up group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 style={{
                   backgroundColor: '#f7f7f7',
                   border: '.5px solid #e0e0e0',
@@ -676,7 +644,7 @@ function BreedingSchemeArchitectContent() {
       <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2
-            className="animate-in"
+            className="animate-initial animate-fade-in-up"
             style={{
               color: '#2384da',
               textAlign: 'center',
@@ -701,7 +669,7 @@ function BreedingSchemeArchitectContent() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="animate-in hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+                className="animate-initial animate-fade-in-up hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
                 style={{
                   backgroundColor: 'white',
                   border: '.5px solid #e0e0e0',
@@ -772,7 +740,7 @@ function BreedingSchemeArchitectContent() {
       <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2
-            className="animate-in"
+            className="animate-initial animate-fade-in-up"
             style={{
               color: '#2384da',
               textAlign: 'center',
@@ -787,7 +755,7 @@ function BreedingSchemeArchitectContent() {
             Related Resources
           </h2>
           <p
-            className="animate-in"
+            className="animate-initial animate-fade-in-up"
             style={{
               color: '#666',
               textAlign: 'center',
@@ -812,7 +780,7 @@ function BreedingSchemeArchitectContent() {
               <Link
                 key={index}
                 href={resource.link}
-                className="animate-in hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
+                className="animate-initial animate-fade-in-up hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
                 style={{
                   backgroundColor: '#f7f7f7',
                   border: '.5px solid #e0e0e0',

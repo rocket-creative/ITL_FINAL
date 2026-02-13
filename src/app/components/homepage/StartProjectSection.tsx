@@ -2,13 +2,14 @@
  * Start Your Project Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 76-79
  * Features: DNA helix + floating particles, bigger dots, visible blur, color variety
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface StartProjectData {
   title: string;
@@ -61,33 +62,12 @@ class Particle {
 
 export default function StartProjectSection({ data }: { data: StartProjectData }) {
   const sectionRef = useRef<HTMLElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const titleRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const contentRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const ctasRef = useScrollAnimation<HTMLDivElement>(0.1);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Content animation
-      if (contentRef.current) {
-        const elements = contentRef.current.querySelectorAll('.animate-cta');
-        gsap.fromTo(
-          elements,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
     // Canvas Animation
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -238,7 +218,6 @@ export default function StartProjectSection({ data }: { data: StartProjectData }
     const animationId = requestAnimationFrame(animate);
 
     return () => {
-      ctx.revert();
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId);
     };
@@ -258,12 +237,12 @@ export default function StartProjectSection({ data }: { data: StartProjectData }
       />
 
       {/* Content */}
-      <div ref={contentRef} className="relative text-center" style={{ maxWidth: '600px', zIndex: 1 }}>
+      <div className="relative text-center" style={{ maxWidth: '600px', zIndex: 1 }}>
         {/* Section Title - MASTER TEXT */}
         <h2
-          className="animate-cta"
+          ref={titleRef}
+          className="animate-initial animate-fade-in-up"
           style={{
-            opacity: 0,
             color: 'white',
             letterSpacing: '-.5px',
             fontFamily: 'Poppins, sans-serif',
@@ -278,9 +257,9 @@ export default function StartProjectSection({ data }: { data: StartProjectData }
 
         {/* Content - MASTER TEXT */}
         <p
-          className="animate-cta"
+          ref={contentRef}
+          className="animate-initial animate-fade-in-up animate-delay-150"
           style={{
-            opacity: 0,
             color: 'white',
             fontFamily: 'var(--system-ui)',
             fontSize: '.9rem',
@@ -293,7 +272,7 @@ export default function StartProjectSection({ data }: { data: StartProjectData }
         </p>
 
         {/* CTA Buttons */}
-        <div className="animate-cta flex flex-row gap-5 justify-center" style={{ opacity: 0 }}>
+        <div ref={ctasRef} className="animate-initial animate-fade-in-up animate-delay-300 flex flex-row gap-5 justify-center">
           <Link
             href={data.cta1.href}
             className="cta-outline-btn group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"

@@ -8,8 +8,6 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -36,7 +34,6 @@ import {
 } from '@/components/UXUIDC';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
-gsap.registerPlugin(ScrollTrigger);
 
 // ============================================
 // MASTER TEXT DATA - from knockout-mouse-models.md
@@ -238,38 +235,7 @@ const legacyContentUrl = '/legacy/knockout-mouse-models';
 export default function KnockoutMouseModelsPage() {
   const heroRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // Hero animation
-    if (heroRef.current) {
-      gsap.fromTo(
-        heroRef.current.querySelectorAll('.hero-animate'),
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-      );
-    }
-
-    // Section animations
-    const animateElements = document.querySelectorAll('.animate-in');
-    animateElements.forEach((el) => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: 'power2.out',
-          scrollTrigger: { trigger: el, start: 'top 85%' },
-        }
-      );
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
-
-  return (
+    return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
 

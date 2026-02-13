@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
@@ -266,45 +266,7 @@ const faqData = [
 ];
 
 export default function CardiovascularMouseModelsPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-      
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-      
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-    
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       
@@ -1041,8 +1003,7 @@ export default function CardiovascularMouseModelsPage() {
                     lineHeight: 1.6,
                     fontStyle: 'italic',
                     marginBottom: '20px',
-                    flex: testimonials.length > 1 ? 1 : undefined,
-                  }}>
+                    flex: testimonials.length > 1 ? 1 : undefined}}>
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>

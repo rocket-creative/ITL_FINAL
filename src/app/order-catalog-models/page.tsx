@@ -145,7 +145,7 @@ export default function OrderInquiryCatalogModelsPage() {
       >
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           {/* Compact Header */}
-          <div className="text-center mb-8">
+          <div style={{ marginBottom: '32px' }}>
             <div
               style={{
                 display: 'inline-flex',
@@ -181,29 +181,19 @@ export default function OrderInquiryCatalogModelsPage() {
                 fontSize: '.875rem',
                 fontWeight: 400,
                 maxWidth: '600px',
-                margin: '0 auto',
               }}
             >
               Order from our extensive catalog of humanized, knockout, knockin, and reporter mouse models
             </p>
           </div>
 
-          {/* Two Column Layout: Sidebar + Form */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-            {/* ===== SIDEBAR (LEFT) ===== */}
-            <div className="lg:col-span-1 flex flex-col gap-4 order-2 lg:order-1">
-              {/* Order Process */}
-              <div
-                style={{
-                  backgroundColor: 'rgba(255,255,255,0.1)',
-                  backdropFilter: 'blur(10px)',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  border: '1px solid rgba(255,255,255,0.2)',
-                  flex: 1,
-                }}
-              >
-                <h3 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, marginBottom: '12px' }}>
+          {/* Two Column Layout: Content + Form */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+            {/* ===== LEFT COLUMN: Content (40%) ===== */}
+            <div className="lg:col-span-2">
+              {/* What's Included */}
+              <div className="hero-animate" style={{ marginBottom: '25px' }}>
+                <h3 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '12px' }}>
                   What&apos;s Included
                 </h3>
                 <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
@@ -214,9 +204,9 @@ export default function OrderInquiryCatalogModelsPage() {
                     'Breeding recommendations',
                     'Technical support included',
                   ].map((item, i) => (
-                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                      <IconCheckCircle size={14} color="#00d4d4" style={{ marginTop: '3px', flexShrink: 0 }} />
-                      <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.8rem', fontFamily: 'var(--system-ui)', lineHeight: '1.4' }}>
+                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '10px' }}>
+                      <IconCheckCircle size={16} color="#00d4d4" style={{ marginTop: '3px', flexShrink: 0 }} />
+                      <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.9rem', fontFamily: 'var(--system-ui)', lineHeight: '1.5' }}>
                         {item}
                       </span>
                     </li>
@@ -224,47 +214,39 @@ export default function OrderInquiryCatalogModelsPage() {
                 </ul>
               </div>
 
-              {/* Order Timeline */}
-              <div
-                style={{
-                  backgroundColor: 'rgba(255,255,255,0.1)',
-                  backdropFilter: 'blur(10px)',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  border: '1px solid rgba(255,255,255,0.2)',
-                }}
-              >
-                <h3 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, marginBottom: '12px' }}>
+              {/* Order Process */}
+              <div className="hero-animate" style={{ marginBottom: '25px' }}>
+                <h3 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '12px' }}>
                   Order Process
                 </h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                   {[
                     { step: '1', label: '1 Day', desc: 'Availability check & pricing' },
                     { step: '2', label: 'Confirm', desc: 'MTA/order confirmation' },
                     { step: '3', label: 'Delivery', desc: 'Preparation & shipping' },
                   ].map((item, i) => (
-                    <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                    <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                       <div
                         style={{
-                          minWidth: '24px',
-                          height: '24px',
+                          minWidth: '28px',
+                          height: '28px',
                           backgroundColor: '#008080',
                           borderRadius: '50%',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           color: 'white',
-                          fontSize: '.7rem',
+                          fontSize: '.8rem',
                           fontWeight: 700,
                         }}
                       >
                         {item.step}
                       </div>
                       <div>
-                        <span style={{ color: '#00d4d4', fontSize: '.75rem', fontWeight: 600, fontFamily: 'var(--system-ui)' }}>
+                        <span style={{ color: '#00d4d4', fontSize: '.85rem', fontWeight: 600, fontFamily: 'var(--system-ui)', display: 'block', marginBottom: '2px' }}>
                           {item.label}
                         </span>
-                        <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0, lineHeight: '1.3' }}>
+                        <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', fontFamily: 'var(--system-ui)', margin: 0, lineHeight: '1.4' }}>
                           {item.desc}
                         </p>
                       </div>
@@ -274,15 +256,17 @@ export default function OrderInquiryCatalogModelsPage() {
               </div>
 
               {/* Trust Stats */}
-              <div
+              <div 
+                className="hero-animate"
                 style={{
-                  backgroundColor: 'rgba(0,128,128,0.2)',
-                  borderRadius: '12px',
-                  padding: '16px 20px',
-                  border: '1px solid rgba(0,128,128,0.3)',
+                  backgroundColor: 'rgba(0, 212, 212, 0.15)',
+                  border: '1px solid rgba(0, 212, 212, 0.4)',
+                  borderRadius: '10px',
+                  padding: '20px',
+                  marginBottom: '25px',
                 }}
               >
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-4">
                   {[
                     { num: '10,000+', label: 'Models' },
                     { num: '25+', label: 'Years' },
@@ -290,10 +274,10 @@ export default function OrderInquiryCatalogModelsPage() {
                     { num: '100%', label: 'QC Tested' },
                   ].map((stat, i) => (
                     <div key={i} style={{ textAlign: 'center' }}>
-                      <div style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 700 }}>
+                      <div style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 700, marginBottom: '4px' }}>
                         {stat.num}
                       </div>
-                      <div style={{ color: '#666', fontSize: '.65rem', fontFamily: 'var(--system-ui)' }}>
+                      <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.75rem', fontFamily: 'var(--system-ui)' }}>
                         {stat.label}
                       </div>
                     </div>
@@ -302,51 +286,46 @@ export default function OrderInquiryCatalogModelsPage() {
               </div>
 
               {/* Need Custom? */}
-              <Link
-                href="/request-quote"
-                className="block transition-all duration-300 hover:-translate-y-1"
+              <div 
+                className="hero-animate"
                 style={{
-                  backgroundColor: 'white',
-                  borderRadius: '12px',
-                  padding: '16px 20px',
-                  textDecoration: 'none',
+                  backgroundColor: 'rgba(255,255,255,0.1)',
+                  backdropFilter: 'blur(10px)',
+                  borderRadius: '10px',
+                  padding: '18px 20px',
+                  border: '1px solid rgba(255,255,255,0.2)',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div
-                    style={{
-                      width: '40px',
-                      height: '40px',
-                      backgroundColor: '#0a253c',
-                      borderRadius: '50%',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <IconMouse size={18} color="white" />
-                  </div>
-                  <div>
-                    <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.85rem', fontWeight: 600, margin: 0 }}>
-                      Need a Custom Model?
-                    </p>
-                    <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                      Request a custom project quote →
-                    </p>
-                  </div>
-                </div>
-              </Link>
+                <p style={{ color: 'white', fontSize: '.9rem', marginBottom: '8px', fontWeight: 600 }}>
+                  Need a Custom Model?
+                </p>
+                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.85rem', marginBottom: '12px', lineHeight: '1.5' }}>
+                  Request a custom project quote for knockout, knockin, humanized, or transgenic models.
+                </p>
+                <Link
+                  href="/request-quote"
+                  className="inline-flex items-center gap-2 transition-all duration-300 hover:gap-3"
+                  style={{
+                    color: '#00d4d4',
+                    fontSize: '.85rem',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                >
+                  Request Quote
+                  <IconArrowRight size={14} color="#00d4d4" />
+                </Link>
+              </div>
             </div>
 
-            {/* ===== MAIN FORM (RIGHT) ===== */}
-            <div className="lg:col-span-2 flex order-1 lg:order-2">
+            {/* ===== RIGHT COLUMN: Form (60%) ===== */}
+            <div className="lg:col-span-3 hero-animate">
               <div
                 style={{
                   backgroundColor: 'white',
                   borderRadius: '12px',
-                  padding: '28px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
-                  width: '100%',
+                  padding: '32px',
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
                 }}
               >
                 {showCatalogSearch && (
@@ -370,7 +349,7 @@ export default function OrderInquiryCatalogModelsPage() {
                     </button>
                   </div>
                 )}
-<HubSpotForm
+                <HubSpotForm
                   formId="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
                   portalId="3977953"
                   region="na1"

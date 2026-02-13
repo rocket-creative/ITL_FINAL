@@ -1,12 +1,13 @@
 /**
  * Frequently Asked Questions Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 80-86
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useState } from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface FAQ {
   question: string;
@@ -19,34 +20,10 @@ interface FAQData {
 }
 
 export default function FAQSection({ data }: { data: FAQData }) {
-  const sectionRef = useRef<HTMLElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const items = sectionRef.current?.querySelectorAll('.faq-item');
-      if (items) {
-        gsap.fromTo(
-          items,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  
+  // Create refs for FAQ items
+  const faqRefs = data.faqs.map(() => useScrollAnimation<HTMLDivElement>(0.1));
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -54,7 +31,6 @@ export default function FAQSection({ data }: { data: FAQData }) {
 
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col justify-start items-center"
       style={{ backgroundColor: 'white', padding: '50px 20px' }}
     >
@@ -79,9 +55,9 @@ export default function FAQSection({ data }: { data: FAQData }) {
         {data.faqs.map((faq, index) => (
           <div
             key={index}
-            className="faq-item"
+            ref={faqRefs[index]}
+            className={`animate-initial animate-fade-in-up animate-delay-${Math.min(100 + index * 100, 800)}`}
             style={{
-              opacity: 0,
               backgroundColor: '#f7f7f7',
               marginBottom: '10px',
               border: '.5px solid #e0e0e0',

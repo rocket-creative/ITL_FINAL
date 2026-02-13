@@ -1,13 +1,13 @@
 /**
  * High-Level Approach Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 39-47
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface FeatureItem {
   title: string;
@@ -20,37 +20,16 @@ interface ApproachData {
 }
 
 export default function HighLevelApproachSection({ data }: { data: ApproachData }) {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const cards = sectionRef.current?.querySelectorAll('.approach-card');
-      if (cards) {
-        gsap.fromTo(
-          cards,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  // Create refs for animated elements
+  const card1Ref = useScrollAnimation<HTMLDivElement>(0.1);
+  const card2Ref = useScrollAnimation<HTMLDivElement>(0.1);
+  const card3Ref = useScrollAnimation<HTMLDivElement>(0.1);
+  const card4Ref = useScrollAnimation<HTMLDivElement>(0.1);
+  const imageRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const cardRefs = [card1Ref, card2Ref, card3Ref, card4Ref];
 
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col items-center"
       style={{ backgroundColor: 'white', padding: '50px 20px' }}
     >
@@ -77,9 +56,9 @@ export default function HighLevelApproachSection({ data }: { data: ApproachData 
           {data.features.slice(0, 2).map((feature, index) => (
             <div
               key={index}
-              className="approach-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex-1"
+              ref={cardRefs[index]}
+              className={`animate-initial animate-fade-in-up animate-delay-${100 + index * 100} group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex-1`}
               style={{
-                opacity: 0,
                 border: '.5px solid #e0e0e0',
                 backgroundColor: '#f7f7f7',
                 padding: '20px',
@@ -119,9 +98,9 @@ export default function HighLevelApproachSection({ data }: { data: ApproachData 
           {data.features.slice(2, 4).map((feature, index) => (
             <div
               key={index + 2}
-              className="approach-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex-1"
+              ref={cardRefs[index + 2]}
+              className={`animate-initial animate-fade-in-up animate-delay-${300 + index * 100} group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex-1`}
               style={{
-                opacity: 0,
                 border: '.5px solid #e0e0e0',
                 backgroundColor: '#f7f7f7',
                 padding: '20px',
@@ -158,9 +137,9 @@ export default function HighLevelApproachSection({ data }: { data: ApproachData 
 
         {/* Column 3: Image (size of 2 cards) */}
         <div
-          className="approach-card flex justify-center items-center overflow-hidden transition-shadow duration-300 hover:shadow-lg h-full"
+          ref={imageRef}
+          className="animate-initial animate-fade-in-up animate-delay-500 flex justify-center items-center overflow-hidden transition-shadow duration-300 hover:shadow-lg h-full"
           style={{
-            opacity: 0,
             border: '.5px solid #e0e0e0',
             backgroundColor: 'white',
             padding: '20px',

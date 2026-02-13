@@ -1,11 +1,11 @@
 /**
  * Frequently Asked Questions Section - from homepage.md
+ * - Removed GSAP, using CSS animations only
  */
 
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useState } from 'react';
 
 interface FAQ {
   question: string;
@@ -17,34 +17,7 @@ interface FAQSectionProps {
 }
 
 export default function FAQSection({ faqs }: FAQSectionProps) {
-  const sectionRef = useRef<HTMLElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const items = sectionRef.current?.querySelectorAll('.faq-item');
-      if (items) {
-        gsap.fromTo(
-          items,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -52,7 +25,6 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
 
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col justify-start items-center"
       style={{
         backgroundColor: '#f7f7f7',
@@ -78,9 +50,8 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="faq-item"
+            className={`animate-initial animate-fade-in-up animate-delay-${Math.min(100 + index * 100, 800)}`}
             style={{
-              opacity: 0,
               backgroundColor: 'white',
               marginBottom: '10px',
               border: '.5px solid #e0e0e0',

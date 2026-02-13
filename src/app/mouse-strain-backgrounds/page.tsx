@@ -6,7 +6,7 @@
  * Built following RULES_2026 guidelines
  */
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Link from 'next/link';
 import {
   UXUIDCNavigation,
@@ -24,8 +24,7 @@ import {
   IconCheckCircle,
   IconChevronRight,
   IconTarget,
-  IconAward,
-} from '@/components/UXUIDC';
+  IconAward} from '@/components/UXUIDC';
 
 const BRAND = {
   navy: '#0a253c',
@@ -33,8 +32,7 @@ const BRAND = {
   blue: '#2384da',
   lightGray: '#f7f7f7',
   white: '#ffffff',
-  text: '#333333',
-};
+  text: '#333333'};
 
 // Hero Data
 const heroData = {
@@ -85,45 +83,7 @@ const faqData = [
 ];
 
 export default function MouseStrainBackgroundsPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-      
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-      
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-    
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div>
       <UXUIDCNavigation />
       
@@ -169,8 +129,7 @@ export default function MouseStrainBackgroundsPage() {
               fontWeight: 700,
               lineHeight: 1.1,
               marginBottom: '25px',
-              letterSpacing: '-1px',
-            }}>
+              letterSpacing: '-1px'}}>
               {heroData.title}
             </h1>
             
@@ -205,8 +164,7 @@ export default function MouseStrainBackgroundsPage() {
                   borderRadius: '6px',
                   fontSize: '.95rem',
                   fontWeight: 600,
-                  textDecoration: 'none',
-                }}
+                  textDecoration: 'none'}}
               >
                 Request a Quote
                 <IconChevronRight size={16} color={BRAND.navy} />
@@ -222,8 +180,7 @@ export default function MouseStrainBackgroundsPage() {
                   borderRadius: '6px',
                   fontSize: '.95rem',
                   fontWeight: 600,
-                  textDecoration: 'none',
-                }}
+                  textDecoration: 'none'}}
               >
                 Talk to a Scientist
               </Link>
@@ -256,8 +213,7 @@ export default function MouseStrainBackgroundsPage() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2.2rem',
                 fontWeight: 700,
-                marginBottom: '20px',
-              }}>
+                marginBottom: '20px'}}>
                 C57BL/6: The Research Standard
               </h2>
               <p style={{ color: '#666', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '15px' }}>
@@ -273,29 +229,24 @@ export default function MouseStrainBackgroundsPage() {
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
               gap: '25px',
-              marginBottom: '50px',
-            }}>
+              marginBottom: '50px'}}>
               {[
                 {
                   icon: IconTarget,
                   title: 'Research Community Standard',
-                  description: 'Most commonly used background for genetically engineered mouse models, providing extensive baseline phenotypic data for comparison and compatibility with published Cre driver lines.',
-                },
+                  description: 'Most commonly used background for genetically engineered mouse models, providing extensive baseline phenotypic data for comparison and compatibility with published Cre driver lines.'},
                 {
                   icon: IconDNA,
                   title: 'Cre Driver Compatibility',
-                  description: 'The majority of tissue specific Cre driver lines are maintained on C57BL/6 backgrounds, enabling direct crosses without introducing mixed background effects.',
-                },
+                  description: 'The majority of tissue specific Cre driver lines are maintained on C57BL/6 backgrounds, enabling direct crosses without introducing mixed background effects.'},
                 {
                   icon: IconAward,
                   title: 'Genome Reference',
-                  description: 'C57BL/6 is the reference strain for the mouse genome sequence, ensuring accurate targeting design and comprehensive genetic characterization.',
-                },
+                  description: 'C57BL/6 is the reference strain for the mouse genome sequence, ensuring accurate targeting design and comprehensive genetic characterization.'},
                 {
                   icon: IconCheckCircle,
                   title: 'Breeding Performance',
-                  description: 'Good maternal behavior, moderate litter sizes (5 to 7 pups), and compatibility with standard breeding protocols make C57BL/6 reliable for colony establishment.',
-                },
+                  description: 'Good maternal behavior, moderate litter sizes (5 to 7 pups), and compatibility with standard breeding protocols make C57BL/6 reliable for colony establishment.'},
               ].map((item, index) => (
                 <div
                   key={index}
@@ -303,8 +254,7 @@ export default function MouseStrainBackgroundsPage() {
                     backgroundColor: BRAND.white,
                     padding: '30px',
                     borderRadius: '8px',
-                    border: '1px solid #e0e0e0',
-                  }}
+                    border: '1px solid #e0e0e0'}}
                 >
                   <div style={{ marginBottom: '15px' }}>
                     <item.icon size={36} color={BRAND.teal} />
@@ -314,8 +264,7 @@ export default function MouseStrainBackgroundsPage() {
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '1.2rem',
                     fontWeight: 600,
-                    marginBottom: '12px',
-                  }}>
+                    marginBottom: '12px'}}>
                     {item.title}
                   </h3>
                   <p style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.6' }}>
@@ -336,8 +285,7 @@ export default function MouseStrainBackgroundsPage() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2.2rem',
                 fontWeight: 700,
-                marginBottom: '15px',
-              }}>
+                marginBottom: '15px'}}>
                 C57BL/6 Substrain Comparison
               </h2>
               <p style={{ color: '#666', fontSize: '1.05rem', maxWidth: '800px', margin: '0 auto' }}>
@@ -395,15 +343,13 @@ export default function MouseStrainBackgroundsPage() {
               backgroundColor: BRAND.lightGray,
               padding: '30px',
               borderRadius: '8px',
-              borderLeft: `4px solid ${BRAND.teal}`,
-            }}>
+              borderLeft: `4px solid ${BRAND.teal}`}}>
               <h3 style={{
                 color: BRAND.navy,
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '1.3rem',
                 fontWeight: 600,
-                marginBottom: '15px',
-              }}>
+                marginBottom: '15px'}}>
                 Choosing Between Substrains
               </h3>
               <ul style={{ color: '#666', fontSize: '1rem', lineHeight: '1.8', paddingLeft: '20px' }}>
@@ -422,8 +368,7 @@ export default function MouseStrainBackgroundsPage() {
                     color: BRAND.teal,
                     fontWeight: 600,
                     fontSize: '.95rem',
-                    textDecoration: 'none',
-                  }}
+                    textDecoration: 'none'}}
                 >
                   Read Full C57BL/6J vs C57BL/6N Comparison
                   <IconChevronRight size={16} color={BRAND.teal} />
@@ -442,8 +387,7 @@ export default function MouseStrainBackgroundsPage() {
               fontSize: '2.2rem',
               fontWeight: 700,
               marginBottom: '50px',
-              textAlign: 'center',
-            }}>
+              textAlign: 'center'}}>
               Applications by Research Area
             </h2>
 
@@ -452,15 +396,13 @@ export default function MouseStrainBackgroundsPage() {
               <div className="animate-in" style={{
                 backgroundColor: BRAND.lightGray,
                 padding: '35px',
-                borderRadius: '8px',
-              }}>
+                borderRadius: '8px'}}>
                 <h3 style={{
                   color: BRAND.blue,
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  marginBottom: '15px',
-                }}>
+                  marginBottom: '15px'}}>
                   Metabolic Research
                 </h3>
                 <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7', marginBottom: '15px' }}>
@@ -484,8 +426,7 @@ export default function MouseStrainBackgroundsPage() {
                     color: BRAND.teal,
                     fontWeight: 600,
                     fontSize: '.9rem',
-                    textDecoration: 'none',
-                  }}
+                    textDecoration: 'none'}}
                 >
                   Metabolic Disease Mouse Models
                   <IconChevronRight size={14} color={BRAND.teal} />
@@ -496,15 +437,13 @@ export default function MouseStrainBackgroundsPage() {
               <div className="animate-in" style={{
                 backgroundColor: BRAND.lightGray,
                 padding: '35px',
-                borderRadius: '8px',
-              }}>
+                borderRadius: '8px'}}>
                 <h3 style={{
                   color: BRAND.blue,
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  marginBottom: '15px',
-                }}>
+                  marginBottom: '15px'}}>
                   Neuroscience Research
                 </h3>
                 <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7', marginBottom: '15px' }}>
@@ -525,8 +464,7 @@ export default function MouseStrainBackgroundsPage() {
                     color: BRAND.teal,
                     fontWeight: 600,
                     fontSize: '.9rem',
-                    textDecoration: 'none',
-                  }}
+                    textDecoration: 'none'}}
                 >
                   Neuroscience Mouse Models
                   <IconChevronRight size={14} color={BRAND.teal} />
@@ -537,15 +475,13 @@ export default function MouseStrainBackgroundsPage() {
               <div className="animate-in" style={{
                 backgroundColor: BRAND.lightGray,
                 padding: '35px',
-                borderRadius: '8px',
-              }}>
+                borderRadius: '8px'}}>
                 <h3 style={{
                   color: BRAND.blue,
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  marginBottom: '15px',
-                }}>
+                  marginBottom: '15px'}}>
                   Immunology Research
                 </h3>
                 <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7', marginBottom: '15px' }}>
@@ -566,8 +502,7 @@ export default function MouseStrainBackgroundsPage() {
                     color: BRAND.teal,
                     fontWeight: 600,
                     fontSize: '.9rem',
-                    textDecoration: 'none',
-                  }}
+                    textDecoration: 'none'}}
                 >
                   Immunology Mouse Models
                   <IconChevronRight size={14} color={BRAND.teal} />
@@ -578,15 +513,13 @@ export default function MouseStrainBackgroundsPage() {
               <div className="animate-in" style={{
                 backgroundColor: BRAND.lightGray,
                 padding: '35px',
-                borderRadius: '8px',
-              }}>
+                borderRadius: '8px'}}>
                 <h3 style={{
                   color: BRAND.blue,
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  marginBottom: '15px',
-                }}>
+                  marginBottom: '15px'}}>
                   Oncology Research
                 </h3>
                 <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7', marginBottom: '15px' }}>
@@ -607,8 +540,7 @@ export default function MouseStrainBackgroundsPage() {
                     color: BRAND.teal,
                     fontWeight: 600,
                     fontSize: '.9rem',
-                    textDecoration: 'none',
-                  }}
+                    textDecoration: 'none'}}
                 >
                   Oncology Mouse Models
                   <IconChevronRight size={14} color={BRAND.teal} />
@@ -627,8 +559,7 @@ export default function MouseStrainBackgroundsPage() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2.2rem',
                 fontWeight: 700,
-                marginBottom: '25px',
-              }}>
+                marginBottom: '25px'}}>
                 BALB/c Mouse Background
               </h2>
               <p style={{ color: '#666', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '20px' }}>
@@ -640,22 +571,19 @@ export default function MouseStrainBackgroundsPage() {
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
               gap: '30px',
-              marginTop: '40px',
-            }}>
+              marginTop: '40px'}}>
               <div style={{
                 backgroundColor: BRAND.white,
                 padding: '30px',
                 borderRadius: '8px',
-                border: '1px solid #e0e0e0',
-              }}>
+                border: '1px solid #e0e0e0'}}>
                 <h3 style={{
                   color: BRAND.teal,
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.3rem',
                   fontWeight: 600,
                   marginBottom: '15px',
-                  whiteSpace: 'nowrap',
-                }}>
+                  whiteSpace: 'nowrap'}}>
                   Immunological Characteristics
                 </h3>
                 <ul style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7', paddingLeft: '20px' }}>
@@ -670,15 +598,13 @@ export default function MouseStrainBackgroundsPage() {
                 backgroundColor: BRAND.white,
                 padding: '30px',
                 borderRadius: '8px',
-                border: '1px solid #e0e0e0',
-              }}>
+                border: '1px solid #e0e0e0'}}>
                 <h3 style={{
                   color: BRAND.teal,
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.3rem',
                   fontWeight: 600,
-                  marginBottom: '15px',
-                }}>
+                  marginBottom: '15px'}}>
                   Research Applications
                 </h3>
                 <ul style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7', paddingLeft: '20px' }}>
@@ -693,15 +619,13 @@ export default function MouseStrainBackgroundsPage() {
                 backgroundColor: BRAND.white,
                 padding: '30px',
                 borderRadius: '8px',
-                border: '1px solid #e0e0e0',
-              }}>
+                border: '1px solid #e0e0e0'}}>
                 <h3 style={{
                   color: BRAND.teal,
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.3rem',
                   fontWeight: 600,
-                  marginBottom: '15px',
-                }}>
+                  marginBottom: '15px'}}>
                   Physical Characteristics
                 </h3>
                 <ul style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7', paddingLeft: '20px' }}>
@@ -727,8 +651,7 @@ export default function MouseStrainBackgroundsPage() {
                   padding: '12px 24px',
                   border: `2px solid ${BRAND.teal}`,
                   borderRadius: '6px',
-                  transition: 'all 0.3s ease',
-                }}
+                  transition: 'all 0.3s ease'}}
               >
                 Learn More About BALB/c Background
                 <IconChevronRight size={16} color={BRAND.teal} />
@@ -746,30 +669,26 @@ export default function MouseStrainBackgroundsPage() {
               fontSize: '2.2rem',
               fontWeight: 700,
               marginBottom: '40px',
-              textAlign: 'center',
-            }}>
+              textAlign: 'center'}}>
               C57BL/6 vs BALB/c: Key Differences
             </h2>
 
             <div className="animate-in md:grid-cols-2 grid-cols-1" style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
-              gap: '30px',
-            }}
+              gap: '30px'}}
             >
               <div style={{
                 backgroundColor: BRAND.white,
                 padding: '35px',
                 borderRadius: '8px',
-                border: `2px solid ${BRAND.blue}`,
-              }}>
+                border: `2px solid ${BRAND.blue}`}}>
                 <h3 style={{
                   color: BRAND.blue,
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  marginBottom: '20px',
-                }}>
+                  marginBottom: '20px'}}>
                   C57BL/6
                 </h3>
                 <ul style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7', paddingLeft: '20px' }}>
@@ -786,15 +705,13 @@ export default function MouseStrainBackgroundsPage() {
                 backgroundColor: BRAND.white,
                 padding: '35px',
                 borderRadius: '8px',
-                border: `2px solid ${BRAND.teal}`,
-              }}>
+                border: `2px solid ${BRAND.teal}`}}>
                 <h3 style={{
                   color: BRAND.teal,
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  marginBottom: '20px',
-                }}>
+                  marginBottom: '20px'}}>
                   BALB/c
                 </h3>
                 <ul style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7', paddingLeft: '20px' }}>
@@ -819,8 +736,7 @@ export default function MouseStrainBackgroundsPage() {
               fontSize: '2.2rem',
               fontWeight: 700,
               marginBottom: '40px',
-              textAlign: 'center',
-            }}>
+              textAlign: 'center'}}>
               Technical Considerations
             </h2>
 
@@ -832,8 +748,7 @@ export default function MouseStrainBackgroundsPage() {
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  marginBottom: '20px',
-                }}>
+                  marginBottom: '20px'}}>
                   Backcrossing Requirements
                 </h3>
                 <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7', marginBottom: '20px' }}>
@@ -887,8 +802,7 @@ export default function MouseStrainBackgroundsPage() {
                     color: BRAND.teal,
                     fontWeight: 600,
                     fontSize: '.95rem',
-                    textDecoration: 'none',
-                  }}
+                    textDecoration: 'none'}}
                 >
                   Learn About Backcrossing Services
                   <IconChevronRight size={14} color={BRAND.teal} />
@@ -902,8 +816,7 @@ export default function MouseStrainBackgroundsPage() {
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  marginBottom: '20px',
-                }}>
+                  marginBottom: '20px'}}>
                   Breeding Performance
                 </h3>
                 <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7', marginBottom: '15px' }}>
@@ -912,8 +825,7 @@ export default function MouseStrainBackgroundsPage() {
                 <div style={{
                   backgroundColor: BRAND.lightGray,
                   padding: '25px',
-                  borderRadius: '8px',
-                }}>
+                  borderRadius: '8px'}}>
                   <ul style={{ color: '#666', fontSize: '1rem', lineHeight: '1.8', paddingLeft: '20px' }}>
                     <li>Average litter size: 5 to 7 pups</li>
                     <li>Weaning age: 21 days</li>
@@ -940,33 +852,27 @@ export default function MouseStrainBackgroundsPage() {
               fontSize: '2.2rem',
               fontWeight: 700,
               marginBottom: '40px',
-              textAlign: 'center',
-            }}>
+              textAlign: 'center'}}>
               Other Strain Backgrounds
             </h2>
 
             <div className="animate-in" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '25px',
-            }}>
+              gap: '25px'}}>
               {[
                 {
                   title: '129 Strains',
-                  description: 'Commonly used for ES cell derivation due to excellent germline transmission. Multiple substrains exist (129S1, 129S4, 129Sv). Often backcrossed to C57BL/6 for pure background.',
-                },
+                  description: 'Commonly used for ES cell derivation due to excellent germline transmission. Multiple substrains exist (129S1, 129S4, 129Sv). Often backcrossed to C57BL/6 for pure background.'},
                 {
                   title: 'FVB/N',
-                  description: 'Excellent for transgenic generation via pronuclear injection due to large, visible pronuclei. Good breeding performance with large litters. Carries rd1 retinal degeneration allele.',
-                },
+                  description: 'Excellent for transgenic generation via pronuclear injection due to large, visible pronuclei. Good breeding performance with large litters. Carries rd1 retinal degeneration allele.'},
                 {
                   title: 'DBA/2',
-                  description: 'Used for specific research applications including glaucoma models, hearing loss studies, and neuroscience research. Develops age related hearing loss and glaucoma susceptibility.',
-                },
+                  description: 'Used for specific research applications including glaucoma models, hearing loss studies, and neuroscience research. Develops age related hearing loss and glaucoma susceptibility.'},
                 {
                   title: 'NOD (Non Obese Diabetic)',
-                  description: 'Spontaneously develops autoimmune diabetes. Used as background for autoimmune disease models and immunodeficient derivatives (NSG, NOG). Requires special husbandry.',
-                },
+                  description: 'Spontaneously develops autoimmune diabetes. Used as background for autoimmune disease models and immunodeficient derivatives (NSG, NOG). Requires special husbandry.'},
               ].map((strain, index) => (
                 <div
                   key={index}
@@ -974,16 +880,14 @@ export default function MouseStrainBackgroundsPage() {
                     backgroundColor: BRAND.lightGray,
                     padding: '25px',
                     borderRadius: '8px',
-                    border: '1px solid #e0e0e0',
-                  }}
+                    border: '1px solid #e0e0e0'}}
                 >
                   <h3 style={{
                     color: BRAND.navy,
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '1.2rem',
                     fontWeight: 600,
-                    marginBottom: '12px',
-                  }}>
+                    marginBottom: '12px'}}>
                     {strain.title}
                   </h3>
                   <p style={{ color: '#666', fontSize: '.9rem', lineHeight: '1.6' }}>
@@ -1002,15 +906,13 @@ export default function MouseStrainBackgroundsPage() {
               backgroundColor: BRAND.white,
               padding: '50px',
               borderRadius: '8px',
-              borderTop: `4px solid ${BRAND.teal}`,
-            }}>
+              borderTop: `4px solid ${BRAND.teal}`}}>
               <h2 style={{
                 color: BRAND.navy,
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2rem',
                 fontWeight: 700,
-                marginBottom: '25px',
-              }}>
+                marginBottom: '25px'}}>
                 How to Choose Your Strain Background
               </h2>
               
@@ -1021,8 +923,7 @@ export default function MouseStrainBackgroundsPage() {
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '1.1rem',
                     fontWeight: 600,
-                    marginBottom: '10px',
-                  }}>
+                    marginBottom: '10px'}}>
                     1. Consider Your Research Application
                   </h4>
                   <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7' }}>
@@ -1036,8 +937,7 @@ export default function MouseStrainBackgroundsPage() {
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '1.1rem',
                     fontWeight: 600,
-                    marginBottom: '10px',
-                  }}>
+                    marginBottom: '10px'}}>
                     2. Review Published Literature
                   </h4>
                   <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7' }}>
@@ -1051,8 +951,7 @@ export default function MouseStrainBackgroundsPage() {
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '1.1rem',
                     fontWeight: 600,
-                    marginBottom: '10px',
-                  }}>
+                    marginBottom: '10px'}}>
                     3. Verify Cre Driver Compatibility
                   </h4>
                   <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7' }}>
@@ -1066,8 +965,7 @@ export default function MouseStrainBackgroundsPage() {
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '1.1rem',
                     fontWeight: 600,
-                    marginBottom: '10px',
-                  }}>
+                    marginBottom: '10px'}}>
                     4. Consult with Our Scientific Team
                   </h4>
                   <p style={{ color: '#666', fontSize: '1rem', lineHeight: '1.7' }}>
@@ -1090,8 +988,7 @@ export default function MouseStrainBackgroundsPage() {
                     fontSize: '1rem',
                     fontWeight: 600,
                     textDecoration: 'none',
-                    transition: 'all 0.3s ease',
-                  }}
+                    transition: 'all 0.3s ease'}}
                 >
                   Consult with Our Scientists
                   <IconChevronRight size={16} color={BRAND.white} />
@@ -1110,16 +1007,14 @@ export default function MouseStrainBackgroundsPage() {
               fontSize: '2rem',
               fontWeight: 700,
               marginBottom: '40px',
-              textAlign: 'center',
-            }}>
+              textAlign: 'center'}}>
               Explore Specific Strain Backgrounds
             </h2>
 
             <div className="animate-in" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '20px',
-            }}>
+              gap: '20px'}}>
               {[
                 { title: 'C57BL/6 Background', href: '/c57bl6-mouse-background', description: 'The most widely used strain with extensive characterization' },
                 { title: 'C57BL/6J vs C57BL/6N', href: '/c57bl6j-vs-c57bl6n', description: 'Detailed substrain comparison and selection guidance' },
@@ -1137,8 +1032,7 @@ export default function MouseStrainBackgroundsPage() {
                     border: '1px solid #e0e0e0',
                     textDecoration: 'none',
                     transition: 'all 0.3s ease',
-                    display: 'block',
-                  }}
+                    display: 'block'}}
                 >
                   <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '10px' }}>
                     <IconChevronRight size={18} color={BRAND.teal} />
@@ -1146,8 +1040,7 @@ export default function MouseStrainBackgroundsPage() {
                       color: BRAND.teal,
                       fontFamily: 'Poppins, sans-serif',
                       fontSize: '1.1rem',
-                      fontWeight: 600,
-                    }}>
+                      fontWeight: 600}}>
                       {link.title}
                     </h3>
                   </div>
@@ -1169,8 +1062,7 @@ export default function MouseStrainBackgroundsPage() {
               fontSize: '2rem',
               fontWeight: 700,
               marginBottom: '40px',
-              textAlign: 'center',
-            }}>
+              textAlign: 'center'}}>
               Frequently Asked Questions
             </h2>
             <div className="animate-in">
@@ -1216,12 +1108,9 @@ export default function MouseStrainBackgroundsPage() {
             name: 'Mouse Strain Background Consultation',
             provider: {
               '@type': 'Organization',
-              name: 'ingenious targeting laboratory',
-            },
+              name: 'ingenious targeting laboratory'},
             description: 'Expert guidance on mouse strain background selection including C57BL/6, BALB/c, and other inbred strains. Backcrossing services and strain characterization.',
-            serviceType: 'Genetic Consultation Services',
-          }),
-        }}
+            serviceType: 'Genetic Consultation Services'})}}
       />
 
       {/* FAQPage Schema */}
@@ -1236,11 +1125,7 @@ export default function MouseStrainBackgroundsPage() {
               name: faq.question,
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: typeof faq.answer === 'string' ? faq.answer : faq.question,
-              },
-            })),
-          }),
-        }}
+                text: typeof faq.answer === 'string' ? faq.answer : faq.question}}))})}}
       />
     </div>
   );

@@ -68,7 +68,7 @@ const nextConfig: NextConfig = {
 
   // Experimental features for performance
   experimental: {
-    optimizePackageImports: ['gsap', '@headlessui/react'],
+    optimizePackageImports: ['@headlessui/react'],
   },
 
   // Next.js 16: Turbopack config (empty to silence warning)
@@ -135,13 +135,6 @@ const nextConfig: NextConfig = {
           cacheGroups: {
             default: false,
             vendors: false,
-            // GSAP vendor chunk
-            gsap: {
-              name: 'gsap',
-              chunks: 'all',
-              test: /[\\/]node_modules[\\/](gsap)[\\/]/,
-              priority: 30,
-            },
             // React vendor chunk
             react: {
               name: 'react',

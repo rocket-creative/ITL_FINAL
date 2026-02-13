@@ -47,9 +47,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <head>
         {/* Hero image preload moved to pages that use it to avoid unused preload warnings */}
+        {/* HubSpot Forms Script - loaded dynamically by HubSpotForm component to avoid hydration errors */}
       </head>
       <body className="antialiased">
         {/* All Tracking Pixels: GA4, Facebook, LinkedIn, Twitter, AdRoll */}

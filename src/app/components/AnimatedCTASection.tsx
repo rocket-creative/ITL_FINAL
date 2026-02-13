@@ -1,57 +1,31 @@
 /**
  * Animated Final CTA Section - Matches Webflow Design
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function AnimatedCTASection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (contentRef.current) {
-        const elements = contentRef.current.querySelectorAll('.animate-cta');
-        gsap.fromTo(
-          elements,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const titleRef = useScrollAnimation<HTMLHeadingElement>(0.1);
+  const textRef = useScrollAnimation<HTMLParagraphElement>(0.1);
+  const buttonsRef = useScrollAnimation<HTMLDivElement>(0.1);
 
   return (
     <section 
-      ref={sectionRef} 
       className="flex flex-col justify-start items-center"
       style={{ 
         backgroundColor: '#008080',
         padding: '50px 20px'
       }}
     >
-      <div ref={contentRef} className="text-center">
+      <div className="text-center">
         <h2 
-          className="animate-cta" 
+          ref={titleRef}
+          className="animate-initial animate-fade-in-up" 
           style={{ 
-            opacity: 0,
             color: 'white',
             letterSpacing: '-.5px',
             fontFamily: 'Poppins, sans-serif',
@@ -64,9 +38,9 @@ export default function AnimatedCTASection() {
           Start Your Project
         </h2>
         <p 
-          className="animate-cta" 
+          ref={textRef}
+          className="animate-initial animate-fade-in-up animate-delay-150" 
           style={{ 
-            opacity: 0,
             color: 'white',
             fontFamily: 'var(--system-ui)',
             fontSize: '.9rem',
@@ -79,7 +53,7 @@ export default function AnimatedCTASection() {
           Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your project. Initial consultation is provided at no charge and includes allele design recommendations, timeline estimates, and project pricing.
         </p>
         {/* Button wrapper - horizontal flex with gap */}
-        <div className="animate-cta flex flex-row gap-5 justify-center" style={{ opacity: 0 }}>
+        <div ref={buttonsRef} className="animate-initial animate-fade-in-up animate-delay-300 flex flex-row gap-5 justify-center">
           {/* Outlined white button */}
           <Link
             href="/request-quote"

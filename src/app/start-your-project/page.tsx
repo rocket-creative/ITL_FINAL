@@ -8,8 +8,6 @@
 import { useEffect, useRef, useState } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -20,7 +18,6 @@ import {
   IconFlask,
 } from '@/components/UXUIDC';
 
-gsap.registerPlugin(ScrollTrigger);
 
 // What's Inside the Guide
 const guideContents = [
@@ -90,36 +87,7 @@ export default function StartYourProjectPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
-  useEffect(() => {
-    if (heroRef.current) {
-      gsap.fromTo(
-        heroRef.current.querySelectorAll('.hero-animate'),
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-      );
-    }
-
-    const animateElements = document.querySelectorAll('.animate-in');
-    animateElements.forEach((el) => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: 'power2.out',
-          scrollTrigger: { trigger: el, start: 'top 85%' },
-        }
-      );
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
-
-  const handlePricingGuideAccess = (e: React.FormEvent) => {
+    const handlePricingGuideAccess = (e: React.FormEvent) => {
     e.preventDefault();
     if (email.includes('@')) {
       setFormSubmitted(true);

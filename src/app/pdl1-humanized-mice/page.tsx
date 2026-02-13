@@ -285,41 +285,7 @@ export default function PDL1HumanizedMicePage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const initGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
 
-      // Hero animations
-      const heroElements = document.querySelectorAll('.hero-animate');
-      heroElements.forEach((el, index) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, delay: index * 0.15, ease: "power2.out" }
-        );
-      });
-
-      // Scroll-triggered animations
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 85%",
-              toggleActions: "play none none none"
-            }
-          }
-        );
-      });
-    };
-
-    initGSAP();
   }, []);
 
   return (

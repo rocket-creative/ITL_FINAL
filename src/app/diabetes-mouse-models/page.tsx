@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
@@ -150,45 +150,7 @@ const faqData = [
 ];
 
 export default function DiabetesMouseModelsPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
 
@@ -558,8 +520,7 @@ export default function DiabetesMouseModelsPage() {
                 border: '1px solid #e0e0e0',
                 borderRadius: '8px',
                 padding: '40px',
-                textAlign: 'center',
-              }}
+                textAlign: 'center'}}
             >
               <p style={{
                 color: '#666',
@@ -568,8 +529,7 @@ export default function DiabetesMouseModelsPage() {
                 fontWeight: 400,
                 lineHeight: 1.7,
                 fontStyle: 'italic',
-                marginBottom: '25px',
-              }}>
+                marginBottom: '25px'}}>
                 &ldquo;{testimonials[0].quote}&rdquo;
               </p>
               <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, marginBottom: '5px' }}>

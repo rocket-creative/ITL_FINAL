@@ -27,6 +27,7 @@ export { default as UXUIDCAnimatedCounter } from './AnimatedCounter';
 export { default as UXUIDCAnimatedFAQ } from './AnimatedFAQ';
 export { default as UXUIDCStartProjectCTA } from './StartProjectCTA';
 export { default as BreedingSchemeArchitectCTA } from './BreedingSchemeArchitectCTA';
+export { AutoAnimate } from './AutoAnimate';
 
 // Glossary Components
 export { 

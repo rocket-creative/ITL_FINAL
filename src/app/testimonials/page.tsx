@@ -71,33 +71,48 @@ export default function TestimonialsPage() {
         <section 
           className="py-16 px-6 text-center"
           style={{ 
-            background: 'linear-gradient(135deg, #0a253c 0%, #143a5a 100%)',
-            color: 'white' 
+            background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',
+            color: 'white',
+            position: 'relative',
+            overflow: 'hidden',
           }}
         >
-          <h1 
-            className="font-bold mb-4"
-            style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}
-          >
-            What Researchers Say
-          </h1>
-          <p 
-            className="max-w-3xl mx-auto opacity-90"
-            style={{ fontSize: '1.1rem', lineHeight: '1.7' }}
-          >
-            For over 26 years, ingenious targeting laboratory has partnered with researchers 
-            at leading academic institutions, pharmaceutical companies, and biotechnology 
-            organizations worldwide. Here&apos;s what they have to say about working with us.
-          </p>
-          <div 
-            className="mt-8 flex flex-wrap justify-center gap-8"
-            style={{ fontSize: '0.95rem', opacity: 0.85 }}
-          >
-            <span>2,500+ Projects Completed</span>
-            <span>•</span>
-            <span>800+ Publications</span>
-            <span>•</span>
-            <span>Global Research Community</span>
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              opacity: 0.1,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
+          <div style={{ position: 'relative' }}>
+            <h1 
+              className="font-bold mb-4"
+              style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}
+            >
+              What Researchers Say
+            </h1>
+            <p 
+              className="max-w-3xl mx-auto"
+              style={{ fontSize: '1.1rem', lineHeight: '1.7', color: 'rgba(255,255,255,0.9)' }}
+            >
+              For over 26 years, ingenious targeting laboratory has partnered with researchers 
+              at leading academic institutions, pharmaceutical companies, and biotechnology 
+              organizations worldwide. Here&apos;s what they have to say about working with us.
+            </p>
+            <div 
+              className="mt-8 flex flex-wrap justify-center gap-8"
+              style={{ fontSize: '0.95rem', color: '#00d4d4', fontWeight: 500 }}
+            >
+              <span>2,500+ Projects Completed</span>
+              <span style={{ color: 'rgba(255,255,255,0.5)' }}>•</span>
+              <span>800+ Publications</span>
+              <span style={{ color: 'rgba(255,255,255,0.5)' }}>•</span>
+              <span>Global Research Community</span>
+            </div>
           </div>
         </section>
 

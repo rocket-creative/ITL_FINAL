@@ -3,13 +3,13 @@
 /**
  * Custom Animal Models Page - ingenious targeting laboratory
  * Overview of custom animal model services beyond mice
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 import { useEffect, useRef } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -20,8 +20,6 @@ import {
   IconMicroscope,
   IconArrowRight,
 } from '@/components/UXUIDC';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const heroData = {
   badge: 'Custom Animal Model Services',
@@ -66,36 +64,8 @@ const faqData = [
 ];
 
 export default function CustomAnimalModelsPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (heroRef.current) {
-      gsap.fromTo(
-        heroRef.current.querySelectorAll('.hero-animate'),
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-      );
-    }
-
-    const animateElements = document.querySelectorAll('.animate-in');
-    animateElements.forEach((el) => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: 'power2.out',
-          scrollTrigger: { trigger: el, start: 'top 85%' },
-        }
-      );
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
+  const heroRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const serviceRefs = [useScrollAnimation<HTMLDivElement>(0.1), useScrollAnimation<HTMLDivElement>(0.1), useScrollAnimation<HTMLDivElement>(0.1)];
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -217,7 +187,8 @@ export default function CustomAnimalModelsPage() {
               {services.map((service, i) => (
                 <div
                   key={i}
-                  className="animate-in flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
+                  ref={serviceRefs[i]}
+                  className="animate-initial animate-fade-in-up animate-delay-200 flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
                   style={{
                     backgroundColor: '#f7f7f7',
                     padding: '30px',

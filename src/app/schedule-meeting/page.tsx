@@ -209,9 +209,9 @@ export default function ScheduleMeetingPage() {
       {/* Additional Info Section */}
       <section style={{ padding: '50px 20px', backgroundColor: '#f8fafc' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Sidebar Content - moved below form */}
-            <div className="lg:col-span-1 space-y-5">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '800px', margin: '0 auto' }}>
+            {/* All Content in Single Column */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               {/* What to Expect Card */}
               <div
                 style={{
@@ -340,22 +340,23 @@ export default function ScheduleMeetingPage() {
                 >
                   Quick Links
                 </h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Link
                     href="/request-quote"
                     style={{
                       display: 'flex',
                       alignItems: 'center',
                       gap: '10px',
-                      padding: '12px 14px',
+                      padding: '16px',
                       backgroundColor: '#f8fafc',
                       borderRadius: '8px',
                       textDecoration: 'none',
                       transition: 'all 0.2s',
+                      border: '1px solid #e5e7eb',
                     }}
-                    className="hover:bg-gray-100"
+                    className="hover:bg-gray-100 hover:shadow-sm"
                   >
-                    <IconFileText size={18} color="#008080" />
+                    <IconFileText size={20} color="#008080" />
                     <div>
                       <p style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'Poppins, sans-serif', fontWeight: 500, margin: 0 }}>
                         Request a Quote
@@ -371,15 +372,16 @@ export default function ScheduleMeetingPage() {
                       display: 'flex',
                       alignItems: 'center',
                       gap: '10px',
-                      padding: '12px 14px',
+                      padding: '16px',
                       backgroundColor: '#f8fafc',
                       borderRadius: '8px',
                       textDecoration: 'none',
                       transition: 'all 0.2s',
+                      border: '1px solid #e5e7eb',
                     }}
-                    className="hover:bg-gray-100"
+                    className="hover:bg-gray-100 hover:shadow-sm"
                   >
-                    <IconMessageCircle size={18} color="#008080" />
+                    <IconMessageCircle size={20} color="#008080" />
                     <div>
                       <p style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'Poppins, sans-serif', fontWeight: 500, margin: 0 }}>
                         Contact Form
@@ -397,79 +399,28 @@ export default function ScheduleMeetingPage() {
                 style={{
                   backgroundColor: '#0a253c',
                   borderRadius: '12px',
-                  padding: '20px',
+                  padding: '24px',
                   textAlign: 'center',
                 }}
               >
-                <p style={{ color: 'white', fontSize: '1.5rem', fontFamily: 'Poppins, sans-serif', fontWeight: 700, margin: '0 0 4px 0' }}>
-                  26+
-                </p>
-                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.8rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                  Years of Experience
-                </p>
-                <div style={{ width: '40px', height: '2px', backgroundColor: '#008080', margin: '12px auto' }} />
-                <p style={{ color: 'white', fontSize: '1.5rem', fontFamily: 'Poppins, sans-serif', fontWeight: 700, margin: '0 0 4px 0' }}>
-                  2,500+
-                </p>
-                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.8rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                  Projects Completed
-                </p>
-              </div>
-            </div>
-
-            {/* Additional Quick Links */}
-            <div className="lg:col-span-2">
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
-                <Link
-                  href="/request-quote"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    padding: '20px',
-                    backgroundColor: 'white',
-                    borderRadius: '8px',
-                    textDecoration: 'none',
-                    border: '1px solid #e5e7eb',
-                    transition: 'all 0.2s',
-                  }}
-                  className="hover:shadow-md hover:-translate-y-1"
-                >
-                  <IconFileText size={24} color="#008080" />
+                <div className="grid grid-cols-2 gap-8">
                   <div>
-                    <p style={{ color: '#0a253c', fontSize: '.9rem', fontFamily: 'Poppins, sans-serif', fontWeight: 600, margin: 0 }}>
-                      Request a Quote
+                    <p style={{ color: 'white', fontSize: '2rem', fontFamily: 'Poppins, sans-serif', fontWeight: 700, margin: '0 0 8px 0' }}>
+                      26+
                     </p>
-                    <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                      Get project pricing
+                    <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
+                      Years of Experience
                     </p>
                   </div>
-                </Link>
-                <Link
-                  href="/general-contact"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    padding: '20px',
-                    backgroundColor: 'white',
-                    borderRadius: '8px',
-                    textDecoration: 'none',
-                    border: '1px solid #e5e7eb',
-                    transition: 'all 0.2s',
-                  }}
-                  className="hover:shadow-md hover:-translate-y-1"
-                >
-                  <IconMessageCircle size={24} color="#008080" />
                   <div>
-                    <p style={{ color: '#0a253c', fontSize: '.9rem', fontFamily: 'Poppins, sans-serif', fontWeight: 600, margin: 0 }}>
-                      Contact Form
+                    <p style={{ color: 'white', fontSize: '2rem', fontFamily: 'Poppins, sans-serif', fontWeight: 700, margin: '0 0 8px 0' }}>
+                      2,500+
                     </p>
-                    <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                      Send us a message
+                    <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
+                      Projects Completed
                     </p>
                   </div>
-                </Link>
+                </div>
               </div>
             </div>
           </div>

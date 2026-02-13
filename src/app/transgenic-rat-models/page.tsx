@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -42,45 +42,7 @@ const faqData = [
 const relatedLinks: Array<{ title: string; href: string }> = [];
 
 export default function TransgenicRatModelsPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-      
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-      
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-    
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       
@@ -233,8 +195,7 @@ export default function TransgenicRatModelsPage() {
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: '2rem',
                 fontWeight: 700,
-                marginBottom: '40px',
-              }}
+                marginBottom: '40px'}}
             >
               Trusted by Leading Researchers
             </h2>
@@ -244,8 +205,7 @@ export default function TransgenicRatModelsPage() {
                 backgroundColor: '#f8f9fa',
                 padding: '40px',
                 borderLeft: '4px solid #008080',
-                borderRadius: '4px',
-              }}
+                borderRadius: '4px'}}
             >
               <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '25px' }}>
                 &ldquo;The rat knock-in model from ingenious was reliable, precise, and accelerated our immunology research significantly.&rdquo;

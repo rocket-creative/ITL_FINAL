@@ -2,16 +2,14 @@
 
 /**
  * |UXUIDC| Animated FAQ Accordion Component
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  * Consistent animated dropdown FAQ across the site
  */
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { IconChevronDown, IconChevronRight } from './Icons';
-
-gsap.registerPlugin(ScrollTrigger);
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface FAQ {
   question: string;
@@ -31,83 +29,25 @@ export function UXUIDCAnimatedFAQ({
   backgroundColor = 'white',
   showViewAllLink = true
 }: AnimatedFAQProps) {
-  const sectionRef = useRef<HTMLElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const answerRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const items = sectionRef.current?.querySelectorAll('.faq-item');
-      if (items) {
-        gsap.fromTo(
-          items,
-          { y: 30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.1,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  
+  // Create refs for animated elements
+  const titleRef = useScrollAnimation<HTMLDivElement>(0.1);
+  const faqRefs = faqs.map(() => useScrollAnimation<HTMLDivElement>(0.1));
 
   const toggleFAQ = (index: number) => {
-    const answerEl = answerRefs.current[index];
-    
-    if (openIndex === index) {
-      // Close current
-      if (answerEl) {
-        gsap.to(answerEl, {
-          height: 0,
-          opacity: 0,
-          duration: 0.3,
-          ease: 'power2.inOut',
-        });
-      }
-      setOpenIndex(null);
-    } else {
-      // Close previous if open
-      if (openIndex !== null && answerRefs.current[openIndex]) {
-        gsap.to(answerRefs.current[openIndex], {
-          height: 0,
-          opacity: 0,
-          duration: 0.3,
-          ease: 'power2.inOut',
-        });
-      }
-      
-      // Open new
-      if (answerEl) {
-        gsap.set(answerEl, { height: 'auto', opacity: 1 });
-        const height = answerEl.offsetHeight;
-        gsap.fromTo(
-          answerEl,
-          { height: 0, opacity: 0 },
-          { height, opacity: 1, duration: 0.3, ease: 'power2.inOut' }
-        );
-      }
-      setOpenIndex(index);
-    }
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col justify-start items-center"
       style={{ backgroundColor, padding: title ? '60px 20px' : '0' }}
     >
       {title && (
         <h2
+          ref={titleRef}
+          className="animate-initial animate-fade-in-up"
           style={{
             color: '#2384da',
             textAlign: 'center',
@@ -127,7 +67,8 @@ export function UXUIDCAnimatedFAQ({
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="faq-item hover-card-sm"
+            ref={faqRefs[index]}
+            className={`hover-card-sm animate-initial animate-fade-in-up animate-delay-${Math.min(index * 100 + 100, 800)}`}
             style={{
               backgroundColor: backgroundColor === 'white' ? '#f7f7f7' : 'white',
               marginBottom: '10px',
@@ -167,13 +108,13 @@ export function UXUIDCAnimatedFAQ({
               </span>
             </button>
 
-            {/* Answer Content */}
+            {/* Answer Content - CSS transition instead of GSAP */}
             <div
-              ref={el => { answerRefs.current[index] = el; }}
               style={{
-                height: 0,
-                opacity: 0,
+                maxHeight: openIndex === index ? '1000px' : '0',
+                opacity: openIndex === index ? 1 : 0,
                 overflow: 'hidden',
+                transition: 'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out',
               }}
             >
               <p

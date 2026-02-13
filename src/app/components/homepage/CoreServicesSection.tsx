@@ -1,13 +1,13 @@
 /**
  * Core Research Services Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 14-27
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface ServiceItem {
   title: string;
@@ -16,37 +16,16 @@ interface ServiceItem {
 }
 
 export default function CoreServicesSection({ data }: { data: ServiceItem[] }) {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const cards = sectionRef.current?.querySelectorAll('.service-card');
-      if (cards) {
-        gsap.fromTo(
-          cards,
-          { y: 40, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  // Create refs for each service card
+  const serviceRefs = [
+    useScrollAnimation<HTMLDivElement>(0.1),
+    useScrollAnimation<HTMLDivElement>(0.1),
+    useScrollAnimation<HTMLDivElement>(0.1),
+    useScrollAnimation<HTMLDivElement>(0.1)
+  ];
 
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col items-center"
       style={{ backgroundColor: 'white', padding: '50px 20px' }}
     >
@@ -74,9 +53,9 @@ export default function CoreServicesSection({ data }: { data: ServiceItem[] }) {
         {data.map((service, index) => (
           <article
             key={index}
-            className="service-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
+            ref={serviceRefs[index]}
+            className={`animate-initial animate-fade-in-up animate-delay-${Math.min(100 + index * 100, 800)} group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col`}
             style={{
-              opacity: 0,
               backgroundColor: '#f7f7f7',
               border: '.5px solid #e0e0e0',
               padding: '20px',

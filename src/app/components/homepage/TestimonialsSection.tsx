@@ -1,13 +1,13 @@
 /**
  * What Researchers Say (Testimonials) Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 65-75
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface Testimonial {
   quote: string;
@@ -22,37 +22,11 @@ interface TestimonialsData {
 }
 
 export default function TestimonialsSection({ data }: { data: TestimonialsData }) {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const cards = sectionRef.current?.querySelectorAll('.testimonial-card');
-      if (cards) {
-        gsap.fromTo(
-          cards,
-          { y: 40, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.2,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 80%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  // Create refs for testimonials
+  const testimonialRefs = data.testimonials.map(() => useScrollAnimation<HTMLDivElement>(0.1));
 
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col justify-start items-center"
       style={{ backgroundColor: '#f7f7f7', padding: '50px 20px' }}
     >
@@ -80,9 +54,9 @@ export default function TestimonialsSection({ data }: { data: TestimonialsData }
         {data.testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="testimonial-card group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
+            ref={testimonialRefs[index]}
+            className={`animate-initial animate-fade-in-up animate-delay-${Math.min(100 + index * 150, 800)} group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col`}
             style={{
-              opacity: 0,
               backgroundColor: 'white',
               padding: '30px',
               border: '.5px solid #e0e0e0',

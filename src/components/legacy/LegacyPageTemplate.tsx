@@ -9,15 +9,12 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
   UXUIDCStartProjectCTA,
 } from '@/components/UXUIDC';
 
-gsap.registerPlugin(ScrollTrigger);
 
 interface LegacyPageTemplateProps {
   /** Page title */
@@ -50,38 +47,6 @@ export default function LegacyPageTemplate({
   const heroRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // Hero animation
-    if (heroRef.current) {
-      gsap.fromTo(
-        heroRef.current.querySelectorAll('.hero-animate'),
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-      );
-    }
-
-    // Content animation
-    if (contentRef.current) {
-      const elements = contentRef.current.querySelectorAll('h2, h3, p, ul, ol, table, blockquote');
-      elements.forEach((el) => {
-        gsap.fromTo(
-          el,
-          { opacity: 0, y: 20 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.5,
-            ease: 'power2.out',
-            scrollTrigger: { trigger: el, start: 'top 90%' },
-          }
-        );
-      });
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

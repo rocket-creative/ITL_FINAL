@@ -1,44 +1,18 @@
 /**
  * Animated Dark Section (Modern Model-Generation Landscape)
  * Matches Webflow design - why-contain dark blue bg
+ * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { gsap } from '@/lib/UXUIDC/gsap';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function AnimatedDarkSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (contentRef.current) {
-        gsap.fromTo(
-          contentRef.current,
-          { y: 40, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 75%',
-              toggleActions: 'play none none reverse',
-            },
-          }
-        );
-      }
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const contentRef = useScrollAnimation<HTMLDivElement>(0.1);
 
   return (
     <section 
-      ref={sectionRef} 
       className="flex flex-col justify-start items-center"
       style={{ 
         backgroundColor: '#0a253c',
@@ -47,8 +21,7 @@ export default function AnimatedDarkSection() {
     >
       <div 
         ref={contentRef}
-        className="text-center"
-        style={{ opacity: 0 }}
+        className="animate-initial animate-fade-in-up text-center"
       >
         {/* h2-white */}
         <h2 style={{

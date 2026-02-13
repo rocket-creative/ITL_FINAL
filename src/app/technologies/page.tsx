@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -83,8 +83,7 @@ import { TECHNOLOGY_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/ver
 const testimonials = TECHNOLOGY_TESTIMONIALS.map(t => ({
   quote: t.quote,
   author: formatAuthorWithCredentials(t),
-  affiliation: t.affiliation,
-}));
+  affiliation: t.affiliation}));
 
 // FAQ Data
 const faqData = [
@@ -103,45 +102,7 @@ const faqData = [
 ];
 
 export default function TechnologiesPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-
-    loadGSAP();
-  }, []);
-
-  return (
+  const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
 
@@ -376,8 +337,7 @@ export default function TechnologiesPage() {
             <div style={{
               display: testimonials.length === 1 ? 'block' : 'grid',
               gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined,
-              gap: '24px',
-            }}>
+              gap: '24px'}}>
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
@@ -388,8 +348,7 @@ export default function TechnologiesPage() {
                     borderRadius: '8px',
                     width: '100%',
                     boxSizing: 'border-box',
-                    textAlign: testimonials.length === 1 ? 'center' : 'left',
-                  }}
+                    textAlign: testimonials.length === 1 ? 'center' : 'left'}}
                 >
                   <div style={{
                     width: '40px',
@@ -400,8 +359,7 @@ export default function TechnologiesPage() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     marginBottom: '15px',
-                    ...(testimonials.length === 1 && { margin: '0 auto 15px' }),
-                  }}>
+                    ...(testimonials.length === 1 && { margin: '0 auto 15px' })}}>
                     <IconQuote size={20} color="#008080" />
                   </div>
                   <blockquote style={{
@@ -409,8 +367,7 @@ export default function TechnologiesPage() {
                     fontSize: testimonials.length === 1 ? '1.05rem' : '.9rem',
                     lineHeight: '1.6rem',
                     fontStyle: 'italic',
-                    marginBottom: '15px',
-                  }}>
+                    marginBottom: '15px'}}>
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   <div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
@@ -244,45 +244,7 @@ const getFaqData = () => [
 ];
 
 export default function CreLoxSystemPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const loadGSAP = async () => {
-      const { gsap } = await import('gsap');
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
-      
-      if (heroRef.current) {
-        const heroElements = heroRef.current.querySelectorAll('.hero-animate');
-        gsap.fromTo(heroElements,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-        );
-      }
-      
-      const animatedElements = document.querySelectorAll('.animate-in');
-      animatedElements.forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: 'power2.out',
-            scrollTrigger: {
-              trigger: el,
-              start: 'top 85%',
-              toggleActions: 'play none none none'
-            }
-          }
-        );
-      });
-    };
-    
-    loadGSAP();
-  }, []);
-
-  const renderCreDriverTable = (title: string, drivers: { driver: string; target: string; applications: string }[]) => (
+  const heroRef = useRef<HTMLDivElement>(null);  const renderCreDriverTable = (title: string, drivers: { driver: string; target: string; applications: string }[]) => (
     <div className="animate-in" style={{ marginBottom: '30px' }}>
       <h4 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>
         {title}
@@ -885,8 +847,7 @@ export default function CreLoxSystemPage() {
                     padding: '35px 40px',
                     display: 'flex',
                     flexDirection: 'column',
-                    transition: 'all 0.3s ease',
-                  }}
+                    transition: 'all 0.3s ease'}}
                 >
                   <IconQuote size={32} color="#008080" style={{ marginBottom: '20px', opacity: 0.8 }} />
                   <p style={{
@@ -896,8 +857,7 @@ export default function CreLoxSystemPage() {
                     fontWeight: 400,
                     lineHeight: 1.7,
                     fontStyle: 'italic',
-                    marginBottom: '25px',
-                  }}>
+                    marginBottom: '25px'}}>
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <div style={{ marginTop: 'auto' }}>

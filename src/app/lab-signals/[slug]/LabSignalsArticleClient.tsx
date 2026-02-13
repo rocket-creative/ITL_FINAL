@@ -1,13 +1,8 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { NewsletterGate, SocialShare } from '@/components/UXUIDC';
 import type { NewsletterArticle } from '@/data/newsletterArticles';
 import fixArticleLinks from '@/utils/fixArticleLinks';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Lab Signals colors
 const BRAND = {
@@ -29,22 +24,6 @@ export default function LabSignalsArticleClient({
   article,
   articleUrl,
 }: LabSignalsArticleClientProps) {
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (contentRef.current) {
-      gsap.fromTo(
-        contentRef.current,
-        { opacity: 0, y: 25 },
-        { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }
-      );
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
-  }, []);
-
   const createPreview = () => {
     const textContent = article.body
       .replace(/<[^>]+>/g, ' ')
@@ -55,7 +34,7 @@ export default function LabSignalsArticleClient({
   };
 
   return (
-    <section ref={contentRef} style={{ backgroundColor: BRAND.white, padding: '50px 20px 60px' }}>
+    <section className="animate-initial animate-fade-in-up" style={{ backgroundColor: BRAND.white, padding: '50px 20px 60px' }}>
       {/* Social Share */}
       <div style={{
         display: 'flex',
