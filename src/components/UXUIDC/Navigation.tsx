@@ -484,7 +484,7 @@ export function UXUIDCNavigation() {
 
         {/* Announcement bar - full width edge to edge */}
         <div className="w-full flex justify-center items-start sm:items-center py-2 px-4" style={{ backgroundColor: '#008080' }}>
-          <Link href="/contact" className="text-center hover:underline">
+          <Link href="/contact" className="text-center">
             {/* Mobile: Stacked version */}
             <span className="block sm:hidden text-xs leading-relaxed" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
               Is uncertain NIH funding holding you back?
