@@ -4,8 +4,8 @@
   "installCommand": "npm install",
   "git": {
     "deploymentEnabled": {
-      "ITL_2026_MAIN": true,
-      "ITL_2026_DEV": true
+      "ITL_MAIN": true,
+      "ITL_DEV": true
     }
   }
 }
