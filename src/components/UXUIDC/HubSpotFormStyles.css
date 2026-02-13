@@ -1,0 +1,138 @@
+/**
+ * |UXUIDC| HubSpot Form Custom Styles
+ * @version 1.0.0
+ * Styles for HubSpot forms including thank you messages
+ */
+
+/* Thank You Message Styling */
+.submitted-message {
+  padding: 2rem;
+  text-align: center;
+  font-family: var(--font-system), system-ui, -apple-system, sans-serif;
+  color: #1a1a1a;
+}
+
+.submitted-message p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  color: #2c2c2c;
+}
+
+.submitted-message h2,
+.submitted-message h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #008080;
+}
+
+/* Success Checkmark Icon (if HubSpot includes one) */
+.submitted-message::before {
+  content: '✓';
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background: #008080;
+  color: white;
+  font-size: 2rem;
+  line-height: 60px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Form Field Styling */
+.hs-form-field {
+  margin-bottom: 1.25rem;
+}
+
+.hs-form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2c2c2c;
+  font-size: 0.95rem;
+}
+
+.hs-form-field input[type="text"],
+.hs-form-field input[type="email"],
+.hs-form-field input[type="tel"],
+.hs-form-field textarea,
+.hs-form-field select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.hs-form-field input:focus,
+.hs-form-field textarea:focus,
+.hs-form-field select:focus {
+  outline: none;
+  border-color: #008080;
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1);
+}
+
+/* Submit Button Styling */
+.hs-submit .hs-button {
+  background: #008080;
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hs-submit .hs-button:hover {
+  background: #006666;
+  transform: translateY(-1px);
+}
+
+.hs-submit .hs-button:active {
+  transform: translateY(0);
+}
+
+/* Error Messaging */
+.hs-error-msgs {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.hs-error-msg {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.hs-form-field.error input,
+.hs-form-field.error textarea,
+.hs-form-field.error select {
+  border-color: #dc2626;
+}
+
+/* Required Field Indicator */
+.hs-form-required {
+  color: #dc2626;
+  margin-left: 0.25rem;
+}
+
+/* reCAPTCHA Container */
+.hs-recaptcha {
+  margin: 1.5rem 0;
+}
+
+/* Loading State */
+.hs-form.submitted .hs-button {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

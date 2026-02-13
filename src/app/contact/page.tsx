@@ -5,10 +5,7 @@
  * General contact form for inquiries and questions
  */
 
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -26,8 +23,6 @@ import {
   BreadcrumbSchema,
 } from '@/components/UXUIDC';
 
-gsap.registerPlugin(ScrollTrigger);
-
 // Contact information
 const contactInfo = {
   email: 'inquiry@genetargeting.com',
@@ -37,33 +32,7 @@ const contactInfo = {
 };
 
 export default function ContactPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (heroRef.current) {
-      gsap.fromTo(
-        heroRef.current.querySelectorAll('.hero-animate'),
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }
-      );
-    }
-
-    if (contentRef.current) {
-      gsap.fromTo(
-        contentRef.current.querySelectorAll('.animate-in'),
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
-          scrollTrigger: { trigger: contentRef.current, start: 'top 80%' }
-        }
-      );
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach(t => t.kill());
-    };
-  }, []);
+  // GSAP removed - using CSS animations instead
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -72,7 +41,6 @@ export default function ContactPage() {
       <main id="main-content" style={{ backgroundColor: '#f8fafc', minHeight: '100vh' }}>
         {/* ========== HERO SECTION WITH FORM ========== */}
         <section 
-          ref={heroRef}
           style={{ 
             background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
             padding: '80px 20px 80px',
@@ -82,7 +50,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
               {/* Left Column: Content (40%) */}
               <div className="lg:col-span-2">
-                <h1 className="hero-animate" style={{
+                <h1 className="animate-initial animate-fade-in-up" style={{
                   color: 'white',
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: 'clamp(2rem, 5vw, 2.5rem)',
@@ -92,7 +60,7 @@ export default function ContactPage() {
                 }}>
                   Contact Us
                 </h1>
-                <p className="hero-animate" style={{
+                <p className="animate-initial animate-fade-in-up animate-delay-150" style={{
                   color: 'rgba(255,255,255,0.9)',
                   fontFamily: 'var(--system-ui)',
                   fontSize: '1rem',
@@ -104,7 +72,7 @@ export default function ContactPage() {
                 </p>
                 
                 {/* Direct Contact Callout */}
-                <div className="hero-animate" style={{ 
+                <div className="animate-initial animate-fade-in-up animate-delay-300" style={{ 
                   backgroundColor: 'rgba(0, 212, 212, 0.15)',
                   border: '1px solid rgba(0, 212, 212, 0.4)',
                   borderRadius: '10px',
@@ -148,22 +116,23 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.9rem', lineHeight: '1.6', fontStyle: 'italic', marginTop: '20px' }}>
+                <p className="animate-initial animate-fade-in-up animate-delay-400" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.9rem', lineHeight: '1.6', fontStyle: 'italic', marginTop: '20px' }}>
                   At ingenious, we value every inquiry and are committed to providing you with the highest level of support. Whether you have questions about our services, need assistance with a specific project, or simply want to learn more about our capabilities, our expert team is here to help.
                 </p>
               </div>
               
               {/* Right Column: HubSpot Form (60%) */}
-              <div className="hero-animate lg:col-span-3">
+              <div className="animate-initial animate-fade-in-up animate-delay-200 lg:col-span-3">
                 <div style={{
                   backgroundColor: 'white',
                   borderRadius: '12px',
                   padding: '32px',
                   boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
                 }}>
+                  {/* HubSpot Form - Simple client component that works on page transitions */}
                   <HubSpotForm
-                    portalId="3977953"
                     formId="efefc866-97ec-4500-a380-4cf28e733f54"
+                    portalId="3977953"
                     region="na1"
                   />
                 </div>
@@ -172,7 +141,7 @@ export default function ContactPage() {
 
             {/* Hero Header for Other Contact Methods */}
             <div style={{ textAlign: 'center', marginTop: '60px', marginBottom: '40px' }}>
-              <h2 className="hero-animate" style={{
+              <h2 className="animate-initial animate-fade-in-up animate-delay-500" style={{
                 color: 'white',
                 fontFamily: 'Poppins, sans-serif',
                 fontSize: 'clamp(1.75rem, 4vw, 2.25rem)',
@@ -182,7 +151,7 @@ export default function ContactPage() {
               }}>
                 Other Ways to Connect
               </h2>
-              <p className="hero-animate" style={{
+              <p className="animate-initial animate-fade-in-up animate-delay-600" style={{
                 color: 'rgba(255,255,255,0.9)',
                 fontFamily: 'var(--system-ui)',
                 fontSize: '1rem',
@@ -200,7 +169,7 @@ export default function ContactPage() {
               {/* Card 1: Request a Quote */}
               <Link
                 href="/request-quote"
-                className="hero-animate group"
+                className="animate-initial animate-fade-in-up animate-delay-700 group"
                 style={{
                   backgroundColor: 'white',
                   borderRadius: '12px',
@@ -260,7 +229,7 @@ export default function ContactPage() {
               {/* Card 2: Schedule Meeting */}
               <Link
                 href="/schedule-meeting"
-                className="hero-animate group"
+                className="animate-initial animate-fade-in-up animate-delay-700 group"
                 style={{
                   backgroundColor: '#0a253c',
                   borderRadius: '12px',
@@ -321,7 +290,7 @@ export default function ContactPage() {
               {/* Card 3: Join Our Team */}
               <Link
                 href="/current-openings"
-                className="hero-animate group"
+                className="animate-initial animate-fade-in-up animate-delay-700 group"
                 style={{
                   backgroundColor: 'white',
                   borderRadius: '12px',
@@ -381,7 +350,7 @@ export default function ContactPage() {
               {/* Card 4: Partnership Inquiries */}
               <a
                 href={`mailto:${contactInfo.email}?subject=Partnership Inquiry`}
-                className="hero-animate group"
+                className="animate-initial animate-fade-in-up animate-delay-700 group"
                 style={{
                   backgroundColor: 'white',
                   borderRadius: '12px',
@@ -442,13 +411,13 @@ export default function ContactPage() {
         </section>
 
         {/* ========== ADDITIONAL INFO SECTION ========== */}
-        <section ref={contentRef} style={{ padding: '50px 20px', backgroundColor: '#f8fafc' }}>
+        <section style={{ padding: '50px 20px', backgroundColor: '#f8fafc' }}>
           <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Sidebar Content */}
               <div className="lg:col-span-1 space-y-5">
                 {/* Contact Info Card */}
-                <div className="animate-in" style={{
+                <div className="animate-initial animate-fade-in-up" style={{
                   backgroundColor: 'white',
                   borderRadius: '12px',
                   padding: '24px',
@@ -504,7 +473,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Quick Links Card */}
-                <div className="animate-in" style={{
+                <div className="animate-initial animate-fade-in-up" style={{
                   backgroundColor: 'white',
                   borderRadius: '12px',
                   padding: '24px',
@@ -572,7 +541,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Response Time Card */}
-                <div className="animate-in" style={{
+                <div className="animate-initial animate-fade-in-up" style={{
                   backgroundColor: '#0a253c',
                   borderRadius: '12px',
                   padding: '20px',
@@ -593,7 +562,7 @@ export default function ContactPage() {
 
               {/* Additional Quick Links - 2 Column Grid */}
               <div className="lg:col-span-2">
-                <div className="animate-in" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+                <div className="animate-initial animate-fade-in-up" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
                   <Link
                     href="/request-quote"
                     style={{
