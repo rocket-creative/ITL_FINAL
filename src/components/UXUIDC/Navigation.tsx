@@ -317,10 +317,10 @@ export function UXUIDCNavigation() {
 
       <nav ref={navRef} className="w-full z-50 sticky top-0 bg-white" aria-label="Main navigation">
         {/* All rows inside main wrapper so dropdown never overflows */}
-        <div className="container">
+        <div className="container px-4 sm:px-6 lg:px-8">
         {/* Row 1: Logo, Search, Input, CTAs */}
         <div>
-            <div className="flex items-center justify-end h-14 gap-0 py-3">
+            <div className="flex items-center justify-end h-auto sm:h-14 gap-0 py-4 sm:py-3">
               {/* Logo - auto, pushed left */}
               <Link href="/" className="mr-auto" aria-label="Home">
                 <Image
@@ -500,7 +500,7 @@ export function UXUIDCNavigation() {
 
         {/* Mobile Menu - with all sub-links */}
         {isOpen ? (
-          <div className="container">
+          <div className="container px-4 sm:px-6 lg:px-8">
             <div id="mobile-menu" className="lg:hidden bg-white border-t max-h-[calc(100vh-120px)] overflow-y-auto" role="dialog" aria-label="Mobile navigation menu">
               <div className="py-4">
                 {/* Mobile Search */}
