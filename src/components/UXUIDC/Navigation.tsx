@@ -483,10 +483,19 @@ export function UXUIDCNavigation() {
         </div>
 
         {/* Announcement bar - full width edge to edge */}
-        <div className="w-full flex justify-center items-center h-7" style={{ backgroundColor: '#008080' }}>
-          <span className="text-center text-xs px-4 leading-7" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
-            Is uncertain NIH funding holding you back from starting a much needed mouse model project? We have ways for you to start your project now and pay later.
-          </span>
+        <div className="w-full flex justify-center items-start sm:items-center py-2 px-4" style={{ backgroundColor: '#008080' }}>
+          <Link href="/contact" className="text-center hover:underline">
+            {/* Mobile: Stacked version */}
+            <span className="block sm:hidden text-xs leading-relaxed" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
+              Is uncertain NIH funding holding you back?
+              <br />
+              <span className="font-semibold">Start now, pay later.</span>
+            </span>
+            {/* Tablet+ : Full version */}
+            <span className="hidden sm:block text-xs leading-relaxed" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
+              Is uncertain NIH funding holding you back from starting a much needed mouse model project? <span className="font-semibold">We have ways for you to start your project now and pay later.</span>
+            </span>
+          </Link>
         </div>
 
         {/* Mobile Menu - with all sub-links */}
