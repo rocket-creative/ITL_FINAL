@@ -1,13 +1,13 @@
 /**
  * |UXUIDC| HubSpot Form - Client Component
- * @version 3.0.0
+ * @version 3.1.0
  * Uses suppression flag to prevent React from managing HubSpot's DOM
  * Completely isolates HubSpot form from React hydration
  */
 
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import './HubSpotFormStyles.css';
 
 interface HubSpotFormSimpleProps {
@@ -37,22 +37,22 @@ export default function HubSpotFormSimple({
   portalId = '3977953',
   region = 'na1',
 }: HubSpotFormSimpleProps) {
-  const [isClient, setIsClient] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isLoadingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Only run on client side
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient || !containerRef.current) return;
+    if (!containerRef.current) return;
 
     let mounted = true;
     const containerId = `hs-form-${formId}`;
 
     const createForm = () => {
       if (!mounted) return;
+
+      // Hide loading message
+      if (isLoadingRef.current) {
+        isLoadingRef.current.style.display = 'none';
+      }
 
       try {
         if (window.hbspt?.forms) {
@@ -101,35 +101,28 @@ export default function HubSpotFormSimple({
       mounted = false;
       clearTimeout(timer);
     };
-  }, [isClient, formId, portalId, region]);
+  }, [formId, portalId, region]);
 
-  // Server-side render: return placeholder
-  if (!isClient) {
-    return (
-      <div style={{ minHeight: '500px', position: 'relative' }}>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '400px',
-            color: '#666',
-            fontSize: '.9rem',
-          }}
-        >
-          Loading form...
-        </div>
-      </div>
-    );
-  }
-
-  // Client-side render: HubSpot will manage this div's children
   return (
     <div
       ref={containerRef}
       id={`hs-form-${formId}`}
       suppressHydrationWarning
       style={{ minHeight: '500px', position: 'relative' }}
-    />
+    >
+      <div
+        ref={isLoadingRef}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '400px',
+          color: '#666',
+          fontSize: '.9rem',
+        }}
+      >
+        Loading form...
+      </div>
+    </div>
   );
 }
