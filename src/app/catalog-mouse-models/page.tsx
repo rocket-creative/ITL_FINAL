@@ -15,7 +15,7 @@ const heroData = {
   badge: "Ready to Ship Models",
   title: "Catalog Mouse Models",
   intro: "In addition to custom gene targeting and editing services, ingenious targeting laboratory maintains catalog models available for rapid shipment. These include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging.",
-  description: "Catalog models provide immediate access to study-ready strains without the timeline required for custom model generation. All catalog models are maintained under rigorous quality standards and shipped with complete documentation."
+  description: "Catalog models provide immediate access to study ready strains without the timeline required for custom model generation. All catalog models are maintained under rigorous quality standards and shipped with complete documentation."
 };
 
 // Stats Data

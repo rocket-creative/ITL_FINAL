@@ -118,7 +118,7 @@ const faqData = [
   },
   {
     question: "What is included in speed expansion breeding service deliverables?",
-    answer: "Speed expansion breeding deliverables include experimental cohorts at specified ages and genotypes, genotyping documentation confirming genotype distribution, health certificates, and breeding records. Cohorts are delivered study-ready for immediate experimental use."
+    answer: "Speed expansion breeding deliverables include experimental cohorts at specified ages and genotypes, genotyping documentation confirming genotype distribution, health certificates, and breeding records. Cohorts are delivered study ready for immediate experimental use."
   }
 ];
 

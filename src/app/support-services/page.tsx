@@ -144,7 +144,7 @@ const faqData = [
   },
   {
     question: "How do colony management services help maintain mouse lines?",
-    answer: "Colony management services provide breeding colony maintenance with documented pedigrees, organized mating schemes, and regular health monitoring. Genotyping services identify carriers, homozygotes, and compound mutants. Cohort development generates study-ready animals on your timeline while you focus on research design."
+    answer: "Colony management services provide breeding colony maintenance with documented pedigrees, organized mating schemes, and regular health monitoring. Genotyping services identify carriers, homozygotes, and compound mutants. Cohort development generates study ready animals on your timeline while you focus on research design."
   },
   {
     question: "What cryopreservation methods are available?",

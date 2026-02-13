@@ -13,7 +13,7 @@ title: "Conventional Knockout Mouse Models"
 
 Conventional knockout mouse models have one or more genes inactivated in all tissues, at all times. Our scientific experts will work together with you to determine the best conventional design for your experimental goals.
 
-Embryonic lethality is a possibility with conventional gene deletions. If your gene is not crucial during development, then a conventional knockout offers a faster way to generate study-ready animals because no additional matings (e.g., mating with Cre mice) are needed.
+Embryonic lethality is a possibility with conventional gene deletions. If your gene is not crucial during development, then a conventional knockout offers a faster way to generate study ready animals because no additional matings (e.g., mating with Cre mice) are needed.
 
 With our streamlined process and advanced technologies, we are able to create your conventional knockout more efficiently than ever before. An ingenious model can become the cornerstone of your research for years to come.
 
@@ -31,7 +31,7 @@ The heterozygous mouse model may not present a phenotype, but in some cases the 
 
 Genes located on the X-chromosome need to be considered carefully because males will only have one copy of the gene and may be severely affected by the knockout.
 
-Conventional knockouts offer a faster way to generate study-ready animals because no additional matings (e.g., mating with Cre mice) are needed. However, due to lethality risk and/or the gene being knocked out in all tissues rather than a specific tissue of interest, many researchers choose a conditional knockout approach instead.
+Conventional knockouts offer a faster way to generate study ready animals because no additional matings (e.g., mating with Cre mice) are needed. However, due to lethality risk and/or the gene being knocked out in all tissues rather than a specific tissue of interest, many researchers choose a conditional knockout approach instead.
 
 ## Conventional Knockout Deletions
 

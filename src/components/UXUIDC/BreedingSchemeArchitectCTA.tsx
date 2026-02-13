@@ -120,7 +120,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
               {[
                 'Visualize multi-generation breeding paths',
                 'Calculate Mendelian ratios automatically',
-                'Estimate timeline to study-ready cohorts',
+                'Estimate timeline to study ready cohorts',
               ].map((feature, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                   <div

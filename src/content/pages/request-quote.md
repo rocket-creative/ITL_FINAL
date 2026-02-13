@@ -137,7 +137,7 @@ If you have urgent timeline requirements, please indicate this in your quote req
 
 **What information do I need to provide for a quote request?**
 
-Provide target gene information (gene symbol, species, target region), model type (knockout, knockin, conditional, humanized, transgenic), strain background preference (C57BL/6, BALB/c, 129, or no preference), project scope (complete project or partial services), timeline considerations (standard or rush), and cohort requirements (founders, breeding pairs, or study-ready cohort).
+Provide target gene information (gene symbol, species, target region), model type (knockout, knockin, conditional, humanized, transgenic), strain background preference (C57BL/6, BALB/c, 129, or no preference), project scope (complete project or partial services), timeline considerations (standard or rush), and cohort requirements (founders, breeding pairs, or study ready cohort).
 
 **How long does it take to receive a quote?**
 

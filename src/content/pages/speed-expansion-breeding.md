@@ -132,7 +132,7 @@ Quality controls include accurate genotyping to maintain genetic integrity, heal
 
 **What is included in speed expansion breeding service deliverables?**
 
-Speed expansion breeding deliverables include experimental cohorts at specified ages and genotypes, genotyping documentation confirming genotype distribution, health certificates, and breeding records. Cohorts are delivered study-ready for immediate experimental use.
+Speed expansion breeding deliverables include experimental cohorts at specified ages and genotypes, genotyping documentation confirming genotype distribution, health certificates, and breeding records. Cohorts are delivered study ready for immediate experimental use.
 
 ## Quality Confirmation
 

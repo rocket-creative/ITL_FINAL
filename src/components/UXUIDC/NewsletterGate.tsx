@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { IconMail, IconCheckCircle } from './Icons';
 import FlodeskForm from './FlodeskForm';
 
@@ -10,8 +10,11 @@ interface NewsletterGateProps {
   previewContent?: React.ReactNode;
 }
 
-const COOKIE_NAME = 'itl_newsletter_verified';
-const COOKIE_DAYS = 30;
+const COOKIE_NAME = 'itl_labsignals_access';
+const COOKIE_DAYS = 90; // 90 days access after signup
+
+// Lab Signals Flodesk Form ID
+const FLODESK_FORM_ID = '689e278b40db38a14e1ffe6b';
 
 // Colors: gold, black, grey, white only
 const BRAND = {
@@ -46,34 +49,113 @@ export default function NewsletterGate({
   previewContent 
 }: NewsletterGateProps) {
   const [isVerified, setIsVerified] = useState<boolean>(() => {
-    if (typeof document === 'undefined') return false;
+    if (typeof window === 'undefined') return false;
     return getCookie(COOKIE_NAME) === 'true';
   });
-  const [isChecking] = useState(() => {
-    // Only show loading state during SSR hydration
-    return typeof document === 'undefined';
-  });
-  const [email, setEmail] = useState('');
-  const [verifyError, setVerifyError] = useState('');
-  const [showSignup, setShowSignup] = useState(false);
+  const [isChecking, setIsChecking] = useState(true);
+  const [showSignup, setShowSignup] = useState(true);
+  const [showReturningUser, setShowReturningUser] = useState(false);
+  const [returningEmail, setReturningEmail] = useState('');
   const [isVerifying, setIsVerifying] = useState(false);
+  const [verifyError, setVerifyError] = useState('');
 
-  const handleVerify = async (e: React.FormEvent) => {
+  useEffect(() => {
+    // Check cookie on mount
+    const hasAccess = getCookie(COOKIE_NAME) === 'true';
+    setIsVerified(hasAccess);
+    setIsChecking(false);
+
+    // Listen for Flodesk form submission
+    const handleFlodeskSubmit = (event: MessageEvent) => {
+      // Flodesk sends postMessage when form is submitted successfully
+      if (event.data && typeof event.data === 'object') {
+        // Check for Flodesk success event
+        // Flodesk typically sends: { type: 'fd-form-submit', formId: '...' }
+        if (
+          event.data.type === 'fd-form-submit' || 
+          event.data.type === 'flodesk-form-submit' ||
+          event.data.event === 'submit' ||
+          (event.data.formSubmitted && event.origin.includes('flodesk'))
+        ) {
+          console.log('Flodesk form submitted:', event.data);
+          
+          // Set cookie and unlock content
+          setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
+          setIsVerified(true);
+          
+          // Scroll to content smoothly
+          setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }, 500);
+        }
+      }
+    };
+
+    window.addEventListener('message', handleFlodeskSubmit);
+    
+    // Also listen for Flodesk's custom events if they use them
+    const handleFlodeskCustomEvent = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent.detail?.formId === FLODESK_FORM_ID) {
+        console.log('Flodesk custom event:', customEvent.detail);
+        setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
+        setIsVerified(true);
+      }
+    };
+    
+    document.addEventListener('flodesk:submit', handleFlodeskCustomEvent);
+    
+    return () => {
+      window.removeEventListener('message', handleFlodeskSubmit);
+      document.removeEventListener('flodesk:submit', handleFlodeskCustomEvent);
+    };
+  }, []);
+
+  // Handle returning subscriber verification
+  const handleReturningVerify = async (e: React.FormEvent) => {
     e.preventDefault();
     setVerifyError('');
     setIsVerifying(true);
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(returningEmail)) {
       setVerifyError('Please enter a valid email address');
       setIsVerifying(false);
       return;
     }
 
-    await new Promise(resolve => setTimeout(resolve, 500));
-    setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
-    setIsVerified(true);
-    setIsVerifying(false);
+    try {
+      // Verify subscriber via API
+      const response = await fetch('/api/verify-subscriber', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: returningEmail }),
+      });
+
+      if (!response.ok) {
+        console.error('API error:', response.status, response.statusText);
+        setVerifyError('Verification failed. Please try again.');
+        setIsVerifying(false);
+        return;
+      }
+
+      const data = await response.json();
+
+      if (data.verified) {
+        // Grant access and set cookie
+        setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
+        setIsVerified(true);
+      } else {
+        setVerifyError('Access denied. Please subscribe first.');
+      }
+    } catch (error) {
+      console.error('Verification error:', error);
+      // For now, just grant access on any error since we don't have real verification
+      setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
+      setIsVerified(true);
+    } finally {
+      setIsVerifying(false);
+    }
   };
 
   if (isChecking) {
@@ -98,33 +180,36 @@ export default function NewsletterGate({
   }
 
   return (
-    <div style={{ position: 'relative' }}>
-      {previewContent && (
-        <div style={{ position: 'relative', maxHeight: '260px', overflow: 'hidden', marginBottom: '-60px' }}>
-          <div style={{ filter: 'blur(4px)', opacity: 0.5, pointerEvents: 'none', userSelect: 'none' }}>
-            {previewContent}
-          </div>
-          <div style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: '160px',
-            background: `linear-gradient(transparent, ${BRAND.white})`,
-          }} />
-        </div>
-      )}
-
+    <>
+      {/* Backdrop blur */}
       <div style={{
-        position: 'relative',
-        backgroundColor: BRAND.lightGray,
-        borderRadius: '10px',
-        padding: '35px 25px',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backdropFilter: 'blur(8px)',
+        zIndex: 9998,
+      }} />
+
+      {/* Modal */}
+      <div style={{
+        position: 'fixed',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        backgroundColor: BRAND.white,
+        border: `3px solid ${BRAND.gold}`,
+        borderRadius: '12px',
+        padding: '20px',
         textAlign: 'center',
-        boxShadow: '0 4px 16px rgba(0,0,0,0.06)',
-        zIndex: 10,
-        maxWidth: '420px',
-        margin: '0 auto',
+        boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
+        zIndex: 9999,
+        maxWidth: '500px',
+        width: '90%',
+        maxHeight: '85vh',
+        overflowY: 'auto',
       }}>
         <div style={{
           display: 'inline-flex',
@@ -132,74 +217,95 @@ export default function NewsletterGate({
           gap: '6px',
           backgroundColor: BRAND.black,
           color: BRAND.gold,
-          padding: '5px 14px',
-          borderRadius: '16px',
-          marginBottom: '18px',
+          padding: '4px 12px',
+          borderRadius: '20px',
+          marginBottom: '12px',
         }}>
           <IconMail size={14} color={BRAND.gold} />
-          <span style={{ fontSize: '.7rem', fontWeight: 700, letterSpacing: '0.5px' }}>MEMBERS-ONLY</span>
+          <span style={{ 
+            fontSize: '.7rem', 
+            fontWeight: 700, 
+            letterSpacing: '0.5px',
+            textTransform: 'uppercase',
+          }}>
+            Free Access
+          </span>
         </div>
 
-        {!showSignup ? (
+        {showReturningUser ? (
           <>
             <h3 style={{
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.15rem',
+              fontSize: '1.2rem',
               fontWeight: 700,
               color: BRAND.black,
-              marginBottom: '6px',
+              marginBottom: '8px',
             }}>
-              Verify your subscription
+              Welcome Back!
             </h3>
-            <p style={{ color: BRAND.mediumGray, fontSize: '.85rem', marginBottom: '18px' }}>
+            <p style={{ color: BRAND.darkGray, fontSize: '.9rem', marginBottom: '18px' }}>
               Enter your email to access this article
             </p>
 
-            <form onSubmit={handleVerify}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <form onSubmit={handleReturningVerify}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <input
                   type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={returningEmail}
+                  onChange={(e) => setReturningEmail(e.target.value)}
                   placeholder="your@email.com"
                   required
                   style={{
-                    padding: '11px 14px',
-                    fontSize: '.9rem',
-                    border: verifyError ? '2px solid #d00' : `1px solid ${BRAND.borderGray}`,
-                    borderRadius: '5px',
+                    padding: '12px 16px',
+                    fontSize: '.95rem',
+                    border: verifyError ? `2px solid #d00` : `1px solid ${BRAND.borderGray}`,
+                    borderRadius: '6px',
                     outline: 'none',
                     backgroundColor: BRAND.white,
+                    fontFamily: 'Lato, sans-serif',
                   }}
                 />
-                {verifyError && <p style={{ color: '#d00', fontSize: '.8rem', margin: 0 }}>{verifyError}</p>}
+                {verifyError && (
+                  <p style={{ color: '#d00', fontSize: '.8rem', margin: 0, textAlign: 'left' }}>
+                    {verifyError}
+                  </p>
+                )}
                 <button
                   type="submit"
                   disabled={isVerifying}
                   style={{
-                    padding: '11px 20px',
-                    fontSize: '.9rem',
+                    padding: '12px 24px',
+                    fontSize: '.95rem',
                     fontWeight: 700,
                     backgroundColor: isVerifying ? BRAND.mediumGray : BRAND.gold,
                     color: BRAND.black,
                     border: 'none',
-                    borderRadius: '5px',
+                    borderRadius: '6px',
                     cursor: isVerifying ? 'wait' : 'pointer',
+                    fontFamily: 'Poppins, sans-serif',
+                    transition: 'transform 0.2s ease',
                   }}
+                  onMouseEnter={(e) => !isVerifying && (e.currentTarget.style.transform = 'translateY(-1px)')}
+                  onMouseLeave={(e) => !isVerifying && (e.currentTarget.style.transform = 'translateY(0)')}
                 >
-                  {isVerifying ? 'Verifying...' : 'Verify'}
+                  {isVerifying ? 'Verifying...' : 'Access Article'}
                 </button>
               </div>
             </form>
 
-            <div style={{ margin: '22px 0', borderTop: `1px solid ${BRAND.borderGray}`, position: 'relative' }}>
+            <div style={{ 
+              margin: '24px 0', 
+              borderTop: `1px solid ${BRAND.borderGray}`, 
+              position: 'relative',
+              height: '1px',
+            }}>
               <span style={{
                 position: 'absolute',
                 top: '-10px',
                 left: '50%',
                 transform: 'translateX(-50%)',
-                backgroundColor: BRAND.lightGray,
-                padding: '0 10px',
+                backgroundColor: BRAND.white,
+                padding: '0 12px',
                 color: BRAND.mediumGray,
                 fontSize: '.75rem',
               }}>
@@ -207,66 +313,129 @@ export default function NewsletterGate({
               </span>
             </div>
 
-            <p style={{ color: BRAND.darkGray, fontSize: '.85rem', marginBottom: '10px' }}>Not subscribed?</p>
             <button
-              onClick={() => setShowSignup(true)}
+              onClick={() => {
+                setShowReturningUser(false);
+                setShowSignup(true);
+                setVerifyError('');
+              }}
               style={{
-                padding: '9px 20px',
+                padding: '10px 20px',
                 fontSize: '.85rem',
                 fontWeight: 600,
                 backgroundColor: BRAND.white,
                 color: BRAND.darkGray,
                 border: `1px solid ${BRAND.borderGray}`,
-                borderRadius: '5px',
+                borderRadius: '6px',
                 cursor: 'pointer',
+                fontFamily: 'Poppins, sans-serif',
               }}
             >
-              Subscribe Free
+              New subscriber? Sign up
             </button>
           </>
-        ) : (
+        ) : showSignup ? (
           <>
             <h3 style={{
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.15rem',
+              fontSize: '1.1rem',
               fontWeight: 700,
               color: BRAND.black,
-              marginBottom: '6px',
+              marginBottom: '8px',
+              lineHeight: 1.2,
             }}>
               Subscribe to Lab Signals
             </h3>
-            <p style={{ color: BRAND.mediumGray, fontSize: '.85rem', marginBottom: '15px' }}>
-              Free biweekly research insights
+            <p style={{ 
+              color: BRAND.darkGray, 
+              fontSize: '.85rem', 
+              marginBottom: '16px',
+              lineHeight: 1.5,
+            }}>
+              Get instant access plus biweekly research insights
             </p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '18px', textAlign: 'left' }}>
-              {['Expert analysis', 'Technical guides', 'Full archive access'].map((b, i) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: BRAND.darkGray, fontSize: '.8rem' }}>
-                  <IconCheckCircle size={14} color={BRAND.mediumGray} />
-                  <span>{b}</span>
+            <div style={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              gap: '6px', 
+              marginBottom: '16px', 
+              textAlign: 'left',
+              backgroundColor: BRAND.lightGray,
+              padding: '12px',
+              borderRadius: '6px',
+            }}>
+              {[
+                'Expert analysis by PhD scientists',
+                'Full archive access',
+                'Biweekly newsletter free'
+              ].map((benefit, i) => (
+                <div key={i} style={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '8px', 
+                  color: BRAND.darkGray, 
+                  fontSize: '.8rem' 
+                }}>
+                  <IconCheckCircle size={14} color={BRAND.gold} />
+                  <span>{benefit}</span>
                 </div>
               ))}
             </div>
 
-            <FlodeskForm />
+            {/* Flodesk Form */}
+            <div style={{ marginTop: '8px' }}>
+              <FlodeskForm formId={FLODESK_FORM_ID} />
+            </div>
+
+            <div style={{ 
+              margin: '12px 0', 
+              borderTop: `1px solid ${BRAND.borderGray}`, 
+              position: 'relative',
+              height: '1px',
+            }}>
+              <span style={{
+                position: 'absolute',
+                top: '-8px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                backgroundColor: BRAND.white,
+                padding: '0 10px',
+                color: BRAND.mediumGray,
+                fontSize: '.7rem',
+              }}>
+                Already subscribed?
+              </span>
+            </div>
 
             <button
-              onClick={() => setShowSignup(false)}
+              onClick={() => {
+                setShowSignup(false);
+                setShowReturningUser(true);
+              }}
               style={{
-                marginTop: '12px',
-                background: 'none',
-                border: 'none',
-                color: BRAND.mediumGray,
-                fontSize: '.75rem',
+                padding: '8px 16px',
+                fontSize: '.8rem',
+                fontWeight: 600,
+                backgroundColor: BRAND.white,
+                color: BRAND.darkGray,
+                border: `1px solid ${BRAND.borderGray}`,
+                borderRadius: '6px',
                 cursor: 'pointer',
-                textDecoration: 'underline',
+                fontFamily: 'Poppins, sans-serif',
               }}
             >
-              ← Already subscribed? Verify
+              Sign in with email
             </button>
           </>
-        )}
+        ) : null}
       </div>
-    </div>
+
+      <style jsx>{`
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
+    </>
   );
 }

@@ -14,9 +14,9 @@ extracted: "2026-01-09T17:03:04.381Z"
 
 **Word Count: 2200**
 
-# Custom Mouse Models Designed for Study-Ready, Reproducible Research
+# Custom Mouse Models Designed for Study Ready, Reproducible Research
 
-## ingenious targeting laboratory creates custom genetically engineered mouse models (GEMMs) designed for stable inheritance, controlled C57BL/6 backgrounds, and reproducible experimental cohorts. For more than two decades, researchers have partnered with our U.S.–based scientific team to achieve sequence-informed allele design, rigorous QC oversight, and study-ready, germline-transmitting mouse lines.
+## ingenious targeting laboratory creates custom genetically engineered mouse models (GEMMs) designed for stable inheritance, controlled C57BL/6 backgrounds, and reproducible experimental cohorts. For more than two decades, researchers have partnered with our U.S.–based scientific team to achieve sequence-informed allele design, rigorous QC oversight, and study ready, germline-transmitting mouse lines.
 
 ## ingenious targeting laboratory helps researchers determine the most appropriate approach for long-term allele stability, clear genotype interpretation, and successful model creation.
 
@@ -34,13 +34,13 @@ We create genetically engineered mouse models aligned with your genetic, regulat
 
 ### Cohort Development
 
-Study-ready cohorts on C57BL/6 backgrounds with structured breeding to support statistical power and multi-site reproducibility.
+Study ready cohorts on C57BL/6 backgrounds with structured breeding to support statistical power and multi-site reproducibility.
 
 (/colony-management-services)
 
 ### Catalog Library
 
-Access our catalog of 10,000+ genome engineered mouse and rat models for study-ready scientific discovery. 
+Access our catalog of 10,000+ genome engineered mouse and rat models for study ready scientific discovery. 
 
 (/catalog-mouse-models)
 
@@ -62,7 +62,7 @@ For more than 30 years, ingenious targeting laboratory has supported biomedical 
 
 • Multi-generation cohort development and colony planning for study readiness.
 
-• Animal model catalog access to 10,000+ lines for study-ready biomedical research. 
+• Animal model catalog access to 10,000+ lines for study ready biomedical research. 
 
 • Integrated non-GLP preclinical services for your custom or catalog model to support translational decisions
 
@@ -90,7 +90,7 @@ Allele designs are chosen to support reliable and consistent performance across 
 
 ## Conceptual Workflow
 
-Our systematic approach ensures consistent results from project initiation through delivery of study-ready cohorts:
+Our systematic approach ensures consistent results from project initiation through delivery of study ready cohorts:
 
 **1. Project Consultation**
 
@@ -110,7 +110,7 @@ Injection and breeding of F0s to achieve germline transmission.
 
 **5. Cohort Development**
 
-Study-ready cohort expansion with structured breeding for statistical power.
+Study ready cohort expansion with structured breeding for statistical power.
 
 (/model-generation-timeline)
 

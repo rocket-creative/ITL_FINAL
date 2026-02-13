@@ -65,8 +65,8 @@ export const metadata: Metadata = {
 
 // Hero Section - lines 8-13
 const heroData = {
-  headline: 'Custom Mouse Models Designed for Study-Ready, Reproducible Research',
-  description1: 'ingenious targeting laboratory creates custom genetically engineered mouse models (GEMMs) designed for stable inheritance, controlled C57BL/6 backgrounds, and reproducible experimental cohorts. For more than two decades, researchers have partnered with our U.S.–based scientific team to achieve sequence-informed allele design, rigorous QC oversight, and study-ready, germline-transmitting mouse lines.',
+  headline: 'Custom Mouse Models Designed for Study Ready, Reproducible Research',
+  description1: 'ingenious targeting laboratory creates custom genetically engineered mouse models (GEMMs) designed for stable inheritance, controlled C57BL/6 backgrounds, and reproducible experimental cohorts. For more than two decades, researchers have partnered with our U.S.–based scientific team to achieve sequence-informed allele design, rigorous QC oversight, and study ready, germline-transmitting mouse lines.',
   description2: 'ingenious targeting laboratory helps researchers determine the most appropriate approach for long-term allele stability, clear genotype interpretation, and successful model creation.',
   cta1: { label: 'Start Your Project', href: '/request-quote' },
   cta2: { label: 'Schedule a Consultation', href: '/request-quote' },
@@ -81,12 +81,12 @@ const servicesData = [
   },
   {
     title: 'Cohort Development',
-    description: 'Study-ready cohorts on C57BL/6 backgrounds with structured breeding to support statistical power and multi-site reproducibility.',
+    description: 'Study ready cohorts on C57BL/6 backgrounds with structured breeding to support statistical power and multi-site reproducibility.',
     href: '/colony-management-services',
   },
   {
     title: 'Catalog Library',
-    description: 'Access our catalog of 10,000+ genome engineered mouse and rat models for study-ready scientific discovery.',
+    description: 'Access our catalog of 10,000+ genome engineered mouse and rat models for study ready scientific discovery.',
     href: '/catalog-mouse-models',
   },
   {
@@ -108,7 +108,7 @@ const overviewData = {
     items: [
       'Custom mouse models including conventional knockouts, conditional knockouts, knock-ins (point mutation, cDNA, gene replacement), reporter alleles, Rosa26 and other targeted transgenics, and humanized models.',
       'Multi-generation cohort development and colony planning for study readiness.',
-      'Animal model catalog access to 10,000+ lines for study-ready biomedical research.',
+      'Animal model catalog access to 10,000+ lines for study ready biomedical research.',
       'Integrated non-GLP preclinical services for your custom or catalog model to support translational decisions.',
     ],
   },
@@ -146,7 +146,7 @@ const approachData = {
 // Conceptual Workflow - lines 48-60
 const workflowData = {
   title: 'Conceptual Workflow',
-  subtitle: 'Our systematic approach ensures consistent results from project initiation through delivery of study-ready cohorts:',
+  subtitle: 'Our systematic approach ensures consistent results from project initiation through delivery of study ready cohorts:',
   ctaHref: '', // No CTA link - button removed per user request
   steps: [
     {
@@ -172,7 +172,7 @@ const workflowData = {
     {
       number: 5,
       title: 'Cohort Development',
-      description: 'Study-ready cohort expansion with structured breeding for statistical power.',
+      description: 'Study ready cohort expansion with structured breeding for statistical power.',
     },
   ],
 };
