@@ -97,6 +97,12 @@ export const labSignalsArticles = [
     relatedPages: ["/transgenic-mouse-service", "/bac-to-bac-large-scale-targeting"]
   },
   {
+    title: "Modeling Human Disease: The Expanding Role of Knockout Mice in Precision Medicine",
+    slug: "modeling-human-disease-knockout-mice-precision-medicine",
+    category: "Industry Insights",
+    relatedPages: ["/knockout-mouse-models", "/oncology-mouse-models", "/humanized-mouse-models", "/nash-mash-mouse-models"]
+  },
+  {
     title: "Leveraging Mouse Models for Point Mutation Diseases: R&D Landscape",
     slug: "leveraging-mouse-models-for-point-mutation-diseases-r-d-landscape",
     category: "Industry Insights",

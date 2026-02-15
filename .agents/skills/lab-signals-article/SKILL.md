@@ -21,15 +21,26 @@ YYYY-MM-DD-article-title-slug.md
 
 Convert MD to HTML for the `body` field.
 
-## Team Preview Links
+## Article URLs (Output Both)
 
-Staged articles are hidden from the public but **team can preview** via (no env vars):
+When adding an article, **output both URLs** in the summary for copy/paste:
+
+| Link | URL | When to use |
+|------|-----|-------------|
+| **Public** | `https://www.genetargeting.com/lab-signals/{slug}` | Live link (after release date). Gated by Flodesk for subscribers. |
+| **Team preview** | `https://www.genetargeting.com/lab-signals/{slug}?preview=itl-team-preview` | Pre-publish review. Bypasses gate; shows "Team Preview" banner. No env vars. |
+
+Output format (exact):
 
 ```
+For the [Article Title] article releasing [Day], [Month] [Date]:
+Public:
+https://www.genetargeting.com/lab-signals/{slug}
+Team preview:
 https://www.genetargeting.com/lab-signals/{slug}?preview=itl-team-preview
 ```
 
-Share the full URL with the team. Preview shows "Team Preview" banner; no Flodesk gate. Public URLs stay gated.
+Staged articles (`publishedAt` in future) are hidden from public; team preview works immediately.
 
 ## Quick Start
 
@@ -39,12 +50,25 @@ When adding a new Lab Signals article (from MD file):
 2. Parse slug from filename → `slug`
 3. Convert MD body to HTML
 4. Add to `src/data/newsletterArticles.ts`
-5. Generate preview link for team: `.../lab-signals/{slug}?preview=itl-team-preview`
-6. Add to `labSignalsArticles` in `LabSignalsSignup.tsx` if cross-linking desired
-7. **Output the full team preview URL** in the summary so the user can copy and paste:
+5. Add to `labSignalsArticles` in `LabSignalsSignup.tsx` if cross-linking desired
+6. **Output both URLs** in the summary using this exact format:
 
 ```
+For the [Article Title] article releasing [Day], [Month] [Date]:
+Public:
+https://www.genetargeting.com/lab-signals/{slug}
+Team preview:
 https://www.genetargeting.com/lab-signals/{slug}?preview=itl-team-preview
+```
+
+Example (BAC Transgenic Mice, Tuesday Feb 17):
+
+```
+For the BAC Transgenic Mice article releasing Tuesday, Feb 17:
+Public:
+https://www.genetargeting.com/lab-signals/bac-transgenic-mice-large-fragment-insertion-models
+Team preview:
+https://www.genetargeting.com/lab-signals/bac-transgenic-mice-large-fragment-insertion-models?preview=itl-team-preview
 ```
 
 ## Article Schema
@@ -145,7 +169,7 @@ The `lab-signals-references` class applies: smaller font (0.9rem), tight line-he
 - [ ] Body HTML from MD (proper tags)
 - [ ] Description 150–160 chars
 - [ ] Slug from filename, URL-safe, unique
-- [ ] Full preview URL output in chat for copy/paste: `https://www.genetargeting.com/lab-signals/{slug}?preview=itl-team-preview`
+- [ ] **Both URLs output** in chat for copy/paste: Public + Team preview
 - [ ] Added to `labSignalsArticles` in LabSignalsSignup if cross-linking desired
 - [ ] No hyphens in copy
 - [ ] No AI giveaway phrases
