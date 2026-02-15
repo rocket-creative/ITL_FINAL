@@ -10,6 +10,7 @@ import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconSettings, IconChevronRight, IconShield } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { getPublicationsForPageAsCitations } from '@/data/pagePublications';
 
 // Hero Data
 const heroData = {
@@ -132,15 +133,11 @@ const testimonialsData = FEATURED_TESTIMONIALS.map(t => ({
   affiliation: t.affiliation,
 }));
 
-// Publications Data
+// Publications Data - From centralized pagePublications (main list only)
 const publicationsData = {
   title: "Selected Publications",
   intro: "Humanized models from ingenious targeting laboratory.",
-  publications: [
-    "Jiang Y, Sachdeva K, Goulbourne CN, Berg MJ, Peddy J, Stavrides PH, Pensalfini A, Pawlik M, Malampati S, Whyte L, Basavarajappa BS, Shivakumar S, Bleiwas C, Smiley JF, Mathews PM, Nixon RA. 2025. Increased neuronal expression of the early endosomal adaptor APPL1 leads to endosomal and synaptic dysfunction with cholinergic neurodegeneration. J Neurosci 29(45): e2331242025.",
-    "Nargis T, Muralidharan C, Enriquez JR, Wang JE, Kaylan K, Chakraborty A, Pratuangtham S, Figatner K, Nelson JB, May SC, Nadler JL, Boxer MB, Maloney, DJ, Tersey SA, Mirmira RG. 2024. 12-Lipoxygenase inhibition delays onset of autoimmune diabetes in human gene replacement mice. JCI Insight24(9): e185299",
-    "Serrano J, Boyd J, Brown IS, Mason C, Smith KR, Karolyi K, Maurya SK, Meshram NN, Serna V, Link GM, Gardell SJ, Kyriazis GA. 2024. The TAS1R2 G-protein-coupled receptor is an ambient glucose sensor in skeletal muscle that regulates NAD homeostasis and mitochondrial capacity. Nat Commun 15(1): 4915."
-  ]
+  publications: getPublicationsForPageAsCitations('/gene-replacement')
 };
 
 // FAQ Data
@@ -595,14 +592,15 @@ export default function GeneReplacementPage() {
             </p>
             <div style={{ display: 'grid', gap: '16px' }}>
               {publicationsData.publications.map((pub, index) => (
-                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
+                <a key={index} href={pub.link} target="_blank" rel="noopener noreferrer" className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 block" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
                   padding: '20px',
-                  borderLeft: '4px solid #008080'
+                  borderLeft: '4px solid #008080',
+                  textDecoration: 'none'
                 }}>
-                  <p style={{ fontSize: '.9rem', color: '#666', lineHeight: 1.6, margin: 0 }}>{pub}</p>
-                </div>
+                  <p style={{ fontSize: '.9rem', color: '#666', lineHeight: 1.6, margin: 0 }}>{pub.text} ↗</p>
+                </a>
               ))}
             </div>
             <div className="animate-in" style={{ textAlign: 'center', marginTop: '24px' }}>

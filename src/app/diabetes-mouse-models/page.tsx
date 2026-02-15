@@ -78,20 +78,12 @@ const publicationsData = [
     link: "https://pubmed.ncbi.nlm.nih.gov/41153082/"
   },
   {
-    authors: "Vacher CM et al.",
-    year: "2021",
-    title: "Placental endocrine function shapes cerebellar development and social behavior.",
-    journal: "Nature Neuroscience",
-    volume: "24(10): 1392-1401",
-    link: "https://pubmed.ncbi.nlm.nih.gov/34400844/"
-  },
-  {
-    authors: "Clausen BE et al.",
-    year: "1999",
-    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research",
-    volume: "8(4): 265-277",
-    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
+    authors: "Nargis T, Muralidharan C, Enriquez JR, Wang JE, Kaylan K, Chakraborty A, et al.",
+    year: "2024",
+    title: "12-Lipoxygenase inhibition delays onset of autoimmune diabetes in human gene replacement mice.",
+    journal: "JCI Insight",
+    volume: "24(9): e185299",
+    link: "https://pubmed.ncbi.nlm.nih.gov/39531315/"
   }
 ];
 

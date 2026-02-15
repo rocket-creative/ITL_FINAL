@@ -132,19 +132,23 @@ const immuneCharacterization = [
   { test: "Myeloid Expression", description: "TIM3 on dendritic cells and macrophages" }
 ];
 
-// Publications
+// Publications - From main publications list (immuno-oncology relevant)
 const publications = [
   {
-    authors: "Chen C et al.",
-    year: "2024",
-    title: "Soluble Tim 3 serves as a tumor prognostic marker and therapeutic target for CD8 T cell exhaustion and anti PD1 resistance",
-    journal: "Cell Reports Medicine"
+    authors: "Mlynarczyk C et al.",
+    year: "2023",
+    title: "BTG1 mutation yields supercompetitive B cells primed for malignant transformation.",
+    journal: "Science",
+    volume: "379(6629): eabj0412",
+    link: "https://pubmed.ncbi.nlm.nih.gov/36656933/"
   },
   {
-    authors: "Soltantoyeh T et al.",
-    year: "2024",
-    title: "Simultaneous targeting of Tim3 and A2a receptors modulates MSLN CAR T cell antitumor function in a human cervical tumor xenograft model",
-    journal: "Frontiers in Immunology"
+    authors: "Reinartz DM, Escamilla-Rivera V, Shao M, Tribble SL, Caulin C, Wilson JE.",
+    year: "2025",
+    title: "Impact of absent in melanoma 2 on head and neck squamous cell carcinoma development.",
+    journal: "J Immunol",
+    volume: "vkaf224",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41042265/"
   }
 ];
 
@@ -682,7 +686,7 @@ export default function TIM3HumanizedMicePage() {
 
             <div className="space-y-4">
               {publications.map((pub, index) => (
-                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                <a key={index} href={pub.link} target="_blank" rel="noopener noreferrer" className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 block" style={{ backgroundColor: 'white', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #008080', textDecoration: 'none' }}>
                   <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '5px' }}>
                     {pub.authors} ({pub.year})
                   </p>
@@ -690,9 +694,9 @@ export default function TIM3HumanizedMicePage() {
                     {pub.title}
                   </p>
                   <p style={{ color: '#008080', fontSize: '.85rem', fontStyle: 'italic' }}>
-                    {pub.journal}
+                    <em>{pub.journal}</em>{pub.volume && ` ${pub.volume}`}
                   </p>
-                </div>
+                </a>
               ))}
             </div>
 

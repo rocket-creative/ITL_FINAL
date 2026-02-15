@@ -113,25 +113,28 @@ const applications = [
   }
 ];
 
-// Publications
+// Publications - From main publications list
 const publications = [
   {
     authors: "Salzbank J, Lacaille H, Gaby J, O'Reilly JJ, Kissner M, Vacher CM, Penn AA",
     year: "2025",
     title: "Microglia alter sex-specific cerebellar myelination following placental hormone loss.",
-    journal: "Nat Commun. 16(1): 9846"
+    journal: "Nat Commun. 16(1): 9846",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41203610/"
   },
   {
     authors: "Wang L, Noyer L, Jishage M, Wang YH, Tao AY, McDermott M, Gando I, Sidhu I, Hu K, Zhong L, Sun K, Drmic D, Kaufmann U, Feske S",
     year: "2025",
     title: "CLNS1A regulates genome stability and cell cycle progression to control CD4 T cell function and autoimmunity.",
-    journal: "Sci Immunol 108(10): eadq8860"
+    journal: "Sci Immunol 108(10): eadq8860",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40540585/"
   },
   {
     authors: "Milanick W, Li J, Thomas CI, Al-Yaari M, Guerrero-Given D, Kamasawa N, Young SM Jr",
     year: "2025",
     title: "Presynaptic α2δs specify synaptic gain, not synaptogenesis, in the mammalian brain.",
-    journal: "Neuron 12(113): p1886-1897.E9"
+    journal: "Neuron 12(113): p1886-1897.E9",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40367942/"
   }
 ];
 
@@ -614,14 +617,14 @@ export default function TissueSpecificKnockoutPage() {
 
             <div className="space-y-4">
               {publications.map((pub, index) => (
-                <div key={index} className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '20px', borderRadius: '8px' }}>
+                <a key={index} href={pub.link} target="_blank" rel="noopener noreferrer" className="animate-in block" style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '20px', borderRadius: '8px', textDecoration: 'none' }}>
                   <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '5px' }}>
-                    {pub.authors} {pub.year}. {pub.title}
+                    {pub.authors} {pub.year}. {pub.title} ↗
                   </p>
                   <p style={{ color: '#008080', fontSize: '.85rem', fontWeight: 500 }}>
                     {pub.journal}
                   </p>
-                </div>
+                </a>
               ))}
             </div>
 

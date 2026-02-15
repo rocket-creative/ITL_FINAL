@@ -9,6 +9,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconFlask, IconChevronRight } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
+import { getPublicationsForPageAsCitations } from '@/data/pagePublications';
 
 // Hero Data
 const heroData = {
@@ -117,14 +118,10 @@ const applicationsData = {
   ]
 };
 
-// Publications Data
+// Publications Data - From centralized pagePublications (main list only)
 const publicationsData = {
   title: "Publications Utilizing BAC Targeting",
-  publications: [
-    "Hernandez, S., et al. (2021). \"BAC transgenic mice model Alzheimer's disease locus with complete regulatory element preservation.\" Neurobiology of Disease, 156, 105413.",
-    "Yamamoto, K., et al. (2020). \"Large insert BAC targeting preserves multi enhancer locus control regions.\" Epigenetics and Chromatin, 13(1), 24.",
-    "Williams, B., et al. (2022). \"BAC to BAC recombineering generates 180KB insert transgenic mice with stable expression.\" Transgenic Research, 31(2), 187-204."
-  ]
+  publications: getPublicationsForPageAsCitations('/bac-to-bac-large-scale-targeting')
 };
 
 // Testimonials Data
@@ -624,14 +621,15 @@ export default function BACTargetingPage() {
             </h2>
             <div style={{ display: 'grid', gap: '16px' }}>
               {publicationsData.publications.map((pub, index) => (
-                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
+                <a key={index} href={pub.link} target="_blank" rel="noopener noreferrer" className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 block" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',
                   padding: '20px',
-                  borderLeft: '4px solid #008080'
+                  borderLeft: '4px solid #008080',
+                  textDecoration: 'none'
                 }}>
-                  <p style={{ fontSize: '.9rem', color: '#666', lineHeight: 1.6, margin: 0 }}>{pub}</p>
-                </div>
+                  <p style={{ fontSize: '.9rem', color: '#666', lineHeight: 1.6, margin: 0 }}>{pub.text} ↗</p>
+                </a>
               ))}
             </div>
             <div className="animate-in" style={{ textAlign: 'center', marginTop: '24px' }}>

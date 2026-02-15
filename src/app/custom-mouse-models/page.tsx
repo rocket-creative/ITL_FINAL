@@ -138,22 +138,28 @@ const testimonialsData = [
   { quote: hussainTestimonial.quote, author: formatAuthorWithCredentials(hussainTestimonial), affiliation: hussainTestimonial.affiliation },
 ];
 
-// Publications Data - 3 cards
+// Publications Data - From main publications list
 const publicationsData = [
   {
-    journal: "Nature",
-    title: "Conditional knockout reveals essential functions in neural development",
-    year: "2024"
+    journal: "Sci Immunol",
+    title: "CLNS1A regulates genome stability and cell cycle progression to control CD4 T cell function and autoimmunity.",
+    year: "2025",
+    authors: "Wang L, Noyer L, Jishage M, et al.",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40540585/"
   },
   {
-    journal: "Cell",
-    title: "Humanized mouse model enables breakthrough immunotherapy studies",
-    year: "2024"
+    journal: "J Neurosci",
+    title: "Increased neuronal expression of the early endosomal adaptor APPL1 leads to endosomal and synaptic dysfunction with cholinergic neurodegeneration.",
+    year: "2025",
+    authors: "Jiang Y, Sachdeva K, Goulbourne CN, et al.",
+    link: "https://pubmed.ncbi.nlm.nih.gov/39345644/"
   },
   {
-    journal: "Science",
-    title: "Point mutation knockin recapitulates human disease phenotype",
-    year: "2023"
+    journal: "JCI Insight",
+    title: "12-Lipoxygenase inhibition delays onset of autoimmune diabetes in human gene replacement mice.",
+    year: "2024",
+    authors: "Nargis T, Muralidharan C, Enriquez JR, et al.",
+    link: "https://pubmed.ncbi.nlm.nih.gov/39531315/"
   }
 ];
 
@@ -672,14 +678,27 @@ export default function CustomMouseModelsPage() {
                   }}>
                     {pub.journal} · {pub.year}
                   </span>
-                  <p style={{
-                    fontSize: '.9rem',
-                    color: '#333',
-                    lineHeight: 1.5,
-                    fontWeight: 500
-                  }}>
-                    {pub.title}
-                  </p>
+                  {pub.link ? (
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer" style={{
+                      fontSize: '.9rem',
+                      color: '#333',
+                      lineHeight: 1.5,
+                      fontWeight: 500,
+                      textDecoration: 'none',
+                      display: 'block'
+                    }}>
+                      {pub.title} ↗
+                    </a>
+                  ) : (
+                    <p style={{
+                      fontSize: '.9rem',
+                      color: '#333',
+                      lineHeight: 1.5,
+                      fontWeight: 500
+                    }}>
+                      {pub.title}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>

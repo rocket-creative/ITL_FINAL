@@ -83,26 +83,9 @@ const targetedAdvantages = [
   "No risk of insertional mutagenesis"
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Jiang Y, Sachdeva K, Goulbourne CN, Berg MJ, Peddy J, Stavrides PH, et al.",
-    year: "2025",
-    title: "Increased neuronal expression of the early endosomal adaptor APPL1 leads to endosomal and synaptic dysfunction with cholinergic neurodegeneration.",
-    journal: "J Neurosci",
-    volume: "45(29): e2331242025",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40514243/"
-  },
-  {
-    authors: "Clausen BE et al.",
-    year: "1999",
-    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research",
-    volume: "8(4): 265-277",
-    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
-  }
-];
+// Publications Data - From centralized pagePublications (main list only)
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/transgenic-mouse-service');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

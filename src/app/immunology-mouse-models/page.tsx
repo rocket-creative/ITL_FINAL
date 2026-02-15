@@ -185,14 +185,6 @@ const publicationsData = [
     journal: "Gut",
     volume: "74(3): 496-509",
     link: "https://pubmed.ncbi.nlm.nih.gov/41371935/"
-  },
-  {
-    authors: "Clausen BE et al.",
-    year: "1999",
-    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research",
-    volume: "8(4): 265-277",
-    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
   }
 ];
 

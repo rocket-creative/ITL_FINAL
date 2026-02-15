@@ -103,6 +103,12 @@ export const labSignalsArticles = [
     relatedPages: ["/knockout-mouse-models", "/oncology-mouse-models", "/humanized-mouse-models", "/nash-mash-mouse-models"]
   },
   {
+    title: "The FDA Modernization Act 2.0: What It Means for Mouse Model Providers and Researchers",
+    slug: "fda-modernization-act-2-mouse-models-regulatory",
+    category: "Industry Insights",
+    relatedPages: ["/custom-mouse-models", "/knockout-mouse-models", "/humanized-mouse-models"]
+  },
+  {
     title: "Leveraging Mouse Models for Point Mutation Diseases: R&D Landscape",
     slug: "leveraging-mouse-models-for-point-mutation-diseases-r-d-landscape",
     category: "Industry Insights",

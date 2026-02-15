@@ -202,20 +202,12 @@ const publicationsData = [
     link: "https://pubmed.ncbi.nlm.nih.gov/36656933/"
   },
   {
-    authors: "Chakrabarti S et al.",
-    year: "2024",
-    title: "Touch sensation requires the mechanically gated ion channel ELKIN1.",
-    journal: "Science",
-    volume: "383(6686): 992-998",
-    link: "https://pubmed.ncbi.nlm.nih.gov/38422143/"
-  },
-  {
-    authors: "Clausen BE et al.",
-    year: "1999",
-    title: "Conditional gene targeting in macrophages and granulocytes using LysMcre mice.",
-    journal: "Transgenic Research",
-    volume: "8(4): 265-277",
-    link: "https://pubmed.ncbi.nlm.nih.gov/10621974/"
+    authors: "Reinartz DM, Escamilla-Rivera V, Shao M, Tribble SL, Caulin C, Wilson JE.",
+    year: "2025",
+    title: "Impact of absent in melanoma 2 on head and neck squamous cell carcinoma development.",
+    journal: "J Immunol",
+    volume: "vkaf224",
+    link: "https://pubmed.ncbi.nlm.nih.gov/41042265/"
   }
 ];
 
