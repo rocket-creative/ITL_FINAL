@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { newsletterArticles } from '@/data/newsletterArticles';
+import { getPublishedArticles } from '@/data/newsletterArticles';
 
 const SITE_URL = 'https://www.genetargeting.com';
 const FEED_TITLE = 'Lab Signals - ingenious targeting laboratory';
@@ -24,7 +24,7 @@ function stripHtml(html: string): string {
 function generateRssFeed(): string {
   const buildDate = new Date().toUTCString();
   
-  const items = newsletterArticles.map((article) => {
+  const items = getPublishedArticles().map((article) => {
     const link = `${SITE_URL}/lab-signals/${article.slug}`;
     const description = stripHtml(article.description || article.body.slice(0, 500));
     

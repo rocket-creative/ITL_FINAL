@@ -1,6 +1,6 @@
 'use client';
 
-import { NewsletterGate, SocialShare } from '@/components/UXUIDC';
+import { NewsletterGate, SocialShare, IngeniousAd } from '@/components/UXUIDC';
 import type { NewsletterArticle } from '@/data/newsletterArticles';
 import fixArticleLinks from '@/utils/fixArticleLinks';
 
@@ -18,11 +18,13 @@ const BRAND = {
 interface LabSignalsArticleClientProps {
   article: NewsletterArticle;
   articleUrl: string;
+  isPreview?: boolean;
 }
 
 export default function LabSignalsArticleClient({
   article,
   articleUrl,
+  isPreview = false,
 }: LabSignalsArticleClientProps) {
   const createPreview = () => {
     const textContent = article.body
@@ -33,33 +35,19 @@ export default function LabSignalsArticleClient({
     return <p style={{ color: BRAND.textGray, fontFamily: 'Lato, sans-serif', lineHeight: 1.9, fontSize: '1.1rem' }}>{textContent}...</p>;
   };
 
-  return (
-    <section className="animate-initial animate-fade-in-up" style={{ backgroundColor: BRAND.white, padding: '50px 20px 60px' }}>
-      {/* Social Share */}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        marginBottom: '35px',
-        paddingBottom: '20px',
-        borderBottom: `1px solid ${BRAND.lightGray}`,
-      }}>
-        <SocialShare
-          url={articleUrl}
-          title={article.title}
-          description={article.description}
-        />
-      </div>
-
-      {/* Gated Content */}
-      <NewsletterGate
-        articleTitle={article.title}
-        previewContent={createPreview()}
-      >
+  const articleContent = (
+    <>
         <article
           className="lab-signals-article"
           dangerouslySetInnerHTML={{ __html: fixArticleLinks(article.body) }}
         />
+
+        {article.relatedPage && (
+          <IngeniousAd
+            relatedPage={article.relatedPage}
+            category={article.category}
+          />
+        )}
 
         <div style={{
           marginTop: '50px',
@@ -91,7 +79,55 @@ export default function LabSignalsArticleClient({
             showRss={false}
           />
         </div>
-      </NewsletterGate>
+    </>
+  );
+
+  return (
+    <section className="animate-initial animate-fade-in-up" style={{ backgroundColor: BRAND.white, padding: '50px 20px 60px' }}>
+      {isPreview && (
+        <div
+          style={{
+            backgroundColor: '#1a1a1a',
+            color: '#fff',
+            padding: '12px 20px',
+            marginBottom: '30px',
+            fontFamily: 'Poppins, sans-serif',
+            fontSize: '.8rem',
+            fontWeight: 600,
+            textAlign: 'center',
+            borderRadius: '6px',
+          }}
+        >
+          Team Preview · Not visible to public until release date
+        </div>
+      )}
+      {/* Social Share */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginBottom: '35px',
+        paddingBottom: '20px',
+        borderBottom: `1px solid ${BRAND.lightGray}`,
+      }}>
+        <SocialShare
+          url={articleUrl}
+          title={article.title}
+          description={article.description}
+        />
+      </div>
+
+      {/* Gated Content (or direct when preview) */}
+      {isPreview ? (
+        articleContent
+      ) : (
+        <NewsletterGate
+          articleTitle={article.title}
+          previewContent={createPreview()}
+        >
+          {articleContent}
+        </NewsletterGate>
+      )}
 
       {/* Article Typography Styles */}
       <style jsx global>{`

@@ -21,7 +21,7 @@ import {
   BreadcrumbSchema,
 } from '@/components/UXUIDC';
 import { 
-  newsletterArticles, 
+  getPublishedArticles,
   getAllCategories,
 } from '@/data/newsletterArticles';
 
@@ -51,7 +51,7 @@ export default function LabSignalsPage() {
   const categories = getAllCategories();
 
   // Filter articles
-  const filteredArticles = newsletterArticles.filter((article) => {
+  const filteredArticles = getPublishedArticles().filter((article) => {
     const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
     const matchesSearch = searchQuery === '' || 
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

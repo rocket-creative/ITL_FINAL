@@ -4,8 +4,9 @@ import { Metadata } from 'next';
 import { FlodeskForm } from '@/components/UXUIDC';
 import { 
   getArticleBySlug, 
+  getArticleBySlugIncludingStaged,
   getAllArticleSlugs,
-  newsletterArticles 
+  getPublishedArticles 
 } from '@/data/newsletterArticles';
 import LabSignalsArticleClient from './LabSignalsArticleClient';
 import RelatedArticles from './RelatedArticles';
@@ -67,22 +68,34 @@ export async function generateMetadata({
   };
 }
 
-// Get related articles
+// Get related articles (published only)
 function getRelatedArticles(currentSlug: string, category: string) {
-  return newsletterArticles
+  return getPublishedArticles()
     .filter(a => a.slug !== currentSlug)
     .filter(a => a.category === category)
     .slice(0, 3)
     .map(a => ({ slug: a.slug, category: a.category, title: a.title }));
 }
 
+function isPreviewValid(preview: string | string[] | undefined): boolean {
+  const token = Array.isArray(preview) ? preview[0] : preview;
+  return token === 'itl-team-preview';
+}
+
 export default async function LabSignalsArticlePage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ preview?: string }>;
 }) {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const { preview } = await searchParams;
+  const isPreview = isPreviewValid(preview);
+
+  const article = isPreview
+    ? getArticleBySlugIncludingStaged(slug)
+    : getArticleBySlug(slug);
 
   if (!article) {
     notFound();
@@ -160,6 +173,7 @@ export default async function LabSignalsArticlePage({
         <LabSignalsArticleClient 
           article={article}
           articleUrl={articleUrl}
+          isPreview={isPreview}
         />
 
         {/* Related Articles */}

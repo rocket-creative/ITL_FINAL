@@ -91,6 +91,12 @@ export const labSignalsArticles = [
     relatedPages: ["/knockin-mouse-models", "/transgenic-mouse-service"]
   },
   {
+    title: "BAC Transgenic Mice: Large-Fragment Insertion Models for Gene Regulation and Disease Research",
+    slug: "bac-transgenic-mice-large-fragment-insertion-models",
+    category: "Technical Guide",
+    relatedPages: ["/transgenic-mouse-service", "/bac-to-bac-large-scale-targeting"]
+  },
+  {
     title: "Leveraging Mouse Models for Point Mutation Diseases: R&D Landscape",
     slug: "leveraging-mouse-models-for-point-mutation-diseases-r-d-landscape",
     category: "Industry Insights",

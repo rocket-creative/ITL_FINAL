@@ -82,6 +82,7 @@ export { default as HubSpotForm } from './HubSpotFormSimple';
 // Newsletter Components
 export { default as NewsletterGate } from './NewsletterGate';
 export { default as SocialShare } from './SocialShare';
+export { default as IngeniousAd } from './IngeniousAd';
 
 // Catalog Search
 export { default as CatalogSearch } from './CatalogSearch';
