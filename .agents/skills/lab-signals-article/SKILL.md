@@ -85,6 +85,38 @@ No env vars or Vercel setup. Add article, push to main, deploy. Articles auto-re
 - **No hyphens** in copy (per Cursor rules)
 - **No AI giveaways**: "leverage", "dive into", "it's important to note", etc.
 
+## References (Required for Articles With Citations)
+
+When an article cites sources, include a formal References section at the end. **All Lab Signals articles with citations must follow this format.**
+
+### Structure
+
+Wrap the entire References section in the `lab-signals-references` div (enables tight, smaller font styling):
+
+```html
+<div class="lab-signals-references"><p><strong>References</strong></p><ol>
+<li>Author A, et al. Title. <em>Journal</em>. Year;vol(issue):pages. <a href="https://doi.org/XXX" target="_blank" rel="noopener noreferrer">doi:XXX</a></li>
+<li>...</li>
+</ol></div>
+```
+
+### Format Per Reference
+
+- **Style**: Author(s). Title. <em>Journal</em>. Year;vol(issue):pages.
+- **Links**: Every reference must have a clickable link. Use DOI (`https://doi.org/10.XXXX/...`) or PubMed (`https://pubmed.ncbi.nlm.nih.gov/XXXXX/`) when available.
+- **Link attributes**: Always include `target="_blank" rel="noopener noreferrer"`.
+- **Journal abbreviations**: Use standard abbreviations (e.g. <em>Nat Commun</em>, <em>Sci Rep</em>, <em>Proc Natl Acad Sci USA</em>).
+
+### Example
+
+```html
+<li>Mogi K, Tomita H, Yoshihara M, et al. Advances in bacterial artificial chromosome (BAC) transgenic mice for gene analysis and disease research. <em>Gene</em>. 2025;934:149014. <a href="https://doi.org/10.1016/j.gene.2024.149014" target="_blank" rel="noopener noreferrer">doi:10.1016/j.gene.2024.149014</a></li>
+```
+
+### Styling (Automatic)
+
+The `lab-signals-references` class applies: smaller font (0.9rem), tight line-height (1.35), minimal spacing between items. No extra markup needed.
+
 ## Related Articles
 
 - **Same category**: Up to 3 related articles shown in RelatedArticles (same category, different slug)
@@ -117,6 +149,7 @@ No env vars or Vercel setup. Add article, push to main, deploy. Articles auto-re
 - [ ] Added to `labSignalsArticles` in LabSignalsSignup if cross-linking desired
 - [ ] No hyphens in copy
 - [ ] No AI giveaway phrases
+- [ ] **If article has citations**: References section wrapped in `<div class="lab-signals-references">`, each ref has DOI/PubMed link with `target="_blank" rel="noopener noreferrer"`
 
 ## Content Gating
 

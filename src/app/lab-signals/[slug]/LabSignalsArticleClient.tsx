@@ -199,6 +199,24 @@ export default function LabSignalsArticleClient({
           color: ${BRAND.gold};
         }
         
+        /* References: tight, smaller font (best practice for web) */
+        .lab-signals-references {
+          font-size: 0.9rem;
+          line-height: 1.4;
+          margin-top: 2em;
+        }
+        .lab-signals-references p {
+          margin-bottom: 0.5em;
+        }
+        .lab-signals-references ol {
+          margin-bottom: 0;
+          padding-left: 1.5em;
+        }
+        .lab-signals-references li {
+          margin-bottom: 0.35em;
+          line-height: 1.35;
+        }
+        
         /* Links */
         .lab-signals-article a {
           color: #0066cc;
