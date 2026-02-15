@@ -152,18 +152,8 @@ const comparisonData = [
   { factor: "Timeline", conventional: "Faster to study ready", conditional: "Additional breeding required" }
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Reinartz DM, Escamilla-Rivera V, Shao M, Tribble SL, Caulin C, Wilson JE.",
-    year: "2025",
-    title: "Impact of absent in melanoma 2 on head and neck squamous cell carcinoma development.",
-    journal: "J Immunol",
-    volume: "vkaf224",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41042265/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/conventional-knockout-mouse-models');
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';

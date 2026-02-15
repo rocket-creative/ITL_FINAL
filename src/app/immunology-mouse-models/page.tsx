@@ -167,26 +167,8 @@ const technicalData = [
   }
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Kise M et al.",
-    year: "2025",
-    title: "The exacerbating role of Ras guanyl releasing protein 1 in idiopathic inflammatory myopathies.",
-    journal: "Clinical Immunology",
-    volume: "282: 110636",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41197821/"
-  },
-  {
-    authors: "Luo PY et al.",
-    year: "2025",
-    title: "Autophagy of Kupffer cells modulates CD8 T cell activation in primary biliary cholangitis.",
-    journal: "Gut",
-    volume: "74(3): 496-509",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41371935/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/immunology-mouse-models');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

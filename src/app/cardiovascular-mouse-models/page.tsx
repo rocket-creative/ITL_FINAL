@@ -182,33 +182,8 @@ const complexModelDesigns = [
   { name: "Humanized Targets", description: "Human gene expression enables testing of therapeutic antibodies or compounds designed for human targets." }
 ];
 
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Chen H et al.",
-    year: "2025",
-    title: "Novel Mouse Model of Coronary Atherosclerosis With Myocardial Infarction: Insights Into Human CAD.",
-    journal: "Circulation Research",
-    volume: "136(7): 679-692",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40485474/"
-  },
-  {
-    authors: "Xiao Y et al.",
-    year: "2025",
-    title: "The innate immune receptor NLRX1 is a novel required modulator for mPTP opening: implications for cardioprotection.",
-    journal: "Basic Research in Cardiology",
-    volume: "120(4): 617-634",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40536683/"
-  },
-  {
-    authors: "Meng Z et al.",
-    year: "2024",
-    title: "Adipose transplantation improves metabolism and atherosclerosis but not perivascular adipose tissue abnormality or vascular dysfunction in lipodystrophic Seipin null mice.",
-    journal: "American Journal of Physiology Cell Physiology",
-    volume: "326(5): C1356-C1368",
-    link: "https://pubmed.ncbi.nlm.nih.gov/38525541/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/cardiovascular-mouse-models');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

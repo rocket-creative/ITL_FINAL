@@ -115,26 +115,8 @@ const therapeuticApplications = [
   "Anti-VEGF testing for wet AMD"
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Xia F et al.",
-    year: "2025",
-    title: "CXCR3 Deficiency Alleviates Retinal Ganglion Cell Loss by Regulating Neuron Astrocyte Communication in a Mouse Model of Glaucoma.",
-    journal: "Investigative Ophthalmology & Visual Science",
-    volume: "66(3): 27",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41247127/"
-  },
-  {
-    authors: "Hoppe C et al.",
-    year: "2025",
-    title: "The alternative complement pathway drives neuroinflammation and neurodegeneration in mouse models of glaucoma and optic nerve injury.",
-    journal: "Neurobiology of Disease",
-    volume: "210: 106927",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41005572/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/ophthalmology-mouse-models');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

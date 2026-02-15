@@ -160,34 +160,8 @@ const experimentalConsiderations = [
   }
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Navarro HI, Daly AE, Rodriguez B, Wu S, Ngo KA, Fraser A, et al.",
-    year: "2025",
-    title: "NF-κB RelB suppresses the inflammatory gene expression programs of dendritic cells by competing with RelA for binding to target gene promoters.",
-    journal: "Cell Discov",
-    volume: "11(1): 13",
-    link: "https://pubmed.ncbi.nlm.nih.gov/39929805/"
-  },
-  {
-    authors: "Mohassel P, Hearn H, Rooney J, Zou Y, Johnson K, Norato G, et al.",
-    year: "2025",
-    title: "Collagen type VI regulates TGF-β bioavailability in skeletal muscle in mice.",
-    journal: "J Clin Invest",
-    volume: "135(9): e173354",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40309777/"
-  },
-  {
-    authors: "Hockemeyer K, Sakellaropoulos T, Chen X, Ivashkiv O, et al.",
-    year: "2024",
-    title: "The stress response regulator HSF1 modulates natural killer cell anti-tumour immunity.",
-    journal: "Nat Cell Biol",
-    volume: "26(10): 1734-1744",
-    link: "https://pubmed.ncbi.nlm.nih.gov/39223375/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/point-mutation-mice');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

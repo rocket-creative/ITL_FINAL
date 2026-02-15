@@ -115,26 +115,8 @@ const behavioralEndpoints = [
   "Nest building and activities of daily living"
 ];
 
-// Publications Data - All verified as using ITL-generated mouse models
-// PubMed links verified January 2026
-const publicationsData = [
-  {
-    authors: "Vacher CM et al.",
-    year: "2021",
-    title: "Placental endocrine function shapes cerebellar development and social behavior.",
-    journal: "Nature Neuroscience",
-    volume: "24(10): 1392-1401",
-    link: "https://pubmed.ncbi.nlm.nih.gov/34400844/"
-  },
-  {
-    authors: "Chakrabarti S et al.",
-    year: "2024",
-    title: "Touch sensation requires the mechanically gated ion channel ELKIN1.",
-    journal: "Science",
-    volume: "383(6686): 992-998",
-    link: "https://pubmed.ncbi.nlm.nih.gov/38422143/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/alzheimers-mouse-models');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

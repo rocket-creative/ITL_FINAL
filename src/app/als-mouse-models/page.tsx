@@ -94,18 +94,8 @@ const neuropathologyEndpoints = [
   "Gliosis: Astrocyte (GFAP) and microglial (Iba1) activation in spinal cord"
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Ionescu A et al.",
-    year: "2025",
-    title: "Muscle derived miR-126 regulates TDP-43 axonal local synthesis and NMJ integrity in ALS models.",
-    journal: "Nature Neuroscience",
-    volume: "28(4): 821-833",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41044342/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/als-mouse-models');
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';

@@ -118,26 +118,8 @@ const researchApplications = [
   }
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Mlynarczyk C et al.",
-    year: "2023",
-    title: "BTG1 mutation yields supercompetitive B cells primed for malignant transformation.",
-    journal: "Science",
-    volume: "379(6629): eabj0412",
-    link: "https://pubmed.ncbi.nlm.nih.gov/36656933/"
-  },
-  {
-    authors: "Reinartz DM, Escamilla-Rivera V, Shao M, Tribble SL, Caulin C, Wilson JE.",
-    year: "2025",
-    title: "Impact of absent in melanoma 2 on head and neck squamous cell carcinoma development.",
-    journal: "J Immunol",
-    volume: "vkaf224",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41042265/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/immuno-oncology-mouse-models');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

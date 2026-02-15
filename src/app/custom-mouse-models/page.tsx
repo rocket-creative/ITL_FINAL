@@ -138,30 +138,8 @@ const testimonialsData = [
   { quote: hussainTestimonial.quote, author: formatAuthorWithCredentials(hussainTestimonial), affiliation: hussainTestimonial.affiliation },
 ];
 
-// Publications Data - From main publications list
-const publicationsData = [
-  {
-    journal: "Sci Immunol",
-    title: "CLNS1A regulates genome stability and cell cycle progression to control CD4 T cell function and autoimmunity.",
-    year: "2025",
-    authors: "Wang L, Noyer L, Jishage M, et al.",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40540585/"
-  },
-  {
-    journal: "J Neurosci",
-    title: "Increased neuronal expression of the early endosomal adaptor APPL1 leads to endosomal and synaptic dysfunction with cholinergic neurodegeneration.",
-    year: "2025",
-    authors: "Jiang Y, Sachdeva K, Goulbourne CN, et al.",
-    link: "https://pubmed.ncbi.nlm.nih.gov/39345644/"
-  },
-  {
-    journal: "JCI Insight",
-    title: "12-Lipoxygenase inhibition delays onset of autoimmune diabetes in human gene replacement mice.",
-    year: "2024",
-    authors: "Nargis T, Muralidharan C, Enriquez JR, et al.",
-    link: "https://pubmed.ncbi.nlm.nih.gov/39531315/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/custom-mouse-models');
 
 // FAQ Data
 const faqData = [

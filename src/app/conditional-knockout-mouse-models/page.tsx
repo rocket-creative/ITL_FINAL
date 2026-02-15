@@ -136,18 +136,8 @@ const truViewData = {
   ]
 };
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Wang L, Noyer L, Jishage M, Wang YH, Tao AY, McDermott M, et al.",
-    year: "2025",
-    title: "CLNS1A regulates genome stability and cell cycle progression to control CD4 T cell function and autoimmunity.",
-    journal: "Sci Immunol",
-    volume: "10(108): eadq8860",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40540585/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/conditional-knockout-mouse-models');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

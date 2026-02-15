@@ -66,26 +66,8 @@ const phenotypingMethods = [
   { category: "Body Composition", tests: ["Body weight and food intake", "Body composition (MRI, DEXA)", "Indirect calorimetry", "Activity monitoring"] }
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Turner MB et al.",
-    year: "2025",
-    title: "Adipocyte specific deletion of the mineralocorticoid receptor improves glucose homeostasis and associates with FGF21 adiponectin signalling in obese male mice.",
-    journal: "Diabetes, Obesity and Metabolism",
-    volume: "27(5): 2341-2355",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41153082/"
-  },
-  {
-    authors: "Nargis T, Muralidharan C, Enriquez JR, Wang JE, Kaylan K, Chakraborty A, et al.",
-    year: "2024",
-    title: "12-Lipoxygenase inhibition delays onset of autoimmune diabetes in human gene replacement mice.",
-    journal: "JCI Insight",
-    volume: "24(9): e185299",
-    link: "https://pubmed.ncbi.nlm.nih.gov/39531315/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/diabetes-mouse-models');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

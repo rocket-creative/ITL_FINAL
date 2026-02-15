@@ -71,26 +71,8 @@ const phenotypingMethods = [
   { category: "Lesion Characterization", tests: ["Histology: H&E, trichrome for fibrosis, von Kossa for calcification", "Immunohistochemistry: Macrophage markers, smooth muscle actin", "Lesion composition: Necrotic core, fibrous cap thickness"] }
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Chen H et al.",
-    year: "2025",
-    title: "Novel Mouse Model of Coronary Atherosclerosis With Myocardial Infarction: Insights Into Human CAD.",
-    journal: "Circulation Research",
-    volume: "136(7): 679-692",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40485474/"
-  },
-  {
-    authors: "Meng Z et al.",
-    year: "2024",
-    title: "Adipose transplantation improves metabolism and atherosclerosis but not perivascular adipose tissue abnormality or vascular dysfunction in lipodystrophic Seipin null mice.",
-    journal: "American Journal of Physiology Cell Physiology",
-    volume: "326(5): C1356-C1368",
-    link: "https://pubmed.ncbi.nlm.nih.gov/38525541/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/atherosclerosis-mouse-models');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

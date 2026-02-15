@@ -62,18 +62,8 @@ const phenotypingMethods = [
   { category: "Immune Cell Analysis", tests: ["Flow cytometry: Lymphocyte populations, activation markers, Tregs", "Tissue infiltration: Immunohistochemistry for immune cells", "Functional assays: Proliferation, cytokine production"] }
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Tan L et al.",
-    year: "2024",
-    title: "FoxO1 Deficiency in Monocytic Myeloid Derived Suppressor Cells Exacerbates B Cell Dysfunction in Systemic Lupus Erythematosus.",
-    journal: "Arthritis & Rheumatology",
-    volume: "76(12): 1834-1846",
-    link: "https://pubmed.ncbi.nlm.nih.gov/39492682/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/autoimmune-disease-mice');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

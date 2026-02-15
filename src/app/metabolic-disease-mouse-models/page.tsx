@@ -54,12 +54,8 @@ const strainConsiderations = [
   { strain: "129 strains", characteristics: "Variable metabolic phenotypes depending on substrain" }
 ];
 
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  { authors: "Turner MB et al.", year: "2025", title: "Adipocyte specific deletion of the mineralocorticoid receptor improves glucose homeostasis.", journal: "Diabetes, Obesity and Metabolism", volume: "27(5): 2341-2355", link: "https://pubmed.ncbi.nlm.nih.gov/41153082/" },
-  { authors: "Philippe MA et al.", year: "2025", title: "BMAL2 controls adipose tissue inflammation and metabolic adaptation during obesity.", journal: "Metabolism", volume: "174: 156396", link: "https://pubmed.ncbi.nlm.nih.gov/40983272/" },
-  { authors: "Vacher CM et al.", year: "2021", title: "Placental endocrine function shapes cerebellar development and social behavior.", journal: "Nature Neuroscience", volume: "24(10): 1392-1401", link: "https://pubmed.ncbi.nlm.nih.gov/34400844/" }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/metabolic-disease-mouse-models');
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';

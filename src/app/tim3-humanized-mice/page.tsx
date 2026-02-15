@@ -132,25 +132,8 @@ const immuneCharacterization = [
   { test: "Myeloid Expression", description: "TIM3 on dendritic cells and macrophages" }
 ];
 
-// Publications - From main publications list (immuno-oncology relevant)
-const publications = [
-  {
-    authors: "Mlynarczyk C et al.",
-    year: "2023",
-    title: "BTG1 mutation yields supercompetitive B cells primed for malignant transformation.",
-    journal: "Science",
-    volume: "379(6629): eabj0412",
-    link: "https://pubmed.ncbi.nlm.nih.gov/36656933/"
-  },
-  {
-    authors: "Reinartz DM, Escamilla-Rivera V, Shao M, Tribble SL, Caulin C, Wilson JE.",
-    year: "2025",
-    title: "Impact of absent in melanoma 2 on head and neck squamous cell carcinoma development.",
-    journal: "J Immunol",
-    volume: "vkaf224",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41042265/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publications = getPublicationsForPage('/tim3-humanized-mice');
 
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

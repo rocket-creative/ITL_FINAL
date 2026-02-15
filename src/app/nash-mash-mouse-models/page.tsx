@@ -117,26 +117,8 @@ const therapeuticTargets = [
   "Anti fibrotic therapies"
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Zhou Y et al.",
-    year: "2025",
-    title: "FAM83A acts as an amplifier for lipogenic signaling to facilitate the pathogenesis of metabolic dysfunction associated steatohepatitis.",
-    journal: "Metabolism",
-    volume: "166: 156164",
-    link: "https://pubmed.ncbi.nlm.nih.gov/41338474/"
-  },
-  {
-    authors: "Xu D et al.",
-    year: "2025",
-    title: "Decreased LONP1 expression exacerbates MASH induced liver fibrosis via elevated orotic acid levels.",
-    journal: "Journal of Hepatology",
-    volume: "Online ahead of print",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40784490/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/nash-mash-mouse-models');
 
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials

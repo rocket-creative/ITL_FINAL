@@ -12,10 +12,11 @@
     "test:redirects:prod": "./test-redirects.sh https://www.genetargeting.com",
     "submit:google": "node scripts/submit-to-google.js",
     "verify:launch": "node scripts/verify-launch.js",
-    "prelaunch": "npm run build && npm run verify:launch"
+    "prelaunch": "npm run build && npm run verify-launch"
   },
   "dependencies": {
     "@vercel/og": "^0.8.6",
+    "gsap": "^3.12.5",
     "mammoth": "^1.11.0",
     "next": "^16.1.6",
     "react": "^19.2.4",

@@ -65,18 +65,8 @@ const neuropathologyEndpoints = [
   "Neuroinflammation: Microglial activation (Iba1), astrogliosis (GFAP), and inflammatory markers"
 ];
 
-// Publications Data
-// Publications Data - Verified with PubMed links (January 2026)
-const publicationsData = [
-  {
-    authors: "Lunn MO et al.",
-    year: "2025",
-    title: "Variants in Lrrk2 and Snca deficiency do not alter the course of primary encephalitis due to neurotropic reovirus T3D in newborn mice.",
-    journal: "PLoS One",
-    volume: "20(5): e0318685",
-    link: "https://pubmed.ncbi.nlm.nih.gov/40471880/"
-  }
-];
+import { getPublicationsForPage } from '@/data/pagePublications';
+const publicationsData = getPublicationsForPage('/parkinsons-mouse-models');
 
 // Testimonial Data
 // Verified testimonial from master data - https://www.genetargeting.com/testimonials
