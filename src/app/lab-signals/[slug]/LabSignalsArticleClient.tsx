@@ -211,6 +211,7 @@ export default function LabSignalsArticleClient({
         .lab-signals-references ol {
           margin-bottom: 0;
           padding-left: 1.5em;
+          list-style-type: decimal;
         }
         .lab-signals-references li {
           margin-bottom: 0.35em;
