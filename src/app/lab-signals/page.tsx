@@ -67,6 +67,54 @@ export default function LabSignalsPage() {
           min-height: 100%;
           height: auto !important;
         }
+        /* Lab Signals hero - mobile first; desktop (md: 810px): content panel ~55% width, right-justified */
+        @media (min-width: 810px) {
+          .lab-signals-hero {
+            flex-direction: row !important;
+            margin: 0 !important;
+            min-height: 520px !important;
+            padding: 80px 40px !important;
+          }
+          .lab-signals-hero-spacer {
+            display: block !important;
+            flex: 1 1 0% !important;
+            min-width: 0 !important;
+          }
+          .lab-signals-hero-content {
+            width: 55% !important;
+            max-width: 500px !important;
+            height: auto !important;
+            align-self: flex-end !important;
+            flex-shrink: 0 !important;
+            padding: 40px 36px 40px 48px !important;
+            text-align: right !important;
+            border-radius: 10px !important;
+            background-color: rgba(255,255,255,0.4) !important;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06) !important;
+            border: 1px solid rgba(255,255,255,0.5) !important;
+            backdrop-filter: blur(12px) !important;
+          }
+          .lab-signals-hero-badge {
+            margin-left: auto !important;
+            margin-right: 0 !important;
+          }
+          .lab-signals-hero-buttons {
+            justify-content: flex-end !important;
+          }
+        }
+        @media (max-width: 809px) {
+          .lab-signals-hero-spacer {
+            display: none !important;
+          }
+          .lab-signals-video-section {
+            min-height: 280px !important;
+          }
+        }
+        @media (min-width: 810px) {
+          .lab-signals-video-section {
+            min-height: 400px !important;
+          }
+        }
       `}</style>
       <div style={{ backgroundColor: BRAND.white, minHeight: '100%' }}>
         {/* Page wrapper - 1200px max for all sections with thin border */}
@@ -99,7 +147,7 @@ export default function LabSignalsPage() {
                 fontSize: '.9rem',
                 fontWeight: 600,
                 textDecoration: 'none',
-                padding: '10px 20px',
+                padding: '14px 20px',
                 borderRadius: '6px',
                 border: `2px solid ${BRAND.black}`,
               }}
@@ -108,32 +156,60 @@ export default function LabSignalsPage() {
             </Link>
           </div>
 
-          {/* Hero - Background Image with Overlay Content */}
-          <div className="relative flex flex-col md:flex-row items-stretch m-4 md:m-6 rounded-lg overflow-hidden"
+          {/* Hero - Full Width Background Image with Right-Justified Content */}
+          <div 
+            className="lab-signals-hero"
             style={{
-              minHeight: '450px',
-            }}>
-            
-            {/* Left side - Background Image */}
+              display: 'flex',
+              flexDirection: 'column',
+              position: 'relative',
+              minHeight: '480px',
+              margin: 0,
+              padding: '48px 24px',
+              overflow: 'hidden',
+              boxShadow: '0 4px 24px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04)',
+              backgroundImage: 'url(/images/lab-signals-header.png)',
+              backgroundSize: 'contain',
+              backgroundPosition: 'left center',
+              backgroundRepeat: 'no-repeat',
+              backgroundColor: '#f8f8f8',
+            }}
+          >
+            {/* Spacer - pushes content to right on desktop */}
             <div 
-              className="w-full md:w-3/5 min-h-[250px] md:min-h-full"
-              style={{
-                backgroundImage: 'url(/images/lab-signals-header.png)',
-                backgroundSize: 'contain',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundColor: '#f8f8f8',
-              }}
+              className="lab-signals-hero-spacer" 
+              aria-hidden 
+              style={{ display: 'none' }}
             />
             
-            {/* Right Content Panel */}
-            <div className="w-full md:w-2/5 flex flex-col justify-center px-8 py-10 md:px-10 md:py-12 bg-white/60 text-center md:text-left">
-              <div className="animate-initial animate-fade-in-up inline-flex items-center gap-2 mx-auto md:mx-0 mb-4"
+            {/* Right Content Panel - constrained width, NOT full height (inline styles to avoid overrides) */}
+            <div 
+              className="lab-signals-hero-content"
+              style={{
+                width: '100%',
+                maxWidth: '100%',
+                height: 'auto',
+                alignSelf: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                padding: '28px 20px',
+                backgroundColor: 'rgba(255,255,255,0.4)',
+                backdropFilter: 'blur(12px)',
+                textAlign: 'center',
+                borderRadius: '10px',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06)',
+                border: '1px solid rgba(255,255,255,0.5)',
+              }}
+            >
+              <div className="animate-initial animate-fade-in-up lab-signals-hero-badge inline-flex items-center gap-2 mx-auto mb-4"
                 style={{
                   backgroundColor: BRAND.gold,
-                  padding: '6px 16px',
-                  borderRadius: '20px',
+                  padding: '8px 18px',
+                  borderRadius: '24px',
                   width: 'fit-content',
+                  letterSpacing: '0.08em',
+                  boxShadow: '0 2px 8px rgba(251,187,0,0.25)',
                 }}>
                 <IconMail size={14} color={BRAND.black} />
                 <span style={{ 
@@ -151,10 +227,11 @@ export default function LabSignalsPage() {
               <h1 className="animate-initial animate-fade-in-up" style={{
                 color: BRAND.black,
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+                fontSize: 'clamp(1.9rem, 4vw, 2.9rem)',
                 fontWeight: 700,
                 lineHeight: 1.1,
-                marginBottom: '12px',
+                marginBottom: '10px',
+                letterSpacing: '-0.02em',
               }}>
                 Lab Signals
               </h1>
@@ -162,16 +239,17 @@ export default function LabSignalsPage() {
               <h2 className="animate-initial animate-fade-in-up" style={{
                 color: BRAND.darkGray,
                 fontFamily: 'Lato, sans-serif',
-                fontSize: 'clamp(1rem, 2vw, 1.3rem)',
+                fontSize: 'clamp(1.05rem, 2vw, 1.25rem)',
                 fontWeight: 400,
-                lineHeight: 1.4,
-                marginBottom: '24px',
+                lineHeight: 1.5,
+                marginBottom: '28px',
+                letterSpacing: '0.01em',
               }}>
                 Your Biweekly Source for Life Science Research Insights
               </h2>
 
               {/* Subscribe Buttons - visible in content panel */}
-              <div className="animate-initial animate-fade-in-up flex gap-3 flex-wrap justify-center md:justify-start">
+              <div className="animate-initial animate-fade-in-up lab-signals-hero-buttons flex gap-3 flex-wrap justify-center">
                 <a
                   href="#signup"
                   style={{
@@ -180,17 +258,18 @@ export default function LabSignalsPage() {
                     justifyContent: 'center',
                     backgroundColor: BRAND.gold,
                     color: BRAND.black,
-                    padding: '12px 24px',
-                    borderRadius: '6px',
+                    padding: '16px 28px',
+                    borderRadius: '8px',
                     fontFamily: 'Poppins, sans-serif',
-                    fontSize: '.85rem',
+                    fontSize: '.9rem',
                     fontWeight: 600,
+                    letterSpacing: '0.03em',
                     textDecoration: 'none',
                     transition: 'transform 0.2s ease, box-shadow 0.2s ease',
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(255,187,0,0.4)';
+                    e.currentTarget.style.boxShadow = '0 6px 20px rgba(251,187,0,0.35)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)';
@@ -210,22 +289,25 @@ export default function LabSignalsPage() {
                     gap: '6px',
                     backgroundColor: BRAND.white,
                     color: BRAND.black,
-                    padding: '12px 20px',
-                    borderRadius: '6px',
+                    padding: '16px 22px',
+                    borderRadius: '8px',
                     fontFamily: 'Poppins, sans-serif',
-                    fontSize: '.85rem',
+                    fontSize: '.9rem',
                     fontWeight: 500,
+                    letterSpacing: '0.02em',
                     textDecoration: 'none',
                     border: `1px solid ${BRAND.borderGray}`,
-                    transition: 'background-color 0.2s ease, box-shadow 0.2s ease',
+                    transition: 'all 0.2s ease',
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = BRAND.lightGray;
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
+                    e.currentTarget.style.borderColor = BRAND.mediumGray;
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = BRAND.white;
                     e.currentTarget.style.boxShadow = 'none';
+                    e.currentTarget.style.borderColor = BRAND.borderGray;
                   }}
                 >
                   <RSSIcon color={BRAND.black} /> RSS
@@ -318,29 +400,30 @@ export default function LabSignalsPage() {
           </div>
         </section>
 
-        {/* Section: Video */}
-        <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px' }}>
-          <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <div style={{
-            borderRadius: '8px',
-            overflow: 'hidden',
-            boxShadow: '0 8px 30px rgba(0,0,0,0.12)',
-          }}>
-            <video
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-              }}
-              controls
-              preload="metadata"
-              poster="/images/lab-signals-header.png"
-            >
-              <source src="/videos/lab-signals-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
+        {/* Section: Video - Full width and height */}
+        <section className="lab-signals-video-section" style={{ 
+          backgroundColor: BRAND.lightGray, 
+          padding: 0, 
+          width: '100%',
+          position: 'relative',
+          aspectRatio: '16/9',
+          minHeight: '280px',
+        }}>
+          <video
+            className="animate-initial animate-fade-in-up"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+            }}
+            controls
+            preload="metadata"
+            poster="/images/lab-signals-header.png"
+          >
+            <source src="/videos/lab-signals-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </section>
 
         {/* Section: Signup */}
@@ -364,13 +447,7 @@ export default function LabSignalsPage() {
               Why Researchers Like You Stay Connected
             </h2>
             
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr',
-              gap: '20px',
-              textAlign: 'left',
-            }}
-            className="md:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 text-left">
               <div className="animate-initial animate-fade-in-up">
                 <p style={{
                   color: BRAND.darkGray,
@@ -445,10 +522,12 @@ export default function LabSignalsPage() {
             marginBottom: '30px' 
           }}>
             <input
-              type="text"
+              type="search"
               placeholder="Search articles..."
+              aria-label="Search articles"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              className="min-h-[44px] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black/30"
               style={{
                 padding: '12px 16px',
                 fontFamily: 'Lato, sans-serif',
@@ -466,13 +545,13 @@ export default function LabSignalsPage() {
           </div>
 
           {/* Category Filter */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '30px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '30px' }}>
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 style={{
-                  padding: '8px 16px',
+                  padding: '12px 20px',
                   fontFamily: 'Poppins, sans-serif',
                   fontSize: '.8rem',
                   fontWeight: 500,
@@ -564,7 +643,7 @@ export default function LabSignalsPage() {
                     justifyContent: 'center',
                     backgroundColor: BRAND.gold,
                     color: BRAND.black,
-                    padding: '10px 20px',
+                    padding: '12px 24px',
                     borderRadius: '6px',
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '.85rem',
@@ -586,7 +665,7 @@ export default function LabSignalsPage() {
                 onClick={() => { setSelectedCategory('All'); setSearchQuery(''); }}
                 style={{
                   marginTop: '12px',
-                  padding: '10px 20px',
+                  padding: '14px 24px',
                   backgroundColor: BRAND.black,
                   color: BRAND.white,
                   fontFamily: 'Poppins, sans-serif',
@@ -610,16 +689,18 @@ export default function LabSignalsPage() {
         {/* Section: Final CTA - Gold */}
         <section style={{ backgroundColor: BRAND.gold, padding: '40px 20px' }}>
           <div className="animate-initial animate-fade-in-up" style={{ maxWidth: '550px', margin: '0 auto', textAlign: 'center' }}>
-            <IconMail size={32} color={BRAND.black} />
-            <h2 style={{
-              color: BRAND.black,
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: 'clamp(1.2rem, 2.5vw, 1.4rem)',
-              fontWeight: 700,
-              margin: '12px 0 6px',
-            }}>
-              Join Lab Signals Today
-            </h2>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', marginBottom: '6px' }}>
+              <IconMail size={32} color={BRAND.black} style={{ flexShrink: 0 }} />
+              <h2 style={{
+                color: BRAND.black,
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: 'clamp(1.2rem, 2.5vw, 1.4rem)',
+                fontWeight: 700,
+                margin: 0,
+              }}>
+                Join Lab Signals Today
+              </h2>
+            </div>
             <p style={{ 
               color: 'rgba(0,0,0,0.7)', 
               fontFamily: 'Lato, sans-serif',
@@ -646,7 +727,7 @@ export default function LabSignalsPage() {
                   fontSize: '.9rem',
                   fontWeight: 600,
                   textDecoration: 'none',
-                  padding: '12px 24px',
+                  padding: '14px 24px',
                   borderRadius: '6px',
                   border: `2px solid ${BRAND.black}`,
                 }}

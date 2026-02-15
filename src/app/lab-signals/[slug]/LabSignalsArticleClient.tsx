@@ -217,6 +217,9 @@ export default function LabSignalsArticleClient({
           margin-bottom: 0.35em;
           line-height: 1.35;
         }
+        .lab-signals-references li::marker {
+          color: ${BRAND.black};
+        }
         
         /* Links */
         .lab-signals-article a {
