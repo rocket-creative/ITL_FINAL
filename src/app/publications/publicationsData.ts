@@ -315,14 +315,6 @@ export const publicationsByYear: PublicationsByYear = {
       link: "https://pubmed.ncbi.nlm.nih.gov/38705389/"
     },
     {
-      authors: "Sabui S, Anthonymuthu S, Ramamoorthy K, Skupsky J, Jennings TSK, Rahmatpanah F, Fleckenstein JM, Said HM.",
-      year: 2024,
-      title: "Effect of knocking out mouse Slc44a4 on colonic uptake of the microbiota-generated thiamine pyrophosphate and on colon physiology",
-      journal: "Am J Physiol Gastrointest Liver Physiol",
-      volume: "327(1): G36-G46",
-      link: "https://pubmed.ncbi.nlm.nih.gov/38713615/"
-    },
-    {
       authors: "Corral-Sarasa J, Manuel Martínez-Gálvez J, González-García P, Wendling O, Jiménez-Sánchez L, López-Herrador S, Quinzii CM, Díaz-Casado ME, López LC.",
       year: 2024,
       title: "4-Hydroxybenzoic acid rescues multisystemic disease and perinatal lethality in a mouse model of mitochondrial disease",
@@ -1343,14 +1335,6 @@ export const publicationsByYear: PublicationsByYear = {
       journal: "JCSM Rapid Commun",
       volume: "4(1): 40-56.",
       link: "https://pubmed.ncbi.nlm.nih.gov/34212132/"
-    },
-    {
-      authors: "Ishii Y, Takasu S, Grúz P, Masumura K, Ogawa K, Nohmi T, Umemura T.",
-      year: 2021,
-      title: "The Role of DNA Polymerase ζ in Benzo[a]pyrene-induced Mutagenesis in the Mouse Lung",
-      journal: "Mutagenesis",
-      volume: "36(2): 155-164.",
-      link: "https://pubmed.ncbi.nlm.nih.gov/33544859/"
     },
     {
       authors: "Adelaja A, Taylor B, Sheu KM, Liu Y, Luecke S, Hoffmann A.",
