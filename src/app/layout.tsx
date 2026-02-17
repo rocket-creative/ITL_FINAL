@@ -96,6 +96,16 @@ export default function RootLayout({
                     });
                     return false;
                   };
+
+                  // HubSpot iframe form submission listener → fires Google Ads conversion
+                  // Required because HubSpot forms are embedded iframes — onclick won't work
+                  window.addEventListener('message', function(event) {
+                    if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+                      gtag('event', 'conversion', {
+                        'send_to': '${GOOGLE_ADS_ID}/fS_cCPqFqu0aEMOV4MQ_'
+                      });
+                    }
+                  });
                 `,
               }}
             />
