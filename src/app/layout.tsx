@@ -15,6 +15,8 @@ const poppins = Poppins({
 
 // Google Analytics 4 Measurement ID
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '';
+// Google Ads Conversion ID
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || '';
 
 export const metadata: Metadata = {
   title: {
@@ -53,22 +55,23 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <head>
-        {/* Google tag (gtag.js) - placed immediately after head for Google verification */}
-        {GA_MEASUREMENT_ID && (
+        {/* Google tag (gtag.js) - single loader for GA4 + Google Ads */}
+        {(GA_MEASUREMENT_ID || GOOGLE_ADS_ID) && (
           <>
             <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID || GOOGLE_ADS_ID}`}
               strategy="beforeInteractive"
             />
             <Script
-              id="google-analytics"
+              id="google-tag"
               strategy="beforeInteractive"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${GA_MEASUREMENT_ID}');
+                  ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}');` : ''}
+                  ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
                 `,
               }}
             />

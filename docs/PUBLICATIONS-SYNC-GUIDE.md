@@ -2,6 +2,16 @@
 
 **Purpose:** Ensure page-specific publications from approved Google docs (content files) correctly appear on the built site.
 
+## Full Sync from Master List (Feb 2026)
+
+The master publications list lives at `~/Downloads/publications.md`. To fully sync:
+
+```bash
+node scripts/sync-publications.js --full
+```
+
+This regenerates `src/app/publications/publicationsData.ts` from the master markdown. The script parses all `## YYYY Publications` sections and converts each entry to the Publication format. Run after updating the master list.
+
 ## The Problem
 
 - **Source of truth:** `src/content/pages/*.md` files contain the approved "Selected Publications" from Google docs
