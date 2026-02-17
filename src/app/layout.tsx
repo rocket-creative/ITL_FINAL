@@ -81,6 +81,21 @@ export default function RootLayout({
                   gtag('js', new Date());
                   ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}');` : ''}
                   ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
+
+                  // Google Ads conversion reporting function for onclick tracking
+                  // Usage: onclick="return gtag_report_conversion('https://destination-url')"
+                  window.gtag_report_conversion = function(url) {
+                    var callback = function() {
+                      if (typeof(url) !== 'undefined') {
+                        window.location = url;
+                      }
+                    };
+                    gtag('event', 'conversion', {
+                      'send_to': '${GOOGLE_ADS_ID}/fS_cCPqFqu0aEMOV4MQ_',
+                      'event_callback': callback
+                    });
+                    return false;
+                  };
                 `,
               }}
             />

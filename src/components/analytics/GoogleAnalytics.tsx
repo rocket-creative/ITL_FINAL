@@ -25,6 +25,10 @@ import { useEffect, Suspense } from 'react';
 // and https://ads.google.com (Google Ads)
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-XXXXXXXXXX';
+// Conversion labels from Google Ads → Goals → Conversions
+// Format: AW-XXXXXXXXXX/LABEL_STRING
+const GOOGLE_ADS_QUOTE_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_QUOTE_LABEL || '';
+const GOOGLE_ADS_CONTACT_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONTACT_LABEL || '';
 
 // Declare gtag on window
 declare global {
@@ -35,6 +39,8 @@ declare global {
       params?: Record<string, unknown>
     ) => void;
     dataLayer: unknown[];
+    // Google Ads onclick conversion function (defined in layout.tsx)
+    gtag_report_conversion: (url?: string) => false;
   }
 }
 
@@ -250,9 +256,13 @@ export function trackFormSubmission(
     ...formData,
   });
 
-  // Also track as a conversion in Google Ads
+  // Also track as a conversion in Google Ads — uses real label from Google Ads account
+  const sendTo = GOOGLE_ADS_QUOTE_LABEL
+    ? `${GOOGLE_ADS_ID}/${GOOGLE_ADS_QUOTE_LABEL}`
+    : GOOGLE_ADS_ID;
+
   gtag('event', 'conversion', {
-    send_to: `${GOOGLE_ADS_ID}/form_submit`,
+    send_to: sendTo,
     value: 1.0,
     currency: 'USD',
   });
@@ -288,9 +298,13 @@ export function trackQuoteRequest(
     service_type: serviceType,
   });
 
-  // Track as Google Ads conversion
+  // Track as Google Ads conversion — uses real label from Google Ads account
+  const sendTo = GOOGLE_ADS_QUOTE_LABEL
+    ? `${GOOGLE_ADS_ID}/${GOOGLE_ADS_QUOTE_LABEL}`
+    : GOOGLE_ADS_ID;
+
   gtag('event', 'conversion', {
-    send_to: `${GOOGLE_ADS_ID}/quote_request`,
+    send_to: sendTo,
     value: 100,
     currency: 'USD',
   });
@@ -306,9 +320,13 @@ export function trackContactSubmission(
     inquiry_type: inquiryType,
   });
 
-  // Track as Google Ads conversion
+  // Track as Google Ads conversion — uses real label from Google Ads account
+  const sendTo = GOOGLE_ADS_CONTACT_LABEL
+    ? `${GOOGLE_ADS_ID}/${GOOGLE_ADS_CONTACT_LABEL}`
+    : GOOGLE_ADS_ID;
+
   gtag('event', 'conversion', {
-    send_to: `${GOOGLE_ADS_ID}/contact`,
+    send_to: sendTo,
   });
 }
 
