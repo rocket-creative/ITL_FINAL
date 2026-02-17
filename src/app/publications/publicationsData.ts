@@ -2950,6 +2950,14 @@ export const publicationsByYear: PublicationsByYear = {
   ],
   "2016": [
     {
+      authors: "Kazerounian S, Ciarlini PD, Yuan D, Ghazvinian R, Alberich-Jorda M, Joshi M, Zhang H, Beggs AH, Gazda HT.",
+      year: 2016,
+      title: "Development of Soft Tissue Sarcomas in Ribosomal Proteins L5 and S24 Heterozygous Mice",
+      journal: "J Cancer",
+      volume: "7(1): 32-6",
+      link: "https://www.ncbi.nlm.nih.gov/pubmed/26722357"
+    },
+    {
       authors: "Fuqua BK, Dunaief JL, Vulpe CD, Anderson GJ, Wang H, Chen H.",
       year: 2016,
       title: "Hephaestin and ceruloplasmin facilitate iron metabolism in the mouse kidney",
@@ -3350,7 +3358,7 @@ export const publicationsByYear: PublicationsByYear = {
       link: "https://www.ncbi.nlm.nih.gov/pubmed/26697751"
     },
     {
-      authors: "Alavi MV, Mao M, PawKazerounian S, Ciarlini PD, Yuan D, Ghazvinian R, Alberich-Jorda M, Joshi M, Zhang H, Beggs AH, Gazda HT. 2016. [Development of Soft Tissue Sarcomas in Ribosomal Proteins L5 and S24 Heterozygous Mice](https://www.ncbi.nlm.nih.gov/pubmed/26722357). J Cancer 7(1): 32-6.likowski BT, Kvezereli M, Duncan JL, Libby RT, John SW, Gould DB.",
+      authors: "Alavi MV, Mao M, Pawlikowski BT, Kvezereli M, Duncan JL, Libby RT, John SW, Gould DB.",
       year: 2016,
       title: "Col4a1 mutations cause progressive retinal neovascular defects and retinopathy.",
       journal: "Sci Rep6: 18602",
@@ -3964,6 +3972,14 @@ export const publicationsByYear: PublicationsByYear = {
   ],
   "2013": [
     {
+      authors: "Zheng H, Gupta V, Patterson-Fortin J, Bhattacharya S, Katlinski K, Wu J, Varghese B, Carbone CJ, Aressy B, Fuchs SY, Greenberg RA.",
+      year: 2013,
+      title: "A BRISC-SHMT complex deubiquitinates IFNAR1 and regulates interferon responses",
+      journal: "Cell Rep",
+      volume: "5(1): 180-93",
+      link: "https://www.ncbi.nlm.nih.gov/pubmed/24075985"
+    },
+    {
       authors: "Feuermann Y, Kang K, Gavrilova O, Haetscher N, Jang SJ, Yoo KH, Jiang C, Gonzalez FJ, Robinson GW, Hennighausen L.",
       year: 2013,
       title: "MiR-193b and miR-365-1 are not required for the development and function of brown fat in the mouse",
@@ -4020,7 +4036,7 @@ export const publicationsByYear: PublicationsByYear = {
       link: "https://www.ncbi.nlm.nih.gov/pubmed/24075995"
     },
     {
-      authors: "Mei Y, ThompsoZheng H, Gupta V, Patterson-Fortin J, Bhattacharya S, Katlinski K, Wu J, Varghese B, Carbone CJ, Aressy B, Fuchs SY, Greenberg RA. 2013. [A BRISC-SHMT complex deubiquitinates IFNAR1 and regulates interferon responses](https://www.ncbi.nlm.nih.gov/pubmed/24075985). Cell Rep 5(1): 180-93.n MD, Shiraishi Y, Cohen RA, Tong X. 2014.",
+      authors: "Mei Y, Thompson MD, Shiraishi Y, Cohen RA, Tong X.",
       year: 2013,
       title: "Sarcoplasmic/endoplasmic reticulum Ca2+ ATPase C674 promotes ischemia- and hypoxia-induced angiogenesis via coordinated endothelial cell and macrophage function.",
       journal: "J Mol Cell Cardiol",
@@ -5312,6 +5328,14 @@ export const publicationsByYear: PublicationsByYear = {
   ],
   "2007": [
     {
+      authors: "Lu J, Lian G, Lenkinski R, De Grand A, Vaid RR, Bryce T, Stasenko M, Boskey A, Walsh C, Sheen V.",
+      year: 2007,
+      title: "Filamin B mutations cause chondrocyte defects in skeletal development",
+      journal: "Hum Mol Genet",
+      volume: "16(14): 1661-1675",
+      link: "https://www.ncbi.nlm.nih.gov/pubmed/17510210"
+    },
+    {
       authors: "Anderson GR, Lujan R, Semenov A, Pravetoni M, Posokhova EN, Song JH, Uversky V, Chen CK, Wickman K, Martemyanov KA.",
       year: 2007,
       title: "Expression and localization of RGS9-2/G 5/R7BP complex in vivo is set by dynamic control of its constitutive degradation by cellular cysteine proteases.",
@@ -5368,7 +5392,7 @@ export const publicationsByYear: PublicationsByYear = {
       link: "https://www.ncbi.nlm.nih.gov/pubmed/17693261"
     },
     {
-      authors: "Mei Y, Thompson MD, Shiraishi Y, CoheLu J, Lian G, Lenkinski R, De Grand A, Vaid RR, Bryce T, Stasenko M, Boskey A, Walsh C, Sheen V. 2007. [Filamin B mutations cause chondrocyte defects in skeletal development.](https://www.ncbi.nlm.nih.gov/pubmed/17510210)Hum Mol Genet16: 1661-1675.n RA, Tong X. 2014.",
+      authors: "Mei Y, Thompson MD, Shiraishi Y, Cohen RA, Tong X.",
       year: 2007,
       title: "Sarcoplasmic/endoplasmic reticulum Ca2+ ATPase C674 promotes ischemia- and hypoxia-induced angiogenesis via coordinated endothelial cell and macrophage function.",
       journal: "J Mol Cell Cardiol",
