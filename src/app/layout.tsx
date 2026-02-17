@@ -39,11 +39,20 @@ export const metadata: Metadata = {
     siteName: "ingenious targeting laboratory",
     title: "Custom Mouse Models | ingenious targeting laboratory",
     description: "Custom mouse models since 1998. 2,500+ projects, 800+ publications. Knockout, knockin, humanized and transgenic models for research.",
+    images: [
+      {
+        url: "https://www.genetargeting.com/api/og?line1=Custom%20Mouse%20Models%20Since%201998&line2=2%2C500%2B%20Projects%20%7C%20800%2B%20Publications&line3=Expert%20Gene%20Targeting%20Solutions",
+        width: 1200,
+        height: 630,
+        alt: "Custom Mouse Models | ingenious targeting laboratory",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Custom Mouse Models | ingenious targeting laboratory",
     description: "Custom mouse models since 1998. 2,500+ projects, 800+ publications.",
+    images: ["https://www.genetargeting.com/api/og?line1=Custom%20Mouse%20Models%20Since%201998&line2=2%2C500%2B%20Projects%20%7C%20800%2B%20Publications&line3=Expert%20Gene%20Targeting%20Solutions"],
   },
 };
 

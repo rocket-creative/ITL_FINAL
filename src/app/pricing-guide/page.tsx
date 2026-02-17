@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.genetargeting.com/images/og-image.png',
+        url: 'https://www.genetargeting.com/api/og?line1=Custom%20Mouse%20Model%20Pricing%20Guide&line2=Knockout%2C%20Knockin%20%26%20Humanized%20Models&line3=Transparent%20Pricing%20from%20%2417%2C297',
         width: 1200,
         height: 630,
-        alt: 'ingenious targeting laboratory - Custom Mouse Model Pricing',
+        alt: 'Custom Mouse Model Pricing Guide | ingenious targeting laboratory',
       },
     ],
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Custom Mouse Model Pricing Guide | ingenious targeting laboratory',
     description: 'View transparent pricing for custom mouse, rat, and rabbit models. From $17,297 for knockouts to advanced TruHumanization models.',
-    images: ['https://www.genetargeting.com/images/og-image.png'],
+    images: ['https://www.genetargeting.com/api/og?line1=Custom%20Mouse%20Model%20Pricing%20Guide&line2=Knockout%2C%20Knockin%20%26%20Humanized%20Models&line3=Transparent%20Pricing%20from%20%2417%2C297'],
   },
 };
 

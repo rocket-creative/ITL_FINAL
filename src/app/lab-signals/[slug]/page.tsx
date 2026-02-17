@@ -44,6 +44,8 @@ export async function generateMetadata({
     };
   }
 
+  const ogImageUrl = `https://www.genetargeting.com/api/og?line1=${encodeURIComponent(article.title.slice(0, 60))}&line2=Lab%20Signals%20by%20iTL&line3=${encodeURIComponent(article.category)}`;
+
   return {
     title: `${article.title} | Lab Signals`,
     description: article.description,
@@ -54,11 +56,20 @@ export async function generateMetadata({
       publishedTime: article.publishedAt,
       siteName: 'Lab Signals',
       url: `https://www.genetargeting.com/lab-signals/${article.slug}`,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: article.title,
       description: article.description,
+      images: [ogImageUrl],
     },
     alternates: {
       types: {
