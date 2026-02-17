@@ -178,45 +178,6 @@ export default function ThankYouPage() {
               <IconArrowRight style={{ width: '24px', height: '24px', color: '#008080', flexShrink: 0, marginLeft: '1rem' }} />
             </a>
 
-            {/* BreedsChem */}
-            <a 
-              href="https://breedschem.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                backgroundColor: 'white',
-                borderRadius: '8px',
-                padding: '1.5rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-                textDecoration: 'none',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                transition: 'all 0.2s',
-                border: '2px solid transparent',
-              }}
-              className="thank-you-card"
-            >
-              <div>
-                <h3 style={{ 
-                  fontSize: '1.125rem', 
-                  fontWeight: 600, 
-                  color: '#008080',
-                  marginBottom: '0.5rem',
-                }}>
-                  Visit BreedsChem
-                </h3>
-                <p style={{ 
-                  fontSize: '0.95rem', 
-                  color: '#6b7280',
-                  margin: 0,
-                }}>
-                  Learn about our breeding colony management and chemical tracking systems
-                </p>
-              </div>
-              <IconArrowRight style={{ width: '24px', height: '24px', color: '#008080', flexShrink: 0, marginLeft: '1rem' }} />
-            </a>
-
             {/* Schedule Consultation */}
             <Link 
               href="/schedule-meeting/"
