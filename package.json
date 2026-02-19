@@ -15,6 +15,7 @@
     "prelaunch": "npm run build && npm run verify-launch"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "@vercel/og": "^0.8.6",
     "gsap": "^3.12.5",
     "mammoth": "^1.11.0",

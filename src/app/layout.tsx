@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { AllPixels } from "@/components/analytics";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -115,6 +116,7 @@ export default function RootLayout({
       <body className="antialiased">
         {/* Additional Tracking Pixels: HubSpot, etc */}
         <AllPixels />
+        <Analytics />
         
         {/* Skip to main content link for accessibility */}
         <a href="#main-content" className="skip-link">
