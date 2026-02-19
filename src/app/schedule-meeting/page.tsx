@@ -10,8 +10,9 @@ import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
-  HubSpotForm,
+  HubSpotFormWithFallback,
 } from '@/components/UXUIDC';
+import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 import {
   IconPhone,
   IconMail,
@@ -36,7 +37,27 @@ const contactInfo = {
   phone: '+1 (631) 468-8534',
 };
 
-// Schedule Meeting Form Fields
+// Fallback form fields for meeting scheduling
+const fallbackFields: FormField[] = [
+  { name: 'firstname', label: 'First Name', type: 'text', required: true },
+  { name: 'lastname', label: 'Last Name', type: 'text', required: true },
+  { name: 'email', label: 'Email', type: 'email', required: true },
+  { name: 'phone', label: 'Phone', type: 'tel', required: true },
+  { name: 'company', label: 'Institution/Company', type: 'text', required: false },
+  { 
+    name: 'meeting_topic', 
+    label: 'Meeting Topic', 
+    type: 'select', 
+    required: false,
+    options: [
+      { value: 'quote_discussion', label: 'Quote Discussion' },
+      { value: 'technical_consultation', label: 'Technical Consultation' },
+      { value: 'project_strategy', label: 'Project Strategy' },
+      { value: 'general_inquiry', label: 'General Inquiry' },
+    ]
+  },
+  { name: 'message', label: 'What would you like to discuss?', type: 'textarea', required: false, rows: 4, placeholder: 'Optional: Provide context for the meeting...' },
+];
 
 export default function ScheduleMeetingPage() {
 
@@ -180,10 +201,14 @@ export default function ScheduleMeetingPage() {
                 padding: '32px',
                 boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
               }}>
-<HubSpotForm
+                <HubSpotFormWithFallback
                   formId="c0c02dc8-960c-4d14-acff-eaa43b8c7b6a"
+                  formName="Schedule Meeting"
                   portalId="3977953"
                   region="na1"
+                  fallbackFields={fallbackFields}
+                  submitButtonText="Schedule Consultation"
+                  successMessage="Thank you! We'll contact you to confirm your meeting time."
                 />
               </div>
             </div>

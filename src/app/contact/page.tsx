@@ -9,7 +9,7 @@ import Link from 'next/link';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
-  HubSpotForm,
+  HubSpotFormWithFallback,
   IconPhone,
   IconMail,
   IconClock,
@@ -22,6 +22,7 @@ import {
   IconArrowRight,
   BreadcrumbSchema,
 } from '@/components/UXUIDC';
+import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 
 // Contact information
 const contactInfo = {
@@ -30,6 +31,29 @@ const contactInfo = {
   hours: 'Monday - Friday, 9 AM - 5 PM ET',
   address: 'ingenious targeting laboratory\n761-80 Coates Avenue\nHolbrook, NY 11741',
 };
+
+// Fallback form fields for contact page
+const fallbackFields: FormField[] = [
+  { name: 'firstname', label: 'First Name', type: 'text', required: true },
+  { name: 'lastname', label: 'Last Name', type: 'text', required: true },
+  { name: 'email', label: 'Email', type: 'email', required: true },
+  { name: 'phone', label: 'Phone', type: 'tel', required: false },
+  { name: 'company', label: 'Institution/Company', type: 'text', required: false },
+  { 
+    name: 'inquiry_type', 
+    label: 'Inquiry Type', 
+    type: 'select', 
+    required: false,
+    options: [
+      { value: 'general', label: 'General Question' },
+      { value: 'technical', label: 'Technical Question' },
+      { value: 'pricing', label: 'Pricing Information' },
+      { value: 'partnership', label: 'Partnership Inquiry' },
+      { value: 'other', label: 'Other' },
+    ]
+  },
+  { name: 'message', label: 'Message', type: 'textarea', required: true, rows: 5, placeholder: 'How can we help you?' },
+];
 
 export default function ContactPage() {
   // GSAP removed - using CSS animations instead
@@ -114,11 +138,15 @@ export default function ContactPage() {
                   padding: '32px',
                   boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
                 }}>
-                  {/* HubSpot Form - Simple client component that works on page transitions */}
-                  <HubSpotForm
+                  {/* HubSpot Form with automatic fallback */}
+                  <HubSpotFormWithFallback
                     formId="efefc866-97ec-4500-a380-4cf28e733f54"
+                    formName="Contact Form"
                     portalId="3977953"
                     region="na1"
+                    fallbackFields={fallbackFields}
+                    submitButtonText="Send Message"
+                    successMessage="Thank you! We'll respond within 1 business day."
                   />
                 </div>
               </div>

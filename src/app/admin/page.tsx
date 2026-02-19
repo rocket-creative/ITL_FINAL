@@ -77,6 +77,33 @@ interface DateRange {
   days: number;
 }
 
+interface FormHealthData {
+  forms: Array<{
+    formId: string;
+    formName: string;
+    page: string;
+    loadSuccessRate: number;
+    totalLoads: number;
+    failedLoads: number;
+    submissions: number;
+    fallbackActivations: number;
+    lastFailure: string | null;
+    avgLoadTime: number;
+  }>;
+  summary: {
+    totalForms: number;
+    overallSuccessRate: number;
+    totalSubmissions: number;
+    totalFallbackActivations: number;
+    formsWithIssues: number;
+  };
+  alerts: Array<{
+    severity: 'info' | 'warning' | 'error';
+    message: string;
+    timestamp: string;
+  }>;
+}
+
 const dateRanges: DateRange[] = [
   { label: 'Today', days: 0 },
   { label: 'Yesterday', days: 1 },
@@ -88,6 +115,7 @@ const dateRanges: DateRange[] = [
 export default function AdminDashboardPage() {
   const [data, setData] = useState<AnalyticsData | null>(null);
   const [pixelsData, setPixelsData] = useState<PixelsData | null>(null);
+  const [formHealthData, setFormHealthData] = useState<FormHealthData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [dateRange, setDateRange] = useState(7);
@@ -111,9 +139,10 @@ export default function AdminDashboardPage() {
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const [analyticsRes, pixelsRes] = await Promise.all([
+      const [analyticsRes, pixelsRes, formHealthRes] = await Promise.all([
         fetch(`/api/admin/analytics?days=${dateRange}`),
         fetch('/api/admin/pixels'),
+        fetch('/api/admin/form-health'),
       ]);
       
       if (analyticsRes.ok) {
@@ -126,6 +155,11 @@ export default function AdminDashboardPage() {
       if (pixelsRes.ok) {
         const pixels = await pixelsRes.json();
         setPixelsData(pixels);
+      }
+      
+      if (formHealthRes.ok) {
+        const formHealth = await formHealthRes.json();
+        setFormHealthData(formHealth);
       }
     } catch {
       setError('Error loading analytics');
@@ -364,6 +398,169 @@ export default function AdminDashboardPage() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Form Health Monitoring */}
+        <div className="bg-white rounded-xl shadow-sm border p-6 mb-8">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="font-semibold text-[#002B5C] flex items-center gap-2">
+              <svg className="w-5 h-5 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Form Health & Backup Status
+            </h2>
+            {formHealthData && (
+              <div className="flex items-center gap-2 text-sm">
+                <div className={`w-2 h-2 rounded-full ${formHealthData.summary.overallSuccessRate >= 98 ? 'bg-green-500' : formHealthData.summary.overallSuccessRate >= 95 ? 'bg-yellow-500' : 'bg-red-500'}`} />
+                <span className="text-gray-600">
+                  {formHealthData.summary.overallSuccessRate.toFixed(1)}% Success Rate
+                </span>
+              </div>
+            )}
+          </div>
+
+          {loading ? (
+            <div className="animate-pulse space-y-4">
+              {[...Array(4)].map((_, i) => (
+                <div key={i} className="h-20 bg-gray-100 rounded-lg" />
+              ))}
+            </div>
+          ) : formHealthData ? (
+            <>
+              {/* Summary Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg p-4">
+                  <p className="text-xs text-teal-700 font-medium">Total Submissions</p>
+                  <p className="text-2xl font-bold text-teal-900 mt-1">{formHealthData.summary.totalSubmissions}</p>
+                  <p className="text-xs text-teal-600 mt-1">All forms combined</p>
+                </div>
+                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4">
+                  <p className="text-xs text-green-700 font-medium">Success Rate</p>
+                  <p className="text-2xl font-bold text-green-900 mt-1">{formHealthData.summary.overallSuccessRate.toFixed(1)}%</p>
+                  <p className="text-xs text-green-600 mt-1">HubSpot loads</p>
+                </div>
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-4">
+                  <p className="text-xs text-orange-700 font-medium">Fallback Activations</p>
+                  <p className="text-2xl font-bold text-orange-900 mt-1">{formHealthData.summary.totalFallbackActivations}</p>
+                  <p className="text-xs text-orange-600 mt-1">Backup forms used</p>
+                </div>
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4">
+                  <p className="text-xs text-blue-700 font-medium">Forms Monitored</p>
+                  <p className="text-2xl font-bold text-blue-900 mt-1">{formHealthData.summary.totalForms}</p>
+                  <p className="text-xs text-blue-600 mt-1">Active forms</p>
+                </div>
+              </div>
+
+              {/* Alerts */}
+              {formHealthData.alerts && formHealthData.alerts.length > 0 && (
+                <div className="mb-6 space-y-2">
+                  {formHealthData.alerts.map((alert, i) => (
+                    <div 
+                      key={i}
+                      className={`p-3 rounded-lg flex items-start gap-3 ${
+                        alert.severity === 'error' ? 'bg-red-50 border border-red-200' :
+                        alert.severity === 'warning' ? 'bg-yellow-50 border border-yellow-200' :
+                        'bg-blue-50 border border-blue-200'
+                      }`}
+                    >
+                      <svg 
+                        className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
+                          alert.severity === 'error' ? 'text-red-500' :
+                          alert.severity === 'warning' ? 'text-yellow-500' :
+                          'text-blue-500'
+                        }`}
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <div className="flex-1">
+                        <p className={`text-sm font-medium ${
+                          alert.severity === 'error' ? 'text-red-900' :
+                          alert.severity === 'warning' ? 'text-yellow-900' :
+                          'text-blue-900'
+                        }`}>
+                          {alert.message}
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">
+                          {new Date(alert.timestamp).toLocaleString()}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Individual Forms */}
+              <div className="space-y-3">
+                <h3 className="text-sm font-semibold text-gray-700 mb-3">Form Status</h3>
+                {formHealthData.forms.map((form, i) => (
+                  <div key={i} className="bg-gray-50 rounded-lg p-4">
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <h4 className="font-medium text-[#002B5C]">{form.formName}</h4>
+                          <span className={`text-xs px-2 py-0.5 rounded-full ${
+                            form.loadSuccessRate >= 98 ? 'bg-green-100 text-green-700' :
+                            form.loadSuccessRate >= 95 ? 'bg-yellow-100 text-yellow-700' :
+                            'bg-red-100 text-red-700'
+                          }`}>
+                            {form.loadSuccessRate.toFixed(1)}% success
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-500 mt-1">{form.page}</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm font-semibold text-[#002B5C]">{form.submissions}</p>
+                        <p className="text-xs text-gray-500">submissions</p>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-4 gap-3 text-xs">
+                      <div>
+                        <p className="text-gray-500">Total Loads</p>
+                        <p className="font-medium text-gray-900 mt-0.5">{form.totalLoads}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-500">Failed Loads</p>
+                        <p className="font-medium text-red-600 mt-0.5">{form.failedLoads}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-500">Fallbacks</p>
+                        <p className="font-medium text-orange-600 mt-0.5">{form.fallbackActivations}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-500">Avg Load Time</p>
+                        <p className="font-medium text-gray-900 mt-0.5">{form.avgLoadTime}ms</p>
+                      </div>
+                    </div>
+                    {form.lastFailure && (
+                      <div className="mt-2 pt-2 border-t border-gray-200">
+                        <p className="text-xs text-gray-500">
+                          Last failure: {new Date(form.lastFailure).toLocaleString()}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Status Note */}
+              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                <div className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-green-600 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <p className="text-sm font-medium text-green-900">Backup System Active</p>
+                    <p className="text-xs text-green-700 mt-1">
+                      All form submissions are being backed up to email. If HubSpot fails to load, users automatically see a fallback form.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : null}
         </div>
 
         {/* Top Pages & Traffic Sources */}

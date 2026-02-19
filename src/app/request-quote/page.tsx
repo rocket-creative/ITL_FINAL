@@ -12,7 +12,8 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import HubSpotForm from '@/components/UXUIDC/HubSpotFormSimple';
+import HubSpotFormWithFallback from '@/components/UXUIDC/HubSpotFormWithFallback';
+import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 import { IconDNA, IconCheckCircle, IconChevronRight, IconMail, IconPhone } from '@/components/UXUIDC/Icons';
 
 // Hero Data
@@ -43,6 +44,44 @@ const faqData = [
 // Related Links
 const relatedLinks: Array<{ title: string; href: string }> = [];
 
+// Fallback form fields for quote requests
+const fallbackFields: FormField[] = [
+  { name: 'firstname', label: 'First Name', type: 'text', required: true },
+  { name: 'lastname', label: 'Last Name', type: 'text', required: true },
+  { name: 'email', label: 'Email', type: 'email', required: true },
+  { name: 'phone', label: 'Phone', type: 'tel', required: false },
+  { name: 'company', label: 'Institution/Company', type: 'text', required: false },
+  { name: 'gene_symbol', label: 'Gene Symbol', type: 'text', required: false, placeholder: 'e.g., Brca1' },
+  { 
+    name: 'modification_type', 
+    label: 'Modification Type', 
+    type: 'select', 
+    required: false,
+    options: [
+      { value: 'knockout', label: 'Knockout' },
+      { value: 'knockin', label: 'Knockin' },
+      { value: 'conditional', label: 'Conditional Knockout' },
+      { value: 'humanization', label: 'Humanization' },
+      { value: 'point_mutation', label: 'Point Mutation' },
+      { value: 'reporter', label: 'Reporter' },
+      { value: 'not_sure', label: 'Not Sure' },
+    ]
+  },
+  { 
+    name: 'strain_background', 
+    label: 'Strain Background', 
+    type: 'select', 
+    required: false,
+    options: [
+      { value: 'c57bl6', label: 'C57BL/6' },
+      { value: 'balbc', label: 'BALB/c' },
+      { value: '129', label: '129' },
+      { value: 'no_preference', label: 'No Preference' },
+      { value: 'other', label: 'Other' },
+    ]
+  },
+  { name: 'additional_notes', label: 'Project Details', type: 'textarea', required: false, rows: 5, placeholder: 'Please provide any additional details about your project...' },
+];
 
 export default function RequestQuotePage() {
   const heroRef = useRef<HTMLDivElement>(null);  return (
@@ -172,11 +211,15 @@ export default function RequestQuotePage() {
                   borderRadius: '12px',
                   padding: '32px',
                   boxShadow: '0 8px 30px rgba(0,0,0,0.15)'}}>
-<HubSpotForm
-                  formId="b854ed46-fed3-4b54-9d01-62173106ad8c"
-                  portalId="3977953"
-                  region="na1"
-                />
+                  <HubSpotFormWithFallback
+                    formId="b854ed46-fed3-4b54-9d01-62173106ad8c"
+                    formName="Request Quote"
+                    portalId="3977953"
+                    region="na1"
+                    fallbackFields={fallbackFields}
+                    submitButtonText="Request Quote"
+                    successMessage="Thank you! A scientific consultant will contact you within 1 business day."
+                  />
                 </div>
               </div>
             </div>

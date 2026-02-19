@@ -9,7 +9,8 @@
 import { useEffect, useRef, useState } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
-import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch, HubSpotForm } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch, HubSpotFormWithFallback } from '@/components/UXUIDC';
+import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 import {
   IconCheckCircle,
   IconMessageCircle,
@@ -66,7 +67,32 @@ const deliverableOptions = [
   'Not sure - need guidance',
 ];
 
-// Catalog Order Form Fields
+// Fallback form fields for catalog orders
+const fallbackFields: FormField[] = [
+  { name: 'firstname', label: 'First Name', type: 'text', required: true },
+  { name: 'lastname', label: 'Last Name', type: 'text', required: true },
+  { name: 'email', label: 'Email', type: 'email', required: true },
+  { name: 'phone', label: 'Phone', type: 'tel', required: false },
+  { name: 'company', label: 'Institution/Company', type: 'text', required: false },
+  { name: 'model_name', label: 'Model Name', type: 'text', required: true, placeholder: 'e.g., hPD-1 Knockin' },
+  { name: 'model_number', label: 'Model/Stock Number (if known)', type: 'text', required: false, placeholder: 'e.g., ITL-001' },
+  { name: 'gene_symbol', label: 'Gene Symbol', type: 'text', required: false, placeholder: 'e.g., Pdcd1' },
+  { 
+    name: 'model_category', 
+    label: 'Model Category', 
+    type: 'select', 
+    required: false,
+    options: modelCategoryOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt }))
+  },
+  { 
+    name: 'quantity', 
+    label: 'Quantity Needed', 
+    type: 'select', 
+    required: false,
+    options: quantityOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt }))
+  },
+  { name: 'additional_notes', label: 'Additional Information', type: 'textarea', required: false, rows: 4, placeholder: 'Any special requirements or questions...' },
+];
 
 const faqData = [
   {
@@ -349,10 +375,14 @@ export default function OrderInquiryCatalogModelsPage() {
                     </button>
                   </div>
                 )}
-                <HubSpotForm
+                <HubSpotFormWithFallback
                   formId="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
+                  formName="Catalog Order"
                   portalId="3977953"
                   region="na1"
+                  fallbackFields={fallbackFields}
+                  submitButtonText="Submit Order Inquiry"
+                  successMessage="Thank you! We'll contact you within 1 business day with availability and pricing."
                 />
                 <button
                   onClick={() => setShowCatalogSearch(!showCatalogSearch)}
