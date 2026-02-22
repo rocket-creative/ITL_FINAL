@@ -113,16 +113,18 @@ export default function LabSignalsArticleClient({
           style={{
             backgroundColor: BRAND.gold,
             color: BRAND.black,
-            padding: '14px 20px',
+            padding: '18px 24px',
             marginBottom: '30px',
             fontFamily: 'Poppins, sans-serif',
-            fontSize: '.85rem',
-            fontWeight: 600,
+            fontSize: '1.1rem',
+            fontWeight: 800,
             textAlign: 'center',
             borderRadius: '6px',
+            textTransform: 'uppercase',
+            letterSpacing: '0.15em',
           }}
         >
-          Coming {formatReleaseDate(article.publishedAt)} · Team can confirm link is live
+          Coming {formatReleaseDate(article.publishedAt)}
         </div>
       )}
       {/* Social Share */}
@@ -163,12 +165,12 @@ export default function LabSignalsArticleClient({
               justifyContent: 'center',
               background: 'rgba(255,255,255,0.4)',
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '1rem',
+              fontSize: '1.1rem',
               color: BRAND.darkGray,
-              fontWeight: 600,
+              fontWeight: 700,
             }}
           >
-            Content will be visible on {formatReleaseDate(article.publishedAt)}
+            Coming {formatReleaseDate(article.publishedAt)}
           </div>
         </div>
       ) : isPreview ? (
