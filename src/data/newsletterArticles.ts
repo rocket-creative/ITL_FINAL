@@ -963,6 +963,11 @@ export function getAllArticleSlugs(): string[] {
   return getPublishedArticles().map((a) => a.slug);
 }
 
+/** Get all slugs including staged (for static generation of pre-release blurred pages) */
+export function getAllArticleSlugsIncludingStaged(): string[] {
+  return newsletterArticles.map((a) => a.slug);
+}
+
 // Get featured articles (first 6 published)
 export function getFeaturedArticles(): NewsletterArticle[] {
   return getPublishedArticles().slice(0, 6);

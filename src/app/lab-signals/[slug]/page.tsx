@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { FlodeskForm } from '@/components/UXUIDC';
 import { 
-  getArticleBySlug, 
   getArticleBySlugIncludingStaged,
-  getAllArticleSlugs,
-  getPublishedArticles 
+  getAllArticleSlugsIncludingStaged,
+  getPublishedArticles,
+  isArticlePublished,
 } from '@/data/newsletterArticles';
 import LabSignalsArticleClient from './LabSignalsArticleClient';
 import RelatedArticles from './RelatedArticles';
@@ -22,20 +22,20 @@ const BRAND = {
   darkGray: '#444444',
 };
 
-// Generate static params for all articles
+// Generate static params for all articles (including staged so blurred pre-release pages are built)
 export async function generateStaticParams() {
-  const slugs = getAllArticleSlugs();
+  const slugs = getAllArticleSlugsIncludingStaged();
   return slugs.map((slug) => ({ slug }));
 }
 
-// Generate metadata for each article
+// Generate metadata for each article (includes staged for pre-release pages)
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = getArticleBySlugIncludingStaged(slug);
 
   if (!article) {
     return {
@@ -44,11 +44,14 @@ export async function generateMetadata({
     };
   }
 
+  const isStaged = !isArticlePublished(article);
+
   const ogImageUrl = `https://www.genetargeting.com/api/og?line1=${encodeURIComponent(article.title.slice(0, 60))}&line2=Lab%20Signals%20by%20iTL&line3=${encodeURIComponent(article.category)}`;
 
   return {
-    title: `${article.title} | Lab Signals`,
+    title: isStaged ? `${article.title} (Coming Soon) | Lab Signals` : `${article.title} | Lab Signals`,
     description: article.description,
+    ...(isStaged && { robots: { index: false, follow: false } }),
     openGraph: {
       title: article.title,
       description: article.description,
@@ -104,13 +107,14 @@ export default async function LabSignalsArticlePage({
   const { preview } = await searchParams;
   const isPreview = isPreviewValid(preview);
 
-  const article = isPreview
-    ? getArticleBySlugIncludingStaged(slug)
-    : getArticleBySlug(slug);
+  const article = getArticleBySlugIncludingStaged(slug);
 
   if (!article) {
     notFound();
   }
+
+  const isPublished = isArticlePublished(article);
+  const isStagedBlurred = !isPreview && !isPublished;
 
   const relatedArticles = getRelatedArticles(slug, article.category);
   const articleUrl = `https://www.genetargeting.com/lab-signals/${article.slug}`;
@@ -185,6 +189,7 @@ export default async function LabSignalsArticlePage({
           article={article}
           articleUrl={articleUrl}
           isPreview={isPreview}
+          isStagedBlurred={isStagedBlurred}
         />
 
         {/* Related Articles */}

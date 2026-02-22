@@ -15,16 +15,23 @@ const BRAND = {
   textGray: '#444444',
 };
 
+function formatReleaseDate(isoDate: string): string {
+  const d = new Date(isoDate + 'T12:00:00Z');
+  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+
 interface LabSignalsArticleClientProps {
   article: NewsletterArticle;
   articleUrl: string;
   isPreview?: boolean;
+  isStagedBlurred?: boolean;
 }
 
 export default function LabSignalsArticleClient({
   article,
   articleUrl,
   isPreview = false,
+  isStagedBlurred = false,
 }: LabSignalsArticleClientProps) {
   const createPreview = () => {
     const textContent = article.body
@@ -101,6 +108,23 @@ export default function LabSignalsArticleClient({
           Team Preview · Not visible to public until release date
         </div>
       )}
+      {isStagedBlurred && (
+        <div
+          style={{
+            backgroundColor: BRAND.gold,
+            color: BRAND.black,
+            padding: '14px 20px',
+            marginBottom: '30px',
+            fontFamily: 'Poppins, sans-serif',
+            fontSize: '.85rem',
+            fontWeight: 600,
+            textAlign: 'center',
+            borderRadius: '6px',
+          }}
+        >
+          Coming {formatReleaseDate(article.publishedAt)} · Team can confirm link is live
+        </div>
+      )}
       {/* Social Share */}
       <div style={{
         display: 'flex',
@@ -117,8 +141,37 @@ export default function LabSignalsArticleClient({
         />
       </div>
 
-      {/* Gated Content (or direct when preview) */}
-      {isPreview ? (
+      {/* Gated Content (or direct when preview, or blurred when staged) */}
+      {isStagedBlurred ? (
+        <div style={{ position: 'relative' }}>
+          <div
+            style={{
+              filter: 'blur(8px)',
+              pointerEvents: 'none',
+              userSelect: 'none',
+              opacity: 0.6,
+            }}
+          >
+            {articleContent}
+          </div>
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'rgba(255,255,255,0.4)',
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '1rem',
+              color: BRAND.darkGray,
+              fontWeight: 600,
+            }}
+          >
+            Content will be visible on {formatReleaseDate(article.publishedAt)}
+          </div>
+        </div>
+      ) : isPreview ? (
         articleContent
       ) : (
         <NewsletterGate
