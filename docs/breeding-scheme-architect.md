@@ -3,7 +3,7 @@
 ## Meta Information
 - **URL:** /breeding-scheme-architect
 - **Title:** Breeding Scheme Architect | Free Mouse Genetics Planning Tool | ingenious targeting laboratory
-- **Description:** Plan complex multi allele breeding schemes for knockout, knockin, Cre lox, and humanized mouse models. Free tool calculates breeding paths, genotype ratios, and time to experimental cohorts.
+- **Description:** Plan complex single allele breeding schemes for knockout, knockin, Cre lox, and humanized mouse models. Free tool calculates breeding paths, genotype ratios, and time to experimental cohorts.
 - **Primary Keyword:** breeding scheme planner
 - **Secondary Keywords:** mouse breeding calculator, Cre lox breeding, multi allele cross, genotype ratio calculator
 
@@ -16,7 +16,7 @@
 **H1:** Plan Complex Breeding Schemes
 
 **Intro Paragraph:**
-Visualize multi allele breeding strategies, calculate expected genotype ratios, and estimate time to experimental cohorts. The breeding scheme architect helps researchers plan knockout, knockin, Cre lox, and humanized model breeding before starting a project. Since 1998, ingenious targeting laboratory has helped researchers navigate complex breeding strategies for over 2,500 custom mouse model projects.
+Visualize breeding paths, calculate expected genotype ratios, and estimate time to experimental cohorts. The breeding scheme architect helps researchers plan knockout, knockin, Cre lox, and humanized model breeding before starting a project. Since 1998, ingenious targeting laboratory has helped researchers navigate complex breeding strategies for over 2,500 custom mouse model projects.
 
 **Primary CTA:** Start Planning
 **Secondary CTA:** Request Consultation
@@ -118,7 +118,7 @@ Estimates are based on standard C57BL/6 breeding parameters (average litter size
 **Section Title:** How the Breeding Scheme Architect Works
 
 **Section Intro:**
-Planning multi allele breeding schemes can be complex. This tool simplifies the process by automating Mendelian genetics calculations and identifying optimal breeding strategies.
+Planning single allele breeding schemes can be complex. This tool simplifies the process by automating Mendelian genetics calculations and identifying optimal breeding strategies.
 
 ### Step 1
 
@@ -214,7 +214,7 @@ Our scientific team can help optimize your breeding strategy, recommend Cre driv
 
 **Question:** What breeding schemes can this tool plan?
 
-**Answer:** The breeding scheme architect handles complex multi allele crosses including conditional knockouts with Cre lox systems, reporter alleles, humanized models, and combinations of up to six different alleles. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts.
+**Answer:** The breeding scheme architect handles complex single allele crosses including conditional knockouts with Cre lox systems, reporter alleles, humanized models, and combinations of up to six different alleles. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts.
 
 ### FAQ 2
 

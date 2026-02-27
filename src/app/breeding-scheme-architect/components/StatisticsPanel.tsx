@@ -230,7 +230,7 @@ export default function StatisticsPanel({ plan }: StatisticsPanelProps) {
               marginBottom: '8px',
             }}
           >
-            💡 Best Practices for Multi-Generation Breeding
+            💡 Best Practices for Breeding
           </div>
           <div
             style={{

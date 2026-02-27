@@ -111,14 +111,14 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
                 marginBottom: '20px',
               }}
             >
-              Plan complex multi-allele breeding strategies, calculate expected genotype ratios, 
+              Plan complex single allele breeding strategies, calculate expected genotype ratios, 
               and estimate time to experimental cohorts—all before starting your project.
             </p>
 
             {/* Feature bullets */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
               {[
-                'Visualize multi-generation breeding paths',
+                'Visualize breeding paths',
                 'Calculate Mendelian ratios automatically',
                 'Estimate timeline to study ready cohorts',
               ].map((feature, i) => (

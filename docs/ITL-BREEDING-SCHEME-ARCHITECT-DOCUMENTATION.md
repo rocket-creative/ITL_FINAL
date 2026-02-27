@@ -12,7 +12,7 @@
 
 ### What We're Building
 
-A free, interactive **Breeding Scheme Architect** tool that helps researchers plan complex multi-allele breeding strategies. This fills a genuine gap in the market: no existing tool helps PIs visualize and plan double, triple, or quadruple mutant breeding schemes involving Cre/lox systems, reporters, and disease models.
+A free, interactive **Breeding Scheme Architect** tool that helps researchers plan complex single allele breeding strategies. This fills a genuine gap in the market: no existing tool helps PIs visualize and plan double, triple, or quadruple mutant breeding schemes involving Cre/lox systems, reporters, and disease models.
 
 ### Why This Matters for ITL
 
@@ -33,7 +33,7 @@ JAX offers a 2-3 hour mini-course on breeding strategies because it's so confusi
 - Statistical breeding number calculations
 
 **No tool exists for:**
-- Multi-allele breeding path visualization
+- Breeding path visualization
 - Generation-by-generation cross planning
 - Time/mice/cost estimation for complex schemes
 - Handling linked alleles, embryonic lethal genotypes, or germline Cre issues
@@ -312,7 +312,7 @@ PAGE STRUCTURE:
 - Hero with gradient background (same as other pages)
 - Badge: "Free Research Tool"
 - H1: "Plan Complex Breeding Schemes"
-- Intro: "Visualize multi allele breeding strategies, calculate expected genotype ratios, and estimate time to experimental cohorts. This free tool helps researchers plan knockout, knockin, Cre lox, and humanized model breeding before starting a project."
+- Intro: "Visualize breeding paths, calculate expected genotype ratios, and estimate time to experimental cohorts. This free tool helps researchers plan knockout, knockin, Cre lox, and humanized model breeding before starting a project."
 
 Use these shared components:
 - UXUIDCNavigation
@@ -501,7 +501,7 @@ Add FAQ section to the breeding scheme architect page using UXUIDCAnimatedFAQ co
 FAQ Questions (5 required per ITL standards):
 
 1. Q: "What breeding schemes can this tool plan?"
-   A: "The breeding scheme architect handles complex multi allele crosses including conditional knockouts with Cre lox systems, reporter alleles, humanized models, and combinations of up to six different alleles. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts."
+   A: "The breeding scheme architect handles complex single allele crosses including conditional knockouts with Cre lox systems, reporter alleles, humanized models, and combinations of up to six different alleles. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts."
 
 2. Q: "How does the tool calculate breeding pair numbers?"
    A: "The calculator uses established statistical methods similar to published research tools, accounting for Mendelian inheritance ratios, strain specific litter sizes (C57BL/6 averages 6 to 8 pups), breeding efficiency (approximately 80%), and your target sample size requirements."
@@ -564,7 +564,7 @@ Add SEO metadata and schema.org structured data for the breeding scheme architec
 
 META:
 - Title: "Breeding Scheme Architect | Free Mouse Genetics Planning Tool | ingenious targeting laboratory"
-- Description: "Plan complex multi allele breeding schemes for knockout, knockin, Cre lox, and humanized mouse models. Free tool calculates breeding paths, genotype ratios, and time to experimental cohorts."
+- Description: "Plan complex single allele breeding schemes for knockout, knockin, Cre lox, and humanized mouse models. Free tool calculates breeding paths, genotype ratios, and time to experimental cohorts."
 
 SCHEMA (add to page head):
 ```json

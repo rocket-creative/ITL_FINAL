@@ -30,9 +30,9 @@ const statsData = [
 const featuredToolData = {
   badge: "New for 2026",
   title: "Breeding Scheme Architect",
-  description: "Plan complex multi allele breeding schemes with our free interactive tool. Visualize generation by generation crosses, calculate expected genotype ratios, and estimate time to experimental cohorts for knockout, knockin, Cre lox, and humanized mouse models.",
+  description: "Plan complex single allele breeding schemes with our free interactive tool. Visualize breeding paths, calculate expected genotype ratios, and estimate time to experimental cohorts for knockout, knockin, Cre lox, and humanized mouse models.",
   features: [
-    "Multi allele breeding path visualization",
+    "Visualize breeding paths",
     "Punnett square calculations for up to 6 alleles",
     "Timeline and resource estimates",
     "AI powered breeding optimization",

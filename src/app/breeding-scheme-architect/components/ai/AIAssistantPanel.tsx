@@ -235,7 +235,7 @@ export default function AIAssistantPanel({
       role: 'assistant',
       content: `Hello! I'm your AI breeding assistant. I can help you:
 
-• Plan complex multi-allele breeding schemes
+• Plan complex single allele breeding schemes
 • Recommend tissue-specific Cre driver lines
 • Optimize your breeding strategy
 • Troubleshoot unexpected results

@@ -43,7 +43,7 @@ const faqs = [
   {
     question: 'What breeding schemes can this tool plan?',
     answer:
-      'The breeding scheme architect handles complex multi allele crosses including conditional knockouts with Cre lox systems, reporter alleles, humanized models, and combinations of up to six different alleles. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts.',
+      'The breeding scheme architect handles complex single allele crosses including conditional knockouts with Cre lox systems, reporter alleles, humanized models, and combinations of up to six different alleles. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts.',
   },
   {
     question: 'How does the tool calculate breeding pair numbers?',
@@ -267,7 +267,7 @@ function BreedingSchemeArchitectContent() {
               marginBottom: '30px',
             }}
           >
-            Visualize multi allele breeding strategies, calculate expected genotype ratios,
+            Visualize breeding paths, calculate expected genotype ratios,
             and estimate time to experimental cohorts. The breeding scheme architect helps
             researchers plan knockout, knockin, Cre lox, and humanized model breeding before
             starting a project. Since 1998, ingenious targeting laboratory has helped
@@ -564,7 +564,7 @@ function BreedingSchemeArchitectContent() {
               margin: '0 auto 40px',
             }}
           >
-            Planning multi allele breeding schemes can be complex. This tool simplifies
+            Planning single allele breeding schemes can be complex. This tool simplifies
             the process by automating Mendelian genetics calculations and identifying
             optimal breeding strategies.
           </p>

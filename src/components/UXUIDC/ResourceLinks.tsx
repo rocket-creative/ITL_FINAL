@@ -445,7 +445,7 @@ export const creResources: ResourceLink[] = [
 export const breedingResources: ResourceLink[] = [
   {
     title: "Breeding Scheme Architect",
-    description: "Plan complex multi-allele breeding schemes with our interactive tool",
+    description: "Plan complex single allele breeding schemes with our interactive tool",
     href: "/breeding-scheme-architect",
     type: 'tool'
   }
