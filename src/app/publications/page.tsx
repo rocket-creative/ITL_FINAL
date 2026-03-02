@@ -58,17 +58,9 @@ export default function PublicationsPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedYear, setSelectedYear] = useState<string>('all');
-  const [expandedYears, setExpandedYears] = useState<Set<string>>(new Set(['2025']));
+  const [expandedYears, setExpandedYears] = useState<Set<string>>(new Set(['2026', '2025']));
   
-  const years = useMemo(() => {
-    const allYears = getYears();
-    console.log('📅 All years from data:', allYears);
-    console.log('📊 Total years count:', allYears.length);
-    console.log('📚 Publications by year keys:', Object.keys(publicationsByYear));
-    console.log('📖 Sample year data - 2014:', publicationsByYear['2014']?.length || 0, 'publications');
-    console.log('📖 Sample year data - 2010:', publicationsByYear['2010']?.length || 0, 'publications');
-    return allYears;
-  }, []);
+  const years = useMemo(() => getYears(), []);
   const totalCount = useMemo(() => getTotalPublicationCount(), []);
 
   // Filter publications based on search and year
@@ -77,7 +69,6 @@ export default function PublicationsPage() {
     const result: { [year: string]: Publication[] } = {};
     
     const yearsToFilter = selectedYear === 'all' ? years : [selectedYear];
-    console.log('🔍 Filtering for years:', yearsToFilter);
     
     yearsToFilter.forEach(year => {
       const pubs = publicationsByYear[year] || [];
@@ -93,9 +84,6 @@ export default function PublicationsPage() {
         result[year] = filtered;
       }
     });
-    
-    console.log('📋 Filtered publications years:', Object.keys(result).sort((a, b) => parseInt(b) - parseInt(a)));
-    console.log('📊 Filtered publications count:', Object.keys(result).length, 'years visible');
     
     return result;
   }, [searchQuery, selectedYear, years]);

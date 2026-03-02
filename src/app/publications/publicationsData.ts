@@ -16,8 +16,8 @@
  *   link: "https://pubmed.ncbi.nlm.nih.gov/xxxxx/"
  * }
  * 
- * GENERATED FROM MASTER LIST: 2026-02-17
- * Source: /Users/rocketcreative/Downloads/publications.md
+ * Last updated: 2026-03-02
+ * Source: 2025 Publications.md, 2026 Publications.md (ITL team)
  */
 
 export interface Publication {
@@ -34,70 +34,152 @@ export interface PublicationsByYear {
 }
 
 export const publicationsByYear: PublicationsByYear = {
-  "2025": [
+  "2026": [
+    {
+      authors: "Borges RL, González-Blanco G, Arigela H, Huang Y, Caeiro LD, Fattakhov N, Lepore S, Garcia-Martinez L, Maurice M, Mehta PD, Park EJ, MacGillivray K, Nehru J, Chau M, Robayo MC, Abad C, Bilbao-Martinez A, Monteiro F, Luo X, Tan S, Bilbao D, Sidoli S, Di Stefano B, Walz K, Saltzman AL, Verdun RE, Shiekhattar R, Morey L.",
+      year: 2026,
+      title: "Unbalanced chromatin binding of Polycomb complexes drives neurodevelopmental disorders",
+      journal: "Mol Cell.",
+      volume: "Online ahead of print.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41653922/"
+    },
+    {
+      authors: "Barriocanal-Casado E, Stopka SA, Pesini A, Aristizabal-Henao JJ, Karmacharya S, Van Cura D, Zhang R, Nickerson KR, Grover K, Zavidij O, Wessel SR, Narain NR, Modur V, Gesta S, Kiebish MA, Quinzii CM.",
+      year: 2026,
+      title: "Spatial Mapping of CoQ10 Repletion by BPM31510 in a Genetic Mouse Model (Coq4F147C) of Coenzyme Q Deficiency",
+      journal: "J Lipid Res.",
+      volume: "Online ahead of print",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41616828/"
+    },
+    {
+      authors: "Nagai J, Hastings MM, Nishida A, Majumdar S, Zaleski K, Marshall SA, Lin J, Saliman MAS, Tani Y, Murakami Y, Feng C, Perniss A, Wong C, Bankova LG, Inoue A, Barrett NA, Boyce JA.",
+      year: 2026,
+      title: "Mast cell-specific CysLT2 receptor signaling inhibits cysteinyl leukotriene-dependent mast cell activation and type 2 allergic lung inflammation",
+      journal: "Cell Rep.",
+      volume: "1(45): 116758.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41422505/"
+    },
+    {
+      authors: "Xi Y, Liu L, Kim JW, Zhang M, Wang X, Abdirassil A, Xu M, Ren S, Wang Q, Yang D, Xu P, Xie W.",
+      year: 2026,
+      title: "Targeting ADAR1-mediated RNA editing inhibits hepatic stellate cell activation and liver fibrosis by enhancing HSC-intrinsic innate immunity",
+      journal: "Gut",
+      volume: "Online ahead of print.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41554631/"
+    },
+    {
+      authors: "Zapater LJ, Lewis SA, Gutierrez RL, Yamada M, Rodriguez-Fos E, Planas-Felix M, Cameron D, Demarest P, Nabila A, Mueller HS, Zhao J, Bergin P, Reed C, Chwat-Edelstein T, Pagnozzi A, Nava C, Bourel-Ponchel E, Cornejo P, Dursun A, Özgül RK, Akar HT, Houlden H, Cheema HA, Anjum MN, Zifarelli G, Bauer P, Essid M, Benrhouma H, Hafsa MB, Kraoua I, Galaz-Montoya CI, Proekt A, Zhao X, Socci ND, Hayes M, Bigot Y, Rabadan R, Maroofian R, Torrents D, Kleinmann CL, Kruer MC, Toth M, Kentsis A.",
+      year: 2026,
+      title: "A transposase-derived gene required for human brain development",
+      journal: "Sci Adv.",
+      volume: "3(12): eadv7530.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41533792/"
+    },
     {
       authors: "Tebbe L, Ikelle L, Makia MS, Kakakhel M, Al-Ubaidi MR, Naash MI.",
-      year: 2025,
+      year: 2026,
       title: "Syntaxin 3B Mediates Light-Dependent Interactions with STXBP1 and Arrestin 4: Distinct Roles in Rods and Cones",
-      journal: "Adv Sci (Weinh)",
-      volume: "Online ahead of print",
+      journal: "Adv Sci (Weinh).",
+      volume: "6(13): e13319",
       link: "https://pubmed.ncbi.nlm.nih.gov/41220299/"
     },
     {
-      authors: "Salzbank J, Lacaille H, Gaby J, O'Reilly JJ, Kissner M, Vacher CM, Penn AA.",
-      year: 2025,
-      title: "Microglia alter sex-specific cerebellar myelination following placental hormone loss",
-      journal: "Nat Commun",
-      volume: "16(1): 9846",
-      link: "https://pubmed.ncbi.nlm.nih.gov/41203610/"
-    },
-    {
       authors: "Diamond EL, Emile JF, Fujino T, Haroche J, Maron MI, Lewis AM, Rahman J, Reiner AS, Bossert D, Rosenblum M, Yabe M, Petrova-Drus K, Francis JH, Rotemberg V, Rampal RK, Yoo S, Daniyan AF, Mahajan S, Hatzoglou V, Young R, Ulaner GA, Rösler W, Hershkovitz-Rokah O, Shpilberg O, Mazor RD, Chen LYC, Singer M, Cuibus MA, Weis K, Benbarche S, Zhang P, Fox N, Castro C, Tittley S, Witkowski M, Cohen-Aubart F, Terriou L, Hanoun M, Schleinitz N, Sosa G, Hautala T, De Lassus LF, Rosen N, Abdel-Wahab O, Durham BH.",
-      year: 2025,
+      year: 2026,
       title: "RAF-independent MEK mutations drive refractory histiocytic neoplasms but respond to ERK inhibition",
-      journal: "Cancer Cell",
-      volume: "Online ahead of print",
+      journal: "Cancer Cell.",
+      volume: "1(44): 203-220.e8",
       link: "https://pubmed.ncbi.nlm.nih.gov/41135521/"
-    },
+    }
+  ],
+  "2025": [
     {
-      authors: "Reinartz DM, Escamilla-Rivera V, Shao M, Tribble SL, Caulin C, Wilson JE.",
+      authors: "Xi ZX, Linz E, Zhang HY, Dunn C, Bi GH, Galaj E, Maras M, Hope B, Rubio FJ, Liu QR.",
       year: 2025,
-      title: "Impact of absent in melanoma 2 on head and neck squamous cell carcinoma development",
-      journal: "J Immunol. vkaf224",
-      volume: "",
-      link: "https://pubmed.ncbi.nlm.nih.gov/41042265/"
-    },
-    {
-      authors: "Chandrasekharan B, Wu H, Smoller C, Kim J, Wolfarth AA, Eboka R, Boyer D, Metzger AJ, Addis CR, Liu K, Srinivasan S, Macpherson AJ, Jones RM, Neish AS.",
-      year: 2025,
-      title: "Microbiota-dependent formylated peptide receptor (Fpr1/2) signaling regulates enteric nervous system development and gastrointestinal motility in mice",
-      journal: "Cell Mol Gastroenterol Hepatol",
-      volume: "12(19): 101624",
-      link: "https://pubmed.ncbi.nlm.nih.gov/40907665/"
+      title: "Neuronal versus Glial CB2 Receptors: Insights from a Novel CB2-KO-eGFP Reporter Mouse Line",
+      journal: "Res Sq.",
+      volume: "Online ahead of print",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41472674/"
     },
     {
       authors: "Norlander AE, Abney M, Zhang J, Polosukhin VV, Thomas CM, Ceneviva ZJ, AlMotairy R, Patel R, Cephus JY, Toki S, Zhou W, Chatila TA, Newcomb DC, Peebles RS Jr.",
       year: 2025,
       title: "Prostaglandin I2 signaling restrains Treg ST2 expression by repressing β-catenin in allergic airway inflammation",
-      journal: "J Allergy Clin Immunol",
-      volume: "Online ahead of print",
+      journal: "J Allergy Clin Immunol.",
+      volume: "6(156): 1679-1692.E9",
       link: "https://pubmed.ncbi.nlm.nih.gov/40812430/"
+    },
+    {
+      authors: "Soler-Cedeño O, Zhang HY, Xiong E, Bi GH, Alton H, Maras M, Liu QR, Bhattacharjee P, Iyer MR, Xi ZX.",
+      year: 2025,
+      title: "Brain CB2 receptor: a new target in medication development for treating opioid use disorder in rodents",
+      journal: "Mol Psychiatry.",
+      volume: "Online ahead of print.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41381865/"
+    },
+    {
+      authors: "Reinartz DM, Escamilla-Rivera V, Shao M, Tribble SL, Caulin C, Wilson JE.",
+      year: 2025,
+      title: "Impact of absent in melanoma 2 on head and neck squamous cell carcinoma development",
+      journal: "J Immunol.",
+      volume: "12(214): 3565-3578",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41042265/"
+    },
+    {
+      authors: "Liao X, Koehnken Sawall J, Seeley R, Song F, Ji X, Liu X, Song C, Long F.",
+      year: 2025,
+      title: "An adipo-osteoprogenitor population in the endosteal niche contributes to bone and fat formation in adult mouse bone marrow",
+      journal: "Proc Natl Acad Sci USA.",
+      volume: "47(122): e2502436122.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41248279/"
+    },
+    {
+      authors: "Croce KR, Ng C, Pankiv S, Albarran E, Langfelder P, Ramos de Jesus A, Duncan GM, Wang N, Basile A, McHugh C, Litt NA, Li A, Friedman S, Cortes EP, Zody MC, Yang XW, Ding JB, Vonsattel JPG, Simonsen A, Housman DE, Wexler NS, Yamamoto A.",
+      year: 2025,
+      title: "A rare genetic variant confers resistance to neurodegeneration across multiple neurological disorders by augmenting selective autophagy",
+      journal: "Neuron.",
+      volume: "22(113): 3780-3797.e7.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/40945514/"
     },
     {
       authors: "MacDowell Kaswan ZA, Hurtado M, Chen EY, Steelman AJ, McCusker RH.",
       year: 2025,
       title: "Ido1 or Ido2 deficiency in myeloid-derived cells attenuates TMEV-induced ictogenesis",
-      journal: "J Neuroimmunol. 2025 (408): 578707",
-      volume: "",
+      journal: "J Neuroimmunol",
+      volume: "2025 (408): 578707.",
       link: "https://pubmed.ncbi.nlm.nih.gov/40829361/"
     },
     {
-      authors: "Jiang Y, Sachdeva K, Goulbourne CN, Berg MJ, Peddy J, Stavrides PH, Pensalfini A, Pawlik M, Malampati S, Whyte L, Basavarajappa BS, Shivakumar S, Bleiwas C, Smiley JF, Mathews PM, Nixon RA.",
+      authors: "Salzbank J, Lacaille H, Gaby J, O'Reilly JJ, Kissner M, Vacher CM, Penn AA.",
       year: 2025,
-      title: "Increased neuronal expression of the early endosomal adaptor APPL1 leads to endosomal and synaptic dysfunction with cholinergic neurodegeneration",
-      journal: "J Neurosci",
-      volume: "29(45): e2331242025",
-      link: "https://pubmed.ncbi.nlm.nih.gov/39345644/"
+      title: "Microglia alter sex-specific cerebellar myelination following placental hormone loss",
+      journal: "Nat Commun.",
+      volume: "16(1): 9846",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41203610/"
+    },
+    {
+      authors: "Pioli KT, Ritchie M, Haq H, Pioli PD.",
+      year: 2025,
+      title: "Jchain-diphtheria toxin receptor mice allow for depletion of antibody-secreting cells and analysis of differentiation kinetics",
+      journal: "iScience",
+      volume: "12(28):113946",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41333318/"
+    },
+    {
+      authors: "Bischoff LJ, Schrenk S, Soroko K, Sherpa C, Arasu A, Reynaud D, Boscolo E.",
+      year: 2025,
+      title: "Expression of mutant TIE2 p.L914F during mouse development causes embryonic lethality and defects in vascular remodeling",
+      journal: "Dev Dyn.",
+      volume: "Online ahead of print",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41074681/"
+    },
+    {
+      authors: "Chandrasekharan B, Wu H, Smoller C, Kim J, Wolfarth AA, Eboka R, Boyer D, Metzger AJ, Addis CR, Liu K, Srinivasan S, Macpherson AJ, Jones RM, Neish AS.",
+      year: 2025,
+      title: "Microbiota-dependent formylated peptide receptor (Fpr1/2) signaling regulates enteric nervous system development and gastrointestinal motility in mice",
+      journal: "Cell Mol Gastroenterol Hepatol.",
+      volume: "12(19): 101624.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/40907665/"
     },
     {
       authors: "Zhou W, Zhang J, Chowdhury NU, Norlander AE, Toki S, Abney M, Rusznak M, Gibson-Corley KN, Cook DP, Newcomb DC, Peebles RS Jr.",
@@ -108,27 +190,35 @@ export const publicationsByYear: PublicationsByYear = {
       link: "https://pubmed.ncbi.nlm.nih.gov/40587812/"
     },
     {
-      authors: "Choe HJ, Lee JS, Park JY, Lee SA, Park YJ, Chung SS, Park KS.",
-      year: 2025,
-      title: "SENP2 regulates UCP1-dependent thermogenesis in brown adipocytes via deSUMOylation of ERRα",
-      journal: "Exp Mol Med 6 (57): 1283-1293",
-      volume: "",
-      link: "https://pubmed.ncbi.nlm.nih.gov/40579429/"
-    },
-    {
       authors: "Brown AC, Uddin MJ, Munday RM, Naz F, Moreau GB, Ramakrishnan G, Rich SS, Haque R, Wojcik GL, Duggal P, Marie C, Petri WA Jr.",
       year: 2025,
       title: "The cAMP responsive element modulator (CREM) transcription factor influences susceptibility to undernutrition and infection",
       journal: "mBio",
-      volume: "8(16): e0139025",
+      volume: "8(16): e0139025.",
       link: "https://pubmed.ncbi.nlm.nih.gov/40576353/"
+    },
+    {
+      authors: "Jiang Y, Sachdeva K, Goulbourne CN, Berg MJ, Peddy J, Stavrides PH, Pensalfini A, Pawlik M, Malampati S, Whyte L, Basavarajappa BS, Shivakumar S, Bleiwas C, Smiley JF, Mathews PM, Nixon RA.",
+      year: 2025,
+      title: "Increased Neuronal Expression of the Early Endosomal Adaptor APPL1 Replicates Alzheimer's Disease-Related Endosomal and Synaptic Dysfunction with Cholinergic Neurodegeneration",
+      journal: ". J Neurosci",
+      volume: "29(45): e2331242025.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/40514243/"
+    },
+    {
+      authors: "Choe HJ, Lee JS, Park JY, Lee SA, Park YJ, Chung SS, Park KS.",
+      year: 2025,
+      title: "SENP2 regulates UCP1-dependent thermogenesis in brown adipocytes via deSUMOylation of ERRα",
+      journal: "Exp Mol Med",
+      volume: "6 (57): 1283-1293.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/40579429/"
     },
     {
       authors: "Wang L, Noyer L, Jishage M, Wang YH, Tao AY, McDermott M, Gando I, Sidhu I, Hu K, Zhong L, Sun K, Drmic D, Kaufmann U, Feske S.",
       year: 2025,
       title: "CLNS1A regulates genome stability and cell cycle progression to control CD4 T cell function and autoimmunity",
       journal: "Sci Immunol",
-      volume: "108(10): eadq8860",
+      volume: "108(10): eadq8860.",
       link: "https://pubmed.ncbi.nlm.nih.gov/40540585/"
     },
     {
@@ -140,19 +230,11 @@ export const publicationsByYear: PublicationsByYear = {
       link: "https://pubmed.ncbi.nlm.nih.gov/40367942/"
     },
     {
-      authors: "Pioli KT, Ritchie M, Haq H, Pioli PD.",
-      year: 2025,
-      title: "Jchain-Diphtheria Toxin Receptor Mice Allow for Diphtheria Toxin-Mediated Depletion of Antibody-Secreting Cells and Analysis of Differentiation Kinetics",
-      journal: "bioRxiv",
-      volume: "",
-      link: "https://pubmed.ncbi.nlm.nih.gov/38766257/"
-    },
-    {
       authors: "Mohassel P, Hearn H, Rooney J, Zou Y, Johnson K, Norato G, Nalls MA, Yun P, Ogata T, Silverstein S, Sleboda DA, Roberts TJ, Rifkin DB, Bönnemann CG.",
       year: 2025,
       title: "Collagen type VI regulates TGF-β bioavailability in skeletal muscle in mice",
-      journal: "J Clin Invest",
-      volume: "9(135): e173354",
+      journal: "J Clin Invest.",
+      volume: "9(135): e173354.",
       link: "https://pubmed.ncbi.nlm.nih.gov/40309777/"
     },
     {
@@ -160,38 +242,62 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2025,
       title: "Inflammatory and anti-inflammatory cytokines bidirectionally modulate amygdala circuits regulating anxiety",
       journal: "Cell",
-      volume: "8(188): 2190-2202.e15",
+      volume: "8(188): 2190-2202.e15.",
       link: "https://pubmed.ncbi.nlm.nih.gov/40199321/"
+    },
+    {
+      authors: "Darmusey L, Bagley AJ, Nguyen TT, Carlson HL, Blaylock H, Shrestha SB, Pang A, Tauchmann S, Taylor SC, Foley AC, Niño KE, Pietras EM, Braun TP, Maxson JE.",
+      year: 2025,
+      title: "Dual ASXL1 and CSF3R mutations drive myeloid-biased stem cell expansion and enhance neutrophil differentiation",
+      journal: "Blood Adv.",
+      volume: "7(9): 1593-1607.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/39777477/"
+    },
+    {
+      authors: "Kodama J, Oichi T, Wilkinson KJ, Abzug JM, Kaito T, Enomoto-Iwamoto M, Iwamoto M, Otsuru S.",
+      year: 2025,
+      title: "Apolipoprotein E is a marker of all chondrocytes in the growth plate resting zone",
+      journal: "Bone Res.",
+      volume: "1(13): 31",
+      link: "https://pubmed.ncbi.nlm.nih.gov/40025030/"
     },
     {
       authors: "Ham H, Hirdler JB, Bihnam DT, Mao Z, Gicobi JK, Macedo BG, Rodriguez-Quevedo MF, Schultz DF, Correia C, Zhong J, Martinez KE, Banuelos A, Ashton DS, Lagnado AB, Guo R, Pessoa R, Pandey A, Li H, Lucien F, Borges da Silva H, Dong H, Billadeau DD.",
       year: 2025,
       title: "Lysosomal NKG7 restrains mTORC1 activity to promote CD8+ T cell durability and tumor control",
       journal: "Nat Commun",
-      volume: "16(1): 1628",
+      volume: "16(1): 1628.",
       link: "https://pubmed.ncbi.nlm.nih.gov/39952956/"
-    },
-    {
-      authors: "Zong P, Li CX, Feng J, Yue Z, Nethramangalath T, Xie Y, Qin X, Cicchetti M, Cai Y, Jellison E, Matsushita M, Runnels LW, Yue L.",
-      year: 2025,
-      title: "TRPM7 channel activity promotes the pathogenesis of abdominal aortic aneurysms",
-      journal: "Nat Cardiovasc Res",
-      volume: "4(2): 197-215",
-      link: "https://pubmed.ncbi.nlm.nih.gov/39953276/"
     },
     {
       authors: "Navarro HI, Daly AE, Rodriguez B, Wu S, Ngo KA, Fraser A, Schiffman A, Liu Y, Smale ST, Chia JJ, Hoffmann A.",
       year: 2025,
       title: "NF-κB RelB suppresses the inflammatory gene expression programs of dendritic cells by competing with RelA for binding to target gene promoters",
       journal: "Cell Discov",
-      volume: "11(1): 13",
+      volume: "11(1): 13.",
       link: "https://pubmed.ncbi.nlm.nih.gov/39929805/"
+    },
+    {
+      authors: "Zong P, Li CX, Feng J, Yue Z, Nethramangalath T, Xie Y, Qin X, Cicchetti M, Cai Y, Jellison E, Matsushita M, Runnels LW, Yue L.",
+      year: 2025,
+      title: "TRPM7 channel activity promotes the pathogenesis of abdominal aortic aneurysms",
+      journal: "Nat Cardiovasc Res",
+      volume: "4(2): 197-215.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/39953276/"
+    },
+    {
+      authors: "Queathem ED, Moazzami Z, Stagg DB, Nelson AB, Fulghum K, Hayir A, Seay A, Gillingham JR, d'Avignon DA, Han X, Ruan HB, Crawford PA, Puchalska P.",
+      year: 2025,
+      title: "Ketogenesis supports hepatic polyunsaturated fatty acid homeostasis via fatty acid elongation",
+      journal: "Sci Adv.",
+      volume: "5(11): eads0535",
+      link: "https://pubmed.ncbi.nlm.nih.gov/39879309/"
     },
     {
       authors: "Mao Z, Hirdler JB, Gicobi JK, Maynes M, Hsu MA, Dellacecca ER, Zhang W, Teske JJ, Li Y, Zhao G, Lucien-Matteoni F, da Silva HB, Billadeau DD, Dong H.",
       year: 2025,
       title: "PD-1 prelimits both the cytotoxic and exhaustion potential in thymic CD8+ T cells and impacts the maintenance of peripheral tumor immunity",
-      journal: "bioRxiv",
+      journal: "bioRxiv.",
       volume: "",
       link: "https://pubmed.ncbi.nlm.nih.gov/39868106/"
     },
@@ -199,9 +305,17 @@ export const publicationsByYear: PublicationsByYear = {
       authors: "Shaikh K, Bowman M, McCormick SM, Gao L, Zhang J, White J, Tawil J, Kapoor A, Arav-Boger R, Norbury CC, Harhaj EW.",
       year: 2025,
       title: "ZFAND6 promotes TRAF2-dependent mitophagy to restrain cGAS-STING signaling",
-      journal: "iScience",
-      volume: "1(28): 111544",
+      journal: ". iScience",
+      volume: "1(28): 111544.",
       link: "https://pubmed.ncbi.nlm.nih.gov/39811672/"
+    },
+    {
+      authors: "Amioka N, Franklin MK, Kukida M, Zhu L, Moorleghen JJ, Howatt DA, Katsumata Y, Mullick AE, Yanagita M, Martinez-Irizarry MM, Sandoval RM Jr, Dunn KW, Sawada H, Daugherty A, Lu HS.",
+      year: 2025,
+      title: "Renal Proximal Tubule Cell-Specific Megalin Deletion Does Not Affect Atherosclerosis But Induces Tubulointerstitial Nephritis in Mice Fed a Western Diet",
+      journal: "Arterioscler Thromb Vasc Biol.",
+      volume: "1(45): 74-89",
+      link: "https://pubmed.ncbi.nlm.nih.gov/39569521/"
     }
   ],
   "2024": [
