@@ -43,7 +43,7 @@ const faqs = [
   {
     question: 'What breeding schemes can this tool plan?',
     answer:
-      'The breeding scheme architect handles complex single allele crosses including conditional knockouts with Cre lox systems, reporter alleles, humanized models, and combinations of up to six different alleles. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts.',
+      'The breeding scheme architect handles single allele crosses including conditional knockouts with Cre lox systems, reporter alleles, and humanized models. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts. Contact our scientific team for multi-allele or complex mating schemes.',
   },
   {
     question: 'How does the tool calculate breeding pair numbers?',
@@ -73,7 +73,7 @@ const howItWorksSteps = [
     number: '1',
     title: 'Define Your Alleles',
     description:
-      'Enter each allele you need to combine in your final model. Include knockouts, Cre drivers, reporters, or humanized alleles. Specify starting genotypes and chromosomal locations if known to help identify potential linkage issues.',
+      'Enter your targeted allele. This could be a knockout, Cre driver, reporter, or humanized allele. Specify your genotypes and chromosomal location.',
     icon: IconDNA,
   },
   {
@@ -87,7 +87,7 @@ const howItWorksSteps = [
     number: '3',
     title: 'Generate Breeding Plan',
     description:
-      'The algorithm calculates the optimal sequence of crosses, identifies when to fix alleles to homozygosity, and maps the path from your starting strains to study ready cohorts. View expected offspring ratios at each generation.',
+      'The algorithm calculates the optimal sequence of crosses and maps the path from your starting material to study ready cohort size. View expected offspring ratios for different starting genotypes.',
     icon: IconSettings,
   },
   {
@@ -561,12 +561,31 @@ function BreedingSchemeArchitectContent() {
               fontWeight: 400,
               lineHeight: '1.6rem',
               maxWidth: '700px',
-              margin: '0 auto 40px',
+              margin: '0 auto 15px',
             }}
           >
             Planning single allele breeding schemes can be complex. This tool simplifies
             the process by automating Mendelian genetics calculations and identifying
             optimal breeding strategies.
+          </p>
+          <p
+            className="animate-initial animate-fade-in-up"
+            style={{
+              color: '#134978',
+              textAlign: 'center',
+              fontFamily: 'var(--system-ui)',
+              fontSize: '.9rem',
+              fontWeight: 500,
+              lineHeight: '1.6rem',
+              maxWidth: '700px',
+              margin: '0 auto 40px',
+            }}
+          >
+            Need help with multi-allele or complex mating schemes?{' '}
+            <Link href="/request-quote" style={{ color: '#008080', textDecoration: 'underline' }}>
+              Contact our scientific team
+            </Link>{' '}
+            for project-specific guidance.
           </p>
 
           <div

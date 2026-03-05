@@ -120,12 +120,14 @@ Estimates are based on standard C57BL/6 breeding parameters (average litter size
 **Section Intro:**
 Planning single allele breeding schemes can be complex. This tool simplifies the process by automating Mendelian genetics calculations and identifying optimal breeding strategies.
 
+**Multi-allele contact line:** Need help with multi-allele or complex mating schemes? Contact our scientific team for project-specific guidance.
+
 ### Step 1
 
 **Title:** Define Your Alleles
 
 **Description:**
-Enter each allele you need to combine in your final model. Include knockouts, Cre drivers, reporters, or humanized alleles. Specify starting genotypes and chromosomal locations if known to help identify potential linkage issues.
+Enter your targeted allele. This could be a knockout, Cre driver, reporter, or humanized allele. Specify your genotypes and chromosomal location.
 
 ### Step 2
 
@@ -139,7 +141,7 @@ Define the experimental and control genotypes you need for your study. Specify h
 **Title:** Generate Breeding Plan
 
 **Description:**
-The algorithm calculates the optimal sequence of crosses, identifies when to fix alleles to homozygosity, and maps the path from your starting strains to study ready cohorts. View expected offspring ratios at each generation.
+The algorithm calculates the optimal sequence of crosses and maps the path from your starting material to study ready cohort size. View expected offspring ratios for different starting genotypes.
 
 ### Step 4
 
@@ -214,7 +216,7 @@ Our scientific team can help optimize your breeding strategy, recommend Cre driv
 
 **Question:** What breeding schemes can this tool plan?
 
-**Answer:** The breeding scheme architect handles complex single allele crosses including conditional knockouts with Cre lox systems, reporter alleles, humanized models, and combinations of up to six different alleles. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts.
+**Answer:** The breeding scheme architect handles single allele crosses including conditional knockouts with Cre lox systems, reporter alleles, and humanized models. It calculates optimal breeding paths, expected genotype ratios, and estimates time to experimental cohorts. Contact our scientific team for multi-allele or complex mating schemes.
 
 ### FAQ 2
 
