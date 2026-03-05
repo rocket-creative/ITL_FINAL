@@ -203,7 +203,7 @@ export default function StatisticsPanel({ plan }: StatisticsPanelProps) {
             <strong>Timeline:</strong> Each generation takes approximately 9 weeks: 3 weeks gestation + 3 weeks weaning + 3 weeks to breeding age.
           </p>
           <p style={{ margin: '0 0 8px 0' }}>
-            <strong>Breeding Efficiency:</strong> We plan for 80% breeding success (not all pairs produce litters). We use the lower end of litter size (6 pups) for conservative planning, then average (7 pups) for total estimates.
+            Estimates are based on standard C57BL/6 breeding parameters (average litter size 6 to 8 pups, 80% breeding efficiency). Actual results may vary based on strain background, allele effects on fertility, and environmental factors.
           </p>
           <p style={{ margin: '0 0 0 0' }}>
             <strong>Why More Breeders?</strong> To account for Mendelian ratios, sex requirements, and breeding efficiency, we need more breeding pairs than your target number. This ensures you get enough mice of the correct genotype.
@@ -252,21 +252,6 @@ export default function StatisticsPanel({ plan }: StatisticsPanelProps) {
           </div>
         </div>
       )}
-
-      {/* Disclaimer */}
-      <div
-        style={{
-          fontFamily: 'var(--system-ui)',
-          fontSize: '.8rem',
-          color: '#999',
-          lineHeight: '1.5',
-          fontStyle: 'italic',
-        }}
-      >
-        Estimates are based on standard C57BL/6 breeding parameters (average litter
-        size 6 to 8 pups, 80% breeding efficiency). Actual results may vary based on
-        strain background, allele effects on fertility, and environmental factors.
-      </div>
     </div>
   );
 }
