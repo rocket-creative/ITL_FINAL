@@ -51,7 +51,7 @@ export default function OverviewSection({ data }: { data: OverviewData }) {
       </h2>
 
       {/* 2-column layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-1 md:grid-cols-2 gap-5" style={{ maxWidth: '1200px', width: '100%' }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5" style={{ maxWidth: '1200px', width: '100%' }}>
         {/* Image */}
         <div
           ref={imageRef}
