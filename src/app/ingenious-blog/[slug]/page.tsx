@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { UXUIDCNavigation, UXUIDCFooter, UXUIDCStartProjectCTA } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, UXUIDCStartProjectCTA, FAQPageSchema } from '@/components/UXUIDC';
 
 const BLOG_CONTENT_DIR = path.join(process.cwd(), 'src/content/blog');
 
@@ -363,9 +363,26 @@ export default async function IngeniousBlogPost({
     return colors[cat] || '#666';
   };
 
+  const pointMutationFaqs =
+    slug === 'what-is-a-point-mutation'
+      ? [
+          {
+            question: 'How do I get a custom point mutation mouse model?',
+            answer:
+              'ingenious targeting laboratory generates custom point mutation knockin mice at endogenous loci. Request a quote to discuss your project requirements, timeline, and pricing.',
+          },
+          {
+            question: 'What types of point mutations can be modeled?',
+            answer:
+              'We model missense, nonsense, regulatory, and disease-associated variants. Contact us to discuss your specific mutation and allele design.',
+          },
+        ]
+      : [];
+
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
+      {pointMutationFaqs.length > 0 && <FAQPageSchema faqs={pointMutationFaqs} />}
 
       <main id="main-content">
         {/* Header */}
@@ -690,6 +707,12 @@ export default async function IngeniousBlogPost({
             </h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
               {[
+                ...(slug === 'what-is-a-point-mutation'
+                  ? [
+                      { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
+                      { label: 'Request a Quote', href: '/request-quote' },
+                    ]
+                  : []),
                 { label: 'Lab Signals', href: '/lab-signals' },
                 { label: 'Resources', href: '/resources' },
                 { label: 'Technologies', href: '/technologies' },
@@ -717,12 +740,24 @@ export default async function IngeniousBlogPost({
         </section>
 
         <UXUIDCStartProjectCTA
-          title="Ready to Start Your Project?"
-          content="Our scientific consultants are available to discuss your research requirements and help design the optimal mouse model for your experimental goals."
-          buttons={[
-            { label: 'Request a Quote', href: '/request-quote' },
-            { label: 'Contact Us', href: '/contact' },
-          ]}
+          title={slug === 'what-is-a-point-mutation' ? 'Ready to Model a Point Mutation?' : 'Ready to Start Your Project?'}
+          content={
+            slug === 'what-is-a-point-mutation'
+              ? 'Get a custom point mutation mouse model. Our scientific consultants will discuss your variant, allele design, and timeline.'
+              : 'Our scientific consultants are available to discuss your research requirements and help design the optimal mouse model for your experimental goals.'
+          }
+          buttons={
+            slug === 'what-is-a-point-mutation'
+              ? [
+                  { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
+                  { label: 'Request a Quote', href: '/request-quote' },
+                  { label: 'Contact Us', href: '/contact' },
+                ]
+              : [
+                  { label: 'Request a Quote', href: '/request-quote' },
+                  { label: 'Contact Us', href: '/contact' },
+                ]
+          }
         />
       </main>
 

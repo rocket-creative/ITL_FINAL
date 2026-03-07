@@ -1,7 +1,7 @@
 ---
 title: "What Is a Point Mutation? Types, Causes & Examples"
 slug: "what-is-a-point-mutation"
-description: "Point mutations are single nucleotide changes that can cause diseases like sickle cell anemia and cystic fibrosis. Learn the 3 types (substitutions, deletions, insertions), what causes them, and how point mutation mouse models advance preclinical research."
+description: "Model a point mutation in mice? See how researchers use precise knockin mouse models for disease research and get a quote for your project."
 date: "Thu Jul 10 2025 15:33:51 GMT+0000 (Coordinated Universal Time)"
 category: "Educational"
 legacy_url: "https://www.genetargeting.com/ingenious-blog/what-is-a-point-mutation"
@@ -25,6 +25,8 @@ A single point mutation occurs when a single base pair is substituted with anoth
 
 Single point mutations can and have been used for a variety of different applications. In most cases, they are used in transgenic mice to help develop simple, easy to obtain but also highly targeted changes in the DNA encoding that accounts for certain diseases or their absence. As a result, the use of a single point mutation can lead to anything from the development of prostate cancer to an increase in immune system deficiencies, which can then be used to develop new potential treatments. For example, sickle cell anemia mice have single mutations consisting of mutations of Antilles b23-I and D-Punjab b121-N. These are known to enhance the polymerization process in sickle cell patients being bS-Antilles heterozygotes or compound S/D- Punjab heterozygotes.
 
+[Get a custom point mutation mouse model →](/point-mutation-mice/)
+
 ### Differences Between Multiple and Single Point Mutations
 
 Point mutations can occur not only in the DNA, but in the RNA as well. In humans, the double-stranded DNA and RNA are complementary in their function of generating the vital amino acids required for cells to thrive. However, when a multiple or single point mutation occurs, the result can lead to an alteration (or more) that can be difficult to trace or to fully understand. The difference between multiple and single point mutations is that the point mutation only alters one base of nucleotides, while multiple mutations can also affect entire sections of chromosomes. Multiple point mutations can also occur in a single strand of DNA or RNA.
@@ -46,6 +48,8 @@ Base Substitutions: When considering what a point mutation is, it’s also impor
 Deletions: A deletion, resulting in a frameshift, occurs when one or more base pairs are lost from the DNA. If one or two bases are deleted, the translational frame is altered resulting in a garbled message and nonfunctional product. A deletion of three or more bases leaves the reading frame intact. A deletion of one or more codons results in a protein missing one or more amino acids. This may be deleterious or not. An example in which a deletion of three nucleotides takes place in a recessive inherited disorder is cystic fibrosis. This deletion occurs  in the cystic fibrosis transmembrane conductance regular gene, resulting in the loss of the amino acid phenylalanine and causing an incorrectly folded protein.
 
 Insertions: The insertion of additional base pairs may lead to frameshifts depending on whether or not multiples of three base pairs are inserted. Combinations of insertions and deletions leading to a variety of outcomes are also possible. For example, if a sequence of codons in DNA is normally CCT ATG TTT and an extra A is added between the two cytosine bases, the sequence will instead read CAC TAT GTT T. This completely changes the amino acids that would be produced, which in turn alters the structure and function of the resulting protein and can render it useless.
+
+**Need a custom point mutation mouse model?** [Explore point mutation mice](/point-mutation-mice/) or [request a quote](/request-quote/) to discuss your project.
 
 ### What Can Cause a Point Mutation?
 
@@ -75,6 +79,4 @@ Not all mutations are neutral or negative. In some cases, they can lead to posit
 
 With modern sequencing and genomic engineering technologies, the precise mutation(s) underlying human disease can be introduced into mice, yielding more accurate and useful disease research data.  Through the years, the mouse model has proven to be the best way to reproduce human disease when due to mutations.  There has been high physiological relevance of the scientific data obtained from the mouse model and it is a cleaner way than the classical knockout mouse model where the whole gene is deleted.  In addition, the phenotype is due only to the mutation:  alteration of a single function without disturbing other domains of a protein.
 
-Related Posts
-
-‍
+**Start your point mutation project.** [Get a custom point mutation mouse model](/point-mutation-mice/) or [request a quote](/request-quote/) for timeline and pricing.
