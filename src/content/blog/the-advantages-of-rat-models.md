@@ -62,7 +62,7 @@ Murray Clarke, PhDUniversity of Cambridge
 
 Interested in using rats for your next research project? Click the button below to get a quote!
 
-[Request a Quote](/quote-request-form/)
+[Request a Quote](/request-quote/)
 
 ### Why are rats used to model hypoxia-ischemia?
 

@@ -30,6 +30,6 @@ In order to more accurately model human disease, we’ve developed our exclusive
 
 For more certainty, we can add a fluorescent reporter to your knockin mouse model to confirm the location of your knocked in gene, monitor gene expression, and more. Other design options include point mutations and cassette insertions, with both conventional and conditional approaches available.
 
-[Get in touch with us](/quote-request-form/) to learn more about our knockin capabilities. We will respond to you within 1 business day.
+[Get in touch with us](/request-quote/) to learn more about our knockin capabilities. We will respond to you within 1 business day.
 
 ‍

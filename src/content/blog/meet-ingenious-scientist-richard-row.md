@@ -40,6 +40,6 @@ Richard is a Scientific Strategy Consultant at ingenious. As a graduate student 
 
 8) [Mouse Knockout Screen Leads To Discovery](/newsletters/mouse-knockout-hearing-genes/)The International Mouse Phenotyping Consortium (IMPC) has identified 67 genes related to hearing, including 52 genes not previously associated with that process. This was accomplished by analyzing 3006 lines of knockout mice. The IMPC’s goal is to test the function of 20,000 genes in mouse models. [Read more](/newsletters/mouse-knockout-hearing-genes/)
 
-Want to get in touch with Richard? Just fill out [our form to get a quote](/quote-request-form/) or [schedule a meeting](https://go.genetargeting.com/schedule-meeting) to discuss your next custom animal model.
+Want to get in touch with Richard? Just fill out [our form to get a quote](/request-quote/) or [schedule a meeting](https://go.genetargeting.com/schedule-meeting) to discuss your next custom animal model.
 
 ‍

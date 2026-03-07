@@ -1,6 +1,7 @@
 ---
-title: "Point Mutation Diseases"
+title: "Diseases Caused by Point Mutations: Examples & Mechanisms"
 slug: "point-mutation-diseases"
+description: "Sickle cell, cystic fibrosis, cancer. See how point mutations drive disease and how mouse models help study them. Get a quote for your project."
 date: "Thu Jul 10 2025 15:33:51 GMT+0000 (Coordinated Universal Time)"
 category: "Educational"
 legacy_url: "https://www.genetargeting.com/ingenious-blog/point-mutation-diseases"
@@ -24,14 +25,18 @@ Point mutation diseases don’t always have to be the end result. In many instan
 
 The study of diseases induced by point mutations take researchers frequently into the realm of the complexity of the human immune system. Primary immune system problems can be linked to specific gene defects that can be caused by point mutations. Scientists Troy Torgerson and Hans Ochs have studied the problem in great detail in 2014, and have come to the conclusion that enzyme replacement therapy can be an efficient way to counteract the problem, depending on the specific gene defect.
 
-RELATED: [Point Mutation Mouse Models](/point-mutation-mice/)
+RELATED: [Point Mutation Mouse Models](/point-mutation-mice/) or [request a quote](/request-quote/) to discuss your disease model.
 
 #### Tay-Sachs Disease
 
 Tay-Sachs disease is one of those point mutation diseases that you don’t often hear about. However, it is very real, and the genetic defect that causes it is often passed down from parent to child. The defect is in the HEXA gene, on chromosome 15. This gene plays an important role in the function of the nervous system, and its impairment can lead to dangerously high levels of fatty tissue in the brain and spinal cord.
 
+[Model disease variants in mice](/point-mutation-mice/) or [request a quote](/request-quote/) for your project.
+
 #### Cancer and Tumors – The Main Diseases That Have to Be Studied
 
 If the point mutation occurs in multiple tumor suppressors, the result is cancer. Now, the problem with cancer is that there are as many different types of it as there are potential genetic defects that can cause it. As a result, for example, a defect in the Adenomatous Polyposis Coli, caused by a point mutation, will lead to tumorigenesis. In the case of some types of cancer, such as prostate cancer, the effects are more unique. Prostate cancer has the lowest rate of point mutations compared to other forms of cancer, however, the frequency of point mutations measured in different samples of prostate cancer tumors tends to vary greatly. This goes to show that point mutation diseases are far more difficult to fully comprehend than we think, and a significant amount of research is still required.
 
-‍
+Related: [What Is a Point Mutation](/ingenious-blog/what-is-a-point-mutation/), [Types of Point Mutations](/ingenious-blog/types-of-point-mutations/).
+
+**Ready to model a disease variant?** [Explore point mutation mouse models](/point-mutation-mice/) or [request a quote](/request-quote/) to discuss your project.

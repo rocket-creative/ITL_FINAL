@@ -41,4 +41,4 @@ Jennifer is a Scientific Strategy Consultant at ingenious. She completed her gra
 ![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b1708c902483534a8cf4c_4-reason-transgenic-300x156-1.jpeg)
 [4 Reasons To Use Targeted Transgenic Mice Over Random Insertion](/ingenious-blog/4-reasons-to-use-targeted-transgenic-mice-over-random-insertion)Don’t leave your research up to chance. Before you start your next experiment, consider these 4 reasons why a targeted transgenic mouse model may be necessary. [Read more](/ingenious-blog/4-reasons-to-use-targeted-transgenic-mice-over-random-insertion)
 
-If you’d like to talk with Jennifer about your next custom mouse model with ingenious, you can [request a quote](/quote-request-form/) or [schedule a meeting](https://go.genetargeting.com/schedule-meeting) with her.
+If you’d like to talk with Jennifer about your next custom mouse model with ingenious, you can [request a quote](/request-quote/) or [schedule a meeting](https://go.genetargeting.com/schedule-meeting) with her.

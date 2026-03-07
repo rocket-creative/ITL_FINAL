@@ -79,4 +79,6 @@ Not all mutations are neutral or negative. In some cases, they can lead to posit
 
 With modern sequencing and genomic engineering technologies, the precise mutation(s) underlying human disease can be introduced into mice, yielding more accurate and useful disease research data.  Through the years, the mouse model has proven to be the best way to reproduce human disease when due to mutations.  There has been high physiological relevance of the scientific data obtained from the mouse model and it is a cleaner way than the classical knockout mouse model where the whole gene is deleted.  In addition, the phenotype is due only to the mutation:  alteration of a single function without disturbing other domains of a protein.
 
+Related: [Types of Point Mutations](/ingenious-blog/types-of-point-mutations/), [Point Mutation Diseases](/ingenious-blog/point-mutation-diseases/).
+
 **Start your point mutation project.** [Get a custom point mutation mouse model](/point-mutation-mice/) or [request a quote](/request-quote/) for timeline and pricing.

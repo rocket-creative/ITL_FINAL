@@ -26,10 +26,10 @@ The strategy of a small promoter sequence driving tissue-specific expression can
 
 Another common strategy for obtaining tissue-specific expression in genetically engineered mouse models is knocking in a new sequence so it replaces an endogenous gene. This strategy is preferable for creating reporter lines that most faithfully duplicate the expression pattern of a specific gene. In principle almost any sequence can be used for the knockin, for example a coding sequence incorporating mutations or the coding sequence of a human gene. Often lines made with this method result in disruption of the targeted gene but co-expression of two genes is possible if the right design is used. At ingenious we have the expertise to incorporate these strategies into the design of your next model.
 
-[Request a Quote](/quote-request-form/)
+[Request a Quote](/request-quote/)
 
 Sooner or later every research program will require the creation of a new tissue-specific expression model. It may be that a required Cre line isn’t already available, or the human and mouse sequences are too different for translational research. The design of a new transgenic knockin model should be guided by careful consideration of the relative advantages of available strategies, particularly the decision between targeted and random transgenesis.
 
-If your lab is considering a new mouse line, [contact](/quote-request-form/) ingenious to discuss which strategy best fits your requirements.
+If your lab is considering a new mouse line, [contact](/request-quote/) ingenious to discuss which strategy best fits your requirements.
 
 ‍

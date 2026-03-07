@@ -67,6 +67,6 @@ From injection to the identification of germline confirmed F1 mice takes ~ 4 mon
 
 Total time to ES cell-mediated KO/KI mice, including complex alleles: ~ 8-9 months.
 
-[Contact](/quote-request-form/) ingenious today to get started on your custom animal model.
+[Contact](/request-quote/) ingenious today to get started on your custom animal model.
 
 ‍

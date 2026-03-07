@@ -20,7 +20,7 @@ Rats became the premiere animal model for human heart disease thanks in large pa
 
 In more recent years mice gained prominence as models for human heart disease because targeted genetic modifications could be introduced. Now the rat genome can be modified almost as freely as in the mouse with the new technique of gene editing in spermatagonial stem cells. This expansion of research possibilities should create a renaissance for the rat as a model for heart disease and the human cardiovascular system.
 
-If you need a custom rat model for your project, look no further than ingenious. We’ll generate one exactly to your specifications. Get started by [clicking here](/quote-request-form/).
+If you need a custom rat model for your project, look no further than ingenious. We’ll generate one exactly to your specifications. Get started by [clicking here](/request-quote/).
 
 [Download Free White Paper: Custom Rat Models for Tissue-Specific Knockout](https://go.genetargeting.com/rat-tissue-specific-white-paper)
 

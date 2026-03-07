@@ -35,6 +35,6 @@ Kristen has been with ingenious since 2004 and has held roles in Sales, Marketin
 ![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b222c5b1c772e7d72c2b7_mouse-timeline-768x348-1.jpeg)
 7) [What Is The Mouse Knockout Timeline?](/newsletters/mouse-knockout-timeline/)If you plan on working with knockout mice for your next study, then it’s important that you know the timeline for generating these models. Depending on whether you use gene targeting in ES cells or gene editing using CRISPR technology, the total time from start to finish can vary. [Read more](/newsletters/mouse-knockout-timeline/)
 
-Ready to speak with ingenious about advancing your research with a new animal model? [Click here](/quote-request-form/) to request a free quote.
+Ready to speak with ingenious about advancing your research with a new animal model? [Click here](/request-quote/) to request a free quote.
 
 ‍

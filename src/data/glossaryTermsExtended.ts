@@ -33,7 +33,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   // ═══════════════════════════════════════════════════════════════════════════
   "point-mutation": {
     metaTitle: "Point Mutation | Definition, Mechanism, and Role in Mouse Model Research",
-    metaDescription: "Explore how point mutations alter gene function, drive disease, and power preclinical discovery. Learn how engineered point mutation mice advance biomedical research.",
+    metaDescription: "Point mutation definition and mechanism. See how researchers use point mutation mouse models for disease research. Get a quote.",
     introduction: "Despite their small scale, point mutations are among the most powerful tools in genetics and biomedical research. They occur when one nucleotide—adenine (A), cytosine (C), guanine (G), or thymine (T)—is substituted, inserted, or deleted within a DNA sequence. Such changes can have minimal impact (as in silent mutations) or severe consequences, such as loss of gene function, altered protein structure, or disease initiation.",
     sections: [
       {

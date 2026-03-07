@@ -377,7 +377,33 @@ export default async function IngeniousBlogPost({
               'We model missense, nonsense, regulatory, and disease-associated variants. Contact us to discuss your specific mutation and allele design.',
           },
         ]
-      : [];
+      : slug === 'types-of-point-mutations'
+        ? [
+            {
+              question: 'Can you model substitution, deletion, or insertion mutations?',
+              answer:
+                'Yes. ingenious targeting laboratory generates custom point mutation knockin mice for all mutation types. Request a quote to discuss your specific variant and allele design.',
+            },
+            {
+              question: 'How do I choose which point mutation type to model?',
+              answer:
+                'Our scientific consultants help evaluate your gene of interest and recommend the optimal mutation strategy. Contact us for a free consultation.',
+            },
+          ]
+        : slug === 'point-mutation-diseases'
+          ? [
+              {
+                question: 'Can you model disease-associated point mutations in mice?',
+                answer:
+                  'Yes. ingenious targeting laboratory generates custom point mutation knockin mice for sickle cell, cystic fibrosis, cancer, and other disease variants. Request a quote to discuss your project.',
+              },
+              {
+                question: 'How do mouse models help study point mutation diseases?',
+                answer:
+                  'Point mutation knockin mice express the variant protein at endogenous loci under physiological regulation. This enables precise study of disease mechanisms and therapeutic development. Contact us for a consultation.',
+              },
+            ]
+          : [];
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -711,8 +737,24 @@ export default async function IngeniousBlogPost({
                   ? [
                       { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
                       { label: 'Request a Quote', href: '/request-quote' },
+                      { label: 'Types of Point Mutations', href: '/ingenious-blog/types-of-point-mutations/' },
+                      { label: 'Point Mutation Diseases', href: '/ingenious-blog/point-mutation-diseases/' },
                     ]
-                  : []),
+                  : slug === 'types-of-point-mutations'
+                    ? [
+                        { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
+                        { label: 'Request a Quote', href: '/request-quote' },
+                        { label: 'What Is a Point Mutation', href: '/ingenious-blog/what-is-a-point-mutation/' },
+                        { label: 'Point Mutation Diseases', href: '/ingenious-blog/point-mutation-diseases/' },
+                      ]
+                    : slug === 'point-mutation-diseases'
+                      ? [
+                          { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
+                          { label: 'Request a Quote', href: '/request-quote' },
+                          { label: 'What Is a Point Mutation', href: '/ingenious-blog/what-is-a-point-mutation/' },
+                          { label: 'Types of Point Mutations', href: '/ingenious-blog/types-of-point-mutations/' },
+                        ]
+                      : []),
                 { label: 'Lab Signals', href: '/lab-signals' },
                 { label: 'Resources', href: '/resources' },
                 { label: 'Technologies', href: '/technologies' },
@@ -740,14 +782,26 @@ export default async function IngeniousBlogPost({
         </section>
 
         <UXUIDCStartProjectCTA
-          title={slug === 'what-is-a-point-mutation' ? 'Ready to Model a Point Mutation?' : 'Ready to Start Your Project?'}
-          content={
+          title={
             slug === 'what-is-a-point-mutation'
+              ? 'Ready to Model a Point Mutation?'
+              : slug === 'types-of-point-mutations'
+                ? 'Ready to Model Your Mutation Type?'
+                : slug === 'point-mutation-diseases'
+                  ? 'Ready to Model a Disease Variant?'
+                  : 'Ready to Start Your Project?'
+          }
+          content={
+            slug === 'what-is-a-point-mutation' ||
+            slug === 'types-of-point-mutations' ||
+            slug === 'point-mutation-diseases'
               ? 'Get a custom point mutation mouse model. Our scientific consultants will discuss your variant, allele design, and timeline.'
               : 'Our scientific consultants are available to discuss your research requirements and help design the optimal mouse model for your experimental goals.'
           }
           buttons={
-            slug === 'what-is-a-point-mutation'
+            slug === 'what-is-a-point-mutation' ||
+            slug === 'types-of-point-mutations' ||
+            slug === 'point-mutation-diseases'
               ? [
                   { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
                   { label: 'Request a Quote', href: '/request-quote' },
