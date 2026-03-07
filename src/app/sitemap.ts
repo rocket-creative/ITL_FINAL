@@ -1,15 +1,45 @@
 /**
- * Sitemap Generator - Based on START-HERE.docx (130 pages total)
+ * Sitemap Generator - Dynamic sitemap including all indexable pages
+ * Includes static pages, blog, glossary, Lab Signals, and legacy content
  */
 
 import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
+import { getAllBlogSlugs } from '@/lib/blog/blogUtils';
+import { glossaryTerms } from '@/data/glossaryTerms';
+import { getAllArticleSlugs } from '@/data/newsletterArticles';
+import { BASE_URL } from '@/lib/seo/types';
+
+type SitemapEntry = {
+  url: string;
+  lastModified: Date;
+  changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority: number;
+};
+
+function url(path: string): string {
+  const normalized = path.startsWith('/') ? path : `/${path}`;
+  return `${BASE_URL}${normalized}${normalized ? '/' : ''}`;
+}
+
+function getLegacySlugs(): string[] {
+  try {
+    const legacyDir = path.join(process.cwd(), 'src/content/legacy');
+    const files = fs.readdirSync(legacyDir);
+    return files
+      .filter((file) => file.endsWith('.md') && !file.startsWith('_') && file !== 'README.md')
+      .map((file) => file.replace('.md', ''));
+  } catch {
+    return [];
+  }
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.genetargeting.com';
+  const entries: SitemapEntry[] = [];
 
-  // All 130 pages from START-HERE document
-  const allPages = [
-    // Core Pages (13)
+  // Static pages from START-HERE (with additional pages)
+  const staticPages = [
     '',
     '/about-itl',
     '/request-quote',
@@ -23,8 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/quality-control',
     '/conditional-knockout-vs-conventional-knockout',
     '/mouse-strain-backgrounds',
-
-    // Custom Mouse Models (18)
+    '/testimonials',
+    '/schedule-meeting',
+    '/video-library',
+    '/technology-overview',
+    '/post-project-services',
+    '/start-your-project',
     '/custom-mouse-models',
     '/knockout-mouse-models',
     '/conditional-knockout-mouse-models',
@@ -43,8 +77,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tim3-humanized-mice',
     '/gene-replacement',
     '/transgenic-mouse-service',
-
-    // Therapeutic Areas (23)
     '/therapeutic-areas',
     '/oncology-mouse-models',
     '/immuno-oncology-mouse-models',
@@ -68,8 +100,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/rare-disease-mouse-models',
     '/muscular-dystrophy-mouse-models',
     '/ophthalmology-mouse-models',
-
-    // Technology (15)
     '/technologies',
     '/cre-lox-system',
     '/loxp-site-design',
@@ -79,15 +109,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/inducible-gene-expression',
     '/tamoxifen-inducible-cre',
     '/critical-exon-selection',
-
-    // Strain Backgrounds (6)
-    '/mouse-strain-backgrounds',
     '/c57bl6-mouse-background',
     '/c57bl6j-vs-c57bl6n',
     '/balbc-mouse-background',
     '/backcrossing-services',
-
-    // Applications (10)
     '/research-applications',
     '/target-validation-mouse-models',
     '/efficacy-testing-mouse-models',
@@ -98,8 +123,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/gene-function-studies',
     '/pathway-analysis-mice',
     '/biomarker-discovery-mice',
-
-    // Services (10)
     '/mouse-model-services',
     '/custom-projects',
     '/support-services',
@@ -110,8 +133,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/preclinical-services',
     '/phenotyping-services',
     '/mouse-genotyping-service',
-
-    // Catalog (7)
     '/catalog-mouse-models',
     '/all-catalog-mouse-models',
     '/humanized-immune-checkpoint-mice',
@@ -119,15 +140,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/single-checkpoint-mice',
     '/double-checkpoint-mice',
     '/disease-model-catalog',
-
-    // Guides (8)
+    '/order-catalog-models',
     '/knockout-strategy-guide',
     '/conditional-vs-conventional-guide',
     '/humanization-strategy-guide',
     '/reporter-selection-guide',
     '/cre-line-selection-guide',
-
-    // Advanced Targeting (8)
     '/safe-harbor-locus',
     '/rosa26',
     '/rapid-rosa26-targeting',
@@ -136,16 +154,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/fast-mice',
     '/bac-to-bac-large-scale-targeting',
     '/knockout-first-allele',
-
-    // Tag Knockins (6)
+    '/inducible-rosa26',
     '/flag-tag-knockin',
     '/ha-tag-knockin',
     '/gfp-knockin-mice',
     '/tdtomato-knockin-mice',
     '/lacz-knockin-mice',
     '/conditional-knockin-mice',
-
-    // Disease Subpages (12)
     '/type-1-diabetes-mice',
     '/type-2-diabetes-mice',
     '/huntingtons-mouse-models',
@@ -158,23 +173,73 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/hypertension-mouse-models',
     '/cardiac-fibrosis-mice',
     '/cystic-fibrosis-mice',
-
-    // Rat Models (4)
     '/rat-models',
     '/knockout-rat-models',
     '/knockin-rat-models',
     '/transgenic-rat-models',
-
-    // Legal
+    '/custom-rabbit-models',
+    '/custom-animal-models',
+    '/cdna-knockin',
+    '/ingenious-blog',
+    '/lab-signals',
+    '/search',
     '/privacy',
     '/terms',
     '/accessibility',
   ];
 
-  return allPages.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : route.includes('catalog') ? 0.9 : 0.8,
-  }));
+  for (const route of staticPages) {
+    const pathStr = route || '/';
+    entries.push({
+      url: url(pathStr === '/' ? '' : route),
+      lastModified: new Date(),
+      changeFrequency: route === '' ? 'weekly' : route.includes('catalog') ? 'weekly' : 'monthly',
+      priority: route === '' ? 1 : route.includes('catalog') || route.includes('request-quote') ? 0.9 : 0.8,
+    });
+  }
+
+  // Blog posts
+  const blogSlugs = getAllBlogSlugs();
+  for (const slug of blogSlugs) {
+    entries.push({
+      url: url(`/ingenious-blog/${slug}`),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
+  // Glossary terms
+  for (const term of glossaryTerms) {
+    entries.push({
+      url: url(`/mouse-genetics-glossary/${term.slug}`),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
+  // Lab Signals (published only)
+  const labSignalsSlugs = getAllArticleSlugs();
+  for (const slug of labSignalsSlugs) {
+    entries.push({
+      url: url(`/lab-signals/${slug}`),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
+  // Legacy pages
+  const legacySlugs = getLegacySlugs();
+  for (const slug of legacySlugs) {
+    entries.push({
+      url: url(`/legacy/${slug}`),
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    });
+  }
+
+  return entries;
 }

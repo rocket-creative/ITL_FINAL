@@ -316,6 +316,10 @@ export function trackQuoteRequest(
 export function trackContactSubmission(
   inquiryType?: string
 ) {
+  gtag('event', 'generate_lead', {
+    method: 'contact_form',
+    inquiry_type: inquiryType,
+  });
   gtag('event', 'contact_submission', {
     inquiry_type: inquiryType,
   });

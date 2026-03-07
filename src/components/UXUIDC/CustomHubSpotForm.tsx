@@ -36,6 +36,8 @@ interface CustomHubSpotFormProps {
   successMessage?: string;
   errorMessage?: string;
   className?: string;
+  /** Fired when form submits successfully (for GA4 generate_lead, etc.) */
+  onSuccess?: () => void;
 }
 
 export default function CustomHubSpotForm({
@@ -46,6 +48,7 @@ export default function CustomHubSpotForm({
   successMessage = 'Thank you! We\'ll be in touch soon.',
   errorMessage = 'Something went wrong. Please try again or contact us directly.',
   className = '',
+  onSuccess,
 }: CustomHubSpotFormProps) {
   const [formData, setFormData] = useState<Record<string, string | string[]>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -153,6 +156,7 @@ export default function CustomHubSpotForm({
         console.log('[DEBUG] Setting success state');
         fetch('http://127.0.0.1:7244/ingest/f127fef7-31d3-4e3a-bfff-b3d78475987d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'CustomHubSpotForm.tsx:154',message:'Setting success state',data:{},timestamp:Date.now()})}).catch(()=>{});
         // #endregion
+        onSuccess?.();
         setSubmitStatus('success');
         setFormData({}); // Clear form
       } else {

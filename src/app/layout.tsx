@@ -5,6 +5,9 @@ import "./globals.css";
 import { AllPixels } from "@/components/analytics";
 import { Analytics } from "@vercel/analytics/next";
 
+// Only load Vercel Analytics on Vercel (avoids 404 and MIME errors on localhost)
+const isVercel = Boolean(process.env.NEXT_PUBLIC_VERCEL_ENV);
+
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -98,13 +101,14 @@ export default function RootLayout({
                     return false;
                   };
 
-                  // HubSpot iframe form submission listener → fires Google Ads conversion
+                  // HubSpot iframe form submission listener → fires Google Ads conversion + GA4 generate_lead
                   // Required because HubSpot forms are embedded iframes — onclick won't work
                   window.addEventListener('message', function(event) {
                     if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
                       gtag('event', 'conversion', {
                         'send_to': '${GOOGLE_ADS_ID}/fS_cCPqFqu0aEMOV4MQ_'
                       });
+                      ${GA_MEASUREMENT_ID ? "gtag('event', 'generate_lead', { method: 'hubspot' });" : ''}
                     }
                   });
                 `,
@@ -116,7 +120,7 @@ export default function RootLayout({
       <body className="antialiased">
         {/* Additional Tracking Pixels: HubSpot, etc */}
         <AllPixels />
-        <Analytics />
+        {isVercel ? <Analytics /> : null}
         
         {/* Skip to main content link for accessibility */}
         <a href="#main-content" className="skip-link">

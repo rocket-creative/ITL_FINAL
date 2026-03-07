@@ -169,8 +169,8 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   },
 
   "open-reading-frame": {
-    metaTitle: "Open Reading Frame (ORF) | Definition and Importance in Mouse Model Design",
-    metaDescription: "Discover how open reading frames (ORFs) define protein-coding genes, ensure correct translation, and influence transgene design in genetically engineered mouse models.",
+    metaTitle: "Open Reading Frame (ORF) | Definition, Examples, and Gene Targeting",
+    metaDescription: "What is an open reading frame? See how ORFs define protein coding, avoid frameshifts, and guide knockin and transgene design in mouse models.",
     introduction: "An open reading frame (ORF) is a continuous stretch of DNA or RNA sequence that can be translated into a protein. It begins with a start codon (typically AUG in mRNA) and ends with a stop codon (UAA, UAG, or UGA). ORFs represent the protein-coding potential of a gene and define the framework through which genetic information is converted into functional polypeptides.",
     faqs: [
       {
@@ -985,8 +985,8 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   },
 
   "zygosity": {
-    metaTitle: "Zygosity (Heterozygous vs Homozygous) | Understanding Allele Combinations",
-    metaDescription: "Learn how zygosity status impacts gene dosage, phenotype, and breeding outcomes.",
+    metaTitle: "Heterozygous vs Homozygous: Zygosity Explained for Mouse Breeding",
+    metaDescription: "Heterozygous vs homozygous: understand gene dosage, phenotype differences, and breeding outcomes for your mouse model experiments.",
     introduction: "Zygosity describes whether the two copies of a gene in an organism are identical (homozygous) or different (heterozygous). Determining zygosity is crucial for interpreting phenotypes and designing experiments involving genetically modified mice.",
     faqs: [
       {

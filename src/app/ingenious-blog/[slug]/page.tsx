@@ -290,16 +290,28 @@ export async function generateMetadata({
     const { data } = parseFrontmatter(fileContent);
 
     const title = String(data.title || slug.replace(/-/g, ' '));
+    const description = data.description && String(data.description) !== 'undefined'
+      ? String(data.description)
+      : `Archived blog post from ingenious targeting laboratory: ${title}`;
+    const canonicalUrl = `https://www.genetargeting.com/ingenious-blog/${slug}/`;
 
     return {
-      title: `${title} | Ingenious Blog Archive | ITL`,
-      description:
-        String(data.description) ||
-        `Archived blog post from ingenious targeting laboratory: ${title}`,
+      title: `${title} | ingenious targeting laboratory`,
+      description,
+      alternates: {
+        canonical: canonicalUrl,
+      },
+      openGraph: {
+        title: `${title} | ingenious targeting laboratory`,
+        description,
+        url: canonicalUrl,
+        siteName: 'ingenious targeting laboratory',
+        type: 'article',
+      },
     };
   } catch {
     return {
-      title: 'Blog Post | Ingenious Blog Archive | ITL',
+      title: 'Blog Post | ingenious targeting laboratory',
       description: 'Archived blog post from ingenious targeting laboratory',
     };
   }

@@ -6,6 +6,7 @@
 
 'use client';
 
+import { useEffect } from 'react';
 import Link from 'next/link';
 import {
   UXUIDCNavigation,
@@ -15,6 +16,11 @@ import {
 } from '@/components/UXUIDC';
 
 export default function ThankYouPage() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'generate_lead', { method: 'thank_you_page' });
+    }
+  }, []);
   return (
     <>
       {/* SEO: Hidden from search engines */}

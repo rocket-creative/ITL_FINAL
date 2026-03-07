@@ -26,6 +26,8 @@ interface HubSpotFormWithFallbackProps {
   submitButtonText?: string;
   successMessage?: string;
   timeout?: number;
+  /** Fired when fallback form submits successfully (HubSpot forms use layout listener) */
+  onFallbackSuccess?: () => void;
 }
 
 type FormState = 'loading' | 'hubspot' | 'fallback';
@@ -39,6 +41,7 @@ export default function HubSpotFormWithFallback({
   submitButtonText = 'Submit',
   successMessage = 'Thank you! We\'ll be in touch soon.',
   timeout = 5000,
+  onFallbackSuccess,
 }: HubSpotFormWithFallbackProps) {
   const [formState, setFormState] = useState<FormState>('loading');
   const [showWarning, setShowWarning] = useState(false);
@@ -164,6 +167,7 @@ export default function HubSpotFormWithFallback({
           fields={fallbackFields}
           submitButtonText={submitButtonText}
           successMessage={successMessage}
+          onSuccess={onFallbackSuccess}
         />
       )}
     </div>

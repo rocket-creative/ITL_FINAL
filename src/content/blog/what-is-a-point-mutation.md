@@ -1,6 +1,7 @@
 ---
-title: "What Is A Point Mutation?"
+title: "What Is a Point Mutation? Types, Causes & Examples"
 slug: "what-is-a-point-mutation"
+description: "Point mutations are single nucleotide changes that can cause diseases like sickle cell anemia and cystic fibrosis. Learn the 3 types (substitutions, deletions, insertions), what causes them, and how point mutation mouse models advance preclinical research."
 date: "Thu Jul 10 2025 15:33:51 GMT+0000 (Coordinated Universal Time)"
 category: "Educational"
 legacy_url: "https://www.genetargeting.com/ingenious-blog/what-is-a-point-mutation"

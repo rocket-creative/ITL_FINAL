@@ -32,9 +32,9 @@ export function generateMetadata(options: PageMetadataOptions): Metadata {
     follow = true,
   } = options;
 
-  // Ensure path starts with /
+  // Ensure path starts with / and ends with / (per next.config trailingSlash: true)
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  const fullUrl = `${BASE_URL}${normalizedPath}`;
+  const fullUrl = `${BASE_URL}${normalizedPath}${normalizedPath !== '/' ? '/' : ''}`;
   
   // Format title with site name
   const fullTitle = `${title} | ${SITE_NAME}`;

@@ -143,12 +143,13 @@
     "permanent": true
   },
   {
-    "comment": "=== LAB SIGNALS NEWSLETTER ARTICLES ===",
-    "source": "/exclusive-newsletter-content/:slug*",
-    "destination": "/lab-signals/",
+    "comment": "Mouse model generation guide (legacy content)",
+    "source": "/mouse-model-generation-guide",
+    "destination": "/legacy/mouse-model-generation-guide/",
     "permanent": true
   },
   {
+    "comment": "=== LAB SIGNALS NEWSLETTER ARTICLES (specific before catch-all) ===",
     "source": "/exclusive-newsletter-content/article-2-advances-in-metabolic-disorders-research-obesity-and-diabetes",
     "destination": "/lab-signals/article-2-advances-in-metabolic-disorders-research-obesity-and-diabetes/",
     "permanent": true
@@ -241,6 +242,12 @@
   {
     "source": "/exclusive-newsletter-content/translating-promise-into-practice---clinical-applications-cros-and-the-future",
     "destination": "/lab-signals/translating-promise-into-practice---clinical-applications-cros-and-the-future/",
+    "permanent": true
+  },
+  {
+    "comment": "Catch-all for unmatched exclusive-newsletter-content URLs",
+    "source": "/exclusive-newsletter-content/:slug*",
+    "destination": "/lab-signals/",
     "permanent": true
   }
 ]

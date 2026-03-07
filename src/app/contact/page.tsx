@@ -23,6 +23,7 @@ import {
   BreadcrumbSchema,
 } from '@/components/UXUIDC';
 import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
+import { trackContactSubmission } from '@/components/analytics/GoogleAnalytics';
 
 // Contact information
 const contactInfo = {
@@ -147,6 +148,7 @@ export default function ContactPage() {
                     fallbackFields={fallbackFields}
                     submitButtonText="Send Message"
                     successMessage="Thank you! We'll respond within 1 business day."
+                    onFallbackSuccess={() => trackContactSubmission()}
                   />
                 </div>
               </div>

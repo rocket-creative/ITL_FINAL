@@ -44,15 +44,20 @@ export async function generateMetadata({
     };
   }
 
+  const canonicalUrl = `https://www.genetargeting.com/mouse-genetics-glossary/${term.slug}/`;
+
   return {
     title: term.metaTitle,
     description: term.metaDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: term.metaTitle,
       description: term.metaDescription,
       type: 'article',
       siteName: 'ingenious targeting laboratory',
-      url: `https://www.genetargeting.com/mouse-genetics-glossary/${term.slug}`,
+      url: canonicalUrl,
     },
     twitter: {
       card: 'summary',

@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Tamoxifen Inducible Cre Systems',
-  description: 'Tamoxifen inducible CreERT2 for temporal control of gene deletion. Activate recombination at any developmental stage with drug administration.',
+  title: 'Tamoxifen Inducible Cre (CreERT2) | Temporal Gene Control',
+  description: 'Control gene deletion with tamoxifen. CreERT2 activates recombination on demand, bypasses embryonic lethality, and enables adult tissue studies.',
   path: '/tamoxifen-inducible-cre',
 });
 
