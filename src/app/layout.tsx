@@ -11,7 +11,7 @@ const isVercel = Boolean(process.env.NEXT_PUBLIC_VERCEL_ENV);
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   display: "swap",
   preload: true,
   adjustFontFallback: true,
@@ -68,16 +68,20 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable} suppressHydrationWarning>
       <head>
+        {/* Resource hints for critical third-party origins */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://js.hsforms.net" />
+        <link rel="dns-prefetch" href="https://js.hs-scripts.com" />
         {/* Google tag (gtag.js) - single loader for GA4 + Google Ads */}
         {(GA_MEASUREMENT_ID || GOOGLE_ADS_ID) && (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID || GOOGLE_ADS_ID}`}
-              strategy="beforeInteractive"
+              strategy="afterInteractive"
             />
             <Script
               id="google-tag"
-              strategy="beforeInteractive"
+              strategy="afterInteractive"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];

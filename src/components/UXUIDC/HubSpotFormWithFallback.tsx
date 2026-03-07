@@ -1,18 +1,19 @@
 /**
  * |UXUIDC| HubSpot Form With Fallback
- * @version 1.0.0
+ * @version 1.1.0
  * @description Attempts to load HubSpot form, falls back to custom form if it fails
- * 
+ *
  * Features:
+ * - Renders fallback form immediately (no SDK load until in viewport)
+ * - Intersection Observer defers HubSpot SDK until form scrolls into view
  * - 5 second timeout for HubSpot form loading
- * - Automatic fallback to custom form if HubSpot fails
  * - Form monitoring and diagnostics
  * - Backup submission for all form types
  */
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import HubSpotFormSimple from './HubSpotFormSimple';
 import CustomHubSpotForm, { FormField } from './CustomHubSpotForm';
 import { trackFormLoad, trackFormInteraction } from '@/utils/formMonitoring';
@@ -30,7 +31,7 @@ interface HubSpotFormWithFallbackProps {
   onFallbackSuccess?: () => void;
 }
 
-type FormState = 'loading' | 'hubspot' | 'fallback';
+type FormState = 'fallback' | 'hubspot';
 
 export default function HubSpotFormWithFallback({
   formId,
@@ -43,85 +44,101 @@ export default function HubSpotFormWithFallback({
   timeout = 5000,
   onFallbackSuccess,
 }: HubSpotFormWithFallbackProps) {
-  const [formState, setFormState] = useState<FormState>('loading');
+  const [formState, setFormState] = useState<FormState>('fallback');
   const [showWarning, setShowWarning] = useState(false);
+  const [shouldLoadHubSpot, setShouldLoadHubSpot] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-    let checkInterval: NodeJS.Timeout;
     let mounted = true;
+    let idleId: number | undefined;
 
-    const checkHubSpotLoad = () => {
+    const triggerLoad = () => {
       if (!mounted) return;
-
-      // Check if HubSpot script is loaded
-      if (window.hbspt?.forms) {
-        setFormState('hubspot');
-        clearTimeout(timeoutId);
-        clearInterval(checkInterval);
-        return true;
-      }
-
-      // Check if form container has content (HubSpot rendered)
-      const formContainer = document.getElementById(`hs-form-${formId}`);
-      if (formContainer) {
-        const hasForm = formContainer.querySelector('form') !== null;
-        if (hasForm) {
-          setFormState('hubspot');
-          clearTimeout(timeoutId);
-          clearInterval(checkInterval);
-          return true;
-        }
-      }
-
-      return false;
+      setShouldLoadHubSpot(true);
     };
 
-    // Check every 200ms if HubSpot loaded
-    checkInterval = setInterval(checkHubSpotLoad, 200);
+    // Intersection Observer: load SDK when form container enters viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!mounted) return;
+        const [entry] = entries;
+        if (entry?.isIntersecting) {
+          triggerLoad();
+        }
+      },
+      { rootMargin: '100px', threshold: 0.1 }
+    );
 
-    // Timeout fallback
-    timeoutId = setTimeout(() => {
-      if (!mounted) return;
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
-      const loaded = checkHubSpotLoad();
-      
-      if (!loaded) {
-        console.warn('[HubSpot Fallback] Timeout reached, switching to fallback form');
-        
-        // Track fallback trigger
-        trackFormLoad({
-          formId,
-          formName,
-          pageUrl: window.location.href,
-          timestamp: Date.now(),
-          success: false,
-          errorMessage: 'HubSpot form failed to load within timeout period',
-        });
-
-        trackFormInteraction({
-          formId,
-          formName,
-          pageUrl: window.location.href,
-          timestamp: Date.now(),
-          eventType: 'submission_error',
-          errorMessage: 'Fallback form activated due to HubSpot load failure',
-        });
-
-        setFormState('fallback');
-        setShowWarning(true);
-      }
-    }, timeout);
+    // Fallback: requestIdleCallback to load after browser idle (e.g. user never scrolls)
+    if (typeof requestIdleCallback !== 'undefined') {
+      idleId = requestIdleCallback(() => {
+        if (mounted) {
+          setShouldLoadHubSpot((prev) => prev || true);
+        }
+      }, { timeout: 3000 });
+    } else {
+      const timer = setTimeout(triggerLoad, 3000);
+      return () => {
+        mounted = false;
+        clearTimeout(timer);
+        observer.disconnect();
+      };
+    }
 
     return () => {
       mounted = false;
-      clearTimeout(timeoutId);
-      clearInterval(checkInterval);
+      observer.disconnect();
+      if (idleId !== undefined) cancelIdleCallback(idleId);
     };
-  }, [formId, formName, timeout]);
+  }, []);
+
+  // Timeout: if HubSpot hasn't loaded after timeout, show warning (keep fallback)
+  useEffect(() => {
+    if (!shouldLoadHubSpot || formState === 'hubspot') return;
+
+    const timeoutId = setTimeout(() => {
+      setFormState((prev) => {
+        if (prev === 'fallback') {
+          console.warn('[HubSpot Fallback] Timeout reached, keeping fallback form');
+
+          trackFormLoad({
+            formId,
+            formName,
+            pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+            timestamp: Date.now(),
+            success: false,
+            errorMessage: 'HubSpot form failed to load within timeout period',
+          });
+
+          trackFormInteraction({
+            formId,
+            formName,
+            pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+            timestamp: Date.now(),
+            eventType: 'submission_error',
+            errorMessage: 'Fallback form used due to HubSpot load failure',
+          });
+
+          setShowWarning(true);
+        }
+        return prev;
+      });
+    }, timeout);
+
+    return () => clearTimeout(timeoutId);
+  }, [shouldLoadHubSpot, formState, formId, formName, timeout]);
+
+  const handleHubSpotLoadSuccess = () => {
+    setFormState('hubspot');
+  };
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div ref={containerRef} style={{ position: 'relative' }}>
       {showWarning && formState === 'fallback' && (
         <div
           style={{
@@ -138,29 +155,8 @@ export default function HubSpotFormWithFallback({
         </div>
       )}
 
-      {formState === 'loading' && (
-        <div style={{ minHeight: '500px' }}>
-          <HubSpotFormSimple
-            formId={formId}
-            formName={formName}
-            portalId={portalId}
-            region={region}
-            enableBackup={true}
-          />
-        </div>
-      )}
-
-      {formState === 'hubspot' && (
-        <HubSpotFormSimple
-          formId={formId}
-          formName={formName}
-          portalId={portalId}
-          region={region}
-          enableBackup={true}
-        />
-      )}
-
-      {formState === 'fallback' && (
+      {/* Fallback form: always visible until HubSpot loads */}
+      <div style={{ display: formState === 'fallback' ? 'block' : 'none' }}>
         <CustomHubSpotForm
           portalId={portalId}
           formGuid={formId}
@@ -169,6 +165,21 @@ export default function HubSpotFormWithFallback({
           successMessage={successMessage}
           onSuccess={onFallbackSuccess}
         />
+      </div>
+
+      {/* HubSpot form: loads in background when in viewport, shown when ready */}
+      {shouldLoadHubSpot && (
+        <div style={{ display: formState === 'hubspot' ? 'block' : 'none' }}>
+          <HubSpotFormSimple
+            formId={formId}
+            formName={formName}
+            portalId={portalId}
+            region={region}
+            enableBackup={true}
+            shouldLoad={true}
+            onLoadSuccess={handleHubSpotLoadSuccess}
+          />
+        </div>
       )}
     </div>
   );

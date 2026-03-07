@@ -13,7 +13,7 @@
 
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // ============================================
 // CONFIGURATION
@@ -73,9 +73,18 @@ function AdRollPageTracker() {
 
 // ============================================
 // Main AdRoll Pixel Component
+// Deferred 5s to reduce main-thread work during initial load
 // ============================================
 export default function AdRollPixel() {
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShouldLoad(true), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   if (!ADROLL_ADV_ID || !ADROLL_PIX_ID) return null;
+  if (!shouldLoad) return <AdRollPageTracker />;
 
   return (
     <>

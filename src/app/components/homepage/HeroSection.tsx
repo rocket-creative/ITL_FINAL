@@ -7,6 +7,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface HeroData {
@@ -26,13 +27,17 @@ export default function HeroSection({ data }: { data: HeroData }) {
   return (
     <section
       className="relative overflow-hidden min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]"
-      style={{
-        backgroundImage: 'url(/images/mouse-hero-glove.jpg)',
-        backgroundPosition: '0 0',
-        backgroundSize: 'auto',
-      }}
     >
-      <div className="w-full lg:w-1/2 p-4 sm:p-6 lg:p-8">
+      <Image
+        src="/images/mouse-hero-glove.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+        quality={75}
+      />
+      <div className="relative z-10 w-full lg:w-1/2 p-4 sm:p-6 lg:p-8">
         {/* H1 - MASTER TEXT */}
         <h1
           ref={h1Ref}
@@ -61,7 +66,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
               marginBottom: '15px',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
-              fontWeight: 200,
+              fontWeight: 400,
               lineHeight: '1.3rem',
             }}
           >
@@ -78,7 +83,7 @@ export default function HeroSection({ data }: { data: HeroData }) {
               marginBottom: '15px',
               fontFamily: 'var(--system-ui)',
               fontSize: '.9rem',
-              fontWeight: 200,
+              fontWeight: 400,
               lineHeight: '1.3rem',
             }}
           >

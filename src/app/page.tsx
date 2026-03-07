@@ -19,34 +19,35 @@ import HeroSection from './components/homepage/HeroSection';
 import CoreServicesSection from './components/homepage/CoreServicesSection';
 import OverviewSection from './components/homepage/OverviewSection';
 
-// Below-fold components - lazy loaded for better initial performance
+// Below-fold components - lazy loaded with loading placeholders
+// Note: ssr: true required in Next.js 16 Server Components (ssr: false not allowed)
 const ModelLandscapeSection = dynamic(
   () => import('./components/homepage/ModelLandscapeSection'),
-  { ssr: true }
+  { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
 );
 const HighLevelApproachSection = dynamic(
   () => import('./components/homepage/HighLevelApproachSection'),
-  { ssr: true }
+  { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
 );
 const WorkflowSection = dynamic(
   () => import('./components/homepage/WorkflowSection'),
-  { ssr: true }
+  { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
 );
 const TrustedBySection = dynamic(
   () => import('./components/homepage/TrustedBySection'),
-  { ssr: true }
+  { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
 );
 const TestimonialsSection = dynamic(
   () => import('./components/homepage/TestimonialsSection'),
-  { ssr: true }
+  { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
 );
 const StartProjectSection = dynamic(
   () => import('./components/homepage/StartProjectSection'),
-  { ssr: true }
+  { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
 );
 const FAQSection = dynamic(
   () => import('./components/homepage/FAQSection'),
-  { ssr: true }
+  { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
 );
 // Video section removed per user request
 

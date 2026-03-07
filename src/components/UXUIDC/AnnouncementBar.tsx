@@ -56,16 +56,16 @@ export default function UXUIDCAnnouncementBar() {
           <span className="block sm:hidden text-xs leading-relaxed">
             Is uncertain NIH funding holding you back?
             <br />
-            <span className="font-medium">Start now, pay later.</span>
+            <span className="font-semibold">Start now, pay later.</span>
           </span>
           {/* Tablet: Condensed version */}
           <span className="hidden sm:block md:hidden text-sm leading-relaxed">
-            Is uncertain NIH funding holding you back? <span className="font-medium">Start now, pay later.</span>
+            Is uncertain NIH funding holding you back? <span className="font-semibold">Start now, pay later.</span>
           </span>
           {/* Desktop: Full version */}
           <span className="hidden md:block text-sm leading-relaxed">
             Is uncertain NIH funding holding you back from starting a much needed mouse model project?{' '}
-            <span className="font-medium">We have ways for you to start your project now and pay later.</span>
+            <span className="font-semibold">We have ways for you to start your project now and pay later.</span>
           </span>
         </Link>
         <button

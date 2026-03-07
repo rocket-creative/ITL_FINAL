@@ -23,6 +23,10 @@ interface HubSpotFormSimpleProps {
   portalId?: string;
   region?: string;
   enableBackup?: boolean;
+  /** When false, defer script injection until parent sets to true (e.g. when in viewport) */
+  shouldLoad?: boolean;
+  /** Called when HubSpot form successfully loads */
+  onLoadSuccess?: () => void;
 }
 
 // Declare HubSpot global
@@ -47,13 +51,15 @@ export default function HubSpotFormSimple({
   portalId = '3977953',
   region = 'na1',
   enableBackup = true,
+  shouldLoad = true,
+  onLoadSuccess,
 }: HubSpotFormSimpleProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isLoadingRef = useRef<HTMLDivElement>(null);
   const loadStartTime = useRef<number>(0);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!containerRef.current || !shouldLoad) return;
 
     let mounted = true;
     const containerId = `hs-form-${formId}`;
@@ -86,6 +92,8 @@ export default function HubSpotFormSimple({
             success: true,
             loadTime,
           });
+
+          onLoadSuccess?.();
 
           // Check form visibility after a short delay
           setTimeout(() => {
@@ -173,15 +181,23 @@ export default function HubSpotFormSimple({
     // Listen for form submissions
     window.addEventListener('message', handleFormSubmit);
 
-    // Delay to ensure container is in DOM
-    const timer = setTimeout(loadScript, 100);
+    // Use requestIdleCallback when available to defer load, else short delay
+    const scheduleLoad = () => {
+      if (typeof requestIdleCallback !== 'undefined') {
+        requestIdleCallback(() => loadScript(), { timeout: 500 });
+      } else {
+        setTimeout(loadScript, 100);
+      }
+    };
+
+    const timer = setTimeout(scheduleLoad, 100);
 
     return () => {
       mounted = false;
       clearTimeout(timer);
       window.removeEventListener('message', handleFormSubmit);
     };
-  }, [formId, formName, portalId, region, enableBackup]);
+  }, [formId, formName, portalId, region, enableBackup, shouldLoad, onLoadSuccess]);
 
   return (
     <div
