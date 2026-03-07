@@ -9,6 +9,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { NavbarSearch } from './NavbarSearch';
 
 interface NavItem {
   label: string;
@@ -343,18 +344,14 @@ export function UXUIDCNavigation() {
                 <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
               </Link>
 
-              {/* Search Input Field - Always visible on desktop, responsive sizing */}
+              {/* Search Input Field - Unified catalog + site search with dropdown */}
               <div className="hidden lg:block xl:w-[250px] lg:w-[180px] xl:mr-[100px] lg:mr-5">
-                <form action="/search" method="get" role="search" className="w-full">
-                  <label htmlFor="desktop-search" className="sr-only">Search models and services</label>
-                  <input
-                    id="desktop-search"
-                    type="search"
-                    name="q"
-                    placeholder="Search models..."
-                    className="border border-[#e0e0e0] bg-white h-8 w-full px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-teal-600 transition-colors duration-300 rounded-sm"
-                  />
-                </form>
+                <NavbarSearch
+                  id="desktop-search"
+                  placeholder="model or site"
+                  className="w-full"
+                  inputClassName="border border-[#e0e0e0] bg-white h-8 w-full px-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-teal-600 transition-colors duration-300 rounded-sm"
+                />
               </div>
 
               {/* Start an Order - White/rev button with animation */}
@@ -503,17 +500,16 @@ export function UXUIDCNavigation() {
           <div className="container px-4 sm:px-6 lg:px-8">
             <div id="mobile-menu" className="lg:hidden bg-white border-t max-h-[calc(100vh-120px)] overflow-y-auto" role="dialog" aria-label="Mobile navigation menu">
               <div className="py-4">
-                {/* Mobile Search */}
-                <form action="/search" method="get" role="search" className="mb-4">
-                  <label htmlFor="mobile-search" className="sr-only">Search models</label>
-                  <input
+                {/* Mobile Search - compact (form submit to /search) */}
+                <div className="mb-4">
+                  <NavbarSearch
                     id="mobile-search"
-                    type="search"
-                    name="q"
-                    placeholder="Search models, services..."
-                    className="w-full px-3 py-2 border border-[#ccc] focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-teal-600"
+                    placeholder="model or site"
+                    compact
+                    className="w-full"
+                    inputClassName="w-full px-3 py-2 border border-[#ccc] focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-teal-600"
                   />
-                </form>
+                </div>
                 <nav aria-label="Mobile menu">
                   <ul className="space-y-0">
                     {navigationItems.map((item) => (

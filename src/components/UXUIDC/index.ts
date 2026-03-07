@@ -90,6 +90,9 @@ export { default as IngeniousAd } from './IngeniousAd';
 // Catalog Search
 export { default as CatalogSearch } from './CatalogSearch';
 
+// Navbar Search (unified catalog + site)
+export { NavbarSearch } from './NavbarSearch';
+
 // Scientific Diagram Placeholders
 export { 
   ScientificDiagramPlaceholder,

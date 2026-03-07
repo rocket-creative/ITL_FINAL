@@ -2,11 +2,10 @@
 
 /**
  * Site Search Page
- * Built following RULES_2026 guidelines
- * Client-side search functionality
+ * Unified search: catalog models + site pages via /api/search
  */
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
@@ -17,6 +16,7 @@ import {
   IconChevronRight,
   IconX,
 } from '@/components/UXUIDC';
+import { searchSiteIndex, type SiteIndexEntry } from '@/lib/search/siteIndex';
 
 // Brand colors
 const BRAND = {
@@ -27,66 +27,12 @@ const BRAND = {
   text: '#333333',
 };
 
-// Site content index for search
-const siteContent = [
-  // Custom Mouse Models
-  { title: 'Custom mouse models', description: 'Design and generate custom genetically modified mouse models tailored to your research needs.', url: '/custom-mouse-models', category: 'Services' },
-  { title: 'Knockout mouse models', description: 'Create knockout mice with complete gene deletion for functional studies and phenotyping.', url: '/knockout-mouse-models', category: 'Services' },
-  { title: 'Conditional knockout mouse models', description: 'Tissue specific and temporally controlled gene deletion using Cre lox technology.', url: '/conditional-knockout-mouse-models', category: 'Services' },
-  { title: 'Conventional knockout mouse models', description: 'Whole body gene knockout mice for studying gene function across all tissues.', url: '/conventional-knockout-mouse-models', category: 'Services' },
-  { title: 'Knockin mouse models', description: 'Insert specific sequences, tags, or mutations into the mouse genome with precision.', url: '/knockin-mouse-models', category: 'Services' },
-  { title: 'Point mutation mice', description: 'Generate mice carrying specific point mutations to model human disease variants.', url: '/point-mutation-mice', category: 'Services' },
-  { title: 'Reporter knockin', description: 'Express fluorescent proteins or enzymes under endogenous promoter control.', url: '/reporter-knockin', category: 'Services' },
-  { title: 'Tag knockin mice', description: 'Add epitope tags to endogenous proteins for detection and purification.', url: '/tag-knockin-mice', category: 'Services' },
-  { title: 'Humanized mouse models', description: 'Replace mouse genes with human sequences for translational research.', url: '/humanized-mouse-models', category: 'Services' },
-  { title: 'Transgenic mouse service', description: 'Random integration of transgenes for overexpression studies.', url: '/transgenic-mouse-service', category: 'Services' },
-  
-  // Technology
-  { title: 'Cre lox system', description: 'Site specific recombination for conditional gene modification in mice.', url: '/cre-lox-system', category: 'Technology' },
-  { title: 'Flp FRT system', description: 'Alternative recombination system for complex genetic manipulations.', url: '/flp-frt-system', category: 'Technology' },
-  
-  // Therapeutic Areas
-  { title: 'Oncology mouse models', description: 'Mouse models for cancer research and immuno oncology studies.', url: '/oncology-mouse-models', category: 'Therapeutic Areas' },
-  { title: 'Immuno oncology mouse models', description: 'Models for studying immune responses to tumors and immunotherapy.', url: '/immuno-oncology-mouse-models', category: 'Therapeutic Areas' },
-  { title: 'Neuroscience mouse models', description: 'Models for neurological disease research including Alzheimer and Parkinson.', url: '/neuroscience-mouse-models', category: 'Therapeutic Areas' },
-  { title: 'Alzheimers mouse models', description: 'Transgenic and knockin models for Alzheimer disease research.', url: '/alzheimers-mouse-models', category: 'Therapeutic Areas' },
-  { title: 'Cardiovascular mouse models', description: 'Models for heart disease and vascular research.', url: '/cardiovascular-mouse-models', category: 'Therapeutic Areas' },
-  { title: 'Immunology mouse models', description: 'Models for studying immune system function and autoimmune disease.', url: '/immunology-mouse-models', category: 'Therapeutic Areas' },
-  { title: 'Metabolic disease mouse models', description: 'Models for diabetes, obesity, and metabolic syndrome research.', url: '/metabolic-disease-mouse-models', category: 'Therapeutic Areas' },
-  { title: 'Rare disease mouse models', description: 'Custom models for orphan and rare disease research.', url: '/rare-disease-mouse-models', category: 'Therapeutic Areas' },
-  
-  // Catalog
-  { title: 'Catalog mouse models', description: 'Ready made mouse models available for immediate order.', url: '/catalog-mouse-models', category: 'Catalog' },
-  { title: 'Humanized immune checkpoint mice', description: 'Pre made humanized PD1, PDL1, CTLA4, and other checkpoint models.', url: '/humanized-immune-checkpoint-mice', category: 'Catalog' },
-  { title: 'PD1 humanized mice', description: 'Humanized PD1 mice for immuno oncology research.', url: '/pd1-humanized-mice', category: 'Catalog' },
-  { title: 'PDL1 humanized mice', description: 'Humanized PDL1 mice for checkpoint inhibitor studies.', url: '/pdl1-humanized-mice', category: 'Catalog' },
-  { title: 'CTLA4 humanized mice', description: 'Humanized CTLA4 mice for immunotherapy research.', url: '/ctla4-humanized-mice', category: 'Catalog' },
-  { title: 'LAG3 humanized mice', description: 'Humanized LAG3 mice for next generation checkpoint studies.', url: '/lag3-humanized-mice', category: 'Catalog' },
-  { title: 'TIM3 humanized mice', description: 'Humanized TIM3 mice for immune checkpoint research.', url: '/tim3-humanized-mice', category: 'Catalog' },
-  { title: 'Single checkpoint mice', description: 'Single humanized immune checkpoint models including PD1, PDL1, CTLA4, LAG3, TIM3, and more.', url: '/single-checkpoint-mice', category: 'Catalog' },
-  { title: 'Double checkpoint mice', description: 'Dual humanized checkpoint mice for combination therapy studies.', url: '/double-checkpoint-mice', category: 'Catalog' },
-  
-  // Support Services
-  { title: 'Colony management services', description: 'Professional breeding and colony maintenance for your mouse lines.', url: '/colony-management-services', category: 'Support Services' },
-  { title: 'Cryopreservation services', description: 'Preserve your valuable mouse lines through sperm or embryo freezing.', url: '/cryopreservation-services', category: 'Support Services' },
-  { title: 'Rederivation services', description: 'Clean up mouse lines by rederivation into SPF facilities.', url: '/rederivation-services', category: 'Support Services' },
-  { title: 'Speed expansion breeding', description: 'Rapid expansion of mouse cohorts for studies.', url: '/speed-expansion-breeding', category: 'Support Services' },
-  { title: 'Mouse genotyping service', description: 'Fast and accurate genotyping for your mouse colonies.', url: '/mouse-genotyping-service', category: 'Support Services' },
-  { title: 'Phenotyping services', description: 'Comprehensive phenotyping of your mouse models.', url: '/phenotyping-services', category: 'Support Services' },
-  
-  // Resources
-  { title: 'Resources', description: 'Guides, protocols, and educational content for mouse model research.', url: '/resources', category: 'Resources' },
-  { title: 'Mouse genetics glossary', description: 'Comprehensive glossary of mouse genetics terminology.', url: '/glossary', category: 'Resources' },
-  { title: 'Conditional vs conventional guide', description: 'Guide to choosing between conditional and conventional knockouts.', url: '/conditional-vs-conventional-guide', category: 'Resources' },
-  { title: 'Cre line selection guide', description: 'How to choose the right Cre driver line for your research.', url: '/cre-line-selection-guide', category: 'Resources' },
-  
-  // Company
-  { title: 'About ingenious targeting laboratory', description: 'Learn about ingenious targeting laboratory and our 26+ years of experience.', url: '/about-itl', category: 'Company' },
-  { title: 'Why choose ingenious targeting laboratory', description: 'Discover why researchers trust ingenious targeting laboratory for custom mouse model generation.', url: '/why-choose-itl', category: 'Company' },
-  { title: 'Contact', description: 'Get in touch with our team for project inquiries.', url: '/contact', category: 'Company' },
-  { title: 'Request a quote', description: 'Submit a project inquiry and receive a custom quote.', url: '/request-quote', category: 'Company' },
-  { title: 'Pricing overview', description: 'Information about pricing for mouse model generation services.', url: '/pricing-overview', category: 'Company' },
-];
+interface CatalogResult {
+  id: string;
+  title: string;
+  url: string;
+  subtitle?: string;
+}
 
 export default function SearchPage() {
   const [query, setQuery] = useState(() => {
@@ -95,28 +41,50 @@ export default function SearchPage() {
     return params.get('q') || '';
   });
   const [isFocused, setIsFocused] = useState(false);
+  const [catalogResults, setCatalogResults] = useState<CatalogResult[]>([]);
+  const [isLoadingCatalog, setIsLoadingCatalog] = useState(false);
 
-  // Filter results based on query
-  const results = useMemo(() => {
-    if (!query.trim()) return [];
-    const searchTerms = query.toLowerCase().split(' ').filter(Boolean);
-    return siteContent.filter(item => {
-      const searchText = `${item.title} ${item.description} ${item.category}`.toLowerCase();
-      return searchTerms.every(term => searchText.includes(term));
-    });
+  // Fetch catalog results from API when query changes
+  useEffect(() => {
+    if (!query.trim()) {
+      setCatalogResults([]);
+      return;
+    }
+    setIsLoadingCatalog(true);
+    fetch(`/api/search?q=${encodeURIComponent(query.trim())}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.catalog && Array.isArray(data.catalog)) {
+          setCatalogResults(data.catalog);
+        } else {
+          setCatalogResults([]);
+        }
+      })
+      .catch(() => setCatalogResults([]))
+      .finally(() => setIsLoadingCatalog(false));
   }, [query]);
 
-  // Group results by category
-  const groupedResults = useMemo(() => {
-    const groups: Record<string, typeof siteContent> = {};
-    results.forEach(result => {
+  // Site results from shared index (client-side filter)
+  const siteResults = useMemo(() => {
+    if (!query.trim()) return [];
+    return searchSiteIndex(query, 50);
+  }, [query]);
+
+  // Group site results by category
+  const groupedSiteResults = useMemo(() => {
+    const groups: Record<string, SiteIndexEntry[]> = {};
+    siteResults.forEach((result) => {
       if (!groups[result.category]) {
         groups[result.category] = [];
       }
       groups[result.category].push(result);
     });
     return groups;
-  }, [results]);
+  }, [siteResults]);
+
+  const hasCatalog = catalogResults.length > 0;
+  const hasSite = siteResults.length > 0;
+  const totalCount = catalogResults.length + siteResults.length;
 
   const clearSearch = () => {
     setQuery('');
@@ -234,7 +202,7 @@ export default function SearchPage() {
             {query.trim() === '' ? (
               <div style={{ textAlign: 'center', color: BRAND.text }}>
                 <p style={{ fontSize: '1.1rem', marginBottom: '24px' }}>
-                  Enter a search term to find pages on our site.
+                  Enter a search term to find catalog models and pages on our site.
                 </p>
                 <div style={{ 
                   display: 'flex', 
@@ -243,7 +211,7 @@ export default function SearchPage() {
                   justifyContent: 'center' 
                 }}>
                   <span style={{ fontSize: '0.9rem', color: '#666' }}>Popular searches:</span>
-                  {['knockout', 'humanized', 'oncology', 'Cre lox', 'catalog'].map(term => (
+                  {['knockout', 'humanized', 'oncology', 'Cre lox', 'catalog', 'Pdcd1'].map(term => (
                     <button
                       key={term}
                       onClick={() => setQuery(term)}
@@ -262,7 +230,7 @@ export default function SearchPage() {
                   ))}
                 </div>
               </div>
-            ) : results.length === 0 ? (
+            ) : !hasCatalog && !hasSite && !isLoadingCatalog ? (
               <div style={{ textAlign: 'center', color: BRAND.text }}>
                 <p style={{ fontSize: '1.2rem', marginBottom: '16px' }}>
                   No results found for &quot;{query}&quot;
@@ -281,10 +249,78 @@ export default function SearchPage() {
                   marginBottom: '32px',
                   textAlign: 'center'
                 }}>
-                  Found {results.length} result{results.length !== 1 ? 's' : ''} for &quot;{query}&quot;
+                  {isLoadingCatalog ? (
+                    'Searching catalog...'
+                  ) : (
+                    <>Found {totalCount} result{totalCount !== 1 ? 's' : ''} for &quot;{query}&quot;</>
+                  )}
                 </p>
-                
-                {Object.entries(groupedResults).map(([category, items]) => (
+
+                {/* Catalog Models section */}
+                {hasCatalog && (
+                  <div style={{ marginBottom: '40px' }}>
+                    <h2 style={{ 
+                      fontSize: '0.9rem', 
+                      fontWeight: 600, 
+                      color: BRAND.teal,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      marginBottom: '16px',
+                      paddingBottom: '8px',
+                      borderBottom: `1px solid ${BRAND.lightGray}`
+                    }}>
+                      Catalog Models
+                    </h2>
+                    {catalogResults.map((item) => (
+                      <Link
+                        key={item.id}
+                        href={item.url}
+                        style={{
+                          display: 'block',
+                          padding: '20px',
+                          marginBottom: '12px',
+                          background: BRAND.lightGray,
+                          borderRadius: '8px',
+                          textDecoration: 'none',
+                          transition: 'transform 0.2s, box-shadow 0.2s'
+                        }}
+                        onMouseOver={(e) => {
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                          e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+                        }}
+                        onMouseOut={(e) => {
+                          e.currentTarget.style.transform = 'translateY(0)';
+                          e.currentTarget.style.boxShadow = 'none';
+                        }}
+                      >
+                        <h3 style={{ 
+                          fontSize: '1.1rem', 
+                          fontWeight: 600, 
+                          color: BRAND.navy,
+                          marginBottom: '8px'
+                        }}>
+                          {item.title}
+                        </h3>
+                        {item.subtitle && (
+                          <p style={{ 
+                            fontSize: '0.9rem', 
+                            color: '#666',
+                            margin: 0,
+                            lineHeight: 1.5
+                          }}>
+                            {item.subtitle}
+                          </p>
+                        )}
+                        <span style={{ fontSize: '0.85rem', color: BRAND.teal, fontWeight: 600 }}>
+                          Request quote →
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+
+                {/* Site pages by category */}
+                {Object.entries(groupedSiteResults).map(([category, items]) => (
                   <div key={category} style={{ marginBottom: '40px' }}>
                     <h2 style={{ 
                       fontSize: '0.9rem', 
@@ -300,7 +336,7 @@ export default function SearchPage() {
                     </h2>
                     {items.map((item, index) => (
                       <Link
-                        key={index}
+                        key={`${item.url}-${index}`}
                         href={item.url}
                         style={{
                           display: 'block',
