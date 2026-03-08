@@ -109,7 +109,7 @@ function searchCatalog(
     .map((model) => ({
       id: model.id,
       title: model.geneName,
-      url: `/request-quote?model=${encodeURIComponent(model.geneName)}`,
+      url: `/search?q=${encodeURIComponent(model.geneName)}`,
       subtitle: [model.modelType, model.background].filter(Boolean).join(' · ') || undefined,
     }));
 }

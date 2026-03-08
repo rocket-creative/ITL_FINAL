@@ -6,7 +6,8 @@
  * Design based on request-quote page pattern
  */
 
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch, HubSpotFormWithFallback } from '@/components/UXUIDC';
@@ -153,10 +154,13 @@ const testimonials = [
 
 // ========== PAGE COMPONENT ==========
 
-export default function OrderInquiryCatalogModelsPage() {
+function OrderInquiryCatalogModelsContent() {
   const [showCatalogSearch, setShowCatalogSearch] = useState(false);
+  const searchParams = useSearchParams();
+  const modelFromUrl = searchParams.get('model');
+  const initialValues = modelFromUrl ? { model_name: modelFromUrl } : undefined;
 
-    return (
+  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       
@@ -383,6 +387,7 @@ export default function OrderInquiryCatalogModelsPage() {
                   fallbackFields={fallbackFields}
                   submitButtonText="Submit Order Inquiry"
                   successMessage="Thank you! We'll contact you within 1 business day with availability and pricing."
+                  initialValues={initialValues}
                 />
                 <button
                   onClick={() => setShowCatalogSearch(!showCatalogSearch)}
@@ -655,5 +660,13 @@ export default function OrderInquiryCatalogModelsPage() {
         ]}
       />
     </div>
+  );
+}
+
+export default function OrderInquiryCatalogModelsPage() {
+  return (
+    <Suspense fallback={<div style={{ minHeight: '100vh', background: '#f8fafc' }} />}>
+      <OrderInquiryCatalogModelsContent />
+    </Suspense>
   );
 }

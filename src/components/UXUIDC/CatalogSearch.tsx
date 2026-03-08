@@ -499,7 +499,7 @@ export function CatalogSearch({
                         textAlign: 'center',
                       }}>
                         <Link
-                          href={`/request-quote?model=${encodeURIComponent(model.geneName)}`}
+                          href={`/order-catalog-models?model=${encodeURIComponent(model.geneName)}`}
                           style={{
                             display: 'inline-flex',
                             alignItems: 'center',

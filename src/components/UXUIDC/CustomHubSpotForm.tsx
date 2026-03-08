@@ -38,6 +38,8 @@ interface CustomHubSpotFormProps {
   className?: string;
   /** Fired when form submits successfully (for GA4 generate_lead, etc.) */
   onSuccess?: () => void;
+  /** Pre-fill form fields (e.g. from URL params) */
+  initialValues?: Record<string, string>;
 }
 
 export default function CustomHubSpotForm({
@@ -49,8 +51,9 @@ export default function CustomHubSpotForm({
   errorMessage = 'Something went wrong. Please try again or contact us directly.',
   className = '',
   onSuccess,
+  initialValues,
 }: CustomHubSpotFormProps) {
-  const [formData, setFormData] = useState<Record<string, string | string[]>>({});
+  const [formData, setFormData] = useState<Record<string, string | string[]>>(initialValues ?? {});
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');

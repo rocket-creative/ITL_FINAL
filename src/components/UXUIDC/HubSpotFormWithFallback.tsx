@@ -29,6 +29,8 @@ interface HubSpotFormWithFallbackProps {
   timeout?: number;
   /** Fired when fallback form submits successfully (HubSpot forms use layout listener) */
   onFallbackSuccess?: () => void;
+  /** Pre-fill fallback form fields (e.g. from URL params) */
+  initialValues?: Record<string, string>;
 }
 
 type FormState = 'fallback' | 'hubspot';
@@ -43,6 +45,7 @@ export default function HubSpotFormWithFallback({
   successMessage = 'Thank you! We\'ll be in touch soon.',
   timeout = 5000,
   onFallbackSuccess,
+  initialValues,
 }: HubSpotFormWithFallbackProps) {
   const [formState, setFormState] = useState<FormState>('fallback');
   const [showWarning, setShowWarning] = useState(false);
@@ -164,6 +167,7 @@ export default function HubSpotFormWithFallback({
           submitButtonText={submitButtonText}
           successMessage={successMessage}
           onSuccess={onFallbackSuccess}
+          initialValues={initialValues}
         />
       </div>
 
