@@ -1,0 +1,636 @@
+'use client';
+
+/**
+ * Order Catalog Form - Client Component
+ * Form and interactive content for ordering from the ITL catalog
+ * Receives initialModel from Server Component (searchParams)
+ */
+
+import { useState } from 'react';
+import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
+import Link from 'next/link';
+import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch, HubSpotFormWithFallback } from '@/components/UXUIDC';
+import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
+import {
+  IconCheckCircle,
+  IconMessageCircle,
+  IconPackage,
+  IconQuote,
+  IconArrowRight,
+  IconSearch,
+  IconLayers,
+  IconClipboard,
+  IconUsers,
+} from '@/components/UXUIDC/Icons';
+import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+
+// ========== FORM FIELD OPTIONS ==========
+const modelCategoryOptions = [
+  'Humanized Checkpoint Model',
+  'Disease Model',
+  'Reporter Model',
+  'Cre Driver Line',
+  'Knockout Model',
+  'Knockin Model',
+  'Double Checkpoint Model',
+  'Other / Not Sure',
+];
+
+const quantityOptions = [
+  'Breeding pair (1 male + 1-2 females)',
+  'Small cohort (5-10 mice)',
+  'Medium cohort (10-25 mice)',
+  'Large cohort (25+ mice)',
+  'Cryopreserved (embryos/sperm)',
+  'Custom quantity',
+];
+
+const fallbackFields: FormField[] = [
+  { name: 'firstname', label: 'First Name', type: 'text', required: true },
+  { name: 'lastname', label: 'Last Name', type: 'text', required: true },
+  { name: 'email', label: 'Email', type: 'email', required: true },
+  { name: 'phone', label: 'Phone', type: 'tel', required: false },
+  { name: 'company', label: 'Institution/Company', type: 'text', required: false },
+  { name: 'model_name', label: 'Model Name', type: 'text', required: true, placeholder: 'e.g., hPD-1 Knockin' },
+  { name: 'model_number', label: 'Model/Stock Number (if known)', type: 'text', required: false, placeholder: 'e.g., ITL-001' },
+  { name: 'gene_symbol', label: 'Gene Symbol', type: 'text', required: false, placeholder: 'e.g., Pdcd1' },
+  {
+    name: 'model_category',
+    label: 'Model Category',
+    type: 'select',
+    required: false,
+    options: modelCategoryOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
+  },
+  {
+    name: 'quantity',
+    label: 'Quantity Needed',
+    type: 'select',
+    required: false,
+    options: quantityOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
+  },
+  { name: 'additional_notes', label: 'Additional Information', type: 'textarea', required: false, rows: 4, placeholder: 'Any special requirements or questions...' },
+];
+
+const faqData = [
+  {
+    question: 'How do I find a specific model in your catalog?',
+    answer: 'Use the search tool on this page or visit our Catalog Mouse Models page to browse by category. You can search by gene symbol, model name, or research application. If you cannot find what you need, contact us and we can help identify the right model or discuss custom options.',
+  },
+  {
+    question: 'What is included with a catalog model order?',
+    answer: 'Standard orders include genotyped, health-certified mice with full documentation including genotyping protocols, breeding recommendations, and research use guidelines. Colony management and expansion services are available if needed.',
+  },
+  {
+    question: 'How long does delivery take?',
+    answer: 'Delivery time depends on current stock availability and whether models are available as live animals or require cryorecovery from frozen stock. Contact us for current availability and delivery estimates for specific models. Rush options may be available.',
+  },
+  {
+    question: 'Can I get a model on a different genetic background?',
+    answer: 'Yes, many catalog models can be backcrossed to alternate strain backgrounds. This requires additional time for breeding. Contact us for a quote on background conversion.',
+  },
+  {
+    question: 'Do you ship internationally?',
+    answer: 'Yes, we ship to most countries worldwide. International shipments require appropriate import permits and health certifications. We work with experienced animal transport providers to ensure safe delivery.',
+  },
+  {
+    question: 'What if I need modifications to a catalog model?',
+    answer: 'We can often accommodate modifications to existing catalog models. For example, combining alleles, crossing to Cre lines, or adding reporters. Contact us to discuss your specific needs.',
+  },
+];
+
+const alternativeContactData = [
+  {
+    title: 'Custom Model Quote',
+    content: 'Need a model not in our catalog?',
+    href: '/request-quote',
+    label: 'Request Quote',
+  },
+  {
+    title: 'Browse Full Catalog',
+    content: 'Search 10,000+ available models',
+    href: '/all-catalog-mouse-models',
+    label: 'View Catalog',
+  },
+  {
+    title: 'Talk to a Scientist',
+    content: 'Get expert guidance on model selection',
+    href: '/contact',
+    label: 'Contact Us',
+  },
+];
+
+const francoTestimonial = getTestimonialById('franco-colorado')!;
+const testimonials = [
+  { quote: francoTestimonial.quote, name: formatAuthorWithCredentials(francoTestimonial), affiliation: francoTestimonial.affiliation },
+];
+
+interface OrderCatalogFormClientProps {
+  initialModel?: string;
+}
+
+export default function OrderCatalogFormClient({ initialModel }: OrderCatalogFormClientProps) {
+  const [showCatalogSearch, setShowCatalogSearch] = useState(false);
+  const initialValues = initialModel ? { model_name: initialModel } : undefined;
+
+  return (
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <UXUIDCNavigation />
+
+      <main className="min-h-screen" style={{ backgroundColor: '#f8fafc' }}>
+
+        {/* ========== COMPACT HEADER + FORM SECTION ========== */}
+        <section
+          style={{
+            background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
+            padding: '70px 20px 50px',
+          }}
+        >
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            {/* Compact Header */}
+            <div style={{ marginBottom: '32px' }}>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: 'rgba(0,128,128,0.3)',
+                  padding: '6px 14px',
+                  borderRadius: '20px',
+                  marginBottom: '12px',
+                }}
+              >
+                <IconLayers size={14} color="#00d4d4" />
+                <span style={{ color: '#ffffff', fontSize: '.75rem', fontWeight: 500 }}>
+                  10,000+ Models Available
+                </span>
+              </div>
+              <h1
+                style={{
+                  color: 'white',
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '2.5rem',
+                  fontWeight: 700,
+                  marginBottom: '12px',
+                  lineHeight: 1.2,
+                }}
+              >
+                Request a Catalog Model
+              </h1>
+              <p
+                style={{
+                  color: 'rgba(255,255,255,0.95)',
+                  fontFamily: 'var(--system-ui)',
+                  fontSize: '.875rem',
+                  fontWeight: 400,
+                  maxWidth: '600px',
+                }}
+              >
+                Order from our extensive catalog of humanized, knockout, knockin, and reporter mouse models
+              </p>
+            </div>
+
+            {/* Two Column Layout: Content + Form */}
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+              {/* ===== LEFT COLUMN: Content (40%) ===== */}
+              <div className="lg:col-span-2">
+                {/* What's Included */}
+                <div className="hero-animate" style={{ marginBottom: '25px' }}>
+                  <h3 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '12px' }}>
+                    What&apos;s Included
+                  </h3>
+                  <ul style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                    {[
+                      'Genotyped, health-certified animals',
+                      'Complete documentation package',
+                      'Genotyping protocols & primers',
+                      'Breeding recommendations',
+                      'Technical support included',
+                    ].map((item, i) => (
+                      <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '10px' }}>
+                        <IconCheckCircle size={16} color="#00d4d4" style={{ marginTop: '3px', flexShrink: 0 }} />
+                        <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.9rem', fontFamily: 'var(--system-ui)', lineHeight: '1.5' }}>
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Order Process */}
+                <div className="hero-animate" style={{ marginBottom: '25px' }}>
+                  <h3 style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '12px' }}>
+                    Order Process
+                  </h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                    {[
+                      { step: '1', label: '1 Day', desc: 'Availability check & pricing' },
+                      { step: '2', label: 'Confirm', desc: 'MTA/order confirmation' },
+                      { step: '3', label: 'Delivery', desc: 'Preparation & shipping' },
+                    ].map((item, i) => (
+                      <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                        <div
+                          style={{
+                            minWidth: '28px',
+                            height: '28px',
+                            backgroundColor: '#008080',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            color: 'white',
+                            fontSize: '.8rem',
+                            fontWeight: 700,
+                          }}
+                        >
+                          {item.step}
+                        </div>
+                        <div>
+                          <span style={{ color: '#ffffff', fontSize: '.85rem', fontWeight: 600, fontFamily: 'var(--system-ui)', display: 'block', marginBottom: '2px' }}>
+                            {item.label}
+                          </span>
+                          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', fontFamily: 'var(--system-ui)', margin: 0, lineHeight: '1.4' }}>
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Trust Stats */}
+                <div
+                  className="hero-animate"
+                  style={{
+                    backgroundColor: 'rgba(0, 212, 212, 0.15)',
+                    border: '1px solid rgba(0, 212, 212, 0.4)',
+                    borderRadius: '10px',
+                    padding: '20px',
+                    marginBottom: '25px',
+                  }}
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                      { num: '10,000+', label: 'Models' },
+                      { num: '25+', label: 'Years' },
+                      { num: 'Global', label: 'Shipping' },
+                      { num: '100%', label: 'QC Tested' },
+                    ].map((stat, i) => (
+                      <div key={i} style={{ textAlign: 'center' }}>
+                        <div style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 700, marginBottom: '4px' }}>
+                          {stat.num}
+                        </div>
+                        <div style={{ color: 'rgba(255,255,255,0.95)', fontSize: '.75rem', fontFamily: 'var(--system-ui)' }}>
+                          {stat.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Need Custom? */}
+                <div
+                  className="hero-animate"
+                  style={{
+                    backgroundColor: 'rgba(255,255,255,0.1)',
+                    backdropFilter: 'blur(10px)',
+                    borderRadius: '10px',
+                    padding: '18px 20px',
+                    border: '1px solid rgba(255,255,255,0.2)',
+                  }}
+                >
+                  <p style={{ color: 'white', fontSize: '.9rem', marginBottom: '8px', fontWeight: 600 }}>
+                    Need a Custom Model?
+                  </p>
+                  <p style={{ color: 'rgba(255,255,255,0.95)', fontSize: '.85rem', marginBottom: '12px', lineHeight: '1.5' }}>
+                    Request a custom project quote for knockout, knockin, humanized, or transgenic models.
+                  </p>
+                  <Link
+                    href="/request-quote"
+                    className="inline-flex items-center gap-2 transition-all duration-300 hover:gap-3"
+                    style={{
+                      color: '#ffffff',
+                      fontSize: '.85rem',
+                      fontWeight: 600,
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Request Quote
+                    <IconArrowRight size={14} color="#00d4d4" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* ===== RIGHT COLUMN: Form (60%) ===== */}
+              <div className="lg:col-span-3 hero-animate">
+                <div
+                  style={{
+                    backgroundColor: 'white',
+                    borderRadius: '12px',
+                    padding: '32px',
+                    boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
+                  }}
+                >
+                  {showCatalogSearch && (
+                    <div style={{ marginBottom: '24px', padding: '16px', backgroundColor: '#f9fafb', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+                      <CatalogSearch maxResults={5} showTitle={false} />
+                      <button
+                        onClick={() => setShowCatalogSearch(false)}
+                        style={{
+                          marginTop: '12px',
+                          padding: '6px 12px',
+                          backgroundColor: '#f3f4f6',
+                          border: '1px solid #e5e7eb',
+                          borderRadius: '4px',
+                          cursor: 'pointer',
+                          fontSize: '.75rem',
+                          color: '#008080',
+                          fontWeight: 500,
+                        }}
+                      >
+                        Hide Search
+                      </button>
+                    </div>
+                  )}
+                  <HubSpotFormWithFallback
+                    formId="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
+                    formName="Catalog Order"
+                    portalId="3977953"
+                    region="na1"
+                    fallbackFields={fallbackFields}
+                    submitButtonText="Submit Order Inquiry"
+                    successMessage="Thank you! We'll contact you within 1 business day with availability and pricing."
+                    initialValues={initialValues}
+                  />
+                  <button
+                    onClick={() => setShowCatalogSearch(!showCatalogSearch)}
+                    style={{
+                      marginTop: '16px',
+                      width: '100%',
+                      padding: '10px',
+                      backgroundColor: '#f3f4f6',
+                      border: '1px solid #e5e7eb',
+                      borderRadius: '6px',
+                      cursor: 'pointer',
+                      fontSize: '.85rem',
+                      color: '#008080',
+                      fontWeight: 500,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                    }}
+                  >
+                    <IconSearch size={14} />
+                    {showCatalogSearch ? 'Hide' : 'Search'} Catalog
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========== POPULAR CATEGORIES ========== */}
+        <section style={{ backgroundColor: 'white', padding: '50px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2
+              className="animate-in text-center"
+              style={{
+                color: '#0a253c',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '1.5rem',
+                fontWeight: 700,
+                marginBottom: '30px',
+              }}
+            >
+              Popular Model Categories
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { label: 'Humanized Checkpoint', href: '/humanized-immune-checkpoint-mice', icon: IconUsers },
+                { label: 'Disease Models', href: '/disease-model-catalog', icon: IconClipboard },
+                { label: 'Double Checkpoint', href: '/double-checkpoint-mice', icon: IconLayers },
+                { label: 'All Catalog Models', href: '/all-catalog-mouse-models', icon: IconSearch },
+              ].map((cat, i) => {
+                const Icon = cat.icon;
+                return (
+                  <Link
+                    key={i}
+                    href={cat.href}
+                    className="animate-in flex flex-col items-center gap-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                    style={{
+                      backgroundColor: '#f8fafc',
+                      padding: '24px 16px',
+                      borderRadius: '8px',
+                      border: '1px solid #e5e7eb',
+                      textAlign: 'center',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: '48px',
+                        height: '48px',
+                        backgroundColor: '#0a253c',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Icon size={22} color="#00d4d4" />
+                    </div>
+                    <span
+                      style={{
+                        color: '#333',
+                        fontFamily: 'var(--system-ui)',
+                        fontSize: '.85rem',
+                        fontWeight: 500,
+                      }}
+                    >
+                      {cat.label}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ========== FAQ SECTION ========== */}
+        <UXUIDCAnimatedFAQ title="Frequently Asked Questions" faqs={faqData} backgroundColor="#f8fafc" />
+
+        {/* ========== ALTERNATIVE CONTACT OPTIONS ========== */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '50px 20px' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <h2
+              className="animate-in text-center"
+              style={{
+                color: '#0a253c',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '1.5rem',
+                fontWeight: 700,
+                marginBottom: '30px',
+              }}
+            >
+              Other Ways to Connect
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {alternativeContactData.map((option, i) => {
+                const icons = [IconPackage, IconSearch, IconMessageCircle];
+                const Icon = icons[i];
+                return (
+                  <Link
+                    key={i}
+                    href={option.href}
+                    className="animate-in flex items-center gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                    style={{
+                      backgroundColor: '#f8fafc',
+                      padding: '20px',
+                      borderRadius: '8px',
+                      border: '1px solid #e5e7eb',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: '44px',
+                        height: '44px',
+                        backgroundColor: '#0a253c',
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                      }}
+                    >
+                      <Icon size={20} color="white" />
+                    </div>
+                    <div>
+                      <h3
+                        style={{
+                          color: '#333',
+                          fontFamily: 'Poppins, sans-serif',
+                          fontSize: '.9rem',
+                          fontWeight: 600,
+                          marginBottom: '2px',
+                        }}
+                      >
+                        {option.title}
+                      </h3>
+                      <p
+                        style={{
+                          color: '#666',
+                          fontFamily: 'var(--system-ui)',
+                          fontSize: '.75rem',
+                          margin: 0,
+                        }}
+                      >
+                        {option.content}
+                      </p>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ========== TESTIMONIALS ========== */}
+        <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
+            <h2 className="animate-in" style={{ textAlign: 'center', color: '#ffffff', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>What Researchers Say</h2>
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', padding: testimonials.length === 1 ? '48px 56px' : '30px', display: 'flex', flexDirection: 'column', transition: 'all 0.3s ease', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}>
+                  <IconQuote size={24} color="#008080" style={{ marginBottom: '15px', ...(testimonials.length === 1 ? { display: 'block', margin: '0 auto 15px' } : {}) }} />
+                  <p style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'Lato, sans-serif', fontSize: testimonials.length === 1 ? '1.1rem' : '.9rem', fontWeight: 400, lineHeight: 1.6, fontStyle: 'italic', marginBottom: '20px', flex: testimonials.length > 1 ? 1 : undefined }}>&ldquo;{testimonial.quote}&rdquo;</p>
+                  <div style={{ marginTop: testimonials.length > 1 ? 'auto' : undefined }}>
+                    <p style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '.9rem', fontWeight: 600, marginBottom: '5px' }}>— {testimonial.name}</p>
+                    <p style={{ color: 'rgba(255,255,255,0.95)', fontFamily: 'Lato, sans-serif', fontSize: '.8rem', fontWeight: 400 }}>{testimonial.affiliation}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ========== CTA BANNER ========== */}
+        <section style={{ backgroundColor: '#008080', padding: '40px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2
+              style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '1.5rem',
+                fontWeight: 700,
+                color: '#ffffff',
+                marginBottom: '12px',
+              }}
+            >
+              Can&apos;t Find What You Need?
+            </h2>
+            <p
+              style={{
+                fontSize: '.9rem',
+                color: 'rgba(255,255,255,0.9)',
+                marginBottom: '20px',
+              }}
+            >
+              Our team can help you find the right model or create a custom solution tailored to your research.
+            </p>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
+              <Link
+                href="/contact"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: '#ffffff',
+                  color: '#008080',
+                  padding: '12px 24px',
+                  borderRadius: '6px',
+                  fontSize: '.9rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                }}
+              >
+                Contact Us
+                <IconArrowRight size={16} color="#008080" />
+              </Link>
+              <Link
+                href="/request-quote"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: 'transparent',
+                  color: '#ffffff',
+                  padding: '12px 24px',
+                  borderRadius: '6px',
+                  fontSize: '.9rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  border: '2px solid rgba(255,255,255,0.9)',
+                }}
+              >
+                Request Custom Quote
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <UXUIDCFooter />
+
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', path: '/' },
+          { name: 'Resources', path: '/resources' },
+          { name: 'Order Catalog Models', path: '/order-catalog-models' },
+        ]}
+      />
+    </div>
+  );
+}
