@@ -25,15 +25,18 @@ interface CatalogSearchProps {
   maxResults?: number;
   showTitle?: boolean;
   className?: string;
+  /** Pre-fill search from URL (e.g. /all-catalog-mouse-models?q=...) */
+  initialQuery?: string;
 }
 
 export function CatalogSearch({ 
   compact = false, 
   maxResults = 20,
   showTitle = true,
-  className = ''
+  className = '',
+  initialQuery,
 }: CatalogSearchProps) {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(initialQuery ?? '');
   const [allModels, setAllModels] = useState<CatalogModel[]>([]);
   const [filteredModels, setFilteredModels] = useState<CatalogModel[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -94,6 +97,13 @@ export function CatalogSearch({
   useEffect(() => {
     fetchCatalogData();
   }, [fetchCatalogData]);
+
+  // Sync initialQuery when it changes (e.g. client-side navigation)
+  useEffect(() => {
+    if (initialQuery !== undefined) {
+      setSearchTerm(initialQuery);
+    }
+  }, [initialQuery]);
 
   // Filter models based on search term
   useEffect(() => {
