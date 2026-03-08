@@ -15,11 +15,16 @@ const searchQuerySchema = z.object({
     .max(100)
     .transform((s) => s.trim())
     .refine((s) => s.length >= 1, 'Query cannot be empty')
-    .refine((s) => /^[\w\s\-.,()]+$/i.test(s), 'Invalid characters in search query'),
+    .refine((s) => /^[\w\s\-.,():;/'"]+$/i.test(s), 'Invalid characters in search query'),
+  limit: z
+    .optional(z.coerce.number().refine((n) => n >= 10 && n <= 100, 'Limit must be between 10 and 100')),
 });
 
 const CATALOG_MAX_RESULTS = 8;
-const SITE_MAX_RESULTS = 8;
+const SITE_MAX_RESULTS = 50;
+
+const SPREADSHEET_ID = '1DG54nHKf-A-7Ii8nSHvps74nCXbmNsPk51uL15JzuRU';
+const SHEET_NAME = 'ITL-Cat-24-25';
 
 interface CatalogModel {
   id: string;
@@ -32,40 +37,44 @@ interface CatalogModel {
 }
 
 async function fetchCatalogData(): Promise<CatalogModel[]> {
-  const baseUrl =
-    process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+  const apiKey = (
+    process.env.GOOGLE_SHEETS_API_KEY ??
+    process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY ??
+    process.env.CATALOG_API_KEY ??
+    ''
+  ).trim();
 
-  const res = await fetch(`${baseUrl}/api/catalog`, {
-    headers: { Accept: 'application/json' },
-    next: { revalidate: 300 }, // 5 min
-  });
+  if (!apiKey) return [];
 
-  if (!res.ok) return [];
+  try {
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${encodeURIComponent(SHEET_NAME)}?key=${apiKey}`;
+    const res = await fetch(url, { headers: { Accept: 'application/json' } });
+    if (!res.ok) return [];
 
-  const data = await res.json();
-  if (!data.values || !Array.isArray(data.values) || data.values.length < 2) return [];
+    const data = await res.json();
+    if (!data.values || !Array.isArray(data.values) || data.values.length < 2) return [];
 
-  const headerRow = data.values[0] as string[];
-
-  return data.values
-    .slice(1)
-    .map((row: string[], index: number) => {
-      const model: CatalogModel = {
-        id: `model-${index}`,
-        geneName: row[0] || '',
-        modelType: row[1] || '',
-        background: row[2] || '',
-        description: row[3] || '',
-        category: row[4] || '',
-      };
-      headerRow.forEach((h, i) => {
-        if (i > 5 && row[i]) model[h.toLowerCase().replace(/\s+/g, '_')] = row[i];
-      });
-      return model;
-    })
-    .filter((m: CatalogModel) => m.geneName);
+    const headerRow = data.values[0] as string[];
+    return data.values
+      .slice(1)
+      .map((row: string[], index: number) => {
+        const model: CatalogModel = {
+          id: `model-${index}`,
+          geneName: row[0] || '',
+          modelType: row[1] || '',
+          background: row[2] || '',
+          description: row[3] || '',
+          category: row[4] || '',
+        };
+        headerRow.forEach((h, i) => {
+          if (i > 5 && row[i]) model[h.toLowerCase().replace(/\s+/g, '_')] = row[i];
+        });
+        return model;
+      })
+      .filter((m: CatalogModel) => m.geneName);
+  } catch {
+    return [];
+  }
 }
 
 const getCachedCatalog = unstable_cache(
@@ -74,27 +83,29 @@ const getCachedCatalog = unstable_cache(
   { revalidate: 300, tags: ['catalog'] }
 );
 
-function searchCatalog(models: CatalogModel[], query: string): Array<{ id: string; title: string; url: string; subtitle?: string }> {
+function searchCatalog(
+  models: CatalogModel[],
+  query: string,
+  limit: number = CATALOG_MAX_RESULTS
+): Array<{ id: string; title: string; url: string; subtitle?: string }> {
   const term = query.toLowerCase().trim();
   if (!term) return [];
 
-  const searchTerms = term.split(/\s+/).filter(Boolean);
+  const searchTerms = term
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((t) => t.replace(/\//g, ' ').trim());
 
   return models
     .filter((model) => {
-      const searchText = [
-        model.geneName,
-        model.modelType,
-        model.background,
-        model.description,
-        model.category,
-      ]
-        .filter(Boolean)
+      const searchText = Object.values(model)
+        .filter((v): v is string => typeof v === 'string')
         .join(' ')
-        .toLowerCase();
+        .toLowerCase()
+        .replace(/\//g, ' ');
       return searchTerms.every((t) => searchText.includes(t));
     })
-    .slice(0, CATALOG_MAX_RESULTS)
+    .slice(0, limit)
     .map((model) => ({
       id: model.id,
       title: model.geneName,
@@ -119,8 +130,10 @@ export async function GET(request: NextRequest) {
 
   const searchParams = request.nextUrl.searchParams;
   const q = searchParams.get('q') ?? '';
+  const limitParam = searchParams.get('limit');
+  const limitToParse = limitParam && limitParam.trim() !== '' ? limitParam : undefined;
 
-  const parsed = searchQuerySchema.safeParse({ q });
+  const parsed = searchQuerySchema.safeParse({ q, limit: limitToParse });
   if (!parsed.success) {
     const firstIssue = parsed.error.issues?.[0];
     const message = firstIssue?.message ?? 'Invalid search query';
@@ -141,7 +154,8 @@ export async function GET(request: NextRequest) {
       Promise.resolve(searchSiteIndex(query, SITE_MAX_RESULTS)),
     ]);
 
-    const catalogResults = searchCatalog(catalogModels, query);
+    const catalogLimit = parsed.data.limit ?? CATALOG_MAX_RESULTS;
+    const catalogResults = searchCatalog(catalogModels, query, catalogLimit);
 
     const siteFormatted = siteResults.map((item) => ({
       id: item.url,

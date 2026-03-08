@@ -10,6 +10,45 @@ export interface SiteIndexEntry {
   category: string;
 }
 
+// Lab Signals articles for search (curated list scientists search for)
+const labSignalsEntries: SiteIndexEntry[] = [
+  { title: "Insights into Neurodegenerative Diseases: Alzheimer's Disease Progression and Treatments", description: 'Lab Signals article on Alzheimer disease research and treatments.', url: '/lab-signals/insights-into-neurodegenerative-diseases-alzheimers-disease-progression-and-treatments', category: 'Lab Signals' },
+  { title: 'Advances in Metabolic Disorders Research: Obesity and Diabetes', description: 'Lab Signals article on metabolic disease and diabetes research.', url: '/lab-signals/article-2-advances-in-metabolic-disorders-research-obesity-and-diabetes', category: 'Lab Signals' },
+  { title: 'Developments in Immune and Infectious Diseases: Insights from Humanized Models', description: 'Lab Signals article on humanized models for immunology research.', url: '/lab-signals/article-3-developments-in-immune-and-infectious-diseases-insights-from-humanized-models', category: 'Lab Signals' },
+  { title: 'Breakthroughs in Cancer Research: Innovations in Immunotherapy', description: 'Lab Signals article on immuno oncology and cancer research.', url: '/lab-signals/article-4-breakthroughs-in-cancer-research-innovations-in-immunotherapy', category: 'Lab Signals' },
+  { title: 'Advancements in Gene Editing Technologies: Enhancements in CRISPR-Cas9', description: 'Lab Signals article on CRISPR and gene editing.', url: '/lab-signals/article-5-advancements-in-gene-editing-technologies-enhancements-in-crispr-cas9', category: 'Lab Signals' },
+  { title: 'Building Better Floxed Alleles for Conditional Knockout Mice', description: 'Lab Signals article on floxed allele design for conditional knockout.', url: '/lab-signals/building-better-floxed-alleles-for-conditional-knockout-mice', category: 'Lab Signals' },
+  { title: 'Conventional vs. Conditional Knockout Mice', description: 'Lab Signals article comparing conventional and conditional knockout strategies.', url: '/lab-signals/conventional-vs-conditional-knockout-mice', category: 'Lab Signals' },
+  { title: 'Cre-Lox: 6 Facts You May Not Know', description: 'Lab Signals article on Cre lox recombination system.', url: '/lab-signals/cre-lox-6-facts-you-may-not-know', category: 'Lab Signals' },
+  { title: 'How Humanized Mouse Models Are Transforming Pre-clinical R&D', description: 'Lab Signals article on humanized mouse models in drug development.', url: '/lab-signals/how-humanized-mouse-models-are-transforming-pre-clinical-r-d', category: 'Lab Signals' },
+  { title: 'How a Knockout Mouse Is Made', description: 'Lab Signals article on knockout mouse generation process.', url: '/lab-signals/how-a-knockout-mouse-is-made', category: 'Lab Signals' },
+  { title: 'Knock-In Mice vs. Transgenic Mice: What You Need to Know', description: 'Lab Signals article comparing knock in and transgenic approaches.', url: '/lab-signals/knock-in-mice-vs-transgenic-mice-what-you-need-to-know', category: 'Lab Signals' },
+  { title: 'BAC Transgenic Mice: Large-Fragment Insertion Models for Gene Regulation and Disease Research', description: 'Lab Signals article on BAC transgenic mice.', url: '/lab-signals/bac-transgenic-mice-large-fragment-insertion-models', category: 'Lab Signals' },
+  { title: 'Modeling Human Disease: The Expanding Role of Knockout Mice in Precision Medicine', description: 'Lab Signals article on knockout mice in precision medicine.', url: '/lab-signals/modeling-human-disease-knockout-mice-precision-medicine', category: 'Lab Signals' },
+  { title: 'The FDA Modernization Act 2.0: What It Means for Mouse Model Providers and Researchers', description: 'Lab Signals article on FDA regulatory changes.', url: '/lab-signals/fda-modernization-act-2-mouse-models-regulatory', category: 'Lab Signals' },
+  { title: 'Leveraging Mouse Models for Point Mutation Diseases: R&D Landscape', description: 'Lab Signals article on point mutation disease models.', url: '/lab-signals/leveraging-mouse-models-for-point-mutation-diseases-r-d-landscape', category: 'Lab Signals' },
+  { title: 'Top 5 Lab Mouse Colony Management Software Options For 2025', description: 'Lab Signals article on colony management software.', url: '/lab-signals/top-5-lab-mouse-colony-management-software-options-for-2025', category: 'Lab Signals' },
+];
+
+// Key blog posts scientists commonly search for
+const blogEntries: SiteIndexEntry[] = [
+  { title: 'Cre lox conditional knockout mouse models', description: 'Design guide for Cre lox conditional knockout models and strategy selection.', url: '/ingenious-blog/cre-lox-conditional-knockout-mouse-models', category: 'Blog' },
+  { title: 'How a knockout mouse is made', description: 'Overview of knockout mouse generation methods including CRISPR and ES cells.', url: '/ingenious-blog/how-a-knockout-mouse-is-made', category: 'Blog' },
+  { title: 'Humanized mice', description: 'Article on humanized mouse models for translational research.', url: '/ingenious-blog/humanized-mice', category: 'Blog' },
+  { title: 'Conventional vs conditional knockout', description: 'Comparison of conventional and conditional knockout strategies.', url: '/ingenious-blog/conventional-vs-conditional-knockout', category: 'Blog' },
+  { title: 'Cre lox facts', description: 'Key facts about the Cre lox recombination system.', url: '/ingenious-blog/cre-lox-facts', category: 'Blog' },
+  { title: 'Cre recombinase', description: 'Overview of Cre recombinase and its applications in mouse genetics.', url: '/ingenious-blog/cre-recombinase', category: 'Blog' },
+  { title: 'Floxed allele', description: 'Understanding floxed alleles for conditional gene knockout.', url: '/ingenious-blog/floxed-allele', category: 'Blog' },
+  { title: 'Gene knockout', description: 'Gene knockout methods and applications in mouse models.', url: '/ingenious-blog/gene-knockout', category: 'Blog' },
+  { title: 'Knock in vs knockout mice', description: 'Key differences between knock in and knockout mice and when to use each.', url: '/ingenious-blog/difference-between-knock-in-and-knockout', category: 'Blog' },
+  { title: 'CRISPR gene targeting', description: 'CRISPR Cas9 gene targeting for mouse model generation.', url: '/ingenious-blog/crispr-gene-targeting', category: 'Blog' },
+  { title: 'Point mutation diseases', description: 'Diseases caused by point mutations and mouse models for research.', url: '/ingenious-blog/point-mutation-diseases', category: 'Blog' },
+  { title: 'Rosa26 mice', description: 'Rosa26 locus targeting for transgene expression and knockin.', url: '/ingenious-blog/rosa26-mice', category: 'Blog' },
+  { title: 'Why make a humanized mouse', description: 'Reasons to use humanized mouse models in preclinical research.', url: '/ingenious-blog/why-make-a-humanized-mouse', category: 'Blog' },
+  { title: 'Transgenic mice', description: 'Transgenic mouse models and random integration approaches.', url: '/ingenious-blog/transgenic-mice', category: 'Blog' },
+  { title: 'BAC transgenic', description: 'BAC transgenic mice for large fragment insertion.', url: '/ingenious-blog/bac-transgenic', category: 'Blog' },
+];
+
 export const siteIndex: SiteIndexEntry[] = [
   // Custom Mouse Models
   { title: 'Custom mouse models', description: 'Design and generate custom genetically modified mouse models tailored to your research needs.', url: '/custom-mouse-models', category: 'Services' },
@@ -71,16 +110,53 @@ export const siteIndex: SiteIndexEntry[] = [
   { title: 'All catalog mouse models', description: 'Browse all catalog models available for order.', url: '/all-catalog-mouse-models', category: 'Catalog' },
   { title: 'Disease model catalog', description: 'Disease models available for research.', url: '/disease-model-catalog', category: 'Catalog' },
   { title: 'Syngeneic tumor models', description: 'Syngeneic tumor models for oncology research.', url: '/syngeneic-tumor-models', category: 'Catalog' },
+  // Additional key pages scientists search for
+  { title: 'Video library', description: 'Educational videos on mouse model generation and research.', url: '/video-library', category: 'Resources' },
+  { title: 'Scientific leadership', description: 'Meet our scientific team and leadership.', url: '/scientific-leadership', category: 'Company' },
+  { title: 'Quality control', description: 'Quality control and validation for mouse model generation.', url: '/quality-control', category: 'Company' },
+  { title: 'Mouse strain backgrounds', description: 'C57BL/6, BALB/c, and other mouse strain background information.', url: '/mouse-strain-backgrounds', category: 'Resources' },
+  { title: 'C57BL/6 mouse background', description: 'C57BL/6 strain characteristics and use in research.', url: '/c57bl6-mouse-background', category: 'Resources' },
+  { title: 'BALB/c mouse background', description: 'BALB/c strain for immunology and oncology research.', url: '/balbc-mouse-background', category: 'Resources' },
+  { title: 'Tissue specific knockout', description: 'Tissue specific gene knockout using Cre driver lines.', url: '/tissue-specific-knockout', category: 'Services' },
+  { title: 'Inducible conditional knockout', description: 'Tamoxifen and doxycycline inducible Cre systems.', url: '/inducible-conditional-knockout', category: 'Services' },
+  { title: 'Parkinsons mouse models', description: 'Mouse models for Parkinson disease research.', url: '/parkinsons-mouse-models', category: 'Therapeutic Areas' },
+  { title: 'ALS mouse models', description: 'Amyotrophic lateral sclerosis mouse models.', url: '/als-mouse-models', category: 'Therapeutic Areas' },
+  { title: 'Diabetes mouse models', description: 'Type 1 and type 2 diabetes mouse models.', url: '/diabetes-mouse-models', category: 'Therapeutic Areas' },
+  { title: 'NASH MASH mouse models', description: 'Nonalcoholic steatohepatitis and metabolic disease models.', url: '/nash-mash-mouse-models', category: 'Therapeutic Areas' },
+  { title: 'Lupus mouse models', description: 'Systemic lupus erythematosus mouse models.', url: '/lupus-mouse-models', category: 'Therapeutic Areas' },
+  { title: 'Heart failure mouse models', description: 'Mouse models for heart failure research.', url: '/heart-failure-mouse-models', category: 'Therapeutic Areas' },
+  { title: 'Ophthalmology mouse models', description: 'Mouse models for eye disease and vision research.', url: '/ophthalmology-mouse-models', category: 'Therapeutic Areas' },
+  { title: 'Allergy asthma mouse models', description: 'Models for allergic disease and asthma research.', url: '/allergy-asthma-mouse-models', category: 'Therapeutic Areas' },
+  { title: 'Preclinical services', description: 'Preclinical study support and CRO services.', url: '/preclinical-services', category: 'Support Services' },
+  { title: 'Mouse model services', description: 'Full range of custom mouse model generation services.', url: '/mouse-model-services', category: 'Services' },
+  { title: 'BAC to BAC large scale targeting', description: 'Large scale gene targeting using BAC vectors.', url: '/bac-to-bac-large-scale-targeting', category: 'Technology' },
+  { title: 'CDNA knockin', description: 'CDNA knockin for gene expression studies.', url: '/cdna-knockin', category: 'Services' },
+  { title: 'Gene replacement', description: 'Gene replacement and humanization strategies.', url: '/gene-replacement', category: 'Services' },
+  { title: 'Doxycycline inducible systems', description: 'Tet on Tet off inducible gene expression.', url: '/doxycycline-inducible-systems', category: 'Technology' },
+  { title: 'Conditional knockin mice', description: 'Conditional knockin for tissue specific expression.', url: '/conditional-knockin-mice', category: 'Services' },
+  { title: 'Tumor suppressor knockout mice', description: 'Tumor suppressor gene knockout models for oncology.', url: '/tumor-suppressor-knockout-mice', category: 'Catalog' },
+  { title: 'Humanization strategy guide', description: 'Guide to humanization strategy selection.', url: '/humanization-strategy-guide', category: 'Resources' },
+  { title: 'Knockout strategy guide', description: 'Guide to knockout strategy and design.', url: '/knockout-strategy-guide', category: 'Resources' },
+  { title: 'Rosa26', description: 'Rosa26 safe harbor locus for transgene and knockin.', url: '/rosa26', category: 'Technology' },
+  { title: 'Tamoxifen inducible Cre', description: 'Tamoxifen inducible Cre ERT2 system.', url: '/tamoxifen-inducible-cre', category: 'Technology' },
+  { title: 'Current openings', description: 'Career opportunities at ingenious targeting laboratory.', url: '/current-openings', category: 'Company' },
+  ...labSignalsEntries,
+  ...blogEntries,
 ];
+
+/** Normalize query for scientific terms: "Cre/lox" -> "cre lox" */
+function normalizeSearchTerm(t: string): string {
+  return t.replace(/\//g, ' ').trim();
+}
 
 export function searchSiteIndex(query: string, maxResults = 8): SiteIndexEntry[] {
   const term = query.toLowerCase().trim();
   if (!term) return [];
 
-  const searchTerms = term.split(/\s+/).filter(Boolean);
+  const searchTerms = term.split(/\s+/).filter(Boolean).map(normalizeSearchTerm);
   return siteIndex
     .filter((item) => {
-      const searchText = `${item.title} ${item.description} ${item.category}`.toLowerCase();
+      const searchText = `${item.title} ${item.description} ${item.category}`.toLowerCase().replace(/\//g, ' ');
       return searchTerms.every((t) => searchText.includes(t));
     })
     .slice(0, maxResults);

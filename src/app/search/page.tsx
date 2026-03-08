@@ -51,7 +51,7 @@ export default function SearchPage() {
       return;
     }
     setIsLoadingCatalog(true);
-    fetch(`/api/search?q=${encodeURIComponent(query.trim())}`)
+    fetch(`/api/search?q=${encodeURIComponent(query.trim())}&limit=50`)
       .then((res) => res.json())
       .then((data) => {
         if (data.catalog && Array.isArray(data.catalog)) {

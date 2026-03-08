@@ -104,16 +104,11 @@ export function CatalogSearch({
     }
 
     setHasSearched(true);
-    const term = searchTerm.toLowerCase().trim();
-    
+    const searchTerms = searchTerm.toLowerCase().trim().split(/\s+/).filter(Boolean);
+
     const results = allModels.filter(model => {
-      return (
-        model.geneName.toLowerCase().includes(term) ||
-        model.modelType.toLowerCase().includes(term) ||
-        model.background.toLowerCase().includes(term) ||
-        model.description.toLowerCase().includes(term) ||
-        model.category.toLowerCase().includes(term)
-      );
+      const searchableText = Object.values(model).filter((v): v is string => typeof v === 'string').join(' ').toLowerCase();
+      return searchTerms.every((t) => searchableText.includes(t));
     }).slice(0, maxResults);
 
     setFilteredModels(results);
