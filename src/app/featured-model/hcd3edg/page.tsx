@@ -489,10 +489,10 @@ export default function HCD3EDGPage() {
 
               <div className="animate-in" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', marginTop: '32px' }}>
                 {[
-                  { title: 'Accurate human epitope presentation', desc: 'Including binding interfaces that span the epsilon/delta and epsilon/gamma heterodimer contacts.' },
-                  { title: 'Physiologic ITAM-based signal transduction', desc: 'The 10 ITAM signaling architecture is preserved, enabling downstream T cell activation that mirrors the human response.' },
-                  { title: 'Translatable cytokine release profiles', desc: 'In a syngeneic immunocompetent system — CRS data that directly informs clinical dose escalation strategy design.' },
-                  { title: 'Preserved immune architecture', desc: 'Confirmed by flow cytometry with normal T cell development, lymphocyte subset distribution, and functional immune responses.' },
+                  { title: 'Accurate human epitope presentation', desc: 'Full CD3 complex humanization for accurate epitope presentation, including interfaces at ε/δ and ε/γ.' },
+                  { title: 'Physiologic ITAM-based signal transduction', desc: 'Physiologic ITAM-based signal transduction through a properly assembled CD3 complex.' },
+                  { title: 'Translatable cytokine release profiles', desc: 'Translatable cytokine release profiles in an immunocompetent, syngeneic system.' },
+                  { title: 'Preserved immune architecture', desc: 'Preserved immune architecture with normal T cell development and subset distribution.' },
                 ].map((item, i) => (
                   <div key={i} className="animate-in" style={{
                     background: '#f7f7f7',
