@@ -79,6 +79,12 @@ const navigationItems: NavItem[] = [
           ],
         },
         {
+          title: 'Featured Model',
+          items: [
+            { label: 'Featured Model of the Month', href: '/featured-model' },
+          ],
+        },
+        {
           title: 'Single Checkpoint',
           items: [
             { label: 'All Single Checkpoint', href: '/single-checkpoint-mice' },
