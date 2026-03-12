@@ -119,6 +119,12 @@ export const labSignalsArticles = [
     slug: "top-5-lab-mouse-colony-management-software-options-for-2025",
     category: "Resources",
     relatedPages: ["/colony-management-services", "/breeding-scheme-architect"]
+  },
+  {
+    title: "The FDA Modernization Act 2.0: What It Means for Researchers",
+    slug: "fda-modernization-act-2-what-it-means-for-researchers",
+    category: "Industry Insights",
+    relatedPages: ["/humanized-mouse-models", "/cell-therapy-mouse-models", "/immuno-oncology-mouse-models", "/antibody-therapeutics-mouse-models", "/custom-mouse-models"]
   }
 ];
 

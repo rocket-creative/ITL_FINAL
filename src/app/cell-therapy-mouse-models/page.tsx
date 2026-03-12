@@ -13,7 +13,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -246,7 +246,13 @@ export default function CellTherapyMouseModelsPage() {
         {/* Lab Signals Signup */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="Cell Therapy Research Insights" />
+            <LabSignalsSignup
+              variant="banner"
+              title="Cell Therapy Research Insights"
+              description="Subscribe to Lab Signals for biweekly insights on cell therapy models, humanized mice, and regulatory science from our PhD scientists."
+              showArticles={true}
+              relatedArticles={getRelatedLabSignalsArticles('/cell-therapy-mouse-models')}
+            />
           </div>
         </section>
 

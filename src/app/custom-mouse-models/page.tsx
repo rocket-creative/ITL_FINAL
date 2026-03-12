@@ -7,7 +7,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { LabSignalsSignup, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
+import { LabSignalsSignup, BreedingSchemeArchitectCTA, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -764,6 +764,8 @@ export default function CustomMouseModelsPage() {
               variant="banner"
               title="Custom Mouse Model Insights"
               description="Subscribe to Lab Signals for biweekly guides on mouse model design, targeting strategies, and research best practices from our PhD scientists."
+              showArticles={true}
+              relatedArticles={getRelatedLabSignalsArticles('/custom-mouse-models')}
             />
           </div>
         </section>

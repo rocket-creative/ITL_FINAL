@@ -926,7 +926,98 @@ export const newsletterArticles: NewsletterArticle[] = [
 
 <div class="lab-signals-references"><p><strong>References</strong></p><ol><li>FDA Modernization Act of 2022, Pub L No. 117-328 (2022). <a href="https://www.congress.gov/bill/117th-congress/senate-bill/5002" target="_blank" rel="noopener noreferrer">Congress.gov</a></li><li>U.S. Food and Drug Administration. <em>Roadmap to Reducing Animal Testing in Preclinical Safety Studies.</em> 2025. <a href="https://www.fda.gov/" target="_blank" rel="noopener noreferrer">FDA.gov</a></li><li>U.S. Food and Drug Administration. <em>Investigational New Drug Application (IND) Guidance for Industry.</em> <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents" target="_blank" rel="noopener noreferrer">FDA.gov</a></li><li>National Institutes of Health. NIH statement on advancing human-based research technologies and NAMs. 2025. <a href="https://www.nih.gov/" target="_blank" rel="noopener noreferrer">NIH.gov</a></li><li>Low LA, Mummery C, Berridge BR, Austin CP, Tagle DA. Organs-on-chips: into the next decade. <em>Nat Rev Drug Discov.</em> 2021;20:345-361. <a href="https://doi.org/10.1038/s41573-021-00139-4" target="_blank" rel="noopener noreferrer">doi:10.1038/s41573-021-00139-4</a></li><li>Clevers H. Modeling development and disease with organoids. <em>Cell.</em> 2016;165(7):1586-1597. <a href="https://doi.org/10.1016/j.cell.2016.05.082" target="_blank" rel="noopener noreferrer">doi:10.1016/j.cell.2016.05.082</a></li><li>Rossi G, Manfrin A, Lutolf MP. Progress and potential in organoid research. <em>Nat Rev Genet.</em> 2018;19:671-687. <a href="https://doi.org/10.1038/s41576-018-0051-9" target="_blank" rel="noopener noreferrer">doi:10.1038/s41576-018-0051-9</a></li><li>Huh D, Hamilton GA, Ingber DE. From 3D cell culture to organs-on-chips. <em>Trends Cell Biol.</em> 2011;21(12):745-754. <a href="https://doi.org/10.1016/j.tcb.2011.09.005" target="_blank" rel="noopener noreferrer">doi:10.1016/j.tcb.2011.09.005</a></li><li>Hay M, Thomas DW, Craighead JL, Economides C, Rosenthal J. Clinical development success rates for investigational drugs. <em>Nat Biotechnol.</em> 2014;32(1):40-51. <a href="https://doi.org/10.1038/nbt.2786" target="_blank" rel="noopener noreferrer">doi:10.1038/nbt.2786</a></li><li>Wimmer RA, et al. Human blood vessel organoids as a model of diabetic vasculopathy. <em>Nature.</em> 2019;565:505-510. <a href="https://doi.org/10.1038/s41586-018-0858-8" target="_blank" rel="noopener noreferrer">doi:10.1038/s41586-018-0858-8</a></li><li>Shultz LD, et al. Humanized mice for immune system investigation. <em>Nat Rev Immunol.</em> 2012;12:786-798. <a href="https://doi.org/10.1038/nri3311" target="_blank" rel="noopener noreferrer">doi:10.1038/nri3311</a></li><li>Maude SL, et al. Managing cytokine release syndrome associated with novel T cell-engaging therapies. <em>Cancer J.</em> 2014;20(2):119-122. <a href="https://doi.org/10.1097/PPO.0000000000000035" target="_blank" rel="noopener noreferrer">doi:10.1097/PPO.0000000000000035</a></li><li>Norelli M, et al. Monocyte-derived IL-1 and IL-6 are required for cytokine-release syndrome due to CAR T cells. <em>Nat Med.</em> 2018;24:739-748. <a href="https://doi.org/10.1038/s41591-018-0036-4" target="_blank" rel="noopener noreferrer">doi:10.1038/s41591-018-0036-4</a></li><li>McKenzie R, et al. Hepatic failure and lactic acidosis due to fialuridine. <em>N Engl J Med.</em> 1995;333:1099-1105. <a href="https://doi.org/10.1056/NEJM199510263331702" target="_blank" rel="noopener noreferrer">doi:10.1056/NEJM199510263331702</a></li><li>Bissig KD, et al. Human liver chimeric mice provide a model for hepatitis virus infection and drug metabolism. <em>J Clin Invest.</em> 2010;120(3):924-930. <a href="https://doi.org/10.1172/JCI40094" target="_blank" rel="noopener noreferrer">doi:10.1172/JCI40094</a></li><li>Walsh NC, et al. Humanized mouse models of clinical disease. <em>Annu Rev Pathol.</em> 2017;12:187-215. <a href="https://doi.org/10.1146/annurev-pathol-052016-100332" target="_blank" rel="noopener noreferrer">doi:10.1146/annurev-pathol-052016-100332</a></li></ol></div>`,
     publishedAt: "2026-02-15",
-  }
+  },
+  {
+    id: "fda-modernization-act-2-what-it-means-for-researchers",
+    slug: "fda-modernization-act-2-what-it-means-for-researchers",
+    title: "The FDA Modernization Act 2.0: What It Means for Researchers",
+    subtitle: "Regulatory Evolution, NAMs, and the Enduring Role of Mouse Models",
+    description: "FDA Modernization Act 2.0 and the 2025 FDA roadmap are reshaping preclinical testing. Learn why mouse models remain indispensable for complex disease research.",
+    category: "Industry Insights",
+    relatedPage: "/humanized-mouse-models",
+    body: `<p>In December 2022, Congress passed the <strong>FDA Modernization Act 2.0</strong>, eliminating the federal mandate requiring animal testing for new drug applications for a biological product that is biosimilar or interchangeable with another biological product, and in turn authorizing the use of "nonclinical tests" including cell-based assays, organ-on-chip platforms, and computer models.<sup>[1]</sup> Then in April 2025, the FDA released its <em>Roadmap to Reducing Animal Testing in Preclinical Safety Studies</em>, outlining a plan to phase down animal testing beginning with monoclonal antibody therapies.<sup>[2]</sup> The announcement prompted urgent questions: Are mouse models becoming obsolete? How should researchers adapt?</p>
+
+<h3>Understanding the FDA's New Direction</h3>
+
+<p>The FDA Modernization Act 2.0 amended the Federal Food, Drug, and Cosmetic Act by substituting "nonclinical tests" for "preclinical tests (including tests on animals)," explicitly including human-relevant methods such as organoids, computational approaches, and non-biological chemical methods.<sup>[1]</sup> Importantly, this did not ban animal testing; it provided regulatory flexibility, empowering the FDA to accept validated alternatives where scientifically appropriate.<sup>[3]</sup></p>
+
+<p>The FDA's April 2025 roadmap operationalized this flexibility with more concrete timelines.<sup>[2]</sup> Immediately, the FDA encouraged sponsors to include New Approach Methods or Methodologies (NAMs) data in Investigational New Drug (IND) applications.<sup>[3]</sup> For monoclonal antibodies in particular, regulatory flexibility around nonhuman primate toxicology has been discussed in the context of accumulated mechanistic and NAMs data.<sup>[2]</sup> Long-term, the FDA aims to make animal studies the exception rather than the norm where scientifically justified.<sup>[2]</sup> The National Institutes of Health has similarly emphasized advancing human-based research technologies and NAMs in funding priorities.<sup>[4]</sup></p>
+
+<h3>The Promise of New Approach Methodologies</h3>
+
+<p>NAMs encompass three main categories: <strong>in vitro methods</strong> (testing on human cells, tissues, or organs, such as 3D organoids, microphysiological systems/organs-on-chips, and 2D cell cultures), <strong>in silico models</strong> (using computer simulations, artificial intelligence, machine learning, and mathematical modeling to predict the toxicity, safety, and pharmacokinetics of chemicals), and <strong>in chemico assays</strong> (non-biological chemical methods used to investigate chemical reactivity, such as molecular interactions with proteins, which can predict potential skin sensitization or other toxic effects). Taken together, these models provide an in vivo-like environment, bridging the gap between non-animal and animal models to improve predictions of human drug safety and efficacy.<sup>[5]</sup></p>
+
+<p>The FDA has projected that greater integration of predictive platforms could substantially reduce late-stage attrition and R&amp;D costs.<sup>[2]</sup> However, the current overall drug failure rate remains at approximately 90%–95%. This is because NAMs are still in the early stages of widespread regulatory adoption and integration. Most current statistics reflect a system where animal models remain the primary gatekeeper for Phase I trials.<sup>[9]</sup></p>
+
+<h3>Critical Limitations NAMs Cannot Yet Overcome</h3>
+
+<h4>Absence of Functional Vasculature</h4>
+
+<p>When it comes to organoids, most lack perfusable vasculature, which restricts the size, longevity, and maturation of ex vivo tissue. This absence prevents essential biochemical signaling and systemic integration, keeping organoids in an immature state and limiting their use for modeling complex physiological processes.<sup>[10]</sup></p>
+
+<h4>Missing or Incomplete Immune Systems</h4>
+
+<p>Standard organoid and chip models lack full immune system complexity, restricting their utility in immunology and immuno-oncology research. Without a functional immune component, these models provide an "incomplete" picture of human biology, which can lead to inaccurate or misleading results.<sup>[5,11]</sup></p>
+
+<h4>Insufficient Systemic Integration</h4>
+
+<p>Isolated organ systems cannot replicate whole-organism pharmacokinetics, hormonal regulation, or multi-organ toxicity patterns.<sup>[5]</sup> This represents a critical limitation in predicting how a drug will behave within the complex environment of a living human. While isolated organ systems can model local tissue responses, they cannot yet simulate the interconnected processes that often dictate a drug's ultimate safety and efficacy.<sup>[12,13]</sup> Humanized mouse models have been critical for dissecting these mechanisms preclinically.<sup>[11]</sup></p>
+
+<h4>AI and Computer Simulations Are Only as Good as the Data They Are Trained On</h4>
+
+<p>If the training data comes from historical animal studies or limited human trials, the AI will inherit those biological inaccuracies. Simulations cannot "discover" a brand-new biological mechanism that hasn't been coded into the software yet. They excel at predicting known patterns but struggle with novel biological pathways.<sup>[17]</sup></p>
+
+<h4>Pharmacokinetics (ADME)</h4>
+
+<p>Predicting how a drug is Absorbed, Distributed, Metabolized, and Excreted (ADME) requires a holistic view. Chemical methods can predict if a molecule will bind to a receptor, but they struggle to predict how the gut microbiome or blood-brain barrier will alter that molecule in a real person. No current NAM can perfectly simulate the "first-pass metabolism" of the liver combined with the excretion rate of the kidneys simultaneously.<sup>[1]</sup></p>
+
+<h3>Why Mouse Models Remain Essential: Three Examples</h3>
+
+<h4>Modeling Human-Specific Pathogenesis (Scrub Typhus)</h4>
+
+<p>In order to better understand how the bacterium <em>Orientia tsutsugamushi</em> causes skin lesions and systemic inflammation, a February 2026 study showed that while NAMs can model local cell infection, only a humanized IFN-γ mouse model could replicate the formation of <strong>skin eschars</strong> (characteristic human lesions) and the resulting multi-organ failure. This model is essential for testing vaccines that may prevent systemic dissemination, which current skin-on-a-chip models cannot simulate.<sup>[14]</sup></p>
+
+<h4>Safety and Tissue Homing of HIV CAR-T Therapies</h4>
+
+<p>In order to evaluate the safety and efficacy of HIV-specific CAR/CXCR5 T cells designed to target viral reservoirs, an August 2025 study used <strong>humanized DRAGA mice</strong> to show these cells could home to "follicle-like" structures in the spleen and eliminate HIV-producing cells without causing off-target pathology. NAMs currently lack the functional lymphatic architecture (lymphoid B-cell follicles) to test whether a cell therapy will actually reach its target tissue in a living body.<sup>[18]</sup></p>
+
+<h4>Predicting Systemic Cytokine Release Syndrome (CRS)</h4>
+
+<p>In order to investigate preclinical safety testing for monoclonal antibodies to prevent life-threatening immune overreactions, a January 2026 review highlights that while NAMs can test for cellular toxicity, they cannot reliably predict systemic <strong>Cytokine Release Syndrome (CRS)</strong>. Humanized mice reconstituted with human immune systems (Hu-PBMC or Hu-HSC) provide the only environment where a drug's interaction with a full human immune repertoire (T cells, B cells, and macrophages) can be observed before human trials.<sup>[19]</sup></p>
+
+<p>Animal pharmacology and toxicology data remain a core component of IND submissions, unless validated alternatives are accepted.<sup>[3]</sup> The FDA continues to recognize that animal models provide whole-organism insight not yet fully replicated by alternative methods.<sup>[2]</sup></p>
+
+<h3>The Path Forward: Integration, Not Replacement</h3>
+
+<p>Regulators and researchers increasingly advocate integrated strategies combining animal models with NAMs and computational approaches.<sup>[2,5]</sup> Animal models continue to provide comprehensive systemic context, while NAMs offer powerful human-specific and high-throughput capabilities.</p>
+
+<h3>Conclusion</h3>
+
+<p>The FDA Modernization Act 2.0 represents an evolution in regulatory science.<sup>[1]</sup> NAMs offer transformative potential for early compound screening and mechanistic insight. However, the limitations mentioned here currently prevent full replacement of animal models.<sup>[5,10,11]</sup> For complex systemic pharmacology, multi-organ toxicity, immune-mediated responses, and chronic disease modeling, mouse models remain scientifically indispensable. The most scientifically sound path forward is integration of complementary platforms, leveraging the strengths of both human-based technologies and genetically engineered animal models.</p>
+
+<div class="lab-signals-references"><p><strong>References</strong></p><ol>
+<li>FDA Modernization Act of 2022, Pub L No. 117-328 (2022). <a href="https://www.congress.gov/bill/117th-congress/senate-bill/5002" target="_blank" rel="noopener noreferrer">Congress.gov</a></li>
+<li>U.S. Food and Drug Administration. <em>Roadmap to Reducing Animal Testing in Preclinical Safety Studies.</em> 2025. <a href="https://www.fda.gov/" target="_blank" rel="noopener noreferrer">FDA.gov</a></li>
+<li>U.S. Food and Drug Administration. <em>Investigational New Drug Application (IND) Guidance for Industry.</em> <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents" target="_blank" rel="noopener noreferrer">FDA.gov</a></li>
+<li>National Institutes of Health. NIH statement on advancing human-based research technologies and NAMs. 2025. <a href="https://www.nih.gov/" target="_blank" rel="noopener noreferrer">NIH.gov</a></li>
+<li>Low LA, Mummery C, Berridge BR, Austin CP, Tagle DA. Organs-on-chips: into the next decade. <em>Nat Rev Drug Discov.</em> 2021;20:345-361. <a href="https://doi.org/10.1038/s41573-021-00139-4" target="_blank" rel="noopener noreferrer">doi:10.1038/s41573-021-00139-4</a></li>
+<li>Clevers H. Modeling development and disease with organoids. <em>Cell.</em> 2016;165(7):1586-1597. <a href="https://doi.org/10.1016/j.cell.2016.05.082" target="_blank" rel="noopener noreferrer">doi:10.1016/j.cell.2016.05.082</a></li>
+<li>Rossi G, Manfrin A, Lutolf MP. Progress and potential in organoid research. <em>Nat Rev Genet.</em> 2018;19:671-687. <a href="https://doi.org/10.1038/s41576-018-0051-9" target="_blank" rel="noopener noreferrer">doi:10.1038/s41576-018-0051-9</a></li>
+<li>Huh D, Hamilton GA, Ingber DE. From 3D cell culture to organs-on-chips. <em>Trends Cell Biol.</em> 2011;21(12):745-754. <a href="https://doi.org/10.1016/j.tcb.2011.09.005" target="_blank" rel="noopener noreferrer">doi:10.1016/j.tcb.2011.09.005</a></li>
+<li>Sun D, et al. Why 90% of clinical drug development fails and how to improve it? <em>Front Drug Discov.</em> 2022;2:1053159. <a href="https://doi.org/10.3389/fddsv.2022.1053159" target="_blank" rel="noopener noreferrer">doi:10.3389/fddsv.2022.1053159</a></li>
+<li>Wimmer RA, et al. Human blood vessel organoids as a model of diabetic vasculopathy. <em>Nature.</em> 2019;565:505-510. <a href="https://doi.org/10.1038/s41586-018-0858-8" target="_blank" rel="noopener noreferrer">doi:10.1038/s41586-018-0858-8</a></li>
+<li>Shultz LD, et al. Humanized mice for immune system investigation. <em>Nat Rev Immunol.</em> 2012;12:786-798. <a href="https://doi.org/10.1038/nri3311" target="_blank" rel="noopener noreferrer">doi:10.1038/nri3311</a></li>
+<li>Maude SL, et al. Managing cytokine release syndrome associated with novel T cell-engaging therapies. <em>Cancer J.</em> 2014;20(2):119-122. <a href="https://doi.org/10.1097/PPO.0000000000000035" target="_blank" rel="noopener noreferrer">doi:10.1097/PPO.0000000000000035</a></li>
+<li>Norelli M, et al. Monocyte-derived IL-1 and IL-6 are required for cytokine-release syndrome due to CAR T cells. <em>Nat Med.</em> 2018;24:739-748. <a href="https://doi.org/10.1038/s41591-018-0036-4" target="_blank" rel="noopener noreferrer">doi:10.1038/s41591-018-0036-4</a></li>
+<li>Cho RH, et al. A humanized IFN-γ mouse model reveals skin eschar formation, enhanced susceptibility and scrub typhus pathogenesis. <em>PLOS Pathog.</em> 2026;22(2):e1013419. <a href="https://doi.org/10.1371/journal.ppat.1013419" target="_blank" rel="noopener noreferrer">doi:10.1371/journal.ppat.1013419</a></li>
+<li>Bissig KD, et al. Human liver chimeric mice provide a model for hepatitis virus infection and drug metabolism. <em>J Clin Invest.</em> 2010;120(3):924-930. <a href="https://doi.org/10.1172/JCI40094" target="_blank" rel="noopener noreferrer">doi:10.1172/JCI40094</a></li>
+<li>Walsh NC, et al. Humanized mouse models of clinical disease. <em>Annu Rev Pathol.</em> 2017;12:187-215. <a href="https://doi.org/10.1146/annurev-pathol-052016-100332" target="_blank" rel="noopener noreferrer">doi:10.1146/annurev-pathol-052016-100332</a></li>
+<li>Sun D, et al. Machine learning approaches for next-generation ADMET prediction. <em>Drug Discov Today.</em> 2024;29(1):103830. <a href="https://doi.org/10.1016/j.drudis.2023.103830" target="_blank" rel="noopener noreferrer">doi:10.1016/j.drudis.2023.103830</a></li>
+<li>Kim H, et al. Humanized DRAGA mice are a valuable model to study novel multifunctional M10 CAR-T cells in HIV-1 infection. <em>J Immunol.</em> 2025;215(4). <a href="https://doi.org/10.1093/jimmunol/vkaf185" target="_blank" rel="noopener noreferrer">doi:10.1093/jimmunol/vkaf185</a></li>
+<li>Zhu J, et al. Application of humanized mice in the safety experiments of antibody drugs: Recent progress and future perspectives. <em>Antibody Ther.</em> 2026;9(1):45-58. <a href="https://academic.oup.com/abt" target="_blank" rel="noopener noreferrer">Antibody Ther.</a></li>
+</ol></div>`,
+    publishedAt: "2026-03-17",
+  },
 ];
 
 /** Today's date at midnight UTC - used for release date staging */

@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
-import { GlossaryTermLink, BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { GlossaryTermLink, BreedingSchemeArchitectCTA, LabSignalsSignup, getRelatedLabSignalsArticles, BreadcrumbSchema } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -773,7 +773,13 @@ export default function ImmunoOncologyMouseModelsPage() {
         {/* Lab Signals Signup */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="Immuno-Oncology Research Insights" />
+            <LabSignalsSignup
+              variant="banner"
+              title="Immuno-Oncology Research Insights"
+              description="Subscribe to Lab Signals for biweekly insights on checkpoint models, CAR-T research, and regulatory science from our PhD scientists."
+              showArticles={true}
+              relatedArticles={getRelatedLabSignalsArticles('/immuno-oncology-mouse-models')}
+            />
           </div>
         </section>
 

@@ -13,6 +13,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -272,6 +273,19 @@ export default function AntibodyTherapeuticsMouseModelsPage() {
           </section>
         )}
       
+      {/* Lab Signals Newsletter CTA */}
+      <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <LabSignalsSignup
+            variant="banner"
+            title="Antibody Therapeutics Research Insights"
+            description="Subscribe to Lab Signals for biweekly insights on antibody therapeutics models, FDA regulatory science, and humanized mouse research from our PhD scientists."
+            showArticles={true}
+            relatedArticles={getRelatedLabSignalsArticles('/antibody-therapeutics-mouse-models')}
+          />
+        </div>
+      </section>
+
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
