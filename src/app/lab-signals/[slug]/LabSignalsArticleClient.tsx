@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { NewsletterGate, SocialShare, IngeniousAd } from '@/components/UXUIDC';
 import type { NewsletterArticle } from '@/data/newsletterArticles';
 import fixArticleLinks from '@/utils/fixArticleLinks';
@@ -14,6 +15,8 @@ const BRAND = {
   darkGray: '#333333',
   textGray: '#444444',
 };
+
+const PREVIEW_PASSWORD = process.env.NEXT_PUBLIC_LAB_SIGNALS_PREVIEW_PASSWORD || 'KristenITL3165!';
 
 function formatReleaseDate(isoDate: string): string {
   const d = new Date(isoDate + 'T12:00:00Z');
@@ -33,6 +36,19 @@ export default function LabSignalsArticleClient({
   isPreview = false,
   isStagedBlurred = false,
 }: LabSignalsArticleClientProps) {
+  const [previewPassword, setPreviewPassword] = useState('');
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [showError, setShowError] = useState(false);
+
+  const handleUnlock = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (previewPassword === PREVIEW_PASSWORD) {
+      setIsUnlocked(true);
+      setShowError(false);
+    } else {
+      setShowError(true);
+    }
+  };
   const createPreview = () => {
     const textContent = article.body
       .replace(/<[^>]+>/g, ' ')
@@ -144,7 +160,7 @@ export default function LabSignalsArticleClient({
       </div>
 
       {/* Gated Content (or direct when preview, or blurred when staged) */}
-      {isStagedBlurred ? (
+      {isStagedBlurred && !isUnlocked ? (
         <div style={{ position: 'relative' }}>
           <div
             style={{
@@ -163,16 +179,134 @@ export default function LabSignalsArticleClient({
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              background: 'rgba(255,255,255,0.4)',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.1rem',
-              color: BRAND.darkGray,
-              fontWeight: 700,
+              background: 'rgba(255,255,255,0.5)',
             }}
           >
-            Coming {formatReleaseDate(article.publishedAt)}
+            <form
+              onSubmit={handleUnlock}
+              style={{
+                backgroundColor: BRAND.white,
+                padding: '40px 50px',
+                borderRadius: '8px',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.15)',
+                textAlign: 'center',
+                maxWidth: '400px',
+                width: '90%',
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '1.1rem',
+                  fontWeight: 700,
+                  color: BRAND.black,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  marginBottom: '8px',
+                }}
+              >
+                Early Preview
+              </h3>
+              <p
+                style={{
+                  fontFamily: 'Lato, sans-serif',
+                  fontSize: '0.95rem',
+                  color: BRAND.mediumGray,
+                  marginBottom: '24px',
+                  lineHeight: 1.5,
+                }}
+              >
+                Enter password to unlock this article before release.
+              </p>
+              <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+                <input
+                  type="password"
+                  value={previewPassword}
+                  onChange={(e) => {
+                    setPreviewPassword(e.target.value);
+                    setShowError(false);
+                  }}
+                  placeholder="Password"
+                  style={{
+                    fontFamily: 'Lato, sans-serif',
+                    fontSize: '1rem',
+                    padding: '12px 16px',
+                    border: `2px solid ${showError ? '#dc2626' : BRAND.lightGray}`,
+                    borderRadius: '4px',
+                    outline: 'none',
+                    width: '180px',
+                    transition: 'border-color 0.2s',
+                  }}
+                  onFocus={(e) => {
+                    if (!showError) e.target.style.borderColor = BRAND.gold;
+                  }}
+                  onBlur={(e) => {
+                    if (!showError) e.target.style.borderColor = BRAND.lightGray;
+                  }}
+                />
+                <button
+                  type="submit"
+                  style={{
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    padding: '12px 20px',
+                    backgroundColor: BRAND.black,
+                    color: BRAND.white,
+                    border: 'none',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    transition: 'background-color 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = BRAND.darkGray;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = BRAND.black;
+                  }}
+                >
+                  Unlock <span style={{ fontSize: '1.1em' }}>→</span>
+                </button>
+              </div>
+              {showError && (
+                <p
+                  style={{
+                    fontFamily: 'Lato, sans-serif',
+                    fontSize: '0.85rem',
+                    color: '#dc2626',
+                    marginTop: '12px',
+                  }}
+                >
+                  Incorrect password. Please try again.
+                </p>
+              )}
+            </form>
           </div>
         </div>
+      ) : isStagedBlurred && isUnlocked ? (
+        <>
+          <div
+            style={{
+              backgroundColor: '#1a1a1a',
+              color: '#fff',
+              padding: '12px 20px',
+              marginBottom: '30px',
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '.8rem',
+              fontWeight: 600,
+              textAlign: 'center',
+              borderRadius: '6px',
+            }}
+          >
+            Early Preview Unlocked · Full release {formatReleaseDate(article.publishedAt)}
+          </div>
+          {articleContent}
+        </>
       ) : isPreview ? (
         articleContent
       ) : (
