@@ -996,25 +996,25 @@ export const newsletterArticles: NewsletterArticle[] = [
 <p>The FDA Modernization Act 2.0 represents an evolution in regulatory science.<sup>[1]</sup> NAMs offer transformative potential for early compound screening and mechanistic insight. However, the limitations mentioned here currently prevent full replacement of animal models.<sup>[5,10,11]</sup> For complex systemic pharmacology, multi-organ toxicity, immune-mediated responses, and chronic disease modeling, mouse models remain scientifically indispensable. The most scientifically sound path forward is integration of complementary platforms, leveraging the strengths of both human-based technologies and genetically engineered animal models.</p>
 
 <div class="lab-signals-references"><p><strong>References</strong></p><ol>
-<li>FDA Modernization Act of 2022, Pub L No. 117-328 (2022). <a href="https://www.congress.gov/bill/117th-congress/senate-bill/5002" target="_blank" rel="noopener noreferrer">Congress.gov</a></li>
-<li>U.S. Food and Drug Administration. <em>Roadmap to Reducing Animal Testing in Preclinical Safety Studies.</em> 2025. <a href="https://www.fda.gov/" target="_blank" rel="noopener noreferrer">FDA.gov</a></li>
-<li>U.S. Food and Drug Administration. <em>Investigational New Drug Application (IND) Guidance for Industry.</em> <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents" target="_blank" rel="noopener noreferrer">FDA.gov</a></li>
-<li>National Institutes of Health. NIH statement on advancing human-based research technologies and NAMs. 2025. <a href="https://www.nih.gov/" target="_blank" rel="noopener noreferrer">NIH.gov</a></li>
-<li>Low LA, Mummery C, Berridge BR, Austin CP, Tagle DA. Organs-on-chips: into the next decade. <em>Nat Rev Drug Discov.</em> 2021;20:345-361. <a href="https://doi.org/10.1038/s41573-021-00139-4" target="_blank" rel="noopener noreferrer">doi:10.1038/s41573-021-00139-4</a></li>
-<li>Clevers H. Modeling development and disease with organoids. <em>Cell.</em> 2016;165(7):1586-1597. <a href="https://doi.org/10.1016/j.cell.2016.05.082" target="_blank" rel="noopener noreferrer">doi:10.1016/j.cell.2016.05.082</a></li>
-<li>Rossi G, Manfrin A, Lutolf MP. Progress and potential in organoid research. <em>Nat Rev Genet.</em> 2018;19:671-687. <a href="https://doi.org/10.1038/s41576-018-0051-9" target="_blank" rel="noopener noreferrer">doi:10.1038/s41576-018-0051-9</a></li>
-<li>Huh D, Hamilton GA, Ingber DE. From 3D cell culture to organs-on-chips. <em>Trends Cell Biol.</em> 2011;21(12):745-754. <a href="https://doi.org/10.1016/j.tcb.2011.09.005" target="_blank" rel="noopener noreferrer">doi:10.1016/j.tcb.2011.09.005</a></li>
-<li>Sun D, et al. Why 90% of clinical drug development fails and how to improve it? <em>Front Drug Discov.</em> 2022;2:1053159. <a href="https://doi.org/10.3389/fddsv.2022.1053159" target="_blank" rel="noopener noreferrer">doi:10.3389/fddsv.2022.1053159</a></li>
-<li>Wimmer RA, et al. Human blood vessel organoids as a model of diabetic vasculopathy. <em>Nature.</em> 2019;565:505-510. <a href="https://doi.org/10.1038/s41586-018-0858-8" target="_blank" rel="noopener noreferrer">doi:10.1038/s41586-018-0858-8</a></li>
-<li>Shultz LD, et al. Humanized mice for immune system investigation. <em>Nat Rev Immunol.</em> 2012;12:786-798. <a href="https://doi.org/10.1038/nri3311" target="_blank" rel="noopener noreferrer">doi:10.1038/nri3311</a></li>
-<li>Maude SL, et al. Managing cytokine release syndrome associated with novel T cell-engaging therapies. <em>Cancer J.</em> 2014;20(2):119-122. <a href="https://doi.org/10.1097/PPO.0000000000000035" target="_blank" rel="noopener noreferrer">doi:10.1097/PPO.0000000000000035</a></li>
-<li>Norelli M, et al. Monocyte-derived IL-1 and IL-6 are required for cytokine-release syndrome due to CAR T cells. <em>Nat Med.</em> 2018;24:739-748. <a href="https://doi.org/10.1038/s41591-018-0036-4" target="_blank" rel="noopener noreferrer">doi:10.1038/s41591-018-0036-4</a></li>
-<li>Cho RH, et al. A humanized IFN-γ mouse model reveals skin eschar formation, enhanced susceptibility and scrub typhus pathogenesis. <em>PLOS Pathog.</em> 2026;22(2):e1013419. <a href="https://doi.org/10.1371/journal.ppat.1013419" target="_blank" rel="noopener noreferrer">doi:10.1371/journal.ppat.1013419</a></li>
-<li>Bissig KD, et al. Human liver chimeric mice provide a model for hepatitis virus infection and drug metabolism. <em>J Clin Invest.</em> 2010;120(3):924-930. <a href="https://doi.org/10.1172/JCI40094" target="_blank" rel="noopener noreferrer">doi:10.1172/JCI40094</a></li>
-<li>Walsh NC, et al. Humanized mouse models of clinical disease. <em>Annu Rev Pathol.</em> 2017;12:187-215. <a href="https://doi.org/10.1146/annurev-pathol-052016-100332" target="_blank" rel="noopener noreferrer">doi:10.1146/annurev-pathol-052016-100332</a></li>
-<li>Sun D, et al. Machine learning approaches for next-generation ADMET prediction. <em>Drug Discov Today.</em> 2024;29(1):103830. <a href="https://doi.org/10.1016/j.drudis.2023.103830" target="_blank" rel="noopener noreferrer">doi:10.1016/j.drudis.2023.103830</a></li>
-<li>Kim H, et al. Humanized DRAGA mice are a valuable model to study novel multifunctional M10 CAR-T cells in HIV-1 infection. <em>J Immunol.</em> 2025;215(4). <a href="https://doi.org/10.1093/jimmunol/vkaf185" target="_blank" rel="noopener noreferrer">doi:10.1093/jimmunol/vkaf185</a></li>
-<li>Zhu J, et al. Application of humanized mice in the safety experiments of antibody drugs: Recent progress and future perspectives. <em>Antibody Ther.</em> 2026;9(1):45-58. <a href="https://academic.oup.com/abt" target="_blank" rel="noopener noreferrer">Antibody Ther.</a></li>
+<li>FDA Modernization Act of 2022, Pub L No. 117-328 (2022).</li>
+<li>U.S. Food and Drug Administration. <em>Roadmap to Reducing Animal Testing in Preclinical Safety Studies.</em> 2025.</li>
+<li>U.S. Food and Drug Administration. <em>Investigational New Drug Application (IND) Guidance for Industry.</em></li>
+<li>National Institutes of Health. NIH statement on advancing human-based research technologies and NAMs. 2025.</li>
+<li>Low LA, Mummery C, Berridge BR, Austin CP, Tagle DA. Organs-on-chips: into the next decade. <em>Nat Rev Drug Discov.</em> 2021;20:345-361.</li>
+<li>Clevers H. Modeling development and disease with organoids. <em>Cell.</em> 2016;165(7):1586-1597.</li>
+<li>Rossi G, Manfrin A, Lutolf MP. Progress and potential in organoid research. <em>Nat Rev Genet.</em> 2018;19:671-687.</li>
+<li>Huh D, Hamilton GA, Ingber DE. From 3D cell culture to organs-on-chips. <em>Trends Cell Biol.</em> 2011;21(12):745-754.</li>
+<li>Sun D, et al. Why 90% of clinical drug development fails and how to improve it? <em>Frontiers in Drug Discovery.</em> 2023;2:1053159.</li>
+<li>Wimmer RA, et al. Human blood vessel organoids as a model of diabetic vasculopathy. <em>Nature.</em> 2019;565:505-510.</li>
+<li>Shultz LD, et al. Humanized mice for immune system investigation. <em>Nat Rev Immunol.</em> 2012;12:786-798.</li>
+<li>Maude SL, et al. Managing cytokine release syndrome associated with novel T cell-engaging therapies. <em>Cancer J.</em> 2014;20(2):119-122.</li>
+<li>Norelli M, et al. Monocyte-derived IL-1 and IL-6 are required for cytokine-release syndrome due to CAR T cells. <em>Nat Med.</em> 2018;24:739-748.</li>
+<li>Cho RH, et al. A humanized IFN-γ mouse model reveals skin eschar formation, enhanced susceptibility and scrub typhus pathogenesis. <em>PLOS Pathogens.</em> 2026;22(2):e1013419.</li>
+<li>Bissig KD, et al. Human liver chimeric mice provide a model for hepatitis virus infection and drug metabolism. <em>J Clin Invest.</em> 2010;120(3):924-930.</li>
+<li>Walsh NC, et al. Humanized mouse models of clinical disease. <em>Annu Rev Pathol.</em> 2017;12:187-215.</li>
+<li>Sun D, et al. Machine learning approaches for next-generation ADMET prediction. <em>Drug Discovery Today.</em> 2024;29(1):103830.</li>
+<li>Kim H, et al. Humanized DRAGA mice are a valuable model to study novel multifunctional M10 CAR-T cells in HIV-1 infection. <em>The Journal of Immunology.</em> 2025;215(4).</li>
+<li>Zhu J, et al. Application of humanized mice in the safety experiments of antibody drugs: Recent progress and future perspectives. <em>Antibody Therapeutics.</em> 2026;9(1):45-58.</li>
 </ol></div>`,
     publishedAt: "2026-03-17",
   },
