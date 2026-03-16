@@ -3,9 +3,9 @@
 ## Meta Information
 - **URL:** /breeding-scheme-architect
 - **Title:** Breeding Scheme Architect | Free Mouse Genetics Planning Tool | ingenious targeting laboratory
-- **Description:** Plan complex single allele breeding schemes for knockout, knockin, Cre lox, and humanized mouse models. Free tool calculates breeding paths, genotype ratios, and time to experimental cohorts.
+- **Description:** Plan your single allele breeding scheme for knockout, knockin, Cre lox, and humanized mouse models. Free tool calculates breeding paths, genotype ratios, and time to experimental cohorts.
 - **Primary Keyword:** breeding scheme planner
-- **Secondary Keywords:** mouse breeding calculator, Cre lox breeding, multi allele cross, genotype ratio calculator
+- **Secondary Keywords:** mouse breeding calculator, Cre lox breeding, genotype ratio calculator, single allele cross
 
 ---
 
@@ -13,10 +13,10 @@
 
 **Badge:** Free Research Tool
 
-**H1:** Plan Complex Breeding Schemes
+**H1:** Plan Single Allele Breeding Schemes
 
 **Intro Paragraph:**
-Visualize breeding paths, calculate expected genotype ratios, and estimate time to experimental cohorts. The breeding scheme architect helps researchers plan knockout, knockin, Cre lox, and humanized model breeding before starting a project. Since 1998, ingenious targeting laboratory has helped researchers navigate complex breeding strategies for over 2,500 custom mouse model projects.
+Visualize breeding paths, calculate expected genotype ratios, and estimate time to experimental cohorts. The breeding scheme architect helps researchers plan single allele knockout, knockin, Cre lox, and humanized model breeding before starting a project. Since 1998, ingenious targeting laboratory has helped researchers navigate breeding strategies for over 2,500 custom mouse model projects.
 
 **Primary CTA:** Start Planning
 **Secondary CTA:** Request Consultation
@@ -28,7 +28,7 @@ Visualize breeding paths, calculate expected genotype ratios, and estimate time 
 **Section Title:** Design Your Breeding Strategy
 
 **Instruction Text:**
-Add your starting alleles, define your target genotypes, and generate an optimized breeding plan. The tool calculates expected offspring ratios, identifies optimal cross sequences, and estimates timeline to study ready cohorts.
+Add your starting allele, define your target genotypes, and generate an optimized breeding plan. The tool calculates expected offspring ratios, identifies the optimal cross sequence, and estimates timeline to study ready cohorts.
 
 ### Allele Input Panel
 
@@ -118,13 +118,13 @@ Estimates are based on standard C57BL/6 breeding parameters (average litter size
 **Section Title:** How the Breeding Scheme Architect Works
 
 **Section Intro:**
-Planning single allele breeding schemes can be complex. This tool simplifies the process by automating Mendelian genetics calculations and identifying optimal breeding strategies.
+Planning single allele breeding schemes can be complex. This tool simplifies the process by automating Mendelian genetics calculations and identifying the optimal breeding strategy.
 
-**Multi-allele contact line:** Need help with multi-allele or complex mating schemes? Contact our scientific team for project-specific guidance.
+**Single allele note:** This tool plans single allele crosses. For multi-allele or complex mating schemes, contact our scientific team for project-specific guidance.
 
 ### Step 1
 
-**Title:** Define Your Alleles
+**Title:** Define Your Allele
 
 **Description:**
 Enter your targeted allele. This could be a knockout, Cre driver, reporter, or humanized allele. Specify your genotypes and chromosomal location.
@@ -158,7 +158,7 @@ Save your breeding plan as a PDF, share with collaborators, or request a consult
 
 ### Benefit 1
 
-**Title:** Visualize Complex Crosses
+**Title:** Visualize Your Breeding Path
 
 **Description:**
 See your entire breeding strategy mapped out generation by generation. Understand which crosses to prioritize and when you can expect to have experimental cohorts ready.
@@ -189,7 +189,7 @@ Use the breeding scheme architect before ordering custom models to understand po
 ## Testimonial Section (Optional)
 
 **Quote:**
-"Planning the breeding scheme for our triple transgenic model seemed overwhelming. This tool helped us visualize the entire process and estimate resources before we started."
+"Planning the breeding scheme for our conditional knockout model seemed overwhelming. This tool helped us visualize the entire process and estimate resources before we started."
 
 **Attribution:**
 — Research Scientist, Academic Medical Center
@@ -226,15 +226,15 @@ Our scientific team can help optimize your breeding strategy, recommend Cre driv
 
 ### FAQ 3
 
-**Question:** Can I save my breeding schemes?
+**Question:** Can I save my breeding scheme?
 
-**Answer:** Yes. Create a free account to save breeding schemes, export them as PDF documents, or generate shareable links for collaborators. Your saved schemes remain accessible for future reference and modification.
+**Answer:** Export your breeding plan as a PDF using the export button, or use the copy link button to share the page with collaborators. For a saved record of your project, request a consultation and our team will document your strategy.
 
 ### FAQ 4
 
-**Question:** What happens if my alleles are on the same chromosome?
+**Question:** What allele types does this tool support?
 
-**Answer:** The tool will alert you when alleles may be linked on the same chromosome, which affects recombination rates and inheritance patterns. In these cases, consult with our scientific team for guidance on optimal breeding strategies for linked alleles.
+**Answer:** The tool supports nine allele types: conditional knockouts (floxed), conventional knockouts, Cre drivers (constitutive and inducible), reporters (fluorescent and LacZ), knockins (point mutation and cDNA), and humanized alleles. Enter your allele, set your target genotype, and the tool calculates the optimal breeding path.
 
 ### FAQ 5
 

@@ -156,7 +156,7 @@ const allFAQs: FAQ[] = [
   {
     category: 'Model Types',
     question: 'Can I combine multiple modifications in one mouse?',
-    answer: 'Yes. We can generate mice with multiple knockouts, combined knockout plus knockin, or multiple knockins at different loci. Complex models are typically built by breeding separate single-modification lines together rather than targeting multiple loci simultaneously. Our breeding scheme architects help plan optimal breeding strategies for multi-allele models.'
+    answer: 'Yes. We can generate mice with multiple knockouts, combined knockout plus knockin, or multiple knockins at different loci. Complex models are typically built by breeding separate single-modification lines together rather than targeting multiple loci simultaneously. Our Breeding Scheme Architect tool helps plan single allele breeding strategies; contact our scientific team for guidance on multi-allele models.'
   },
   {
     category: 'Model Types',
@@ -283,7 +283,7 @@ const allFAQs: FAQ[] = [
   {
     category: 'Services',
     question: 'Can you help with breeding scheme design?',
-    answer: 'Absolutely. Our Breeding Scheme Architect service designs optimal breeding strategies for: creating double or triple mutants, maintaining compound heterozygotes, minimizing generations to experimental genotypes, and preserving rare allele combinations. We calculate expected genotype frequencies and provide detailed breeding protocols.'
+    answer: 'Yes. Our free Breeding Scheme Architect tool plans single allele crosses—including conditional knockouts, Cre driver schemes, reporters, knockins, and humanized alleles. It calculates expected genotype ratios, estimates breeding pairs needed, and maps the generation-by-generation path to your target cohort. For multi-allele or complex schemes, our scientific team provides project-specific guidance and detailed breeding protocols.'
   },
   {
     category: 'Services',

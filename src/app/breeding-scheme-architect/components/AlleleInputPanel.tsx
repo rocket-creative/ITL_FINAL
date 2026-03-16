@@ -102,7 +102,7 @@ export default function AlleleInputPanel({
             margin: 0,
           }}
         >
-          Your Starting Alleles
+          Your Starting Allele
         </h3>
         {!isAdding && alleles.length === 0 && (
           <button
@@ -222,7 +222,7 @@ export default function AlleleInputPanel({
             fontSize: '.9rem',
           }}
         >
-          No alleles added yet. Click &quot;Add Allele&quot; to start building your
+          No allele added yet. Click &quot;Add Allele&quot; to start building your
           breeding scheme.
         </div>
       )}

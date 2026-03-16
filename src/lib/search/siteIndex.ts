@@ -97,7 +97,7 @@ export const siteIndex: SiteIndexEntry[] = [
   { title: 'Cre line selection guide', description: 'How to choose the right Cre driver line for your research.', url: '/cre-line-selection-guide', category: 'Resources' },
   { title: 'Ingenious Blog', description: 'Blog articles on mouse model research and technology.', url: '/ingenious-blog', category: 'Resources' },
   { title: 'Lab Signals Newsletter', description: 'Biweekly newsletter with research insights.', url: '/lab-signals', category: 'Resources' },
-  { title: 'Breeding Architect', description: 'Interactive tool for designing breeding schemes.', url: '/breeding-scheme-architect', category: 'Resources' },
+  { title: 'Breeding Scheme Architect', description: 'Free interactive tool for planning single allele breeding schemes.', url: '/breeding-scheme-architect', category: 'Resources' },
   { title: 'All FAQs', description: 'Frequently asked questions about mouse models.', url: '/faq', category: 'Resources' },
   // Company
   { title: 'About ingenious targeting laboratory', description: 'Learn about ingenious targeting laboratory and our 26+ years of experience.', url: '/about-itl', category: 'Company' },

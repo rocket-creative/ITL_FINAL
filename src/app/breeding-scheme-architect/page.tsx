@@ -51,14 +51,14 @@ const faqs = [
       'The calculator uses established statistical methods similar to published research tools, accounting for Mendelian inheritance ratios, strain specific litter sizes (C57BL/6 averages 6 to 8 pups), breeding efficiency (approximately 80%), and your target sample size requirements.',
   },
   {
-    question: 'Can I save my breeding schemes?',
+    question: 'Can I save my breeding scheme?',
     answer:
-      'Yes. Create a free account to save breeding schemes, export them as PDF documents, or generate shareable links for collaborators. Your saved schemes remain accessible for future reference and modification.',
+      'Export your breeding plan as a PDF using the export button, or use the copy link button to share the page with collaborators. For a saved record of your project, request a consultation and our team will document your strategy.',
   },
   {
-    question: 'What happens if my alleles are on the same chromosome?',
+    question: 'What allele types does this tool support?',
     answer:
-      'The tool will alert you when alleles may be linked on the same chromosome, which affects recombination rates and inheritance patterns. In these cases, consult with our scientific team for guidance on optimal breeding strategies for linked alleles.',
+      'The tool supports nine allele types: conditional knockouts (floxed), conventional knockouts, Cre drivers (constitutive and inducible), reporters (fluorescent and LacZ), knockins (point mutation and cDNA), and humanized alleles. Enter your allele, set your target genotype, and the tool calculates the optimal breeding path.',
   },
   {
     question: 'How do I get help with my specific breeding project?',
@@ -71,7 +71,7 @@ const faqs = [
 const howItWorksSteps = [
   {
     number: '1',
-    title: 'Define Your Alleles',
+    title: 'Define Your Allele',
     description:
       'Enter your targeted allele. This could be a knockout, Cre driver, reporter, or humanized allele. Specify your genotypes and chromosomal location.',
     icon: IconDNA,
@@ -102,7 +102,7 @@ const howItWorksSteps = [
 // ========== BENEFITS DATA ==========
 const benefits = [
   {
-    title: 'Visualize Complex Crosses',
+    title: 'Visualize Your Breeding Path',
     description:
       'See your entire breeding strategy mapped out generation by generation. Understand which crosses to prioritize and when you can expect to have experimental cohorts ready.',
     icon: IconEye,
@@ -252,7 +252,7 @@ function BreedingSchemeArchitectContent() {
               maxWidth: '700px',
             }}
           >
-            Plan Complex Breeding Schemes
+            Plan Single Allele Breeding Schemes
           </h1>
 
           {/* Intro Paragraph */}
@@ -269,9 +269,9 @@ function BreedingSchemeArchitectContent() {
           >
             Visualize breeding paths, calculate expected genotype ratios,
             and estimate time to experimental cohorts. The breeding scheme architect helps
-            researchers plan knockout, knockin, Cre lox, and humanized model breeding before
-            starting a project. Since 1998, ingenious targeting laboratory has helped
-            researchers navigate complex breeding strategies for over 2,500 custom mouse
+            researchers plan single allele knockout, knockin, Cre lox, and humanized model
+            breeding before starting a project. Since 1998, ingenious targeting laboratory
+            has helped researchers navigate breeding strategies for over 2,500 custom mouse
             model projects.
           </p>
 
@@ -358,9 +358,9 @@ function BreedingSchemeArchitectContent() {
               margin: '0 auto 40px',
             }}
           >
-            Add your starting alleles, define your target genotypes, and generate an
+            Add your starting allele, define your target genotypes, and generate an
             optimized breeding plan. The tool calculates expected offspring ratios,
-            identifies optimal cross sequences, and estimates timeline to study ready
+            identifies the optimal cross sequence, and estimates timeline to study ready
             cohorts.
           </p>
 
@@ -581,9 +581,9 @@ function BreedingSchemeArchitectContent() {
               margin: '0 auto 40px',
             }}
           >
-            Need help with multi-allele or complex mating schemes?{' '}
+            This tool plans single allele crosses. For multi-allele or complex mating schemes,{' '}
             <Link href="/request-quote" style={{ color: '#008080', textDecoration: 'underline' }}>
-              Contact our scientific team
+              contact our scientific team
             </Link>{' '}
             for project-specific guidance.
           </p>

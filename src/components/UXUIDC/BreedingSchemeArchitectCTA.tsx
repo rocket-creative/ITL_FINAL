@@ -111,7 +111,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
                 marginBottom: '20px',
               }}
             >
-              Plan complex single allele breeding strategies, calculate expected genotype ratios, 
+              Plan your single allele breeding strategy, calculate expected genotype ratios,
               and estimate time to experimental cohorts—all before starting your project.
             </p>
 
@@ -246,8 +246,8 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
             {/* Fake UI preview */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
-                { label: 'Allele 1', example: 'Gene-flox (conditional)' },
-                { label: 'Allele 2', example: 'Cre-driver (tissue-specific)' },
+                { label: 'Allele', example: 'Gene-flox (conditional)' },
+                { label: 'Starting genotype', example: 'Heterozygous' },
                 { label: 'Target', example: 'Homozygous knockout' },
               ].map((item, i) => (
                 <div
