@@ -44,7 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about-itl',
     '/request-quote',
     '/why-choose-itl',
-    '/pricing-overview',
     '/resources',
     '/contact',
     '/current-openings',
