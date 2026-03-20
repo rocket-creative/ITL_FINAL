@@ -209,7 +209,13 @@
   },
   {
     "source": "/contact",
-    "destination": "/general-contact/",
+    "destination": "/contact/",
+    "permanent": true
+  },
+  {
+    "comment": "Bare path from GSC (typo/old link)",
+    "source": "/ingenious-",
+    "destination": "/",
     "permanent": true
   },
   {
