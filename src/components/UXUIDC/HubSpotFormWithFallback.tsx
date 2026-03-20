@@ -27,10 +27,12 @@ interface HubSpotFormWithFallbackProps {
   submitButtonText?: string;
   successMessage?: string;
   timeout?: number;
-  /** Fired when fallback form submits successfully (HubSpot forms use layout listener) */
+  /** Fired when fallback form submits successfully */
   onFallbackSuccess?: () => void;
   /** Pre-fill fallback form fields (e.g. from URL params) */
   initialValues?: Record<string, string>;
+  /** HubSpot embed: navigate after successful submit (form id must match) */
+  redirectAfterSubmit?: string;
 }
 
 type FormState = 'fallback' | 'hubspot';
@@ -46,6 +48,7 @@ export default function HubSpotFormWithFallback({
   timeout = 5000,
   onFallbackSuccess,
   initialValues,
+  redirectAfterSubmit,
 }: HubSpotFormWithFallbackProps) {
   const [formState, setFormState] = useState<FormState>('fallback');
   const [showWarning, setShowWarning] = useState(false);
@@ -182,6 +185,7 @@ export default function HubSpotFormWithFallback({
             enableBackup={true}
             shouldLoad={true}
             onLoadSuccess={handleHubSpotLoadSuccess}
+            redirectAfterSubmit={redirectAfterSubmit}
           />
         </div>
       )}

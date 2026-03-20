@@ -7,6 +7,7 @@ import { NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
 const SESSION_COOKIE = 'itl-admin-session';
+const SKIP_AUTH = process.env.NEXT_PUBLIC_ADMIN_SKIP_AUTH === 'true';
 
 async function isAuthenticated(): Promise<boolean> {
   const cookieStore = await cookies();
@@ -15,13 +16,14 @@ async function isAuthenticated(): Promise<boolean> {
 }
 
 export async function GET() {
-  if (!(await isAuthenticated())) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+  try {
+    if (!SKIP_AUTH && !(await isAuthenticated())) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
 
-  // Return mock form health data
-  // In production, this would aggregate from localStorage or a database
-  return NextResponse.json({
+    // Return mock form health data
+    // In production, this would aggregate from localStorage or a database
+    return NextResponse.json({
     forms: [
       {
         formId: 'b854ed46-fed3-4b54-9d01-62173106ad8c',
@@ -91,5 +93,9 @@ export async function GET() {
         timestamp: '2026-02-19T08:00:00Z',
       },
     ],
-  });
+    });
+  } catch (e) {
+    console.error('Form health API error:', e);
+    return NextResponse.json({ error: 'Server error' }, { status: 500 });
+  }
 }

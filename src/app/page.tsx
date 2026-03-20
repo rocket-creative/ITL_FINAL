@@ -233,7 +233,6 @@ const faqData = {
 export default function HomePage() {
   return (
     <div className="page-wrapper" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-      {/* SHARED: Navigation - never changes */}
       <UXUIDCNavigation />
 
       <main id="main-content">
@@ -284,13 +283,10 @@ export default function HomePage() {
         <FAQSection data={faqData} />
       </main>
 
-      {/* SHARED: Footer - never changes */}
       <UXUIDCFooter />
-      
-      {/* SHARED: Cookie Consent */}
+
       <UXUIDCCookieConsent />
 
-      {/* SEO: Schema.org Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

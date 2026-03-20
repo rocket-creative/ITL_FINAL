@@ -14,8 +14,9 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import HubSpotFormWithFallback from '@/components/UXUIDC/HubSpotFormWithFallback';
 import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
-import { trackQuoteRequest } from '@/components/analytics/GoogleAnalytics';
 import { IconDNA, IconCheckCircle, IconChevronRight, IconMail, IconPhone } from '@/components/UXUIDC/Icons';
+
+const REQUEST_QUOTE_THANK_YOU = '/request-quote/thank-you/';
 
 // Hero Data
 const heroData = {
@@ -88,7 +89,7 @@ export default function RequestQuotePage() {
   const heroRef = useRef<HTMLDivElement>(null);  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
-      
+
       <main id="main-content">
         {/* Hero Section with Embedded Form */}
         <section 
@@ -220,7 +221,10 @@ export default function RequestQuotePage() {
                     fallbackFields={fallbackFields}
                     submitButtonText="Request Quote"
                     successMessage="Thank you! A scientific consultant will contact you within 1 business day."
-                    onFallbackSuccess={() => trackQuoteRequest()}
+                    redirectAfterSubmit={REQUEST_QUOTE_THANK_YOU}
+                    onFallbackSuccess={() => {
+                      window.location.assign(REQUEST_QUOTE_THANK_YOU);
+                    }}
                   />
                 </div>
               </div>
@@ -368,10 +372,9 @@ export default function RequestQuotePage() {
         }}
       />
       </main>
-      
+
       <UXUIDCFooter />
-          
-      {/* Schema.org Structured Data */}
+
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },

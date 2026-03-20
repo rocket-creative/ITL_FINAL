@@ -635,10 +635,9 @@ export default function ContactPage() {
         </section>
 
       </main>
-      
+
       <UXUIDCFooter />
 
-      {/* Schema.org Structured Data */}
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },

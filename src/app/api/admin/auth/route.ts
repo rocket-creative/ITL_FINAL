@@ -1,62 +1,77 @@
 /**
  * Admin Authentication API
- * @description Simple password-based auth for admin dashboard
+ * @description Username + password auth for admin dashboard
  */
 
 import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
-// Admin password - set in environment variable
+const ADMIN_USERNAME = process.env.ADMIN_USERNAME || 'admin';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'itl-admin-2026';
 
-// Session token name
 const SESSION_COOKIE = 'itl-admin-session';
 
-// Simple token generation (in production, use a proper JWT library)
 function generateToken(): string {
   return Buffer.from(`${Date.now()}-${Math.random().toString(36).slice(2)}`).toString('base64');
 }
 
 export async function POST(request: NextRequest) {
   try {
-    const { password } = await request.json();
+    const body = await request.json();
+    const username = typeof body?.username === 'string' ? body.username : '';
+    const password = typeof body?.password === 'string' ? body.password : '';
 
-    if (password === ADMIN_PASSWORD) {
+    if (!username || !password) {
+      return NextResponse.json(
+        { error: 'Username and password are required.' },
+        { status: 400 }
+      );
+    }
+
+    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
       const token = generateToken();
       const cookieStore = await cookies();
-      
-      // Set session cookie (expires in 24 hours)
       cookieStore.set(SESSION_COOKIE, token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'strict',
-        maxAge: 60 * 60 * 24, // 24 hours
+        maxAge: 60 * 60 * 24,
         path: '/',
       });
-
       return NextResponse.json({ success: true });
     }
 
-    return NextResponse.json({ error: 'Invalid password' }, { status: 401 });
-  } catch {
-    return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
+    return NextResponse.json({ error: 'Invalid username or password' }, { status: 401 });
+  } catch (e) {
+    return NextResponse.json(
+      { error: 'Invalid request. Send JSON with username and password.' },
+      { status: 400 }
+    );
   }
 }
 
 export async function DELETE() {
-  const cookieStore = await cookies();
-  cookieStore.delete(SESSION_COOKIE);
-  return NextResponse.json({ success: true });
+  try {
+    const cookieStore = await cookies();
+    cookieStore.delete(SESSION_COOKIE);
+    return NextResponse.json({ success: true });
+  } catch (e) {
+    console.error('Auth DELETE error:', e);
+    return NextResponse.json({ error: 'Server error' }, { status: 500 });
+  }
 }
 
 // Check if authenticated
 export async function GET() {
-  const cookieStore = await cookies();
-  const session = cookieStore.get(SESSION_COOKIE);
-  
-  if (session?.value) {
-    return NextResponse.json({ authenticated: true });
+  try {
+    const cookieStore = await cookies();
+    const session = cookieStore.get(SESSION_COOKIE);
+    if (session?.value) {
+      return NextResponse.json({ authenticated: true });
+    }
+    return NextResponse.json({ authenticated: false }, { status: 401 });
+  } catch (e) {
+    console.error('Auth GET error:', e);
+    return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
-  
-  return NextResponse.json({ authenticated: false }, { status: 401 });
 }

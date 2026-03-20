@@ -27,6 +27,8 @@ interface HubSpotFormSimpleProps {
   shouldLoad?: boolean;
   /** Called when HubSpot form successfully loads */
   onLoadSuccess?: () => void;
+  /** After successful submit, navigate here (only when callback form id matches this form) */
+  redirectAfterSubmit?: string;
 }
 
 // Declare HubSpot global
@@ -53,6 +55,7 @@ export default function HubSpotFormSimple({
   enableBackup = true,
   shouldLoad = true,
   onLoadSuccess,
+  redirectAfterSubmit,
 }: HubSpotFormSimpleProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isLoadingRef = useRef<HTMLDivElement>(null);
@@ -146,8 +149,11 @@ export default function HubSpotFormSimple({
     // Set up HubSpot form submission listener for backup
     const handleFormSubmit = (event: MessageEvent) => {
       if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+        const submittedId = event.data.id != null ? String(event.data.id) : '';
+        if (submittedId !== String(formId)) return;
+
         const formData = event.data.data || {};
-        
+
         // Track submission
         trackFormInteraction({
           formId,
@@ -160,8 +166,7 @@ export default function HubSpotFormSimple({
         // Send backup submission if enabled
         if (enableBackup && formData) {
           const fields: Record<string, string | string[]> = {};
-          
-          // Extract field values from HubSpot submission data
+
           if (Array.isArray(formData)) {
             formData.forEach((field: { name: string; value: string | string[] }) => {
               if (field.name && field.value !== undefined) {
@@ -170,10 +175,13 @@ export default function HubSpotFormSimple({
             });
           }
 
-          // Send backup
           sendBackupSubmission(formId, formName, fields).catch(error => {
             console.error('[HubSpot] Backup submission failed:', error);
           });
+        }
+
+        if (redirectAfterSubmit) {
+          window.location.assign(redirectAfterSubmit);
         }
       }
     };
@@ -197,7 +205,7 @@ export default function HubSpotFormSimple({
       clearTimeout(timer);
       window.removeEventListener('message', handleFormSubmit);
     };
-  }, [formId, formName, portalId, region, enableBackup, shouldLoad, onLoadSuccess]);
+  }, [formId, formName, portalId, region, enableBackup, shouldLoad, onLoadSuccess, redirectAfterSubmit]);
 
   return (
     <div

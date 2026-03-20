@@ -1,6 +1,7 @@
 ---
-title: "Conditional Mutation"
+title: "Conditional Mutations: How Environment Driven Gene Changes Work"
 slug: "conditional-mutation"
+description: "Conditional mutations alter phenotype only under specific environmental conditions like temperature or chemical exposure. Learn how conditional mutations work, their role in genetic research, and how conditional knockout mouse models enable tissue specific and inducible gene studies."
 date: "Thu Jul 10 2025 15:33:51 GMT+0000 (Coordinated Universal Time)"
 category: "Educational"
 legacy_url: "https://www.genetargeting.com/ingenious-blog/conditional-mutation"

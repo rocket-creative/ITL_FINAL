@@ -21,6 +21,11 @@ const poppins = Poppins({
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '';
 // Google Ads Conversion ID
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || '';
+const GOOGLE_ADS_QUOTE_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_QUOTE_LABEL || '';
+const GOOGLE_ADS_QUOTE_SEND_TO =
+  GOOGLE_ADS_ID && GOOGLE_ADS_QUOTE_LABEL
+    ? `${GOOGLE_ADS_ID}/${GOOGLE_ADS_QUOTE_LABEL}`
+    : '';
 
 export const metadata: Metadata = {
   title: {
@@ -90,31 +95,24 @@ export default function RootLayout({
                   ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}');` : ''}
                   ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
 
-                  // Google Ads conversion reporting function for onclick tracking
-                  // Usage: onclick="return gtag_report_conversion('https://destination-url')"
+                  // Google Ads conversion for onclick (optional). send_to from NEXT_PUBLIC_GOOGLE_ADS_* quote label.
                   window.gtag_report_conversion = function(url) {
+                    var sendTo = ${JSON.stringify(GOOGLE_ADS_QUOTE_SEND_TO)};
+                    if (!sendTo) {
+                      if (typeof url !== 'undefined') window.location = url;
+                      return false;
+                    }
                     var callback = function() {
-                      if (typeof(url) !== 'undefined') {
+                      if (typeof url !== 'undefined') {
                         window.location = url;
                       }
                     };
                     gtag('event', 'conversion', {
-                      'send_to': '${GOOGLE_ADS_ID}/fS_cCPqFqu0aEMOV4MQ_',
-                      'event_callback': callback
+                      send_to: sendTo,
+                      event_callback: callback
                     });
                     return false;
                   };
-
-                  // HubSpot iframe form submission listener → fires Google Ads conversion + GA4 generate_lead
-                  // Required because HubSpot forms are embedded iframes — onclick won't work
-                  window.addEventListener('message', function(event) {
-                    if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
-                      gtag('event', 'conversion', {
-                        'send_to': '${GOOGLE_ADS_ID}/fS_cCPqFqu0aEMOV4MQ_'
-                      });
-                      ${GA_MEASUREMENT_ID ? "gtag('event', 'generate_lead', { method: 'hubspot' });" : ''}
-                    }
-                  });
                 `,
               }}
             />

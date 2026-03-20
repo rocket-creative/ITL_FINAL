@@ -91,8 +91,8 @@ export default function StartYourProjectPage() {
     e.preventDefault();
     if (email.includes('@')) {
       setFormSubmitted(true);
-      // Redirect to pricing guide page
-      window.location.href = '/pricing-guide';
+      const next = encodeURIComponent('/pricing-guide/');
+      window.location.href = `/start-your-project/thank-you/?next=${next}`;
     }
   };
 
@@ -838,8 +838,7 @@ export default function StartYourProjectPage() {
       </main>
 
       <UXUIDCFooter />
-          
-      {/* Schema.org Structured Data */}
+
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },

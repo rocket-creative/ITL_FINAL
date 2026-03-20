@@ -7,6 +7,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import { getAdminApiBase } from './adminApiBase';
 
 // Types for pixel status
 interface PixelInfo {
@@ -104,6 +105,8 @@ interface FormHealthData {
   }>;
 }
 
+const SKIP_AUTH = process.env.NEXT_PUBLIC_ADMIN_SKIP_AUTH === 'true';
+
 const dateRanges: DateRange[] = [
   { label: 'Today', days: 0 },
   { label: 'Yesterday', days: 1 },
@@ -119,18 +122,15 @@ export default function AdminDashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [dateRange, setDateRange] = useState(7);
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(SKIP_AUTH ? true : null);
   const router = useRouter();
 
-  // Check authentication
   useEffect(() => {
-    fetch('/api/admin/auth')
+    if (SKIP_AUTH) return;
+    fetch(`${getAdminApiBase()}/api/admin/auth`)
       .then((res) => {
-        if (res.ok) {
-          setIsAuthenticated(true);
-        } else {
-          router.push('/admin/login');
-        }
+        if (res.ok) setIsAuthenticated(true);
+        else router.push('/admin/login');
       })
       .catch(() => router.push('/admin/login'));
   }, [router]);
@@ -178,7 +178,7 @@ export default function AdminDashboardPage() {
   }, [isAuthenticated, fetchData]);
 
   const handleLogout = async () => {
-    await fetch('/api/admin/auth', { method: 'DELETE' });
+    await fetch(`${getAdminApiBase()}/api/admin/auth`, { method: 'DELETE' });
     router.push('/admin/login');
   };
 
@@ -196,15 +196,17 @@ export default function AdminDashboardPage() {
       <header className="bg-white border-b sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#002B5C] rounded-lg flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <div>
-                <h1 className="font-bold text-[#002B5C]">ITL Analytics</h1>
-                <p className="text-xs text-gray-500">Dashboard</p>
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-[#002B5C] rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h1 className="font-bold text-[#002B5C]">ITL Analytics</h1>
+                  <p className="text-xs text-gray-500">Dashboard</p>
+                </div>
               </div>
             </div>
 
@@ -222,6 +224,16 @@ export default function AdminDashboardPage() {
                 ))}
               </select>
 
+              {/* Logout */}
+              {!SKIP_AUTH && (
+                <button
+                  onClick={handleLogout}
+                  className="text-sm text-gray-600 hover:text-gray-900"
+                >
+                  Sign out
+                </button>
+              )}
+
               {/* Refresh Button */}
               <button
                 onClick={fetchData}
@@ -234,13 +246,6 @@ export default function AdminDashboardPage() {
                 </svg>
               </button>
 
-              {/* Logout */}
-              <button
-                onClick={handleLogout}
-                className="text-sm text-gray-600 hover:text-gray-900"
-              >
-                Sign out
-              </button>
             </div>
           </div>
         </div>

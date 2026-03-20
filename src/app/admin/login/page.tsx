@@ -7,8 +7,10 @@
 
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
+import { getAdminApiBase } from '../adminApiBase';
 
 export default function AdminLoginPage() {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -20,20 +22,34 @@ export default function AdminLoginPage() {
     setError('');
 
     try {
-      const res = await fetch('/api/admin/auth', {
+      const base = getAdminApiBase();
+      const res = await fetch(`${base}/api/admin/auth`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ username, password }),
       });
 
       if (res.ok) {
         router.push('/admin');
         router.refresh();
-      } else {
-        setError('Invalid password');
+        return;
       }
-    } catch {
-      setError('Something went wrong');
+
+      let message = 'Invalid username or password';
+      try {
+        const data = await res.json();
+        if (data?.error && typeof data.error === 'string') {
+          message = data.error;
+        }
+      } catch {
+        if (res.status >= 500) {
+          message = 'Server error. Try again in a moment.';
+        }
+      }
+      setError(message);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Network or connection error.';
+      setError(`Something went wrong. ${msg}`);
     } finally {
       setLoading(false);
     }
@@ -57,6 +73,21 @@ export default function AdminLoginPage() {
           {/* Login Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-2">
+                Username
+              </label>
+              <input
+                type="text"
+                id="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#002B5C] focus:border-transparent outline-none transition"
+                placeholder="Enter username"
+                required
+                autoComplete="username"
+              />
+            </div>
+            <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
                 Password
               </label>
@@ -66,8 +97,9 @@ export default function AdminLoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#002B5C] focus:border-transparent outline-none transition"
-                placeholder="Enter admin password"
+                placeholder="Enter password"
                 required
+                autoComplete="current-password"
               />
             </div>
 

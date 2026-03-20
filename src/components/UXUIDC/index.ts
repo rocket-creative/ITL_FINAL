@@ -9,6 +9,7 @@
 export { default as UXUIDCNavigation } from './Navigation';
 export { default as UXUIDCFooter } from './Footer';
 export { default as UXUIDCAnnouncementBar } from './AnnouncementBar';
+export { ThankYouPageShell } from './ThankYouPageShell';
 
 // Hero & Sections
 export { default as UXUIDCHeroSection } from './HeroSection';
