@@ -1,23 +1,109 @@
 'use client';
 
+import type { ReactNode } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
-import { IconChevronRight, IconCheckCircle, IconFlask, IconLayers, IconShield, IconDNA } from '@/components/UXUIDC/Icons';
+import { IconChevronRight, IconFlask, IconLayers, IconShield, IconDNA } from '@/components/UXUIDC/Icons';
 
 const PDF_HREF = '/downloads/hcd3edg-ingenious.pdf';
 
-const strainSpecs = [
-  { param: 'Model Name', detail: 'hCD3EDG' },
-  { param: 'Full Strain Name', detail: 'C57BL/6Smoc Cd3e^tm1(hCD3E) Cd3d^tm1(hCD3D) Cd3g^tm1(hCD3G) Smoc' },
+/** Matches hCD3EDG strain overview notation (superscripts per source specification). */
+function StrainNameExact() {
+  return (
+    <>
+      C57BL/6Smoc-Cd3e<sup>tm1(hCD3E)</sup> Cd3d<sup>tm1(hCD3D)</sup> Cd3g<sup>tm1(hCD3G)Smoc</sup>
+    </>
+  );
+}
+
+const strainSpecs: { param: string; detail: ReactNode }[] = [
+  { param: 'Strain Name', detail: <StrainNameExact /> },
   { param: 'Catalog Number', detail: 'NM-HU-220120' },
   { param: 'Genetic Background', detail: 'C57BL/6Smoc' },
-  { param: 'Strain State', detail: 'Repository Live — ready to ship' },
+  { param: 'Strain State', detail: 'Repository Live' },
+  { param: 'Model Name', detail: 'hCD3EDG' },
   { param: 'Humanized Genes', detail: 'CD3E (epsilon), CD3D (delta), CD3G (gamma)' },
   { param: 'Zygosity', detail: 'Homozygous' },
   { param: 'Category', detail: 'Humanized Mouse Models' },
+];
+
+/** Strain overview and validation figure copy and image URLs from hCD3EDG strain specification source. */
+const validationFigures: {
+  title: ReactNode;
+  alt: string;
+  description: string | null;
+  src: string;
+}[] = [
+  {
+    title: 'Fig.1 Detection of human CD3E, CD3D, CD3G on T cell surface in HO hCD3EDG mice.',
+    alt: 'Fig.1 Detection of human CD3E, CD3D, CD3G on T cell surface in HO hCD3EDG mice.',
+    description: null,
+    src: '/images/featured-model/hcd3edg/5350e87a147634e64aed40d32a1c9e76.png',
+  },
+  {
+    title: 'Fig.2 Lymphocyte Lineage Characterization in Blood in Homozygous hCD3EDG Mice.',
+    alt: 'Fig.2 Lymphocyte Lineage Characterization in Blood in Homozygous hCD3EDG Mice.',
+    description: null,
+    src: '/images/featured-model/hcd3edg/64f4cc5bb93d9460257009e48e7c3276.png',
+  },
+  {
+    title: (
+      <>
+        Fig.3 <em>In vivo</em> AICD and irAE Assessment of Bispecific T Cell Engager Antibodies in Homozygous hCD3EDG Mice.
+      </>
+    ),
+    alt: 'Fig.3 In vivo AICD and irAE Assessment of Bispecific T Cell Engager Antibodies in Homozygous hCD3EDG Mice.',
+    description:
+      'Homozygous hCD3EDG mice were engrafted with MC38-hEpCAM to evaluate the AICD and irAE of OKT3 and anti-CD3×EpCAM bispecific antibody in vivo.',
+    src: '/images/featured-model/hcd3edg/c8e638d50e497ec7a1fb4632556efce0.png',
+  },
+  {
+    title: (
+      <>
+        Fig.4 <em>In Vivo</em> Response with Bispecific T Cell Engager Antibodies in Homozygous hCD3EDG Mice.
+      </>
+    ),
+    alt: 'Fig.4 In Vivo Response with Bispecific T Cell Engager Antibodies in Homozygous hCD3EDG Mice.',
+    description:
+      'Homozygous hCD3EDG mice were engrafted with MC38-hCLDN18.2 to evaluate the in vivo efficacy of anti-CD3×Claudin18.2 bispecific antibody.',
+    src: '/images/featured-model/hcd3edg/9fd73c7088f17c4343bbd45f1c49f79e.png',
+  },
+  {
+    title: (
+      <>
+        Fig.5 <em>In vivo</em> AICD and irAE Assessment of CD3 Bispecific Antibody in Homozygous hCD3EDG Mice.
+      </>
+    ),
+    alt: 'Fig.5 In vivo AICD and irAE Assessment of CD3 Bispecific Antibody in Homozygous hCD3EDG Mice.',
+    description:
+      'The anti-tumor response of anti-mPD-1 was evaluated in homozygous hCD3EDG mice bearing MC38 syngeneic tumor model.',
+    src: '/images/featured-model/hcd3edg/b385b0ed132af378c4eb3e3139ff7b26.png',
+  },
+  {
+    title: (
+      <>
+        Fig.6 <em>In vivo</em> AICD and irAE Assessment of CD3 Bispecific Antibody with Homozygous hCD3EDG Mice.
+      </>
+    ),
+    alt: 'Fig.6 In vivo AICD and irAE Assessment of CD3 Bispecific Antibody with Homozygous hCD3EDG Mice.',
+    description:
+      'Homozygous hCD3EDG mice were engrafted with MC38-hEpCAM to evaluate the AICD and irAE of anti-CD3×EpCAM bispecific antibody at low and high dose levels in vivo.',
+    src: '/images/featured-model/hcd3edg/8507fca2dadb41346107193e047dffb4.png',
+  },
+  {
+    title: (
+      <>
+        Fig.7 <em>In Vivo</em> Response with Bispecific T Cell Engager Antibodies.
+      </>
+    ),
+    alt: 'Fig.7 In Vivo Response with Bispecific T Cell Engager Antibodies.',
+    description: null,
+    src: '/images/featured-model/hcd3edg/3c989dee7a88f6cfc1c140ea31d86f6c.png',
+  },
 ];
 
 const immuneData = [
@@ -546,8 +632,91 @@ export default function HCD3EDGPage() {
             </div>
           </section>
 
-          {/* Immune Characterization */}
+          {/* Validation data (figures from strain specification) */}
           <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+              <h2 className="animate-in" style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2rem',
+                fontWeight: 700,
+                color: '#2384da',
+                marginBottom: '12px',
+                textAlign: 'center',
+              }}>
+                Validation data
+              </h2>
+              <p className="animate-in" style={{
+                fontSize: '.85rem',
+                color: '#888',
+                textAlign: 'center',
+                marginBottom: '40px',
+                lineHeight: 1.6,
+              }}>
+                Strain overview and figures align with the published strain model specification.{' '}
+                <a
+                  href="https://genobiotx.com/product/hcd3edg/#overview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#008080', fontWeight: 600 }}
+                >
+                  Source overview
+                </a>
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+                {validationFigures.map((fig, i) => (
+                  <figure
+                    key={`${i}-${fig.src}`}
+                    className="animate-in"
+                    style={{ margin: 0, padding: 0 }}
+                  >
+                    <figcaption style={{
+                      fontFamily: 'Poppins, sans-serif',
+                      fontSize: '1rem',
+                      fontWeight: 600,
+                      color: '#0a253c',
+                      marginBottom: fig.description ? '12px' : '16px',
+                      lineHeight: 1.45,
+                    }}>
+                      {fig.title}
+                    </figcaption>
+                    {fig.description ? (
+                      <p style={{
+                        fontSize: '.9rem',
+                        color: '#555',
+                        lineHeight: 1.75,
+                        marginBottom: '16px',
+                        marginTop: 0,
+                      }}>
+                        {fig.description}
+                      </p>
+                    ) : null}
+                    <div style={{
+                      position: 'relative',
+                      width: '100%',
+                      borderRadius: '8px',
+                      overflow: 'hidden',
+                      border: '1px solid #e8e8e8',
+                      background: '#fafafa',
+                    }}>
+                      <Image
+                        src={fig.src}
+                        alt={fig.alt}
+                        width={1200}
+                        height={800}
+                        sizes="(max-width: 1000px) 100vw, 960px"
+                        className="w-full h-auto"
+                        style={{ width: '100%', height: 'auto', verticalAlign: 'middle' }}
+                        priority={i === 0}
+                      />
+                    </div>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Immune Characterization */}
+          <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -602,7 +771,7 @@ export default function HCD3EDGPage() {
           </section>
 
           {/* Efficacy Data */}
-          <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+          <section style={{ background: '#ffffff', padding: '60px 20px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -646,7 +815,7 @@ export default function HCD3EDGPage() {
           </section>
 
           {/* CRS Section */}
-          <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+          <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -691,7 +860,7 @@ export default function HCD3EDGPage() {
           </section>
 
           {/* Applications */}
-          <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+          <section style={{ background: '#ffffff', padding: '60px 20px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -755,7 +924,7 @@ export default function HCD3EDGPage() {
           </section>
 
           {/* Who Should Use This Model */}
-          <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+          <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -809,7 +978,7 @@ export default function HCD3EDGPage() {
           </section>
 
           {/* Publications */}
-          <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+          <section style={{ background: '#ffffff', padding: '60px 20px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -855,7 +1024,7 @@ export default function HCD3EDGPage() {
           </section>
 
           {/* Testimonials */}
-          <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+          <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
             <div style={{ maxWidth: '800px', margin: '0 auto' }}>
               <h2 className="animate-in" style={{
                 fontFamily: 'Poppins, sans-serif',
@@ -909,7 +1078,7 @@ export default function HCD3EDGPage() {
           </section>
 
           {/* Related Models + Therapeutic Areas */}
-          <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+          <section style={{ background: '#ffffff', padding: '60px 20px' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="animate-in">

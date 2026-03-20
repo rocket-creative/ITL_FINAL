@@ -1,5 +1,5 @@
 /**
- * Featured Model of the Month Layout
+ * Featured Mouse of the Month Layout
  * Exports metadata for SEO (page is client component and cannot export metadata)
  */
 

@@ -45,9 +45,9 @@ export default function FeaturedModelPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Featured Model of the Month',
+    name: 'Featured Mouse of the Month',
     description:
-      'Monthly spotlight on ready-to-ship catalog mouse models from Ingenious Targeting Laboratory',
+      'Monthly spotlight on humanized catalog mouse models from ingenious targeting laboratory',
     url: 'https://www.genetargeting.com/featured-model/',
     numberOfItems: featuredModels.length,
     itemListElement: featuredModels.map((m, i) => ({
@@ -115,31 +115,19 @@ export default function FeaturedModelPage() {
                 marginBottom: '20px',
                 lineHeight: 1.2,
               }}>
-                Featured Model of the Month
+                Featured Mouse of the Month
               </h1>
 
               <p style={{
                 fontSize: '1rem',
                 color: 'rgba(255,255,255,0.9)',
-                marginBottom: '16px',
                 lineHeight: 1.7,
                 maxWidth: '760px',
               }}>
-                Each month Ingenious Targeting Laboratory spotlights one repository-live catalog model
-                purpose built for an active area of therapeutic development. Every featured model ships
-                immediately, arrives with complete characterization data, and is supported by ITL scientific
-                staff from study design through data interpretation.
-              </p>
-
-              <p style={{
-                fontSize: '.9rem',
-                color: 'rgba(255,255,255,0.75)',
-                lineHeight: 1.7,
-                maxWidth: '760px',
-              }}>
-                Since 1998, ITL has completed over 2,500 custom gene targeting projects contributing to
-                800+ peer reviewed publications. The models featured here represent the leading edge of
-                that catalog.
+                Each month, ingenious targeting laboratory spotlights one humanized catalog mouse model
+                generated for an active area of therapeutic research. Our catalog offers single, double,
+                and triple humanized mouse models that deliver immediate insights for your latest
+                experiments. Contact us today to get started on your project.
               </p>
             </div>
           </section>
@@ -543,7 +531,7 @@ export default function FeaturedModelPage() {
           items={[
             { name: 'Home', path: '/' },
             { name: 'Catalog Models', path: '/catalog-mouse-models' },
-            { name: 'Featured Model of the Month', path: '/featured-model' },
+            { name: 'Featured Mouse of the Month', path: '/featured-model' },
           ]}
         />
       </div>
