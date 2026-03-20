@@ -10,6 +10,7 @@
     "lint": "eslint",
     "test:redirects": "./test-redirects.sh http://localhost:3000",
     "test:redirects:prod": "./test-redirects.sh https://www.genetargeting.com",
+    "check:gsc-404s": "node scripts/check-gsc-404-urls.mjs",
     "submit:google": "node scripts/submit-to-google.js",
     "verify:launch": "node scripts/verify-launch.js",
     "prelaunch": "npm run build && npm run verify-launch"
