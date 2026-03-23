@@ -4,6 +4,8 @@
  * DO NOT EDIT MANUALLY - regenerate using generate-newsletter-data.py
  */
 
+import { mouseOrganoidChipArticleBody } from './_labSignalsMouseOrganoidChipArticle';
+
 export interface NewsletterArticle {
   id: string;
   slug: string;
@@ -1017,6 +1019,18 @@ export const newsletterArticles: NewsletterArticle[] = [
 <li>Zhu J, et al. Application of humanized mice in the safety experiments of antibody drugs: Recent progress and future perspectives. <em>Antibody Therapeutics.</em> 2026;9(1):45-58.</li>
 </ol></div>`,
     publishedAt: "2026-03-17",
+  },
+  {
+    id: "mouse-models-organoids-organ-on-chip-preclinical-research",
+    slug: "mouse-models-organoids-organ-on-chip-preclinical-research",
+    title: "Mouse models vs. organoids vs. organ on chip: choosing the right tool for preclinical research",
+    subtitle: "Complementarity across organoids, chips, and in vivo models",
+    description:
+      "Recent literature positions organoids and organ on chip platforms as complements to mouse models for patient screens, toxicology, and whole organism studies.",
+    category: "Industry Insights",
+    relatedPage: "/custom-mouse-models",
+    body: mouseOrganoidChipArticleBody,
+    publishedAt: "2026-03-31",
   },
 ];
 

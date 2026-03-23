@@ -13,12 +13,13 @@ Articles release **every 2 weeks**. This file tracks upcoming and past releases.
 
 | Release Date | Article Title | Slug | Status |
 |--------------|---------------|------|--------|
-| 2026-03-17 | The FDA Modernization Act 2.0: What It Means for Researchers | fda-modernization-act-2-what-it-means-for-researchers | Staged |
+| 2026-03-31 | Mouse models vs. organoids vs. organ on chip: choosing the right tool for preclinical research | mouse-models-organoids-organ-on-chip-preclinical-research | Staged |
 
 ## Past Releases (2026)
 
 | Release Date | Article Title | Slug |
 |--------------|---------------|------|
+| 2026-03-17 | The FDA Modernization Act 2.0: What It Means for Researchers | fda-modernization-act-2-what-it-means-for-researchers |
 | 2026-03-03 | Modeling Human Disease with Knockout Mice | modeling-human-disease-knockout-mice-precision-medicine |
 | 2026-02-17 | BAC Transgenic Mice | bac-transgenic-mice-large-fragment-insertion-models |
 | 2026-02-15 | FDA Modernization Act 2.0 (First Version) | fda-modernization-act-2-mouse-models-regulatory |
