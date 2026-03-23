@@ -17,12 +17,12 @@ const featuredModels = [
     availability: 'Repository Live',
     category: 'Humanized Mouse Models',
     teaser:
-      'The only triple humanized CD3 mouse model replacing all three CD3 signaling subunits (epsilon, delta, gamma) on a C57BL/6 background. Confirmed efficacy across four bispecific T cell engager formats. Ready to ship.',
+      'The endogenous mouse Cd3e/Cd3d/Cd3g genes were replaced by human CD3E/CD3D/CD3G gene. C57BL/6Smoc background. Catalog NM-HU-220120. Strain state Repository Live. Contact Ingenious Targeting Laboratory for availability.',
     specs: [
-      'Triple humanization: CD3E, CD3D, CD3G',
-      'Syngeneic immunocompetent system',
-      '>93% co-expression of all three subunits',
-      'CRS profiling supported',
+      'Model: endogenous mouse Cd3e/Cd3d/Cd3g replaced by human CD3E/CD3D/CD3G',
+      'Genetic background: C57BL/6Smoc',
+      'Catalog number: NM-HU-220120',
+      'Strain state: Repository Live',
     ],
     href: '/featured-model/hcd3edg',
     pdfHref: '/downloads/hcd3edg-ingenious.pdf',
