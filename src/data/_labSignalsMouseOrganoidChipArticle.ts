@@ -26,15 +26,15 @@ export const mouseOrganoidChipArticleBody = `<p>There is no dispute that organoi
 
 <p>In neuro oncology, Peng <em>et al.</em> took a different route: they embedded fresh tumor explants into iPSC derived cerebral organoids to preserve the full tumor ecosystem, including stromal cells and vasculature. Published in <em>Cell Stem Cell</em> in 2025, these individualized patient tumor organoids (IPTOs) maintained the cellular diversity and molecular pathology of the parental tumors and, in a prospective component, predicted patient responses to chemotherapy and targeted therapy across adult glioblastoma multiforme, pediatric tumors, and brain metastases.<sup>[2]</sup></p>
 
-<p>Hepatobiliary and pancreatic cancers have followed a similar trajectory. A 2025 review in the <em>World Journal of Gastroenterology</em> aggregated data showing PDO establishment rates above 70% for these cancers, with drug response predictive accuracy exceeding 90%.<sup>[3]</sup> For cancers with 5 year survival rates of 13 to 22%, the ability to screen drugs <em>ex vivo</em> before committing a patient to a regimen has obvious clinical value.</p>
+<p>Hepatobiliary and pancreatic cancers have followed a similar trajectory. A 2025 review in the <em>World Journal of Gastroenterology</em> aggregated data showing PDO establishment rates above 70% for these cancers, with high drug response predictive accuracy.<sup>[3]</sup> For cancers with 5 year survival rates of 13 to 22%, the ability to screen drugs <em>ex vivo</em> before committing a patient to a regimen has obvious clinical value.</p>
 
-<p>But here is the part that tends to get glossed over. Organoids still lack functional vasculature; once they grow beyond a few hundred microns, the interior becomes hypoxic and necrotic.<sup>[4]</sup> They lack intact immune compartments. They cannot model circulation, hormonal feedback, or the crosstalk between organs that shapes systemic drug exposure.<sup>[5]</sup> The FDA recognized organoids as New Alternative Methods under the Modernization Act 2.0 in 2022,<sup>[6]</sup> but that designation supplements, rather than replaces, <strong>in vivo</strong> requirements. Organoids answer patient level and organ level questions. They do not answer organism level ones.</p>
+<p>But here is the part that tends to get glossed over. Organoids still lack functional vasculature; once they grow beyond a few hundred microns, the interior becomes hypoxic and necrotic.<sup>[4]</sup> They lack intact immune compartments. They cannot model circulation, hormonal feedback, or the crosstalk between organs that shapes systemic drug exposure.<sup>[5]</sup> The FDA Modernization Act 2.0, signed in December 2022, removed the prior mandate for animal testing and authorized the use of New Approach Methodologies (NAMs) including organoids, organ on chip systems, and computational models in drug development,<sup>[6]</sup> but that designation supplements, rather than replaces, <strong>in vivo</strong> requirements. Organoids answer patient level and organ level questions. They do not answer organism level ones.</p>
 
 <h3>Organ on chip: microenvironment experts, not full body replacements</h3>
 
 <p>Chips excel in a different niche: modeling the microenvironment of a specific organ under dynamic, physiologically relevant conditions. The strongest recent evidence comes from liver toxicology and respiratory infection.</p>
 
-<p>Ewart <em>et al.</em> published one of the most, if not the most, comprehensive chip validation study to date in <em>Communications Medicine</em> (2022), analyzing 870 Liver Chips against IQ consortium benchmark compounds. With two human donors and protein binding corrections, the Liver Chip detected drug induced liver injury (DILI) with 87% sensitivity for compounds that conventional preclinical workflows had missed entirely.<sup>[7]</sup> In September 2024, the FDA’s ISTAND (Innovative Science and Technology Approaches for New Drugs) program accepted the first letter of intent for a Liver Chip as a drug development tool for DILI assessment.<sup>[8]</sup></p>
+<p>Ewart <em>et al.</em> published one of the most, if not the most, comprehensive chip validation study to date in <em>Communications Medicine</em> (2022), analyzing 870 Liver Chips against IQ consortium benchmark compounds. Using cells from multiple human donors and protein binding corrections, the Liver Chip detected drug induced liver injury (DILI) with 87% sensitivity for compounds that conventional preclinical workflows had missed entirely.<sup>[7]</sup> In September 2024, the FDA’s ISTAND (Innovative Science and Technology Approaches for New Drugs) program accepted the first letter of intent for a Liver Chip as a drug development tool for DILI assessment.<sup>[8]</sup></p>
 
 <p>During COVID 19, Si <em>et al.</em> demonstrated in <em>Nature Biomedical Engineering</em> (2021) that a human airway on chip could model SARS CoV 2 infection with greater fidelity than static cell lines. The chip recapitulated viral infection, strain dependent virulence, and immune cell recruitment. More importantly, it correctly showed that hydroxychloroquine, which looked promising in cell lines, did not inhibit infection at clinically relevant doses, while amodiaquine did.<sup>[9]</sup> That kind of pharmacologically grounded filtering is where chips add real value.</p>
 
@@ -60,7 +60,7 @@ export const mouseOrganoidChipArticleBody = `<p>There is no dispute that organoi
 
 <p>Checkpoint inhibitor development provides another domain where mouse models do something nothing else can. As Chuprin <em>et al.</em> reviewed in <em>Nature Reviews Clinical Oncology</em> (2023), humanized mouse models engrafted with human hematopoietic stem cells and patient derived tumors have become the standard preclinical platform for evaluating anti PD 1, anti CTLA 4, and bispecific antibodies.<sup>[16]</sup> These models allow researchers to study T cell infiltration, tumor immune dynamics, and immune related adverse events in a way that co culture systems fundamentally cannot.</p>
 
-<p>Newer model refinements continue to improve translational accuracy. Takahashi <em>et al.</em> (2021) showed that NOG FcγR deficient mice eliminated confounding cross species Fc receptor interactions, enabling clearer evaluation of nivolumab’s anti tumor activity across multiple PD L1 positive tumor types.<sup>[17]</sup> The tumors that responded in this refined model aligned more closely with clinical experience than results from conventional humanized strains. For immuno oncology, where efficacy depends on a coordinated systemic immune response, <strong>in vivo</strong> models are not just useful, they are the only reliable option.</p>
+<p>Newer model refinements continue to improve translational accuracy. Katano <em>et al.</em> (2021) showed that NOG FcγR deficient mice eliminated confounding cross species Fc receptor interactions, enabling clearer evaluation of nivolumab’s anti tumor activity across multiple PD L1 positive tumor types.<sup>[17]</sup> The tumors that responded in this refined model aligned more closely with clinical experience than results from conventional humanized strains. For immuno oncology, where efficacy depends on a coordinated systemic immune response, <strong>in vivo</strong> models are not just useful, they are the only reliable option.</p>
 
 <h4>Whole body pharmacology and chronic disease</h4>
 
@@ -70,7 +70,7 @@ export const mouseOrganoidChipArticleBody = `<p>There is no dispute that organoi
 
 <h3>An integrated, not either or, future</h3>
 
-<p>The framing of mouse models versus alternatives misses what the literature actually shows. Each platform answers a different class of question:</p>
+<p>The framing of mouse models versus New Approach Methodologies misses what the literature actually shows. Each platform answers a different class of question:</p>
 
 <ul>
 <li><strong>Organoids</strong> are best deployed for patient specific drug sensitivity screening and human relevant organ level biology, particularly in oncology where PDO guided therapy selection is approaching clinical readiness.<sup>[1,2,3]</sup></li>
@@ -82,11 +82,11 @@ export const mouseOrganoidChipArticleBody = `<p>There is no dispute that organoi
 
 <div class="lab-signals-references"><p><strong>References</strong></p><ol>
 <li>Smabers LP, et al. Patient derived organoids predict treatment response in metastatic colorectal cancer. <em>Clin Cancer Res.</em> 2025;31:5015.</li>
-<li>Peng D, et al. Individualized patient tumor organoids faithfully preserve human brain tumor ecosystems and predict patient response to therapy. <em>Cell Stem Cell.</em> 2025;32.</li>
+<li>Peng T, et al. Individualized patient tumor organoids faithfully preserve human brain tumor ecosystems and predict patient response to therapy. <em>Cell Stem Cell.</em> 2025;32.</li>
 <li>Hu JW, et al. Applications and challenges of patient derived organoids in hepatobiliary and pancreatic cancers. <em>World J Gastroenterol.</em> 2025;31:106747.</li>
-<li>Wang Y, et al. Give them vasculature and immune cells: how to fill the gap of organoids. <em>Cells.</em> 2023;12:793.</li>
-<li>Zhang YS, et al. Vascularized organoids on a chip: strategies for engineering organoids with functional vasculature. <em>Lab Chip.</em> 2021;21:473–488.</li>
-<li>Tong WH, et al. Patient derived organoids in precision cancer medicine. <em>Med.</em> 2024;5. <a href="https://doi.org/10.1016/j.medj.2024.09.008" target="_blank" rel="noopener noreferrer">doi:10.1016/j.medj.2024.09.008</a></li>
+<li>Yip S, Wang N, Sugimura R. Give them vasculature and immune cells: how to fill the gap of organoids. <em>Cells Tissues Organs.</em> 2023;212:369–382.</li>
+<li>Zhang S, Wan Z, Kamm RD. Vascularized organoids on a chip: strategies for engineering organoids with functional vasculature. <em>Lab Chip.</em> 2021;21:473–488.</li>
+<li>Zushin PH, Mukherjee S, Wu JC. FDA Modernization Act 2.0: transitioning beyond animal models with human cells, organoids, and AI/ML based approaches. <em>J Clin Invest.</em> 2023;133:e175824.</li>
 <li>Ewart L, et al. Performance assessment and economic analysis of a human Liver Chip for predictive toxicology. <em>Commun Med.</em> 2022;2:154.</li>
 <li>U.S. Food and Drug Administration. ISTAND Pilot Program accepts submission of first organ on a chip technology designed to predict human drug induced liver injury. <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fdas-istand-pilot-program-accepts-submission-first-organ-chip-technology-designed-predict-human-drug" target="_blank" rel="noopener noreferrer">FDA.gov</a> (2024).</li>
 <li>Si L, et al. A human airway on chip for the rapid identification of candidate antiviral therapeutics and prophylactics. <em>Nat Biomed Eng.</em> 2021;5:815–829.</li>
@@ -95,10 +95,10 @@ export const mouseOrganoidChipArticleBody = `<p>There is no dispute that organoi
 <li>Wang ZJ, et al. Semaglutide ameliorates cognition and glucose metabolism dysfunction in the 3xTg mouse model of Alzheimer’s disease via the GLP 1R/SIRT1/GLUT4 pathway. <em>Neuropharmacology.</em> 2023;240:109716.</li>
 <li>Wang ZJ, et al. Semaglutide promotes the transition of microglia from M1 to M2 type to reduce brain inflammation in APP/PS1/tau mice. <em>Neuroscience.</em> 2024;563:222–234.</li>
 <li>Forny Germano L, et al. The GLP 1 medicines semaglutide and tirzepatide do not alter disease related pathology, behaviour or cognitive function in 5XFAD and APP/PS1 mice. <em>Mol Metab.</em> 2024;89:102019.</li>
-<li>Novo Nordisk. Evoke phase 3 trials did not demonstrate a statistically significant reduction in Alzheimer’s disease progression. GlobeNewsWire (24 November 2025). <a href="https://www.globenewswire.com/news-release/2025/11/24/3193328/0/en/" target="_blank" rel="noopener noreferrer">Press release</a></li>
+<li>Novo Nordisk. Evoke phase 3 trials did not demonstrate a statistically significant reduction in Alzheimer’s disease progression. GlobeNewsWire (24 November 2025). <a href="https://www.globenewswire.com/news-release/2025/11/24/3193328/0/en/Novo-Nordisk-A-S-Evoke-phase-3-trials-did-not-demonstrate-a-statistically-significant-reduction-in-Alzheimer-s-disease-progression.html" target="_blank" rel="noopener noreferrer">Press release</a></li>
 <li>Chuprin J, et al. Humanized mouse models for immuno oncology research. <em>Nat Rev Clin Oncol.</em> 2023;20:192–206.</li>
-<li>Takahashi T, et al. Development of a novel humanized mouse model for improved evaluation of <em>in vivo</em> anti cancer effects of anti PD 1 antibody. <em>Sci Rep.</em> 2021;11:21087.</li>
+<li>Katano I, et al. Development of a novel humanized mouse model for improved evaluation of <em>in vivo</em> anti cancer effects of anti PD 1 antibody. <em>Sci Rep.</em> 2021;11:21087.</li>
 <li>Mukherjee P, et al. Role of animal models in biomedical research: a review. <em>Lab Anim Res.</em> 2022;38:18.</li>
-<li>Chu X, Bleasby K. ADME of biologics: what have we learned from small molecules? <em>AAPS J.</em> 2012;14:629–638.</li>
-<li>Chang MCJ, Greider FB. The continued importance of animals in biomedical research. <em>Lab Anim (N Y).</em> 2024;53:265–266.</li>
+<li>Bolleddula J, et al. Absorption, distribution, metabolism, and excretion of therapeutic proteins: current industry practices and future perspectives. <em>Drug Metab Dispos.</em> 2022;50:838–845.</li>
+<li>Chang MCJ, Grieder FB. The continued importance of animals in biomedical research. <em>Lab Anim (N Y).</em> 2024;53:295–297.</li>
 </ol></div>`;
