@@ -3,6 +3,9 @@
  * SEO cornerstone: every gene name rendered as plain HTML — fully crawlable.
  */
 
+// Always fetch fresh data from Supabase; do not cache stale build-time HTML.
+export const dynamic = 'force-dynamic';
+
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllGeneNames } from '@/lib/catalog/serverCatalog';

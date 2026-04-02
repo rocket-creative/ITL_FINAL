@@ -90,22 +90,32 @@ export async function serverSearch(
 
 /**
  * All unique gene names sorted A–Z (for gene-index page).
- * Uses a lean SELECT to avoid pulling unnecessary columns.
+ * Paginates in 1 000-row pages to work around Supabase's default row cap.
  */
 export async function getAllGeneNames(): Promise<string[]> {
-  const { data } = await supabase
-    .from('catalog_models')
-    .select('gene_name')
-    .neq('gene_name', '')
-    .order('gene_name');
-
-  if (!data) return [];
-
   const seen = new Set<string>();
-  for (const row of data) {
-    const g = (row.gene_name ?? '').trim();
-    if (g) seen.add(g);
+  const PAGE = 1000;
+  let from = 0;
+
+  for (;;) {
+    const { data, error } = await supabase
+      .from('catalog_models')
+      .select('gene_name')
+      .neq('gene_name', '')
+      .order('gene_name')
+      .range(from, from + PAGE - 1);
+
+    if (error || !data || data.length === 0) break;
+
+    for (const row of data) {
+      const g = (row.gene_name ?? '').trim();
+      if (g) seen.add(g);
+    }
+
+    if (data.length < PAGE) break; // last page
+    from += PAGE;
   }
+
   return Array.from(seen).sort((a, b) => a.localeCompare(b));
 }
 
