@@ -1,8 +1,6 @@
 /**
  * Gene Name Index — /all-catalog-mouse-models/gene-index
- *
- * SEO cornerstone: server-rendered HTML, every gene name as a crawlable link.
- * Design matches the rest of the site (nav, hero, footer, color system).
+ * SEO cornerstone: every gene name rendered as plain HTML — fully crawlable.
  */
 
 import type { Metadata } from 'next';
@@ -11,6 +9,7 @@ import { getAllGeneNames } from '@/lib/catalog/serverCatalog';
 import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import { IconChevronRight, IconLayers } from '@/components/UXUIDC/Icons';
+import JumpNav from './JumpNav';
 
 export const metadata: Metadata = {
   title: 'Mouse Model Gene Index — All Genes A–Z | ingenious targeting laboratory',
@@ -40,80 +39,26 @@ export default async function GeneIndexPage() {
     if (!grouped[letter]) grouped[letter] = [];
     grouped[letter].push(gene);
   }
-  const presentLetters = new Set(Object.keys(grouped));
+  const presentLetters = ALPHABET.filter((l) => !!grouped[l]);
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-      <style>{`
-        .gene-link {
-          display: block;
-          padding: 5px 10px;
-          color: #134978;
-          font-size: .875rem;
-          font-weight: 500;
-          text-decoration: none;
-          border-radius: 4px;
-          transition: background 0.15s, color 0.15s;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        .gene-link:hover { background: #f0f9f9; color: #008080; }
-        .jump-letter {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 30px;
-          height: 30px;
-          border-radius: 4px;
-          background: #008080;
-          color: #fff;
-          font-size: .8rem;
-          font-weight: 700;
-          text-decoration: none;
-          transition: background 0.15s;
-          flex-shrink: 0;
-        }
-        .jump-letter:hover { background: #006666; }
-        .jump-letter-disabled {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 30px;
-          height: 30px;
-          border-radius: 4px;
-          background: #eee;
-          color: #bbb;
-          font-size: .8rem;
-          font-weight: 700;
-          flex-shrink: 0;
-        }
-        /* Offset anchor targets so they land below both navbars */
-        .letter-section {
-          scroll-margin-top: 130px;
-        }
-      `}</style>
-
       <UXUIDCNavigation />
 
       <main id="main-content">
 
-        {/* Hero — matches AllCatalogContent hero */}
+        {/* ── Hero ──────────────────────────────────────────────────────── */}
         <section style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
           padding: '80px 20px 60px',
         }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+
             {/* Badge */}
             <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              background: 'rgba(0,212,212,0.15)',
-              border: '1px solid rgba(0,212,212,0.3)',
-              borderRadius: '20px',
-              padding: '6px 14px',
-              marginBottom: '20px',
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              background: 'rgba(0,212,212,0.15)', border: '1px solid rgba(0,212,212,0.3)',
+              borderRadius: '20px', padding: '6px 14px', marginBottom: '20px',
             }}>
               <IconLayers size={14} color="#00d4d4" />
               <span style={{ color: '#fff', fontSize: '.85rem', fontWeight: 500 }}>
@@ -133,25 +78,17 @@ export default async function GeneIndexPage() {
             </nav>
 
             <h1 style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2.5rem',
-              fontWeight: 700,
-              color: '#fff',
-              marginBottom: '20px',
-              lineHeight: 1.2,
+              fontFamily: 'Poppins, sans-serif', fontSize: '2.5rem', fontWeight: 700,
+              color: '#fff', marginBottom: '20px', lineHeight: 1.2,
             }}>
               Mouse Model Gene Index
             </h1>
             <p style={{
-              fontSize: '1rem',
-              color: 'rgba(255,255,255,0.9)',
-              marginBottom: '30px',
-              lineHeight: 1.7,
-              maxWidth: '800px',
+              fontSize: '1rem', color: 'rgba(255,255,255,0.9)',
+              marginBottom: '30px', lineHeight: 1.7, maxWidth: '800px',
             }}>
-              Browse all {genes.length.toLocaleString()} unique gene targets available across our catalog
-              of 10,000+ genetically engineered mouse models — knockout, knockin, humanized, and Cre
-              driver strains. Click any gene to see every available model.
+              Browse all {genes.length.toLocaleString()} unique gene targets across our catalog of
+              10,000+ genetically engineered mouse models. Click any gene to see every available model.
             </p>
 
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -160,8 +97,7 @@ export default async function GeneIndexPage() {
                 background: '#008080', color: '#fff', padding: '12px 24px',
                 borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
               }}>
-                Search All Models
-                <IconChevronRight size={16} color="#fff" />
+                Search All Models <IconChevronRight size={16} color="#fff" />
               </Link>
               <Link href="/order-catalog-models" style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
@@ -175,81 +111,67 @@ export default async function GeneIndexPage() {
           </div>
         </section>
 
-        {/* Sticky alphabet jump nav — sits below the site nav */}
-        <div style={{
-          position: 'sticky',
-          top: '68px',
-          zIndex: 40,
-          background: '#fff',
-          borderBottom: '1px solid #e0e0e0',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-          padding: '10px 20px',
-        }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: '4px', alignItems: 'center' }}>
-            <span style={{ fontSize: '.75rem', color: '#999', marginRight: '6px', fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
-              Jump to:
-            </span>
-            {ALPHABET.map((letter) =>
-              presentLetters.has(letter) ? (
-                <a key={letter} href={`#letter-${letter}`} className="jump-letter">{letter}</a>
-              ) : (
-                <span key={letter} className="jump-letter-disabled">{letter}</span>
-              )
-            )}
-          </div>
-        </div>
+        {/* ── Sticky alphabet jump nav (client component) ───────────────── */}
+        <JumpNav presentLetters={presentLetters} />
 
-        {/* Gene listings */}
+        {/* ── Gene listings ─────────────────────────────────────────────── */}
         <section style={{ background: '#fff', padding: '40px 20px 80px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
 
             {genes.length === 0 ? (
               <div style={{ textAlign: 'center', padding: '80px 20px', color: '#666' }}>
-                <p style={{ marginBottom: '16px' }}>Gene index is building. Check back shortly or</p>
+                <p style={{ marginBottom: '16px' }}>Gene index is building — check back shortly or</p>
                 <Link href="/all-catalog-mouse-models" style={{ color: '#008080', fontWeight: 600 }}>
                   search the catalog directly →
                 </Link>
               </div>
             ) : (
-              ALPHABET.filter((l) => presentLetters.has(l)).map((letter) => (
-                <div key={letter} id={`letter-${letter}`} className="letter-section" style={{ marginBottom: '48px' }}>
+              presentLetters.map((letter) => (
+                <div
+                  key={letter}
+                  id={`letter-${letter}`}
+                  style={{ marginBottom: '48px', scrollMarginTop: '130px' }}
+                >
                   {/* Letter heading */}
                   <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '16px',
-                    marginBottom: '16px',
-                    paddingBottom: '12px',
+                    display: 'flex', alignItems: 'center', gap: '16px',
+                    marginBottom: '16px', paddingBottom: '10px',
                     borderBottom: '2px solid #008080',
                   }}>
                     <span style={{
-                      fontFamily: 'Poppins, sans-serif',
-                      fontSize: '1.8rem',
-                      fontWeight: 700,
-                      color: '#0a253c',
-                      lineHeight: 1,
+                      fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem',
+                      fontWeight: 700, color: '#0a253c', lineHeight: 1,
                     }}>
                       {letter}
                     </span>
                     <span style={{ fontSize: '.8rem', color: '#999', fontWeight: 500 }}>
-                      {(grouped[letter] || []).length} {(grouped[letter] || []).length === 1 ? 'model' : 'models'}
+                      {grouped[letter].length} {grouped[letter].length === 1 ? 'gene' : 'genes'}
                     </span>
                   </div>
 
                   {/* Gene grid */}
                   <ul style={{
-                    listStyle: 'none',
-                    padding: 0,
-                    margin: 0,
+                    listStyle: 'none', padding: 0, margin: 0,
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))',
-                    gap: '2px 8px',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(148px, 1fr))',
+                    gap: '2px 4px',
                   }}>
-                    {(grouped[letter] || []).map((gene) => (
+                    {grouped[letter].map((gene) => (
                       <li key={gene}>
                         <Link
                           href={`/all-catalog-mouse-models?q=${encodeURIComponent(gene)}`}
-                          className="gene-link"
+                          style={{
+                            display: 'block',
+                            padding: '5px 10px',
+                            color: '#134978',
+                            fontSize: '.875rem',
+                            fontWeight: 500,
+                            textDecoration: 'none',
+                            borderRadius: '4px',
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                          }}
                         >
                           {gene}
                         </Link>
@@ -262,17 +184,17 @@ export default async function GeneIndexPage() {
 
             {/* Back to top */}
             <div style={{ textAlign: 'center', paddingTop: '24px', borderTop: '1px solid #e0e0e0' }}>
-              <a href="#main-content" style={{
-                display: 'inline-flex', alignItems: 'center', gap: '6px',
-                color: '#008080', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
-              }}>
+              <a
+                href="#main-content"
+                style={{ color: '#008080', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none' }}
+              >
                 ↑ Back to top
               </a>
             </div>
           </div>
         </section>
 
-        {/* CTA — matches AllCatalogContent */}
+        {/* ── CTA ───────────────────────────────────────────────────────── */}
         <section style={{ background: '#008080', padding: '50px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{
@@ -290,8 +212,7 @@ export default async function GeneIndexPage() {
                 background: '#fff', color: '#008080', padding: '12px 24px',
                 borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
               }}>
-                Request a Catalog Model
-                <IconChevronRight size={16} color="#008080" />
+                Request a Catalog Model <IconChevronRight size={16} color="#008080" />
               </Link>
               <Link href="/request-quote" style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
@@ -309,7 +230,6 @@ export default async function GeneIndexPage() {
 
       <UXUIDCFooter />
 
-      {/* Structured data */}
       <BreadcrumbSchema items={[
         { name: 'Home', path: '/' },
         { name: 'All Catalog Models', path: '/all-catalog-mouse-models' },
