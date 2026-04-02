@@ -13,12 +13,14 @@ import {
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import { IconChevronRight, IconLayers } from '@/components/UXUIDC/Icons';
+import type { CatalogModel } from '@/components/UXUIDC/CatalogSearch';
 
 interface AllCatalogContentProps {
   initialQuery?: string;
+  preloadedModels?: CatalogModel[];
 }
 
-export default function AllCatalogContent({ initialQuery }: AllCatalogContentProps) {
+export default function AllCatalogContent({ initialQuery, preloadedModels = [] }: AllCatalogContentProps) {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
@@ -98,7 +100,7 @@ export default function AllCatalogContent({ initialQuery }: AllCatalogContentPro
         {/* Catalog Search Section - Prominent */}
         <section style={{ background: '#ffffff', padding: '40px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <CatalogSearch maxResults={25} showTitle={true} initialQuery={initialQuery} />
+            <CatalogSearch maxResults={25} showTitle={true} initialQuery={initialQuery} preloadedModels={preloadedModels} />
           </div>
         </section>
 
@@ -117,6 +119,7 @@ export default function AllCatalogContent({ initialQuery }: AllCatalogContentPro
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
+                { href: '/all-catalog-mouse-models/gene-index', label: 'Browse by Gene Name (A\u2013Z)' },
                 { href: '/humanized-immune-checkpoint-mice', label: 'Humanized Checkpoint Mice' },
                 { href: '/disease-model-catalog', label: 'Disease Model Catalog' },
                 { href: '/double-checkpoint-mice', label: 'Double Checkpoint Mice' },

@@ -1,13 +1,14 @@
 /**
- * Unified Search API
- * Searches catalog models + site content with validation, rate limiting, and caching
+ * Unified Search API — catalog + site content
+ * Searches Supabase catalog models + static site index.
+ * Returns { catalog, site } for the navbar search dropdown.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { unstable_cache } from 'next/cache';
 import { searchSiteIndex } from '@/lib/search/siteIndex';
 import { checkRateLimit } from '@/lib/search/rateLimit';
+import { supabase } from '@/lib/catalog/supabaseClient';
 
 const searchQuerySchema = z.object({
   q: z
@@ -21,97 +22,49 @@ const searchQuerySchema = z.object({
 });
 
 const CATALOG_MAX_RESULTS = 8;
-const SITE_MAX_RESULTS = 50;
+const SITE_MAX_RESULTS    = 50;
+const FIELDS = 'id,gene_name,model_abbreviation,model_type,availability,itl_catalog_number';
 
-const SPREADSHEET_ID = '1DG54nHKf-A-7Ii8nSHvps74nCXbmNsPk51uL15JzuRU';
-const SHEET_NAME = 'ITL-Cat-24-25';
-
-interface CatalogModel {
-  id: string;
-  geneName: string;
-  modelType: string;
-  background: string;
-  description: string;
-  category: string;
-  [key: string]: string;
-}
-
-async function fetchCatalogData(): Promise<CatalogModel[]> {
-  const apiKey = (
-    process.env.GOOGLE_SHEETS_API_KEY ??
-    process.env.NEXT_PUBLIC_GOOGLE_SHEETS_API_KEY ??
-    process.env.CATALOG_API_KEY ??
-    ''
-  ).trim();
-
-  if (!apiKey) return [];
-
-  try {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${encodeURIComponent(SHEET_NAME)}?key=${apiKey}`;
-    const res = await fetch(url, { headers: { Accept: 'application/json' } });
-    if (!res.ok) return [];
-
-    const data = await res.json();
-    if (!data.values || !Array.isArray(data.values) || data.values.length < 2) return [];
-
-    const headerRow = data.values[0] as string[];
-    return data.values
-      .slice(1)
-      .map((row: string[], index: number) => {
-        const model: CatalogModel = {
-          id: `model-${index}`,
-          geneName: row[0] || '',
-          modelType: row[1] || '',
-          background: row[2] || '',
-          description: row[3] || '',
-          category: row[4] || '',
-        };
-        headerRow.forEach((h, i) => {
-          if (i > 5 && row[i]) model[h.toLowerCase().replace(/\s+/g, '_')] = row[i];
-        });
-        return model;
-      })
-      .filter((m: CatalogModel) => m.geneName);
-  } catch {
-    return [];
-  }
-}
-
-const getCachedCatalog = unstable_cache(
-  fetchCatalogData,
-  ['search-catalog'],
-  { revalidate: 300, tags: ['catalog'] }
-);
-
-function searchCatalog(
-  models: CatalogModel[],
+async function searchCatalog(
   query: string,
   limit: number = CATALOG_MAX_RESULTS
-): Array<{ id: string; title: string; url: string; subtitle?: string }> {
-  const term = query.toLowerCase().trim();
-  if (!term) return [];
+): Promise<Array<{ id: string; title: string; url: string; subtitle?: string }>> {
+  const q = query.trim();
+  if (!q) return [];
 
-  const searchTerms = term
-    .split(/\s+/)
-    .filter(Boolean)
-    .map((t) => t.replace(/\//g, ' ').trim());
+  const seen = new Set<number>();
+  const rows: Array<{ id: number; gene_name: string; model_abbreviation: string; model_type: string; availability: string; itl_catalog_number: string }> = [];
 
-  return models
-    .filter((model) => {
-      const searchText = Object.values(model)
-        .filter((v): v is string => typeof v === 'string')
-        .join(' ')
-        .toLowerCase()
-        .replace(/\//g, ' ');
-      return searchTerms.every((t) => searchText.includes(t));
-    })
-    .slice(0, limit)
-    .map((model) => ({
-      id: model.id,
-      title: model.geneName,
-      url: `/all-catalog-mouse-models?q=${encodeURIComponent(model.geneName)}`,
-      subtitle: [model.modelType, model.background].filter(Boolean).join(' · ') || undefined,
-    }));
+  // Tier 1: gene_name prefix (fastest, most relevant for navbar search)
+  const { data: t1 } = await supabase
+    .from('catalog_models')
+    .select(FIELDS)
+    .ilike('gene_name', `${q}%`)
+    .order('gene_name')
+    .limit(limit);
+
+  for (const r of t1 ?? []) { seen.add(r.id); rows.push(r); }
+
+  if (rows.length < limit) {
+    // Tier 2: full-text search
+    const ftQuery = q.split(/\s+/).filter(Boolean).join(' & ');
+    const { data: t2 } = await supabase
+      .from('catalog_models')
+      .select(FIELDS)
+      .textSearch('search_vector', ftQuery, { type: 'plain', config: 'simple' })
+      .limit(limit);
+
+    for (const r of t2 ?? []) {
+      if (!seen.has(r.id)) { seen.add(r.id); rows.push(r); }
+    }
+  }
+
+  return rows.slice(0, limit).map((r) => ({
+    id:       String(r.id),
+    title:    r.gene_name || r.model_abbreviation,
+    url:      `/all-catalog-mouse-models?q=${encodeURIComponent(r.gene_name || r.model_abbreviation)}`,
+    subtitle: [r.model_type, r.availability].filter(Boolean).join(' · ') || undefined,
+  }));
 }
 
 export async function GET(request: NextRequest) {
@@ -128,47 +81,41 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const searchParams = request.nextUrl.searchParams;
-  const q = searchParams.get('q') ?? '';
-  const limitParam = searchParams.get('limit');
-  const limitToParse = limitParam && limitParam.trim() !== '' ? limitParam : undefined;
+  const sp          = request.nextUrl.searchParams;
+  const q           = sp.get('q') ?? '';
+  const limitParam  = sp.get('limit');
+  const parsed      = searchQuerySchema.safeParse({ q, limit: limitParam || undefined });
 
-  const parsed = searchQuerySchema.safeParse({ q, limit: limitToParse });
   if (!parsed.success) {
-    const firstIssue = parsed.error.issues?.[0];
-    const message = firstIssue?.message ?? 'Invalid search query';
     return NextResponse.json(
-      { error: 'Invalid query', message },
+      { error: 'Invalid query', message: parsed.error.issues?.[0]?.message ?? 'Invalid search query' },
       { status: 400 }
     );
   }
 
   const query = parsed.data.q;
-  if (!query) {
-    return NextResponse.json({ catalog: [], site: [] });
-  }
+  if (!query) return NextResponse.json({ catalog: [], site: [] });
 
   try {
-    const [catalogModels, siteResults] = await Promise.all([
-      getCachedCatalog(),
+    const catalogLimit = parsed.data.limit ?? CATALOG_MAX_RESULTS;
+    const [catalogResults, siteResults] = await Promise.all([
+      searchCatalog(query, catalogLimit),
       Promise.resolve(searchSiteIndex(query, SITE_MAX_RESULTS)),
     ]);
 
-    const catalogLimit = parsed.data.limit ?? CATALOG_MAX_RESULTS;
-    const catalogResults = searchCatalog(catalogModels, query, catalogLimit);
-
-    const siteFormatted = siteResults.map((item) => ({
-      id: item.url,
-      title: item.title,
-      url: item.url,
-      subtitle: item.category,
-    }));
-
     return NextResponse.json(
-      { catalog: catalogResults, site: siteFormatted },
+      {
+        catalog: catalogResults,
+        site:    siteResults.map((item) => ({
+          id:       item.url,
+          title:    item.title,
+          url:      item.url,
+          subtitle: item.category,
+        })),
+      },
       {
         headers: {
-          'Cache-Control': 'private, max-age=60',
+          'Cache-Control':         'private, max-age=60',
           'X-RateLimit-Remaining': String(remaining),
         },
       }
