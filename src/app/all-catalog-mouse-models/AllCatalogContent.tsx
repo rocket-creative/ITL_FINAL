@@ -104,22 +104,77 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
           </div>
         </section>
 
-        {/* Quick Links */}
-        <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
+        {/* Browse by Gene Letter */}
+        <section style={{ background: '#f7f7f7', padding: '50px 20px 40px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '20px', flexWrap: 'wrap' }}>
+              <h2 style={{
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '1.4rem',
+                fontWeight: 700,
+                color: '#0a253c',
+                margin: 0,
+              }}>
+                Browse by Gene Name
+              </h2>
+              <Link href="/all-catalog-mouse-models/gene-index" style={{
+                fontSize: '.8rem',
+                color: '#008080',
+                fontWeight: 600,
+                textDecoration: 'none',
+                letterSpacing: '.04em',
+              }}>
+                View full index →
+              </Link>
+            </div>
+
+            {/* A–Z letter tiles */}
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '6px',
+            }}>
+              {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter) => (
+                <Link
+                  key={letter}
+                  href={`/all-catalog-mouse-models/gene-index#letter-${letter}`}
+                  style={{
+                    width: '40px',
+                    height: '40px',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    background: '#008080',
+                    color: '#ffffff',
+                    borderRadius: '6px',
+                    fontSize: '.9rem',
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                    flexShrink: 0,
+                  }}
+                  aria-label={`Browse genes starting with ${letter}`}
+                >
+                  {letter}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Browse by Category */}
+        <section style={{ background: '#ffffff', padding: '40px 20px 60px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 style={{
               fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.5rem',
+              fontSize: '1.4rem',
               fontWeight: 700,
-              color: '#2384da',
-              marginBottom: '30px',
-              textAlign: 'center'
+              color: '#0a253c',
+              marginBottom: '24px',
             }}>
               Browse by Category
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { href: '/all-catalog-mouse-models/gene-index', label: 'Browse by Gene Name (A\u2013Z)' },
                 { href: '/humanized-immune-checkpoint-mice', label: 'Humanized Checkpoint Mice' },
                 { href: '/disease-model-catalog', label: 'Disease Model Catalog' },
                 { href: '/double-checkpoint-mice', label: 'Double Checkpoint Mice' },
@@ -131,14 +186,15 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  background: '#ffffff',
+                  background: '#f7f7f7',
                   border: '1px solid #e0e0e0',
                   borderRadius: '8px',
                   padding: '16px 20px',
                   fontSize: '.9rem',
                   fontWeight: 500,
-                  color: '#333',
+                  color: '#0a253c',
                   textDecoration: 'none',
+                  transition: 'border-color 0.15s, background 0.15s',
                 }}>
                   <span>{link.label}</span>
                   <IconChevronRight size={16} color="#008080" />
