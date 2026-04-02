@@ -29,6 +29,8 @@ interface HubSpotFormSimpleProps {
   onLoadSuccess?: () => void;
   /** After successful submit, navigate here (only when callback form id matches this form) */
   redirectAfterSubmit?: string;
+  /** Pre-fill form fields by HubSpot field name after the form renders */
+  initialValues?: Record<string, string>;
 }
 
 // Declare HubSpot global
@@ -41,6 +43,8 @@ declare global {
           portalId: string;
           formId: string;
           target: string;
+          // Called when the form iframe/DOM is ready; receives a jQuery-like form object
+          onFormReady?: (form: unknown) => void;
         }) => void;
       };
     };
@@ -56,6 +60,7 @@ export default function HubSpotFormSimple({
   shouldLoad = true,
   onLoadSuccess,
   redirectAfterSubmit,
+  initialValues,
 }: HubSpotFormSimpleProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isLoadingRef = useRef<HTMLDivElement>(null);
@@ -83,27 +88,43 @@ export default function HubSpotFormSimple({
             portalId,
             formId,
             target: `#${containerId}`,
+            onFormReady: ($form: unknown) => {
+              // Inject pre-fill values into HubSpot form fields
+              if (initialValues) {
+                Object.entries(initialValues).forEach(([name, value]) => {
+                  if (!value) return;
+                  // HubSpot passes a jQuery-like object; index 0 gives the raw DOM element
+                  const formEl = ($form as unknown as { 0?: HTMLElement })[0] ?? ($form as unknown as HTMLElement);
+                  const input = (formEl as HTMLElement).querySelector?.(`[name="${name}"]`);
+                  if (input) {
+                    (input as HTMLInputElement).value = value;
+                    input.dispatchEvent(new Event('input', { bubbles: true }));
+                    input.dispatchEvent(new Event('change', { bubbles: true }));
+                  }
+                });
+              }
+
+              // Track successful load
+              const loadTime = Date.now() - loadStartTime.current;
+              trackFormLoad({
+                formId,
+                formName,
+                pageUrl: window.location.href,
+                timestamp: Date.now(),
+                success: true,
+                loadTime,
+              });
+
+              onLoadSuccess?.();
+
+              // Check form visibility after a short delay
+              setTimeout(() => {
+                if (containerRef.current) {
+                  checkFormVisibility(containerRef.current, formId, formName);
+                }
+              }, 1000);
+            },
           });
-
-          // Track successful load
-          const loadTime = Date.now() - loadStartTime.current;
-          trackFormLoad({
-            formId,
-            formName,
-            pageUrl: window.location.href,
-            timestamp: Date.now(),
-            success: true,
-            loadTime,
-          });
-
-          onLoadSuccess?.();
-
-          // Check form visibility after a short delay
-          setTimeout(() => {
-            if (containerRef.current) {
-              checkFormVisibility(containerRef.current, formId, formName);
-            }
-          }, 1000);
         }
       } catch (error) {
         console.error('[HubSpot] Form creation error:', error);
@@ -205,7 +226,7 @@ export default function HubSpotFormSimple({
       clearTimeout(timer);
       window.removeEventListener('message', handleFormSubmit);
     };
-  }, [formId, formName, portalId, region, enableBackup, shouldLoad, onLoadSuccess, redirectAfterSubmit]);
+  }, [formId, formName, portalId, region, enableBackup, shouldLoad, onLoadSuccess, redirectAfterSubmit, initialValues]);
 
   return (
     <div

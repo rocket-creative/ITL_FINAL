@@ -186,6 +186,7 @@ export default function HubSpotFormWithFallback({
             shouldLoad={true}
             onLoadSuccess={handleHubSpotLoadSuccess}
             redirectAfterSubmit={redirectAfterSubmit}
+            initialValues={initialValues}
           />
         </div>
       )}

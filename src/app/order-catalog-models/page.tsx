@@ -9,8 +9,8 @@ import OrderCatalogFormClient from './OrderCatalogFormClient';
 export default async function OrderInquiryCatalogModelsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ model?: string }>;
+  searchParams: Promise<{ model?: string; catalog?: string }>;
 }) {
-  const { model } = await searchParams;
-  return <OrderCatalogFormClient initialModel={model} />;
+  const { model, catalog } = await searchParams;
+  return <OrderCatalogFormClient initialModel={model} initialCatalog={catalog} />;
 }

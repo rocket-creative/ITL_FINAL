@@ -126,11 +126,14 @@ const testimonials = [
 
 interface OrderCatalogFormClientProps {
   initialModel?: string;
+  initialCatalog?: string;
 }
 
-export default function OrderCatalogFormClient({ initialModel }: OrderCatalogFormClientProps) {
+export default function OrderCatalogFormClient({ initialModel, initialCatalog }: OrderCatalogFormClientProps) {
   const [showCatalogSearch, setShowCatalogSearch] = useState(false);
-  const initialValues = initialModel ? { model_name: initialModel } : undefined;
+  const initialValues = (initialModel || initialCatalog)
+    ? { model_name: initialModel ?? '', model_number: initialCatalog ?? '' }
+    : undefined;
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
