@@ -150,6 +150,22 @@ export default async function GeneIndexPage() {
                     <span style={{ fontSize: '.8rem', color: '#999', fontWeight: 500 }}>
                       {grouped[letter].length} {grouped[letter].length === 1 ? 'gene' : 'genes'}
                     </span>
+                    <a
+                      href="#main-content"
+                      style={{
+                        marginLeft: 'auto',
+                        fontSize: '.72rem',
+                        fontWeight: 600,
+                        color: '#008080',
+                        textDecoration: 'none',
+                        letterSpacing: '.06em',
+                        textTransform: 'uppercase',
+                        whiteSpace: 'nowrap',
+                        opacity: 0.7,
+                      }}
+                    >
+                      ↑ Top
+                    </a>
                   </div>
 
                   {/* Gene grid */}
