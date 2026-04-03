@@ -56,6 +56,10 @@ export default function HubSpotFormWithFallback({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // When pre-fill values are present the custom form handles everything —
+    // loading the HubSpot iframe would replace pre-filled fields with an empty embed.
+    if (initialValues && Object.values(initialValues).some(Boolean)) return;
+
     let mounted = true;
     let idleId: number | undefined;
 
@@ -101,7 +105,7 @@ export default function HubSpotFormWithFallback({
       observer.disconnect();
       if (idleId !== undefined) cancelIdleCallback(idleId);
     };
-  }, []);
+  }, [initialValues]);
 
   // Timeout: if HubSpot hasn't loaded after timeout, show warning (keep fallback)
   useEffect(() => {
