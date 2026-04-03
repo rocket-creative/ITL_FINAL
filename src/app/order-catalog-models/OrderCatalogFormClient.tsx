@@ -50,25 +50,32 @@ const fallbackFields: FormField[] = [
   { name: 'lastname', label: 'Last Name', type: 'text', required: true },
   { name: 'email', label: 'Email', type: 'email', required: true },
   { name: 'phone', label: 'Phone', type: 'tel', required: false },
-  { name: 'company', label: 'Institution/Company', type: 'text', required: false },
-  { name: 'model_name', label: 'Model Name', type: 'text', required: true, placeholder: 'e.g., hPD-1 Knockin' },
-  { name: 'model_number', label: 'Model/Stock Number (if known)', type: 'text', required: false, placeholder: 'e.g., ITL-001' },
-  { name: 'gene_symbol', label: 'Gene Symbol', type: 'text', required: false, placeholder: 'e.g., Pdcd1' },
+  { name: 'institution', label: 'Institution / Company', type: 'text', required: true },
+  { name: 'mouse_strain_name', label: 'Strain Name', type: 'text', required: true, placeholder: 'e.g., Exoc2-KO' },
+  { name: 'catalog_number', label: 'Catalog Number', type: 'text', required: true, placeholder: 'e.g., KO 2109194' },
   {
-    name: 'model_category',
-    label: 'Model Category',
+    name: 'how_did_you_hear_about_ingenious_',
+    label: 'How did you hear about ingenious?',
     type: 'select',
-    required: false,
-    options: modelCategoryOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
+    required: true,
+    options: [
+      { value: 'Google / Web Search', label: 'Google / Web Search' },
+      { value: 'Colleague / Referral', label: 'Colleague / Referral' },
+      { value: 'Publication / Paper', label: 'Publication / Paper' },
+      { value: 'Conference / Event', label: 'Conference / Event' },
+      { value: 'Social Media', label: 'Social Media' },
+      { value: 'Email / Newsletter', label: 'Email / Newsletter' },
+      { value: 'Other', label: 'Other' },
+    ],
   },
   {
     name: 'quantity',
     label: 'Quantity Needed',
     type: 'select',
     required: false,
-    options: quantityOptions.map(opt => ({ value: opt.toLowerCase().replace(/\s+/g, '_'), label: opt })),
+    options: quantityOptions.map(opt => ({ value: opt, label: opt })),
   },
-  { name: 'additional_notes', label: 'Additional Information', type: 'textarea', required: false, rows: 4, placeholder: 'Any special requirements or questions...' },
+  { name: 'message', label: 'Additional Information', type: 'textarea', required: false, rows: 4, placeholder: 'Any special requirements or questions...' },
 ];
 
 const faqData = [
@@ -132,7 +139,7 @@ interface OrderCatalogFormClientProps {
 export default function OrderCatalogFormClient({ initialModel, initialCatalog }: OrderCatalogFormClientProps) {
   const [showCatalogSearch, setShowCatalogSearch] = useState(false);
   const initialValues = (initialModel || initialCatalog)
-    ? { model_name: initialModel ?? '', model_number: initialCatalog ?? '' }
+    ? { mouse_strain_name: initialModel ?? '', catalog_number: initialCatalog ?? '' }
     : undefined;
 
   return (
