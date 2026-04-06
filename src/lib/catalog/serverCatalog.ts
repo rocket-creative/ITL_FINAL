@@ -119,6 +119,35 @@ export async function getAllGeneNames(): Promise<string[]> {
   return Array.from(seen).sort((a, b) => a.localeCompare(b));
 }
 
+/**
+ * All catalog models with full data (including catalog numbers), sorted A–Z by gene name.
+ * Paginates in 1 000-row pages to work around Supabase's default row cap.
+ * Used by gene-index page to display catalog numbers alongside gene names.
+ */
+export async function getAllModels(): Promise<ServerCatalogModel[]> {
+  const results: CatalogRow[] = [];
+  const PAGE = 1000;
+  let from = 0;
+
+  for (;;) {
+    const { data, error } = await supabase
+      .from('catalog_models')
+      .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+      .neq('gene_name', '')
+      .order('gene_name')
+      .range(from, from + PAGE - 1);
+
+    if (error || !data || data.length === 0) break;
+
+    results.push(...data);
+
+    if (data.length < PAGE) break;
+    from += PAGE;
+  }
+
+  return results.map(toModel);
+}
+
 // Legacy alias used by gene-index page
 export async function getServerCatalog() { return []; } // no longer needed
 export function uniqueGeneNames() { return []; }        // replaced by getAllGeneNames

@@ -97,20 +97,13 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
           </div>
         </section>
 
-        {/* Catalog Search Section - Prominent */}
-        <section style={{ background: '#ffffff', padding: '40px 20px' }}>
+        {/* Browse by Gene Letter — shown above search so it's immediately visible */}
+        <section style={{ background: '#f7f7f7', padding: '32px 20px 28px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <CatalogSearch maxResults={25} showTitle={true} initialQuery={initialQuery} preloadedModels={preloadedModels} />
-          </div>
-        </section>
-
-        {/* Browse by Gene Letter */}
-        <section style={{ background: '#f7f7f7', padding: '50px 20px 40px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '20px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '16px', marginBottom: '16px', flexWrap: 'wrap' }}>
               <h2 style={{
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: '1.4rem',
+                fontSize: '1.1rem',
                 fontWeight: 700,
                 color: '#0a253c',
                 margin: 0,
@@ -128,7 +121,7 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
               </Link>
             </div>
 
-            {/* A–Z letter tiles */}
+            {/* A–Z letter tiles — each links to a filtered single-letter view */}
             <div style={{
               display: 'flex',
               flexWrap: 'wrap',
@@ -137,7 +130,7 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
               {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter) => (
                 <Link
                   key={letter}
-                  href={`/all-catalog-mouse-models/gene-index#letter-${letter}`}
+                  href={`/all-catalog-mouse-models/gene-index?letter=${letter}`}
                   style={{
                     width: '40px',
                     height: '40px',
@@ -158,6 +151,13 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Catalog Search Section */}
+        <section style={{ background: '#ffffff', padding: '40px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <CatalogSearch maxResults={25} showTitle={true} initialQuery={initialQuery} preloadedModels={preloadedModels} />
           </div>
         </section>
 
