@@ -286,7 +286,7 @@ export function CatalogSearch({
 
           {filteredResults.length > 0 && (
             <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'fixed', minWidth: '750px' }}>
                 <thead>
                   <tr style={{ background: '#f7f7f7' }}>
                     {['Gene Name', 'Model Abbreviation', 'Model Type', 'Category', 'Availability', 'ITL Catalog #', ''].map((h) => (
@@ -314,7 +314,7 @@ export function CatalogSearch({
                           {model.modelType || 'N/A'}
                         </span>
                       </td>
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', color: '#666', maxWidth: '200px' }}>
+                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', color: '#666', maxWidth: '180px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={model.category || ''}>
                         {model.category || 'N/A'}
                       </td>
                       <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', whiteSpace: 'nowrap' }}>

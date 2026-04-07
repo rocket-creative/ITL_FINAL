@@ -227,7 +227,7 @@ export default async function GenePage({ params }: Props) {
             </p>
 
             <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'fixed', minWidth: '700px' }}>
                 <thead>
                   <tr style={{ background: '#f7f7f7' }}>
                     {['Model Abbreviation', 'Model Type', 'Category', 'Availability', 'ITL Catalog #', ''].map((h) => (
@@ -263,7 +263,7 @@ export default async function GenePage({ params }: Props) {
                           </span>
                         ) : 'N/A'}
                       </td>
-                      <td style={{ padding: '14px 16px', color: '#666', fontSize: '.85rem', maxWidth: '200px' }}>
+                      <td style={{ padding: '14px 16px', color: '#666', fontSize: '.85rem', maxWidth: '180px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={model.category || ''}>
                         {model.category || 'N/A'}
                       </td>
                       <td style={{ padding: '14px 16px', whiteSpace: 'nowrap' }}>
