@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Knockin Mouse Models',
-  description: 'Custom knockin mouse models including point mutations, reporters, and humanization. Precise genetic modifications for research.',
+  title: 'Knockin Mouse Models | Point Mutations & Reporters',
+  description: 'Create knockin mice for point mutations, reporters, and humanized genes. 26+ years, 800+ publications in Nature/Cell/Science. ES cell and CRISPR expertise.',
   path: '/knockin-mouse-models',
 });
 

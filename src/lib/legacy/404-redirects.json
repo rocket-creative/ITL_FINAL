@@ -1,0 +1,552 @@
+[
+  {
+    "source": "/mouse-model-generation-guide",
+    "destination": "/technology-overview/",
+    "permanent": true
+  },
+  {
+    "source": "/pricing-overview",
+    "destination": "/custom-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/knockout/knockout-mice-purpose",
+    "destination": "/knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/stem-cell/mouse-cell-line",
+    "destination": "/stem-cell-services/",
+    "permanent": true
+  },
+  {
+    "source": "/mouse-models/gaining-inducible-control",
+    "destination": "/knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/rats/transgenic-rats-vs-mice",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/knockin/difference-between-knock-in-and-knockout",
+    "destination": "/knockin-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/crispr-rat-models",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/floxed/cre-lox/floxing",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/knockin/what-is-a-knockin",
+    "destination": "/knockin-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/floxed/cre-lox/flox",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/mouse-colony-management",
+    "destination": "/ingenious-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/mouse-models/ingenious-smoc-partnership-mouse-models",
+    "destination": "/knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/custom-mouse-models/amp",
+    "destination": "/custom-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/newsletters/mouse-knockout-timeline/amp",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/newsletters/knockout-mice-study-of-human-genetic-disease",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/current-openings/amp",
+    "destination": "/current-openings/",
+    "permanent": true
+  },
+  {
+    "source": "/crispr/crispr-knockout",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/conditional/what-is-a-conditional-allele",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/crispr/crispr-knockdown",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/crispr/the-advantages-of-rat-models",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/floxed/cre-lox/floxed-allele",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/newsletters/ingenious-scientist-jennifer-parla",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/newsletters/mouse-knockout-timeline",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/crispr/crispr-gene-targeting",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/floxed/lox-p/cre-floxed-mice",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/crispr/crispr-gene-knockout",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/mouse-models/cre-lox-facts",
+    "destination": "/knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/floxed/lox-p/cre-flox",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/mutation/conditional-mutation",
+    "destination": "/ingenious-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/stem-cell/cell-strains",
+    "destination": "/stem-cell-services/",
+    "permanent": true
+  },
+  {
+    "source": "/author/ingenious",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/floxed/cre-lox/flox-sequence",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/mutation/types-of-point-mutations",
+    "destination": "/ingenious-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/transgenic/what-is-a-transgene",
+    "destination": "/transgenic-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/transgenic-mice/a-new-mouse-line-for-tissue-specific-expression",
+    "destination": "/transgenic-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/conditional-knockout/conditional-knockout-mouse-protocol",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/crispr/crispr-cas9",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/transgenic/bac-transgenic",
+    "destination": "/transgenic-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/conditional/conditional-knockout-mice",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/conditional-knockout/conditional-knockout-mouse-and-global-knockout-mo",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/knockout/gene-knockout",
+    "destination": "/knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/transgenic/transgenic-mouse-model",
+    "destination": "/transgenic-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/transgenic/transgenic-mice",
+    "destination": "/transgenic-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/rats/what-is-a-knockout-rat",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/knockdown/knockdown-mice",
+    "destination": "/knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/knockin/knock-in-mice-vs-transgenic-mice",
+    "destination": "/knockin-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/conventional/conventional-vs-conditional-knockout",
+    "destination": "/conventional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/knockin/how-to-make-a-knock-in-mouse",
+    "destination": "/knockin-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/category/conditional-knockout",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/knockin/rosa26-knockin",
+    "destination": "/knockin-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/conventional/conventional-knockout",
+    "destination": "/conventional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/mutation/what-is-a-point-mutation",
+    "destination": "/ingenious-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/transgenic/how-to-make-a-transgenic-mouse",
+    "destination": "/transgenic-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/colorectal-cancer-mouse-models",
+    "destination": "/oncology-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/pancreatic-cancer-mouse-models",
+    "destination": "/oncology-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/lung-cancer-mouse-models",
+    "destination": "/oncology-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/cre-driver-catalog",
+    "destination": "/catalog-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/stem-cell/what-is-a-stem-cell-line",
+    "destination": "/stem-cell-services/",
+    "permanent": true
+  },
+  {
+    "source": "/mutation/point-mutation-diseases",
+    "destination": "/ingenious-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/knockout/knockout-mouse-made",
+    "destination": "/knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/neuromuscular-disease-mice",
+    "destination": "/rare-disease-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/glaucoma-mouse-models",
+    "destination": "/ophthalmology-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/blog/history-of-creating-genetically-humanized-mice",
+    "destination": "/ingenious-blog/",
+    "permanent": true
+  },
+  {
+    "source": "/terms/amp",
+    "destination": "/terms/",
+    "permanent": true
+  },
+  {
+    "source": "/newsletter",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/start-your-project-copy",
+    "destination": "/start-your-project/",
+    "permanent": true
+  },
+  {
+    "source": "/stem-cell/what-is-a-stem-",
+    "destination": "/stem-cell-services/",
+    "permanent": true
+  },
+  {
+    "source": "/Client-Testimonials.asp",
+    "destination": "/testimonials/",
+    "permanent": true
+  },
+  {
+    "source": "/conditional-knockout-mouse-models/amp",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/stem-cell/mouse-embryonic-stem-cells",
+    "destination": "/stem-cell-services/",
+    "permanent": true
+  },
+  {
+    "source": "/large-scale-targeting",
+    "destination": "/custom-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/catalog/humanized-mice/single-immune-checkpoint",
+    "destination": "/catalog-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/custom-mouse-rat-rabbit-model-pricing",
+    "destination": "/custom-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/ingenious-",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/catalog",
+    "destination": "/catalog-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/news-events/itl-and-charles-river-announce-availability-of-trurat-mode",
+    "destination": "/resources/",
+    "permanent": true
+  },
+  {
+    "source": "/news-events/itl-launches-proprietary-fusion-gens-technology-for-accele",
+    "destination": "/resources/",
+    "permanent": true
+  },
+  {
+    "source": "/technologies",
+    "destination": "/technology-overview/",
+    "permanent": true
+  },
+  {
+    "source": "/conventional-knockout-mouse-models/amp",
+    "destination": "/conventional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/news-events/itl-expands-partnership-with-taconic-biosciences-for-custo",
+    "destination": "/resources/",
+    "permanent": true
+  },
+  {
+    "source": "/preclinical-solutions",
+    "destination": "/preclinical-services/",
+    "permanent": true
+  },
+  {
+    "source": "/ingenious-process",
+    "destination": "/technology-overview/",
+    "permanent": true
+  },
+  {
+    "source": "/blog",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/cohort-development",
+    "destination": "/mouse-model-services/",
+    "permanent": true
+  },
+  {
+    "source": "/fast-technology",
+    "destination": "/technologies/",
+    "permanent": true
+  },
+  {
+    "source": "/targeting-vectors",
+    "destination": "/technologies/",
+    "permanent": true
+  },
+  {
+    "source": "/rabbit-models",
+    "destination": "/custom-animal-models/",
+    "permanent": true
+  },
+  {
+    "source": "/amp",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/rats/knockout-rat-models",
+    "destination": "/crispr-cas9-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/catalog/humanized-mice",
+    "destination": "/catalog-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/catalog/humanized-mice/humanized-immune-target-mice",
+    "destination": "/catalog-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/catalog/humanized-mice/double-immune-checkpoint",
+    "destination": "/catalog-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/mouse-genotyping",
+    "destination": "/mouse-genotyping-service/",
+    "permanent": true
+  },
+  {
+    "source": "/conditional-ko-with-reporter",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/rosa26-locus",
+    "destination": "/rosa26/",
+    "permanent": true
+  },
+  {
+    "source": "/order-inquiry",
+    "destination": "/order-inquiry-catalog-models/",
+    "permanent": true
+  },
+  {
+    "source": "/contact",
+    "destination": "/contact/",
+    "permanent": true
+  },
+  {
+    "source": "/knockin-mice",
+    "destination": "/knockin-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/conditional-knockout-mice",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/p53-mouse-models",
+    "destination": "/humanized-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/point-mutation",
+    "destination": "/point-mutation-mice/",
+    "permanent": true
+  },
+  {
+    "source": "/pdfs",
+    "destination": "/resources/",
+    "permanent": true
+  },
+  {
+    "source": "/conventional-knockout-mice",
+    "destination": "/conventional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/targeted-transgenics",
+    "destination": "/transgenic-mouse-service/",
+    "permanent": true
+  },
+  {
+    "source": "/collaboration",
+    "destination": "/contact/",
+    "permanent": true
+  },
+  {
+    "source": "/tag/crispr",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/tag/rabbit-models",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/universal",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mouse-models",
+    "destination": "/",
+    "permanent": true
+  }
+]

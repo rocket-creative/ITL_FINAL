@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Conditional Knockout Mouse Models',
-  description: 'Conditional knockout mice with tissue specific or inducible gene deletion using Cre LoxP technology. Precise spatiotemporal control.',
+  title: 'Conditional Knockout Mice | Tissue-Specific Gene Deletion',
+  description: 'Design conditional knockout mice with tissue-specific or inducible Cre LoxP systems. 800+ publications, 26+ years experience, 2,500+ projects completed. Expert gene targeting.',
   path: '/conditional-knockout-mouse-models',
 });
 
