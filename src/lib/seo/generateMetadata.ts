@@ -40,7 +40,7 @@ export function generateMetadata(options: PageMetadataOptions): Metadata {
   const fullTitle = `${title} | ${SITE_NAME}`;
 
   return {
-    title: fullTitle,
+    title: { absolute: fullTitle },
     description,
     alternates: {
       canonical: fullUrl,

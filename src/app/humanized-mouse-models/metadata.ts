@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Humanized Mouse Models | Drug Development Studies',
-  description: 'Generate humanized mouse models with human gene orthologs for preclinical drug testing. 26+ years experience, 800+ publications in Nature, Cell, Science. ES cell & CRISPR.',
+  description: 'Generate humanized mouse models with human orthologs for preclinical drug testing. 26+ years, 800+ publications in Nature/Cell/Science. ES cell & CRISPR.',
   path: '/humanized-mouse-models',
 });
 

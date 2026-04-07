@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     default: "Custom Mouse Models & Knockout Mice | 2,500+ Projects | ingenious targeting laboratory",
     template: "%s | ingenious targeting laboratory"
   },
-  description: "Custom mouse models for research. 2,500+ projects, 800+ publications in Nature/Cell/Science. Knockout, knockin, humanized & transgenic. Since 1998. Free consultation.",
+  description: "Custom mouse models since 1998. 2,500+ projects, 800+ publications in Nature/Cell/Science. Knockout, knockin, humanized & transgenic. Free consultation.",
   keywords: undefined, // Explicitly not using keywords per instructions
   authors: [{ name: "ingenious targeting laboratory" }],
   creator: "ingenious targeting laboratory",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: "https://www.genetargeting.com",
     siteName: "ingenious targeting laboratory",
     title: "Custom Mouse Models & Knockout Mice | ingenious targeting laboratory",
-    description: "Custom mouse models for research. 2,500+ projects, 800+ publications in Nature/Cell/Science. Knockout, knockin, humanized & transgenic. Since 1998. Free consultation.",
+    description: "Custom mouse models since 1998. 2,500+ projects, 800+ publications in Nature/Cell/Science. Knockout, knockin, humanized & transgenic. Free consultation.",
     images: [
       {
         url: "https://www.genetargeting.com/api/og?line1=Custom%20Mouse%20Models%20Since%201998&line2=2%2C500%2B%20Projects%20%7C%20800%2B%20Publications&line3=Expert%20Gene%20Targeting%20Solutions",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Custom Mouse Models & Knockout Mice | ingenious targeting laboratory",
-    description: "Custom mouse models for research. 2,500+ projects, 800+ publications in Nature/Cell/Science.",
+    description: "Custom mouse models since 1998. 2,500+ projects, 800+ publications in Nature/Cell/Science. Knockout, knockin & humanized mouse models. Free consultation.",
     images: ["https://www.genetargeting.com/api/og?line1=Custom%20Mouse%20Models%20Since%201998&line2=2%2C500%2B%20Projects%20%7C%20800%2B%20Publications&line3=Expert%20Gene%20Targeting%20Solutions"],
   },
 };
