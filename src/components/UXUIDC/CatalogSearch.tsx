@@ -28,6 +28,8 @@ interface CatalogStats {
   model_types: number;
   categories: number;
   live_models: number;
+  sperm_cryo_models: number;
+  embryo_cryo_models: number;
 }
 
 interface CatalogSearchProps {
@@ -55,8 +57,17 @@ export function CatalogSearch({
   const [isSearching, setIsSearching]       = useState(false);
   const [hasSearched, setHasSearched]       = useState(preloadedModels.length > 0 && !!initialQuery);
   const [error, setError]                   = useState<string | null>(null);
+  const [availabilityFilter, setAvailabilityFilter] = useState<'all' | 'live' | 'sperm' | 'embryo'>('all');
   const searchInputRef                      = useRef<HTMLInputElement>(null);
   const debounceRef                         = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const filteredResults = results.filter((m) => {
+    if (availabilityFilter === 'all')    return true;
+    if (availabilityFilter === 'live')   return (m.availability || '').toLowerCase().includes('live');
+    if (availabilityFilter === 'sperm')  return (m.availability || '').toLowerCase().includes('sperm');
+    if (availabilityFilter === 'embryo') return (m.availability || '').toLowerCase().includes('embryo');
+    return true;
+  });
 
   // Load stats on mount (replaces the old full-catalog load)
   useEffect(() => {
@@ -83,6 +94,7 @@ export function CatalogSearch({
     setIsSearching(true);
     setHasSearched(true);
     setError(null);
+    setAvailabilityFilter('all');
 
     try {
       const res  = await fetch(`/api/catalog?q=${encodeURIComponent(q)}&limit=${maxResults}`);
@@ -207,7 +219,7 @@ export function CatalogSearch({
       {/* Results */}
       {hasSearched && !error && (
         <div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', paddingBottom: '12px', borderBottom: '1px solid #e0e0e0' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', paddingBottom: '12px', borderBottom: '1px solid #e0e0e0' }}>
             <p style={{ margin: 0, fontSize: '.9rem', color: '#666' }}>
               {isSearching ? (
                 <span>Searching&hellip;</span>
@@ -230,7 +242,49 @@ export function CatalogSearch({
             )}
           </div>
 
+          {/* Availability filter chips */}
           {results.length > 0 && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
+              {(
+                [
+                  { key: 'all',    label: 'All',         color: '#008080' },
+                  { key: 'live',   label: 'Live',        color: '#2e7d32' },
+                  { key: 'sperm',  label: 'Sperm Cryo',  color: '#e65100' },
+                  { key: 'embryo', label: 'Embryo Cryo', color: '#e65100' },
+                ] as const
+              ).map(({ key, label, color }) => {
+                const isActive = availabilityFilter === key;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setAvailabilityFilter(key)}
+                    style={{
+                      padding: '5px 14px',
+                      fontSize: '.8rem',
+                      fontWeight: 600,
+                      letterSpacing: '.04em',
+                      textTransform: 'uppercase',
+                      border: `2px solid ${color}`,
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      background: isActive ? color : 'transparent',
+                      color: isActive ? '#fff' : color,
+                      transition: 'background 0.2s, color 0.2s',
+                    }}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+              {availabilityFilter !== 'all' && (
+                <span style={{ alignSelf: 'center', fontSize: '.8rem', color: '#999' }}>
+                  {filteredResults.length} result{filteredResults.length !== 1 ? 's' : ''}
+                </span>
+              )}
+            </div>
+          )}
+
+          {filteredResults.length > 0 && (
             <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem' }}>
                 <thead>
@@ -243,7 +297,7 @@ export function CatalogSearch({
                   </tr>
                 </thead>
                 <tbody>
-                  {results.map((model, index) => (
+                  {filteredResults.map((model, index) => (
                     <tr key={model.id}
                       style={{ background: index % 2 === 0 ? '#fff' : '#fafafa', transition: 'background 0.2s' }}
                       onMouseOver={(e) => e.currentTarget.style.background = '#f0f9f9'}
@@ -292,6 +346,12 @@ export function CatalogSearch({
             </div>
           )}
 
+          {filteredResults.length === 0 && results.length > 0 && !isSearching && (
+            <div style={{ textAlign: 'center', padding: '32px 20px', background: '#f9f9f9', borderRadius: '8px' }}>
+              <p style={{ margin: 0, color: '#666', fontSize: '.95rem' }}>No results match the selected availability filter.</p>
+            </div>
+          )}
+
           {results.length === 0 && !isSearching && searchTerm && (
             <div style={{ textAlign: 'center', padding: '40px 20px', background: '#f9f9f9', borderRadius: '8px' }}>
               <p style={{ margin: '0 0 16px', color: '#666', fontSize: '.95rem' }}>No models found matching your search criteria.</p>
@@ -323,16 +383,18 @@ export function CatalogSearch({
 
       {/* Initial stats (no search yet) */}
       {!hasSearched && !compact && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '16px', marginTop: '24px' }}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6" style={{ gap: '12px', marginTop: '24px' }}>
           {[
-            { label: 'Total Models',  value: stats ? `${stats.total_models.toLocaleString()}+`  : '10,000+' },
-            { label: 'Unique Genes',  value: stats ? `${stats.unique_genes.toLocaleString()}+`   : '5,000+'  },
-            { label: 'Model Types',   value: stats ? `${stats.model_types}+`                     : '6+'      },
-            { label: 'Live Models',   value: stats ? `${stats.live_models.toLocaleString()}+`    : '3,000+'  },
+            { label: 'Total Models',  value: stats ? `${stats.total_models.toLocaleString()}+`         : '14,000+', color: '#008080' },
+            { label: 'Unique Genes',  value: stats ? `${stats.unique_genes.toLocaleString()}+`          : '5,000+',  color: '#008080' },
+            { label: 'Live Models',   value: stats ? `${stats.live_models.toLocaleString()}+`           : '2,400+',  color: '#2e7d32' },
+            { label: 'Sperm Cryo',    value: stats ? `${stats.sperm_cryo_models.toLocaleString()}+`     : '7,700+',  color: '#e65100' },
+            { label: 'Embryo Cryo',   value: stats ? `${stats.embryo_cryo_models.toLocaleString()}+`    : '3,100+',  color: '#e65100' },
+            { label: 'Model Types',   value: stats ? `${stats.model_types}+`                            : '6+',      color: '#008080' },
           ].map((s, i) => (
-            <div key={i} style={{ textAlign: 'center', padding: '16px', background: '#fff', borderRadius: '8px', border: '1px solid #e0e0e0' }}>
-              <div style={{ fontSize: '1.5rem', fontWeight: 700, color: '#008080', marginBottom: '4px' }}>{s.value}</div>
-              <div style={{ fontSize: '.85rem', color: '#666' }}>{s.label}</div>
+            <div key={i} style={{ textAlign: 'center', padding: '14px 10px', background: '#fff', borderRadius: '8px', border: '1px solid #e0e0e0' }}>
+              <div style={{ fontSize: '1.3rem', fontWeight: 700, color: s.color, marginBottom: '4px' }}>{s.value}</div>
+              <div style={{ fontSize: '.8rem', color: '#666' }}>{s.label}</div>
             </div>
           ))}
         </div>

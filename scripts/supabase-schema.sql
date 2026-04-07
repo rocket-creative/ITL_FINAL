@@ -62,11 +62,13 @@ CREATE POLICY "Public read access"
 -- 5. Aggregate stats view (for the catalog stats counters) ──
 CREATE OR REPLACE VIEW catalog_stats AS
 SELECT
-  COUNT(*)                                          AS total_models,
-  COUNT(DISTINCT gene_name)                         AS unique_genes,
-  COUNT(DISTINCT model_type)                        AS model_types,
-  COUNT(DISTINCT category)                          AS categories,
-  COUNT(*) FILTER (WHERE availability ILIKE '%live%') AS live_models
+  COUNT(*)                                                          AS total_models,
+  COUNT(DISTINCT gene_name)                                         AS unique_genes,
+  COUNT(DISTINCT model_type)                                        AS model_types,
+  COUNT(DISTINCT category)                                          AS categories,
+  COUNT(*) FILTER (WHERE availability ILIKE '%live%')               AS live_models,
+  COUNT(*) FILTER (WHERE availability ILIKE '%sperm%')              AS sperm_cryo_models,
+  COUNT(*) FILTER (WHERE availability ILIKE '%embryo%')             AS embryo_cryo_models
 FROM catalog_models;
 
 -- 6. AFTER running this schema, import the CSV:

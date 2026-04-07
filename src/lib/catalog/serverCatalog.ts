@@ -148,6 +148,39 @@ export async function getAllModels(): Promise<ServerCatalogModel[]> {
   return results.map(toModel);
 }
 
+/**
+ * All models for a specific gene name.
+ * Used by individual gene pages (on-demand ISR).
+ */
+export async function getModelsByGene(geneName: string): Promise<ServerCatalogModel[]> {
+  const { data, error } = await supabase
+    .from('catalog_models')
+    .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+    .eq('gene_name', geneName)
+    .order('model_type');
+
+  if (error || !data) return [];
+  return data.map(toModel);
+}
+
+/**
+ * Up to `limit` distinct gene names that share the same 3-character prefix.
+ * Used for internal linking on individual gene pages.
+ */
+export async function getRelatedGenes(geneName: string, limit = 10): Promise<string[]> {
+  const prefix = geneName.slice(0, 3);
+  const { data } = await supabase
+    .from('catalog_models')
+    .select('gene_name')
+    .ilike('gene_name', `${prefix}%`)
+    .neq('gene_name', geneName)
+    .order('gene_name')
+    .limit(limit * 3);
+
+  if (!data) return [];
+  return [...new Set(data.map((r) => r.gene_name).filter(Boolean))].slice(0, limit);
+}
+
 // Legacy alias used by gene-index page
 export async function getServerCatalog() { return []; } // no longer needed
 export function uniqueGeneNames() { return []; }        // replaced by getAllGeneNames

@@ -39,4 +39,6 @@ export interface CatalogStats {
   model_types: number;
   categories: number;
   live_models: number;
+  sperm_cryo_models: number;
+  embryo_cryo_models: number;
 }

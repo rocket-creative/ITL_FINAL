@@ -300,7 +300,14 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                             style={{ borderBottom: '1px solid #f0f0f0' }}
                           >
                             <td style={{ padding: '10px 14px', color: '#0a253c', fontWeight: 600 }}>
-                              {model.geneName}
+                              <Link
+                                href={`/all-catalog-mouse-models/gene/${encodeURIComponent(model.geneName)}`}
+                                style={{ color: '#0a253c', textDecoration: 'none' }}
+                                onMouseOver={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#008080'; }}
+                                onMouseOut={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#0a253c'; }}
+                              >
+                                {model.geneName}
+                              </Link>
                             </td>
                             <td style={{ padding: '10px 14px', color: '#444' }}>
                               {model.modelAbbrev}

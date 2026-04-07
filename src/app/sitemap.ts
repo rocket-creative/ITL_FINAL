@@ -10,6 +10,7 @@ import { getAllBlogSlugs } from '@/lib/blog/blogUtils';
 import { glossaryTerms } from '@/data/glossaryTerms';
 import { getAllArticleSlugs } from '@/data/newsletterArticles';
 import { BASE_URL } from '@/lib/seo/types';
+import { getAllGeneNames } from '@/lib/catalog/serverCatalog';
 
 type SitemapEntry = {
   url: string;
@@ -35,7 +36,7 @@ function getLegacySlugs(): string[] {
   }
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const entries: SitemapEntry[] = [];
 
   // Static pages from START-HERE (with additional pages)
@@ -237,6 +238,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.5,
+    });
+  }
+
+  // Gene pages — on-demand ISR, indexed by Google via sitemap
+  const geneNames = await getAllGeneNames();
+  for (const gene of geneNames) {
+    entries.push({
+      url: url(`/all-catalog-mouse-models/gene/${encodeURIComponent(gene)}`),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     });
   }
 
