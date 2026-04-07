@@ -300,6 +300,42 @@ export default function CatalogMouseModelsPage() {
         }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <CatalogSearch maxResults={15} showTitle={true} />
+
+            {/* A–Z Gene Browse link */}
+            <div style={{
+              marginTop: '24px',
+              padding: '16px 20px',
+              background: '#f0f9f9',
+              border: '1px solid rgba(0,128,128,0.2)',
+              borderRadius: '8px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '12px',
+            }}>
+              <div>
+                <p style={{ margin: 0, fontWeight: 600, color: '#0a253c', fontSize: '.95rem' }}>
+                  Prefer to browse alphabetically?
+                </p>
+                <p style={{ margin: '4px 0 0', color: '#666', fontSize: '.85rem' }}>
+                  View all 14,000+ gene targets sorted A–Z with catalog numbers.
+                </p>
+              </div>
+              <Link
+                href="/all-catalog-mouse-models/gene-index"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  background: '#008080', color: '#fff',
+                  padding: '10px 20px', borderRadius: '6px',
+                  fontSize: '.85rem', fontWeight: 600, textDecoration: 'none',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Browse Gene Index A–Z
+                <IconChevronRight size={14} color="#fff" />
+              </Link>
+            </div>
           </div>
         </section>
 
