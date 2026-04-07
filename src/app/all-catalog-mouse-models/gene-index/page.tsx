@@ -277,7 +277,7 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                     <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.875rem' }}>
                       <thead>
                         <tr style={{ background: '#f7f7f7' }}>
-                          {['Gene Name', 'Model Abbreviation', 'Model Type', 'ITL Catalog #', ''].map((h) => (
+                          {['Gene Name', 'Model Abbreviation', 'Model Type', 'Availability', 'ITL Catalog #', ''].map((h) => (
                             <th
                               key={h}
                               style={{
@@ -312,6 +312,31 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                             </td>
                             <td style={{ padding: '10px 14px', color: '#666', fontSize: '.82rem' }}>
                               {model.modelType}
+                            </td>
+                            <td style={{ padding: '10px 14px', whiteSpace: 'nowrap' }}>
+                              {model.availability ? (
+                                <span style={{
+                                  display: 'inline-flex', alignItems: 'center', gap: '5px',
+                                  fontSize: '.78rem',
+                                  color: (() => {
+                                    const a = model.availability.toLowerCase();
+                                    if (a.includes('live')) return '#2e7d32';
+                                    if (a.includes('sperm') || a.includes('embryo') || a.includes('cryo')) return '#e65100';
+                                    return '#555';
+                                  })(),
+                                }}>
+                                  <span style={{
+                                    width: '6px', height: '6px', borderRadius: '50%', flexShrink: 0,
+                                    background: (() => {
+                                      const a = model.availability.toLowerCase();
+                                      if (a.includes('live')) return '#2e7d32';
+                                      if (a.includes('sperm') || a.includes('embryo') || a.includes('cryo')) return '#e65100';
+                                      return '#555';
+                                    })(),
+                                  }} />
+                                  {model.availability}
+                                </span>
+                              ) : '—'}
                             </td>
                             <td style={{
                               padding: '10px 14px', color: '#134978',
