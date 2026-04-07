@@ -28,8 +28,8 @@ interface CatalogStats {
   model_types: number;
   categories: number;
   live_models: number;
-  sperm_cryo_models: number;
-  embryo_cryo_models: number;
+  sperm_cryo_models?: number;
+  embryo_cryo_models?: number;
 }
 
 interface CatalogSearchProps {
@@ -388,8 +388,8 @@ export function CatalogSearch({
             { label: 'Total Models',  value: stats ? `${stats.total_models.toLocaleString()}+`         : '14,000+', color: '#008080' },
             { label: 'Unique Genes',  value: stats ? `${stats.unique_genes.toLocaleString()}+`          : '5,000+',  color: '#008080' },
             { label: 'Live Models',   value: stats ? `${stats.live_models.toLocaleString()}+`           : '2,400+',  color: '#2e7d32' },
-            { label: 'Sperm Cryo',    value: stats ? `${stats.sperm_cryo_models.toLocaleString()}+`     : '7,700+',  color: '#e65100' },
-            { label: 'Embryo Cryo',   value: stats ? `${stats.embryo_cryo_models.toLocaleString()}+`    : '3,100+',  color: '#e65100' },
+            { label: 'Sperm Cryo',    value: stats?.sperm_cryo_models  != null ? `${stats.sperm_cryo_models.toLocaleString()}+`  : '7,700+',  color: '#e65100' },
+            { label: 'Embryo Cryo',   value: stats?.embryo_cryo_models != null ? `${stats.embryo_cryo_models.toLocaleString()}+` : '3,100+',  color: '#e65100' },
             { label: 'Model Types',   value: stats ? `${stats.model_types}+`                            : '6+',      color: '#008080' },
           ].map((s, i) => (
             <div key={i} style={{ textAlign: 'center', padding: '14px 10px', background: '#fff', borderRadius: '8px', border: '1px solid #e0e0e0' }}>
