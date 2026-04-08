@@ -186,7 +186,7 @@ export default function HCD3EDGPage() {
     offers: {
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',
-      url: 'https://www.genetargeting.com/quote-request-form/',
+      url: 'https://www.genetargeting.com/request-quote/',
       price: '0',
       priceCurrency: 'USD',
       priceSpecification: {
@@ -325,7 +325,7 @@ export default function HCD3EDGPage() {
                       <IconChevronRight size={16} color="#0a253c" />
                     </a>
                     <Link
-                      href="/quote-request-form"
+                      href="/request-quote"
                       style={{
                         display: 'inline-flex',
                         alignItems: 'center',
@@ -419,7 +419,7 @@ export default function HCD3EDGPage() {
                   <IconChevronRight size={16} color="#008080" />
                 </a>
                 <Link
-                  href="/quote-request-form"
+                  href="/request-quote"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -757,7 +757,7 @@ export default function HCD3EDGPage() {
                   <IconChevronRight size={16} color="#0a253c" />
                 </a>
                 <Link
-                  href="/quote-request-form"
+                  href="/request-quote"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',

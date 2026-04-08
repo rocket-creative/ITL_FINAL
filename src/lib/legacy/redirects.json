@@ -908,5 +908,61 @@
     "source": "/mouse-genetics-glossary/:slug*/amp",
     "destination": "/mouse-genetics-glossary/:slug*/",
     "permanent": true
+  },
+  {
+    "source": "/conventional-knockout",
+    "destination": "/conventional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/e-Newsletter/:slug*",
+    "destination": "/humanized-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/metabolic-disorder-mice",
+    "destination": "/metabolic-disease-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/sign-up",
+    "destination": "/request-quote/",
+    "permanent": true
+  },
+  {
+    "source": "/tet-on-tet-off-systems",
+    "destination": "/inducible-gene-expression/",
+    "permanent": true
+  },
+  {
+    "source": "/truhumanization",
+    "destination": "/humanized-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/types-of-mouse-models/:path*",
+    "destination": "/mouse-model-services/",
+    "permanent": true
+  },
+  {
+    "comment": "=== CATCH-ALL: Old WordPress page builder URLs ===",
+    "source": "/conditional-knockout-mouse-models/amp/:path*",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/conventional-knockout-mouse-models/amp/:path*",
+    "destination": "/conventional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/current-openings/amp/:path*",
+    "destination": "/current-openings/",
+    "permanent": true
+  },
+  {
+    "source": "/terms/amp/:path*",
+    "destination": "/terms/",
+    "permanent": true
   }
 ]

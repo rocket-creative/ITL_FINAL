@@ -46,7 +46,7 @@ What are conditional knockouts made for? The application of animal models that a
 
 [Conventional vs. Conditional Knockout](/ingenious-blog/conventional-vs-conditional-knockout)
 
-[How to Obtain a Conditional Knockout – Floxed Mice and the Cre-Lox Procedure](/floxed/cre-lox/flox/)
+[How to Obtain a Conditional Knockout – Floxed Mice and the Cre-Lox Procedure](/ingenious-blog/floxed-cre-lox-flox/)
 
 [Conditional Knockout Mouse Protocol](/ingenious-blog/conditional-knockout-mouse-protocol)
 

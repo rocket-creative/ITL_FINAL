@@ -50,4 +50,4 @@ Floxing is [the introduction of LoxP sequences on either side of a targeted gene
 
 #### What are the methods of knockout mice?
 
-[Gene targeting is a method used for creating knockout mice](/knockout/knockout-mouse-made/#:~:text=Gene%20Targeting%20%E2%80%93%20A%20Method%20for,targeting%20of%20large%20genomic%20regions.) using embryonic stem cells, or ESCs.  The homologous recombination process in ESCs is robust and allows for specific gene targeting of large genomic regions.
+[Gene targeting is a method used for creating knockout mice](/ingenious-blog/how-a-knockout-mouse-is-made/) using embryonic stem cells, or ESCs.  The homologous recombination process in ESCs is robust and allows for specific gene targeting of large genomic regions.

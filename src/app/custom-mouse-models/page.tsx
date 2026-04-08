@@ -174,7 +174,7 @@ const relatedLinksData = {
     { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },
     { href: "/conditional-vs-conventional-guide", label: "Conditional vs Conventional Guide" },
     { href: "/request-quote", label: "Request a Quote" },
-    { href: "/pricing-overview", label: "Pricing Overview" }
+    { href: "/pricing-guide", label: "Pricing Overview" }
   ]
 };
 

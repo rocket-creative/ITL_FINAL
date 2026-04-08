@@ -118,7 +118,7 @@ const relatedTechnologies = [
 
 const projectResources = [
   { title: "FAQs", href: "/faqs" },
-  { title: "Technologies", href: "/technologies" }
+  { title: "Technologies", href: "/technology-overview" }
 ];
 
 // FAQ Data

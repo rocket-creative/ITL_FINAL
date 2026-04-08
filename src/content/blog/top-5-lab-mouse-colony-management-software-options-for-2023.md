@@ -26,7 +26,7 @@ For many labs at academic institutions, SoftMouse.NET is their colony software o
 
 SoftMouse also has a “premium” option that’s available with a 30-day free trial. With this paid version, it’s possible to create breeding schemas, receive email alerts, view family trees, upload files, view statistics and reports, and plan experiments. However, no matter which plan you choose, you can enjoy free, unlimited technical support.
 
-One ResearchGate user noted, “I can now do everything in one system and about 75% faster than with my Access program.” Another said, “What I like the most about it is the easy and intuitive interface, so intuitive that even my less tech-lover colleagues rapidly adapted to the new system.” Even here at [ingenious targeting laboratory](/about-ingenious/), we use SoftMouse to keep track of the lab mice housed in our vivarium.
+One ResearchGate user noted, “I can now do everything in one system and about 75% faster than with my Access program.” Another said, “What I like the most about it is the easy and intuitive interface, so intuitive that even my less tech-lover colleagues rapidly adapted to the new system.” Even here at [ingenious targeting laboratory](/about-itl/), we use SoftMouse to keep track of the lab mice housed in our vivarium.
 
 SoftMouse is available on both desktop and mobile, giving users the convenient option to work remotely.
 
