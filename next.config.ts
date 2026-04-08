@@ -81,6 +81,18 @@ const nextConfig: NextConfig = {
         source: '/:path*',
         headers: securityHeaders,
       },
+      // ISR catalog pages — public caching aligned with revalidate = 86400
+      // Googlebot treats Cache-Control: public as cacheable; stale-while-revalidate
+      // allows Vercel CDN to serve stale content while re-generating in background.
+      {
+        source: '/all-catalog-mouse-models/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=86400, stale-while-revalidate=604800',
+          },
+        ],
+      },
       // Cache static assets
       {
         source: '/images/:path*',

@@ -130,6 +130,14 @@ export default async function GenePage({ params }: Props) {
         ? 'https://schema.org/InStock'
         : 'https://schema.org/PreOrder',
       url: `${BASE_URL}/order-catalog-models?gene=${encodeURIComponent(geneName)}&catalog=${encodeURIComponent(m.catalogNumber)}`,
+      price: '0',
+      priceCurrency: 'USD',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        price: '0',
+        priceCurrency: 'USD',
+        description: 'Contact for pricing',
+      },
     },
   }));
 

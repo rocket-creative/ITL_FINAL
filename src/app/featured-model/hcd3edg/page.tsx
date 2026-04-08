@@ -187,6 +187,14 @@ export default function HCD3EDGPage() {
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',
       url: 'https://www.genetargeting.com/quote-request-form/',
+      price: '0',
+      priceCurrency: 'USD',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        price: '0',
+        priceCurrency: 'USD',
+        description: 'Contact for pricing',
+      },
     },
   };
 
