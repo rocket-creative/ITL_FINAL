@@ -1,6 +1,6 @@
 /**
  * hCD3EDG Featured Model Layout
- * Exports metadata for SEO (page is client component and cannot export metadata)
+ * Exports metadata for SEO
  */
 
 export { metadata } from './metadata';

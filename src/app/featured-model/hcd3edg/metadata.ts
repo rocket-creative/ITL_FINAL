@@ -5,9 +5,9 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'hCD3EDG Triple Humanized CD3 Mouse Model',
+  title: 'hCD3EDG Triple Humanized CD3 Mouse',
   description:
-    'hCD3EDG: the endogenous mouse Cd3e/Cd3d/Cd3g genes were replaced by human CD3E/CD3D/CD3G gene. Catalog NM-HU-220120. Strain state Repository Live.',
+    'The hCD3EDG triple humanized CD3 model is one of the most in-demand tools for bispecific T cell engager (TCE) development. Catalog HU 220120. Repository live (ready to ship).',
   path: '/featured-model/hcd3edg',
 });
 

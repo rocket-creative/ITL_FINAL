@@ -1,5 +1,10 @@
 import type { NextConfig } from "next";
+import path from "path";
+import { fileURLToPath } from "url";
 import legacyRedirects from "./src/lib/legacy/redirects.json";
+
+/** Pin Turbopack root when multiple lockfiles exist (avoids wrong workspace inference). */
+const turbopackRoot = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * Security Headers Configuration
@@ -71,8 +76,10 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['@headlessui/react'],
   },
 
-  // Next.js 16: Turbopack config (empty to silence warning)
-  turbopack: {},
+  // Next.js 16: Turbopack — explicit root so dev/build resolve this app, not a parent lockfile
+  turbopack: {
+    root: turbopackRoot,
+  },
 
   // Security headers for all routes
   async headers() {
