@@ -40,6 +40,35 @@ function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
   };
 }
 
+/**
+ * Build a keyword rich title like:
+ *   "Brca1 Knockout & Conditional KO Mouse Models | ITL"
+ *   "Tp53 Knockout, Knockin & Humanized Mouse Models | ITL"
+ * This targets the way researchers actually search:
+ *   "brca1 knockout mouse", "tp53 humanized mouse", etc.
+ */
+function buildTitle(geneName: string, models: ServerCatalogModel[]): string {
+  const types = [...new Set(models.map(m => m.modelType))].filter(Boolean);
+  // Shorten common names for title length
+  const SHORT: Record<string, string> = {
+    'Knockout': 'Knockout',
+    'Conditional Knockout': 'Conditional KO',
+    'Knockin': 'Knockin',
+    'Humanized': 'Humanized',
+    'Transgenic': 'Transgenic',
+    'Xenograft-Applicable': 'Xenograft',
+    'Immunodeficient': 'Immunodeficient',
+  };
+  const shortTypes = types.map(t => SHORT[t] || t).slice(0, 3);
+  const typeStr = shortTypes.length > 0
+    ? shortTypes.join(shortTypes.length === 2 ? ' & ' : ', ')
+    : 'Genetically Engineered';
+  const base = `${geneName} ${typeStr} Mouse Models`;
+  // Keep under ~60 chars for SERP display
+  if (base.length > 50) return `${base} | ITL`;
+  return `${base} | ${SITE_NAME}`;
+}
+
 function buildMetaDescription(geneName: string, models: ServerCatalogModel[]): string {
   const modelCount = models.length;
   const types = [...new Set(models.map(m => m.modelType))].filter(Boolean);
@@ -50,12 +79,16 @@ function buildMetaDescription(geneName: string, models: ServerCatalogModel[]): s
   });
   const hasReady = readyModels.length > 0;
 
+  // Include gene + model type combos for long tail matching
+  // e.g. "Brca1 knockout mouse model, Brca1 conditional knockout..."
+  const combos = types.slice(0, 3).map(t => `${geneName} ${t.toLowerCase()}`).join(', ');
+
   const parts: string[] = [];
   parts.push(`${modelCount} ${geneName} ${typeStr} mouse model${modelCount > 1 ? 's' : ''}`);
   if (hasReady) parts.push('ready to ship');
   parts.push(`from ${SITE_NAME}`);
-  parts.push('Best pricing guaranteed');
-  parts.push('Browse catalog numbers, request a quote, or inquire about custom models');
+  if (combos) parts.push(`Browse ${combos} models`);
+  parts.push('Request a quote or inquire about custom models');
   return parts.join('. ') + '.';
 }
 
@@ -68,7 +101,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: `${geneName} Mouse Models | ${SITE_NAME}` };
   }
 
-  const title       = `${geneName} Mouse Models — Ready to Ship | ${SITE_NAME}`;
+  const title       = buildTitle(geneName, models);
   const description = buildMetaDescription(geneName, models);
   const canonical   = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
 
@@ -179,20 +212,22 @@ export default async function GenePage({ params }: Props) {
               </ol>
             </nav>
 
+            {/* Keyword rich H1: matches "Brca1 knockout mouse", "Tp53 conditional knockout mouse" searches */}
             <h1 style={{
               fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700,
               color: '#fff', marginBottom: '16px', lineHeight: 1.2,
             }}>
-              {geneName} Mouse Models
+              {geneName} {typeStr} Mouse Model{models.length !== 1 ? 's' : ''}
             </h1>
 
+            {/* Intro paragraph includes gene+type combos for long tail SEO */}
             <p style={{
               fontSize: '1rem', color: 'rgba(255,255,255,0.9)',
               marginBottom: '30px', lineHeight: 1.7, maxWidth: '800px',
             }}>
               {hasLiveModels
-                ? `${models.length} ${geneName} ${typeStr} mouse model${models.length !== 1 ? 's' : ''} — in stock and ready to ship. Best pricing guaranteed from ${SITE_NAME}. Request a quote in 24 hours.`
-                : `${models.length} ${geneName} ${typeStr} mouse model${models.length !== 1 ? 's' : ''} available from ${SITE_NAME}. Best pricing guaranteed. Contact us for availability and fast turnaround.`}
+                ? `Browse ${models.length} ${geneName} mouse model${models.length !== 1 ? 's' : ''} including ${typeStr.toLowerCase()} variants — in stock and ready to ship from ${SITE_NAME}. ${types.length > 1 ? `Available as ${types.map(t => `${geneName} ${t.toLowerCase()} mouse`).join(', ')}.` : ''} Request a quote within 24 hours.`
+                : `Browse ${models.length} ${geneName} mouse model${models.length !== 1 ? 's' : ''} including ${typeStr.toLowerCase()} variants from ${SITE_NAME}. ${types.length > 1 ? `Available as ${types.map(t => `${geneName} ${t.toLowerCase()} mouse`).join(', ')}.` : ''} Contact us for availability and fast turnaround.`}
             </p>
 
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -224,14 +259,15 @@ export default async function GenePage({ params }: Props) {
         {/* Models Table */}
         <section style={{ background: '#fff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            {/* H2 includes gene+type for SEO: "Available Brca1 Knockout & Conditional KO Models" */}
             <h2 style={{
               fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 700,
               color: '#0a253c', marginBottom: '8px',
             }}>
-              Available {geneName} Models
+              Available {geneName} {typeStr} Model{models.length !== 1 ? 's' : ''}
             </h2>
             <p style={{ color: '#666', fontSize: '.9rem', marginBottom: '24px' }}>
-              All models include full quality control documentation and technical support.
+              All {geneName} mouse models include full quality control documentation and technical support. {types.includes('Conditional Knockout') ? `${geneName} floxed mice feature loxP flanked alleles for Cre dependent tissue specific knockout.` : ''} {types.includes('Humanized') ? `${geneName} humanized mouse models carry the human gene sequence for translational research.` : ''}
             </p>
 
             <div style={{ overflowX: 'auto' }}>
@@ -353,6 +389,57 @@ export default async function GenePage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {/* Model Type Cross Links — connects gene pages to service pages for SEO */}
+        {types.length > 0 && (
+          <section style={{ background: '#fff', padding: '50px 20px', borderBottom: '1px solid #eee' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+              <h2 style={{
+                fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 700,
+                color: '#0a253c', marginBottom: '12px',
+              }}>
+                About {geneName} Mouse Model Types
+              </h2>
+              <p style={{ color: '#444', lineHeight: 1.8, fontSize: '.92rem', marginBottom: '20px' }}>
+                {types.includes('Knockout') && `A ${geneName} knockout mouse has the ${geneName} gene permanently inactivated, enabling loss of function studies. `}
+                {types.includes('Conditional Knockout') && `A ${geneName} conditional knockout (floxed) mouse carries loxP sites flanking a critical exon of ${geneName}, allowing Cre recombinase dependent deletion in specific tissues or at specific timepoints. `}
+                {types.includes('Knockin') && `${geneName} knockin models carry a precisely inserted sequence at the ${geneName} locus, useful for reporter, tag, or humanization studies. `}
+                {types.includes('Humanized') && `A ${geneName} humanized mouse replaces the mouse ${geneName} gene with the human ortholog for translational research and drug development. `}
+                {types.includes('Transgenic') && `${geneName} transgenic models carry additional copies of the ${geneName} gene for overexpression studies. `}
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {types.includes('Knockout') && (
+                  <Link href="/knockout-mouse-models/" style={{ padding: '6px 14px', background: '#f0f4f8', border: '1px solid #134978', borderRadius: '4px', color: '#134978', fontSize: '.83rem', fontWeight: 600, textDecoration: 'none' }}>
+                    Knockout Mouse Models
+                  </Link>
+                )}
+                {types.includes('Conditional Knockout') && (
+                  <Link href="/conditional-knockout-mouse-models/" style={{ padding: '6px 14px', background: '#f0f4f8', border: '1px solid #134978', borderRadius: '4px', color: '#134978', fontSize: '.83rem', fontWeight: 600, textDecoration: 'none' }}>
+                    Conditional Knockout Mouse Models
+                  </Link>
+                )}
+                {types.includes('Knockin') && (
+                  <Link href="/knockin-mouse-models/" style={{ padding: '6px 14px', background: '#f0f4f8', border: '1px solid #134978', borderRadius: '4px', color: '#134978', fontSize: '.83rem', fontWeight: 600, textDecoration: 'none' }}>
+                    Knockin Mouse Models
+                  </Link>
+                )}
+                {types.includes('Humanized') && (
+                  <Link href="/humanized-mouse-models/" style={{ padding: '6px 14px', background: '#f0f4f8', border: '1px solid #134978', borderRadius: '4px', color: '#134978', fontSize: '.83rem', fontWeight: 600, textDecoration: 'none' }}>
+                    Humanized Mouse Models
+                  </Link>
+                )}
+                {types.includes('Transgenic') && (
+                  <Link href="/transgenic-mouse-service/" style={{ padding: '6px 14px', background: '#f0f4f8', border: '1px solid #134978', borderRadius: '4px', color: '#134978', fontSize: '.83rem', fontWeight: 600, textDecoration: 'none' }}>
+                    Transgenic Mouse Models
+                  </Link>
+                )}
+                <Link href="/custom-mouse-models/" style={{ padding: '6px 14px', background: '#f0f9f9', border: '1px solid #008080', borderRadius: '4px', color: '#008080', fontSize: '.83rem', fontWeight: 600, textDecoration: 'none' }}>
+                  Custom Mouse Model Services
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Related Genes */}
         {relatedGenes.length > 0 && (
