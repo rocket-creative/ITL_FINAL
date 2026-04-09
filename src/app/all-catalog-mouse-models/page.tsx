@@ -26,7 +26,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 
   if (query) {
     const title       = `${query} Mouse Models | ${SITE_NAME}`;
-    const description = `Find ${query} genetically engineered mouse models from our catalog of 10,000+ knockout, knockin, humanized, and Cre driver strains. Request a model or get a quote.`;
+    const description = `Find ${query} genetically engineered mouse models from our catalog of 14,774+ knockout, knockin, humanized, and Cre driver strains. Request a model or get a quote.`;
     const canonical   = `${BASE_URL}/all-catalog-mouse-models/?q=${encodeURIComponent(query)}`;
 
     return {
@@ -40,7 +40,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 
   // Default metadata (same as before)
   const title       = `All Catalog Mouse Models | ${SITE_NAME}`;
-  const description = 'Search 10,000+ ready-made genetically engineered mouse models — knockout, knockin, humanized, Cre driver, and reporter strains. Fast delivery. Request yours today.';
+  const description = 'Search 14,774+ ready-made genetically engineered mouse models — knockout, knockin, humanized, Cre driver, and reporter strains. Fast delivery. Request yours today.';
   const canonical   = `${BASE_URL}/all-catalog-mouse-models/`;
 
   return {

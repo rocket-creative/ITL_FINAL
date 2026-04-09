@@ -40,7 +40,7 @@ Study ready cohorts on C57BL/6 backgrounds with structured breeding to support s
 
 ### Catalog Library
 
-Access our catalog of 10,000+ genome engineered mouse and rat models for study ready scientific discovery. 
+Access our catalog of 14,774+ genome engineered mouse and rat models for study ready scientific discovery. 
 
 (/catalog-mouse-models)
 
@@ -62,7 +62,7 @@ For more than 30 years, ingenious targeting laboratory has supported biomedical 
 
 • Multi-generation cohort development and colony planning for study readiness.
 
-• Animal model catalog access to 10,000+ lines for study ready biomedical research. 
+• Animal model catalog access to 14,774+ lines for study ready biomedical research. 
 
 • Integrated non-GLP preclinical services for your custom or catalog model to support translational decisions
 

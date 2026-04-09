@@ -20,7 +20,7 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 10000, suffix: "+", label: "Models in Library" },
+  { value: 14774, suffix: "+", label: "Models in Library" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Quality Verified" }
@@ -135,7 +135,7 @@ const faqData = [
   },
   {
     question: "What is the Ingenious Catalog Library?",
-    answer: "The Catalog Library includes 10,000+ mouse and rat models. These models are available for scientific use, and availability is confirmed upon request. Models available include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging."
+    answer: "The Catalog Library includes 14,774+ mouse and rat models. These models are available for scientific use, and availability is confirmed upon request. Models available include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging."
   }
 ];
 
@@ -319,7 +319,7 @@ export default function CatalogMouseModelsPage() {
                   Prefer to browse alphabetically?
                 </p>
                 <p style={{ margin: '4px 0 0', color: '#666', fontSize: '.85rem' }}>
-                  View all 14,000+ gene targets sorted A–Z with catalog numbers.
+                  View unique gene targets sorted A–Z with catalog numbers.
                 </p>
               </div>
               <Link

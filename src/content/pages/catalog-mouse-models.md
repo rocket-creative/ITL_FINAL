@@ -159,4 +159,4 @@ Shipping timelines depend on availability. Contact us to determine the timeline 
 
 **What is the ingenious Catalog Library?**
 
-The Catalog Library includes 10,000+ mouse and rat models. These models are available for scientific use, and availability is confirmed upon request. Models available include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging.
+The Catalog Library includes 14,774+ mouse and rat models. These models are available for scientific use, and availability is confirmed upon request. Models available include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging.

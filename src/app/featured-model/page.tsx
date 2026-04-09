@@ -477,7 +477,7 @@ export default function FeaturedModelPage() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
-                  { label: 'All Catalog Models', href: '/all-catalog-mouse-models', desc: 'Search 10,000+ ready-to-ship strains' },
+                  { label: 'All Catalog Models', href: '/all-catalog-mouse-models', desc: 'Search 14,774+ ready-to-ship strains' },
                   { label: 'Humanized Mouse Models', href: '/humanized-mouse-models', desc: 'Human gene knockin models for therapeutic testing' },
                   { label: 'Catalog Overview', href: '/catalog-mouse-models', desc: 'Checkpoint, Cre driver, and reporter strains' },
                 ].map((item) => (

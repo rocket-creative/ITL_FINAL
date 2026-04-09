@@ -150,7 +150,7 @@ export default function AnimatedOverviewSection() {
               fontWeight: 400,
               lineHeight: '1.3rem'
             }}>
-              Animal model catalog access to 10,000+ lines for study ready biomedical research.
+              Animal model catalog access to 14,774+ lines for study ready biomedical research.
             </li>
             <li className="animate-item" style={{ 
               color: '#666',

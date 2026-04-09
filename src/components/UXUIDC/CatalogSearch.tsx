@@ -155,7 +155,7 @@ export function CatalogSearch({
             Search Our Catalog Models
           </h2>
           <p style={{ fontSize: '.9rem', color: '#666', margin: 0 }}>
-            Explore {stats ? `${stats.total_models.toLocaleString()}+` : '10,000+'} genetically engineered mouse and rat models
+            Explore {stats ? `${stats.total_models.toLocaleString()}+` : '14,774+'} genetically engineered mouse and rat models
           </p>
         </div>
       )}
@@ -385,7 +385,7 @@ export function CatalogSearch({
       {!hasSearched && !compact && (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6" style={{ gap: '12px', marginTop: '24px' }}>
           {[
-            { label: 'Total Models',  value: stats ? `${stats.total_models.toLocaleString()}+`         : '14,000+', color: '#008080' },
+            { label: 'Total Models',  value: stats ? `${stats.total_models.toLocaleString()}+`         : '14,774+', color: '#008080' },
             { label: 'Unique Genes',  value: stats ? `${stats.unique_genes.toLocaleString()}+`          : '5,000+',  color: '#008080' },
             { label: 'Live Models',   value: stats ? `${stats.live_models.toLocaleString()}+`           : '2,400+',  color: '#2e7d32' },
             { label: 'Sperm Cryo',    value: stats?.sperm_cryo_models  != null ? `${stats.sperm_cryo_models.toLocaleString()}+`  : '7,700+',  color: '#e65100' },

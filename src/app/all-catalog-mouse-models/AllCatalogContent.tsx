@@ -42,7 +42,7 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
               marginBottom: '20px'
             }}>
               <IconLayers size={14} color="#00d4d4" />
-              <span style={{ color: '#ffffff', fontSize: '.85rem', fontWeight: 500 }}>10,000+ Models</span>
+              <span style={{ color: '#ffffff', fontSize: '.85rem', fontWeight: 500 }}>14,774+ Models</span>
             </div>
             <h1 style={{
               fontFamily: 'Poppins, sans-serif',
@@ -60,7 +60,7 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
               lineHeight: 1.7,
               maxWidth: '800px'
             }}>
-              Search our extensive catalog of over 10,000 genetically engineered mouse models including knockout, knockin, humanized, Cre driver, and reporter strains for biomedical research and drug development.
+              Search our extensive catalog of over 14,774 genetically engineered mouse models including knockout, knockin, humanized, Cre driver, and reporter strains for biomedical research and drug development.
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link href="/order-catalog-models" style={{
