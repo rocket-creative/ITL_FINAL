@@ -286,7 +286,7 @@ export function CatalogSearch({
 
           {filteredResults.length > 0 && (
             <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'fixed', minWidth: '750px' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'auto', minWidth: '750px' }}>
                 <thead>
                   <tr style={{ background: '#f7f7f7' }}>
                     {['Gene Name', 'Model Abbreviation', 'Model Type', 'Category', 'Availability', 'ITL Catalog #', ''].map((h) => (
@@ -317,13 +317,13 @@ export function CatalogSearch({
                       <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', color: '#666', maxWidth: '180px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={model.category || ''}>
                         {model.category || 'N/A'}
                       </td>
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', whiteSpace: 'nowrap' }}>
-                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '.85rem', color: getAvailabilityColor(model.availability) }}>
-                          <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: getAvailabilityColor(model.availability), flexShrink: 0 }} />
-                          {model.availability || 'Inquire'}
+                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', minWidth: '120px' }}>
+                        <span style={{ display: 'inline-flex', alignItems: 'flex-start', gap: '6px', fontSize: '.85rem', color: getAvailabilityColor(model.availability) }}>
+                          <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: getAvailabilityColor(model.availability), flexShrink: 0, marginTop: '4px' }} />
+                          <span>{model.availability || 'Inquire'}</span>
                         </span>
                       </td>
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', color: '#555', fontSize: '.85rem', fontFamily: 'monospace', whiteSpace: 'nowrap' }}>
+                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', color: '#555', fontSize: '.85rem', fontFamily: 'monospace', whiteSpace: 'nowrap', minWidth: '100px' }}>
                         {model.catalogNumber}
                       </td>
                       <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', textAlign: 'center' }}>

@@ -59,6 +59,20 @@ async function searchCatalog(
     }
   }
 
+  if (rows.length < limit) {
+    // Tier 3: broad contains — model abbreviation and catalog number fallback
+    const { data: t3 } = await supabase
+      .from('catalog_models')
+      .select(FIELDS)
+      .or(`model_abbreviation.ilike.%${q}%,itl_catalog_number.ilike.%${q}%`)
+      .order('gene_name')
+      .limit(limit);
+
+    for (const r of t3 ?? []) {
+      if (!seen.has(r.id)) { seen.add(r.id); rows.push(r); }
+    }
+  }
+
   return rows.slice(0, limit).map((r) => ({
     id:       String(r.id),
     title:    r.gene_name || r.model_abbreviation,
