@@ -2,6 +2,16 @@
 
 Use this template when adding new articles to `src/data/newsletterArticles.ts`.
 
+## Client manuscript vs house style
+
+When the team provides a **final** article as Markdown or Word, treat it as the source of truth: convert to HTML and stage it **without**:
+
+- Rewriting terminology for unrelated site rules (for example keep **CAR-T**, **off-target**, **first-in-human**).
+- **Merging duplicate references**, renumbering citations, or dropping bibliography entries that are not cited in the body, unless the client explicitly requests those edits.
+- Applying global “no hyphen” rules from other project docs; those do **not** apply to approved Lab Signals body copy.
+
+Optional hyphen or tone rules apply only to **internally drafted** Lab Signals copy, and only when the team agrees.
+
 ## Template
 
 ```typescript
@@ -68,8 +78,9 @@ Use this template when adding new articles to `src/data/newsletterArticles.ts`.
 - [ ] Category is from approved list
 - [ ] Related page URL is valid
 - [ ] publishedAt is future date for staging
-- [ ] No hyphens in body copy
-- [ ] No AI phrases ("dive into", "leverage", etc.)
+- [ ] Body copy matches approved manuscript (no hyphen stripping or reference consolidation unless the client requested it)
+- [ ] Citation numbers and reference list match the source (including duplicate numbers and extra bibliography lines)
+- [ ] No AI phrases ("dive into", "leverage", etc.) when drafting from scratch only
 - [ ] Citations use `<sup>[#]</sup>` format
 - [ ] References match source document format
 - [ ] All HTML tags properly closed

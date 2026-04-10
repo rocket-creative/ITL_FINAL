@@ -147,10 +147,27 @@ Use superscript format:
 
 ### Content Rules
 
-- **No hyphens** in copy (rewrite to avoid)
-- **No AI giveaway phrases**: "dive into", "leverage", "it's important to note", "let's explore"
-- **Active voice** preferred
-- **Sentence case** for headings
+**Client-approved or final manuscript copy (default for Lab Signals posts):**
+
+- Preserve the source **verbatim** when the team supplies a Word/Markdown file that is ready to publish. Do **not** rewrite compound terms, scientific phrasing, or punctuation to satisfy general site style rules (for example keep **CAR-T**, **off-target**, **first-in-human**, em dashes, and hyphenated adjectives as written).
+- Only normalize what the pipeline requires: convert Markdown or Word to HTML, apply citation markup (`<sup>[n]</sup>`), and fix actual typos **only if the client asks**.
+
+**Do not “improve” client manuscripts (applies to every supplied article):**
+
+- **Do not** consolidate or deduplicate the reference list when the manuscript repeats the same paper under two numbers (for example [3] and [6]). Keep both list entries and keep in-text `<sup>[n]</sup>` numbers exactly as in the source.
+- **Do not** remove references that appear in the bibliography but are never cited in the body, and **do not** add citations just to “use” an extra reference, unless the client requests an edit.
+- **Do not** renumber references to make the list sequential with no duplicates.
+- **Do not** rewrite body copy to remove hyphens, rephrase compound adjectives, or apply project-wide “no hyphen” rules. Those rules apply elsewhere on the site; they **do not** apply to Lab Signals articles delivered as final copy.
+
+**Internally drafted copy (only when no final manuscript exists):**
+
+- Optional house style may prefer fewer hyphens in marketing-style prose. Confirm with the team before publishing.
+
+**Always:**
+
+- **No AI giveaway phrases** when drafting from scratch: "dive into", "leverage", "it's important to note", "let's explore"
+- **Active voice** preferred when you are the author; not applicable when pasting approved copy
+- **Sentence case** for headings unless the manuscript specifies otherwise
 
 ## Example Complete Article
 
@@ -190,9 +207,10 @@ Before completing an article addition:
 - [ ] `relatedPage` points to valid iTL service
 - [ ] Body HTML uses proper tags (`<p>`, `<h3>`, `<h4>`, `<ul>`, `<ol>`)
 - [ ] Citations use `<sup>[1]</sup>` format
-- [ ] References section matches source document format
-- [ ] No hyphens in copy
-- [ ] No AI giveaway phrases
+- [ ] References section matches source document format (including duplicate numbered entries and any uncited bibliography lines if the client supplied them that way)
+- [ ] In-text `<sup>[n]</sup>` numbers match the source manuscript; no consolidation or renumbering
+- [ ] Body copy matches **final client manuscript** (wording, hyphens, dashes); no hyphen stripping or reference “cleanup” unless the client asked
+- [ ] No AI giveaway phrases (when drafting from scratch only)
 - [ ] **Output both URLs** with password reminder
 
 ## File Locations

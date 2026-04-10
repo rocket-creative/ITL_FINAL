@@ -5,6 +5,7 @@
  */
 
 import { mouseOrganoidChipArticleBody } from './_labSignalsMouseOrganoidChipArticle';
+import { benchToBedsideCarTArticleBody } from './_labSignalsBenchToBedsideCarTArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1031,6 +1032,19 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/custom-mouse-models",
     body: mouseOrganoidChipArticleBody,
     publishedAt: "2026-03-31",
+  },
+  {
+    id: "from-bench-to-bedside-mouse-models-car-t-adoptive-cell-therapy",
+    slug: "from-bench-to-bedside-mouse-models-car-t-adoptive-cell-therapy",
+    title:
+      "From Bench to Bedside: Using Mouse Models to Accelerate CAR-T and Adoptive Cell Therapy Development",
+    subtitle: "Cascaded preclinical models for CAR T translation",
+    description:
+      "CAR-T programs use cascaded mouse models to connect xenograft potency with persistence, toxicity, humanized safety, and solid tumor biology before trials.",
+    category: "Oncology",
+    relatedPage: "/immuno-oncology-mouse-models",
+    body: benchToBedsideCarTArticleBody,
+    publishedAt: "2026-04-14",
   },
 ];
 

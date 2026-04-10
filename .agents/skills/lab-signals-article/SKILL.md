@@ -49,3 +49,11 @@ https://www.genetargeting.com/lab-signals/{slug}?preview=itl-team-preview
 | Skills folder | `LAB SIGNALS/` |
 | Article page | `src/app/lab-signals/[slug]/page.tsx` |
 | Client component | `src/app/lab-signals/[slug]/LabSignalsArticleClient.tsx` |
+
+## Client-approved copy (important)
+
+Read [`LAB SIGNALS/SKILL.md`](LAB SIGNALS/SKILL.md) **Content Rules**. For supplied final articles:
+
+- Preserve **wording** verbatim (hyphens, **CAR-T**, em dashes). Project-wide “no hyphen” rules do **not** apply.
+- Preserve **references** as provided: do **not** merge duplicate bibliography entries, renumber in-text citations, or remove uncited references unless the client asks.
+- Convert structure to HTML and `<sup>[n]</sup>` only; do not “clean up” citations or copy for style.
