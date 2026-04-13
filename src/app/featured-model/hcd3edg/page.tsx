@@ -122,10 +122,10 @@ const VALIDATION_FIGURES: {
   },
   {
     caption:
-      'Fig.6 In vivo AICD and irAE Assessment of CD3 Bispecific Antibody with Homozgyous hCD3EDG Mice.',
+      'Fig.6 In vivo AICD and irAE Assessment of CD3 Bispecific Antibody with Homozygous hCD3EDG Mice.',
     body: 'Homozygous hCD3EDG mice were engrafted with MC38-hEpCAM to evaluate the AICD and irAE of anti-CD3×EpCAM bispecific antibody at low and high dose levels in vivo.',
     src: '/model-of-month-images/image6.png',
-    alt: 'Fig.6 In vivo AICD and irAE Assessment of CD3 Bispecific Antibody with Homozgyous hCD3EDG Mice.',
+    alt: 'Fig.6 In vivo AICD and irAE Assessment of CD3 Bispecific Antibody with Homozygous hCD3EDG Mice.',
   },
   {
     caption: 'Fig.7 In Vivo Response with Bispecific T Cell Engager Antibodies.',
@@ -530,6 +530,7 @@ export default function HCD3EDGPage() {
                 style={{
                   margin: 0,
                   paddingLeft: '1.25rem',
+                  listStyleType: 'disc',
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '10px',
@@ -540,11 +541,11 @@ export default function HCD3EDGPage() {
                     key={b}
                     style={{
                       fontSize: '.95rem',
-                      color: '#444',
+                      color: '#00d4d4',
                       lineHeight: 1.75,
                     }}
                   >
-                    {b}
+                    <span style={{ color: '#444' }}>{b}</span>
                   </li>
                 ))}
               </ul>
