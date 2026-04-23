@@ -17,15 +17,8 @@ const poppins = Poppins({
   adjustFontFallback: true,
 });
 
-// Google Analytics 4 Measurement ID
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '';
-// Google Ads Conversion ID
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || '';
-const GOOGLE_ADS_QUOTE_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_QUOTE_LABEL || '';
-const GOOGLE_ADS_QUOTE_SEND_TO =
-  GOOGLE_ADS_ID && GOOGLE_ADS_QUOTE_LABEL
-    ? `${GOOGLE_ADS_ID}/${GOOGLE_ADS_QUOTE_LABEL}`
-    : '';
 
 export const metadata: Metadata = {
   title: {
@@ -94,25 +87,6 @@ export default function RootLayout({
                   gtag('js', new Date());
                   ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}');` : ''}
                   ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ''}
-
-                  // Google Ads conversion for onclick (optional). send_to from NEXT_PUBLIC_GOOGLE_ADS_* quote label.
-                  window.gtag_report_conversion = function(url) {
-                    var sendTo = ${JSON.stringify(GOOGLE_ADS_QUOTE_SEND_TO)};
-                    if (!sendTo) {
-                      if (typeof url !== 'undefined') window.location = url;
-                      return false;
-                    }
-                    var callback = function() {
-                      if (typeof url !== 'undefined') {
-                        window.location = url;
-                      }
-                    };
-                    gtag('event', 'conversion', {
-                      send_to: sendTo,
-                      event_callback: callback
-                    });
-                    return false;
-                  };
                 `,
               }}
             />

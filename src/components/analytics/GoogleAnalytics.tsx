@@ -17,20 +17,14 @@
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, Suspense } from 'react';
+import {
+  buildGoogleAdsSendTo,
+  fireGoogleAdsConversion,
+} from '@/lib/analytics/googleAdsConversion';
 
-// ============================================
-// CONFIGURATION - Replace with your actual IDs
-// ============================================
-// Get these from: https://analytics.google.com (GA4)
-// and https://ads.google.com (Google Ads)
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-XXXXXXXXXX';
-// Conversion labels from Google Ads → Goals → Conversions
-// Format: AW-XXXXXXXXXX/LABEL_STRING
-const GOOGLE_ADS_QUOTE_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_QUOTE_LABEL || '';
-const GOOGLE_ADS_CONTACT_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONTACT_LABEL || '';
 
-// Declare gtag on window
 declare global {
   interface Window {
     gtag: (
@@ -39,8 +33,6 @@ declare global {
       params?: Record<string, unknown>
     ) => void;
     dataLayer: unknown[];
-    // Google Ads onclick conversion function (defined in layout.tsx)
-    gtag_report_conversion: (url?: string) => false;
   }
 }
 
@@ -256,16 +248,13 @@ export function trackFormSubmission(
     ...formData,
   });
 
-  // Also track as a conversion in Google Ads — uses real label from Google Ads account
-  const sendTo = GOOGLE_ADS_QUOTE_LABEL
-    ? `${GOOGLE_ADS_ID}/${GOOGLE_ADS_QUOTE_LABEL}`
-    : GOOGLE_ADS_ID;
-
-  gtag('event', 'conversion', {
-    send_to: sendTo,
-    value: 1.0,
-    currency: 'USD',
-  });
+  // Google Ads conversion fires only when the label env var is a real label slug.
+  // If the label is missing or misconfigured, the conversion is skipped rather
+  // than emitting a broken send_to.
+  fireGoogleAdsConversion(
+    buildGoogleAdsSendTo(process.env.NEXT_PUBLIC_GOOGLE_ADS_QUOTE_LABEL),
+    { value: 1, currency: 'USD' }
+  );
 }
 
 /**
@@ -290,24 +279,17 @@ export function trackQuoteRequest(
   modelType?: string,
   serviceType?: string
 ) {
-  // Track in GA4
   gtag('event', 'generate_lead', {
     currency: 'USD',
-    value: 100, // Estimated lead value
+    value: 100,
     model_type: modelType,
     service_type: serviceType,
   });
 
-  // Track as Google Ads conversion — uses real label from Google Ads account
-  const sendTo = GOOGLE_ADS_QUOTE_LABEL
-    ? `${GOOGLE_ADS_ID}/${GOOGLE_ADS_QUOTE_LABEL}`
-    : GOOGLE_ADS_ID;
-
-  gtag('event', 'conversion', {
-    send_to: sendTo,
-    value: 100,
-    currency: 'USD',
-  });
+  fireGoogleAdsConversion(
+    buildGoogleAdsSendTo(process.env.NEXT_PUBLIC_GOOGLE_ADS_QUOTE_LABEL),
+    { value: 100, currency: 'USD' }
+  );
 }
 
 /**
@@ -324,14 +306,9 @@ export function trackContactSubmission(
     inquiry_type: inquiryType,
   });
 
-  // Track as Google Ads conversion — uses real label from Google Ads account
-  const sendTo = GOOGLE_ADS_CONTACT_LABEL
-    ? `${GOOGLE_ADS_ID}/${GOOGLE_ADS_CONTACT_LABEL}`
-    : GOOGLE_ADS_ID;
-
-  gtag('event', 'conversion', {
-    send_to: sendTo,
-  });
+  fireGoogleAdsConversion(
+    buildGoogleAdsSendTo(process.env.NEXT_PUBLIC_GOOGLE_ADS_CONTACT_LABEL)
+  );
 }
 
 /**
