@@ -22,6 +22,8 @@ import {
   IconUsers,
 } from '@/components/UXUIDC/Icons';
 
+const SCHEDULE_MEETING_THANK_YOU = '/schedule-meeting/thank-you/';
+
 // Meeting benefits
 const meetingBenefits = [
   'Review your targeting strategy options',
@@ -209,6 +211,10 @@ export default function ScheduleMeetingPage() {
                   fallbackFields={fallbackFields}
                   submitButtonText="Schedule Consultation"
                   successMessage="Thank you! We'll contact you to confirm your meeting time."
+                  redirectAfterSubmit={SCHEDULE_MEETING_THANK_YOU}
+                  onFallbackSuccess={() => {
+                    window.location.assign(SCHEDULE_MEETING_THANK_YOU);
+                  }}
                 />
               </div>
             </div>

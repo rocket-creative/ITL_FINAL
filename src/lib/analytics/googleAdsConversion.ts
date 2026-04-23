@@ -5,6 +5,9 @@
 
 export const THANK_YOU_SESSION_QUOTE = 'itl_thankyou_quote_conv';
 export const THANK_YOU_SESSION_START_PROJECT = 'itl_thankyou_start_project_conv';
+export const THANK_YOU_SESSION_MEETING = 'itl_thankyou_meeting_conv';
+export const THANK_YOU_SESSION_CATALOG_ORDER = 'itl_thankyou_catalog_order_conv';
+export const THANK_YOU_SESSION_NEWSLETTER = 'itl_thankyou_newsletter_conv';
 
 export function buildGoogleAdsSendTo(label: string | undefined): string | null {
   const id = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID?.trim();

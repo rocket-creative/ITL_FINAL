@@ -1,6 +1,12 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import {
+  buildGoogleAdsSendTo,
+  fireGoogleAdsConversion,
+  runThankYouConversionOnce,
+  THANK_YOU_SESSION_NEWSLETTER,
+} from '@/lib/analytics/googleAdsConversion';
 
 interface FlodeskFormProps {
   formId?: string;
@@ -82,10 +88,27 @@ export default function FlodeskForm({
       createForm();
     });
 
-    // Cleanup on unmount
+    // Track newsletter signup as a Google Ads conversion.
+    // Flodesk renders the form iframe/DOM inside the container; we capture the
+    // submit event as it bubbles and fire once per tab to avoid duplicates.
+    const container = containerRef.current;
+    const handleSubmit = () => {
+      runThankYouConversionOnce(THANK_YOU_SESSION_NEWSLETTER, () => {
+        const sendTo = buildGoogleAdsSendTo(
+          process.env.NEXT_PUBLIC_GOOGLE_ADS_NEWSLETTER_LABEL,
+        );
+        fireGoogleAdsConversion(sendTo, { value: 10, currency: 'USD' });
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'sign_up', { method: 'lab_signals_newsletter' });
+        }
+      });
+    };
+    container?.addEventListener('submit', handleSubmit, true);
+
     return () => {
-      if (containerRef.current) {
-        containerRef.current.innerHTML = '';
+      container?.removeEventListener('submit', handleSubmit, true);
+      if (container) {
+        container.innerHTML = '';
       }
     };
   }, [formId]);

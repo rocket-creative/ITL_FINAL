@@ -24,6 +24,8 @@ import {
 } from '@/components/UXUIDC/Icons';
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
+const ORDER_CATALOG_THANK_YOU = '/order-catalog-models/thank-you/';
+
 // ========== FORM FIELD OPTIONS ==========
 const modelCategoryOptions = [
   'Humanized Checkpoint Model',
@@ -370,6 +372,10 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
                     submitButtonText="Submit Order Inquiry"
                     successMessage="Thank you! We'll contact you within 1 business day with availability and pricing."
                     initialValues={initialValues}
+                    redirectAfterSubmit={ORDER_CATALOG_THANK_YOU}
+                    onFallbackSuccess={() => {
+                      window.location.assign(ORDER_CATALOG_THANK_YOU);
+                    }}
                   />
                   <button
                     onClick={() => setShowCatalogSearch(!showCatalogSearch)}
