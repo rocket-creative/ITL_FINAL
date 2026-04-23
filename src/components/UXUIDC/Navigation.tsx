@@ -234,6 +234,7 @@ const navigationItems: NavItem[] = [
     children: [
       { label: 'Downloadables', href: '/resources' },
       { label: 'Ingenious Blog', href: '/ingenious-blog' },
+      { label: 'Researcher Spotlight', href: '/researcher-spotlight' },
       { label: 'Lab Signals Newsletter', href: '/lab-signals' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
       { label: 'Glossary', href: '/glossary' },

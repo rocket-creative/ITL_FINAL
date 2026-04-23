@@ -83,6 +83,7 @@ const footerSections = [
     links: [
       { label: 'Lab Signals Newsletter', href: '/lab-signals' },
       { label: 'Ingenious Blog', href: '/ingenious-blog' },
+      { label: 'Researcher Spotlight', href: '/researcher-spotlight' },
       { label: 'Publications', href: '/publications' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
       { label: 'Video Library', href: '/video-library' },

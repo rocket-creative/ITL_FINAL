@@ -25,6 +25,7 @@ import {
   GlossaryTermLink,
   BreedingSchemeArchitectCTA,
   BreadcrumbSchema,
+  SpotlightModule,
   IconDNA,
   IconTarget,
   IconMicroscope,
@@ -814,6 +815,9 @@ export default function KnockoutMouseModelsPage() {
             </div>
           </div>
         </section>
+
+        {/* ========== RESEARCHER SPOTLIGHT MODULE ========== */}
+        <SpotlightModule modelType="knockout" />
 
         {/* ========== START YOUR PROJECT CTA ========== */}
         <UXUIDCStartProjectCTA

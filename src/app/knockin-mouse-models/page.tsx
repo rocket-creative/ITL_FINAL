@@ -21,6 +21,7 @@ import {
   getRelatedLabSignalsArticles,
   GlossaryTermLink,
   BreedingSchemeArchitectCTA,
+  SpotlightModule,
   IconDNA,
   IconTarget,
   IconSettings,
@@ -651,6 +652,9 @@ export default function KnockinMouseModelsPage() {
             </div>
           </div>
         </section>
+
+        {/* ========== RESEARCHER SPOTLIGHT MODULE ========== */}
+        <SpotlightModule modelType="knockin" />
 
         {/* ========== START YOUR PROJECT CTA ========== */}
         <UXUIDCStartProjectCTA

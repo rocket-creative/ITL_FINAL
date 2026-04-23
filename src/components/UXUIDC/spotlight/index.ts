@@ -1,0 +1,9 @@
+export { SpotlightHero } from './SpotlightHero';
+export { SpotlightCitation } from './SpotlightCitation';
+export { SpotlightBody } from './SpotlightBody';
+export { SpotlightPullquote } from './SpotlightPullquote';
+export { SpotlightModelSection } from './SpotlightModelSection';
+export { SpotlightResearcherCard } from './SpotlightResearcherCard';
+export { SpotlightFooterCTA } from './SpotlightFooterCTA';
+export { SpotlightIndexCard } from './SpotlightIndexCard';
+export { SpotlightModule } from './SpotlightModule';
