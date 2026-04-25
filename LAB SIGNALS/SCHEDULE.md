@@ -13,7 +13,8 @@ Articles release **every 2 weeks**. This file tracks upcoming and past releases.
 
 | Release Date | Article Title | Slug | Status |
 |--------------|---------------|------|--------|
-| 2026-04-14 | From Bench to Bedside: Using Mouse Models to Accelerate CAR-T and Adoptive Cell Therapy Development | from-bench-to-bedside-mouse-models-car-t-adoptive-cell-therapy | Staged |
+| 2026-04-28 | Optimizing Conditional Knockout Mouse Breeding: A Cost-Efficiency Guide | optimizing-conditional-knockout-mouse-breeding-cost-efficiency-guide | Staged |
+| 2026-04-14 | From Bench to Bedside: Using Mouse Models to Accelerate CAR-T and Adoptive Cell Therapy Development | from-bench-to-bedside-mouse-models-car-t-adoptive-cell-therapy | Released |
 
 ## Past Releases (2026)
 

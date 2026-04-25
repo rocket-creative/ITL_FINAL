@@ -6,6 +6,7 @@
 
 import { mouseOrganoidChipArticleBody } from './_labSignalsMouseOrganoidChipArticle';
 import { benchToBedsideCarTArticleBody } from './_labSignalsBenchToBedsideCarTArticle';
+import { ckoBreedingCostEfficiencyArticleBody } from './_labSignalsCkoBreedingCostEfficiencyArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1045,6 +1046,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/immuno-oncology-mouse-models",
     body: benchToBedsideCarTArticleBody,
     publishedAt: "2026-04-14",
+  },
+  {
+    id: "optimizing-conditional-knockout-mouse-breeding-cost-efficiency-guide",
+    slug: "optimizing-conditional-knockout-mouse-breeding-cost-efficiency-guide",
+    title: "Optimizing Conditional Knockout Mouse Breeding: A Cost-Efficiency Guide",
+    subtitle: "Practical breeding strategies for Cre-loxP systems",
+    description:
+      "Cut per-diem and genotyping costs on Cre-loxP colonies. Practical breeding, timeline, and cost-control strategies for efficient conditional knockout mice.",
+    category: "Technical Guide",
+    relatedPage: "/conditional-knockout-mouse-models",
+    body: ckoBreedingCostEfficiencyArticleBody,
+    publishedAt: "2026-04-28",
   },
 ];
 
