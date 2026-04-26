@@ -91,7 +91,7 @@ export default function IngeniousAd({
           marginBottom: '18px',
         }}
       >
-        Custom mouse models since 1998. Expert design, guaranteed results.
+        Custom mouse models since 1998. Expertly designed. Delivery guaranteed.
       </p>
       <Link
         href={relatedPage}
