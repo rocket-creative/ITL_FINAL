@@ -38,9 +38,10 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
     };
   }
 
-  // Default metadata (same as before)
-  const title       = `All Catalog Mouse Models | ${SITE_NAME}`;
-  const description = 'Search 14,774+ ready-made genetically engineered mouse models — knockout, knockin, humanized, Cre driver, and reporter strains. Fast delivery. Request yours today.';
+  // Default metadata — targets buyer-intent queries: "lab mice for sale",
+  // "knock out mice model market", "knock in mice", "transgenic mouse models".
+  const title       = `Lab Mice for Sale | 14,774 Ready Knockout, Knockin & Humanized Mouse Models | ${SITE_NAME}`;
+  const description = '14,774 genetically engineered mouse models ready to ship — knockout, knockin, humanized, Cre driver, transgenic & reporter strains. Live colonies. Search by gene.';
   const canonical   = `${BASE_URL}/all-catalog-mouse-models/`;
 
   return {

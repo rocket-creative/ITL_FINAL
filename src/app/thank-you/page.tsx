@@ -14,9 +14,11 @@ import {
   IconCheckCircle,
   IconArrowRight,
 } from '@/components/UXUIDC';
+import { pushGenericThankYou } from '@/lib/analytics/gtmEvents';
 
 export default function ThankYouPage() {
   useEffect(() => {
+    pushGenericThankYou();
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'generate_lead', { method: 'thank_you_page' });
     }

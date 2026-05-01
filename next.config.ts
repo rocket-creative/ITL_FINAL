@@ -131,13 +131,37 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Legacy URL redirects from genetargeting.com
+  // Legacy URL redirects from genetargeting.com + commercial alias capture.
+  // CreERT2 alias capture consolidates fragmented searches onto the
+  // canonical /tamoxifen-inducible-cre/ service page (the page that
+  // converts) without breaking the existing glossary URLs that already
+  // rank.
   async redirects() {
-    return legacyRedirects.map((redirect) => ({
-      source: redirect.source,
-      destination: redirect.destination,
-      permanent: redirect.permanent,
-    }));
+    const aliasRedirects = [
+      // CreERT2 cluster — funnel typed-URL variants to the service page
+      { source: '/cre-ert2-system', destination: '/tamoxifen-inducible-cre/', permanent: true },
+      { source: '/cre-ert2', destination: '/tamoxifen-inducible-cre/', permanent: true },
+      { source: '/creert2', destination: '/tamoxifen-inducible-cre/', permanent: true },
+      { source: '/cre-ert2-mice', destination: '/tamoxifen-inducible-cre/', permanent: true },
+      { source: '/inducible-cre', destination: '/tamoxifen-inducible-cre/', permanent: true },
+      { source: '/tamoxifen-cre', destination: '/tamoxifen-inducible-cre/', permanent: true },
+      // Humanized service alias capture — exact-match keyword from GSC
+      { source: '/humanized-mice-services', destination: '/humanized-mouse-services/', permanent: true },
+      { source: '/humanized-mice-price', destination: '/humanized-mouse-services/#pricing', permanent: true },
+      { source: '/humanized-mouse-price', destination: '/humanized-mouse-services/#pricing', permanent: true },
+      // Pricing intent capture
+      { source: '/mouse-model-pricing', destination: '/custom-mouse-model-pricing/', permanent: true },
+      { source: '/knockout-mouse-pricing', destination: '/custom-mouse-model-pricing/', permanent: true },
+      { source: '/transgenic-mouse-pricing', destination: '/custom-mouse-model-pricing/', permanent: true },
+    ];
+    return [
+      ...legacyRedirects.map((redirect) => ({
+        source: redirect.source,
+        destination: redirect.destination,
+        permanent: redirect.permanent,
+      })),
+      ...aliasRedirects,
+    ];
   },
 
   // Webpack optimizations (only applies when using --webpack flag)

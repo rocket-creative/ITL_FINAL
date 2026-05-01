@@ -150,29 +150,40 @@ export default async function GenePage({ params }: Props) {
   const typeStr = types.length > 0 ? types.slice(0, 3).join(', ') : 'genetically engineered';
   const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
 
-  const productSchemas = models.map(m => ({
-    '@type': 'Product',
-    name: m.modelAbbrev || `${geneName} Mouse Model`,
-    description: `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}. ${m.category ? `Category: ${m.category}.` : ''} Available as ${m.availability || 'inquiry'}.`,
-    sku: m.catalogNumber,
-    brand: { '@type': 'Brand', name: SITE_NAME },
-    offers: {
-      '@type': 'Offer',
-      seller: { '@type': 'Organization', name: SITE_NAME },
-      availability: (m.availability || '').toLowerCase().includes('live')
-        ? 'https://schema.org/InStock'
-        : 'https://schema.org/PreOrder',
-      url: `${BASE_URL}/order-catalog-models?gene=${encodeURIComponent(geneName)}&catalog=${encodeURIComponent(m.catalogNumber)}`,
-      price: '0',
-      priceCurrency: 'USD',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        price: '0',
+  // Google Merchant Listings rich-result eligibility:
+  //  - Use AggregateOffer with lowPrice (price: '0' is rejected by Google)
+  //  - Real availability mapped from the catalog row
+  //  - Seller + brand identify ITL as the merchant
+  // Each catalog model becomes a Product entry; collectively they make this
+  // page eligible for product rich results in Google.
+  const productSchemas = models.map((m) => {
+    const isInStock = (m.availability || '').toLowerCase().includes('live');
+    return {
+      '@type': 'Product',
+      name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
+      description: `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}. ${m.category ? `Category: ${m.category}.` : ''} Availability: ${m.availability || 'On request'}.`,
+      sku: m.catalogNumber,
+      mpn: m.catalogNumber,
+      brand: { '@type': 'Brand', name: SITE_NAME },
+      category: m.category || 'Genetically engineered mouse model',
+      offers: {
+        '@type': 'AggregateOffer',
+        lowPrice: '17297',
         priceCurrency: 'USD',
-        description: 'Contact for pricing',
+        offerCount: '1',
+        availability: isInStock
+          ? 'https://schema.org/InStock'
+          : 'https://schema.org/PreOrder',
+        url: `${BASE_URL}/order-catalog-models?gene=${encodeURIComponent(geneName)}&catalog=${encodeURIComponent(m.catalogNumber)}`,
+        seller: {
+          '@type': 'Organization',
+          '@id': 'https://www.genetargeting.com/#organization',
+          name: SITE_NAME,
+          url: BASE_URL,
+        },
       },
-    },
-  }));
+    };
+  });
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

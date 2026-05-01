@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema, UXUIDCServicePricingAnchor } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Temporal Gene Control",
@@ -123,6 +123,39 @@ export default function TamoxifenInducibleCrePage() {
             </div>
           </div>
         </section>
+
+        {/* Pricing anchor — converts the 11K monthly impression CreERT2 query cluster */}
+        <UXUIDCServicePricingAnchor
+          serviceLabel="Tamoxifen Inducible Cre"
+          headline="Custom CreERT2 mice — fixed-fee quote in 24 hours."
+          startingPrice="$17,297"
+          subline="Custom CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,500+ projects shipped. Free scientific consultation."
+          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-pricing-anchor"
+          secondaryHref="/all-catalog-mouse-models/?q=cre&utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-catalog"
+          secondaryLabel="Browse Cre Driver Catalog"
+          faqs={[
+            {
+              question: 'How much does a CreERT2 mouse model cost?',
+              answer:
+                'Custom tamoxifen-inducible Cre (CreERT2) mouse projects start at $17,297. Pricing scales with whether you need a custom CreERT2 driver line, a floxed allele paired with an existing Cre line, or a fully integrated inducible conditional knockout. We deliver germline-confirmed founders and provide a fixed-fee quote in 24 hours.',
+            },
+            {
+              question: 'What is the difference between Cre, Cre-ERT2, and CreERT2?',
+              answer:
+                'Cre is a constitutively active recombinase that excises loxP-flanked DNA. CreERT2 (also written Cre-ERT2 or Cre/ERT2) fuses Cre to a mutant estrogen receptor that sequesters the protein in the cytoplasm until tamoxifen is administered. Tamoxifen displaces HSP90 binding and lets CreERT2 enter the nucleus to perform recombination — giving you precise temporal control over gene deletion in adult animals.',
+            },
+            {
+              question: 'How long does a custom CreERT2 mouse project take?',
+              answer:
+                'Typical CreERT2 projects deliver germline-confirmed founders in 9–14 months. If you need both a tissue-specific CreERT2 driver and a paired floxed allele, plan additional time for breeding the lines together. Many tissue-specific CreERT2 lines are already in our catalog and ship from live colonies in weeks.',
+            },
+            {
+              question: 'Do you have ready-to-ship CreERT2 driver lines?',
+              answer:
+                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models including Rosa26-CreERT2 ubiquitous driver and tissue-specific CreERT2 lines. Search the catalog by tissue or gene to see live-colony availability.',
+            },
+          ]}
+        />
 
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>

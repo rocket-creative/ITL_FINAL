@@ -8,7 +8,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup, UXUIDCServicePricingAnchor } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -307,6 +307,34 @@ export default function MouseGenotypingServicePage() {
             </div>
           </div>
         </section>
+
+        {/* Pricing anchor — captures "mouse genotyping service" buyer queries */}
+        <UXUIDCServicePricingAnchor
+          serviceLabel="Mouse Genotyping"
+          headline="Outsource your genotyping. 48-hour turnaround."
+          startingPrice="Per-sample"
+          subline="PCR and qPCR genotyping for knockouts, knockins, transgenics, floxed alleles, and Cre lines. Validated assays. Pricing scales with sample volume and assay complexity."
+          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=genotyping-pricing-anchor"
+          secondaryHref="/contact?utm_source=organic&utm_medium=service&utm_campaign=genotyping-contact"
+          secondaryLabel="Talk to a Scientist"
+          faqs={[
+            {
+              question: 'How much does mouse genotyping cost?',
+              answer:
+                'Mouse genotyping pricing scales with sample volume, allele complexity, and assay type (PCR vs qPCR). High-volume colony genotyping receives discounted per-sample pricing. Contact us for a tailored quote based on your colony size and turnaround requirements.',
+            },
+            {
+              question: 'What turnaround time do you offer for mouse genotyping?',
+              answer:
+                'Standard turnaround is 48 hours from sample receipt for routine PCR genotyping. Rush turnaround (24 hours) is available. Complex assays such as Southern blot copy number determination take longer.',
+            },
+            {
+              question: 'Which genotyping methods do you support?',
+              answer:
+                'PCR genotyping (gel-based and qPCR), Southern blot for copy number, Sanger sequencing, and NGS validation. We design and validate assays for any custom allele, including knockouts, knockins, transgenics, floxed alleles, Cre driver lines, and humanized models.',
+            },
+          ]}
+        />
 
         {/* Genotyping Methods */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>

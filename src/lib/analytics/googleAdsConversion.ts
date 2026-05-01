@@ -1,6 +1,12 @@
 /**
  * Google Ads conversion helpers (client)
- * Centralizes send_to construction and one-shot thank-you firing (Strict Mode safe).
+ *
+ * Conversion firing has moved to GTM. Thank you pages now push named events
+ * to `dataLayer` via @/lib/analytics/gtmEvents and the GTM workspace owns the
+ * Google Ads Conversion Tracking tags + labels. See docs-important/GTM-SETUP-GUIDE.md.
+ *
+ * This file still exports `runThankYouConversionOnce` and the session keys it
+ * uses, so thank you pages can guard against React Strict Mode double fires.
  */
 
 export const THANK_YOU_SESSION_QUOTE = 'itl_thankyou_quote_conv';
@@ -9,6 +15,11 @@ export const THANK_YOU_SESSION_MEETING = 'itl_thankyou_meeting_conv';
 export const THANK_YOU_SESSION_CATALOG_ORDER = 'itl_thankyou_catalog_order_conv';
 export const THANK_YOU_SESSION_NEWSLETTER = 'itl_thankyou_newsletter_conv';
 
+/**
+ * @deprecated Conversions are now fired by GTM via dataLayer events. Use the
+ * helpers in @/lib/analytics/gtmEvents (e.g. `pushQuoteSubmit`) and configure
+ * the conversion label inside the GTM workspace tag, not in code.
+ */
 export function buildGoogleAdsSendTo(label: string | undefined): string | null {
   const id = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID?.trim();
   const l = label?.trim();
@@ -16,6 +27,11 @@ export function buildGoogleAdsSendTo(label: string | undefined): string | null {
   return `${id}/${l}`;
 }
 
+/**
+ * @deprecated Conversions are now fired by GTM via dataLayer events. Use the
+ * helpers in @/lib/analytics/gtmEvents (e.g. `pushQuoteSubmit`) and configure
+ * the conversion tag/label inside the GTM workspace.
+ */
 export function fireGoogleAdsConversion(
   sendTo: string | null,
   params?: { value?: number; currency?: string }

@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, humanizationTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles, GlossaryTermLink, BreedingSchemeArchitectCTA, BreadcrumbSchema } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, humanizationResources, LabSignalsSignup, getRelatedLabSignalsArticles, GlossaryTermLink, BreedingSchemeArchitectCTA, BreadcrumbSchema, UXUIDCServicePricingAnchor } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconGlobe, IconShield, IconSettings, IconFlask, IconChevronRight, IconCheckCircle, IconAward, IconLayers, IconUsers, IconZap } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
@@ -418,6 +418,39 @@ export default function HumanizedMouseModelsPage() {
             </div>
           </div>
         </section>
+
+        {/* Pricing anchor — captures "humanized mice price" buyer queries */}
+        <UXUIDCServicePricingAnchor
+          serviceLabel="Humanized Mouse"
+          headline="Custom humanized mice — get a quote in 24 hours."
+          startingPrice="$24,500"
+          subline="Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), and complete gene replacement. Pricing scales with strategy and timeline."
+          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-pricing-anchor"
+          secondaryHref="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-catalog"
+          secondaryLabel="Browse Humanized Catalog"
+          faqs={[
+            {
+              question: 'How much do humanized mice cost?',
+              answer:
+                'Custom humanized mouse projects start at $24,500. Pricing scales with humanization strategy (drug-target replacement, immune checkpoint, complete gene replacement), allele complexity, and delivery timeline. We deliver germline-confirmed founders and provide a fixed-fee quote in 24 hours after a free scientific consultation.',
+            },
+            {
+              question: 'What humanized mouse services do you offer?',
+              answer:
+                'We have built humanized mouse models since 1998. Services include immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), drug-target humanization for therapeutic antibody and biologic testing, complete gene replacement for human-specific biology, and humanized regulatory elements. 800+ peer-reviewed publications.',
+            },
+            {
+              question: 'How long does it take to build a humanized mouse?',
+              answer:
+                'Typical humanized mouse projects deliver germline-confirmed founders in 9–14 months depending on humanization strategy, ES cell vs CRISPR approach, and validation requirements. Many off-the-shelf humanized models in our catalog ship from live colonies in weeks.',
+            },
+            {
+              question: 'Do you offer off-the-shelf humanized mice?',
+              answer:
+                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, and humanized immune checkpoint mice. Search the catalog by gene to see availability before commissioning a custom build.',
+            },
+          ]}
+        />
 
         {/* Why Humanize Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>

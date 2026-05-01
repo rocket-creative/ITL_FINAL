@@ -27,6 +27,14 @@ export type { PublicationData } from './PublicationCard';
 export { default as UXUIDCAnimatedCounter } from './AnimatedCounter';
 export { default as UXUIDCAnimatedFAQ } from './AnimatedFAQ';
 export { default as UXUIDCStartProjectCTA } from './StartProjectCTA';
+export { default as UXUIDCEducationalSalesBanner, getEducationalOffer } from './EducationalSalesBanner';
+export type { EducationalSalesOffer } from './EducationalSalesBanner';
+export { default as CatalogGeneLookup, getCatalogLookup } from './CatalogGeneLookup';
+export type { CatalogLookup, CatalogGene } from './CatalogGeneLookup';
+export { default as UXUIDCServicePricingAnchor } from './ServicePricingAnchor';
+export type { ServicePricingFaq } from './ServicePricingAnchor';
+export { default as CatalogStickyRail } from './CatalogStickyRail';
+export { default as CommercialCTATracker } from './CommercialCTATracker';
 export { default as BreedingSchemeArchitectCTA } from './BreedingSchemeArchitectCTA';
 export { AutoAnimate } from './AutoAnimate';
 

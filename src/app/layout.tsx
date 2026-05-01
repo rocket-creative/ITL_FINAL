@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { AllPixels } from "@/components/analytics";
 import { Analytics } from "@vercel/analytics/next";
+import { CommercialCTATracker } from "@/components/UXUIDC";
 
 // Only load Vercel Analytics on Vercel (avoids 404 and MIME errors on localhost)
 const isVercel = Boolean(process.env.NEXT_PUBLIC_VERCEL_ENV);
@@ -19,6 +20,7 @@ const poppins = Poppins({
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '';
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || '';
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
 
 export const metadata: Metadata = {
   title: {
@@ -70,6 +72,17 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://js.hsforms.net" />
         <link rel="dns-prefetch" href="https://js.hs-scripts.com" />
+        {/* Google Tag Manager - container loader. Must initialize dataLayer before gtag.js
+            so any early dataLayer.push calls are queued for the GTM container. */}
+        {GTM_ID && (
+          <Script
+            id="gtm-loader"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`,
+            }}
+          />
+        )}
         {/* Google tag (gtag.js) - single loader for GA4 + Google Ads */}
         {(GA_MEASUREMENT_ID || GOOGLE_ADS_ID) && (
           <>
@@ -94,10 +107,23 @@ export default function RootLayout({
         )}
       </head>
       <body className="antialiased">
+        {/* GTM noscript fallback - required by GTM install spec */}
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+        )}
         {/* Additional Tracking Pixels: HubSpot, etc */}
         <AllPixels />
         {isVercel ? <Analytics /> : null}
-        
+        {/* Funnel attribution: tracks every commercial CTA click via gtag */}
+        <CommercialCTATracker />
+
         {/* Skip to main content link for accessibility */}
         <a href="#main-content" className="skip-link">
           Skip to main content

@@ -3,6 +3,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import UXUIDCEducationalSalesBanner from '@/components/UXUIDC/EducationalSalesBanner';
+import CatalogGeneLookup from '@/components/UXUIDC/CatalogGeneLookup';
+import CatalogStickyRail from '@/components/UXUIDC/CatalogStickyRail';
+import { getEducationalOffer } from '@/components/UXUIDC/EducationalSalesBanner';
+import { getCatalogLookup } from '@/components/UXUIDC/CatalogGeneLookup';
 import { IconChevronRight, IconDNA, IconLayers, IconArrowLeft } from '@/components/UXUIDC/Icons';
 import { 
   getExtendedTerm, 
@@ -10,6 +15,112 @@ import {
   getRelatedTerms
 } from '@/data/glossaryTermsExtended';
 import { glossaryTerms } from '@/data/glossaryTerms';
+
+// Per-slug commercial metadata overrides for the highest-impression
+// glossary terms. Replaces the dictionary-style snippet with a commercial
+// offer the searcher will actually click.
+const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: string }> = {
+  'non-homologous-end-joining': {
+    title: 'NHEJ DNA Repair + Custom CRISPR Knockout Mice | ITL',
+    description:
+      'Non-homologous end joining (NHEJ) explained. We use NHEJ for CRISPR knockout mice. From $17,297, 100% germline guarantee. Quote in 24h.',
+  },
+  'open-reading-frame': {
+    title: 'Open Reading Frame (ORF) + Custom Knockin Mouse Models | ITL',
+    description:
+      'ORF defined for genetics research. Need an ORF replacement or humanization knockin mouse? From $17,297. Quote in 24h. 800+ publications.',
+  },
+  'inducible-cre-ert2': {
+    title: 'Inducible CreERT2 + Custom CreERT2 Mouse Service | ITL',
+    description:
+      'Inducible CreERT2 explained for tissue-specific knockouts. We build custom CreERT2 + floxed alleles from $17,297. 2,500+ projects.',
+  },
+  'tamoxifen-inducible-cre': {
+    title: 'Tamoxifen Inducible Cre + Custom CreERT2 Mice | ITL',
+    description:
+      'Tamoxifen-inducible Cre explained. We have shipped 2,500+ CreERT2 projects. Custom builds + ready catalog Cre lines. Quote in 24h.',
+  },
+  'c57bl6j-vs-c57bl6n': {
+    title: 'C57BL/6J vs C57BL/6N + Custom Mice on Either Background | ITL',
+    description:
+      'C57BL/6J vs 6N: substrain differences. We build custom mice on the background you need. 14,774 catalog models. Quote in 24h.',
+  },
+  'point-mutation': {
+    title: 'Point Mutation Definition + Custom Knockin Mouse Models | ITL',
+    description:
+      'Point mutation defined: substitution, missense, nonsense. Custom point mutation knockin mice from $17,297. Quote in 24h.',
+  },
+  'allele-genotype-phenotype': {
+    title: 'Allele, Genotype & Phenotype + Custom Mouse Design | ITL',
+    description:
+      'Allele, genotype, phenotype explained for mouse models. Our scientists design the right allele for your phenotype. Free consultation.',
+  },
+  'promoter-enhancer-regulatory-element': {
+    title: 'Promoter & Enhancer Elements + Custom Knockin Mice | ITL',
+    description:
+      'Promoter vs enhancer regulatory elements. Custom knockin mice at endogenous regulatory loci from $17,297. Quote in 24h.',
+  },
+  'flp-frt-system': {
+    title: 'Flp-FRT System + Custom Conditional Mouse Models | ITL',
+    description:
+      'Flp-FRT recombination explained. Custom Flp/FRT and Cre/lox conditional mice from $17,297. 800+ publications.',
+  },
+  'gain-of-function-vs-loss-of-function-mutation': {
+    title: 'Gain vs Loss of Function Mutation + Custom Mice | ITL',
+    description:
+      'Gain-of-function vs loss-of-function mutations. Custom knockin and knockout mice for either model. From $17,297. Quote in 24h.',
+  },
+  'dominant-negative': {
+    title: 'Dominant Negative Mutation + Custom Knockin Mice | ITL',
+    description:
+      'Dominant negative mutations explained. We build custom dominant-negative knockin mice from $17,297. Quote in 24h.',
+  },
+  'rosa26': {
+    title: 'Rosa26 Locus + Custom Rosa26 Knockin Mouse Service | ITL',
+    description:
+      'Rosa26 safe harbor locus explained. Custom Rosa26 knockin mice — reporters, cassettes, inducible — from $17,297. Quote in 24h.',
+  },
+  'rosa26-locus': {
+    title: 'Rosa26 Locus + Custom Rosa26 Knockin Mice | ITL',
+    description:
+      'Rosa26 locus explained. Custom Rosa26 knockin mice from $17,297. Reporters, conditional cassettes, inducible expression.',
+  },
+  'safe-harbor-locus': {
+    title: 'Safe Harbor Locus + Custom Knockin Mouse Service | ITL',
+    description:
+      'Safe harbor loci (Rosa26, others) explained. Custom safe-harbor knockin mice from $17,297. 800+ publications.',
+  },
+  'tissue-specific-knockout': {
+    title: 'Tissue-Specific Knockout + Custom Conditional Mice | ITL',
+    description:
+      'Tissue-specific knockout mice explained. Custom Cre/lox conditional knockouts from $17,297. 2,500+ projects shipped.',
+  },
+  'humanized-mouse-models': {
+    title: 'Humanized Mouse Models + Custom Humanization Service | ITL',
+    description:
+      'Humanized mouse models defined. Custom humanization (PD1, PDL1, CTLA4, drug targets) since 1998. 800+ publications. Quote in 24h.',
+  },
+  'cre-lox-system': {
+    title: 'Cre/lox System + Custom Cre/lox Conditional Mice | ITL',
+    description:
+      'Cre/lox recombination explained. Custom Cre/lox conditional knockouts from $17,297. 2,500+ projects, 800+ publications.',
+  },
+  'frameshift-mutation': {
+    title: 'Frameshift Mutation + Custom Knockin Mouse Models | ITL',
+    description:
+      'Frameshift mutations explained with examples. Custom knockin mice for any disease variant from $17,297. Quote in 24h.',
+  },
+  'missense-nonsense-mutation': {
+    title: 'Missense vs Nonsense Mutation + Custom Knockin Mice | ITL',
+    description:
+      'Missense and nonsense mutations explained. Custom point mutation knockin mice from $17,297. Quote in 24h. 800+ publications.',
+  },
+  'genotyping-pcr-qpcr': {
+    title: 'Genotyping PCR/qPCR + Mouse Genotyping Service | ITL',
+    description:
+      'PCR and qPCR genotyping explained. Outsource your genotyping — we offer mouse genotyping service with rapid turnaround.',
+  },
+};
 
 // Brand colors
 const BRAND = {
@@ -45,24 +156,27 @@ export async function generateMetadata({
   }
 
   const canonicalUrl = `https://www.genetargeting.com/mouse-genetics-glossary/${term.slug}/`;
+  const commercial = COMMERCIAL_GLOSSARY_META[slug];
+  const finalTitle = commercial?.title ?? term.metaTitle;
+  const finalDescription = commercial?.description ?? term.metaDescription;
 
   return {
-    title: term.metaTitle,
-    description: term.metaDescription,
+    title: finalTitle,
+    description: finalDescription,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: term.metaTitle,
-      description: term.metaDescription,
+      title: finalTitle,
+      description: finalDescription,
       type: 'article',
       siteName: 'ingenious targeting laboratory',
       url: canonicalUrl,
     },
     twitter: {
       card: 'summary',
-      title: term.metaTitle,
-      description: term.metaDescription,
+      title: finalTitle,
+      description: finalDescription,
     },
   };
 }
@@ -141,6 +255,76 @@ export default async function GlossaryTermPage({
           }}
         />
       )}
+
+      {/* Article + Offer schema — surfaces our starting price in the SERP */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': ['Article', 'TechArticle'],
+            headline: term.term,
+            description:
+              COMMERCIAL_GLOSSARY_META[slug]?.description || term.metaDescription,
+            url: `https://www.genetargeting.com/mouse-genetics-glossary/${term.slug}/`,
+            mainEntityOfPage: `https://www.genetargeting.com/mouse-genetics-glossary/${term.slug}/`,
+            inLanguage: 'en-US',
+            datePublished: '2024-01-01',
+            dateModified: new Date().toISOString().split('T')[0],
+            author: {
+              '@type': 'Organization',
+              '@id': 'https://www.genetargeting.com/#organization',
+              name: 'ingenious targeting laboratory',
+              url: 'https://www.genetargeting.com',
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': 'https://www.genetargeting.com/#organization',
+              name: 'ingenious targeting laboratory',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.genetargeting.com/images/logo.png',
+              },
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: getEducationalOffer(slug).eyebrow,
+            serviceType: 'Custom mouse model generation',
+            provider: {
+              '@type': 'Organization',
+              '@id': 'https://www.genetargeting.com/#organization',
+              name: 'ingenious targeting laboratory',
+              url: 'https://www.genetargeting.com',
+            },
+            areaServed: 'Worldwide',
+            offers: {
+              '@type': 'Offer',
+              url: `https://www.genetargeting.com${getEducationalOffer(slug).primaryCta.href.split('?')[0]}`,
+              priceCurrency: 'USD',
+              price: '17297',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'USD',
+                price: '17297',
+                valueAddedTaxIncluded: false,
+                description: 'Starting price for custom mouse model generation',
+              },
+              availability: 'https://schema.org/InStock',
+              seller: {
+                '@type': 'Organization',
+                name: 'ingenious targeting laboratory',
+              },
+            },
+          }),
+        }}
+      />
 
       <UXUIDCNavigation />
       
@@ -233,6 +417,9 @@ export default async function GlossaryTermPage({
           </div>
         </section>
 
+        {/* Above-the-fold commercial offer — primary sales surface */}
+        <UXUIDCEducationalSalesBanner slug={slug} />
+
         {/* Main Content Section */}
         <section style={{ background: BRAND.white, padding: '50px 20px' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -283,6 +470,9 @@ export default async function GlossaryTermPage({
                 ))}
               </div>
             )}
+
+            {/* Pivot from definition to "is this in our catalog?" */}
+            <CatalogGeneLookup slug={slug} />
 
             {/* FAQs */}
             {term.faqs.length > 0 && (
@@ -588,6 +778,8 @@ export default async function GlossaryTermPage({
       </main>
       
       <UXUIDCFooter />
+      {/* Floating commercial nudge — desktop only */}
+      <CatalogStickyRail slug={slug} href={getCatalogLookup(slug).searchHref} />
     </div>
   );
 }

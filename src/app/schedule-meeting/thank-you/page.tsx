@@ -4,11 +4,10 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import { ThankYouPageShell, IconCheckCircle } from '@/components/UXUIDC';
 import {
-  buildGoogleAdsSendTo,
-  fireGoogleAdsConversion,
   runThankYouConversionOnce,
   THANK_YOU_SESSION_MEETING,
 } from '@/lib/analytics/googleAdsConversion';
+import { pushMeetingRequest } from '@/lib/analytics/gtmEvents';
 
 const HERO_GRADIENT =
   'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)';
@@ -20,8 +19,7 @@ const ctaLinkBase =
 export default function ScheduleMeetingThankYouPage() {
   useEffect(() => {
     runThankYouConversionOnce(THANK_YOU_SESSION_MEETING, () => {
-      const sendTo = buildGoogleAdsSendTo(process.env.NEXT_PUBLIC_GOOGLE_ADS_MEETING_LABEL);
-      fireGoogleAdsConversion(sendTo, { value: 250, currency: 'USD' });
+      pushMeetingRequest({ value: 250, currency: 'USD' });
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'generate_lead', { method: 'schedule_meeting' });
       }

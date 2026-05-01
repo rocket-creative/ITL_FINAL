@@ -4,11 +4,10 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ThankYouPageShell, IconCheckCircle, IconDNA } from '@/components/UXUIDC';
 import {
-  buildGoogleAdsSendTo,
-  fireGoogleAdsConversion,
   runThankYouConversionOnce,
   THANK_YOU_SESSION_START_PROJECT,
 } from '@/lib/analytics/googleAdsConversion';
+import { pushStartProject } from '@/lib/analytics/gtmEvents';
 
 const HERO_GRADIENT =
   'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)';
@@ -32,8 +31,7 @@ export default function StartProjectThankYouPage() {
 
   useEffect(() => {
     runThankYouConversionOnce(THANK_YOU_SESSION_START_PROJECT, () => {
-      const sendTo = buildGoogleAdsSendTo(process.env.NEXT_PUBLIC_GOOGLE_ADS_START_PROJECT_LABEL);
-      fireGoogleAdsConversion(sendTo, { value: 1, currency: 'USD' });
+      pushStartProject({ value: 1, currency: 'USD' });
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'generate_lead', { method: 'start_project_pricing_guide' });
       }

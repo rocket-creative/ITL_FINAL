@@ -9,7 +9,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import LabSignalsSignup from '@/components/UXUIDC/LabSignalsSignup';
 import { IconDNA, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { GlossaryTermLink, BreedingSchemeArchitectCTA } from '@/components/UXUIDC';
+import { GlossaryTermLink, BreedingSchemeArchitectCTA, UXUIDCServicePricingAnchor } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -295,6 +295,39 @@ export default function TransgenicMouseServicePage() {
             </div>
           </div>
         </section>
+
+        {/* Pricing anchor — captures "transgenic mouse" buyer queries */}
+        <UXUIDCServicePricingAnchor
+          serviceLabel="Transgenic Mouse"
+          headline="Custom transgenic mice — fixed-fee quote in 24 hours."
+          startingPrice="$17,297"
+          subline="Pronuclear injection, BAC transgenics, and targeted transgenesis at safe harbor loci. Pricing scales with construct size and integration strategy. Free scientific consultation included."
+          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=transgenic-pricing-anchor"
+          secondaryHref="/all-catalog-mouse-models/?q=transgenic&utm_source=organic&utm_medium=service&utm_campaign=transgenic-catalog"
+          secondaryLabel="Browse Transgenic Catalog"
+          faqs={[
+            {
+              question: 'How much does a transgenic mouse cost?',
+              answer:
+                'Custom transgenic mouse projects start at $17,297. Pricing scales with the transgenesis approach (pronuclear injection, BAC, targeted transgenesis at Rosa26 or other safe harbor loci), construct size, and copy number requirements. We deliver germline-confirmed founders and provide a fixed-fee quote in 24 hours.',
+            },
+            {
+              question: 'What transgenic approaches do you offer?',
+              answer:
+                'Three approaches: (1) conventional pronuclear injection for rapid, multi-copy random integration; (2) BAC transgenics for large constructs (up to ~200 kb) with native regulatory elements — ideal for tissue-specific Cre driver lines; (3) targeted transgenesis at Rosa26 or other safe harbor loci for single-copy integration with predictable expression.',
+            },
+            {
+              question: 'How long does it take to make a transgenic mouse?',
+              answer:
+                'Typical transgenic mouse projects deliver germline-confirmed founders in 4–9 months depending on approach. Pronuclear injection is fastest. BAC and targeted transgenesis take longer due to construct preparation and screening but deliver more predictable expression.',
+            },
+            {
+              question: 'Do you have ready-to-ship transgenic mice?',
+              answer:
+                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models including Rosa26 reporter and Cre driver transgenic lines. Many ship from live colonies in weeks, not months.',
+            },
+          ]}
+        />
 
         {/* ITL Offers */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>

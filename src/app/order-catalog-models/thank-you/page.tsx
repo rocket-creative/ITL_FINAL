@@ -4,11 +4,10 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import { ThankYouPageShell, IconCheckCircle } from '@/components/UXUIDC';
 import {
-  buildGoogleAdsSendTo,
-  fireGoogleAdsConversion,
   runThankYouConversionOnce,
   THANK_YOU_SESSION_CATALOG_ORDER,
 } from '@/lib/analytics/googleAdsConversion';
+import { pushCatalogOrder } from '@/lib/analytics/gtmEvents';
 
 const HERO_GRADIENT =
   'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)';
@@ -20,8 +19,7 @@ const ctaLinkBase =
 export default function OrderCatalogThankYouPage() {
   useEffect(() => {
     runThankYouConversionOnce(THANK_YOU_SESSION_CATALOG_ORDER, () => {
-      const sendTo = buildGoogleAdsSendTo(process.env.NEXT_PUBLIC_GOOGLE_ADS_CATALOG_ORDER_LABEL);
-      fireGoogleAdsConversion(sendTo, { value: 500, currency: 'USD' });
+      pushCatalogOrder({ value: 500, currency: 'USD' });
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'purchase_intent', { method: 'catalog_order' });
       }

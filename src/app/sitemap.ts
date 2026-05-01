@@ -189,21 +189,72 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/accessibility',
   ];
 
+  // Pages that drive revenue directly. Bumped to priority 1.0 to push
+  // Google to crawl them more often and weight them ahead of educational
+  // long-tail. These match the GSC commercial-intent queries we are
+  // trying to capture (humanized services/price, transgenic, knockin,
+  // catalog gene queries, etc.).
+  const REVENUE_PILLARS = new Set([
+    '/all-catalog-mouse-models',
+    '/order-catalog-models',
+    '/humanized-mouse-models',
+    '/humanized-mouse-services',
+    '/point-mutation-mice',
+    '/knockout-mouse-models',
+    '/knockin-mouse-models',
+    '/conditional-knockout-mouse-models',
+    '/conventional-knockout-mouse-models',
+    '/tamoxifen-inducible-cre',
+    '/transgenic-mouse-service',
+    '/mouse-genotyping-service',
+    '/custom-mouse-models',
+    '/cre-recombinase-mice',
+    '/cre-lox-system',
+    '/pricing-guide',
+    '/custom-mouse-model-pricing',
+    '/request-quote',
+    '/start-your-project',
+  ]);
+
   // Comparison/pillar pages that should rank highly for AI and search
   const highPriorityPaths = new Set(['/custom-mouse-model-companies']);
 
   for (const route of staticPages) {
     const pathStr = route || '/';
     const isHighPriorityPillar = highPriorityPaths.has(route);
+    const isRevenuePillar = REVENUE_PILLARS.has(route);
+    let priority = 0.8;
+    if (route === '') priority = 1;
+    else if (isRevenuePillar) priority = 1.0;
+    else if (isHighPriorityPillar) priority = 0.9;
+    else if (route.includes('catalog') || route.includes('request-quote')) priority = 0.9;
     entries.push({
       url: url(pathStr === '/' ? '' : route),
       lastModified: new Date(),
-      changeFrequency: route === '' ? 'weekly' : route.includes('catalog') || isHighPriorityPillar ? 'weekly' : 'monthly',
-      priority: route === '' ? 1 : isHighPriorityPillar ? 0.9 : route.includes('catalog') || route.includes('request-quote') ? 0.9 : 0.8,
+      changeFrequency:
+        route === '' || isRevenuePillar
+          ? 'weekly'
+          : route.includes('catalog') || isHighPriorityPillar
+            ? 'weekly'
+            : 'monthly',
+      priority,
     });
   }
 
-  // Blog posts
+  // Always include the new revenue pillars even if not listed above
+  for (const route of REVENUE_PILLARS) {
+    if (!staticPages.includes(route)) {
+      entries.push({
+        url: url(route),
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 1.0,
+      });
+    }
+  }
+
+  // Blog posts — keep at 0.7. Top-traffic posts now act as funnels into
+  // the catalog (priority 1.0) and revenue pillars, not as terminal pages.
   const blogSlugs = getAllBlogSlugs();
   for (const slug of blogSlugs) {
     entries.push({
@@ -214,7 +265,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  // Glossary terms
+  // Glossary terms — same rationale as blog
   for (const term of glossaryTerms) {
     entries.push({
       url: url(`/mouse-genetics-glossary/${term.slug}`),
@@ -224,36 +275,40 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  // Lab Signals (published only)
+  // Lab Signals — newsletter content, dropped to 0.4. Not aligned with
+  // revenue lever; should not compete with commercial pages for crawl budget.
   const labSignalsSlugs = getAllArticleSlugs();
   for (const slug of labSignalsSlugs) {
     entries.push({
       url: url(`/lab-signals/${slug}`),
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.4,
     });
   }
 
-  // Legacy pages
+  // Legacy pages — dropped to 0.3. These are archival; do not compete
+  // with revenue pillars for Google crawl budget.
   const legacySlugs = getLegacySlugs();
   for (const slug of legacySlugs) {
     entries.push({
       url: url(`/legacy/${slug}`),
       lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.3,
     });
   }
 
-  // Gene pages — on-demand ISR, indexed by Google via sitemap
+  // Gene pages — bumped to 0.9. These are the off-the-shelf catalog
+  // surface. Each one is a Product page eligible for Merchant Listings
+  // rich results and a direct purchase path.
   const geneNames = await getAllGeneNames();
   for (const gene of geneNames) {
     entries.push({
       url: url(`/all-catalog-mouse-models/gene/${encodeURIComponent(gene)}`),
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     });
   }
 

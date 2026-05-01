@@ -18,9 +18,9 @@ import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, Suspense } from 'react';
 import {
-  buildGoogleAdsSendTo,
-  fireGoogleAdsConversion,
-} from '@/lib/analytics/googleAdsConversion';
+  pushQuoteSubmit,
+  pushContactSubmit,
+} from '@/lib/analytics/gtmEvents';
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-XXXXXXXXXX';
@@ -248,13 +248,9 @@ export function trackFormSubmission(
     ...formData,
   });
 
-  // Google Ads conversion fires only when the label env var is a real label slug.
-  // If the label is missing or misconfigured, the conversion is skipped rather
-  // than emitting a broken send_to.
-  fireGoogleAdsConversion(
-    buildGoogleAdsSendTo(process.env.NEXT_PUBLIC_GOOGLE_ADS_QUOTE_LABEL),
-    { value: 1, currency: 'USD' }
-  );
+  // Google Ads conversion is fired by GTM via the itl_quote_submit dataLayer
+  // event. The conversion tag and label are configured in the GTM workspace.
+  pushQuoteSubmit({ value: 1, currency: 'USD', form_name: formName });
 }
 
 /**
@@ -286,10 +282,13 @@ export function trackQuoteRequest(
     service_type: serviceType,
   });
 
-  fireGoogleAdsConversion(
-    buildGoogleAdsSendTo(process.env.NEXT_PUBLIC_GOOGLE_ADS_QUOTE_LABEL),
-    { value: 100, currency: 'USD' }
-  );
+  // Google Ads conversion fires via GTM (itl_quote_submit trigger).
+  pushQuoteSubmit({
+    value: 100,
+    currency: 'USD',
+    model_type: modelType,
+    service_type: serviceType,
+  });
 }
 
 /**
@@ -306,9 +305,8 @@ export function trackContactSubmission(
     inquiry_type: inquiryType,
   });
 
-  fireGoogleAdsConversion(
-    buildGoogleAdsSendTo(process.env.NEXT_PUBLIC_GOOGLE_ADS_CONTACT_LABEL)
-  );
+  // Google Ads conversion fires via GTM (itl_contact_submit trigger).
+  pushContactSubmit({ inquiry_type: inquiryType });
 }
 
 /**

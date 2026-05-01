@@ -6,8 +6,9 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Mouse Genotyping Services',
-  description: 'Fast, accurate PCR genotyping for mouse colonies. Get results in 48 hours with validated assays for knockouts, knockins, and transgenics.',
+  title: 'Mouse Genotyping Service | PCR & qPCR | 48h Turnaround',
+  description:
+    'Outsource your mouse genotyping. PCR and qPCR genotyping with 48h turnaround. Validated assays for knockouts, knockins, transgenics, and floxed alleles.',
   path: '/mouse-genotyping-service',
 });
 

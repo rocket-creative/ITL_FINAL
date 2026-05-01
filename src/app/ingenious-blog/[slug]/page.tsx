@@ -2,7 +2,17 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { UXUIDCNavigation, UXUIDCFooter, UXUIDCStartProjectCTA, FAQPageSchema } from '@/components/UXUIDC';
+import {
+  UXUIDCNavigation,
+  UXUIDCFooter,
+  UXUIDCStartProjectCTA,
+  FAQPageSchema,
+  UXUIDCEducationalSalesBanner,
+  CatalogGeneLookup,
+  CatalogStickyRail,
+  getEducationalOffer,
+  getCatalogLookup,
+} from '@/components/UXUIDC';
 
 const BLOG_CONTENT_DIR = path.join(process.cwd(), 'src/content/blog');
 
@@ -276,6 +286,118 @@ export async function generateStaticParams() {
   }
 }
 
+// Per-slug commercial metadata overrides for the highest-impression blog
+// posts. These rewrite the SERP snippet from a definitional/encyclopedic
+// title to an offer-driven commercial title that matches buyer intent and
+// surfaces our differentiators (price, publications, projects).
+const COMMERCIAL_META: Record<string, { title: string; description: string }> = {
+  'what-is-a-point-mutation': {
+    title: 'Point Mutation: Types, Examples & Custom Knockin Mice | ITL',
+    description:
+      'Point mutation explained: substitution, missense, nonsense. Need a custom point mutation knockin mouse? From $17,297. 800+ publications. Quote in 24h.',
+  },
+  'types-of-point-mutations': {
+    title: 'Types of Point Mutations + Custom Knockin Mouse Models | ITL',
+    description:
+      'Substitution, insertion, deletion point mutations. Custom knockin mice for any disease variant. From $17,297. 26+ years experience. Quote in 24h.',
+  },
+  'point-mutation-diseases': {
+    title: 'Point Mutation Diseases + Custom Disease-Variant Mice | ITL',
+    description:
+      'Diseases caused by point mutations: sickle cell, cystic fibrosis, cancer. We build the disease-variant knockin mice. From $17,297. Quote in 24h.',
+  },
+  'difference-between-knock-in-and-knockout': {
+    title: 'Knock-in vs Knockout Mice + Custom & Catalog Models | ITL',
+    description:
+      'Knock-in vs knockout explained. Custom builds from $17,297 or 14,774 ready catalog models. 100% germline guarantee. 800+ publications.',
+  },
+  'conventional-vs-conditional-knockout': {
+    title: 'Conventional vs Conditional Knockout + Custom Mice | ITL',
+    description:
+      'Conventional vs conditional knockout: pick the right model. We build both — Cre/lox conditional or full knockout — from $17,297. 2,500+ projects.',
+  },
+  'how-a-knockout-mouse-is-made': {
+    title: 'How a Knockout Mouse Is Made + Custom Knockout Service | ITL',
+    description:
+      'Knockout mouse generation explained. Or skip the protocol — custom knockouts from $17,297, 100% germline guarantee, quote in 24h. 2,500+ projects.',
+  },
+  'humanized-mice': {
+    title: 'Humanized Mice: Services, Pricing & Custom Models | ITL',
+    description:
+      'Humanized mouse services since 1998. Drug-target & immune checkpoint humanization (PD1/PDL1/CTLA4). 800+ publications. Pricing & 24h quote.',
+  },
+  'why-make-a-humanized-mouse': {
+    title: 'Why Use Humanized Mice + Custom Humanization Services | ITL',
+    description:
+      'Why humanized mice matter for drug development. Custom humanization since 1998. Immune checkpoint, drug-target. 800+ publications. Quote in 24h.',
+  },
+  'history-of-creating-genetically-humanized-mice': {
+    title: 'Humanized Mice: History + Custom Humanization Service | ITL',
+    description:
+      'History of humanized mice. We have built them since 1998. Drug-target & immune checkpoint humanization. 800+ publications. Quote in 24h.',
+  },
+  'what-is-a-transgene': {
+    title: 'Transgene Explained + Custom Transgenic Mouse Service | ITL',
+    description:
+      'Transgene defined with examples. Need a custom transgenic mouse? BAC, random, or targeted from $17,297. 800+ publications. Quote in 24h.',
+  },
+  'transgenic-mice': {
+    title: 'Transgenic Mice + Custom Transgenic Mouse Service | ITL',
+    description:
+      'Transgenic mice explained. Custom transgenics — BAC, pronuclear, targeted — from $17,297. 800+ publications. Quote in 24 hours.',
+  },
+  'how-to-make-a-transgenic-mouse': {
+    title: 'How to Make a Transgenic Mouse + Custom Service | ITL',
+    description:
+      'Transgenic mouse protocol explained. Or skip the build — custom transgenics from $17,297, 100% germline guarantee, quote in 24h.',
+  },
+  'rosa26-mice': {
+    title: 'Rosa26 Mice + Custom Rosa26 Knockin Service | ITL',
+    description:
+      'Rosa26 explained. Custom Rosa26 knockin mice — reporters, conditional cassettes, inducible expression — from $17,297. Quote in 24h.',
+  },
+  'floxing': {
+    title: 'Floxing Explained + Custom Floxed Allele Service | ITL',
+    description:
+      'Floxing explained for conditional knockouts. Custom floxed mice from $17,297 with critical exon selection. 100% germline guarantee.',
+  },
+  'floxed-cre-lox-flox': {
+    title: 'Floxed, Cre, lox: Explained + Custom Floxed Mice | ITL',
+    description:
+      'Floxed alleles, Cre, and loxP explained. Custom floxed mice from $17,297. 2,500+ projects, 100% germline guarantee. Quote in 24h.',
+  },
+  'flox-sequence': {
+    title: 'Flox Sequence Design + Custom Floxed Allele Service | ITL',
+    description:
+      'Designing a flox sequence. Hand it to our scientists — custom floxed mice with critical exon selection from $17,297. Quote in 24h.',
+  },
+  'conditional-mutation': {
+    title: 'Conditional Mutation Explained + Custom Conditional Mice | ITL',
+    description:
+      'Conditional mutations and conditional alleles explained. Custom conditional knockout & knockin mice from $17,297. Quote in 24h.',
+  },
+  'cre-flox': {
+    title: 'Cre/flox Conditional Knockout + Custom Service | ITL',
+    description:
+      'Cre/flox conditional knockout explained. Custom floxed alleles + tissue-specific Cre lines from $17,297. 800+ publications.',
+  },
+  'what-is-a-stem-cell-line': {
+    title: 'Stem Cell Lines + Custom ES Cell Mouse Targeting | ITL',
+    description:
+      'Stem cell lines explained. Our validated C57BL/6 ES cell platform builds your custom mouse from $17,297. 100% germline guarantee.',
+  },
+  'gene-knockout': {
+    title: 'Gene Knockout: Methods + Custom Knockout Mice | ITL',
+    description:
+      'Gene knockout methods explained. Custom knockout mice from $17,297. ES cell or CRISPR. 100% germline guarantee. Quote in 24h.',
+  },
+  'crispr-knockout': {
+    title: 'CRISPR Knockout + Custom CRISPR Knockout Mice | ITL',
+    description:
+      'CRISPR knockout explained. Custom CRISPR knockout mice from $17,297. 100% germline guarantee. 2,500+ projects shipped.',
+  },
+};
+
 // Generate metadata
 export async function generateMetadata({
   params,
@@ -284,35 +406,46 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const filePath = path.join(BLOG_CONTENT_DIR, `${slug}.md`);
+  const commercial = COMMERCIAL_META[slug];
 
   try {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const { data } = parseFrontmatter(fileContent);
 
-    const title = String(data.title || slug.replace(/-/g, ' '));
-    const description = data.description && String(data.description) !== 'undefined'
+    const baseTitle = String(data.title || slug.replace(/-/g, ' '));
+    const baseDescription = data.description && String(data.description) !== 'undefined'
       ? String(data.description)
-      : `Archived blog post from ingenious targeting laboratory: ${title}`;
+      : `${baseTitle} explained for researchers planning a custom mouse model.`;
+
+    const finalTitle = commercial?.title ?? `${baseTitle} | ingenious targeting laboratory`;
+    const finalDescription = commercial?.description ?? baseDescription;
     const canonicalUrl = `https://www.genetargeting.com/ingenious-blog/${slug}/`;
 
     return {
-      title: `${title} | ingenious targeting laboratory`,
-      description,
+      title: finalTitle,
+      description: finalDescription,
       alternates: {
         canonical: canonicalUrl,
       },
       openGraph: {
-        title: `${title} | ingenious targeting laboratory`,
-        description,
+        title: finalTitle,
+        description: finalDescription,
         url: canonicalUrl,
         siteName: 'ingenious targeting laboratory',
         type: 'article',
       },
+      twitter: {
+        card: 'summary_large_image',
+        title: finalTitle,
+        description: finalDescription,
+      },
     };
   } catch {
     return {
-      title: 'Blog Post | ingenious targeting laboratory',
-      description: 'Archived blog post from ingenious targeting laboratory',
+      title: commercial?.title ?? 'Custom Mouse Model Insights | ingenious targeting laboratory',
+      description:
+        commercial?.description ??
+        'Mouse model research insights from ingenious targeting laboratory. Custom knockout, knockin & humanized mice from $17,297.',
     };
   }
 }
@@ -405,10 +538,84 @@ export default async function IngeniousBlogPost({
             ]
           : [];
 
+  // Article + Offer JSON-LD. Surfaces our starting price in the SERP so
+  // commercial-intent searchers see we sell something, not just educate.
+  const offer = getEducationalOffer(slug);
+  const canonicalUrl = `https://www.genetargeting.com/ingenious-blog/${slug}/`;
+  const dateModified =
+    String(frontmatter.dateModified || frontmatter.updated || '') ||
+    new Date().toISOString().split('T')[0];
+  const datePublished = String(frontmatter.date || dateModified) || dateModified;
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['Article', 'TechArticle'],
+    headline: title,
+    description: COMMERCIAL_META[slug]?.description || frontmatter.description || title,
+    url: canonicalUrl,
+    mainEntityOfPage: canonicalUrl,
+    inLanguage: 'en-US',
+    datePublished,
+    dateModified,
+    author: {
+      '@type': 'Organization',
+      '@id': 'https://www.genetargeting.com/#organization',
+      name: 'ingenious targeting laboratory',
+      url: 'https://www.genetargeting.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://www.genetargeting.com/#organization',
+      name: 'ingenious targeting laboratory',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.genetargeting.com/images/logo.png',
+      },
+    },
+  };
+  const offerSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: offer.eyebrow,
+    serviceType: 'Custom mouse model generation',
+    provider: {
+      '@type': 'Organization',
+      '@id': 'https://www.genetargeting.com/#organization',
+      name: 'ingenious targeting laboratory',
+      url: 'https://www.genetargeting.com',
+    },
+    areaServed: 'Worldwide',
+    offers: {
+      '@type': 'Offer',
+      url: `https://www.genetargeting.com${offer.primaryCta.href.split('?')[0]}`,
+      priceCurrency: 'USD',
+      price: '17297',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'USD',
+        price: '17297',
+        valueAddedTaxIncluded: false,
+        description: 'Starting price for custom mouse model generation',
+      },
+      availability: 'https://schema.org/InStock',
+      seller: {
+        '@type': 'Organization',
+        name: 'ingenious targeting laboratory',
+      },
+    },
+  };
+
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       {pointMutationFaqs.length > 0 && <FAQPageSchema faqs={pointMutationFaqs} />}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
+      />
 
       <main id="main-content">
         {/* Header */}
@@ -419,25 +626,6 @@ export default async function IngeniousBlogPost({
           }}
         >
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            {/* Archive Notice - Light Grey */}
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                backgroundColor: 'rgba(255,255,255,0.1)',
-                padding: '6px 14px',
-                borderRadius: '15px',
-                marginBottom: '15px',
-                border: '1px solid rgba(255,255,255,0.2)',
-              }}
-            >
-              <span style={{ fontSize: '14px' }}>📁</span>
-              <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '.75rem', fontWeight: 500 }}>
-                Archived Blog Post
-              </span>
-            </div>
-
             {/* Category */}
             <div style={{ marginBottom: '12px' }}>
               <span
@@ -471,6 +659,9 @@ export default async function IngeniousBlogPost({
 
           </div>
         </section>
+
+        {/* Above-the-fold commercial offer — the page's primary sales surface */}
+        <UXUIDCEducationalSalesBanner slug={slug} />
 
         {/* Content */}
         <section style={{ backgroundColor: 'white', padding: '50px 20px' }}>
@@ -646,10 +837,14 @@ export default async function IngeniousBlogPost({
               }
             `}</style>
             {contentExists ? (
-              <div
-                className="blog-content"
-                dangerouslySetInnerHTML={{ __html: htmlContent }}
-              />
+              <>
+                <div
+                  className="blog-content"
+                  dangerouslySetInnerHTML={{ __html: htmlContent }}
+                />
+                {/* Pivot the reader from "what is this?" to "is this in stock?" */}
+                <CatalogGeneLookup slug={slug} />
+              </>
             ) : (
               <div
                 style={{
@@ -816,6 +1011,8 @@ export default async function IngeniousBlogPost({
       </main>
 
       <UXUIDCFooter />
+      {/* Floating commercial nudge — desktop only */}
+      <CatalogStickyRail slug={slug} href={getCatalogLookup(slug).searchHref} />
     </div>
   );
 }

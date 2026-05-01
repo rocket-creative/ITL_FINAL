@@ -1,13 +1,15 @@
 /**
- * SEO Metadata for Humanized Mouse Models
- * Auto-generated for canonical URLs and structured data
+ * SEO Metadata for Humanized Mouse Models / Services
+ * Targets buyer-intent queries: "humanized mouse services",
+ * "humanized mice price", "humanized mouse model".
  */
 
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Humanized Mouse Models | Drug Development Studies',
-  description: 'Generate humanized mouse models with human orthologs for preclinical drug testing. 26+ years, 800+ publications in Nature/Cell/Science. ES cell & CRISPR.',
+  title: 'Humanized Mouse Services & Pricing | Custom Humanized Mice',
+  description:
+    'Humanized mouse services since 1998. Drug-target & immune checkpoint humanization (PD1/PDL1/CTLA4/LAG3/TIM3). Pricing & 24h quote. 800+ publications.',
   path: '/humanized-mouse-models',
 });
 
