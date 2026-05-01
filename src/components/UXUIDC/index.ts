@@ -35,6 +35,8 @@ export { default as UXUIDCServicePricingAnchor } from './ServicePricingAnchor';
 export type { ServicePricingFaq } from './ServicePricingAnchor';
 export { default as CatalogStickyRail } from './CatalogStickyRail';
 export { default as CommercialCTATracker } from './CommercialCTATracker';
+export { default as PricingUnlockForm } from './PricingUnlockForm';
+export type { PricingUnlockFormProps } from './PricingUnlockForm';
 export { default as BreedingSchemeArchitectCTA } from './BreedingSchemeArchitectCTA';
 export { AutoAnimate } from './AutoAnimate';
 

@@ -23,17 +23,17 @@ const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: str
   'non-homologous-end-joining': {
     title: 'NHEJ DNA Repair + Custom CRISPR Knockout Mice | ITL',
     description:
-      'Non-homologous end joining (NHEJ) explained. We use NHEJ for CRISPR knockout mice. From $17,297, 100% germline guarantee. Quote in 24h.',
+      'Non-homologous end joining (NHEJ) explained. We use NHEJ for CRISPR knockout mice. With 100% germline guarantee. Quote in 24h.',
   },
   'open-reading-frame': {
     title: 'Open Reading Frame (ORF) + Custom Knockin Mouse Models | ITL',
     description:
-      'ORF defined for genetics research. Need an ORF replacement or humanization knockin mouse? From $17,297. Quote in 24h. 800+ publications.',
+      'ORF defined for genetics research. Need an ORF replacement or humanization knockin mouse? Quote in 24h. 800+ publications.',
   },
   'inducible-cre-ert2': {
     title: 'Inducible CreERT2 + Custom CreERT2 Mouse Service | ITL',
     description:
-      'Inducible CreERT2 explained for tissue-specific knockouts. We build custom CreERT2 + floxed alleles from $17,297. 2,500+ projects.',
+      'Inducible CreERT2 explained for tissue-specific knockouts. We build custom CreERT2 + floxed alleles. 2,500+ projects.',
   },
   'tamoxifen-inducible-cre': {
     title: 'Tamoxifen Inducible Cre + Custom CreERT2 Mice | ITL',
@@ -48,7 +48,7 @@ const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: str
   'point-mutation': {
     title: 'Point Mutation Definition + Custom Knockin Mouse Models | ITL',
     description:
-      'Point mutation defined: substitution, missense, nonsense. Custom point mutation knockin mice from $17,297. Quote in 24h.',
+      'Point mutation defined: substitution, missense, nonsense. Custom point mutation knockin mice. Quote in 24h.',
   },
   'allele-genotype-phenotype': {
     title: 'Allele, Genotype & Phenotype + Custom Mouse Design | ITL',
@@ -58,42 +58,42 @@ const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: str
   'promoter-enhancer-regulatory-element': {
     title: 'Promoter & Enhancer Elements + Custom Knockin Mice | ITL',
     description:
-      'Promoter vs enhancer regulatory elements. Custom knockin mice at endogenous regulatory loci from $17,297. Quote in 24h.',
+      'Promoter vs enhancer regulatory elements. Custom knockin mice at endogenous regulatory loci. Quote in 24h.',
   },
   'flp-frt-system': {
     title: 'Flp-FRT System + Custom Conditional Mouse Models | ITL',
     description:
-      'Flp-FRT recombination explained. Custom Flp/FRT and Cre/lox conditional mice from $17,297. 800+ publications.',
+      'Flp-FRT recombination explained. Custom Flp/FRT and Cre/lox conditional mice. 800+ publications.',
   },
   'gain-of-function-vs-loss-of-function-mutation': {
     title: 'Gain vs Loss of Function Mutation + Custom Mice | ITL',
     description:
-      'Gain-of-function vs loss-of-function mutations. Custom knockin and knockout mice for either model. From $17,297. Quote in 24h.',
+      'Gain-of-function vs loss-of-function mutations. Custom knockin and knockout mice for either model. Quote in 24h.',
   },
   'dominant-negative': {
     title: 'Dominant Negative Mutation + Custom Knockin Mice | ITL',
     description:
-      'Dominant negative mutations explained. We build custom dominant-negative knockin mice from $17,297. Quote in 24h.',
+      'Dominant negative mutations explained. We build custom dominant-negative knockin mice. Quote in 24h.',
   },
   'rosa26': {
     title: 'Rosa26 Locus + Custom Rosa26 Knockin Mouse Service | ITL',
     description:
-      'Rosa26 safe harbor locus explained. Custom Rosa26 knockin mice — reporters, cassettes, inducible — from $17,297. Quote in 24h.',
+      'Rosa26 safe harbor locus explained. Custom Rosa26 knockin mice — reporters, cassettes, inducible —. Quote in 24h.',
   },
   'rosa26-locus': {
     title: 'Rosa26 Locus + Custom Rosa26 Knockin Mice | ITL',
     description:
-      'Rosa26 locus explained. Custom Rosa26 knockin mice from $17,297. Reporters, conditional cassettes, inducible expression.',
+      'Rosa26 locus explained. Custom Rosa26 knockin mice. Reporters, conditional cassettes, inducible expression.',
   },
   'safe-harbor-locus': {
     title: 'Safe Harbor Locus + Custom Knockin Mouse Service | ITL',
     description:
-      'Safe harbor loci (Rosa26, others) explained. Custom safe-harbor knockin mice from $17,297. 800+ publications.',
+      'Safe harbor loci (Rosa26, others) explained. Custom safe-harbor knockin mice. 800+ publications.',
   },
   'tissue-specific-knockout': {
     title: 'Tissue-Specific Knockout + Custom Conditional Mice | ITL',
     description:
-      'Tissue-specific knockout mice explained. Custom Cre/lox conditional knockouts from $17,297. 2,500+ projects shipped.',
+      'Tissue-specific knockout mice explained. Custom Cre/lox conditional knockouts. 2,500+ projects shipped.',
   },
   'humanized-mouse-models': {
     title: 'Humanized Mouse Models + Custom Humanization Service | ITL',
@@ -103,17 +103,17 @@ const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: str
   'cre-lox-system': {
     title: 'Cre/lox System + Custom Cre/lox Conditional Mice | ITL',
     description:
-      'Cre/lox recombination explained. Custom Cre/lox conditional knockouts from $17,297. 2,500+ projects, 800+ publications.',
+      'Cre/lox recombination explained. Custom Cre/lox conditional knockouts. 2,500+ projects, 800+ publications.',
   },
   'frameshift-mutation': {
     title: 'Frameshift Mutation + Custom Knockin Mouse Models | ITL',
     description:
-      'Frameshift mutations explained with examples. Custom knockin mice for any disease variant from $17,297. Quote in 24h.',
+      'Frameshift mutations explained with examples. Custom knockin mice for any disease variant. Quote in 24h.',
   },
   'missense-nonsense-mutation': {
     title: 'Missense vs Nonsense Mutation + Custom Knockin Mice | ITL',
     description:
-      'Missense and nonsense mutations explained. Custom point mutation knockin mice from $17,297. Quote in 24h. 800+ publications.',
+      'Missense and nonsense mutations explained. Custom point mutation knockin mice. Quote in 24h. 800+ publications.',
   },
   'genotyping-pcr-qpcr': {
     title: 'Genotyping PCR/qPCR + Mouse Genotyping Service | ITL',
@@ -307,14 +307,11 @@ export default async function GlossaryTermPage({
             offers: {
               '@type': 'Offer',
               url: `https://www.genetargeting.com${getEducationalOffer(slug).primaryCta.href.split('?')[0]}`,
-              priceCurrency: 'USD',
-              price: '17297',
               priceSpecification: {
                 '@type': 'PriceSpecification',
                 priceCurrency: 'USD',
-                price: '17297',
                 valueAddedTaxIncluded: false,
-                description: 'Starting price for custom mouse model generation',
+                description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
               },
               availability: 'https://schema.org/InStock',
               seller: {

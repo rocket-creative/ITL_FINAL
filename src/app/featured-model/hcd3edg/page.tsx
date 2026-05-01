@@ -200,13 +200,11 @@ export default function HCD3EDGPage() {
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',
       url: 'https://www.genetargeting.com/request-quote/',
-      price: '0',
-      priceCurrency: 'USD',
       priceSpecification: {
         '@type': 'PriceSpecification',
-        price: '0',
         priceCurrency: 'USD',
-        description: 'Contact for pricing',
+        valueAddedTaxIncluded: false,
+        description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
       },
     },
   };

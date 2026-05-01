@@ -312,7 +312,7 @@ export default function MouseGenotypingServicePage() {
         <UXUIDCServicePricingAnchor
           serviceLabel="Mouse Genotyping"
           headline="Outsource your genotyping. 48-hour turnaround."
-          startingPrice="Per-sample"
+          unlockInterest="Mouse Genotyping Service"
           subline="PCR and qPCR genotyping for knockouts, knockins, transgenics, floxed alleles, and Cre lines. Validated assays. Pricing scales with sample volume and assay complexity."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=genotyping-pricing-anchor"
           secondaryHref="/contact?utm_source=organic&utm_medium=service&utm_campaign=genotyping-contact"

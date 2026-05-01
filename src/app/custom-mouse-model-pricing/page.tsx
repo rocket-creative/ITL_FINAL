@@ -14,35 +14,35 @@ import {
   UXUIDCNavigation,
   UXUIDCFooter,
   BreadcrumbSchema,
+  PricingUnlockForm,
 } from '@/components/UXUIDC';
 
 export const metadata: Metadata = {
-  title: 'Custom Mouse Model Pricing | Knockout, Knockin & Humanized | From $17,297',
+  title: 'Custom Mouse Model Pricing | Knockout, Knockin & Humanized | Quote 24h',
   description:
-    'Custom mouse model pricing: knockout from $17,297, knockin from $19,500, humanized from $24,500, transgenic from $17,297. Quote in 24h. 800+ publications.',
+    'Custom mouse model pricing for knockout, knockin, humanized, conditional, and transgenic mice. 800+ peer-reviewed publications. Free pricing on request, quote in 24h.',
   alternates: {
     canonical: 'https://www.genetargeting.com/custom-mouse-model-pricing/',
   },
   openGraph: {
     title: 'Custom Mouse Model Pricing | Knockout, Knockin & Humanized | ITL',
     description:
-      'Custom mouse model pricing — knockout, knockin, humanized, transgenic, conditional. Starting prices, timelines, comparison. Quote in 24h.',
+      'Custom mouse model pricing — knockout, knockin, humanized, transgenic, conditional. Free pricing on request, quote in 24h.',
     url: 'https://www.genetargeting.com/custom-mouse-model-pricing/',
     siteName: 'ingenious targeting laboratory',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom Mouse Model Pricing | From $17,297 | ITL',
+    title: 'Custom Mouse Model Pricing | ITL',
     description:
-      'Knockout from $17,297, knockin from $19,500, humanized from $24,500. Quote in 24h.',
+      'Knockout, knockin, humanized & transgenic mice. Free pricing on request, quote in 24h.',
   },
 };
 
 const tiers = [
   {
     name: 'Knockout Mouse',
-    startingPrice: '$17,297',
     sku: 'KO-CUSTOM',
     description:
       'CRISPR or ES cell knockout. Constitutive (full-body) loss-of-function with germline-confirmed founders.',
@@ -53,7 +53,6 @@ const tiers = [
   },
   {
     name: 'Conditional Knockout (Floxed)',
-    startingPrice: '$19,500',
     sku: 'CKO-CUSTOM',
     description:
       'Floxed allele for Cre-mediated conditional deletion. Tissue-specific, inducible, or temporally controlled with CreERT2.',
@@ -64,7 +63,6 @@ const tiers = [
   },
   {
     name: 'Knockin Mouse',
-    startingPrice: '$19,500',
     sku: 'KI-CUSTOM',
     description:
       'Point mutation, reporter, tag, or ORF replacement at the endogenous locus. Precise, single-copy integration.',
@@ -75,7 +73,6 @@ const tiers = [
   },
   {
     name: 'Humanized Mouse',
-    startingPrice: '$24,500',
     sku: 'HUM-CUSTOM',
     description:
       'Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), or complete gene replacement.',
@@ -86,7 +83,6 @@ const tiers = [
   },
   {
     name: 'Transgenic Mouse',
-    startingPrice: '$17,297',
     sku: 'TG-CUSTOM',
     description:
       'BAC, pronuclear, or targeted transgenesis at safe harbor loci (Rosa26, H11). Reporter, Cre driver, or overexpression lines.',
@@ -97,7 +93,6 @@ const tiers = [
   },
   {
     name: 'Off-the-Shelf Catalog',
-    startingPrice: 'Quote',
     sku: 'CATALOG',
     description:
       '14,774 ready-to-ship genetically engineered mouse models. Live colonies for many top-requested knockouts, knockins, Cre drivers, and humanized lines.',
@@ -112,17 +107,17 @@ const faqs = [
   {
     question: 'How much does a custom mouse model cost?',
     answer:
-      'Custom mouse model pricing depends on the model type and complexity. Knockout and transgenic mice start at $17,297. Conditional knockouts (floxed alleles) and knockins start at $19,500. Humanized mice start at $24,500. Every project includes a free scientific consultation, fixed-fee quote in 24 hours, and a 100% germline transmission guarantee.',
+      'Custom mouse model pricing depends on the model type and complexity. Conditional knockouts and knockins price higher than constitutive knockouts; humanized mice are the most complex tier. Every project includes a free scientific consultation, fixed-fee quote in 24 hours, and a 100% germline transmission guarantee. Add your work email above to receive current starting prices.',
   },
   {
     question: 'How much do humanized mice cost?',
     answer:
-      'Humanized mouse projects start at $24,500. Pricing scales with humanization strategy (drug-target replacement, immune checkpoint humanization, complete gene replacement), allele complexity, and timeline. We have built humanized mice since 1998 with 800+ peer-reviewed publications.',
+      'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint humanization, complete gene replacement), allele complexity, and timeline. We have built humanized mice since 1998 with 800+ peer-reviewed publications. Submit your work email above to receive the current humanized starting price and a free 24-hour quote.',
   },
   {
     question: 'What is the price of a knockout mouse?',
     answer:
-      'Custom knockout mouse projects start at $17,297. This includes design, CRISPR or ES cell targeting, screening, and germline-confirmed founders with a 100% germline transmission guarantee. Conditional (floxed) knockouts start at $19,500. Many knockouts are also available as ready-to-ship catalog models — search by gene to check.',
+      'A custom knockout mouse project includes design, CRISPR or ES cell targeting, screening, and germline-confirmed founders with a 100% germline transmission guarantee. Many knockouts are also available as ready-to-ship catalog models — search by gene to check. Add your email above to receive the current knockout starting price and a fixed-fee quote in 24 hours.',
   },
   {
     question: 'Do you offer fixed-fee pricing?',
@@ -183,22 +178,24 @@ export default function PricingPage() {
               name: 'ingenious targeting laboratory',
               url: 'https://www.genetargeting.com',
             },
-            itemListElement: tiers
-              .filter((t) => t.startingPrice.startsWith('$'))
-              .map((t) => ({
-                '@type': 'Offer',
-                name: t.name,
-                sku: t.sku,
-                description: t.description,
+            itemListElement: tiers.map((t) => ({
+              '@type': 'Offer',
+              name: t.name,
+              sku: t.sku,
+              description: t.description,
+              priceSpecification: {
+                '@type': 'PriceSpecification',
                 priceCurrency: 'USD',
-                price: t.startingPrice.replace(/[^0-9]/g, ''),
-                url: `https://www.genetargeting.com${t.quoteHref.split('?')[0]}`,
-                availability: 'https://schema.org/InStock',
-                seller: {
-                  '@type': 'Organization',
-                  name: 'ingenious targeting laboratory',
-                },
-              })),
+                valueAddedTaxIncluded: false,
+                description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
+              },
+              url: `https://www.genetargeting.com${t.quoteHref.split('?')[0]}`,
+              availability: 'https://schema.org/InStock',
+              seller: {
+                '@type': 'Organization',
+                name: 'ingenious targeting laboratory',
+              },
+            })),
           }),
         }}
       />
@@ -235,8 +232,17 @@ export default function PricingPage() {
             >
               Custom mouse model pricing.
               <br />
-              <span style={{ color: '#00d4d4' }}>Starting at $17,297. Quote in 24 hours.</span>
+              <span style={{ color: '#00d4d4' }}>Add your email — quote in 24 hours.</span>
             </h1>
+            <div style={{ maxWidth: '520px', margin: '0 0 22px 0' }}>
+              <PricingUnlockForm
+                interest="Custom Mouse Model Pricing"
+                source="custom-mouse-model-pricing-hero"
+                ctaLabel="Get prices"
+                placeholder="Add your work email"
+                theme="dark"
+              />
+            </div>
             <p
               style={{
                 color: 'rgba(255,255,255,0.9)',
@@ -359,19 +365,22 @@ export default function PricingPage() {
                       marginBottom: '4px',
                     }}
                   >
-                    {tier.startingPrice.startsWith('$') ? 'Starting at' : 'Pricing'}
+                    Starting at
                   </div>
-                  <div
+                  <Link
+                    href={`/start-your-project/?utm_source=organic&utm_medium=pricing&utm_campaign=${tier.sku}-tier-unlock`}
                     style={{
+                      display: 'inline-block',
                       color: '#008080',
                       fontFamily: 'Poppins, sans-serif',
-                      fontSize: '1.8rem',
+                      fontSize: '1.05rem',
                       fontWeight: 700,
                       marginBottom: '12px',
+                      textDecoration: 'underline',
                     }}
                   >
-                    {tier.startingPrice}
-                  </div>
+                    Add email to get prices →
+                  </Link>
                   <p
                     style={{
                       color: '#444',

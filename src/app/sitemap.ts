@@ -210,7 +210,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/custom-mouse-models',
     '/cre-recombinase-mice',
     '/cre-lox-system',
-    '/pricing-guide',
     '/custom-mouse-model-pricing',
     '/request-quote',
     '/start-your-project',

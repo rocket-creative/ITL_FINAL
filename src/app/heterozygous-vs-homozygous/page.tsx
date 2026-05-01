@@ -19,14 +19,14 @@ import {
 export const metadata: Metadata = {
   title: 'Heterozygous vs Homozygous in Mice + Breeding Scheme Help | ITL',
   description:
-    'Heterozygous vs homozygous explained for mouse research. Picking the right genotype for your study? We design breeding schemes & build the mice. From $17,297.',
+    'Heterozygous vs homozygous explained for mouse research. Picking the right genotype for your study? We design breeding schemes & build the mice. Quote in 24 hours.',
   alternates: {
     canonical: 'https://www.genetargeting.com/heterozygous-vs-homozygous/',
   },
   openGraph: {
     title: 'Heterozygous vs Homozygous in Mice + Breeding Scheme Help | ITL',
     description:
-      'Heterozygous vs homozygous explained. We design breeding schemes & build your custom mouse. From $17,297.',
+      'Heterozygous vs homozygous explained. We design breeding schemes & build your custom mouse. Quote in 24 hours.',
     url: 'https://www.genetargeting.com/heterozygous-vs-homozygous/',
     siteName: 'ingenious targeting laboratory',
     type: 'article',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Heterozygous vs Homozygous in Mice + Breeding Help | ITL',
     description:
-      'Heterozygous vs homozygous explained. We design breeding schemes & build your mouse. From $17,297.',
+      'Heterozygous vs homozygous explained. We design breeding schemes & build your mouse. Quote in 24 hours.',
   },
 };
 
@@ -58,7 +58,7 @@ const faqs = [
   {
     question: 'Can ingenious targeting laboratory build my homozygous mouse?',
     answer:
-      'Yes. Every custom mouse model project from ingenious targeting laboratory delivers germline-confirmed founders. We can also expand colonies to homozygosity, perform speed-expansion breeding, and ship homozygous animals on the timeline you need. From $17,297. Quote in 24 hours.',
+      'Yes. Every custom mouse model project from ingenious targeting laboratory delivers germline-confirmed founders. We can also expand colonies to homozygosity, perform speed-expansion breeding, and ship homozygous animals on the timeline you need. Quote in 24 hours. Quote in 24 hours.',
   },
   {
     question: 'How long does it take to get homozygous mice?',
@@ -111,8 +111,12 @@ export default function HetVsHomPage() {
             areaServed: 'Worldwide',
             offers: {
               '@type': 'Offer',
-              priceCurrency: 'USD',
-              price: '17297',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'USD',
+                valueAddedTaxIncluded: false,
+                description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
+              },
               availability: 'https://schema.org/InStock',
               url: 'https://www.genetargeting.com/request-quote/',
               seller: { '@type': 'Organization', name: 'ingenious targeting laboratory' },
@@ -454,7 +458,7 @@ export default function HetVsHomPage() {
                 margin: '0 0 22px 0',
               }}
             >
-              Custom knockout, knockin, and humanized mice from $17,297. We
+              Custom knockout, knockin, and humanized mice with quote in 24 hours. We
               deliver germline-confirmed founders and can ship homozygous
               animals on your timeline. Or pick from 14,774 ready catalog
               models.

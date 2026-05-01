@@ -104,14 +104,11 @@ export default function HumanizedMouseServicesPage() {
             offers: {
               '@type': 'Offer',
               url: 'https://www.genetargeting.com/request-quote/',
-              priceCurrency: 'USD',
-              price: '24500',
               priceSpecification: {
                 '@type': 'PriceSpecification',
                 priceCurrency: 'USD',
-                price: '24500',
                 valueAddedTaxIncluded: false,
-                description: 'Starting price for custom humanized mouse generation',
+                description: 'Custom quote on request. Submit a brief and receive humanized mouse pricing within 24 hours.',
               },
               availability: 'https://schema.org/InStock',
               seller: {
@@ -218,7 +215,7 @@ export default function HumanizedMouseServicesPage() {
         <UXUIDCServicePricingAnchor
           serviceLabel="Humanized Mouse"
           headline="Custom humanized mice — fixed-fee quote in 24 hours."
-          startingPrice="$24,500"
+          unlockInterest="Humanized Mouse"
           subline="Pricing scales with humanization strategy (drug-target replacement, immune checkpoint, complete gene replacement), allele complexity, and timeline. Free scientific consultation included."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-services-pricing"
           secondaryHref="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-services-catalog-pricing"
@@ -227,7 +224,7 @@ export default function HumanizedMouseServicesPage() {
             {
               question: 'How much do humanized mice cost?',
               answer:
-                'Custom humanized mouse projects start at $24,500. Pricing scales with humanization strategy (drug-target replacement, immune checkpoint humanization, complete gene replacement), allele complexity, and delivery timeline. We deliver germline-confirmed founders and provide a fixed-fee quote in 24 hours after a free scientific consultation.',
+                'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint humanization, complete gene replacement), allele complexity, and delivery timeline. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours after a free scientific consultation. We deliver germline-confirmed founders.',
             },
             {
               question: 'How long does it take to build a humanized mouse?',

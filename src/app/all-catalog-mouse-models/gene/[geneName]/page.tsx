@@ -167,10 +167,13 @@ export default async function GenePage({ params }: Props) {
       brand: { '@type': 'Brand', name: SITE_NAME },
       category: m.category || 'Genetically engineered mouse model',
       offers: {
-        '@type': 'AggregateOffer',
-        lowPrice: '17297',
-        priceCurrency: 'USD',
-        offerCount: '1',
+        '@type': 'Offer',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          priceCurrency: 'USD',
+          valueAddedTaxIncluded: false,
+          description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
+        },
         availability: isInStock
           ? 'https://schema.org/InStock'
           : 'https://schema.org/PreOrder',

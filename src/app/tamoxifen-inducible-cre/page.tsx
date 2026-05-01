@@ -128,7 +128,7 @@ export default function TamoxifenInducibleCrePage() {
         <UXUIDCServicePricingAnchor
           serviceLabel="Tamoxifen Inducible Cre"
           headline="Custom CreERT2 mice — fixed-fee quote in 24 hours."
-          startingPrice="$17,297"
+          unlockInterest="Tamoxifen Inducible Cre"
           subline="Custom CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,500+ projects shipped. Free scientific consultation."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-pricing-anchor"
           secondaryHref="/all-catalog-mouse-models/?q=cre&utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-catalog"
@@ -137,7 +137,7 @@ export default function TamoxifenInducibleCrePage() {
             {
               question: 'How much does a CreERT2 mouse model cost?',
               answer:
-                'Custom tamoxifen-inducible Cre (CreERT2) mouse projects start at $17,297. Pricing scales with whether you need a custom CreERT2 driver line, a floxed allele paired with an existing Cre line, or a fully integrated inducible conditional knockout. We deliver germline-confirmed founders and provide a fixed-fee quote in 24 hours.',
+                'Pricing scales with whether you need a custom CreERT2 driver line, a floxed allele paired with an existing Cre line, or a fully integrated inducible conditional knockout. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours. We deliver germline-confirmed founders.',
             },
             {
               question: 'What is the difference between Cre, Cre-ERT2, and CreERT2?',

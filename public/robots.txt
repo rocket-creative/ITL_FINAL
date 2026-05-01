@@ -7,6 +7,8 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
 Disallow: /og-preview/
+Disallow: /pricing-guide
+Disallow: /pricing-guide/
 
 # Sitemaps
 Sitemap: https://www.genetargeting.com/sitemap.xml

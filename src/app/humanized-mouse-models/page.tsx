@@ -423,7 +423,7 @@ export default function HumanizedMouseModelsPage() {
         <UXUIDCServicePricingAnchor
           serviceLabel="Humanized Mouse"
           headline="Custom humanized mice — get a quote in 24 hours."
-          startingPrice="$24,500"
+          unlockInterest="Humanized Mouse"
           subline="Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), and complete gene replacement. Pricing scales with strategy and timeline."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-pricing-anchor"
           secondaryHref="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-catalog"
@@ -432,7 +432,7 @@ export default function HumanizedMouseModelsPage() {
             {
               question: 'How much do humanized mice cost?',
               answer:
-                'Custom humanized mouse projects start at $24,500. Pricing scales with humanization strategy (drug-target replacement, immune checkpoint, complete gene replacement), allele complexity, and delivery timeline. We deliver germline-confirmed founders and provide a fixed-fee quote in 24 hours after a free scientific consultation.',
+                'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint, complete gene replacement), allele complexity, and delivery timeline. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours after a free scientific consultation. We deliver germline-confirmed founders.',
             },
             {
               question: 'What humanized mouse services do you offer?',

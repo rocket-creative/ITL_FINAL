@@ -85,14 +85,41 @@ export default function StartYourProjectPage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const [email, setEmail] = useState('');
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
-    const handlePricingGuideAccess = (e: React.FormEvent) => {
+  const handlePricingGuideAccess = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.includes('@')) {
+    setSubmitError(null);
+    if (!email.trim() || !email.includes('@')) {
+      setSubmitError('Please enter a valid work email.');
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/unlock-pricing', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          source: 'start-your-project',
+          interest: 'Pricing Guide',
+          next: '/pricing-guide/',
+        }),
+      });
+      const data = (await res.json()) as { ok?: boolean; redirect?: string; error?: string };
+      if (!res.ok || !data.ok) {
+        setSubmitError(data.error || 'Could not unlock the pricing guide. Try again.');
+        setSubmitting(false);
+        return;
+      }
       setFormSubmitted(true);
-      const next = encodeURIComponent('/pricing-guide/');
+      const next = encodeURIComponent(data.redirect || '/pricing-guide/');
       window.location.href = `/start-your-project/thank-you/?next=${next}`;
+    } catch {
+      setSubmitError('Network error. Please try again.');
+      setSubmitting(false);
     }
   };
 
@@ -279,28 +306,45 @@ export default function StartYourProjectPage() {
                     />
                     <button
                       type="submit"
+                      disabled={submitting}
                       style={{
                         width: '100%',
                         padding: '14px',
-                        backgroundColor: '#008080',
+                        backgroundColor: submitting ? '#4a9595' : '#008080',
                         color: 'white',
                         border: 'none',
                         borderRadius: '6px',
                         fontSize: '.95rem',
                         fontWeight: 600,
-                        cursor: 'pointer',
+                        cursor: submitting ? 'wait' : 'pointer',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         gap: '8px',
                         transition: 'background-color 0.2s ease',
                       }}
-                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#006666')}
-                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#008080')}
+                      onMouseEnter={(e) => {
+                        if (!submitting) e.currentTarget.style.backgroundColor = '#006666';
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!submitting) e.currentTarget.style.backgroundColor = '#008080';
+                      }}
                     >
                       <IconArrowRight size={18} color="white" />
-                      Access Pricing Guide
+                      {submitting ? 'Sending…' : 'Access Pricing Guide'}
                     </button>
+                    {submitError && (
+                      <p
+                        role="alert"
+                        style={{
+                          color: '#b91c1c',
+                          fontSize: '.85rem',
+                          marginTop: '10px',
+                        }}
+                      >
+                        {submitError}
+                      </p>
+                    )}
                   </form>
                 ) : (
                   <div style={{ textAlign: 'center', padding: '20px 0' }}>

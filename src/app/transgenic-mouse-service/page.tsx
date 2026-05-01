@@ -300,7 +300,7 @@ export default function TransgenicMouseServicePage() {
         <UXUIDCServicePricingAnchor
           serviceLabel="Transgenic Mouse"
           headline="Custom transgenic mice — fixed-fee quote in 24 hours."
-          startingPrice="$17,297"
+          unlockInterest="Transgenic Mouse"
           subline="Pronuclear injection, BAC transgenics, and targeted transgenesis at safe harbor loci. Pricing scales with construct size and integration strategy. Free scientific consultation included."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=transgenic-pricing-anchor"
           secondaryHref="/all-catalog-mouse-models/?q=transgenic&utm_source=organic&utm_medium=service&utm_campaign=transgenic-catalog"
@@ -309,7 +309,7 @@ export default function TransgenicMouseServicePage() {
             {
               question: 'How much does a transgenic mouse cost?',
               answer:
-                'Custom transgenic mouse projects start at $17,297. Pricing scales with the transgenesis approach (pronuclear injection, BAC, targeted transgenesis at Rosa26 or other safe harbor loci), construct size, and copy number requirements. We deliver germline-confirmed founders and provide a fixed-fee quote in 24 hours.',
+                'Pricing scales with the transgenesis approach (pronuclear injection, BAC, targeted transgenesis at Rosa26 or other safe harbor loci), construct size, and copy number requirements. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours. We deliver germline-confirmed founders.',
             },
             {
               question: 'What transgenic approaches do you offer?',

@@ -10,6 +10,7 @@
  */
 
 import Link from 'next/link';
+import PricingUnlockForm from './PricingUnlockForm';
 
 export interface ServicePricingFaq {
   question: string;
@@ -21,9 +22,7 @@ interface Props {
   serviceLabel: string;
   /** Headline above the price */
   headline: string;
-  /** Starting price string. e.g. "$17,297" */
-  startingPrice: string;
-  /** Subline under price */
+  /** Subline under price block */
   subline: string;
   /** Quote CTA href + UTM params */
   quoteHref: string;
@@ -35,18 +34,23 @@ interface Props {
   faqs?: ServicePricingFaq[];
   /** Anchor id for in-page jump links */
   id?: string;
+  /**
+   * Page-level interest tag forwarded to the unlock form (used as HubSpot
+   * `jobtitle` for funnel attribution). Optional.
+   */
+  unlockInterest?: string;
 }
 
 export default function UXUIDCServicePricingAnchor({
   serviceLabel,
   headline,
-  startingPrice,
   subline,
   quoteHref,
   secondaryHref,
   secondaryLabel,
   faqs = [],
   id = 'pricing',
+  unlockInterest,
 }: Props) {
   return (
     <section
@@ -121,22 +125,18 @@ export default function UXUIDCServicePricingAnchor({
                 fontWeight: 600,
                 letterSpacing: '0.4px',
                 textTransform: 'uppercase',
-                marginBottom: '4px',
+                marginBottom: '10px',
               }}
             >
               Starting at
             </div>
-            <div
-              style={{
-                color: '#0a253c',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '2.2rem',
-                fontWeight: 700,
-                lineHeight: 1,
-                marginBottom: '12px',
-              }}
-            >
-              {startingPrice}
+            <div style={{ marginBottom: '14px' }}>
+              <PricingUnlockForm
+                interest={unlockInterest ?? serviceLabel}
+                source={`service-pricing-anchor:${serviceLabel}`}
+                ctaLabel="Get prices"
+                placeholder="Add your work email"
+              />
             </div>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <Link

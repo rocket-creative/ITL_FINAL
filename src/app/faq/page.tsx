@@ -65,7 +65,7 @@ const allFAQs: FAQ[] = [
   {
     category: 'Getting Started',
     question: 'What is the cost of generating a custom mouse model?',
-    answer: 'Project cost varies based on model complexity, allele design, and additional services required. Conventional knockouts start around $15,000 to $20,000. Conditional knockouts with LoxP sites range from $25,000 to $35,000. Complex models with multiple modifications or humanization may cost more. Contact us for a detailed quote based on your specific project requirements.'
+    answer: 'Project cost varies based on model complexity, allele design, and additional services required. Conditional knockouts with LoxP sites and humanization projects price higher than conventional knockouts. Submit your work email through our pricing guide or request a quote and we will return a fixed-fee quote within 24 hours, tailored to your specific project requirements.'
   },
   {
     category: 'Getting Started',

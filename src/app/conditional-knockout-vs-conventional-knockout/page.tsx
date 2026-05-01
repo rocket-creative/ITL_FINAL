@@ -92,7 +92,7 @@ export default function ConditionalVsConventionalPage() {
               <tbody>
                 {[
                   { feature: 'Timeline', conditional: '12-15 months', conventional: '9-12 months' },
-                  { feature: 'Cost', conditional: '$25,000-$35,000', conventional: '$15,000-$20,000' },
+                  { feature: 'Cost', conditional: 'Higher (custom quote)', conventional: 'Lower (custom quote)' },
                   { feature: 'Deletion Pattern', conditional: 'Tissue-specific or inducible', conventional: 'Global, all cells' },
                   { feature: 'Temporal Control', conditional: 'Yes (with inducible Cre)', conventional: 'No, constitutive from zygote' },
                   { feature: 'Embryonic Lethality', conditional: 'Bypassed by tissue-specific deletion', conventional: 'Potential barrier to obtaining adults' },

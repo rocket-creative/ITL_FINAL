@@ -294,32 +294,32 @@ const COMMERCIAL_META: Record<string, { title: string; description: string }> = 
   'what-is-a-point-mutation': {
     title: 'Point Mutation: Types, Examples & Custom Knockin Mice | ITL',
     description:
-      'Point mutation explained: substitution, missense, nonsense. Need a custom point mutation knockin mouse? From $17,297. 800+ publications. Quote in 24h.',
+      'Point mutation explained: substitution, missense, nonsense. Need a custom point mutation knockin mouse? 800+ publications. Quote in 24h.',
   },
   'types-of-point-mutations': {
     title: 'Types of Point Mutations + Custom Knockin Mouse Models | ITL',
     description:
-      'Substitution, insertion, deletion point mutations. Custom knockin mice for any disease variant. From $17,297. 26+ years experience. Quote in 24h.',
+      'Substitution, insertion, deletion point mutations. Custom knockin mice for any disease variant. 26+ years experience. Quote in 24h.',
   },
   'point-mutation-diseases': {
     title: 'Point Mutation Diseases + Custom Disease-Variant Mice | ITL',
     description:
-      'Diseases caused by point mutations: sickle cell, cystic fibrosis, cancer. We build the disease-variant knockin mice. From $17,297. Quote in 24h.',
+      'Diseases caused by point mutations: sickle cell, cystic fibrosis, cancer. We build the disease-variant knockin mice. Quote in 24h.',
   },
   'difference-between-knock-in-and-knockout': {
     title: 'Knock-in vs Knockout Mice + Custom & Catalog Models | ITL',
     description:
-      'Knock-in vs knockout explained. Custom builds from $17,297 or 14,774 ready catalog models. 100% germline guarantee. 800+ publications.',
+      'Knock-in vs knockout explained. Custom builds or 14,774 ready catalog models. 100% germline guarantee. 800+ publications.',
   },
   'conventional-vs-conditional-knockout': {
     title: 'Conventional vs Conditional Knockout + Custom Mice | ITL',
     description:
-      'Conventional vs conditional knockout: pick the right model. We build both — Cre/lox conditional or full knockout — from $17,297. 2,500+ projects.',
+      'Conventional vs conditional knockout: pick the right model. We build both — Cre/lox conditional or full knockout —. 2,500+ projects.',
   },
   'how-a-knockout-mouse-is-made': {
     title: 'How a Knockout Mouse Is Made + Custom Knockout Service | ITL',
     description:
-      'Knockout mouse generation explained. Or skip the protocol — custom knockouts from $17,297, 100% germline guarantee, quote in 24h. 2,500+ projects.',
+      'Knockout mouse generation explained. Or skip the protocol — custom knockouts, 100% germline guarantee, quote in 24h. 2,500+ projects.',
   },
   'humanized-mice': {
     title: 'Humanized Mice: Services, Pricing & Custom Models | ITL',
@@ -339,62 +339,62 @@ const COMMERCIAL_META: Record<string, { title: string; description: string }> = 
   'what-is-a-transgene': {
     title: 'Transgene Explained + Custom Transgenic Mouse Service | ITL',
     description:
-      'Transgene defined with examples. Need a custom transgenic mouse? BAC, random, or targeted from $17,297. 800+ publications. Quote in 24h.',
+      'Transgene defined with examples. Need a custom transgenic mouse? BAC, random, or targeted. 800+ publications. Quote in 24h.',
   },
   'transgenic-mice': {
     title: 'Transgenic Mice + Custom Transgenic Mouse Service | ITL',
     description:
-      'Transgenic mice explained. Custom transgenics — BAC, pronuclear, targeted — from $17,297. 800+ publications. Quote in 24 hours.',
+      'Transgenic mice explained. Custom transgenics — BAC, pronuclear, targeted —. 800+ publications. Quote in 24 hours.',
   },
   'how-to-make-a-transgenic-mouse': {
     title: 'How to Make a Transgenic Mouse + Custom Service | ITL',
     description:
-      'Transgenic mouse protocol explained. Or skip the build — custom transgenics from $17,297, 100% germline guarantee, quote in 24h.',
+      'Transgenic mouse protocol explained. Or skip the build — custom transgenics, 100% germline guarantee, quote in 24h.',
   },
   'rosa26-mice': {
     title: 'Rosa26 Mice + Custom Rosa26 Knockin Service | ITL',
     description:
-      'Rosa26 explained. Custom Rosa26 knockin mice — reporters, conditional cassettes, inducible expression — from $17,297. Quote in 24h.',
+      'Rosa26 explained. Custom Rosa26 knockin mice — reporters, conditional cassettes, inducible expression —. Quote in 24h.',
   },
   'floxing': {
     title: 'Floxing Explained + Custom Floxed Allele Service | ITL',
     description:
-      'Floxing explained for conditional knockouts. Custom floxed mice from $17,297 with critical exon selection. 100% germline guarantee.',
+      'Floxing explained for conditional knockouts. Custom floxed mice with critical exon selection. 100% germline guarantee.',
   },
   'floxed-cre-lox-flox': {
     title: 'Floxed, Cre, lox: Explained + Custom Floxed Mice | ITL',
     description:
-      'Floxed alleles, Cre, and loxP explained. Custom floxed mice from $17,297. 2,500+ projects, 100% germline guarantee. Quote in 24h.',
+      'Floxed alleles, Cre, and loxP explained. Custom floxed mice. 2,500+ projects, 100% germline guarantee. Quote in 24h.',
   },
   'flox-sequence': {
     title: 'Flox Sequence Design + Custom Floxed Allele Service | ITL',
     description:
-      'Designing a flox sequence. Hand it to our scientists — custom floxed mice with critical exon selection from $17,297. Quote in 24h.',
+      'Designing a flox sequence. Hand it to our scientists — custom floxed mice with critical exon selection. Quote in 24h.',
   },
   'conditional-mutation': {
     title: 'Conditional Mutation Explained + Custom Conditional Mice | ITL',
     description:
-      'Conditional mutations and conditional alleles explained. Custom conditional knockout & knockin mice from $17,297. Quote in 24h.',
+      'Conditional mutations and conditional alleles explained. Custom conditional knockout & knockin mice. Quote in 24h.',
   },
   'cre-flox': {
     title: 'Cre/flox Conditional Knockout + Custom Service | ITL',
     description:
-      'Cre/flox conditional knockout explained. Custom floxed alleles + tissue-specific Cre lines from $17,297. 800+ publications.',
+      'Cre/flox conditional knockout explained. Custom floxed alleles + tissue-specific Cre lines. 800+ publications.',
   },
   'what-is-a-stem-cell-line': {
     title: 'Stem Cell Lines + Custom ES Cell Mouse Targeting | ITL',
     description:
-      'Stem cell lines explained. Our validated C57BL/6 ES cell platform builds your custom mouse from $17,297. 100% germline guarantee.',
+      'Stem cell lines explained. Our validated C57BL/6 ES cell platform builds your custom mouse. 100% germline guarantee.',
   },
   'gene-knockout': {
     title: 'Gene Knockout: Methods + Custom Knockout Mice | ITL',
     description:
-      'Gene knockout methods explained. Custom knockout mice from $17,297. ES cell or CRISPR. 100% germline guarantee. Quote in 24h.',
+      'Gene knockout methods explained. Custom knockout mice. ES cell or CRISPR. 100% germline guarantee. Quote in 24h.',
   },
   'crispr-knockout': {
     title: 'CRISPR Knockout + Custom CRISPR Knockout Mice | ITL',
     description:
-      'CRISPR knockout explained. Custom CRISPR knockout mice from $17,297. 100% germline guarantee. 2,500+ projects shipped.',
+      'CRISPR knockout explained. Custom CRISPR knockout mice. 100% germline guarantee. 2,500+ projects shipped.',
   },
 };
 
@@ -445,7 +445,7 @@ export async function generateMetadata({
       title: commercial?.title ?? 'Custom Mouse Model Insights | ingenious targeting laboratory',
       description:
         commercial?.description ??
-        'Mouse model research insights from ingenious targeting laboratory. Custom knockout, knockin & humanized mice from $17,297.',
+        'Mouse model research insights from ingenious targeting laboratory. Custom knockout, knockin & humanized mice.',
     };
   }
 }
@@ -587,14 +587,11 @@ export default async function IngeniousBlogPost({
     offers: {
       '@type': 'Offer',
       url: `https://www.genetargeting.com${offer.primaryCta.href.split('?')[0]}`,
-      priceCurrency: 'USD',
-      price: '17297',
       priceSpecification: {
         '@type': 'PriceSpecification',
         priceCurrency: 'USD',
-        price: '17297',
         valueAddedTaxIncluded: false,
-        description: 'Starting price for custom mouse model generation',
+        description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
       },
       availability: 'https://schema.org/InStock',
       seller: {

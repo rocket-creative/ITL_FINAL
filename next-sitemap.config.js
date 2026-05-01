@@ -8,6 +8,8 @@ module.exports = {
     '/admin/*',
     '/_next/*',
     '/og-preview/*',
+    '/pricing-guide',
+    '/pricing-guide/*',
     '/server-sitemap.xml', // Exclude if using dynamic sitemap
   ],
   changefreq: 'weekly',
