@@ -84,10 +84,12 @@ export default function PricingUnlockForm({
 
   // Input must never collapse below a usable width. If the container is too
   // narrow to fit input + button on one line, the button wraps to a new line
-  // (because we set flex-wrap on the form).
+  // (because we set flex-wrap on the form). 200px is small enough that on a
+  // 393px iPhone the form fits comfortably inside a hero and wraps cleanly
+  // inside narrower 280–320px ServicePricingAnchor cards.
   const inputStyle: React.CSSProperties = {
-    flex: '1 1 220px',
-    minWidth: '220px',
+    flex: '1 1 200px',
+    minWidth: '200px',
     padding: '12px 14px',
     fontSize: '0.95rem',
     lineHeight: 1.2,
@@ -99,6 +101,7 @@ export default function PricingUnlockForm({
     boxShadow: isDark ? '0 1px 0 rgba(255,255,255,0.06)' : 'none',
     boxSizing: 'border-box',
     width: isStacked ? '100%' : undefined,
+    maxWidth: '100%',
   };
 
   const baseBg = isDark ? '#ffffff' : '#008080';

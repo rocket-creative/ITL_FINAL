@@ -232,7 +232,7 @@ export default function PricingPage() {
             >
               Custom mouse model pricing.
               <br />
-              <span style={{ color: '#00d4d4' }}>Add your email — quote in 24 hours.</span>
+              <span style={{ color: '#00d4d4' }}>Add your email. Quote in 24 hours.</span>
             </h1>
             <div style={{ maxWidth: '520px', margin: '0 0 22px 0' }}>
               <PricingUnlockForm
