@@ -73,61 +73,95 @@ export default function PricingUnlockForm({
 
   const isStacked = variant === 'stacked';
   const isDark = theme === 'dark';
+  const hasInput = email.trim().length > 0;
 
-  const inputBase =
-    'flex-1 min-w-0 px-4 py-3 text-sm rounded-lg border-2 outline-none transition-colors focus:ring-2 focus:ring-offset-1 disabled:opacity-50';
-  const inputLight =
-    'bg-white text-slate-900 border-slate-300 placeholder-slate-400 focus:border-emerald-500 focus:ring-emerald-500';
-  const inputDark =
-    'bg-white/95 text-slate-900 border-white/40 placeholder-slate-500 focus:border-white focus:ring-white/60';
+  // Inline styles instead of Tailwind so the widget renders correctly even
+  // when injected into pages whose parents apply their own typography or
+  // utility classes (e.g. the dark hero section in custom-mouse-model-pricing).
+  const formStyle: React.CSSProperties = isStacked
+    ? { display: 'flex', flexDirection: 'column', gap: '8px', width: '100%' }
+    : { display: 'flex', flexWrap: 'wrap', gap: '8px', width: '100%', alignItems: 'stretch' };
 
-  const buttonBase =
-    'px-5 py-3 text-sm font-semibold rounded-lg transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2';
-  const buttonLight =
-    'bg-emerald-600 text-white hover:bg-emerald-700 focus:ring-emerald-500';
-  const buttonDark = 'bg-white text-[#008080] hover:bg-slate-100 focus:ring-white';
+  const inputStyle: React.CSSProperties = {
+    flex: '1 1 220px',
+    minWidth: 0,
+    padding: '12px 14px',
+    fontSize: '0.95rem',
+    lineHeight: 1.2,
+    borderRadius: '6px',
+    border: isDark ? '1px solid rgba(255,255,255,0.55)' : '1px solid #cbd5e1',
+    background: isDark ? '#ffffff' : '#ffffff',
+    color: '#0f172a',
+    outline: 'none',
+    boxShadow: isDark ? '0 1px 0 rgba(255,255,255,0.06)' : 'none',
+  };
+
+  const baseBg = isDark ? '#ffffff' : '#0a253c';
+  const baseColor = isDark ? '#0a253c' : '#ffffff';
+  const buttonStyle: React.CSSProperties = {
+    flex: isStacked ? '1 1 auto' : '0 0 auto',
+    padding: '12px 22px',
+    fontSize: '0.9rem',
+    fontWeight: 700,
+    letterSpacing: '0.3px',
+    borderRadius: '6px',
+    border: 'none',
+    cursor: !hasInput || submitting ? 'not-allowed' : 'pointer',
+    backgroundColor: baseBg,
+    color: baseColor,
+    opacity: !hasInput || submitting ? 0.65 : 1,
+    transition: 'opacity 150ms ease, background-color 150ms ease',
+    whiteSpace: 'nowrap',
+  };
+
+  const helperColor = isDark ? 'rgba(255,255,255,0.78)' : '#475569';
+  const errorColor = isDark ? '#ffd1d1' : '#b91c1c';
 
   return (
-    <form
-      onSubmit={onSubmit}
-      className={`flex w-full ${isStacked ? 'flex-col gap-2' : 'flex-col gap-2 sm:flex-row sm:items-stretch'}`}
-      aria-label="Unlock pricing"
-    >
-      <label htmlFor="pricing-unlock-email" className="sr-only">
-        Work email to receive pricing
-      </label>
-      <input
-        id="pricing-unlock-email"
-        type="email"
-        inputMode="email"
-        autoComplete="email"
-        required
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder={placeholder}
-        disabled={submitting}
-        className={`${inputBase} ${isDark ? inputDark : inputLight}`}
-      />
-      <button
-        type="submit"
-        disabled={submitting || !email.trim()}
-        className={`${buttonBase} ${isDark ? buttonDark : buttonLight} whitespace-nowrap`}
-      >
-        {submitting ? 'Sending…' : ctaLabel}
-      </button>
+    <div style={{ width: '100%' }}>
+      <form onSubmit={onSubmit} style={formStyle} aria-label="Unlock pricing" noValidate>
+        <label htmlFor="pricing-unlock-email" className="sr-only" style={{ position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0,0,0,0)', border: 0 }}>
+          Work email to receive pricing
+        </label>
+        <input
+          id="pricing-unlock-email"
+          type="email"
+          inputMode="email"
+          autoComplete="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder={placeholder}
+          disabled={submitting}
+          style={inputStyle}
+        />
+        <button type="submit" disabled={submitting || !hasInput} style={buttonStyle}>
+          {submitting ? 'Sending…' : ctaLabel}
+        </button>
+      </form>
       {error && (
         <p
           role="alert"
-          className={`text-xs ${isDark ? 'text-white/90' : 'text-red-600'} ${isStacked ? '' : 'sm:basis-full'}`}
+          style={{
+            margin: '8px 0 0 0',
+            fontSize: '0.78rem',
+            lineHeight: 1.4,
+            color: errorColor,
+          }}
         >
           {error}
         </p>
       )}
       <p
-        className={`text-[11px] leading-snug ${isDark ? 'text-white/70' : 'text-slate-500'} ${isStacked ? '' : 'sm:basis-full'}`}
+        style={{
+          margin: '8px 0 0 0',
+          fontSize: '0.72rem',
+          lineHeight: 1.4,
+          color: helperColor,
+        }}
       >
         We email pricing in seconds. No spam, unsubscribe anytime.
       </p>
-    </form>
+    </div>
   );
 }
