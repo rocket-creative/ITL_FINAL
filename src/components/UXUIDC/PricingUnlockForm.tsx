@@ -82,21 +82,26 @@ export default function PricingUnlockForm({
     ? { display: 'flex', flexDirection: 'column', gap: '8px', width: '100%' }
     : { display: 'flex', flexWrap: 'wrap', gap: '8px', width: '100%', alignItems: 'stretch' };
 
+  // Input must never collapse below a usable width. If the container is too
+  // narrow to fit input + button on one line, the button wraps to a new line
+  // (because we set flex-wrap on the form).
   const inputStyle: React.CSSProperties = {
     flex: '1 1 220px',
-    minWidth: 0,
+    minWidth: '220px',
     padding: '12px 14px',
     fontSize: '0.95rem',
     lineHeight: 1.2,
     borderRadius: '6px',
     border: isDark ? '1px solid rgba(255,255,255,0.55)' : '1px solid #cbd5e1',
-    background: isDark ? '#ffffff' : '#ffffff',
+    background: '#ffffff',
     color: '#0f172a',
     outline: 'none',
     boxShadow: isDark ? '0 1px 0 rgba(255,255,255,0.06)' : 'none',
+    boxSizing: 'border-box',
+    width: isStacked ? '100%' : undefined,
   };
 
-  const baseBg = isDark ? '#ffffff' : '#0a253c';
+  const baseBg = isDark ? '#ffffff' : '#008080';
   const baseColor = isDark ? '#0a253c' : '#ffffff';
   const buttonStyle: React.CSSProperties = {
     flex: isStacked ? '1 1 auto' : '0 0 auto',
@@ -109,9 +114,10 @@ export default function PricingUnlockForm({
     cursor: !hasInput || submitting ? 'not-allowed' : 'pointer',
     backgroundColor: baseBg,
     color: baseColor,
-    opacity: !hasInput || submitting ? 0.65 : 1,
+    opacity: !hasInput || submitting ? 0.7 : 1,
     transition: 'opacity 150ms ease, background-color 150ms ease',
     whiteSpace: 'nowrap',
+    boxSizing: 'border-box',
   };
 
   const helperColor = isDark ? 'rgba(255,255,255,0.78)' : '#475569';
