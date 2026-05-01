@@ -15,8 +15,8 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Custom Mouse Model Services",
   title: "Custom Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,500 custom mouse models for researchers worldwide. Our gene targeting expertise spans knockout, knockin, humanized, and transgenic approaches.",
-  description: "Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgene integration, ingenious targeting laboratory provides the scientific consultation and technical execution to deliver models optimized for your specific research goals."
+  intro: "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,500+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+  description: "Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgene integration, iTL provides the PhD level scientific consultation and U.S. based technical execution to deliver models optimized for your specific research goals."
 };
 
 // Stats Data
@@ -158,6 +158,18 @@ const faqData = [
   {
     question: "Can ingenious targeting laboratory help if I already have a targeting vector or ES cells?",
     answer: "Yes. Partial service options are available for researchers with existing reagents. Services include ES cell targeting only, microinjection only, or germline transmission breeding. Contact us to discuss your specific requirements and receive a customized quote."
+  },
+  {
+    question: "How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?",
+    answer: "Jackson Laboratory offers custom CRISPR, ES cell, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on custom builds, and specialization in complex multi allele and humanization projects."
+  },
+  {
+    question: "How does iTL compare to Charles River, Cyagen, and other custom mouse model companies?",
+    answer: "Charles River is a global CRO bundling model creation with breeding and distribution. Cyagen is a cost forward CRISPR provider with a money back guarantee on genotype. ingenious targeting laboratory differs by focusing exclusively on custom model generation with both ES cell and CRISPR pipelines chosen per project, U.S. based QC at every stage, and long term inheritance stability tracking for complex alleles."
+  },
+  {
+    question: "What does the 100% germline transmission guarantee mean?",
+    answer: "ingenious targeting laboratory guarantees that every custom mouse model project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to both ES cell and CRISPR generated models."
   }
 ];
 
@@ -201,15 +213,60 @@ export default function CustomMouseModelsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Custom Mouse Models",
-            "description": "Custom knockout, knockin, and humanized mouse model generation services. Over 2,500 projects completed since 1998 with pre germline characterization.",
+            "name": "Custom Mouse Model Generation",
+            "description": "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,500+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory",
-              "url": "https://www.genetargeting.com"
+              "alternateName": "iTL",
+              "url": "https://www.genetargeting.com",
+              "description": "U.S. based custom mouse model company since 1998 with a 100% germline transmission guarantee."
             },
             "serviceType": "Custom Mouse Model Generation",
-            "areaServed": "Worldwide"
+            "areaServed": "Worldwide",
+            "audience": {
+              "@type": "Audience",
+              "audienceType": "Biomedical researchers, academic laboratories, pharmaceutical and biotech companies"
+            },
+            "serviceOutput": [
+              "Conventional knockout mouse models",
+              "Conditional knockout mouse models (Cre/loxP)",
+              "Knockin mouse models (point mutation, reporter, tag, cDNA)",
+              "Humanized mouse models (immune checkpoint, gene replacement)",
+              "Transgenic mouse models (BAC, targeted)",
+              "F1 heterozygous mice with germline transmission confirmation",
+              "Targeting design documentation and genotyping protocols"
+            ],
+            "award": "100% germline transmission guarantee",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Custom Mouse Model Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conventional knockout mouse model generation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conditional knockout mouse model generation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Knockin mouse model generation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Humanized mouse model generation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transgenic mouse model generation" } }
+              ]
+            }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqData.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
           })
         }}
       />

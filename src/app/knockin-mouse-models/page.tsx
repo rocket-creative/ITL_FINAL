@@ -763,9 +763,47 @@ export default function KnockinMouseModelsPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             name: 'Knockin Mouse Models',
-            provider: { '@type': 'Organization', name: 'ingenious targeting laboratory' },
-            description: 'Custom knockin mouse models for gene modification. Point mutations, reporters, tags, and cDNA insertions for research applications.',
-            serviceType: 'Custom Mouse Model Generation',
+            provider: {
+              '@type': 'Organization',
+              '@id': 'https://www.genetargeting.com/#organization',
+              name: 'ingenious targeting laboratory',
+              alternateName: 'iTL',
+              url: 'https://www.genetargeting.com',
+            },
+            description: 'Custom knockin mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. Point mutations, reporters, tags, and cDNA insertions since 1998.',
+            serviceType: 'Custom Knockin Mouse Model Generation',
+            areaServed: 'Worldwide',
+            award: '100% germline transmission guarantee',
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': ['Article', 'TechArticle'],
+            headline: 'Knockin Mouse Models: Point Mutation, Reporter, Tag, and cDNA Insertions',
+            description: 'Guide to custom knockin mouse model generation from ingenious targeting laboratory, a U.S. based custom mouse model company since 1998 with a 100% germline transmission guarantee.',
+            url: 'https://www.genetargeting.com/knockin-mouse-models/',
+            mainEntityOfPage: 'https://www.genetargeting.com/knockin-mouse-models/',
+            inLanguage: 'en-US',
+            datePublished: '2024-01-01',
+            dateModified: '2026-05-01',
+            author: {
+              '@type': 'Organization',
+              '@id': 'https://www.genetargeting.com/#organization',
+              name: 'ingenious targeting laboratory',
+              url: 'https://www.genetargeting.com',
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': 'https://www.genetargeting.com/#organization',
+              name: 'ingenious targeting laboratory',
+              logo: { '@type': 'ImageObject', url: 'https://www.genetargeting.com/images/logo.png' },
+            },
+            about: ['Knockin mouse models', 'Point mutation', 'Reporter knockin', 'Tag knockin', 'cDNA knockin', 'Custom mouse models'],
+            keywords: 'knockin mouse models, point mutation knockin, reporter knockin, tag knockin, cDNA knockin, custom mouse model company, ingenious targeting laboratory, iTL',
           }),
         }}
       />

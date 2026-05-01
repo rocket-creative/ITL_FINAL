@@ -1,22 +1,87 @@
 # Robots.txt for ingenious targeting laboratory
-# Production Site
+# Production site
 
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://www.genetargeting.com/sitemap.xml
-
-# Disallow admin/private areas
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
 Disallow: /og-preview/
 
-# Crawl-delay for politeness (optional)
-# Crawl-delay: 1
+# Sitemaps
+Sitemap: https://www.genetargeting.com/sitemap.xml
 
-# Allow all major search engines
+# AI assistant crawlers and indexers (explicitly allowed)
+# Allowing these so iTL is accurately represented in AI generated answers.
+# Canonical AI corpus: https://www.genetargeting.com/llms.txt
+# Full corpus:         https://www.genetargeting.com/llms-full.txt
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI training and AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl (used by many model trainers)
+User-agent: CCBot
+Allow: /
+
+# ByteDance / Doubao
+User-agent: Bytespider
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# DuckDuckGo Assist
+User-agent: DuckAssistBot
+Allow: /
+
+# Major search engines (explicit, redundant with wildcard)
 User-agent: Googlebot
 Allow: /
 
@@ -26,18 +91,5 @@ Allow: /
 User-agent: Slurp
 Allow: /
 
-# Block AI scrapers (optional - uncomment if desired)
-# User-agent: GPTBot
-# Disallow: /
-# 
-# User-agent: ChatGPT-User
-# Disallow: /
-# 
-# User-agent: CCBot
-# Disallow: /
-# 
-# User-agent: anthropic-ai
-# Disallow: /
-# 
-# User-agent: Claude-Web
-# Disallow: /
+User-agent: DuckDuckBot
+Allow: /

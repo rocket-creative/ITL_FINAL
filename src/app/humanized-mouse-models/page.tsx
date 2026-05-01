@@ -974,10 +974,45 @@ export default function HumanizedMouseModelsPage() {
             "name": "Humanized Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "ingenious targeting laboratory",
+              "alternateName": "iTL",
+              "url": "https://www.genetargeting.com"
             },
-            "description": "Custom humanized mouse models expressing human genes. Immune checkpoint humanization, drug target humanization, and complete gene replacement. Since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Custom humanized mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. Immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), drug target humanization, and complete gene replacement since 1998.",
+            "serviceType": "Custom Humanized Mouse Model Generation",
+            "areaServed": "Worldwide",
+            "award": "100% germline transmission guarantee"
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["Article", "TechArticle"],
+            "headline": "Humanized Mouse Models: Immune Checkpoint, Receptor, and Gene Replacement Humanization",
+            "description": "Guide to custom humanized mouse model generation from ingenious targeting laboratory, a U.S. based custom mouse model company since 1998 with a 100% germline transmission guarantee.",
+            "url": "https://www.genetargeting.com/humanized-mouse-models/",
+            "mainEntityOfPage": "https://www.genetargeting.com/humanized-mouse-models/",
+            "inLanguage": "en-US",
+            "datePublished": "2024-01-01",
+            "dateModified": "2026-05-01",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "ingenious targeting laboratory",
+              "url": "https://www.genetargeting.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "ingenious targeting laboratory",
+              "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
+            },
+            "about": ["Humanized mouse models", "Immune checkpoint humanization", "PD1", "PDL1", "CTLA4", "Gene replacement", "Custom mouse models"],
+            "keywords": "humanized mouse models, immune checkpoint mice, PD1 humanized, PDL1 humanized, CTLA4 humanized, gene replacement, custom mouse model company, ingenious targeting laboratory, iTL"
           })
         }}
       />

@@ -60,6 +60,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/post-project-services',
     '/start-your-project',
     '/custom-mouse-models',
+    '/custom-mouse-model-companies',
     '/knockout-mouse-models',
     '/conditional-knockout-mouse-models',
     '/conventional-knockout-mouse-models',
@@ -188,13 +189,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/accessibility',
   ];
 
+  // Comparison/pillar pages that should rank highly for AI and search
+  const highPriorityPaths = new Set(['/custom-mouse-model-companies']);
+
   for (const route of staticPages) {
     const pathStr = route || '/';
+    const isHighPriorityPillar = highPriorityPaths.has(route);
     entries.push({
       url: url(pathStr === '/' ? '' : route),
       lastModified: new Date(),
-      changeFrequency: route === '' ? 'weekly' : route.includes('catalog') ? 'weekly' : 'monthly',
-      priority: route === '' ? 1 : route.includes('catalog') || route.includes('request-quote') ? 0.9 : 0.8,
+      changeFrequency: route === '' ? 'weekly' : route.includes('catalog') || isHighPriorityPillar ? 'weekly' : 'monthly',
+      priority: route === '' ? 1 : isHighPriorityPillar ? 0.9 : route.includes('catalog') || route.includes('request-quote') ? 0.9 : 0.8,
     });
   }
 

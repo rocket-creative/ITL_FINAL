@@ -991,10 +991,48 @@ export default function KnockoutMouseModelsPage() {
             name: 'Knockout Mouse Models',
             provider: {
               '@type': 'Organization',
+              '@id': 'https://www.genetargeting.com/#organization',
               name: 'ingenious targeting laboratory',
+              alternateName: 'iTL',
+              url: 'https://www.genetargeting.com',
             },
-            description: 'Custom knockout mouse models for loss of function studies. Conventional and conditional knockouts with guaranteed transmission.',
-            serviceType: 'Custom Mouse Model Generation',
+            description: 'Custom knockout mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. Conventional, conditional, tissue specific, and inducible knockouts since 1998.',
+            serviceType: 'Custom Knockout Mouse Model Generation',
+            areaServed: 'Worldwide',
+            award: '100% germline transmission guarantee',
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': ['Article', 'TechArticle'],
+            headline: 'Knockout Mouse Models: Conventional, Conditional, Tissue Specific, and Inducible',
+            description: 'Comprehensive guide to custom knockout mouse model generation from ingenious targeting laboratory, a U.S. based custom mouse model company since 1998 with a 100% germline transmission guarantee.',
+            url: 'https://www.genetargeting.com/knockout-mouse-models/',
+            mainEntityOfPage: 'https://www.genetargeting.com/knockout-mouse-models/',
+            inLanguage: 'en-US',
+            datePublished: '2024-01-01',
+            dateModified: '2026-05-01',
+            author: {
+              '@type': 'Organization',
+              '@id': 'https://www.genetargeting.com/#organization',
+              name: 'ingenious targeting laboratory',
+              url: 'https://www.genetargeting.com',
+            },
+            publisher: {
+              '@type': 'Organization',
+              '@id': 'https://www.genetargeting.com/#organization',
+              name: 'ingenious targeting laboratory',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://www.genetargeting.com/images/logo.png',
+              },
+            },
+            about: ['Knockout mouse models', 'Conditional knockout', 'Cre/loxP', 'Gene targeting', 'Custom mouse models'],
+            keywords: 'knockout mouse models, conditional knockout, conventional knockout, tissue specific knockout, custom mouse model company, ingenious targeting laboratory, iTL',
           }),
         }}
       />

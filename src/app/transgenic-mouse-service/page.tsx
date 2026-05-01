@@ -761,10 +761,45 @@ export default function TransgenicMouseServicePage() {
             "name": "Transgenic Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "ingenious targeting laboratory",
+              "alternateName": "iTL",
+              "url": "https://www.genetargeting.com"
             },
-            "description": "Custom transgenic mouse models for overexpression, Cre drivers, and reporter lines. BAC transgenic and ROSA26 targeted approaches. 2,500+ projects since 1998.",
-            "serviceType": "Transgenic Mouse Model Generation"
+            "description": "Custom transgenic mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. BAC transgenics, Rosa26 and H11 safe harbor targeting, Cre drivers, and reporter lines. 2,500+ projects since 1998.",
+            "serviceType": "Custom Transgenic Mouse Model Generation",
+            "areaServed": "Worldwide",
+            "award": "100% germline transmission guarantee"
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["Article", "TechArticle"],
+            "headline": "Transgenic Mouse Models: BAC Transgenics, Safe Harbor Targeting, and Cre Drivers",
+            "description": "Guide to custom transgenic mouse model generation from ingenious targeting laboratory, a U.S. based custom mouse model company since 1998 with a 100% germline transmission guarantee.",
+            "url": "https://www.genetargeting.com/transgenic-mouse-service/",
+            "mainEntityOfPage": "https://www.genetargeting.com/transgenic-mouse-service/",
+            "inLanguage": "en-US",
+            "datePublished": "2024-01-01",
+            "dateModified": "2026-05-01",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "ingenious targeting laboratory",
+              "url": "https://www.genetargeting.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "ingenious targeting laboratory",
+              "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
+            },
+            "about": ["Transgenic mouse models", "BAC transgenics", "Rosa26", "H11 safe harbor", "Cre drivers", "Reporter mice", "Custom mouse models"],
+            "keywords": "transgenic mouse models, BAC transgenics, Rosa26, H11, Cre drivers, reporter mice, custom mouse model company, ingenious targeting laboratory, iTL"
           })
         }}
       />

@@ -30,10 +30,41 @@ const statsData = [
   { value: 100, suffix: "%", label: "Success Rate" }
 ];
 
+// Differentiators (canonical, used across site for AI consistency)
+const differentiatorsData = {
+  title: "What makes ingenious targeting laboratory different",
+  intro: "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,500+ genetically engineered mouse models since 1998. Researchers select iTL when allele complexity, scientific oversight, and long term inheritance stability matter to the outcome of their study.",
+  items: [
+    {
+      title: "100% germline transmission guarantee",
+      description: "Every custom mouse model project is backed by a 100% germline transmission guarantee. Researchers do not pay for a model that fails to transmit through the germline. The guarantee covers both ES cell and CRISPR generated models."
+    },
+    {
+      title: "U.S. based scientific oversight at every QC stage",
+      description: "Allele design, vector construction, ES cell targeting or CRISPR editing, microinjection, founder screening, germline confirmation, and cohort breeding are all performed and quality controlled in the United States by an in house PhD scientific team."
+    },
+    {
+      title: "Specialists in complex multi allele and humanized models",
+      description: "iTL is selected for projects other providers consider too complex: stacked alleles, conditional knockouts with multiple loxP cassettes, large humanizations, BAC transgenics, and safe harbor integrations at Rosa26 and H11."
+    },
+    {
+      title: "27 years, 2,500+ projects, 800+ peer reviewed publications",
+      description: "Continuous gene targeting experience since 1998 means stable protocols, validated reagents, and accumulated knowledge across every major therapeutic area. iTL generated models have appeared in Nature, Science, Cell, and the Journal of Clinical Investigation."
+    },
+    {
+      title: "Defined C57BL/6 backgrounds for cohort reproducibility",
+      description: "C57BL/6J and C57BL/6N are the primary working strains for cohort reproducibility, immunological consistency, and multi site study design. BALB/c, 129, and hybrid backgrounds are available on request."
+    }
+  ]
+};
+
 // FAQ Data
 const faqData = [
   { question: "What services does ingenious targeting laboratory provide?", answer: "We provide custom genetically engineered mouse, rat, and rabbit model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services." },
-  { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating custom mouse models since 1998, with over 26 years of experience and 2,500+ successful projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
+  { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating custom mouse models since 1998, with over 27 years of experience and 2,500+ successful projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
+  { question: "How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?", answer: "Jackson Laboratory offers custom CRISPR, ES cell, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on custom builds, and specialization in complex multi allele and humanization projects." },
+  { question: "How does iTL compare to Charles River, Cyagen, and other custom mouse model companies?", answer: "Charles River is a global CRO bundling model creation with breeding and distribution. Cyagen is a cost forward CRISPR provider with a money back guarantee on genotype. ingenious targeting laboratory differs by focusing exclusively on custom model generation with both ES cell and CRISPR pipelines chosen per project, U.S. based QC at every stage, and long term inheritance stability tracking for complex alleles." },
+  { question: "What does the 100% germline transmission guarantee mean?", answer: "ingenious targeting laboratory guarantees that every custom mouse model project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to both ES cell and CRISPR generated models and is one of the strongest commitments in the custom mouse model industry." },
   { question: "How do I get started with a custom mouse model project?", answer: "Contact us through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs." }
 ];
 
@@ -422,6 +453,52 @@ export default function AboutItlPage() {
           </div>
         </section>
 
+        {/* What Makes iTL Different Section */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '20px', textAlign: 'center' }}>
+              {differentiatorsData.title}
+            </h2>
+            <p className="animate-in" style={{ color: '#444', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '40px', textAlign: 'center', maxWidth: '780px', margin: '0 auto 40px' }}>
+              {differentiatorsData.intro}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {differentiatorsData.items.map((item, index) => (
+                <div key={index} className="animate-in" style={{
+                  backgroundColor: 'white',
+                  padding: '24px',
+                  borderLeft: '4px solid #008080',
+                  borderRadius: '4px'
+                }}>
+                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '10px' }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: '#444', fontSize: '.9rem', lineHeight: '1.7rem', margin: 0 }}>
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
+              <Link
+                href="/custom-mouse-model-companies"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  color: '#008080',
+                  fontSize: '.9rem',
+                  fontWeight: 600,
+                  textDecoration: 'none'
+                }}
+              >
+                Compare iTL to other custom mouse model companies
+                <IconChevronRight size={14} color="#008080" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
@@ -474,12 +551,39 @@ export default function AboutItlPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": "https://www.genetargeting.com/#organization",
             "name": "ingenious targeting laboratory",
-            "alternateName": "ITL",
+            "alternateName": ["iTL", "ingenious targeting lab", "ITL"],
             "url": "https://www.genetargeting.com",
             "logo": "https://www.genetargeting.com/images/logo.png",
-            "description": "Leading provider of custom genetically modified mouse, rat, and rabbit models since 1998",
+            "description": "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,500+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+            "slogan": "Custom mouse models, U.S. scientific oversight, 100% germline transmission guarantee.",
             "foundingDate": "1998",
+            "foundingLocation": "Holbrook, NY, United States",
+            "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 50, "maxValue": 200 },
+            "award": [
+              "100% germline transmission guarantee on every custom project",
+              "800+ peer reviewed publications citing iTL generated models"
+            ],
+            "knowsAbout": [
+              "Custom mouse model generation",
+              "Knockout mouse models",
+              "Conditional knockout mouse models",
+              "Knockin mouse models",
+              "Humanized mouse models",
+              "Transgenic mouse models",
+              "CRISPR/Cas9 genome editing",
+              "ES cell gene targeting",
+              "Cre/loxP system",
+              "Flp/FRT recombination",
+              "BAC transgenics",
+              "Rosa26 safe harbor targeting",
+              "C57BL/6 strain backgrounds",
+              "Sequence informed allele design",
+              "Germline transmission",
+              "Colony management",
+              "Cryopreservation"
+            ],
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "761-80 Coates Avenue",
@@ -493,7 +597,7 @@ export default function AboutItlPage() {
               "telephone": "+1-631-468-8530",
               "contactType": "customer service",
               "email": "inquiry@genetargeting.com",
-              "areaServed": "US",
+              "areaServed": "Worldwide",
               "availableLanguage": "English"
             },
             "sameAs": [
