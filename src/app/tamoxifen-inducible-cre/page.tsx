@@ -20,7 +20,7 @@ const statsData = [
   { value: 2500, suffix: "+", label: "Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 100, suffix: "%", label: "Germline Guarantee" }
 ];
 
 const howItWorks = [
@@ -147,7 +147,7 @@ export default function TamoxifenInducibleCrePage() {
             {
               question: 'How long does a custom CreERT2 mouse project take?',
               answer:
-                'Typical CreERT2 projects deliver germline-confirmed founders in 9–14 months. If you need both a tissue-specific CreERT2 driver and a paired floxed allele, plan additional time for breeding the lines together. Many tissue-specific CreERT2 lines are already in our catalog and ship from live colonies in weeks.',
+                'CreERT2 project timelines depend on allele complexity and whether you need a tissue-specific driver, a floxed allele, or both. Our scientific consultants scope an exact timeline during a free consultation. Many tissue-specific CreERT2 lines are also available from our catalog and ship from live colonies in weeks.',
             },
             {
               question: 'Do you have ready-to-ship CreERT2 driver lines?',

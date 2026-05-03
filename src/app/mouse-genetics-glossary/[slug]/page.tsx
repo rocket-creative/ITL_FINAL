@@ -21,9 +21,9 @@ import { glossaryTerms } from '@/data/glossaryTerms';
 // offer the searcher will actually click.
 const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: string }> = {
   'non-homologous-end-joining': {
-    title: 'NHEJ DNA Repair + Custom CRISPR Knockout Mice | ITL',
+    title: 'NHEJ DNA Repair Explained + Custom Knockout Mice | ITL',
     description:
-      'Non-homologous end joining (NHEJ) explained. We use NHEJ for CRISPR knockout mice. With 100% germline guarantee. Quote in 24h.',
+      'Non-homologous end joining (NHEJ) explained for researchers. Custom knockout mice with a 100% germline guarantee. Quote in 24h.',
   },
   'open-reading-frame': {
     title: 'Open Reading Frame (ORF) + Custom Knockin Mouse Models | ITL',

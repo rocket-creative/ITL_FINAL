@@ -50,9 +50,9 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Point Mutation Knockin Mice',
     headline: 'Need a point mutation knockin mouse?',
     subline:
-      'Custom point mutation models at endogenous loci. ES cell or CRISPR. 800+ publications. Quote in 24 hours.',
+      'Custom point mutation models at endogenous loci. 800+ publications. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=point-mutation-banner' },
-    secondaryCta: { label: 'Browse Point Mutation Catalog Models', href: '/all-catalog-mouse-models/?q=point+mutation' },
+    secondaryCta: { label: 'Already know your gene? Search the catalog', href: '/all-catalog-mouse-models/?q=point+mutation' },
   },
   'types-of-point-mutations': {
     eyebrow: 'Point Mutation Knockin Mice',
@@ -82,11 +82,11 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
   // KNOCKOUT / KNOCKIN cluster
   'difference-between-knock-in-and-knockout': {
     eyebrow: 'Knockout & Knockin Mice',
-    headline: 'Knockout or knockin — we build either, often faster off the shelf.',
+    headline: 'Custom knockout and knockin mouse models at your locus.',
     subline:
-      'Custom builds. 14,774 ready-to-ship catalog models. 26+ years experience. Quote in 24 hours.',
+      '26+ years experience. 100% germline guarantee. Quote in 24 hours.',
     primaryCta: { label: 'Get a Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=knockin-vs-knockout-banner' },
-    secondaryCta: { label: 'Search 14,774 Ready Models', href: '/all-catalog-mouse-models/' },
+    secondaryCta: { label: 'Already know your gene? Search the catalog', href: '/all-catalog-mouse-models/' },
   },
   'conventional-vs-conditional-knockout': {
     eyebrow: 'Conditional & Conventional Knockouts',
@@ -100,7 +100,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Custom Knockout Mice',
     headline: 'Need a knockout mouse built for your project?',
     subline:
-      'Custom knockout mice. ES cell or CRISPR. 100% germline transmission guarantee. Quote in 24 hours.',
+      'Custom knockout mice. ES cell or CRISPR. 100% germline guarantee. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=how-knockout-made-banner' },
     secondaryCta: { label: 'Browse Knockout Catalog', href: '/all-catalog-mouse-models/?q=knockout' },
   },
@@ -149,12 +149,12 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
 
   // GLOSSARY high-impression terms
   'non-homologous-end-joining': {
-    eyebrow: 'CRISPR Knockout Mice',
-    headline: 'NHEJ-driven knockouts — we build them every day.',
+    eyebrow: 'Custom Knockout Mice',
+    headline: 'Knockouts at your locus, germline-confirmed founders.',
     subline:
-      'Custom CRISPR knockout mice. 100% germline transmission guarantee. 2,500+ projects shipped.',
+      '100% germline guarantee. 2,500+ projects shipped.',
     primaryCta: { label: 'Request a Knockout Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=nhej-banner' },
-    secondaryCta: { label: 'Browse Knockout Catalog', href: '/all-catalog-mouse-models/?q=knockout' },
+    secondaryCta: { label: 'Already know your gene? Search the catalog', href: '/all-catalog-mouse-models/?q=knockout' },
   },
   'open-reading-frame': {
     eyebrow: 'Knockin & ORF Replacement Mice',
@@ -298,7 +298,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'ES Cell Targeting',
     headline: 'Our ES cell platform builds your custom mouse.',
     subline:
-      'Validated C57BL/6 ES cells. 100% germline transmission guarantee. Quote in 24 hours.',
+      'Validated C57BL/6 ES cells. 100% germline guarantee. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=stem-cell-banner' },
     secondaryCta: { label: 'See Custom Mouse Services', href: '/custom-mouse-models/' },
   },
@@ -325,9 +325,21 @@ export function getEducationalOffer(slug: string): EducationalSalesOffer {
 interface Props {
   /** Page slug (without surface prefix). Used to look up the offer copy. */
   slug: string;
+  /**
+   * Visual prominence of the catalog (secondary) CTA.
+   * - "secondary-link" (default for blog/glossary): subdued inline text link
+   *   below the primary button, so the custom-quote CTA is the visible
+   *   primary path.
+   * - "primary": the prior side-by-side button styling. Reserve for service
+   *   pages where catalog parity is intentional.
+   */
+  secondaryCtaStyle?: 'primary' | 'secondary-link';
 }
 
-export default function UXUIDCEducationalSalesBanner({ slug }: Props) {
+export default function UXUIDCEducationalSalesBanner({
+  slug,
+  secondaryCtaStyle = 'secondary-link',
+}: Props) {
   const offer = getEducationalOffer(slug);
 
   return (
@@ -399,8 +411,10 @@ export default function UXUIDCEducationalSalesBanner({ slug }: Props) {
         <div
           style={{
             display: 'flex',
+            flexDirection: secondaryCtaStyle === 'secondary-link' ? 'column' : 'row',
+            alignItems: secondaryCtaStyle === 'secondary-link' ? 'flex-start' : 'center',
             flexWrap: 'wrap',
-            gap: '12px',
+            gap: secondaryCtaStyle === 'secondary-link' ? '10px' : '12px',
             marginTop: '6px',
           }}
         >
@@ -426,28 +440,51 @@ export default function UXUIDCEducationalSalesBanner({ slug }: Props) {
             {offer.primaryCta.label}
             <span aria-hidden="true">→</span>
           </Link>
-          <Link
-            href={offer.secondaryCta.href}
-            data-cta="commercial-banner-secondary"
-            data-cta-slug={slug}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              backgroundColor: 'transparent',
-              color: '#ffffff',
-              padding: '12px 22px',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontWeight: 600,
-              fontSize: '0.95rem',
-              letterSpacing: '0.3px',
-              border: '2px solid rgba(255,255,255,0.55)',
-            }}
-          >
-            {offer.secondaryCta.label}
-            <span aria-hidden="true">→</span>
-          </Link>
+          {secondaryCtaStyle === 'primary' ? (
+            <Link
+              href={offer.secondaryCta.href}
+              data-cta="commercial-banner-secondary"
+              data-cta-slug={slug}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: 'transparent',
+                color: '#ffffff',
+                padding: '12px 22px',
+                borderRadius: '4px',
+                textDecoration: 'none',
+                fontWeight: 600,
+                fontSize: '0.95rem',
+                letterSpacing: '0.3px',
+                border: '2px solid rgba(255,255,255,0.55)',
+              }}
+            >
+              {offer.secondaryCta.label}
+              <span aria-hidden="true">→</span>
+            </Link>
+          ) : (
+            <Link
+              href={offer.secondaryCta.href}
+              data-cta="commercial-banner-secondary"
+              data-cta-slug={slug}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+                color: 'rgba(255,255,255,0.78)',
+                fontSize: '0.85rem',
+                fontWeight: 500,
+                textDecoration: 'underline',
+                textDecorationColor: 'rgba(255,255,255,0.35)',
+                textUnderlineOffset: '3px',
+                padding: '2px 0',
+              }}
+            >
+              {offer.secondaryCta.label}
+              <span aria-hidden="true">→</span>
+            </Link>
+          )}
         </div>
         <div
           style={{
