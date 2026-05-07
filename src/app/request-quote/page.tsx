@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -86,7 +86,27 @@ const fallbackFields: FormField[] = [
 ];
 
 export default function RequestQuotePage() {
-  const heroRef = useRef<HTMLDivElement>(null);  return (
+  const heroRef = useRef<HTMLDivElement>(null);
+  const [quoteInitialValues, setQuoteInitialValues] = useState<Record<string, string> | undefined>(
+    undefined
+  );
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const sp = new URLSearchParams(window.location.search);
+    const g = sp.get('gene');
+    const t = sp.get('tissue');
+    const d = sp.get('driver');
+    const o: Record<string, string> = {};
+    if (g) o.gene_symbol = g;
+    const lines: string[] = [];
+    if (t) lines.push(`Preferred tissue / cell context key: ${t}`);
+    if (d) lines.push(`Cre driver discussion: ${d}`);
+    if (lines.length) o.additional_notes = lines.join('\n');
+    if (Object.values(o).some(Boolean)) setQuoteInitialValues(o);
+  }, []);
+
+  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
 
@@ -219,6 +239,7 @@ export default function RequestQuotePage() {
                     portalId="3977953"
                     region="na1"
                     fallbackFields={fallbackFields}
+                    initialValues={quoteInitialValues}
                     submitButtonText="Request Quote"
                     successMessage="Thank you! A scientific consultant will contact you within 1 business day."
                     redirectAfterSubmit={REQUEST_QUOTE_THANK_YOU}

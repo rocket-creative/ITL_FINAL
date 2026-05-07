@@ -32,7 +32,7 @@ export default function ServiceLink({ href }: ServiceLinkProps) {
           marginBottom: '18px',
           lineHeight: 1.6,
         }}>
-          Learn more about our mouse model services.
+          Explore catalog strains ready to ship and full custom design from one partner.
         </p>
         <Link
           href={href}

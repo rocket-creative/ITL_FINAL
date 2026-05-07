@@ -8,6 +8,7 @@
  * TO UPDATE PUBLICATIONS:
  * Edit the publicationsData.ts file in this same folder.
  * Add new publications to the beginning of the appropriate year array.
+ * Follow the ITL source document: date order (most recent first), citation text exactly as approved for the website.
  */
 
 import { useEffect, useRef, useState, useMemo } from 'react';

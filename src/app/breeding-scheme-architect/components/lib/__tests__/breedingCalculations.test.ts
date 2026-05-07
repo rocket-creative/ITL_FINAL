@@ -3,6 +3,7 @@
  * Tests all fixes from the video transcript
  */
 
+import { describe, expect, it, test } from 'vitest';
 import {
   generateBreedingPlan,
   formatProbability,

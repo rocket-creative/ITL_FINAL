@@ -3,7 +3,7 @@
 /**
  * IngeniousAd - Contextual service CTA for Lab Signals articles
  * Appears within gated content, tailored to article topic.
- * Links to relevant ingenious targeting laboratory service page.
+ * Dual path: topical services plus browse-ready catalog strains.
  */
 
 import Link from 'next/link';
@@ -16,6 +16,8 @@ const BRAND = {
   darkGray: '#444444',
 };
 
+const DEFAULT_CATALOG_HREF = '/all-catalog-mouse-models/';
+
 interface IngeniousAdProps {
   /** Service page path (e.g. /conditional-knockout-mouse-models) */
   relatedPage: string;
@@ -23,6 +25,8 @@ interface IngeniousAdProps {
   category: string;
   /** Optional custom headline override */
   headline?: string;
+  /** Catalog browse/search URL for secondary CTA */
+  catalogCtaHref?: string;
 }
 
 const CATEGORY_HEADLINES: Record<string, string> = {
@@ -42,9 +46,25 @@ export default function IngeniousAd({
   relatedPage,
   category,
   headline,
+  catalogCtaHref = DEFAULT_CATALOG_HREF,
 }: IngeniousAdProps) {
   const displayHeadline =
     headline || CATEGORY_HEADLINES[category] || 'Advancing your research?';
+
+  const catalogHref = catalogCtaHref || DEFAULT_CATALOG_HREF;
+
+  const btnBase = {
+    fontFamily: 'Poppins, sans-serif' as const,
+    fontSize: '.85rem' as const,
+    fontWeight: 600 as const,
+    padding: '12px 22px' as const,
+    textDecoration: 'none' as const,
+    borderRadius: '6px' as const,
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+    display: 'inline-flex' as const,
+    alignItems: 'center' as const,
+    gap: '8px' as const,
+  };
 
   return (
     <div
@@ -91,36 +111,57 @@ export default function IngeniousAd({
           marginBottom: '18px',
         }}
       >
-        Custom mouse models since 1998. Expertly designed. Delivery guaranteed.
+        Thousands of research ready strains ship from live colonies. Same team designs custom knockouts, knockins, and humanized models when your allele is not on the shelf.
       </p>
-      <Link
-        href={relatedPage}
+      <div
         style={{
-          display: 'inline-flex',
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '12px',
           alignItems: 'center',
-          gap: '8px',
-          backgroundColor: BRAND.black,
-          color: BRAND.white,
-          fontFamily: 'Poppins, sans-serif',
-          fontSize: '.85rem',
-          fontWeight: 600,
-          padding: '12px 22px',
-          textDecoration: 'none',
-          borderRadius: '6px',
-          transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = 'translateY(-2px)';
-          e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.25)';
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = 'none';
         }}
       >
-        Explore Services
-        <span aria-hidden>→</span>
-      </Link>
+        <Link
+          href={relatedPage}
+          style={{
+            ...btnBase,
+            backgroundColor: BRAND.black,
+            color: BRAND.white,
+            border: `2px solid ${BRAND.black}`,
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.25)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = 'none';
+          }}
+        >
+          Explore Services
+          <span aria-hidden>→</span>
+        </Link>
+        <Link
+          href={catalogHref}
+          style={{
+            ...btnBase,
+            backgroundColor: BRAND.white,
+            color: BRAND.black,
+            border: `2px solid ${BRAND.black}`,
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.12)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = 'none';
+          }}
+        >
+          Browse Catalog
+          <span aria-hidden>→</span>
+        </Link>
+      </div>
     </div>
   );
 }

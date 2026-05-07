@@ -38,10 +38,10 @@ export interface CatalogLookup {
 }
 
 const DEFAULT_LOOKUP: CatalogLookup = {
-  eyebrow: 'Already in our catalog?',
-  headline: 'Skip the build. 14,774 ready-to-ship mouse models.',
+  eyebrow: 'Catalog first',
+  headline: 'Search 14,774 strains. Many ship from live colonies.',
   subline:
-    'Search by gene, model type, or therapeutic area. Live colonies, validated, ready to ship.',
+    'Browse by gene, model type, or therapeutic area. If your allele is not listed, our scientists deliver custom knockouts, knockins, and humanized mice.',
   searchHref: '/all-catalog-mouse-models/',
   searchLabel: 'Browse Full Catalog',
   genes: [
@@ -54,10 +54,10 @@ const DEFAULT_LOOKUP: CatalogLookup = {
 const LOOKUP_MAP: Record<string, CatalogLookup> = {
   // POINT MUTATION cluster
   'what-is-a-point-mutation': {
-    eyebrow: 'Already in our catalog?',
-    headline: 'Skip the build — see if your point mutation model is ready to ship.',
+    eyebrow: 'Catalog first',
+    headline: 'Point mutation knockins. Check live colonies before you plan a build.',
     subline:
-      'Hundreds of disease-variant knockin models in the catalog. Search by gene or browse popular hits.',
+      'Hundreds of disease variant knockin models are in stock. Search by gene or browse popular hits. Need a unique variant? We design custom knockins.',
     searchHref: '/all-catalog-mouse-models/?q=point+mutation',
     searchLabel: 'Search Point Mutation Models',
     genes: [
@@ -409,6 +409,11 @@ export function getCatalogLookup(slug: string): CatalogLookup {
   return LOOKUP_MAP[slug] ?? DEFAULT_LOOKUP;
 }
 
+/** Slugs with topic-specific catalog lookup (not the site-wide default). */
+export function hasEducationalCatalogMap(slug: string): boolean {
+  return Object.prototype.hasOwnProperty.call(LOOKUP_MAP, slug);
+}
+
 interface Props {
   slug: string;
 }
@@ -536,6 +541,63 @@ export default function CatalogGeneLookup({ slug }: Props) {
         {lookup.searchLabel}
         <span aria-hidden="true">→</span>
       </Link>
+
+      <div
+        style={{
+          marginTop: '22px',
+          paddingTop: '18px',
+          borderTop: '1px solid #d8e3e6',
+        }}
+      >
+        <p
+          style={{
+            margin: '0 0 10px 0',
+            color: '#444',
+            fontFamily: 'Lato, -apple-system, sans-serif',
+            fontSize: '0.9rem',
+            lineHeight: 1.5,
+          }}
+        >
+          Do not see your allele? Same team builds custom models with guaranteed germline transmission.
+        </p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center' }}>
+          <Link
+            href={`/request-quote?utm_source=organic&utm_medium=educational&utm_campaign=catalog-widget-custom-${slug}`}
+            data-cta="catalog-widget-request-quote"
+            data-cta-slug={slug}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              backgroundColor: '#0a253c',
+              color: '#ffffff',
+              padding: '9px 16px',
+              borderRadius: '4px',
+              textDecoration: 'none',
+              fontWeight: 600,
+              fontSize: '0.85rem',
+            }}
+          >
+            Request a Quote
+            <span aria-hidden="true">→</span>
+          </Link>
+          <Link
+            href="/custom-mouse-models"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              color: '#008080',
+              fontWeight: 600,
+              fontSize: '0.85rem',
+              textDecoration: 'underline',
+              textUnderlineOffset: '3px',
+            }}
+          >
+            Custom model services
+          </Link>
+        </div>
+      </div>
     </aside>
   );
 }

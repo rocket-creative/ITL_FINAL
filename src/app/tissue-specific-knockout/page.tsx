@@ -9,6 +9,9 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { allTissueLineSlugs } from '@/lib/seo/slugs';
+
+const CRE_LINE_INDEX_LINKS = allTissueLineSlugs();
 
 // Hero Data
 const heroData = {
@@ -698,6 +701,37 @@ export default function TissueSpecificKnockoutPage() {
               title="Tissue Specific Knockout Insights"
               description="Explore Cre driver selection strategies, tissue-specific targeting approaches, and conditional knockout best practices. Expert analysis delivered biweekly."
             />
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#ffffff', padding: '50px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.35rem', fontWeight: 700, marginBottom: '12px' }}>
+              Tissue Cre line index
+            </h2>
+            <p style={{ color: '#555', fontSize: '.92rem', lineHeight: 1.7, marginBottom: '18px' }}>
+              Browse indexable hub pages for each tissue program. Each page lists validated drivers and links into catalog genes.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              {CRE_LINE_INDEX_LINKS.map((slug) => (
+                <Link
+                  key={slug}
+                  href={`/cre-lines/${slug}/`}
+                  style={{
+                    padding: '8px 12px',
+                    background: '#f0f9f9',
+                    border: '1px solid #008080',
+                    borderRadius: '4px',
+                    color: '#008080',
+                    fontWeight: 600,
+                    fontSize: '.8rem',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {slug.replace(/-specific$/, '').replace(/-/g, ' ')} specific
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

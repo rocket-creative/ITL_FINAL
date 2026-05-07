@@ -1,7 +1,7 @@
 ---
 title: "What Is a Point Mutation? Types, Causes & Examples"
 slug: "what-is-a-point-mutation"
-description: "Model a point mutation in mice? See how researchers use precise knockin mouse models for disease research and get a quote for your project."
+description: "Model a point mutation in mice? Browse catalog knockin strains or plan a custom allele. Disease research, timelines, and quotes from our scientists."
 date: "Thu Jul 10 2025 15:33:51 GMT+0000 (Coordinated Universal Time)"
 category: "Educational"
 legacy_url: "https://www.genetargeting.com/ingenious-blog/what-is-a-point-mutation"
@@ -25,7 +25,7 @@ A single point mutation occurs when a single base pair is substituted with anoth
 
 Single point mutations can and have been used for a variety of different applications. In most cases, they are used in transgenic mice to help develop simple, easy to obtain but also highly targeted changes in the DNA encoding that accounts for certain diseases or their absence. As a result, the use of a single point mutation can lead to anything from the development of prostate cancer to an increase in immune system deficiencies, which can then be used to develop new potential treatments. For example, sickle cell anemia mice have single mutations consisting of mutations of Antilles b23-I and D-Punjab b121-N. These are known to enhance the polymerization process in sickle cell patients being bS-Antilles heterozygotes or compound S/D- Punjab heterozygotes.
 
-[Get a custom point mutation mouse model →](/point-mutation-mice/)
+[Browse catalog point mutation models](/all-catalog-mouse-models/?q=point+mutation) or [explore custom point mutation mice](/point-mutation-mice/).
 
 ### Differences Between Multiple and Single Point Mutations
 
@@ -49,7 +49,7 @@ Deletions: A deletion, resulting in a frameshift, occurs when one or more base p
 
 Insertions: The insertion of additional base pairs may lead to frameshifts depending on whether or not multiples of three base pairs are inserted. Combinations of insertions and deletions leading to a variety of outcomes are also possible. For example, if a sequence of codons in DNA is normally CCT ATG TTT and an extra A is added between the two cytosine bases, the sequence will instead read CAC TAT GTT T. This completely changes the amino acids that would be produced, which in turn alters the structure and function of the resulting protein and can render it useless.
 
-**Need a custom point mutation mouse model?** [Explore point mutation mice](/point-mutation-mice/) or [request a quote](/request-quote/) to discuss your project.
+**Planning a point mutation model?** [Browse catalog strains](/all-catalog-mouse-models/?q=point+mutation), see [custom point mutation services](/point-mutation-mice/), or [request a quote](/request-quote/).
 
 ### What Can Cause a Point Mutation?
 
@@ -81,4 +81,4 @@ With modern sequencing and genomic engineering technologies, the precise mutatio
 
 Related: [Types of Point Mutations](/ingenious-blog/types-of-point-mutations/), [Point Mutation Diseases](/ingenious-blog/point-mutation-diseases/).
 
-**Start your point mutation project.** [Get a custom point mutation mouse model](/point-mutation-mice/) or [request a quote](/request-quote/) for timeline and pricing.
+**Start your point mutation project.** [Search live colonies](/all-catalog-mouse-models/?q=point+mutation), [review custom knockin options](/point-mutation-mice/), or [request a quote](/request-quote/) for timeline and pricing.

@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
@@ -8,6 +8,11 @@ import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
 import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink, BreadcrumbSchema, SpotlightModule } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconEye, IconQuote, IconChevronRight, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
+import { tier1GenerateStaticParams } from '@/data/seoKeywords';
+
+const POPULAR_CKO_TIER1 = tier1GenerateStaticParams()
+  .filter((p) => p.modSlug === 'conditional-knockout')
+  .slice(0, 12);
 
 // Legacy content link
 const legacyContentUrl = '/legacy/conditional-knockout-mouse-models';
@@ -207,7 +212,23 @@ const getFaqData = () => [
 ];
 
 export default function ConditionalKnockoutMouseModelsPage() {
-  const heroRef = useRef<HTMLDivElement>(null);  return (
+  const heroRef = useRef<HTMLDivElement>(null);
+  const [quoteHref, setQuoteHref] = useState('/request-quote');
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const sp = new URLSearchParams(window.location.search);
+    const quoteQs = new URLSearchParams();
+    const g = sp.get('gene');
+    const t = sp.get('tissue');
+    const d = sp.get('driver');
+    if (g) quoteQs.set('gene', g);
+    if (t) quoteQs.set('tissue', t);
+    if (d) quoteQs.set('driver', d);
+    setQuoteHref(quoteQs.toString() ? `/request-quote?${quoteQs}` : '/request-quote');
+  }, []);
+
+  return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       
@@ -294,7 +315,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
             
             <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Link 
-                href="/request-quote"
+                href={quoteHref}
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
                   backgroundColor: 'white',
@@ -817,7 +838,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
             </p>
             <div className="animate-in flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <Link 
-                href="/request-quote"
+                href={quoteHref}
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
                   backgroundColor: '#008080',
@@ -831,7 +852,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                 <span>→</span>
               </Link>
               <Link 
-                href="/request-quote"
+                href={quoteHref}
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',
@@ -974,6 +995,37 @@ export default function ConditionalKnockoutMouseModelsPage() {
                   ))}
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#ffffff', padding: '50px 20px', borderTop: '1px solid #eee' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.35rem', fontWeight: 700, marginBottom: '12px' }}>
+              Popular conditional models by gene
+            </h2>
+            <p style={{ color: '#555', fontSize: '.95rem', lineHeight: 1.7, marginBottom: '20px' }}>
+              Indexable catalog pages organized by gene and conditional knockout. Each link opens models, availability, and quote paths for that target.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+              {POPULAR_CKO_TIER1.map(({ geneName, modSlug }) => (
+                <Link
+                  key={geneName}
+                  href={`/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}/`}
+                  style={{
+                    padding: '10px 16px',
+                    background: '#f0f9f9',
+                    border: '1px solid #008080',
+                    borderRadius: '4px',
+                    color: '#008080',
+                    fontWeight: 600,
+                    fontSize: '.88rem',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {geneName} conditional knockout
+                </Link>
+              ))}
             </div>
           </div>
         </section>

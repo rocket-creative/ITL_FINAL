@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "node -e \"console.log('postbuild: skip next-sitemap; App Router sitemap is src/app/sitemap.ts')\"",
+    "lhci": "lhci autorun --config=lighthouserc.json",
     "start": "next start",
     "lint": "eslint",
+    "test": "npx --yes vitest@3.2.4 run",
     "test:redirects": "./test-redirects.sh http://localhost:3000",
     "test:redirects:prod": "./test-redirects.sh https://www.genetargeting.com",
     "check:gsc-404s": "node scripts/check-gsc-404-urls.mjs",

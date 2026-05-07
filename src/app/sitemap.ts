@@ -10,7 +10,15 @@ import { getAllBlogSlugs } from '@/lib/blog/blogUtils';
 import { glossaryTerms } from '@/data/glossaryTerms';
 import { getAllArticleSlugs } from '@/data/newsletterArticles';
 import { BASE_URL } from '@/lib/seo/types';
-import { getAllGeneNames } from '@/lib/catalog/serverCatalog';
+import { getAllGeneNames, getDistinctGeneModelTypePairs } from '@/lib/catalog/serverCatalog';
+import {
+  allTissueLineSlugs,
+  driverCanonicalToSlug,
+  modCanonicalToSlug,
+  modSlugToCanonical,
+} from '@/lib/seo/slugs';
+import { CRE_DRIVERS } from '@/lib/search/creDrivers';
+import { tier4GenerateStaticParams } from '@/data/seoKeywords';
 
 type SitemapEntry = {
   url: string;
@@ -311,5 +319,50 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  return entries;
+  const pairs = await getDistinctGeneModelTypePairs();
+  for (const { gene_name, model_type } of pairs) {
+    const ms = modCanonicalToSlug(model_type);
+    if (!modSlugToCanonical(ms)) continue;
+    entries.push({
+      url: url(`/all-catalog-mouse-models/gene/${encodeURIComponent(gene_name)}/${ms}`),
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.88,
+    });
+  }
+
+  for (const tissueSlug of allTissueLineSlugs()) {
+    entries.push({
+      url: url(`/cre-lines/${tissueSlug}`),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.84,
+    });
+  }
+
+  for (const d of CRE_DRIVERS) {
+    entries.push({
+      url: url(`/cre-drivers/${driverCanonicalToSlug(d.driver)}`),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.84,
+    });
+  }
+
+  for (const t of tier4GenerateStaticParams()) {
+    entries.push({
+      url: url(
+        `/all-catalog-mouse-models/gene/${encodeURIComponent(t.geneName)}/${t.modSlug}/${t.tissueOrDriverSlug}`
+      ),
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.87,
+    });
+  }
+
+  const byUrl = new Map<string, SitemapEntry>();
+  for (const e of entries) {
+    if (!byUrl.has(e.url)) byUrl.set(e.url, e);
+  }
+  return Array.from(byUrl.values());
 }

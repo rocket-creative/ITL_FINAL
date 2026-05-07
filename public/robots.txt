@@ -3,6 +3,12 @@
 
 User-agent: *
 Allow: /
+Allow: /all-catalog-mouse-models/
+Allow: /cre-lines/
+Allow: /cre-drivers/
+Disallow: /*?type=
+Disallow: /*?tissue=
+Disallow: /*?driver=
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/

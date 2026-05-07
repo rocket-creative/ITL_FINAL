@@ -100,6 +100,24 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: '/cre-lines/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=86400, stale-while-revalidate=604800',
+          },
+        ],
+      },
+      {
+        source: '/cre-drivers/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=86400, stale-while-revalidate=604800',
+          },
+        ],
+      },
       // Cache static assets
       {
         source: '/images/:path*',

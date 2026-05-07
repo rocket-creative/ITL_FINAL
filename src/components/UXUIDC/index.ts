@@ -29,7 +29,7 @@ export { default as UXUIDCAnimatedFAQ } from './AnimatedFAQ';
 export { default as UXUIDCStartProjectCTA } from './StartProjectCTA';
 export { default as UXUIDCEducationalSalesBanner, getEducationalOffer } from './EducationalSalesBanner';
 export type { EducationalSalesOffer } from './EducationalSalesBanner';
-export { default as CatalogGeneLookup, getCatalogLookup } from './CatalogGeneLookup';
+export { default as CatalogGeneLookup, getCatalogLookup, hasEducationalCatalogMap } from './CatalogGeneLookup';
 export type { CatalogLookup, CatalogGene } from './CatalogGeneLookup';
 export { default as UXUIDCServicePricingAnchor } from './ServicePricingAnchor';
 export type { ServicePricingFaq } from './ServicePricingAnchor';

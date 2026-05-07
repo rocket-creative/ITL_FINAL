@@ -185,3 +185,62 @@ export async function getRelatedGenes(geneName: string, limit = 10): Promise<str
 export async function getServerCatalog() { return []; } // no longer needed
 export function uniqueGeneNames() { return []; }        // replaced by getAllGeneNames
 export function filterCatalog() { return []; }          // replaced by serverSearch
+
+/** Distinct gene_name × model_type pairs (sitemap Tier 1, ISR surfaces). */
+export async function getDistinctGeneModelTypePairs(): Promise<
+  { gene_name: string; model_type: string }[]
+> {
+  const keys = new Set<string>();
+  const PAGE = 1000;
+  let from = 0;
+  for (;;) {
+    const { data, error } = await supabase
+      .from('catalog_models')
+      .select('gene_name,model_type')
+      .neq('gene_name', '')
+      .order('gene_name')
+      .range(from, from + PAGE - 1);
+
+    if (error || !data || data.length === 0) break;
+
+    for (const row of data) {
+      const g = (row.gene_name ?? '').trim();
+      const t = (row.model_type ?? '').trim();
+      if (g && t) keys.add(`${g}\u0001${t}`);
+    }
+    if (data.length < PAGE) break;
+    from += PAGE;
+  }
+  return [...keys].map((k) => {
+    const [gene_name, model_type] = k.split('\u0001');
+    return { gene_name: gene_name!, model_type: model_type! };
+  });
+}
+
+/** Genes with conditional style catalog rows, ranked by row count. */
+export async function getTopConditionalGeneNames(limit = 8): Promise<string[]> {
+  const counts = new Map<string, number>();
+  const PAGE = 1000;
+  let from = 0;
+  for (;;) {
+    const { data, error } = await supabase
+      .from('catalog_models')
+      .select('gene_name')
+      .ilike('model_type', '%Conditional%')
+      .range(from, from + PAGE - 1);
+
+    if (error || !data || data.length === 0) break;
+
+    for (const row of data) {
+      const g = (row.gene_name ?? '').trim();
+      if (!g) continue;
+      counts.set(g, (counts.get(g) ?? 0) + 1);
+    }
+    if (data.length < PAGE) break;
+    from += PAGE;
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, limit)
+    .map(([g]) => g);
+}

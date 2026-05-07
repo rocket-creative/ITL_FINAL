@@ -69,6 +69,7 @@ export default function LabSignalsArticleClient({
           <IngeniousAd
             relatedPage={article.relatedPage}
             category={article.category}
+            catalogCtaHref={article.catalogCtaHref}
           />
         )}
 

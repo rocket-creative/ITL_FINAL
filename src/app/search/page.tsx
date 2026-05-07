@@ -16,8 +16,6 @@ import {
   IconChevronRight,
   IconX,
 } from '@/components/UXUIDC';
-import { searchSiteIndex, type SiteIndexEntry } from '@/lib/search/siteIndex';
-
 // Brand colors
 const BRAND = {
   navy: '#0a253c',
@@ -34,6 +32,14 @@ interface CatalogResult {
   subtitle?: string;
 }
 
+interface SitePageResult {
+  id: string;
+  title: string;
+  url: string;
+  subtitle?: string;
+  description?: string;
+}
+
 export default function SearchPage() {
   const [query, setQuery] = useState(() => {
     if (typeof window === 'undefined') return '';
@@ -42,42 +48,44 @@ export default function SearchPage() {
   });
   const [isFocused, setIsFocused] = useState(false);
   const [catalogResults, setCatalogResults] = useState<CatalogResult[]>([]);
+  const [siteResults, setSiteResults] = useState<SitePageResult[]>([]);
   const [isLoadingCatalog, setIsLoadingCatalog] = useState(false);
 
-  // Fetch catalog results from API when query changes
+  // Fetch catalog + site results from unified API
   useEffect(() => {
     if (!query.trim()) {
       setCatalogResults([]);
+      setSiteResults([]);
       return;
     }
     setIsLoadingCatalog(true);
     fetch(`/api/search?q=${encodeURIComponent(query.trim())}&limit=50`)
       .then((res) => res.json())
       .then((data) => {
-        if (data.catalog && Array.isArray(data.catalog)) {
+        if (Array.isArray(data.catalog)) {
           setCatalogResults(data.catalog);
         } else {
           setCatalogResults([]);
         }
+        if (Array.isArray(data.site)) {
+          setSiteResults(data.site);
+        } else {
+          setSiteResults([]);
+        }
       })
-      .catch(() => setCatalogResults([]))
+      .catch(() => {
+        setCatalogResults([]);
+        setSiteResults([]);
+      })
       .finally(() => setIsLoadingCatalog(false));
   }, [query]);
 
-  // Site results from shared index (client-side filter)
-  const siteResults = useMemo(() => {
-    if (!query.trim()) return [];
-    return searchSiteIndex(query, 50);
-  }, [query]);
-
-  // Group site results by category
   const groupedSiteResults = useMemo(() => {
-    const groups: Record<string, SiteIndexEntry[]> = {};
+    const groups: Record<string, SitePageResult[]> = {};
     siteResults.forEach((result) => {
-      if (!groups[result.category]) {
-        groups[result.category] = [];
-      }
-      groups[result.category].push(result);
+      const cat = result.subtitle ?? 'Pages';
+      if (!groups[cat]) groups[cat] = [];
+      groups[cat].push(result);
     });
     return groups;
   }, [siteResults]);
@@ -370,7 +378,7 @@ export default function SearchPage() {
                           margin: 0,
                           lineHeight: 1.5
                         }}>
-                          {item.description}
+                          {item.description ?? item.subtitle ?? ''}
                         </p>
                       </Link>
                     ))}

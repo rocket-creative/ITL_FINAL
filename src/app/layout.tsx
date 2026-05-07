@@ -72,6 +72,36 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://js.hsforms.net" />
         <link rel="dns-prefetch" href="https://js.hs-scripts.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://www.genetargeting.com/#organization',
+                  name: 'ingenious targeting laboratory',
+                  url: 'https://www.genetargeting.com',
+                },
+                {
+                  '@type': 'WebSite',
+                  name: 'ingenious targeting laboratory',
+                  url: 'https://www.genetargeting.com',
+                  publisher: { '@id': 'https://www.genetargeting.com/#organization' },
+                  potentialAction: {
+                    '@type': 'SearchAction',
+                    target: {
+                      '@type': 'EntryPoint',
+                      urlTemplate: 'https://www.genetargeting.com/search?q={search_term_string}',
+                    },
+                    'query-input': 'required name=search_term_string',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
         {/* Google Tag Manager - container loader. Must initialize dataLayer before gtag.js
             so any early dataLayer.push calls are queued for the GTM container. */}
         {GTM_ID && (

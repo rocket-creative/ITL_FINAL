@@ -16,6 +16,8 @@ export interface NewsletterArticle {
   description: string;
   category: string;
   relatedPage: string;
+  /** Optional catalog deep link for Lab Signals IngeniousAd secondary CTA */
+  catalogCtaHref?: string;
   body: string;
   publishedAt: string;
 }

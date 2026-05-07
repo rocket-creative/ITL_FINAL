@@ -9,6 +9,8 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
+import { CRE_DRIVERS } from '@/lib/search/creDrivers';
+import { driverCanonicalToSlug } from '@/lib/seo/slugs';
 
 // Hero Data
 const heroData = {
@@ -888,6 +890,37 @@ export default function CreLineSelectionGuidePage() {
                   ))}
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#ffffff', padding: '48px 20px', borderTop: '1px solid #eee' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.35rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>
+              Cre driver hub pages
+            </h2>
+            <p style={{ color: '#555', fontSize: '.92rem', lineHeight: 1.7, marginBottom: '16px' }}>
+              SEO indexable pages for common Cre lines. Each hub summarizes tissue bias, inducibility, and catalog cross links.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              {CRE_DRIVERS.map((d) => (
+                <Link
+                  key={d.driver}
+                  href={`/cre-drivers/${driverCanonicalToSlug(d.driver)}/`}
+                  style={{
+                    padding: '8px 12px',
+                    background: '#f8f9fa',
+                    border: '1px solid #134978',
+                    borderRadius: '4px',
+                    color: '#134978',
+                    fontWeight: 600,
+                    fontSize: '.78rem',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {d.driver}
+                </Link>
+              ))}
             </div>
           </div>
         </section>

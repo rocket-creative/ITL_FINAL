@@ -1,6 +1,11 @@
 /**
  * Publications Data for ingenious targeting laboratory
  * 
+ * CONTENT RULE (from ITL publications Google Doc / 2026 Publications.docx):
+ * List entries in date order with the most recent on top. Use the approved citation
+ * format exactly as it should appear on https://www.genetargeting.com/publications
+ * (authors, title wording, journal abbreviation, volume/issue/pages, punctuation).
+ * 
  * HOW TO UPDATE:
  * 1. Add new publications to the beginning of the appropriate year array
  * 2. If adding a new year, create a new entry at the top of the publicationsByYear object
@@ -16,8 +21,8 @@
  *   link: "https://pubmed.ncbi.nlm.nih.gov/xxxxx/"
  * }
  * 
- * Last updated: 2026-03-02
- * Source: 2025 Publications.md, 2026 Publications.md (ITL team)
+ * Last updated: 2026-05-07
+ * Source: 2025 Publications.md, 2026 Publications.docx (ITL team)
  */
 
 export interface Publication {
@@ -36,11 +41,51 @@ export interface PublicationsByYear {
 export const publicationsByYear: PublicationsByYear = {
   "2026": [
     {
+      authors: "Wetterwald L, Köck A, Wyss T, Arroz-Madeira S, Prat-Luri B, Jaquet M, Petit B, Vozenin MC, Ylä-Herttuala S, Dutoit V, Migliorini D, Schaeuble K, Brisken C, Delorenzi M, Sabine A, Petrova TV.",
+      year: 2026,
+      title: "MYCT1-IFITM2/3 interaction links endothelial endolysosomal trafficking to white adipose tissue expansion",
+      journal: "J Exp Med.",
+      volume: "5(223): e20251497",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41880193/"
+    },
+    {
+      authors: "MacDowell Kaswan ZA, Hurtado M, Chen EY, McCusker RH.",
+      year: 2026,
+      title: "Ido1 and Ido2 deficiencies attenuate kainic acid-induced ictogenesis",
+      journal: "Brain Res.",
+      volume: "(1877-1878): 150204",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41698631/"
+    },
+    {
+      authors: "Gupta A, You W, Han L, Ji J, Pan M, Han X, Sun X, Zhao P.",
+      year: 2026,
+      title: "Caspase-6 Controls Lipid and Energy Metabolism in Diet-Induced Obesity",
+      journal: "Adv Sci",
+      volume: "21(13):e14784",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41969066/"
+    },
+    {
+      authors: "Jhatakia A, Sun X, Vaccaro A, Wang M, Nasser M, Mukhopadhyay A, Gupta N, Kang K, Hu W, Newsome C, Leung CH, Le J, Yazdani M, Guo H, Chen L, Pradhan M, Lin HY, Mandawe R, Findeisen F, Lohre J, Leung L, Wei Y, Dobroff J, O'Brien S, Xu K, Hammell A, Price K, Engelhardt J, Selby M, Korman A, Wilson N, Cascone T.",
+      year: 2026,
+      title: "Improving anti-CTLA-4 therapies through peptide masking and fragment crystallizable non‑fucosylation: preclinical characterization of three novel antibodies",
+      journal: "Clin Cancer Res.",
+      volume: "OF1-OF20",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41837748/"
+    },
+    {
+      authors: "Helmuth TB, Palsa K, Sahu AP, Neely EB, Kumari R, Slagle-Webb B, Simon SD, Connor JR.",
+      year: 2026,
+      title: "Neuroprotection From Intracerebral Hemorrhage Following Pharmacological Inhibition of GSK3β Depends on HFE Gene Status",
+      journal: "J Neurochem.",
+      volume: "3(170): e70393",
+      link: "https://pubmed.ncbi.nlm.nih.gov/41772831/"
+    },
+    {
       authors: "Borges RL, González-Blanco G, Arigela H, Huang Y, Caeiro LD, Fattakhov N, Lepore S, Garcia-Martinez L, Maurice M, Mehta PD, Park EJ, MacGillivray K, Nehru J, Chau M, Robayo MC, Abad C, Bilbao-Martinez A, Monteiro F, Luo X, Tan S, Bilbao D, Sidoli S, Di Stefano B, Walz K, Saltzman AL, Verdun RE, Shiekhattar R, Morey L.",
       year: 2026,
       title: "Unbalanced chromatin binding of Polycomb complexes drives neurodevelopmental disorders",
       journal: "Mol Cell.",
-      volume: "Online ahead of print.",
+      volume: "4(86): 604-624.E16",
       link: "https://pubmed.ncbi.nlm.nih.gov/41653922/"
     },
     {
@@ -48,7 +93,7 @@ export const publicationsByYear: PublicationsByYear = {
       year: 2026,
       title: "Spatial Mapping of CoQ10 Repletion by BPM31510 in a Genetic Mouse Model (Coq4F147C) of Coenzyme Q Deficiency",
       journal: "J Lipid Res.",
-      volume: "Online ahead of print",
+      volume: "3(67): 100987",
       link: "https://pubmed.ncbi.nlm.nih.gov/41616828/"
     },
     {
@@ -63,7 +108,7 @@ export const publicationsByYear: PublicationsByYear = {
       authors: "Xi Y, Liu L, Kim JW, Zhang M, Wang X, Abdirassil A, Xu M, Ren S, Wang Q, Yang D, Xu P, Xie W.",
       year: 2026,
       title: "Targeting ADAR1-mediated RNA editing inhibits hepatic stellate cell activation and liver fibrosis by enhancing HSC-intrinsic innate immunity",
-      journal: "Gut",
+      journal: "Gut.",
       volume: "Online ahead of print.",
       link: "https://pubmed.ncbi.nlm.nih.gov/41554631/"
     },

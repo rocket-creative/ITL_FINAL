@@ -6,11 +6,21 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
+
+import {
+  CRE_DRIVERS,
+  getTopCreDriversForTissue,
+  getDisplayLabelForTissueKey,
+} from '@/lib/search/creDrivers';
+import { getCachedCatalogGeneNames } from '@/lib/search/catalogGeneCache';
+import { parseQuery } from '@/lib/search/parseQuery';
+import { buildSeoUrl } from '@/lib/seo/searchUrl';
+import { modCanonicalToSlug, tissueCanonicalToSlug } from '@/lib/seo/slugs';
 
 // On-demand ISR: pages render on first request, cache at edge for 24h.
 // After 24h, next visitor triggers background re-render (stale-while-revalidate).
@@ -21,7 +31,10 @@ export const dynamicParams = true;
 const BASE_URL  = 'https://www.genetargeting.com';
 const SITE_NAME = 'ingenious targeting laboratory';
 
-type Props = { params: Promise<{ geneName: string }> };
+type Props = {
+  params: Promise<{ geneName: string }>;
+  searchParams: Promise<{ type?: string; tissue?: string; driver?: string }>;
+};
 
 // Strip any SMOC references from data fields before rendering
 function stripSmoc(s: string | undefined | null): string {
@@ -38,6 +51,15 @@ function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
     availability: stripSmoc(m.availability),
     catalogNumber: stripSmoc(m.catalogNumber),
   };
+}
+
+function sortModelsForType(models: ServerCatalogModel[], focusType?: string): ServerCatalogModel[] {
+  const f = focusType?.trim();
+  if (!f) return models;
+  const fl = f.toLowerCase();
+  const hit = models.filter((m) => (m.modelType || '').toLowerCase() === fl);
+  const rest = models.filter((m) => (m.modelType || '').toLowerCase() !== fl);
+  return [...hit, ...rest];
 }
 
 /**
@@ -92,18 +114,33 @@ function buildMetaDescription(geneName: string, models: ServerCatalogModel[]): s
   return parts.join('. ') + '.';
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { geneName: rawParam } = await params;
   const geneName = decodeURIComponent(rawParam);
-  const models   = (await getModelsByGene(geneName)).map(cleanModel);
+  const qs = await searchParams;
+  const focusType = qs?.type?.trim();
+  const tissueKey = qs?.tissue?.trim();
+  const models = (await getModelsByGene(geneName)).map(cleanModel);
 
   if (models.length === 0) {
     return { title: `${geneName} Mouse Models | ${SITE_NAME}` };
   }
 
-  const title       = buildTitle(geneName, models);
-  const description = buildMetaDescription(geneName, models);
-  const canonical   = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
+  const title =
+    focusType !== undefined && focusType.length > 0
+      ? `${geneName} ${focusType} Mouse Models | ITL`
+      : buildTitle(geneName, models);
+
+  let description = buildMetaDescription(geneName, models);
+  if (focusType) {
+    description =
+      `${geneName} ${focusType.toLowerCase()} catalog models from ${SITE_NAME}. ` +
+      description;
+  }
+  if (tissueKey) {
+    description += ` Interested in ${getDisplayLabelForTissueKey(tissueKey)} specific deletion cohorts paired with Cre drivers? Submit a consultation.`;
+  }
+  const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
 
   return {
     title,
@@ -128,9 +165,30 @@ function getAvailabilityColor(a: string): string {
   return '#555';
 }
 
-export default async function GenePage({ params }: Props) {
+export default async function GenePage({ params, searchParams }: Props) {
   const { geneName: rawParam } = await params;
   const geneName = decodeURIComponent(rawParam);
+  const qs = await searchParams;
+
+  if (qs?.type || qs?.tissue || qs?.driver) {
+    const catalogGenes = await getCachedCatalogGeneNames();
+    const catalogGeneSet = new Set(catalogGenes);
+    const dec = (s?: string) =>
+      s ? decodeURIComponent(String(s).replace(/\+/g, ' ')).trim() : '';
+    const pieces = [geneName, dec(qs.type), dec(qs.tissue), dec(qs.driver)].filter(
+      (x): x is string => Boolean(x && x.length > 0)
+    );
+    const parsed = parseQuery(pieces.join(' '), catalogGenes);
+    const target = buildSeoUrl(parsed, catalogGeneSet);
+    const hub = `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
+    if (target !== hub) {
+      permanentRedirect(target);
+    }
+  }
+
+  const focusType = qs?.type?.trim();
+  const tissueKey = qs?.tissue?.trim();
+  const creDriverQuery = qs?.driver?.trim();
 
   const [rawModels, relatedGenes] = await Promise.all([
     getModelsByGene(geneName),
@@ -139,7 +197,8 @@ export default async function GenePage({ params }: Props) {
 
   if (rawModels.length === 0) return notFound();
 
-  const models = rawModels.map(cleanModel);
+  let models = rawModels.map(cleanModel);
+  models = sortModelsForType(models, focusType);
 
   const hasLiveModels = models.some(m => {
     const a = (m.availability || '').toLowerCase();
@@ -149,6 +208,11 @@ export default async function GenePage({ params }: Props) {
   const types = [...new Set(models.map(m => m.modelType))].filter(Boolean);
   const typeStr = types.length > 0 ? types.slice(0, 3).join(', ') : 'genetically engineered';
   const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
+
+  const topDrivers = tissueKey ? [...getTopCreDriversForTissue(tissueKey, 3)] : [];
+  const matchedFocusCount = focusType
+    ? models.filter((m) => m.modelType === focusType).length
+    : 0;
 
   // Google Merchant Listings rich-result eligibility:
   //  - Use AggregateOffer with lowPrice (price: '0' is rejected by Google)
@@ -226,12 +290,87 @@ export default async function GenePage({ params }: Props) {
               </ol>
             </nav>
 
+            {focusType && matchedFocusCount > 0 ? (
+              <div
+                role="status"
+                style={{
+                  background: 'rgba(0,128,128,0.22)',
+                  border: '1px solid rgba(0,212,212,0.45)',
+                  padding: '12px 18px',
+                  borderRadius: '8px',
+                  marginBottom: '20px',
+                  color: '#e8fbff',
+                  fontSize: '.95rem',
+                  lineHeight: 1.6,
+                }}
+              >
+                Showing {geneName} {focusType.toLowerCase()} catalog lines first — see every {geneName} allele below for this target.
+              </div>
+            ) : null}
+
+            {focusType && matchedFocusCount === 0 ? (
+              <div
+                role="status"
+                style={{
+                  background: 'rgba(255,193,7,0.12)',
+                  border: '1px solid rgba(255,193,7,0.45)',
+                  padding: '12px 18px',
+                  borderRadius: '8px',
+                  marginBottom: '20px',
+                  color: '#fff9e6',
+                  fontSize: '.95rem',
+                  lineHeight: 1.6,
+                }}
+              >
+                No listed {geneName} {focusType.toLowerCase()} allele yet — browse other {geneName} strains then request a custom {focusType.toLowerCase()} build.
+              </div>
+            ) : null}
+
+            {tissueKey && topDrivers.length > 0 ? (
+              <div
+                role="note"
+                style={{
+                  background: 'rgba(255,255,255,0.08)',
+                  border: '1px solid rgba(255,255,255,0.35)',
+                  padding: '14px 18px',
+                  borderRadius: '8px',
+                  marginBottom: '20px',
+                  color: 'rgba(255,255,255,0.95)',
+                  fontSize: '.93rem',
+                  lineHeight: 1.65,
+                }}
+              >
+                Need a {getDisplayLabelForTissueKey(tissueKey)} specific {geneName} deletion? Frequently paired Cre drivers include{' '}
+                {topDrivers.map((d) => d.driver).join(', ')}. Tell us your timeline and cohort size — we breed the cross for you.
+              </div>
+            ) : null}
+
+            {creDriverQuery ? (
+              <div
+                role="note"
+                style={{
+                  background: 'rgba(255,255,255,0.08)',
+                  border: '1px solid rgba(255,255,255,0.35)',
+                  padding: '14px 18px',
+                  borderRadius: '8px',
+                  marginBottom: '20px',
+                  color: 'rgba(255,255,255,0.95)',
+                  fontSize: '.93rem',
+                  lineHeight: 1.65,
+                }}
+              >
+                {creDriverQuery} crossed to {geneName} floxed animals — submit a cohort plan. Typical timelines run about 26 weeks from contract activation to study ready pups.
+              </div>
+            ) : null}
+
             {/* Keyword rich H1: matches "Brca1 knockout mouse", "Tp53 conditional knockout mouse" searches */}
             <h1 style={{
               fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700,
               color: '#fff', marginBottom: '16px', lineHeight: 1.2,
             }}>
-              {geneName} {typeStr} Mouse Model{models.length !== 1 ? 's' : ''}
+              {focusType
+                ? `${geneName} ${focusType} mouse models`
+                : `${geneName} ${typeStr} mouse model${models.length !== 1 ? 's' : ''}`}
             </h1>
 
             {/* Intro paragraph includes gene+type combos for long tail SEO */}
@@ -450,6 +589,68 @@ export default async function GenePage({ params }: Props) {
                 <Link href="/custom-mouse-models/" style={{ padding: '6px 14px', background: '#f0f9f9', border: '1px solid #008080', borderRadius: '4px', color: '#008080', fontSize: '.83rem', fontWeight: 600, textDecoration: 'none' }}>
                   Custom Mouse Model Services
                 </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {types.length > 0 && (
+          <section style={{ background: '#f8f9fa', padding: '50px 20px', borderBottom: '1px solid #eee' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+              <h2 style={{
+                fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 700,
+                color: '#0a253c', marginBottom: '16px',
+              }}>
+                Modifications available
+              </h2>
+              <p style={{ color: '#444', fontSize: '.92rem', marginBottom: '16px', lineHeight: 1.7 }}>
+                Jump to catalog backed pages for {geneName} organized by modification type. Each URL is indexable and matches common search patterns.
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {types.map((t) => (
+                  <Link
+                    key={t}
+                    href={`/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modCanonicalToSlug(t)}/`}
+                    style={{
+                      padding: '8px 16px', background: '#fff',
+                      border: '1px solid #008080', borderRadius: '4px',
+                      color: '#008080', fontSize: '.85rem', fontWeight: 600, textDecoration: 'none',
+                    }}
+                  >
+                    {geneName} {t}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {types.includes('Conditional Knockout') && (
+          <section style={{ background: '#fff', padding: '50px 20px', borderBottom: '1px solid #eee' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+              <h2 style={{
+                fontFamily: 'Poppins, sans-serif', fontSize: '1.3rem', fontWeight: 700,
+                color: '#0a253c', marginBottom: '16px',
+              }}>
+                Tissue-specific options
+              </h2>
+              <p style={{ color: '#444', fontSize: '.92rem', marginBottom: '16px', lineHeight: 1.7 }}>
+                Representative conditional routes pairing {geneName} with common tissue restricted programs.
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {[...new Set(CRE_DRIVERS.map((d) => d.tissue))].slice(0, 6).map((tk) => (
+                  <Link
+                    key={tk}
+                    href={`/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/conditional-knockout/${tissueCanonicalToSlug(tk)}/`}
+                    style={{
+                      padding: '8px 16px', background: '#f0f9f9',
+                      border: '1px solid #134978', borderRadius: '4px',
+                      color: '#134978', fontSize: '.85rem', fontWeight: 600, textDecoration: 'none',
+                    }}
+                  >
+                    {getDisplayLabelForTissueKey(tk)} specific {geneName} knockout
+                  </Link>
+                ))}
               </div>
             </div>
           </section>
