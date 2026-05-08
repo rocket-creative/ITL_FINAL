@@ -26,3 +26,6 @@ itl-website/extracted-changes/
 .vercel
 node_modules
 tsconfig.tsbuildinfo
+
+# Next 16: use src/proxy.ts only; a middleware.ts re-export conflicts with proxy.
+/src/middleware.ts
