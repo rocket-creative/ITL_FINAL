@@ -7,6 +7,7 @@
 import { mouseOrganoidChipArticleBody } from './_labSignalsMouseOrganoidChipArticle';
 import { benchToBedsideCarTArticleBody } from './_labSignalsBenchToBedsideCarTArticle';
 import { ckoBreedingCostEfficiencyArticleBody } from './_labSignalsCkoBreedingCostEfficiencyArticle';
+import { geneTherapyNeurodegenerativeArticleBody } from './_labSignalsGeneTherapyNeurodegenerativeArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1060,6 +1061,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/conditional-knockout-mouse-models",
     body: ckoBreedingCostEfficiencyArticleBody,
     publishedAt: "2026-04-28",
+  },
+  {
+    id: "gene-therapy-neurodegenerative-diseases-mouse-models-translational-research",
+    slug: "gene-therapy-neurodegenerative-diseases-mouse-models-translational-research",
+    title: "Gene Therapy for Neurodegenerative Diseases: How Mouse Models Are Advancing Translational Research",
+    subtitle: "Mouse models in AD, PD, and ALS gene therapy",
+    description:
+      "How mouse models advance gene therapy for Alzheimer's, Parkinson's, and ALS through integrated assessment of vector delivery, target engagement, and outcomes.",
+    category: "Neuroscience",
+    relatedPage: "/neuroscience-mouse-models",
+    body: geneTherapyNeurodegenerativeArticleBody,
+    publishedAt: "2026-05-12",
   },
 ];
 
