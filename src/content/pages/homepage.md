@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.381Z"
 
 **Url: /**
 
-**Meta Description: Custom mouse models since 1998. 2,500+ projects, 800+ publications. Knockout, knockin, humanized and transgenic models for research.**
+**Meta Description: Custom mouse models since 1998. 2,800+ custom projects, 800+ publications. Knockout, knockin, humanized and transgenic models for research.**
 
 **Primary Keyword: custom mouse model**
 
@@ -116,7 +116,7 @@ Study ready cohort expansion with structured breeding for statistical power.
 
 ## Trusted by Researchers Worldwide
 
-Since 1998 · 2,500+ Projects Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell
+Since 1998 · 2,800+ Custom Projects Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell
 
 ingenious targeting laboratory has generated custom mouse models for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.
 

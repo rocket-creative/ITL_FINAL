@@ -156,7 +156,7 @@ export default function ScientificLeadershipPage() {
             {[
               {
                 title: 'ES Cell Targeting',
-                description: 'Homologous recombination expertise spanning conventional knockouts, conditional alleles, point mutations, and complex humanization strategies. Over 2,500 successful targeting events since 1998.',
+                description: 'Homologous recombination expertise spanning conventional knockouts, conditional alleles, point mutations, and complex humanization strategies. Over 2,800 successful custom targeting events since 1998.',
               },
               {
                 title: 'Allele Design Strategy',
@@ -253,10 +253,10 @@ export default function ScientificLeadershipPage() {
                 fontFamily: 'Poppins, sans-serif',
                 marginBottom: '10px',
               }}>
-                2,500+
+                2,800+
               </div>
               <p style={{ color: '#666', fontSize: '1rem' }}>
-                Mouse Models Generated
+                Custom Mouse Models Generated
               </p>
             </div>
 

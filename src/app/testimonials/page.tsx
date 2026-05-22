@@ -107,7 +107,7 @@ export default function TestimonialsPage() {
               className="mt-8 flex flex-wrap justify-center gap-8"
               style={{ fontSize: '0.95rem', color: '#ffffff', fontWeight: 500 }}
             >
-              <span>2,500+ Projects Completed</span>
+              <span>2,800+ Custom Projects Completed</span>
               <span style={{ color: 'rgba(255,255,255,0.9)' }}>•</span>
               <span>800+ Publications</span>
               <span style={{ color: 'rgba(255,255,255,0.9)' }}>•</span>

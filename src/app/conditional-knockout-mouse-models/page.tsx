@@ -21,14 +21,14 @@ const legacyContentUrl = '/legacy/conditional-knockout-mouse-models';
 const heroData = {
   badge: "Cre Lox Technology",
   title: "Conditional Knockout Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 mouse model projects, including conditional knockouts, for researchers at universities, pharmaceutical companies, and research institutions worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom mouse model projects, including conditional knockouts, for researchers at universities, pharmaceutical companies, and research institutions worldwide.",
   description: "Our conditional knockout mouse models have supported research published in more than 800 peer reviewed journals, including Science, Nature, and Cell.",
   secondaryText: "Conditional knockout mouse models enable controlled gene inactivation in specific tissues or at defined times. Unlike conventional knockouts where gene function is lost globally from the earliest developmental stages, conditional knockouts use the Cre lox system to restrict gene deletion to cells expressing Cre recombinase."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }
@@ -1058,7 +1058,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,500+ projects since 1998.",
+            "description": "Custom conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,800+ custom projects since 1998.",
             "serviceType": "Custom Mouse Model Generation"
           })
         }}

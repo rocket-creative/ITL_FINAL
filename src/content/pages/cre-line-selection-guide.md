@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.762Z"
 
 # Cre Line Selection Guide
 
-Selecting the appropriate Cre driver line is critical for successful conditional knockout experiments. Since 1998, Ingenious Targeting Laboratory has created over 2,500 models, including Cre driver lines, specific to your research projects. 
+Selecting the appropriate Cre driver line is critical for successful conditional knockout experiments. Since 1998, Ingenious Targeting Laboratory has created over 2,800 custom models, including Cre driver lines, specific to your research projects. 
 
 This guide helps researchers navigate Cre line selection by tissue specificity, expression timing, recombination efficiency, and experimental requirements. Proper Cre selection ensures gene deletion occurs in the intended cell population with appropriate temporal control.
 

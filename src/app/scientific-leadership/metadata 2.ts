@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Scientific Leadership | Expert Gene Targeting Team | ingenious targeting laboratory',
-  description: 'PhD scientists with 26+ years experience in gene targeting, ES cell technology, and transgenic mouse generation. 2,500+ projects, 800+ publications. Scientific excellence since 1998.',
+  description: 'PhD scientists with 26+ years experience in gene targeting, ES cell technology, and transgenic mouse generation. 2,800+ custom projects, 800+ publications. Scientific excellence since 1998.',
   alternates: {
     canonical: 'https://www.genetargeting.com/scientific-leadership',
   },

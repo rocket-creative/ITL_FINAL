@@ -4,18 +4,18 @@
  * |UXUIDC| Animated Counter Component  
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  * Displays stats with CSS fade-in animation
- * Used for stats like "2,500+ Projects", "800+ Publications"
- * 
+ * Used for stats like "2,800+ Custom Projects", "800+ Publications"
+ *
  * Supports two usage patterns:
- * 1. Array mode: <UXUIDCAnimatedCounter stats={[{ number: "2,500+", label: "Projects" }]} />
- * 2. Single value mode: <UXUIDCAnimatedCounter end={2500} suffix="+" />
+ * 1. Array mode: <UXUIDCAnimatedCounter stats={[{ number: "2,800+", label: "Custom Projects" }]} />
+ * 2. Single value mode: <UXUIDCAnimatedCounter end={2800} suffix="+" />
  */
 
 import { useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface Stat {
-  number: string; // e.g., "2,500+", "800+", "25+"
+  number: string; // e.g., "2,800+", "800+", "25+"
   label: string;
 }
 

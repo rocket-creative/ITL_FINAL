@@ -76,7 +76,7 @@ const faqs = [
 // Stats
 const stats = [
   { value: 26, suffix: '+', label: 'Years Experience' },
-  { value: 2500, suffix: '+', label: 'Custom Mouse Models Delivered' },
+  { value: 2800, suffix: '+', label: 'Custom Mouse Models Delivered' },
   { value: 900, suffix: '+', label: 'Research Institutions' },
   { value: 100, suffix: '%', label: 'Germline Guarantee' },
 ];
@@ -399,7 +399,7 @@ export default function StartYourProjectPage() {
             >
               <strong>Trusted by 900+ universities, biotech startups, and global research institutions for over 26 years.</strong>
               <br />
-              More than <strong>2,500 custom mouse models delivered</strong>.
+              More than <strong>2,800 custom mouse models delivered</strong>.
             </p>
           </div>
         </section>
@@ -762,7 +762,7 @@ export default function StartYourProjectPage() {
             >
               {[
                 'Over 26 years of experience in genetic model development',
-                '2500+ custom mouse models delivered',
+                '2800+ custom mouse models delivered',
                 'Trusted by NIH-funded labs and global biotech teams',
                 'Clear communication, fixed prices and ongoing project support',
                 'No obligation — speak to one of our scientists about your goals today',

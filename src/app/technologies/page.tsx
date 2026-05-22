@@ -13,13 +13,13 @@ import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from
 const heroData = {
   badge: "Gene Targeting Technologies",
   title: "Gene Targeting Technologies",
-  intro: "Since 1998, ingenious targeting laboratory has refined gene targeting technologies through more than 2,500 custom projects. Our methodology combines proven ES cell gene targeting with sophisticated allele design strategies to deliver mouse models with verified genetic modifications and predictable performance.",
+  intro: "Since 1998, ingenious targeting laboratory has refined gene targeting technologies through more than 2,800 custom projects. Our methodology combines proven ES cell gene targeting with sophisticated allele design strategies to deliver mouse models with verified genetic modifications and predictable performance.",
   description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. ingenious targeting laboratory's scientific consultants guide project design from initial concept through final allele verification."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

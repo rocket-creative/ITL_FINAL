@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:06.183Z"
 
 **Url: /transgenic-mouse-service**
 
-**Meta Description: Custom transgenic mouse models for overexpression, Cre drivers, and reporter lines. BAC transgenic and ROSA26 targeted approaches. 2,500+ projects since 1998.**
+**Meta Description: Custom transgenic mouse models for overexpression, Cre drivers, and reporter lines. BAC transgenic and ROSA26 targeted approaches. 2,800+ custom projects since 1998.**
 
 **Primary Keyword: transgenic mouse**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:06.183Z"
 
 # Transgenic Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,500 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including in Science, Nature, and Cell.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including in Science, Nature, and Cell.
 
 Transgenic mouse models introduce exogenous DNA sequences into the mouse genome for overexpression studies, tissue specific Cre driver generation, reporter line creation, and other applications requiring expression of non native sequences. Unlike knockin models that modify endogenous loci, transgenic approaches add new genetic elements either through random integration or targeted insertion at safe harbor loci.
 

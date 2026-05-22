@@ -430,10 +430,10 @@ export default function ScheduleMeetingPage() {
                   </div>
                   <div>
                     <p style={{ color: 'white', fontSize: '2rem', fontFamily: 'Poppins, sans-serif', fontWeight: 700, margin: '0 0 8px 0' }}>
-                      2,500+
+                      2,800+
                     </p>
                     <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                      Projects Completed
+                      Custom Projects Completed
                     </p>
                   </div>
                 </div>

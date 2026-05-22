@@ -18,13 +18,13 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Type 2 Diabetes Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,500 custom mouse models supporting metabolic disease research, with hundreds of type 2 diabetes models enabling investigation of glucose homeostasis, insulin resistance, and beta cell dysfunction mechanisms. Type 2 diabetes mouse models provide essential platform for identifying therapeutic targets and evaluating interventions addressing pathogenic mechanisms driving progressive metabolic disease.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 custom mouse models supporting metabolic disease research, with hundreds of type 2 diabetes models enabling investigation of glucose homeostasis, insulin resistance, and beta cell dysfunction mechanisms. Type 2 diabetes mouse models provide essential platform for identifying therapeutic targets and evaluating interventions addressing pathogenic mechanisms driving progressive metabolic disease.",
   description: "Type 2 diabetes mouse models enable investigation of multifactorial disease mechanisms underlying impaired glucose tolerance, insulin resistance, and eventual beta cell failure characteristic of human type 2 diabetes. Mouse models permit mechanistic investigation of genetic and environmental contributors to diabetes development with control unavailable in human studies."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

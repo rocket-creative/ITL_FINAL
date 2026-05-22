@@ -15,12 +15,12 @@ const heroData = {
   badge: "Resources",
   title: "Mouse Model Resources",
   intro: "ingenious targeting laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects.",
-  description: "From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,500 projects completed since 1998."
+  description: "From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,800 custom projects completed since 1998."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

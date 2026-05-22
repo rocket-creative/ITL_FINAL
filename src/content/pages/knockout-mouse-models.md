@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.744Z"
 
 # Knockout Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,500 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our knockout mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, Cell.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our knockout mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, Cell.
 
 Knockout mouse models enable loss of function studies by inactivating specific genes. Whether you need complete gene deletion throughout the organism or controlled inactivation in specific tissues at defined times, ITL designs and delivers knockout mice tailored to your experimental requirements. From conventional knockouts for straightforward gene deletion to sophisticated conditional systems using Cre lox and other recombinase technologies, the right knockout strategy is critical for your research success.
 

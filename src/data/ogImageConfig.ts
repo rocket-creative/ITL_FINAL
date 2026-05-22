@@ -16,7 +16,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   '/': {
     slug: 'homepage',
     line1: 'Custom Mouse Models Since 1998',
-    line2: '2,500+ Projects',
+    line2: '2,800+ Custom Projects',
     line3: '800+ Publications',
     tier: 1,
   },

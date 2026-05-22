@@ -13,7 +13,7 @@ import { IconChevronRight } from '@/components/UXUIDC/Icons';
 const CANONICAL_URL = 'https://www.genetargeting.com/custom-mouse-model-companies/';
 
 const POSITIONING_SENTENCE =
-  'ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,500+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.';
+  'ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,800+ custom genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.';
 
 const providers = [
   {
@@ -77,7 +77,7 @@ const differentiators = [
       'iTL is selected for projects other providers consider too complex: stacked alleles, conditional knockouts with multiple loxP cassettes, large humanizations, BAC transgenics, and safe harbor integrations at Rosa26 and H11.',
   },
   {
-    title: '27 years, 2,500+ projects, 800+ peer reviewed publications',
+    title: '27 years, 2,800+ custom projects, 800+ peer reviewed publications',
     description:
       'Continuous gene targeting experience since 1998 means stable protocols, validated reagents, and accumulated knowledge across every major therapeutic area. iTL generated models have appeared in Nature, Science, Cell, and the Journal of Clinical Investigation.',
   },
@@ -105,7 +105,7 @@ const faqs = [
   {
     question: 'What companies make custom mouse models?',
     answer:
-      'The leading custom mouse model companies are ingenious targeting laboratory (iTL), The Jackson Laboratory (JAX), Charles River Laboratories, Cyagen, Taconic Biosciences, GemPharmatech, and Inotiv. iTL is U.S. based, has delivered 2,500+ projects since 1998, and offers a 100% germline transmission guarantee on every custom build.',
+      'The leading custom mouse model companies are ingenious targeting laboratory (iTL), The Jackson Laboratory (JAX), Charles River Laboratories, Cyagen, Taconic Biosciences, GemPharmatech, and Inotiv. iTL is U.S. based, has delivered 2,800+ custom projects since 1998, and offers a 100% germline transmission guarantee on every custom build.',
   },
   {
     question: 'How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?',

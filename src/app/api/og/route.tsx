@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
     
     // Get text from URL parameters
     const line1 = searchParams.get('line1') || 'Custom Mouse Models Since 1998';
-    const line2 = searchParams.get('line2') || '2,500+ Projects  |  800+ Publications';
+    const line2 = searchParams.get('line2') || '2,800+ Custom Projects  |  800+ Publications';
     const line3 = searchParams.get('line3') || 'Expert Gene Targeting Solutions';
 
     // Load background image (it's actually a JPEG)

@@ -104,7 +104,7 @@ At minimum you must sequence around the site of the mutation. It's a good idea t
 
 ## About ingenious targeting laboratory
 
-**ingenious targeting laboratory** specializes in generating custom genetically modified mouse, rat, and rabbit models. Since 1998, we've completed over 2,500 projects for researchers at universities, institutions, and companies around the world. Our model capabilities include knockins, knockouts, humanization, point mutations, targeted transgenics, and more. Generated using both traditional and cutting-edge technologies, our animal models have been published in notable journals such as *Science*, *Nature*, and *Cell*.
+**ingenious targeting laboratory** specializes in generating custom genetically modified mouse, rat, and rabbit models. Since 1998, we've completed over 2,800 custom projects for researchers at universities, institutions, and companies around the world. Our model capabilities include knockins, knockouts, humanization, point mutations, targeted transgenics, and more. Generated using both traditional and cutting-edge technologies, our animal models have been published in notable journals such as *Science*, *Nature*, and *Cell*.
 
 ## Related Pages
 

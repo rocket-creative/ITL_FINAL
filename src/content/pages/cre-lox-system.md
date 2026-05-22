@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.834Z"
 
 **Url: /cre-lox-system**
 
-**Meta Description: Cre lox system for conditional gene targeting in mice. LoxP site design, Cre recombinase drivers, and floxed allele generation. 2,500+ projects since 1998.**
+**Meta Description: Cre lox system for conditional gene targeting in mice. LoxP site design, Cre recombinase drivers, and floxed allele generation. 2,800+ custom projects since 1998.**
 
 **Primary Keyword: Cre lox system**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.834Z"
 
 # Cre Lox System
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,500 knockout projects, including conditional, using the Cre lox system. Our Cre lox based models have supported research published in more than 800 peer reviewed journals including Science, Nature, Cell, enabling tissue specific and temporally controlled gene manipulation across every organ system.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom knockout projects, including conditional, using the Cre lox system. Our Cre lox based models have supported research published in more than 800 peer reviewed journals including Science, Nature, Cell, enabling tissue specific and temporally controlled gene manipulation across every organ system.
 
 The Cre lox system is the foundation of conditional gene targeting in mice. By flanking critical gene elements with LoxP sites, researchers create alleles that function normally until exposed to Cre recombinase. Crossing floxed mice to tissue specific or inducible Cre driver lines enables gene deletion in defined cell populations or at specific times, providing experimental control not possible with conventional knockouts.
 

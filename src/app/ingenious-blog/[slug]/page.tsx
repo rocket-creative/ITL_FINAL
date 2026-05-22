@@ -314,7 +314,7 @@ const COMMERCIAL_META: Record<string, { title: string; description: string }> = 
   'conventional-vs-conditional-knockout': {
     title: 'Conventional vs Conditional Knockout + Custom Mice | ITL',
     description:
-      'Conventional vs conditional knockout compared. Catalog floxed and Cre lines plus custom Cre/lox projects. 2,500+ projects.',
+      'Conventional vs conditional knockout compared. Catalog floxed and Cre lines plus custom Cre/lox projects. 2,800+ custom projects.',
   },
   'how-a-knockout-mouse-is-made': {
     title: 'How a Knockout Mouse Is Made + Custom Knockout Service | ITL',

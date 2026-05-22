@@ -28,7 +28,7 @@ Our team members work on diverse projects across all therapeutic areas, from onc
 
 Join a team that has:
 
-- Completed over 2,500 custom projects
+- Completed over 2,800 custom projects
 - Contributed to 800+ publications
 - Worked with leading research institutions
 - Advanced gene targeting technologies
@@ -82,7 +82,7 @@ Contact us to learn more about current openings and career opportunities at Inge
 - All elements labeled
 - Primary keyword "current openings" in H1 and first paragraph
 - Secondary keywords in H2/H3 headers
-- Quantified credibility (1998, 2,500+ projects)
+- Quantified credibility (1998, 2,800+ custom projects)
 - Zone 1: Trust &amp; Positioning
 - Zone 2: Career information
 - Zone 3: Navigation and CTAs

@@ -18,13 +18,13 @@ import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '
 const heroData = {
   badge: "Our Services",
   title: "Depression Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,500 custom mouse models for behavioral and psychiatric research, with hundreds of depression and anxiety models enabling investigation of mood disorder pathophysiology and identification of therapeutic targets. Depression and anxiety mouse models provide essential platform for understanding genetic vulnerability, stress effects, and treatment responses in preclinical setting.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 custom mouse models for behavioral and psychiatric research, with hundreds of depression and anxiety models enabling investigation of mood disorder pathophysiology and identification of therapeutic targets. Depression and anxiety mouse models provide essential platform for understanding genetic vulnerability, stress effects, and treatment responses in preclinical setting.",
   description: "Depression and anxiety models investigate neurobiological mechanisms underlying mood disorders through genetic manipulation, stress paradigms, and combination approaches revealing how vulnerability factors interact with environmental stress to produce psychiatric phenotypes. These models enable evaluation of antidepressant and anxiolytic interventions before clinical translation."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

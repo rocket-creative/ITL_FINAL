@@ -17,13 +17,13 @@ const CRE_LINE_INDEX_LINKS = allTissueLineSlugs();
 const heroData = {
   badge: "Cell Type Specific",
   title: "Tissue Specific Knockout",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 mouse models, including conditional knockouts that enable tissue specific gene deletion. Our tissue specific knockout models have supported research published in over 800 peer reviewed publications, including articles in Science, Nature, and Cell.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom mouse models, including conditional knockouts that enable tissue specific gene deletion. Our tissue specific knockout models have supported research published in over 800 peer reviewed publications, including articles in Science, Nature, and Cell.",
   description: "Tissue specific knockout restricts gene deletion to defined cell types or organs while preserving gene function elsewhere in the organism. By crossing a floxed (conditional) allele to a tissue specific Cre driver line, gene deletion occurs only in cells where Cre recombinase is expressed."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

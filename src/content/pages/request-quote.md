@@ -109,7 +109,7 @@ To provide an accurate quote, please include the following information in your r
 
 ## Why Request a Quote from Ingenious Targeting Laboratory
 
-With over 2,500 custom mouse model projects completed since 1998, Ingenious Targeting Laboratory brings extensive experience to every project. Our scientific consultants review each quote request carefully to provide accurate pricing and strategic recommendations.
+With over 2,800 custom mouse model projects completed since 1998, Ingenious Targeting Laboratory brings extensive experience to every project. Our scientific consultants review each quote request carefully to provide accurate pricing and strategic recommendations.
 
 We understand that project budgets are important, and we work to provide cost effective solutions that meet your research requirements. Our quotes include detailed breakdowns of project phases, timeline expectations, and deliverables to help you make informed decisions.
 

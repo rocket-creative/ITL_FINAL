@@ -19,13 +19,13 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "HPRT Locus Targeting",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects, with hundreds utilizing safe harbor locus integration to achieve stable and predictable transgene expression. The HPRT locus represents one of the most versatile genomic sites for insertion of exogenous DNA, enabling researchers to generate consistent models without the variability associated with random integration approaches.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, with hundreds utilizing safe harbor locus integration to achieve stable and predictable transgene expression. The HPRT locus represents one of the most versatile genomic sites for insertion of exogenous DNA, enabling researchers to generate consistent models without the variability associated with random integration approaches.",
   description: "HPRT locus targeting allows researchers to insert reporter genes, selection markers, or therapeutic transgenes at a well-characterized genomic location that supports robust expression across diverse tissue types. This approach is particularly valuable when studying genes where single-copy integration and consistent expression levels are essential for research outcomes."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

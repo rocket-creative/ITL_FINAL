@@ -42,7 +42,7 @@ export default function TrustedBySection() {
             marginBottom: '20px',
           }}
         >
-          Since 1998 · 2,500+ Projects Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell
+          Since 1998 · 2,800+ Custom Projects Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell
         </p>
         <p
           className="animate-initial animate-fade-in-up animate-delay-300"

@@ -15,13 +15,13 @@ import { getPublicationsForPageAsCitations } from '@/data/pagePublications';
 const heroData = {
   badge: "Large Scale Targeting",
   title: "BAC Targeting",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases.",
   description: "BAC targeting converts large genomic fragments into functional targeting vectors while maintaining complete regulatory architecture spanning 5 prime promoters, enhancer elements, coding sequences, and 3 prime regulatory regions."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 100, suffix: "+", label: "Kilobases Capacity" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 800, suffix: "+", label: "Publications" }

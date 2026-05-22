@@ -43,12 +43,12 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: 'Custom Mouse Models Since 1998',
   title: 'Knockout Mouse Models',
-  intro: 'Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our knockout mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.',
+  intro: 'Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our knockout mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.',
   description: 'Knockout mouse models enable loss of function studies by inactivating specific genes. Whether you need complete gene deletion throughout the organism or controlled inactivation in specific tissues at defined times, ingenious targeting laboratory designs and delivers knockout mice tailored to your experimental requirements. From conventional knockouts for straightforward gene deletion to sophisticated conditional systems using Cre lox and other recombinase technologies, the right knockout strategy is critical for your research success.',
 };
 
 const stats = [
-  { number: '2,500+', label: 'Projects Completed' },
+  { number: '2,800+', label: 'Custom Projects Completed' },
   { number: '800+', label: 'Publications' },
   { number: '25+', label: 'Years of Excellence' },
   { number: '100%', label: 'Custom Solutions' },

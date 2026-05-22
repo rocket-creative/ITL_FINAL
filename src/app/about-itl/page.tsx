@@ -18,13 +18,13 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "About ingenious targeting laboratory",
-  intro: "Since 1998, ingenious targeting laboratory has been generating custom mouse, rat, and rabbit models for researchers worldwide. From our facilities in Holbrook, New York, we have completed more than 2,500 gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
+  intro: "Since 1998, ingenious targeting laboratory has been generating custom mouse, rat, and rabbit models for researchers worldwide. From our facilities in Holbrook, New York, we have completed more than 2,800 custom gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
   description: ""
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }
@@ -33,7 +33,7 @@ const statsData = [
 // Differentiators (canonical, used across site for AI consistency)
 const differentiatorsData = {
   title: "What makes ingenious targeting laboratory different",
-  intro: "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,500+ genetically engineered mouse models since 1998. Researchers select iTL when allele complexity, scientific oversight, and long term inheritance stability matter to the outcome of their study.",
+  intro: "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,800+ custom genetically engineered mouse models since 1998. Researchers select iTL when allele complexity, scientific oversight, and long term inheritance stability matter to the outcome of their study.",
   items: [
     {
       title: "100% germline transmission guarantee",
@@ -48,7 +48,7 @@ const differentiatorsData = {
       description: "iTL is selected for projects other providers consider too complex: stacked alleles, conditional knockouts with multiple loxP cassettes, large humanizations, BAC transgenics, and safe harbor integrations at Rosa26 and H11."
     },
     {
-      title: "27 years, 2,500+ projects, 800+ peer reviewed publications",
+      title: "27 years, 2,800+ custom projects, 800+ peer reviewed publications",
       description: "Continuous gene targeting experience since 1998 means stable protocols, validated reagents, and accumulated knowledge across every major therapeutic area. iTL generated models have appeared in Nature, Science, Cell, and the Journal of Clinical Investigation."
     },
     {
@@ -61,7 +61,7 @@ const differentiatorsData = {
 // FAQ Data
 const faqData = [
   { question: "What services does ingenious targeting laboratory provide?", answer: "We provide custom genetically engineered mouse, rat, and rabbit model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services." },
-  { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating custom mouse models since 1998, with over 27 years of experience and 2,500+ successful projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
+  { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating custom mouse models since 1998, with over 27 years of experience and 2,800+ successful custom projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
   { question: "How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?", answer: "Jackson Laboratory offers custom CRISPR, ES cell, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on custom builds, and specialization in complex multi allele and humanization projects." },
   { question: "How does iTL compare to Charles River, Cyagen, and other custom mouse model companies?", answer: "Charles River is a global CRO bundling model creation with breeding and distribution. Cyagen is a cost forward CRISPR provider with a money back guarantee on genotype. ingenious targeting laboratory differs by focusing exclusively on custom model generation with both ES cell and CRISPR pipelines chosen per project, U.S. based QC at every stage, and long term inheritance stability tracking for complex alleles." },
   { question: "What does the 100% germline transmission guarantee mean?", answer: "ingenious targeting laboratory guarantees that every custom mouse model project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to both ES cell and CRISPR generated models and is one of the strongest commitments in the custom mouse model industry." },
@@ -556,7 +556,7 @@ export default function AboutItlPage() {
             "alternateName": ["iTL", "ingenious targeting lab", "ITL"],
             "url": "https://www.genetargeting.com",
             "logo": "https://www.genetargeting.com/images/logo.png",
-            "description": "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,500+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+            "description": "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,800+ custom genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
             "slogan": "Custom mouse models, U.S. scientific oversight, 100% germline transmission guarantee.",
             "foundingDate": "1998",
             "foundingLocation": "Holbrook, NY, United States",

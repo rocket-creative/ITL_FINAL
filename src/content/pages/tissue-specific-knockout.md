@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:06.134Z"
 
 # Tissue Specific Knockout
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,500 mouse models, including conditional knockouts that enable tissue specific gene deletion. Our tissue specific knockout models have supported research published in over 800 peer reviewed publications, including articles in Science, Nature, and Cell.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom mouse models, including conditional knockouts that enable tissue specific gene deletion. Our tissue specific knockout models have supported research published in over 800 peer reviewed publications, including articles in Science, Nature, and Cell.
 
 Tissue specific knockout restricts gene deletion to defined cell types or organs while preserving gene function elsewhere in the organism. By crossing a floxed (conditional) allele to a tissue specific Cre driver line, gene deletion occurs only in cells where Cre recombinase is expressed. This approach enables study of genes that cause embryonic lethality when deleted globally, isolation of cell autonomous gene functions, and dissection of tissue specific phenotypes without confounding systemic effects.
 

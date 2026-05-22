@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.960Z"
 
 **Url: /mouse-model-services**
 
-**Meta Description: Custom mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,500+ projects since 1998. Request consultation.**
+**Meta Description: Custom mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,800+ custom projects since 1998. Request consultation.**
 
 **Primary Keyword: custom mouse models**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.960Z"
 
 # Custom Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,500 custom gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.
 
 Whether you need a simple knockout to eliminate gene function, a conditional allele for tissue specific studies, a knockin model to introduce precise modifications, or a humanized mouse for translational research, Ingenious Targeting Laboratory provides the scientific expertise and technical infrastructure to bring your project from concept to study ready animals.
 

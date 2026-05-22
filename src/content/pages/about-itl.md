@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:02.893Z"
 
 **Url: /about-ingenious**
 
-**Meta Description: Ingenious Targeting Laboratory has generated 2,500+ custom mouse models since 1998, contributing to 800+ publications. Learn about our mission and expertise.**
+**Meta Description: Ingenious Targeting Laboratory has generated 2,800+ custom mouse models since 1998, contributing to 800+ publications. Learn about our mission and expertise.**
 
 **Primary Keyword: about Ingenious Targeting Laboratory**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:02.893Z"
 
 # About Ingenious Targeting Laboratory
 
-Since 1998, Ingenious Targeting Laboratory has been generating custom mouse models for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,500 gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.
+Since 1998, Ingenious Targeting Laboratory has been generating custom mouse models for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,800 custom gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.
 
 ## Our Mission
 
@@ -42,7 +42,7 @@ Ingenious Targeting Laboratory was founded in 1998 to address the growing demand
 
 **2018**: Celebrated 20 years and 2,000 projects
 
-**2023**: 2,500 projects completed with 800+ publications
+**2026**: 2,800 custom projects completed with 800+ publications
 
 Throughout this history, Ingenious Targeting Laboratory has maintained commitment to rigorous scientific standards, transparent communication, and personalized project support.
 
@@ -135,7 +135,7 @@ ingenious targeting laboratory provides custom genetically engineered mouse and 
 
 **How long has ingenious targeting laboratory been in business?**
 
-ingenious targeting laboratory has been generating custom mouse models since 1998, with over 25 years of experience and 2,500+ successful projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact.
+ingenious targeting laboratory has been generating custom mouse models since 1998, with over 25 years of experience and 2,800+ successful custom projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact.
 
 **How do I get started with a custom mouse model project?**
 

@@ -13,13 +13,13 @@ import { UXUIDCResourceLinks, creResources, breedingResources, LabSignalsSignup,
 const heroData = {
   badge: "Conditional Gene Targeting",
   title: "Cre Lox System",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 knockout projects, including conditional, using the Cre lox system. Our Cre lox based models have supported research published in more than 800 peer reviewed journals including Science, Nature, and Cell, enabling tissue specific and temporally controlled gene manipulation across every organ system.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom knockout projects, including conditional, using the Cre lox system. Our Cre lox based models have supported research published in more than 800 peer reviewed journals including Science, Nature, and Cell, enabling tissue specific and temporally controlled gene manipulation across every organ system.",
   description: "The Cre lox system is the foundation of conditional gene targeting in mice. By flanking critical gene elements with LoxP sites, researchers create alleles that function normally until exposed to Cre recombinase. Crossing floxed mice to tissue specific or inducible Cre driver lines enables gene deletion in defined cell populations or at specific times, providing experimental control not possible with conventional knockouts."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }
@@ -1028,7 +1028,7 @@ export default function CreLoxSystemPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Cre lox system for conditional gene targeting in mice. LoxP site design, Cre recombinase drivers, and floxed allele generation. 2,500+ projects since 1998.",
+            "description": "Cre lox system for conditional gene targeting in mice. LoxP site design, Cre recombinase drivers, and floxed allele generation. 2,800+ custom projects since 1998.",
             "serviceType": "Conditional Gene Targeting Technology"
           })
         }}

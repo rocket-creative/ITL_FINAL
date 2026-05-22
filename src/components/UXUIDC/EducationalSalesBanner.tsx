@@ -92,7 +92,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Conditional & Conventional Knockouts',
     headline: 'Conditional or constitutive knockout — we build both.',
     subline:
-      'Custom Cre/lox conditional or full knockout. Tissue-specific, inducible, or global. 2,500+ projects shipped.',
+      'Custom Cre/lox conditional or full knockout. Tissue-specific, inducible, or global. 2,800+ custom projects shipped.',
     primaryCta: { label: 'Get a Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=conventional-vs-conditional-banner' },
     secondaryCta: { label: 'Browse Knockout Catalog', href: '/all-catalog-mouse-models/?q=knockout' },
   },
@@ -108,7 +108,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
   // CRE / CreERT2 / TAMOXIFEN cluster — ~20K imp/month
   'tamoxifen-inducible-cre': {
     eyebrow: 'Tamoxifen Inducible CreERT2',
-    headline: "We've shipped 2,500+ CreERT2 projects.",
+    headline: "We've shipped 2,800+ custom CreERT2 projects.",
     subline:
       'Custom tissue-specific CreERT2 lines and inducible knockouts. Bypass embryonic lethality. 800+ publications. Quote in 24 hours.',
     primaryCta: { label: 'Start Your CreERT2 Project', href: '/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-banner' },
@@ -118,7 +118,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Inducible CreERT2 Mice',
     headline: 'Need an inducible knockout? We build CreERT2 lines.',
     subline:
-      'Custom CreERT2 + floxed allele projects. Tissue-specific or ubiquitous. 2,500+ projects shipped.',
+      'Custom CreERT2 + floxed allele projects. Tissue-specific or ubiquitous. 2,800+ custom projects shipped.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=inducible-cre-ert2-banner' },
     secondaryCta: { label: 'Browse Cre Driver Catalog', href: '/all-catalog-mouse-models/?q=cre' },
   },
@@ -126,7 +126,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Cre Recombinase Mice',
     headline: 'Custom Cre driver lines and floxed alleles.',
     subline:
-      'Tissue-specific Cre, CreERT2, and conditional knockouts. Quote in 24 hours. 2,500+ projects shipped.',
+      'Tissue-specific Cre, CreERT2, and conditional knockouts. Quote in 24 hours. 2,800+ custom projects shipped.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=cre-recombinase-banner' },
     secondaryCta: { label: 'Browse Cre Driver Catalog', href: '/all-catalog-mouse-models/?q=cre' },
   },
@@ -134,7 +134,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Cre/lox Conditional Knockouts',
     headline: 'Building a conditional knockout? Start with our Cre/lox expertise.',
     subline:
-      'Custom floxed alleles + tissue-specific Cre lines. 2,500+ projects, 800+ publications.',
+      'Custom floxed alleles + tissue-specific Cre lines. 2,800+ custom projects, 800+ publications.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=cre-lox-banner' },
     secondaryCta: { label: 'Browse Cre/lox Catalog', href: '/all-catalog-mouse-models/?q=cre' },
   },
@@ -142,7 +142,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Cre/lox Conditional Knockouts',
     headline: 'Building a conditional knockout? Start with our Cre/lox expertise.',
     subline:
-      'Custom floxed alleles + tissue-specific Cre lines. 2,500+ projects, 800+ publications.',
+      'Custom floxed alleles + tissue-specific Cre lines. 2,800+ custom projects, 800+ publications.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=cre-flox-banner' },
     secondaryCta: { label: 'Browse Cre/lox Catalog', href: '/all-catalog-mouse-models/?q=cre' },
   },
@@ -152,7 +152,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Custom Knockout Mice',
     headline: 'Knockouts at your locus, germline-confirmed founders.',
     subline:
-      '100% germline guarantee. 2,500+ projects shipped.',
+      '100% germline guarantee. 2,800+ custom projects shipped.',
     primaryCta: { label: 'Request a Knockout Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=nhej-banner' },
     secondaryCta: { label: 'Already know your gene? Search the catalog', href: '/all-catalog-mouse-models/?q=knockout' },
   },
@@ -264,7 +264,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Floxed Allele Generation',
     headline: 'Need a floxed allele for your conditional knockout?',
     subline:
-      'Custom floxed mice. Critical exon selection included. 2,500+ projects shipped.',
+      'Custom floxed mice. Critical exon selection included. 2,800+ custom projects shipped.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=floxing-banner' },
     secondaryCta: { label: 'Browse Floxed Catalog', href: '/all-catalog-mouse-models/?q=floxed' },
   },
@@ -272,7 +272,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Floxed Allele Generation',
     headline: 'Need a floxed allele for your conditional knockout?',
     subline:
-      'Custom floxed mice. Critical exon selection included. 2,500+ projects shipped.',
+      'Custom floxed mice. Critical exon selection included. 2,800+ custom projects shipped.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=floxed-cre-lox-banner' },
     secondaryCta: { label: 'Browse Floxed Catalog', href: '/all-catalog-mouse-models/?q=floxed' },
   },
@@ -499,7 +499,7 @@ export default function UXUIDCEducationalSalesBanner({
         >
           <span>26+ years building mouse models</span>
           <span aria-hidden="true">•</span>
-          <span>2,500+ projects delivered</span>
+          <span>2,800+ custom projects delivered</span>
           <span aria-hidden="true">•</span>
           <span>100% germline guarantee</span>
         </div>

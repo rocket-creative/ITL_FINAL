@@ -15,13 +15,13 @@ import { GlossaryTermLink, BreedingSchemeArchitectCTA, UXUIDCServicePricingAncho
 const heroData = {
   badge: "BAC Transgenics & ROSA26",
   title: "Transgenic Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including in Science, Nature, and Cell.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including in Science, Nature, and Cell.",
   description: "Transgenic mouse models introduce exogenous DNA sequences into the mouse genome for overexpression studies, tissue specific Cre driver generation, reporter line creation, and other applications requiring expression of non native sequences. Unlike knockin models that modify endogenous loci, transgenic approaches add new genetic elements either through random integration or targeted insertion at safe harbor loci."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }
@@ -799,7 +799,7 @@ export default function TransgenicMouseServicePage() {
               "alternateName": "iTL",
               "url": "https://www.genetargeting.com"
             },
-            "description": "Custom transgenic mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. BAC transgenics, Rosa26 and H11 safe harbor targeting, Cre drivers, and reporter lines. 2,500+ projects since 1998.",
+            "description": "Custom transgenic mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. BAC transgenics, Rosa26 and H11 safe harbor targeting, Cre drivers, and reporter lines. 2,800+ custom projects since 1998.",
             "serviceType": "Custom Transgenic Mouse Model Generation",
             "areaServed": "Worldwide",
             "award": "100% germline transmission guarantee"

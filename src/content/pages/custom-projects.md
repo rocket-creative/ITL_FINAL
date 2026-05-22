@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.058Z"
 
 **Url: /custom-projects**
 
-**Meta Description: Custom mouse model generation tailored to your research. Knockout, knockin, conditional, and humanized models. 2,500+ projects since 1998.**
+**Meta Description: Custom mouse model generation tailored to your research. Knockout, knockin, conditional, and humanized models. 2,800+ custom projects since 1998.**
 
 **Primary Keyword: custom mouse model projects**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.058Z"
 
 # Custom Mouse Model Projects
 
-Every research question is unique. Ingenious Targeting Laboratory specializes in designing and generating custom mouse models precisely matched to your experimental requirements. Since 1998, we have completed more than 2,500 custom projects, developing expertise across every model type and therapeutic area.
+Every research question is unique. Ingenious Targeting Laboratory specializes in designing and generating custom mouse models precisely matched to your experimental requirements. Since 1998, we have completed more than 2,800 custom projects, developing expertise across every model type and therapeutic area.
 
 Whether you need a straightforward knockout, a sophisticated conditional allele, a precise point mutation, or a complex humanization, Ingenious Targeting Laboratory's scientific team provides the design expertise and technical capability to deliver study ready animals.
 

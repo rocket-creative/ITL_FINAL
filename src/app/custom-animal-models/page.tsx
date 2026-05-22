@@ -42,7 +42,7 @@ const services = [
   },
   {
     title: 'Mouse Models',
-    description: 'Our core expertise in custom mouse model generation spans knockout, knockin, humanized, and targeted transgenic approaches with over 2,500 completed projects since 1998.',
+    description: 'Our core expertise in custom mouse model generation spans knockout, knockin, humanized, and targeted transgenic approaches with over 2,800 completed custom projects since 1998.',
     href: '/custom-mouse-models',
     Icon: IconDNA,
   },
@@ -51,7 +51,7 @@ const services = [
 const faqData = [
   {
     question: 'What species does ingenious targeting laboratory work with?',
-    answer: 'Our primary expertise is in mouse model generation, with over 2,500 completed projects. We also offer custom rat and rabbit model services. Contact us to discuss your specific requirements for other species.',
+    answer: 'Our primary expertise is in mouse model generation, with over 2,800 completed custom projects. We also offer custom rat and rabbit model services. Contact us to discuss your specific requirements for other species.',
   },
   {
     question: 'How do rat models differ from mouse models?',

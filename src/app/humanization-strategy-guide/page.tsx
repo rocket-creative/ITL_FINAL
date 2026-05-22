@@ -19,13 +19,13 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Humanization Strategy Guide",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom mouse model projects including hundreds of humanized mouse development efforts, with extensive experience optimizing humanization strategies for diverse therapeutic targets and research applications. Strategic humanization enables investigation of human protein function in intact mammalian systems while maintaining species specific interactions essential for physiological relevance.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom mouse model projects including hundreds of humanized mouse development efforts, with extensive experience optimizing humanization strategies for diverse therapeutic targets and research applications. Strategic humanization enables investigation of human protein function in intact mammalian systems while maintaining species specific interactions essential for physiological relevance.",
   description: "Humanization strategies require balancing human protein function approximation against maintenance of normal physiology through retained mouse components. Optimal strategy selection depends on human-mouse protein identity, functional conservation requirements, and therapeutic development objectives."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

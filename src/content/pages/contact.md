@@ -42,7 +42,7 @@ Prefer to discuss your project directly? Schedule a virtual consultation with ou
 
 ## Why Choose Ingenious Targeting Laboratory
 
-With over 2,500 custom mouse model projects completed, Ingenious Targeting Laboratory brings extensive experience to every project. Our scientific consultants work closely with researchers to design optimal targeting strategies and ensure project success.
+With over 2,800 custom mouse model projects completed, Ingenious Targeting Laboratory brings extensive experience to every project. Our scientific consultants work closely with researchers to design optimal targeting strategies and ensure project success.
 
 We understand that each research program has unique requirements, and we tailor our approach to match your experimental goals, timeline, and budget. From initial consultation through delivery of study ready cohorts, we provide comprehensive support for your mouse model needs.
 

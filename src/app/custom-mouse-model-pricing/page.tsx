@@ -132,7 +132,7 @@ const faqs = [
   {
     question: 'Why does ingenious targeting laboratory cost what it does?',
     answer:
-      'Our pricing reflects 26+ years of mouse model expertise, validated C57BL/6 ES cell lines, dedicated scientific project management, a 100% germline transmission guarantee, and the track record of 2,500+ projects supporting 800+ peer-reviewed publications including in Nature, Cell, and Science. We deliver the mice; you do not pay for failed rounds.',
+      'Our pricing reflects 26+ years of mouse model expertise, validated C57BL/6 ES cell lines, dedicated scientific project management, a 100% germline transmission guarantee, and the track record of 2,800+ custom projects supporting 800+ peer-reviewed publications including in Nature, Cell, and Science. We deliver the mice; you do not pay for failed rounds.',
   },
 ];
 

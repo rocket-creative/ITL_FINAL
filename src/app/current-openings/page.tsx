@@ -192,7 +192,7 @@ export default function CurrentOpeningsPage() {
                 },
                 {
                   title: '26+ Years of Excellence',
-                  description: 'Be part of a company with a proven track record and over 2,500 successful projects.',
+                  description: 'Be part of a company with a proven track record and over 2,800 successful custom projects.',
                 },
               ].map((item, index) => (
                 <div

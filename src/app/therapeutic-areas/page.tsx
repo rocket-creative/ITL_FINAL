@@ -13,13 +13,13 @@ import { IconTarget, IconQuote, IconChevronRight, IconCheckCircle } from '@/comp
 const heroData = {
   badge: "Disease Research Models",
   title: "Therapeutic Area Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models supporting research across every major therapeutic area. Our 2,500+ completed projects span oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare disease, and ophthalmology, contributing to over 800 peer reviewed publications.",
+  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models supporting research across every major therapeutic area. Our 2,800+ completed custom projects span oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare disease, and ophthalmology, contributing to over 800 peer reviewed publications.",
   description: "Whether you are studying disease mechanisms, validating therapeutic targets, or testing drug candidates, ingenious targeting laboratory provides the custom knockout, knockin, and humanized models optimized for your specific disease research needs."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }
@@ -473,7 +473,7 @@ export default function TherapeuticAreasPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom mouse models for oncology, neuroscience, metabolic disease, immunology, cardiovascular, and rare disease research. 2,500+ models since 1998.",
+            "description": "Custom mouse models for oncology, neuroscience, metabolic disease, immunology, cardiovascular, and rare disease research. 2,800+ custom models since 1998.",
             "serviceType": "Therapeutic Area Mouse Models"
           })
         }}

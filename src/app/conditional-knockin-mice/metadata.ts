@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Conditional Knockin Mouse Models',
-  description: 'Conditional knockin mice for controlled gene expression. Activate transgenes in specific tissues or timepoints using Cre LoxP. 2,500+ projects since 1998.',
+  description: 'Conditional knockin mice for controlled gene expression. Activate transgenes in specific tissues or timepoints using Cre LoxP. 2,800+ custom projects since 1998.',
   path: '/conditional-knockin-mice',
 });
 

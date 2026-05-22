@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Conventional Knockout Mouse Models',
-  description: 'Conventional knockout mice for studying complete gene loss of function. Global gene deletion in all tissues. Germline confirmed, 2,500+ projects delivered.',
+  description: 'Conventional knockout mice for studying complete gene loss of function. Global gene deletion in all tissues. Germline confirmed, 2,800+ custom projects delivered.',
   path: '/conventional-knockout-mouse-models',
 });
 

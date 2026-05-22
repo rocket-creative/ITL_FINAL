@@ -18,13 +18,13 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Knockout Strategy Guide",
-  intro: "Since 1998, ingenious targeting laboratory has helped researchers design over 2,500 custom gene targeting projects. Our scientific consultants work with investigators at every career stage to identify the optimal knockout approach for their specific research questions, ensuring that model design aligns with experimental goals.",
+  intro: "Since 1998, ingenious targeting laboratory has helped researchers design over 2,800 custom gene targeting projects. Our scientific consultants work with investigators at every career stage to identify the optimal knockout approach for their specific research questions, ensuring that model design aligns with experimental goals.",
   description: "Choosing the right knockout strategy is one of the most important decisions in mouse model generation. The difference between a conventional knockout that deletes gene function globally and a conditional knockout that enables tissue specific or temporal control can determine whether your model answers your research question or produces confounding phenotypes that obscure the biology of interest. This guide walks through the key considerations for knockout strategy selection, helping you make an informed decision before committing to a project."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

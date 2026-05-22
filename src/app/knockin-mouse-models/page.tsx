@@ -39,12 +39,12 @@ import {
 const heroData = {
   badge: 'Precision Gene Modification Since 1998',
   title: 'Knockin Mouse Models',
-  intro: 'Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.',
+  intro: 'Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.',
   description: 'Knockin mouse models enable precise genetic modifications at endogenous loci. Unlike knockout models that eliminate gene function, knockin models modify genes in specific ways: introducing point mutations that mimic human disease alleles, inserting reporter genes to visualize expression patterns, or adding epitope tags to track protein localization. Because modifications occur at the native locus, knockin alleles maintain endogenous regulatory control over expression timing, tissue distribution, and transcript processing.',
 };
 
 const stats = [
-  { number: '2,500+', label: 'Projects Completed' },
+  { number: '2,800+', label: 'Custom Projects Completed' },
   { number: '800+', label: 'Publications' },
   { number: '25+', label: 'Years of Excellence' },
   { number: '100%', label: 'Custom Solutions' },

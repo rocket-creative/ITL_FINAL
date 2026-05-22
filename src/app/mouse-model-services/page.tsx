@@ -14,13 +14,13 @@ import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUID
 const heroData = {
   badge: "Custom Gene Targeting",
   title: "Custom Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.",
   description: "Whether you need a simple knockout to eliminate gene function, a conditional allele for tissue specific studies, a knockin model to introduce precise modifications, or a humanized mouse for translational research, ingenious targeting laboratory provides the scientific expertise and technical infrastructure to bring your project from concept to study ready animals."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }
@@ -730,7 +730,7 @@ export default function MouseModelServicesPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,500+ projects since 1998.",
+            "description": "Custom mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,800+ custom projects since 1998.",
             "serviceType": "Custom Mouse Model Generation"
           })
         }}

@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.996Z"
 
 **Url: /custom-mouse-models**
 
-**Meta Description: Ingenious Targeting Laboratory generates custom knockout, knockin, and humanized mouse models. 2,500+ projects since 1998 with pre germline characterization.**
+**Meta Description: Ingenious Targeting Laboratory generates custom knockout, knockin, and humanized mouse models. 2,800+ custom projects since 1998 with pre germline characterization.**
 
 **Primary Keyword: custom mouse model**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.996Z"
 
 # Custom Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has generated over 2,500 custom mouse models for researchers worldwide. Our gene targeting expertise spans knockout, knockin, humanized, and transgenic approaches.
+Since 1998, Ingenious Targeting Laboratory has generated over 2,800 custom mouse models for researchers worldwide. Our gene targeting expertise spans knockout, knockin, humanized, and transgenic approaches.
 
 Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgene integration, Ingenious Targeting Laboratory provides the scientific consultation and technical execution to deliver models optimized for your specific research goals.
 

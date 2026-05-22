@@ -28,7 +28,7 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 28, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }
@@ -41,7 +41,7 @@ const differentiators = [
     icon: IconAward,
     points: [
       "28 years of exclusive focus on custom mouse model generation",
-      "2,500+ custom projects completed across every model type",
+      "2,800+ custom projects completed across every model type",
       "800+ peer reviewed publications in Nature, Cell, Science",
       "Clients worldwide across academic and industry sectors"
     ]
@@ -102,11 +102,11 @@ const comparisonFactors = [
 const faqData = [
   { 
     question: "What makes ingenious targeting laboratory different from other mouse model providers?", 
-    answer: "ingenious targeting laboratory has 28 years of exclusive focus on custom mouse model generation, 2,500+ completed projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success." 
+    answer: "ingenious targeting laboratory has 28 years of exclusive focus on custom mouse model generation, 2,800+ completed custom projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success." 
   },
   { 
     question: "How does ingenious targeting laboratory's experience benefit my project?", 
-    answer: "ingenious targeting laboratory's 2,500+ projects across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application." 
+    answer: "ingenious targeting laboratory's 2,800+ custom projects across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application." 
   },
   { 
     question: "What support does ingenious targeting laboratory provide after model delivery?", 

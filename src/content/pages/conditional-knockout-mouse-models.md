@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.524Z"
 
 **Url: /conditional-knockout-mouse-models**
 
-**Meta Description: Custom conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,500+ projects since 1998.**
+**Meta Description: Custom conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,800+ custom projects since 1998.**
 
 **Primary Keyword: conditional knockout mouse**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.524Z"
 
 # Conditional Knockout Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,500 mouse model projects, including conditional knockouts, for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our conditional knockout mouse models have supported research published in more than 800 peer reviewed journals, including Science, Nature, and Cell.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom mouse model projects, including conditional knockouts, for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our conditional knockout mouse models have supported research published in more than 800 peer reviewed journals, including Science, Nature, and Cell.
 
 Conditional knockout mouse models enable controlled gene inactivation in specific tissues or at defined times. Unlike conventional knockouts where gene function is lost globally from the earliest developmental stages, conditional knockouts use the Cre lox system to restrict gene deletion to cells expressing Cre recombinase. This approach is essential when studying genes that cause embryonic lethality when deleted globally, when tissue specific gene function is the primary research question, or when temporal control over gene inactivation is required.
 

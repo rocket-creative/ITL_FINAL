@@ -16,13 +16,13 @@ import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUID
 const heroData = {
   badge: "Strain Background",
   title: "C57BL/6 Mouse Background",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects, with the majority generated on C57BL/6 genetic backgrounds. Our experience across thousands of projects provides deep understanding of how strain background affects phenotypic outcomes, breeding performance, and experimental reproducibility.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, with the majority generated on C57BL/6 genetic backgrounds. Our experience across thousands of projects provides deep understanding of how strain background affects phenotypic outcomes, breeding performance, and experimental reproducibility.",
   description: "The C57BL/6 mouse is the most widely used inbred strain for biomedical research and the reference strain for the mouse genome sequence. C57BL/6 backgrounds are preferred for most knockout, knockin, and conditional allele projects due to extensive phenotypic characterization, broad research community adoption, and compatibility with the majority of Cre driver lines."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

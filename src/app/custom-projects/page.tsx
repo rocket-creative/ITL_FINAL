@@ -15,12 +15,12 @@ const heroData = {
   badge: "Custom Services",
   title: "Custom Mouse Model Projects",
   intro: "When your research requires a unique mouse model, ingenious targeting laboratory delivers custom solutions tailored to your specific scientific objectives.",
-  description: "With over 2,500 custom projects completed since 1998, we have the expertise to design and generate virtually any genetically modified mouse model your research requires."
+  description: "With over 2,800 custom projects completed since 1998, we have the expertise to design and generate virtually any genetically modified mouse model your research requires."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }
@@ -151,7 +151,7 @@ export default function CustomProjectsPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Custom Mouse Model Projects",
-            "description": "Custom mouse model generation services including knockout, knockin, conditional, and humanized models. Over 2,500 projects completed since 1998.",
+            "description": "Custom mouse model generation services including knockout, knockin, conditional, and humanized models. Over 2,800 custom projects completed since 1998.",
             "provider": {
               "@type": "Organization",
               "name": "ingenious targeting laboratory",

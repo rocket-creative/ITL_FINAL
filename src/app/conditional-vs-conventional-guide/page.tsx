@@ -14,13 +14,13 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Comparison Guide",
   title: "Conditional vs Conventional Knockout",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,500 custom gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals.",
   description: "Both conditional and conventional knockouts create loss of function alleles, but they differ fundamentally in how and when gene inactivation occurs. This guide provides a direct comparison to help you choose the right approach for your project."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Success Rate" }

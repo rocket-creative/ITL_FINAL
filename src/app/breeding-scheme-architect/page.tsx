@@ -271,7 +271,7 @@ function BreedingSchemeArchitectContent() {
             and estimate time to experimental cohorts. The breeding scheme architect helps
             researchers plan single allele knockout, knockin, Cre lox, and humanized model
             breeding before starting a project. Since 1998, ingenious targeting laboratory
-            has helped researchers navigate breeding strategies for over 2,500 custom mouse
+            has helped researchers navigate breeding strategies for over 2,800 custom mouse
             model projects.
           </p>
 

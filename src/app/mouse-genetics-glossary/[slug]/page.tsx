@@ -33,12 +33,12 @@ const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: str
   'inducible-cre-ert2': {
     title: 'Inducible CreERT2 + Custom CreERT2 Mouse Service | ITL',
     description:
-      'Inducible CreERT2 explained for tissue-specific knockouts. We build custom CreERT2 + floxed alleles. 2,500+ projects.',
+      'Inducible CreERT2 explained for tissue-specific knockouts. We build custom CreERT2 + floxed alleles. 2,800+ custom projects.',
   },
   'tamoxifen-inducible-cre': {
     title: 'Tamoxifen Inducible Cre + Custom CreERT2 Mice | ITL',
     description:
-      'Tamoxifen-inducible Cre explained. We have shipped 2,500+ CreERT2 projects. Custom builds + ready catalog Cre lines. Quote in 24h.',
+      'Tamoxifen-inducible Cre explained. We have shipped 2,800+ custom CreERT2 projects. Custom builds + ready catalog Cre lines. Quote in 24h.',
   },
   'c57bl6j-vs-c57bl6n': {
     title: 'C57BL/6J vs C57BL/6N + Custom Mice on Either Background | ITL',
@@ -93,7 +93,7 @@ const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: str
   'tissue-specific-knockout': {
     title: 'Tissue-Specific Knockout + Custom Conditional Mice | ITL',
     description:
-      'Tissue-specific knockout mice explained. Custom Cre/lox conditional knockouts. 2,500+ projects shipped.',
+      'Tissue-specific knockout mice explained. Custom Cre/lox conditional knockouts. 2,800+ custom projects shipped.',
   },
   'humanized-mouse-models': {
     title: 'Humanized Mouse Models + Custom Humanization Service | ITL',
@@ -103,7 +103,7 @@ const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: str
   'cre-lox-system': {
     title: 'Cre/lox System + Custom Cre/lox Conditional Mice | ITL',
     description:
-      'Cre/lox recombination explained. Custom Cre/lox conditional knockouts. 2,500+ projects, 800+ publications.',
+      'Cre/lox recombination explained. Custom Cre/lox conditional knockouts. 2,800+ custom projects, 800+ publications.',
   },
   'frameshift-mutation': {
     title: 'Frameshift Mutation + Custom Knockin Mouse Models | ITL',

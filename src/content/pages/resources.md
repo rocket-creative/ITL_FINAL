@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.796Z"
 
 # Mouse Model Resources
 
-Ingenious Targeting Laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects. From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,500 projects completed since 1998.
+Ingenious Targeting Laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects. From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,800 custom projects completed since 1998.
 
 ## Selection Guides
 

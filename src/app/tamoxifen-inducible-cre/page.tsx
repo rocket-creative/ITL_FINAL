@@ -17,7 +17,7 @@ const heroData = {
 };
 
 const statsData = [
-  { value: 2500, suffix: "+", label: "Projects Completed" },
+  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Germline Guarantee" }
@@ -129,7 +129,7 @@ export default function TamoxifenInducibleCrePage() {
           serviceLabel="Tamoxifen Inducible Cre"
           headline="Custom CreERT2 mice — fixed-fee quote in 24 hours."
           unlockInterest="Tamoxifen Inducible Cre"
-          subline="Custom CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,500+ projects shipped. Free scientific consultation."
+          subline="Custom CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,800+ custom projects shipped. Free scientific consultation."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-pricing-anchor"
           secondaryHref="/all-catalog-mouse-models/?q=cre&utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-catalog"
           secondaryLabel="Browse Cre Driver Catalog"
