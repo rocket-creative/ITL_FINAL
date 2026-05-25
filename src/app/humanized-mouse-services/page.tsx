@@ -10,6 +10,7 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { applyCatalogFirstMeta } from '@/lib/seo';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -17,26 +18,29 @@ import {
   BreadcrumbSchema,
 } from '@/components/UXUIDC';
 
+const servicesMeta = applyCatalogFirstMeta(
+  'Humanized Mouse Services | Catalog + Custom | 24h Quote',
+  'Humanized mouse services since 1998. Browse catalog checkpoint lines or request custom humanization (PD1, PDL1, CTLA4, LAG3, TIM3). 800+ publications.',
+  '/humanized-mouse-services',
+);
+
 export const metadata: Metadata = {
-  title: 'Humanized Mouse Services | Pricing & 24h Quote | ITL',
-  description:
-    'Humanized mouse services since 1998. Drug-target & immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3). Pricing & 24h quote. 800+ publications.',
+  title: `${servicesMeta.title} | ingenious targeting laboratory`,
+  description: servicesMeta.description,
   alternates: {
     canonical: 'https://www.genetargeting.com/humanized-mouse-services/',
   },
   openGraph: {
-    title: 'Humanized Mouse Services | Pricing & 24h Quote | ITL',
-    description:
-      'Humanized mouse services since 1998. Drug-target & immune checkpoint humanization. Pricing & 24h quote. 800+ publications.',
+    title: `${servicesMeta.title} | ITL`,
+    description: servicesMeta.description,
     url: 'https://www.genetargeting.com/humanized-mouse-services/',
     siteName: 'ingenious targeting laboratory',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Humanized Mouse Services | Pricing & 24h Quote | ITL',
-    description:
-      'Humanized mouse services. Pricing & 24h quote. 800+ publications.',
+    title: `${servicesMeta.title} | ITL`,
+    description: servicesMeta.description,
   },
 };
 

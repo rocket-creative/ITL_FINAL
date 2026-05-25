@@ -15,9 +15,9 @@ export interface OGImageConfig {
 export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   '/': {
     slug: 'homepage',
-    line1: 'Custom Mouse Models Since 1998',
-    line2: '2,800+ Custom Projects',
-    line3: '800+ Publications',
+    line1: '14,774+ Catalog Mouse Models',
+    line2: 'Catalog First | Custom When Ready',
+    line3: '2,800+ Custom Projects | 800+ Publications',
     tier: 1,
   },
   '/about-itl': {

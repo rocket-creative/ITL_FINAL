@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import { getPublicationsForPageAsCitations } from '@/data/pagePublications';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -233,12 +234,10 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Start Your Project on C57BL/6 Background",
-  description: "Our scientific consultants are ready to discuss strain background selection for your research program. Initial consultation is provided at no charge and includes substrain recommendations, Nnt and rd8 considerations, and timeline estimates for your specific project.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Start Your Project on C57BL/6 Background',
+  'Our scientific consultants are ready to discuss strain background selection for your research program. Initial consultation is provided at no charge and includes substrain recommendations, Nnt and rd8 considerations, and timeline estimates for your specific project.',
+);
 
 export default function C57BL6MouseBackgroundPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

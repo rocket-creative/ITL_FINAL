@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -128,12 +129,10 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Start Your Custom Project",
-  description: "Contact us to discuss your custom mouse model requirements. Our scientific team will work with you to design the optimal approach for your research.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Start Your Custom Project',
+  'Contact us to discuss your custom mouse model requirements. Our scientific team will work with you to design the optimal approach for your research.',
+);
 
 export default function CustomProjectsPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);
@@ -233,7 +232,7 @@ export default function CustomProjectsPage() {
               {heroData.description}
             </p>
             <div className="hero-animate" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/request-quote" style={{
+              <Link href="/catalog-mouse-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -245,10 +244,10 @@ export default function CustomProjectsPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request a Quote
+                Browse Catalog Models
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
-              <Link href="/catalog-mouse-models" style={{
+              <Link href="/request-quote" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -261,7 +260,7 @@ export default function CustomProjectsPage() {
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.3)'
               }}>
-                Browse Catalog Models
+                Request a Custom Quote
               </Link>
             </div>
           </div>

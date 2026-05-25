@@ -9,6 +9,7 @@ export const metadata = generateMetadata({
   title: 'Careers at iTL',
   description: 'Join the iTL team. Career opportunities in mouse genetics, molecular biology, animal care, and laboratory operations.',
   path: '/current-openings',
+  catalogFirst: false,
 });
 
 // BreadcrumbList structured data

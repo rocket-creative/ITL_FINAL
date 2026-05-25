@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -224,12 +225,10 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Start Your Inducible Conditional Knockout Project",
-  description: "Our scientific consultants are ready to discuss your research requirements and optimal inducible strategy for your experimental goals. Initial consultation is provided at no charge and includes design considerations, timeline, and price estimates.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Start Your Inducible Conditional Knockout Project',
+  'Our scientific consultants are ready to discuss your research requirements and optimal inducible strategy for your experimental goals. Initial consultation is provided at no charge and includes design considerations, timeline, and price estimates.',
+);
 
 export default function InducibleConditionalKnockoutPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

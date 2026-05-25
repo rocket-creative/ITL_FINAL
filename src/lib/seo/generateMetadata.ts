@@ -13,6 +13,7 @@
  */
 
 import type { Metadata } from 'next';
+import { applyCatalogFirstMeta } from './catalogFirstMeta';
 import { BASE_URL, SITE_NAME, DEFAULT_METADATA, type PageMetadataOptions } from './types';
 
 /**
@@ -30,18 +31,21 @@ export function generateMetadata(options: PageMetadataOptions): Metadata {
     twitterImage,
     index = true,
     follow = true,
+    catalogFirst = true,
   } = options;
 
   // Ensure path starts with / and ends with / (per next.config trailingSlash: true)
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   const fullUrl = `${BASE_URL}${normalizedPath}${normalizedPath !== '/' ? '/' : ''}`;
+
+  const commercial = applyCatalogFirstMeta(title, description, normalizedPath, catalogFirst);
   
   // Format title with site name
-  const fullTitle = `${title} | ${SITE_NAME}`;
+  const fullTitle = `${commercial.title} | ${SITE_NAME}`;
 
   return {
     title: { absolute: fullTitle },
-    description,
+    description: commercial.description,
     alternates: {
       canonical: fullUrl,
     },
@@ -52,7 +56,7 @@ export function generateMetadata(options: PageMetadataOptions): Metadata {
     },
     openGraph: {
       title: fullTitle,
-      description,
+      description: commercial.description,
       url: fullUrl,
       siteName: SITE_NAME,
       locale: 'en_US',
@@ -63,7 +67,7 @@ export function generateMetadata(options: PageMetadataOptions): Metadata {
             url: ogImage,
             width: 1200,
             height: 630,
-            alt: title,
+            alt: commercial.title,
           },
         ],
       }),
@@ -71,7 +75,7 @@ export function generateMetadata(options: PageMetadataOptions): Metadata {
     twitter: {
       card: 'summary_large_image',
       title: fullTitle,
-      description,
+      description: commercial.description,
       ...(twitterImage && {
         images: [twitterImage],
       }),

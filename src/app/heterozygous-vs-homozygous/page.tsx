@@ -9,6 +9,7 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { buildStandalonePageMetadata } from '@/lib/seo';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -16,28 +17,12 @@ import {
   BreedingSchemeArchitectCTA,
 } from '@/components/UXUIDC';
 
-export const metadata: Metadata = {
-  title: 'Heterozygous vs Homozygous in Mice + Breeding Scheme Help | ITL',
+export const metadata: Metadata = buildStandalonePageMetadata({
+  path: '/heterozygous-vs-homozygous',
+  title: 'Heterozygous vs Homozygous in Mice | Catalog + Custom | ITL',
   description:
-    'Heterozygous vs homozygous explained for mouse research. Picking the right genotype for your study? We design breeding schemes & build the mice. Quote in 24 hours.',
-  alternates: {
-    canonical: 'https://www.genetargeting.com/heterozygous-vs-homozygous/',
-  },
-  openGraph: {
-    title: 'Heterozygous vs Homozygous in Mice + Breeding Scheme Help | ITL',
-    description:
-      'Heterozygous vs homozygous explained. We design breeding schemes & build your custom mouse. Quote in 24 hours.',
-    url: 'https://www.genetargeting.com/heterozygous-vs-homozygous/',
-    siteName: 'ingenious targeting laboratory',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Heterozygous vs Homozygous in Mice + Breeding Help | ITL',
-    description:
-      'Heterozygous vs homozygous explained. We design breeding schemes & build your mouse. Quote in 24 hours.',
-  },
-};
+    'Heterozygous vs homozygous explained for mouse research. Browse catalog strains or request a custom line with a breeding scheme designed for your study. Quote in 24 hours.',
+});
 
 const faqs = [
   {

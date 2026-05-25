@@ -5,6 +5,7 @@
  */
 
 import { useEffect, useRef } from 'react';
+import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
@@ -253,10 +254,7 @@ export default function InducibleRosa26Page() {
         <UXUIDCStartProjectCTA
           title="Start Your Inducible Rosa26 Project"
           content="Our scientific consultants can help design the optimal inducible expression system for your research goals."
-          buttons={[
-            { label: 'Request a Quote', href: '/request-quote' },
-            { label: 'Contact Us', href: '/contact' },
-          ]}
+          buttons={CATALOG_CUSTOM_BUTTONS}
         />
 
         {/* Lab Signals Signup */}

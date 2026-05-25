@@ -10,6 +10,7 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { applyCatalogFirstMeta } from '@/lib/seo';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -17,26 +18,29 @@ import {
   PricingUnlockForm,
 } from '@/components/UXUIDC';
 
+const pricingMeta = applyCatalogFirstMeta(
+  'Mouse Model Pricing | Catalog + Custom | Quote 24h',
+  'Compare catalog model pricing with custom knockout, knockin, humanized, conditional, and transgenic builds. 800+ peer reviewed publications. Quote in 24 hours.',
+  '/custom-mouse-model-pricing',
+);
+
 export const metadata: Metadata = {
-  title: 'Custom Mouse Model Pricing | Knockout, Knockin & Humanized | Quote 24h',
-  description:
-    'Custom mouse model pricing for knockout, knockin, humanized, conditional, and transgenic mice. 800+ peer-reviewed publications. Free pricing on request, quote in 24h.',
+  title: `${pricingMeta.title} | ingenious targeting laboratory`,
+  description: pricingMeta.description,
   alternates: {
     canonical: 'https://www.genetargeting.com/custom-mouse-model-pricing/',
   },
   openGraph: {
-    title: 'Custom Mouse Model Pricing | Knockout, Knockin & Humanized | ITL',
-    description:
-      'Custom mouse model pricing — knockout, knockin, humanized, transgenic, conditional. Free pricing on request, quote in 24h.',
+    title: `${pricingMeta.title} | ITL`,
+    description: pricingMeta.description,
     url: 'https://www.genetargeting.com/custom-mouse-model-pricing/',
     siteName: 'ingenious targeting laboratory',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom Mouse Model Pricing | ITL',
-    description:
-      'Knockout, knockin, humanized & transgenic mice. Free pricing on request, quote in 24h.',
+    title: `${pricingMeta.title} | ITL`,
+    description: pricingMeta.description,
   },
 };
 

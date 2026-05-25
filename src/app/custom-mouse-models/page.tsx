@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -191,12 +192,10 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Start Your Project",
-  description: "Ready to discuss your custom mouse model requirements? Our scientific team provides complimentary project consultation to help you design the optimal model for your research.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Catalog first. Custom when ready.',
+  'Ready to discuss your custom mouse model requirements? Our scientific team provides complimentary project consultation to help you design the optimal model for your research.',
+);
 
 export default function CustomMouseModelsPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);
@@ -342,7 +341,7 @@ export default function CustomMouseModelsPage() {
               {heroData.description}
             </p>
             <div className="hero-animate" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/request-quote" style={{
+              <Link href="/catalog-mouse-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -355,10 +354,10 @@ export default function CustomMouseModelsPage() {
                 textDecoration: 'none',
                 transition: 'background 0.2s ease'
               }}>
-                Request a Quote
+                Browse Catalog Models
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
-              <Link href="/knockout-mouse-models" style={{
+              <Link href="/request-quote" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -372,7 +371,7 @@ export default function CustomMouseModelsPage() {
                 border: '2px solid rgba(255,255,255,0.3)',
                 transition: 'border-color 0.2s ease'
               }}>
-                Explore Model Types
+                Request a Custom Quote
               </Link>
             </div>
           </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -242,12 +243,10 @@ const faqData = [
 ];
 
 // CTA Data
-const ctaData = {
-  title: "Need Help Selecting a Cre Line?",
-  description: "Our scientific consultants can help you identify the optimal Cre driver for your conditional knockout project. We can also assist with breeding strategies and validation approaches.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Need Help Selecting a Cre Line?',
+  'Our scientific consultants can help you identify the optimal Cre driver for your conditional knockout project. We can also assist with breeding strategies and validation approaches.',
+);
 
 export default function CreLineSelectionGuidePage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

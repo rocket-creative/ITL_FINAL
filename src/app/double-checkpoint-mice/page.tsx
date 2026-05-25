@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -146,12 +147,10 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Request Double Checkpoint Models",
-  description: "Contact us to discuss double immune checkpoint humanized models for combination therapy research.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Request Double Checkpoint Models',
+  'Contact us to discuss double immune checkpoint humanized models for combination therapy research.',
+);
 
 export default function DoubleCheckpointMicePage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

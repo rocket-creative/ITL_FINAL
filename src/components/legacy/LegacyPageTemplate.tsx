@@ -8,6 +8,7 @@
  */
 
 import { useEffect, useRef } from 'react';
+import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import Link from 'next/link';
 import {
   UXUIDCNavigation,
@@ -179,10 +180,7 @@ export default function LegacyPageTemplate({
           <UXUIDCStartProjectCTA
             title="Ready to Start Your Project?"
             content="Contact our scientific team to discuss your research requirements and get a customized quote for your project."
-            buttons={[
-              { label: 'Request a Quote', href: '/request-quote' },
-              { label: 'Contact Us', href: '/contact' },
-            ]}
+            buttons={CATALOG_CUSTOM_BUTTONS}
           />
         )}
       </main>

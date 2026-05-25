@@ -7,6 +7,7 @@
  */
 
 import { useEffect, useRef } from 'react';
+import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import Link from 'next/link';
 import {
   UXUIDCNavigation,
@@ -823,10 +824,7 @@ export default function KnockoutMouseModelsPage() {
         <UXUIDCStartProjectCTA
           title="Start Your Knockout Project"
           content="Our scientific consultants are ready to discuss your research requirements and determine the optimal knockout strategy for your experimental goals. Initial consultation is provided at no charge."
-          buttons={[
-            { label: 'Request a Quote', href: '/request-quote' },
-            { label: 'Contact Us', href: '/contact' },
-          ]}
+          buttons={CATALOG_CUSTOM_BUTTONS}
         />
 
         {/* ========== GLOSSARY ========== */}

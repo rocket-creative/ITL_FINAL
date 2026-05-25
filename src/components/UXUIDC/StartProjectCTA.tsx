@@ -2,36 +2,34 @@
 
 /**
  * |UXUIDC| Start Project CTA Section
- * Dark blue background with simple styling - NO animations
+ * Catalog first → custom when ready dual path.
  */
 
 import Link from 'next/link';
-
-interface CTAButton {
-  label: string;
-  href: string;
-}
+import {
+  CtaButton,
+  startProjectDefaults,
+  withCatalogBridge,
+} from '@/data/commercialCtas';
 
 interface StartProjectCTAProps {
   title?: string;
   content?: string;
-  buttons?: CTAButton[];
+  buttons?: CtaButton[];
 }
 
-export default function UXUIDCStartProjectCTA({ 
-  title = 'Ready to Start Your Project?',
-  content = 'Our scientific team is ready to help design your custom mouse model. Get expert guidance from initial consultation through germline transmission.',
-  buttons = [
-    { label: 'Request Quote', href: '/request-quote' },
-    { label: 'Schedule Consultation', href: '/contact' },
-  ]
+export default function UXUIDCStartProjectCTA({
+  title = startProjectDefaults.title,
+  content = startProjectDefaults.content,
+  buttons = startProjectDefaults.buttons,
 }: StartProjectCTAProps = {}) {
+  const body = withCatalogBridge(content);
+
   return (
     <section
       className="flex flex-col justify-center items-center py-12 sm:py-16 lg:py-20 px-5"
       style={{ backgroundColor: '#0a253c' }}
     >
-      {/* Content */}
       <div className="text-center" style={{ maxWidth: '650px' }}>
         <h2
           className="text-2xl sm:text-3xl lg:text-4xl"
@@ -57,13 +55,13 @@ export default function UXUIDCStartProjectCTA({
             marginBottom: '25px',
           }}
         >
-          {content}
+          {body}
         </p>
 
         <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center">
           {buttons.map((btn, i) => (
             <Link
-              key={i}
+              key={`${btn.href}-${btn.label}`}
               href={btn.href}
               className="group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               style={{

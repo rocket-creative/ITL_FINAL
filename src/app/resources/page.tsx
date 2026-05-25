@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
@@ -231,12 +232,10 @@ const faqData = [
 ];
 
 // CTA Data
-const ctaData = {
-  title: "Start Your Project",
-  description: "Ready to discuss your research goals? Our scientific consultants provide complimentary project design consultations to help you plan the optimal mouse model strategy.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Start Your Project',
+  'Ready to discuss your research goals? Our scientific consultants provide complimentary project design consultations to help you plan the optimal mouse model strategy.',
+);
 
 export default function ResourcesPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

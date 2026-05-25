@@ -5,6 +5,7 @@
  */
 
 import { useEffect, useRef } from 'react';
+import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {

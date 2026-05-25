@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -22,12 +23,10 @@ const heroData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Need Help Understanding Your Project?",
-  description: "Our scientific consultants can explain technical concepts and help you understand the best approach for your research goals.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Need Help Understanding Your Project?',
+  'Our scientific consultants can explain technical concepts and help you understand the best approach for your research goals.',
+);
 
 export default function GlossaryPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

@@ -9,6 +9,7 @@ export const metadata = generateMetadata({
   title: 'Lab Signals Blog',
   description: 'Technical articles on mouse model design, gene targeting strategies, and research applications. Tips from iTL scientists.',
   path: '/lab-signals',
+  catalogFirst: false,
 });
 
 // BreadcrumbList structured data

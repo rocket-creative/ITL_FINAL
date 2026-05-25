@@ -7,6 +7,7 @@
  */
 
 import { useEffect, useRef } from 'react';
+import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -301,10 +302,7 @@ export default function CustomAnimalModelsPage() {
         <UXUIDCStartProjectCTA
           title="Discuss Your Project Requirements"
           content="Our scientific consultants are available to discuss your research needs and help determine the optimal animal model approach for your experimental goals."
-          buttons={[
-            { label: 'Request a Quote', href: '/request-quote' },
-            { label: 'Contact Us', href: '/contact' },
-          ]}
+          buttons={CATALOG_CUSTOM_BUTTONS}
         />
       </main>
 

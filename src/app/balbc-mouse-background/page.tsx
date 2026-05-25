@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -197,12 +198,10 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Start Your Project",
-  description: "Ready to discuss custom mouse models on BALB/c or other strain backgrounds? Our scientific team provides complimentary consultation to help you select the optimal genetic background for your research.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Start Your Project',
+  'Ready to discuss custom mouse models on BALB/c or other strain backgrounds? Our scientific team provides complimentary consultation to help you select the optimal genetic background for your research.',
+);
 
 export default function BALBcMouseBackgroundPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

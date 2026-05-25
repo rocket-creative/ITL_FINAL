@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { applyCatalogFirstMeta } from '@/lib/seo';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import {
@@ -417,8 +418,14 @@ export async function generateMetadata({
       ? String(data.description)
       : `${baseTitle} explained for researchers comparing catalog strains and custom mouse models.`;
 
-    const finalTitle = commercial?.title ?? `${baseTitle} | ingenious targeting laboratory`;
-    const finalDescription = commercial?.description ?? baseDescription;
+    const blogPath = `/ingenious-blog/${slug}`;
+    const rawTitle = commercial?.title ?? baseTitle;
+    const rawDescription = commercial?.description ?? baseDescription;
+    const enhanced = applyCatalogFirstMeta(rawTitle, rawDescription, blogPath);
+    const finalTitle = commercial?.title
+      ? enhanced.title
+      : `${enhanced.title} | ingenious targeting laboratory`;
+    const finalDescription = enhanced.description;
     const canonicalUrl = `https://www.genetargeting.com/ingenious-blog/${slug}/`;
 
     return {
@@ -441,11 +448,16 @@ export async function generateMetadata({
       },
     };
   } catch {
-    return {
-      title: commercial?.title ?? 'Custom Mouse Model Insights | ingenious targeting laboratory',
-      description:
-        commercial?.description ??
+    const blogPath = `/ingenious-blog/${slug}`;
+    const enhanced = applyCatalogFirstMeta(
+      commercial?.title ?? 'Custom Mouse Model Insights | Catalog + Custom | ITL',
+      commercial?.description ??
         'Mouse model insights from ingenious targeting laboratory. Browse 14,774+ catalog strains or custom knockout, knockin, and humanized mice.',
+      blogPath,
+    );
+    return {
+      title: enhanced.title,
+      description: enhanced.description,
     };
   }
 }
@@ -1003,14 +1015,14 @@ export default async function IngeniousBlogPost({
             slug === 'types-of-point-mutations' ||
             slug === 'point-mutation-diseases'
               ? [
-                  { label: 'Request a Quote', href: '/request-quote' },
                   { label: 'Browse Catalog', href: catalogRelatedHref },
+                  { label: 'Request a Custom Quote', href: '/request-quote' },
                   { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
                   { label: 'Contact Us', href: '/contact' },
                 ]
               : [
-                  { label: 'Request a Quote', href: '/request-quote' },
                   { label: 'Browse Catalog', href: catalogRelatedHref },
+                  { label: 'Request a Custom Quote', href: '/request-quote' },
                   { label: 'Contact Us', href: '/contact' },
                 ]
           }

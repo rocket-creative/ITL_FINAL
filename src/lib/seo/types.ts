@@ -44,6 +44,8 @@ export interface PageMetadataOptions {
   index?: boolean;
   /** Whether to follow links (default: true) */
   follow?: boolean;
+  /** Apply catalog first title and description (default: true) */
+  catalogFirst?: boolean;
 }
 
 /**

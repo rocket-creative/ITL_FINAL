@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -163,12 +164,10 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Start Your BAC Large Scale Targeting Project",
-  description: "BAC recombineering enables preservation of complex regulatory elements and large genomic features critical for physiologically relevant transgenic models. Our experienced team can guide BAC selection, manage recombineering construction, oversee ES cell targeting, and deliver study ready mice efficiently.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Start Your BAC Large Scale Targeting Project',
+  'BAC recombineering enables preservation of complex regulatory elements and large genomic features critical for physiologically relevant transgenic models. Our experienced team can guide BAC selection, manage recombineering construction, oversee ES cell targeting, and deliver study ready mice efficiently.',
+);
 
 export default function BACTargetingPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

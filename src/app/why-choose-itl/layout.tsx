@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
+import { buildStandalonePageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Why Choose ingenious targeting laboratory | 28 Years of Mouse Model Expertise',
+export const metadata: Metadata = buildStandalonePageMetadata({
+  path: '/why-choose-itl',
+  title: 'Why Choose ingenious targeting laboratory | Catalog + Custom',
   description:
-    'Why researchers choose ingenious targeting laboratory for custom mouse models. 2,800+ custom projects, 800+ publications, pre germline characterization since 1998.',
-  keywords:
-    'why choose ingenious targeting laboratory, mouse model expertise, gene targeting experience, ES cell advantages, trusted mouse model provider',
-};
+    'Why researchers choose iTL. Browse 14,774+ catalog models or request custom knockout, knockin, and humanized lines. 2,800+ custom projects and 800+ publications since 1998.',
+});
 
 export default function WhyChooseLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

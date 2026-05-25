@@ -5,6 +5,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { applyCatalogFirstMeta } from '@/lib/seo';
 import { CRE_DRIVERS, getDisplayLabelForTissueKey } from '@/lib/search/creDrivers';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
 import {
@@ -34,8 +35,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { driverSlug } = await params;
   const canon = driverSlugToCanonical(driverSlug);
   if (!canon) return { title: `Cre driver | ${SITE_NAME}` };
-  const title = `${canon} mouse line | ITL`;
-  const description = `Use ${canon} for tissue restricted recombination in mouse models. Pair with floxed alleles from our catalog. Quotes in about twenty four hours.`;
+  const meta = applyCatalogFirstMeta(
+    `${canon} Mouse Line | Catalog + Custom | ITL`,
+    `Use ${canon} for tissue restricted recombination in mouse models. Pair with floxed alleles from our catalog or request a custom Cre project. Quote in about twenty four hours.`,
+    `/cre-drivers/${driverSlug}`,
+  );
+  const title = meta.title;
+  const description = meta.description;
   const canonical = `${BASE_URL}/cre-drivers/${driverSlug}/`;
   return {
     title,

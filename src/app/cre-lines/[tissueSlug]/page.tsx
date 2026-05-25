@@ -5,6 +5,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { applyCatalogFirstMeta } from '@/lib/seo';
 import {
   CRE_DRIVERS,
   getDisplayLabelForTissueKey,
@@ -39,8 +40,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canon = tissueSlugToCanonical(tissueSlug);
   if (!canon) return { title: `Cre lines | ${SITE_NAME}` };
   const label = getDisplayLabelForTissueKey(canon);
-  const title = `${label} specific Cre mouse lines | ITL`;
-  const description = `Browse ${label} biased Cre and CreERT2 drivers for conditional knockout projects. Request quotes with a twenty four hour turnaround.`;
+  const meta = applyCatalogFirstMeta(
+    `${label} Cre Mouse Lines | Catalog + Custom | ITL`,
+    `Browse ${label} biased Cre and CreERT2 drivers in the catalog. Request a custom conditional knockout when you need a paired floxed allele. Quote in twenty four hours.`,
+    `/cre-lines/${tissueSlug}`,
+  );
+  const title = meta.title;
+  const description = meta.description;
   const canonical = `${BASE_URL}/cre-lines/${tissueSlug}/`;
   return {
     title,

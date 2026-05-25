@@ -12,6 +12,7 @@
  */
 
 import { useEffect, useRef, useState, useMemo } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -48,12 +49,11 @@ const testimonial = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Start Your Project",
-  description: "Ready to discuss your research goals? Our scientific consultants provide complimentary project design consultations to help you plan the optimal mouse model strategy.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Partner with iTL',
+  'ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a custom line.',
+  'publications',
+);
 
 export default function PublicationsPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

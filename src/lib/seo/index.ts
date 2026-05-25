@@ -8,6 +8,16 @@ export {
 } from './generateMetadata';
 
 export {
+  applyCatalogFirstMeta,
+  applyCatalogFirstDescription,
+  enhanceTitleForCatalogFirst,
+  ROOT_CATALOG_FIRST_META,
+  CATALOG_MODEL_COUNT,
+} from './catalogFirstMeta';
+
+export { buildStandalonePageMetadata } from './buildStandalonePageMetadata';
+
+export {
   generateBreadcrumbs,
   type BreadcrumbSchema,
 } from './generateBreadcrumbs';

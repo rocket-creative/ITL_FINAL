@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -168,12 +169,10 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Start Your Project",
-  description: "Gene replacement projects require careful strategy design. Our scientific team provides complimentary consultation to evaluate your humanization goals and discuss the optimal targeting approach.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Start Your Project',
+  'Gene replacement projects require careful strategy design. Our scientific team provides complimentary consultation to evaluate your humanization goals and discuss the optimal targeting approach.',
+);
 
 export default function GeneReplacementPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

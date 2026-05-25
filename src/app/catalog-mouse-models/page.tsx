@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { footerCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -152,12 +153,7 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Order Inquiry",
-  description: "Ready to order catalog models or need availability information? Contact us with your requirements.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = footerCta.catalog;
 
 export default function CatalogMouseModelsPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);
@@ -258,7 +254,7 @@ export default function CatalogMouseModelsPage() {
               {heroData.description}
             </p>
             <div className="hero-animate" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/request-quote" style={{
+              <Link href="/all-catalog-mouse-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -270,10 +266,10 @@ export default function CatalogMouseModelsPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request a Quote
+                Browse 14,774+ Models
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
-              <Link href="/custom-mouse-models" style={{
+              <Link href="/request-quote" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -286,7 +282,7 @@ export default function CatalogMouseModelsPage() {
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.3)'
               }}>
-                Custom Models
+                Request a Custom Quote
               </Link>
             </div>
           </div>

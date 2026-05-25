@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -217,12 +218,10 @@ const relatedLinksData = {
 };
 
 // CTA Data
-const ctaData = {
-  title: "Get Personalized Guidance",
-  description: "Not sure which approach fits your research? Our scientific consultants can review your specific gene and experimental goals to recommend the optimal strategy. Initial consultation is provided at no charge.",
-  primaryButton: { href: "/request-quote", label: "Request a Quote" },
-  secondaryButton: { href: "/contact", label: "Contact Us" }
-};
+const ctaData = makeFooterCta(
+  'Get Personalized Guidance',
+  'Not sure which approach fits your research? Our scientific consultants can review your specific gene and experimental goals to recommend the optimal strategy. Initial consultation is provided at no charge.',
+);
 
 export default function ConditionalVsConventionalGuidePage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

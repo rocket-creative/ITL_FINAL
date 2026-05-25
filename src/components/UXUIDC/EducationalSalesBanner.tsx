@@ -2,10 +2,9 @@
  * |UXUIDC| Educational Sales Banner
  *
  * Above-the-fold commercial offer placed at the top of high-impression
- * educational pages (blog posts + glossary terms). Replaces the prior
- * "you are reading an archived blog" framing with an offer + dual CTA:
- *  - Primary: request a custom quote
- *  - Secondary: browse matching off-the-shelf catalog models
+ * educational pages (blog posts + glossary terms). Catalog first dual CTA:
+ *  - Primary (filled button): browse matching catalog models
+ *  - Secondary (link): request a custom quote
  *
  * Content is page-specific. The map below is the single source of truth
  * for which slug gets which offer copy and CTA targets.
@@ -34,7 +33,7 @@ const DEFAULT_OFFER: EducationalSalesOffer = {
   eyebrow: 'Custom Mouse Models',
   headline: 'We turn this concept into your model.',
   subline:
-    'Custom knockout, knockin, and humanized mice. 800+ peer-reviewed publications. Quote in 24 hours.',
+    'Start in the 14,774+ model catalog when a line fits your study. Need knockout, knockin, or humanization beyond the library? Custom quote in 24 hours. 800+ peer reviewed publications.',
   primaryCta: { label: 'Request a Quote', href: '/request-quote' },
   secondaryCta: { label: 'Browse 14,774 Catalog Models', href: '/all-catalog-mouse-models/' },
 };
@@ -419,8 +418,8 @@ export default function UXUIDCEducationalSalesBanner({
           }}
         >
           <Link
-            href={offer.primaryCta.href}
-            data-cta="commercial-banner-primary"
+            href={offer.secondaryCta.href}
+            data-cta="commercial-banner-catalog"
             data-cta-slug={slug}
             style={{
               display: 'inline-flex',
@@ -437,13 +436,13 @@ export default function UXUIDCEducationalSalesBanner({
               boxShadow: '0 2px 6px rgba(0,0,0,0.18)',
             }}
           >
-            {offer.primaryCta.label}
+            {offer.secondaryCta.label}
             <span aria-hidden="true">→</span>
           </Link>
           {secondaryCtaStyle === 'primary' ? (
             <Link
-              href={offer.secondaryCta.href}
-              data-cta="commercial-banner-secondary"
+              href={offer.primaryCta.href}
+              data-cta="commercial-banner-custom"
               data-cta-slug={slug}
               style={{
                 display: 'inline-flex',
@@ -460,13 +459,13 @@ export default function UXUIDCEducationalSalesBanner({
                 border: '2px solid rgba(255,255,255,0.55)',
               }}
             >
-              {offer.secondaryCta.label}
+              {offer.primaryCta.label}
               <span aria-hidden="true">→</span>
             </Link>
           ) : (
             <Link
-              href={offer.secondaryCta.href}
-              data-cta="commercial-banner-secondary"
+              href={offer.primaryCta.href}
+              data-cta="commercial-banner-custom"
               data-cta-slug={slug}
               style={{
                 display: 'inline-flex',
@@ -481,7 +480,7 @@ export default function UXUIDCEducationalSalesBanner({
                 padding: '2px 0',
               }}
             >
-              {offer.secondaryCta.label}
+              {offer.primaryCta.label}
               <span aria-hidden="true">→</span>
             </Link>
           )}

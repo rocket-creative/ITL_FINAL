@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { footerCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -153,12 +154,7 @@ const relatedResourcesData = [
 ];
 
 // CTA Data
-const ctaData = {
-  title: "Request Catalog Information",
-  description: "Contact us for information about available catalog models or to request a specific model.",
-  primaryButton: { href: "/order-catalog-models", label: "Order Inquiry" },
-  secondaryButton: { href: "/request-quote", label: "Request Quote" }
-};
+const ctaData = footerCta.diseaseCatalog;
 
 export default function DiseaseModelCatalogPage() {
   const animatedElementsRef = useRef<HTMLDivElement>(null);

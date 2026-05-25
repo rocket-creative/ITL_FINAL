@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { applyCatalogFirstMeta } from '@/lib/seo';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCEducationalSalesBanner from '@/components/UXUIDC/EducationalSalesBanner';
@@ -157,8 +158,12 @@ export async function generateMetadata({
 
   const canonicalUrl = `https://www.genetargeting.com/mouse-genetics-glossary/${term.slug}/`;
   const commercial = COMMERCIAL_GLOSSARY_META[slug];
-  const finalTitle = commercial?.title ?? term.metaTitle;
-  const finalDescription = commercial?.description ?? term.metaDescription;
+  const glossaryPath = `/mouse-genetics-glossary/${slug}`;
+  const rawTitle = commercial?.title ?? term.metaTitle;
+  const rawDescription = commercial?.description ?? term.metaDescription;
+  const enhanced = applyCatalogFirstMeta(rawTitle, rawDescription, glossaryPath);
+  const finalTitle = enhanced.title;
+  const finalDescription = enhanced.description;
 
   return {
     title: finalTitle,

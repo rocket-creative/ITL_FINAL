@@ -11,28 +11,19 @@ export const dynamic = 'force-dynamic';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllModels } from '@/lib/catalog/serverCatalog';
+import { buildStandalonePageMetadata } from '@/lib/seo';
 import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import { IconChevronRight, IconLayers } from '@/components/UXUIDC/Icons';
 import JumpNav from './JumpNav';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 
-export const metadata: Metadata = {
-  title: 'Mouse Model Gene Index — All Genes A–Z | ingenious targeting laboratory',
+export const metadata: Metadata = buildStandalonePageMetadata({
+  path: '/all-catalog-mouse-models/gene-index',
+  title: 'Mouse Model Gene Index A–Z | 14,774+ Catalog',
   description:
-    'Complete alphabetical index of all gene names in our mouse model catalog. Search knockout, knockin, humanized, and Cre driver models by gene target.',
-  alternates: {
-    canonical: 'https://www.genetargeting.com/all-catalog-mouse-models/gene-index/',
-  },
-  openGraph: {
-    title: 'Mouse Model Gene Index | ingenious targeting laboratory',
-    description: 'Browse 5,000+ gene targets available as mouse models.',
-    url: 'https://www.genetargeting.com/all-catalog-mouse-models/gene-index/',
-    siteName: 'ingenious targeting laboratory',
-    locale: 'en_US',
-    type: 'website',
-  },
-};
+    'Complete alphabetical index of gene names in our mouse model catalog. Search knockout, knockin, humanized, and Cre driver models by target, or request a custom line.',
+});
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 

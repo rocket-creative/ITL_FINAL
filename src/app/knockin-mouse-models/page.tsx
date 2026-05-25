@@ -7,6 +7,7 @@
  */
 
 import { useEffect, useRef } from 'react';
+import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
@@ -660,10 +661,7 @@ export default function KnockinMouseModelsPage() {
         <UXUIDCStartProjectCTA
           title="Start Your Knockin Project"
           content="Our scientific consultants are ready to discuss your research requirements and recommend the optimal knockin strategy for your experimental goals. Initial consultation is provided at no charge and includes modification site analysis, allele design recommendations, and timeline estimates."
-          buttons={[
-            { label: 'Request a Quote', href: '/request-quote' },
-            { label: 'Contact Us', href: '/contact' },
-          ]}
+          buttons={CATALOG_CUSTOM_BUTTONS}
         />
 
         {/* ========== BREEDING SCHEME ARCHITECT CTA ========== */}

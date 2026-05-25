@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import fs from 'fs';
 import path from 'path';
 import { Metadata } from 'next';
+import { applyCatalogFirstMeta } from '@/lib/seo';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -10,10 +12,15 @@ import {
 } from '@/components/UXUIDC';
 import BlogIndexClient from './BlogIndexClient';
 
+const blogIndexMeta = applyCatalogFirstMeta(
+  'Mouse Model Insights | Catalog + Custom | ITL',
+  'Technical articles and guides on knockout, knockin, and humanized mice. Browse 14,774+ catalog strains or request a custom build.',
+  '/ingenious-blog',
+);
+
 export const metadata: Metadata = {
-  title: 'Ingenious Blog Archive | Legacy Articles | ITL',
-  description:
-    'Browse our archive of technical articles, educational guides, and research insights from the original ingenious targeting laboratory blog.',
+  title: blogIndexMeta.title,
+  description: blogIndexMeta.description,
 };
 
 interface BlogPostMeta {
@@ -209,10 +216,7 @@ export default function IngeniousBlogPage() {
         <UXUIDCStartProjectCTA
           title="Ready to Start Your Project?"
           content="Our scientific consultants are available to discuss your research requirements and help design the optimal mouse model for your experimental goals."
-          buttons={[
-            { label: 'Request a Quote', href: '/request-quote' },
-            { label: 'Contact Us', href: '/contact' },
-          ]}
+          buttons={CATALOG_CUSTOM_BUTTONS}
         />
       </main>
 

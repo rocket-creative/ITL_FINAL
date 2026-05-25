@@ -5,6 +5,7 @@
  */
 
 import { useEffect, useRef } from 'react';
+import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
@@ -263,10 +264,7 @@ export default function PostProjectServicesPage() {
         <UXUIDCStartProjectCTA
           title="Need Support Services?"
           content="Contact our team to discuss cohort development, colony management, or other post-project support services."
-          buttons={[
-            { label: 'Request a Quote', href: '/request-quote' },
-            { label: 'Contact Us', href: '/contact' },
-          ]}
+          buttons={CATALOG_CUSTOM_BUTTONS}
         />
       </main>
 

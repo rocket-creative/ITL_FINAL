@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import fs from 'fs';
 import path from 'path';
+import { applyCatalogFirstMeta } from '@/lib/seo';
 import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
 import Link from 'next/link';
 
@@ -77,14 +78,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   try {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const { data } = parseFrontmatter(fileContent);
-    
+    const pageTitle = String(data.title || slug);
+    const meta = applyCatalogFirstMeta(
+      `${pageTitle} | Catalog + Custom | Legacy | ITL`,
+      `Archived guide on ${pageTitle}. Browse 14,774+ catalog strains or request a custom mouse model build from ingenious targeting laboratory.`,
+      `/legacy/${slug}`,
+    );
+
     return {
-      title: `${data.title || slug} | Legacy Content | ingenious targeting laboratory`,
-      description: `Archived content from genetargeting.com - ${data.title || slug}`,
+      title: meta.title,
+      description: meta.description,
     };
   } catch {
+    const meta = applyCatalogFirstMeta(
+      'Legacy Mouse Model Content | Catalog + Custom | ITL',
+      'Archived content from genetargeting.com. Browse catalog models or request a custom line for your current study.',
+      '/legacy',
+    );
     return {
-      title: 'Legacy Content | ingenious targeting laboratory',
+      title: meta.title,
+      description: meta.description,
     };
   }
 }
