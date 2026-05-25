@@ -8,6 +8,7 @@ import { mouseOrganoidChipArticleBody } from './_labSignalsMouseOrganoidChipArti
 import { benchToBedsideCarTArticleBody } from './_labSignalsBenchToBedsideCarTArticle';
 import { ckoBreedingCostEfficiencyArticleBody } from './_labSignalsCkoBreedingCostEfficiencyArticle';
 import { geneTherapyNeurodegenerativeArticleBody } from './_labSignalsGeneTherapyNeurodegenerativeArticle';
+import { beyondGlp1ObesityArticleBody } from './_labSignalsBeyondGlp1ObesityArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1073,6 +1074,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/neuroscience-mouse-models",
     body: geneTherapyNeurodegenerativeArticleBody,
     publishedAt: "2026-05-12",
+  },
+  {
+    id: "beyond-glp-1-mouse-models-next-generation-obesity-therapies",
+    slug: "beyond-glp-1-mouse-models-next-generation-obesity-therapies",
+    title: "Beyond GLP-1: How Mouse Models Are Shaping the Next Generation of Obesity Therapies",
+    subtitle: "Mouse models in GLP-1 biology and next-generation obesity therapy",
+    description:
+      "Mouse models validated GLP-1 targets and now power next-gen obesity therapies. From humanized GLP-1R mice to conditional knockouts in hypothalamic circuits.",
+    category: "Metabolic",
+    relatedPage: "/metabolic-disease-mouse-models",
+    body: beyondGlp1ObesityArticleBody,
+    publishedAt: "2026-05-27",
   },
 ];
 
