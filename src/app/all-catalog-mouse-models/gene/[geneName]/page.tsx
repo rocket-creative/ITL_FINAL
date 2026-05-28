@@ -5,7 +5,7 @@
  */
 
 import type { Metadata } from 'next';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
@@ -689,34 +689,34 @@ export default async function GenePage({ params, searchParams }: Props) {
         )}
 
         {/* CTA */}
-        <section style={{ background: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{
-              fontFamily: 'Poppins, sans-serif', fontSize: '1.8rem', fontWeight: 700,
-              color: '#fff', marginBottom: '16px',
-            }}>
-              {hasLiveModels
-                ? `${geneName} Models — Ready to Ship. Best Prices Guaranteed.`
-                : `Need a ${geneName} Mouse Model? We Can Build It.`}
-            </h2>
-            <p style={{ fontSize: '.95rem', color: 'rgba(255,255,255,0.9)', marginBottom: '28px', lineHeight: 1.7 }}>
-              {hasLiveModels
-                ? `Get a confirmed quote in 24 hours. All ${geneName} models ship with full QC documentation, health certificates, and lifetime technical support.`
-                : `Our team can deliver a custom ${geneName} mouse model with fast turnaround. Competitive pricing, expert project management, and full QC documentation included.`}
-            </p>
-            <CatalogCustomCtaButtons
-              variant="banner"
-              utmMedium="gene-page-closing"
+        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta
               slug={geneName}
-              buttons={[
-                {
-                  label: hasLiveModels ? 'Order Catalog Model' : 'Browse 14,774+ Catalog Models',
-                  href: hasLiveModels
-                    ? `/order-catalog-models?gene=${encodeURIComponent(geneName)}`
-                    : '/all-catalog-mouse-models',
-                },
-                { label: 'Request Custom Quote', href: '/request-quote' },
-              ]}
+              utmMedium="gene-page-closing"
+              flush
+              catalogOverrides={{
+                eyebrow: hasLiveModels ? 'Live colonies' : 'Catalog Models',
+                headline: hasLiveModels
+                  ? `${geneName} models ready to ship`
+                  : `Need a ${geneName} mouse model?`,
+                subline: hasLiveModels
+                  ? `Get a confirmed quote in 24 hours. All ${geneName} models ship with full QC documentation, health certificates, and lifetime technical support.`
+                  : `Our team can deliver a custom ${geneName} mouse model with fast turnaround. Competitive pricing, expert project management, and full QC documentation included.`,
+                searchHref: hasLiveModels
+                  ? `/order-catalog-models?gene=${encodeURIComponent(geneName)}`
+                  : `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`,
+                searchLabel: hasLiveModels ? 'Order catalog model' : 'Browse Full Catalog',
+                genes: [
+                  {
+                    symbol: geneName,
+                    slug: encodeURIComponent(geneName),
+                    blurb: hasLiveModels
+                      ? 'Study ready strains in catalog'
+                      : 'Search catalog by gene',
+                  },
+                ],
+              }}
             />
           </div>
         </section>

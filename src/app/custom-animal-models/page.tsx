@@ -7,7 +7,7 @@
  */
 
 import { useEffect, useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
@@ -304,7 +304,6 @@ export default function CustomAnimalModelsPage() {
         <UXUIDCStartProjectCTA
           title="Discuss Your Project Requirements"
           content="Our scientific consultants are available to discuss your research needs and help determine the optimal animal model approach for your experimental goals."
-          buttons={CATALOG_CUSTOM_BUTTONS}
         />
       </main>
 

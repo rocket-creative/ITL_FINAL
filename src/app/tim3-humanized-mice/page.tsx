@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -754,15 +754,9 @@ export default function TIM3HumanizedMicePage() {
         <BreedingSchemeArchitectCTA />
 
         {/* CTA Section */}
-        <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start Your TIM3 Project
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Ready to discuss TIM3 humanization for your immuno oncology research? Our scientific team provides complimentary consultation to design the optimal model for your program.
-            </p>
-            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="tim3-humanized-mice" />
+        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="tim3-humanized-mice" utmMedium="page-closing" flush />
           </div>
         </section>
 

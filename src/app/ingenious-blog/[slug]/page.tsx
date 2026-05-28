@@ -1,5 +1,5 @@
 import fs from 'fs';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import path from 'path';
 import { applyCatalogFirstMeta } from '@/lib/seo';
@@ -11,7 +11,6 @@ import {
   UXUIDCStartProjectCTA,
   FAQPageSchema,
   UXUIDCEducationalSalesBanner,
-  CatalogGeneLookup,
   CatalogStickyRail,
   getEducationalOffer,
   getCatalogLookup,
@@ -858,8 +857,6 @@ export default async function IngeniousBlogPost({
                   className="blog-content"
                   dangerouslySetInnerHTML={{ __html: htmlContent }}
                 />
-                {/* Pivot the reader from "what is this?" to "is this in stock?" */}
-                <CatalogGeneLookup slug={slug} />
               </>
             ) : (
               <div
@@ -999,6 +996,7 @@ export default async function IngeniousBlogPost({
         </section>
 
         <UXUIDCStartProjectCTA
+          slug={slug}
           title={
             slug === 'what-is-a-point-mutation'
               ? 'Ready to Model a Point Mutation?'
@@ -1014,22 +1012,6 @@ export default async function IngeniousBlogPost({
             slug === 'point-mutation-diseases'
               ? 'Search catalog point mutation strains from live colonies, or meet with us about a custom knockin at your exact locus.'
               : 'Browse thousands of catalog strains or partner with us on a custom knockout, knockin, or humanized model tailored to your study.'
-          }
-          buttons={
-            slug === 'what-is-a-point-mutation' ||
-            slug === 'types-of-point-mutations' ||
-            slug === 'point-mutation-diseases'
-              ? [
-                  { label: 'Browse Catalog', href: catalogRelatedHref },
-                  { label: 'Request Custom Quote', href: '/request-quote' },
-                  { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
-                  { label: 'Contact Us', href: '/contact' },
-                ]
-              : [
-                  { label: 'Browse Catalog', href: catalogRelatedHref },
-                  { label: 'Request Custom Quote', href: '/request-quote' },
-                  { label: 'Contact Us', href: '/contact' },
-                ]
           }
         />
       </main>

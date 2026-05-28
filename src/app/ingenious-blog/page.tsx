@@ -216,7 +216,6 @@ export default function IngeniousBlogPage() {
         <UXUIDCStartProjectCTA
           title="Ready to Start Your Project?"
           content="Our scientific consultants are available to discuss your research requirements and help design the optimal mouse model for your experimental goals."
-          buttons={CATALOG_CUSTOM_BUTTONS}
         />
       </main>
 

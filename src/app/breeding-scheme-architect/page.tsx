@@ -765,7 +765,6 @@ function BreedingSchemeArchitectContent() {
       <UXUIDCStartProjectCTA
         title="Ready to Start Your Custom Model Project?"
         content="Our scientific consultants are available to discuss your breeding strategy and help design the optimal mouse model for your experimental goals."
-        buttons={CATALOG_CUSTOM_BUTTONS}
       />
 
       {/* ========== FAQ SECTION ========== */}

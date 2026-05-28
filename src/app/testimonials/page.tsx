@@ -10,7 +10,7 @@ import {
   BreadcrumbSchema,
 } from '@/components/UXUIDC';
 import { IconQuote } from '@/components/UXUIDC/Icons';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import { 
   VERIFIED_TESTIMONIALS, 

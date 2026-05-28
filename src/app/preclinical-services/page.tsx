@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -564,7 +564,7 @@ export default function PreclinicalServicesPage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Ready to discuss preclinical services for your program? Our scientific team provides complimentary consultation to help you design an integrated approach from model generation through preclinical data.
             </p>
-            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="preclinical-services" />
+            <CatalogCustomDualCta slug="preclinical-services" utmMedium="page-closing" flush />
           </div>
         </section>
 

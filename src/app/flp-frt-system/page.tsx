@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -240,11 +240,9 @@ export default function FlpFrtSystemPage() {
           </div>
         </section>
 
-        <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>Start Your FLP FRT Project</h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>Our scientific consultants can help you determine whether FLP FRT, Cre lox, or a combination approach best meets your experimental requirements.</p>
-            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="flp-frt-system" />
+        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="flp-frt-system" utmMedium="page-closing" flush />
           </div>
         </section>
 

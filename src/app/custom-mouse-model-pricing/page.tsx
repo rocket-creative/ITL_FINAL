@@ -9,7 +9,7 @@
  */
 
 import type { Metadata } from 'next';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import { applyCatalogFirstMeta } from '@/lib/seo';

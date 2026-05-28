@@ -7,7 +7,7 @@
  */
 
 import { useEffect, useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import Link from 'next/link';
@@ -296,55 +296,7 @@ export default function KnockoutMouseModelsPage() {
             >
               {heroData.description}
             </p>
-            <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-                            <Link
-                href="/all-catalog-mouse-models"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{
-                  backgroundColor: '#008080',
-                  color: 'white',
-                  padding: '10px 16px',
-                  minWidth: '160px',
-                  fontSize: '.85rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Browse 14,774+ Catalog Models</span>
-                <span>→</span>
-              </Link>
-<Link
-                href="/request-quote"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{
-                  backgroundColor: 'white',
-                  color: '#0a253c',
-                  padding: '10px 16px',
-                  minWidth: '160px',
-                  fontSize: '.85rem',
-                  fontWeight: 500,
-                }}
-              >
-                <span>Request Custom Quote</span>
-                <span>→</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                style={{
-                  backgroundColor: 'transparent',
-                  color: 'white',
-                  padding: '10px 16px',
-                  minWidth: '160px',
-                  border: '2px solid white',
-                  fontSize: '.85rem',
-                  fontWeight: 500,
-                }}
-              >
-                <span>Talk to a Scientist</span>
-                <span>→</span>
-              </Link>
             </div>
-          </div>
         </section>
 
         {/* ========== STATS BAR ========== */}
@@ -841,7 +793,6 @@ export default function KnockoutMouseModelsPage() {
         <UXUIDCStartProjectCTA
           title="Start Your Knockout Project"
           content="Our scientific consultants are ready to discuss your research requirements and determine the optimal knockout strategy for your experimental goals. Initial consultation is provided at no charge."
-          buttons={CATALOG_CUSTOM_BUTTONS}
         />
 
         {/* ========== GLOSSARY ========== */}

@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -364,7 +364,7 @@ export default function TherapeuticAreasPage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Ready to discuss mouse models for your therapeutic area research? Our scientific team provides complimentary project consultation to help you design the optimal model for your disease research.
             </p>
-            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="therapeutic-areas" />
+            <CatalogCustomDualCta slug="therapeutic-areas" utmMedium="page-closing" flush />
           </div>
         </section>
 

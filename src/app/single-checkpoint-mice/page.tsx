@@ -7,7 +7,7 @@ import {
   BreadcrumbSchema,
 } from '@/components/UXUIDC';
 import Link from 'next/link';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 

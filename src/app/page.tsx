@@ -5,8 +5,6 @@
  */
 
 import type { Metadata } from 'next';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
-
 import dynamic from 'next/dynamic';
 import { ROOT_CATALOG_FIRST_META } from '@/lib/seo';
 import {

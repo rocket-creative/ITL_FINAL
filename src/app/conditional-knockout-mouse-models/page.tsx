@@ -1,6 +1,6 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -315,41 +315,14 @@ export default function ConditionalKnockoutMouseModelsPage() {
               {heroData.description}
             </p>
             
-            <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-              <Link 
-                href={quoteHref}
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{
-                  backgroundColor: 'white',
-                  color: '#0a253c',
-                  padding: '10px 16px',
-                  minWidth: '160px',
-                  fontSize: '.85rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Request Custom Quote</span>
-                <span>→</span>
-              </Link>
-              <Link 
-                href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                style={{
-                  backgroundColor: 'transparent',
-                  color: 'white',
-                  padding: '10px 16px',
-                  minWidth: '160px',
-                  border: '2px solid white',
-                  fontSize: '.85rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Talk to a Scientist</span>
-                <span>→</span>
-              </Link>
-            </div>
           </div>
         </section>
+        <section style={{ backgroundColor: '#f5f5f4', padding: '40px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="conditional-knockout-mouse-models" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>

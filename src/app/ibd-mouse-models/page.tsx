@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -84,26 +84,7 @@ export default function IBDMouseModelsPage() {
             <h1 className="hero-animate" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '20px' }}>{heroData.title}</h1>
             <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: 400, lineHeight: '1.7rem', marginBottom: '15px', maxWidth: '800px' }}>{heroData.intro}</p>
             <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '25px', maxWidth: '800px' }}>{heroData.description}</p>
-            <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-                            <Link
-                href="/all-catalog-mouse-models"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{
-                  backgroundColor: '#008080',
-                  color: 'white',
-                  padding: '10px 16px',
-                  minWidth: '160px',
-                  fontSize: '.85rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Browse 14,774+ Catalog Models</span>
-                <span>→</span>
-              </Link>
-<Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 px-4 sm:px-5" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 16px', fontSize: '.85rem', fontWeight: 500 }}><span>Request Custom Quote</span><span>→</span></Link>
-              <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 px-4 sm:px-5" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 16px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
             </div>
-          </div>
         </section>
 
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
@@ -182,11 +163,9 @@ export default function IBDMouseModelsPage() {
         {/* Breeding Scheme Architect CTA */}
         <BreedingSchemeArchitectCTA />
 
-        <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>Start Your IBD Model Project</h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>Our scientific consultants can help design custom IBD models tailored to your research questions, whether studying barrier function, immune cell contributions, or therapeutic interventions.</p>
-            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="ibd-mouse-models" />
+        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="ibd-mouse-models" utmMedium="page-closing" flush />
           </div>
         </section>
 

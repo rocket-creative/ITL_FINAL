@@ -10,7 +10,7 @@
  * for which slug gets which offer copy and CTA targets.
  */
 
-import CatalogCustomCtaButtons from './CatalogCustomCtaButtons';
+import CatalogCustomDualCta from './CatalogCustomDualCta';
 import { COMMERCIAL_LINKS } from '@/data/commercialCtas';
 
 export interface EducationalSalesOffer {
@@ -340,107 +340,9 @@ export default function UXUIDCEducationalSalesBanner({
   slug,
   secondaryCtaStyle: _secondaryCtaStyle = 'primary',
 }: Props) {
-  const offer = getEducationalOffer(slug);
-
   return (
-    <section
-      aria-label="Custom mouse model offer"
-      style={{
-        background: 'linear-gradient(135deg, #0a253c 0%, #008080 100%)',
-        padding: '28px 20px',
-        borderBottom: '3px solid #00d4d4',
-      }}
-    >
-      <div
-        style={{
-          maxWidth: '900px',
-          margin: '0 auto',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '14px',
-        }}
-      >
-        <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            color: '#00d4d4',
-            fontSize: '0.7rem',
-            fontWeight: 700,
-            letterSpacing: '1.5px',
-            textTransform: 'uppercase',
-          }}
-        >
-          <span
-            aria-hidden="true"
-            style={{
-              display: 'inline-block',
-              width: '20px',
-              height: '2px',
-              backgroundColor: '#00d4d4',
-            }}
-          />
-          {offer.eyebrow}
-        </div>
-        <h2
-          style={{
-            color: 'white',
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: 'clamp(1.4rem, 3vw, 1.85rem)',
-            fontWeight: 700,
-            lineHeight: 1.2,
-            margin: 0,
-            letterSpacing: '-0.5px',
-          }}
-        >
-          {offer.headline}
-        </h2>
-        <p
-          style={{
-            color: 'rgba(255,255,255,0.92)',
-            fontFamily: 'Lato, -apple-system, sans-serif',
-            fontSize: '1rem',
-            lineHeight: 1.55,
-            margin: 0,
-            maxWidth: '780px',
-          }}
-        >
-          {offer.subline}
-        </p>
-        <CatalogCustomCtaButtons
-          variant="banner"
-          buttons={[
-            { label: offer.secondaryCta.label, href: offer.secondaryCta.href },
-            {
-              label: offer.primaryCta.label.includes('Quote')
-                ? 'Request Custom Quote'
-                : offer.primaryCta.label,
-              href: offer.primaryCta.href,
-            },
-          ]}
-          utmMedium="commercial-banner"
-          slug={slug}
-          className="!justify-start"
-        />
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '18px',
-            marginTop: '4px',
-            color: 'rgba(255,255,255,0.78)',
-            fontSize: '0.78rem',
-            fontWeight: 500,
-          }}
-        >
-          <span>26+ years building mouse models</span>
-          <span aria-hidden="true">•</span>
-          <span>2,800+ custom projects delivered</span>
-          <span aria-hidden="true">•</span>
-          <span>100% germline guarantee</span>
-        </div>
-      </div>
-    </section>
+    <div aria-label="Catalog or custom mouse model options" style={{ marginBottom: '1.5rem' }}>
+      <CatalogCustomDualCta slug={slug} utmMedium="educational-banner" flush />
+    </div>
   );
 }

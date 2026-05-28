@@ -180,7 +180,6 @@ export default function LegacyPageTemplate({
           <UXUIDCStartProjectCTA
             title="Ready to Start Your Project?"
             content="Contact our scientific team to discuss your research requirements and get a customized quote for your project."
-            buttons={CATALOG_CUSTOM_BUTTONS}
           />
         )}
       </main>

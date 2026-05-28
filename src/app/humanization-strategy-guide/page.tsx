@@ -6,7 +6,7 @@
 'use client';
 
 import { useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -192,7 +192,7 @@ export default function HumanizationStrategyGuidePage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
             </p>
-            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="humanization-strategy-guide" />
+            <CatalogCustomDualCta slug="humanization-strategy-guide" utmMedium="page-closing" flush />
           </div>
         </section>
 

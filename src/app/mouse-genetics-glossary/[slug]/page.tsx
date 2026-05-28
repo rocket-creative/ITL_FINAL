@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -7,10 +7,9 @@ import { applyCatalogFirstMeta } from '@/lib/seo';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCEducationalSalesBanner from '@/components/UXUIDC/EducationalSalesBanner';
-import CatalogGeneLookup from '@/components/UXUIDC/CatalogGeneLookup';
 import CatalogStickyRail from '@/components/UXUIDC/CatalogStickyRail';
 import { getEducationalOffer } from '@/components/UXUIDC/EducationalSalesBanner';
-import { getCatalogLookup } from '@/components/UXUIDC/CatalogGeneLookup';
+import { getCatalogLookup } from '@/components/UXUIDC/catalogLookupMap';
 import { IconChevronRight, IconDNA, IconLayers, IconArrowLeft } from '@/components/UXUIDC/Icons';
 import { 
   getExtendedTerm, 
@@ -474,9 +473,6 @@ export default async function GlossaryTermPage({
                 ))}
               </div>
             )}
-
-            {/* Pivot from definition to "is this in our catalog?" */}
-            <CatalogGeneLookup slug={slug} />
 
             {/* FAQs */}
             {term.faqs.length > 0 && (

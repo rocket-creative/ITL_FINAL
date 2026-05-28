@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -255,56 +255,14 @@ export default function AlzheimersMouseModelsPage() {
               {heroData.description}
             </p>
 
-            <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-                            <Link
-                href="/all-catalog-mouse-models"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{
-                  backgroundColor: '#008080',
-                  color: 'white',
-                  padding: '10px 16px',
-                  minWidth: '160px',
-                  fontSize: '.85rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Browse 14,774+ Catalog Models</span>
-                <span>→</span>
-              </Link>
-<Link
-                href="/request-quote"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg px-4 sm:px-5"
-                style={{
-                  backgroundColor: 'white',
-                  color: '#0a253c',
-                  padding: '10px 16px',
-                  minWidth: '160px',
-                  fontSize: '.85rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Request Custom Quote</span>
-                <span>→</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md px-4 sm:px-5"
-                style={{
-                  backgroundColor: 'transparent',
-                  color: 'white',
-                  padding: '10px 16px',
-                  minWidth: '160px',
-                  border: '2px solid white',
-                  fontSize: '.85rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Talk to a Scientist</span>
-                <span>→</span>
-              </Link>
-            </div>
           </div>
         </section>
+        <section style={{ backgroundColor: '#f5f5f4', padding: '40px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="alzheimers-mouse-models" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
@@ -713,15 +671,9 @@ export default function AlzheimersMouseModelsPage() {
         </section>
 
         {/* CTA Section */}
-        <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start Your Alzheimer Model Project
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your Alzheimer disease research requirements and recommend the optimal model design for your program. Initial consultation is provided at no charge and includes target analysis, model strategy recommendations, and timeline estimates.
-            </p>
-            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="alzheimers-mouse-models" />
+        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="alzheimers-mouse-models" utmMedium="page-closing" flush />
           </div>
         </section>
 

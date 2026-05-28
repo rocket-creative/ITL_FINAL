@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import PageClosingCta from '@/components/UXUIDC/PageClosingCta';
 
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import { makeFooterCta } from '@/data/commercialCtas';
 import { getPublicationsForPageAsCitations } from '@/data/pagePublications';

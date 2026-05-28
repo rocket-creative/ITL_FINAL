@@ -55,10 +55,11 @@ for (const file of pages) {
   const src = fs.readFileSync(file, 'utf8');
   const hasQuote = /request-quote/.test(src);
   const hasCatalog =
-    /all-catalog-mouse-models|catalog-mouse-models|CatalogCustomCtaButtons|PageClosingCta/.test(
+    /all-catalog-mouse-models|catalog-mouse-models|CatalogCustomDualCta|CatalogCustomCtaButtons|PageClosingCta|CatalogGeneLookup|EducationalSalesBanner/.test(
       src,
     );
-  const hasDualComponent = /CatalogCustomCtaButtons|PageClosingCta/.test(src);
+  const hasDualComponent =
+    /CatalogCustomDualCta|PageClosingCta|UXUIDCStartProjectCTA|EducationalSalesBanner/.test(src);
   const duplicateQuoteOnly =
     /Free Consultation[\s\S]{0,400}request-quote[\s\S]{0,400}Request a Quote|Request a Quote[\s\S]{0,400}request-quote[\s\S]{0,400}Free Consultation/.test(
       src,

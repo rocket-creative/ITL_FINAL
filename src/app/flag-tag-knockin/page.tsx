@@ -6,7 +6,7 @@
 'use client';
 
 import { useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -202,7 +202,7 @@ export default function FlagTagKnockinPage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
             </p>
-            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="flag-tag-knockin" />
+            <CatalogCustomDualCta slug="flag-tag-knockin" utmMedium="page-closing" flush />
           </div>
         </section>
 

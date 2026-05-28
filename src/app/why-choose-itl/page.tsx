@@ -6,7 +6,7 @@
 'use client';
 
 import { useRef } from 'react';
-import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -545,7 +545,7 @@ export default function WhyChooseItlPage() {
             }}>
               Start your next mouse model project with a team you can trust.
             </p>
-            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="why-choose-itl" />
+            <CatalogCustomDualCta slug="why-choose-itl" utmMedium="page-closing" flush />
           </div>
         </section>
 
