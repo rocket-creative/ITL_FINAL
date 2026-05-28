@@ -1,6 +1,10 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import PageClosingCta from '@/components/UXUIDC/PageClosingCta';
+
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -186,14 +190,14 @@ const relatedLinksData = {
   selectionGuides: [
     { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },
     { href: "/conditional-vs-conventional-guide", label: "Conditional vs Conventional Guide" },
-    { href: "/request-quote", label: "Request a Quote" },
+    { href: "/request-quote", label: "Request Custom Quote" },
     { href: "/pricing-guide", label: "Pricing Overview" }
   ]
 };
 
 // CTA Data
 const ctaData = makeFooterCta(
-  'Catalog first. Custom when ready.',
+  'Catalog Models. Custom when ready.',
   'Ready to discuss your custom mouse model requirements? Our scientific team provides complimentary project consultation to help you design the optimal model for your research.',
 );
 
@@ -371,7 +375,7 @@ export default function CustomMouseModelsPage() {
                 border: '2px solid rgba(255,255,255,0.3)',
                 transition: 'border-color 0.2s ease'
               }}>
-                Request a Custom Quote
+                Request Custom Quote
               </Link>
             </div>
           </div>
@@ -755,60 +759,7 @@ export default function CustomMouseModelsPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section style={{ background: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#ffffff',
-              marginBottom: '16px'
-            }}>
-              {ctaData.title}
-            </h2>
-            <p className="animate-in" style={{
-              fontSize: '.9rem',
-              color: 'rgba(255,255,255,0.9)',
-              marginBottom: '30px',
-              lineHeight: 1.7
-            }}>
-              {ctaData.description}
-            </p>
-            <div className="animate-in" style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href={ctaData.primaryButton.href} style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: '#ffffff',
-                color: '#008080',
-                padding: '14px 28px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                {ctaData.primaryButton.label}
-                <IconChevronRight size={16} color="#008080" />
-              </Link>
-              <Link href={ctaData.secondaryButton.href} style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'transparent',
-                color: '#ffffff',
-                padding: '14px 28px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                border: '2px solid rgba(255,255,255,0.3)'
-              }}>
-                {ctaData.secondaryButton.label}
-              </Link>
-            </div>
-          </div>
-        </section>
+        <PageClosingCta title={ctaData.title} description={ctaData.description} slug="custom-mouse-models" />
 
         {/* Breeding Scheme Architect CTA */}
         <BreedingSchemeArchitectCTA variant="gradient" />

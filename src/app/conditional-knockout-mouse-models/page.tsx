@@ -1,5 +1,7 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
@@ -171,7 +173,7 @@ const relatedTechnologies = [
 const projectResources = [
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
-  { title: "Request a Quote", href: "/request-quote" },
+  { title: "Request Custom Quote", href: "/request-quote" },
   { title: "FAQs", href: "/faqs" }
 ];
 
@@ -326,7 +328,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request a Quote</span>
+                <span>Request Custom Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -848,7 +850,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request a Quote</span>
+                <span>Request Custom Quote</span>
                 <span>→</span>
               </Link>
               <Link 

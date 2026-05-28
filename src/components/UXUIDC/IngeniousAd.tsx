@@ -122,32 +122,12 @@ export default function IngeniousAd({
         }}
       >
         <Link
-          href={relatedPage}
-          style={{
-            ...btnBase,
-            backgroundColor: BRAND.black,
-            color: BRAND.white,
-            border: `2px solid ${BRAND.black}`,
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'translateY(-2px)';
-            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.25)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = 'none';
-          }}
-        >
-          Explore Services
-          <span aria-hidden>→</span>
-        </Link>
-        <Link
           href={catalogHref}
           style={{
             ...btnBase,
-            backgroundColor: BRAND.white,
-            color: BRAND.black,
-            border: `2px solid ${BRAND.black}`,
+            backgroundColor: '#008080',
+            color: BRAND.white,
+            border: '2px solid #008080',
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-2px)';
@@ -158,10 +138,44 @@ export default function IngeniousAd({
             e.currentTarget.style.boxShadow = 'none';
           }}
         >
-          Browse Catalog
+          Browse 14,774+ Catalog Models
+          <span aria-hidden>→</span>
+        </Link>
+        <Link
+          href="/request-quote"
+          style={{
+            ...btnBase,
+            backgroundColor: '#0a253c',
+            color: BRAND.white,
+            border: '2px solid #0a253c',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.25)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = 'none';
+          }}
+        >
+          Request Custom Quote
           <span aria-hidden>→</span>
         </Link>
       </div>
+      <p style={{ margin: '14px 0 0', fontSize: '.8rem' }}>
+        <Link
+          href={relatedPage}
+          style={{
+            color: '#008080',
+            fontWeight: 600,
+            textDecoration: 'underline',
+            textUnderlineOffset: '3px',
+          }}
+        >
+          Explore custom model services
+        </Link>
+        <span aria-hidden> →</span>
+      </p>
     </div>
   );
 }

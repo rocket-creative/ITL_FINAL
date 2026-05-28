@@ -5,6 +5,8 @@
  */
 
 import type { Metadata } from 'next';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import dynamic from 'next/dynamic';
 import { ROOT_CATALOG_FIRST_META } from '@/lib/seo';
 import {
@@ -71,7 +73,7 @@ const heroData = {
   description1: 'ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,800+ custom genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
   description2: 'For more than two decades, researchers have partnered with our U.S. based scientific team for sequence informed allele design, rigorous QC oversight, and study ready germline transmitting mouse lines. iTL helps researchers determine the most appropriate approach for long term allele stability, clear genotype interpretation, and successful model creation.',
   cta1: { label: 'Browse Catalog Models', href: '/catalog-mouse-models' },
-  cta2: { label: 'Request a Custom Quote', href: '/request-quote' },
+  cta2: { label: 'Request Custom Quote', href: '/request-quote' },
 };
 
 // Core Research Services - lines 14-27
@@ -203,10 +205,10 @@ const testimonialsData = {
 
 // Start Your Project - lines 76-79
 const startProjectData = {
-  title: 'Catalog first. Custom when your study needs more.',
+  title: 'Catalog Models. Custom when your study needs more.',
   content: 'Most projects begin with an established catalog mouse model. When your program needs conditional, mutation, or humanization beyond the library, our scientific consultants provide complimentary guidance on the custom line your study requires.',
   cta1: { label: 'Browse Catalog Models', href: '/catalog-mouse-models' },
-  cta2: { label: 'Request a Custom Quote', href: '/request-quote' },
+  cta2: { label: 'Request Custom Quote', href: '/request-quote' },
 };
 
 // FAQs - lines 80-86

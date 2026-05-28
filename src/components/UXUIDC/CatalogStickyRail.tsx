@@ -6,6 +6,7 @@
  */
 
 import Link from 'next/link';
+import { COMMERCIAL_LINKS, commercialUtmHref } from '@/data/commercialCtas';
 
 interface Props {
   /** Page slug for analytics attribution */
@@ -16,6 +17,23 @@ interface Props {
   href?: string;
 }
 
+const linkBase = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '8px',
+  padding: '11px 16px',
+  borderRadius: '6px',
+  textDecoration: 'none',
+  fontWeight: 600,
+  fontSize: '0.82rem',
+  letterSpacing: '0.3px',
+  transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+  fontFamily: 'Lato, -apple-system, sans-serif',
+  textAlign: 'center' as const,
+  lineHeight: 1.25,
+};
+
 export default function CatalogStickyRail({
   slug = 'unknown',
   catalogHref,
@@ -24,8 +42,16 @@ export default function CatalogStickyRail({
   const catalogUrl =
     catalogHref ||
     href ||
-    `/all-catalog-mouse-models/?utm_source=organic&utm_medium=sticky-rail&utm_campaign=${encodeURIComponent(slug)}`;
-  const quoteUrl = `/request-quote?utm_source=organic&utm_medium=sticky-rail-quote&utm_campaign=${encodeURIComponent(slug)}`;
+    commercialUtmHref(COMMERCIAL_LINKS.catalogAll, {
+      source: 'organic',
+      medium: 'sticky-rail',
+      campaign: slug,
+    });
+  const quoteUrl = commercialUtmHref(COMMERCIAL_LINKS.requestQuote, {
+    source: 'organic',
+    medium: 'sticky-rail-quote',
+    campaign: slug,
+  });
 
   return (
     <>
@@ -41,22 +67,6 @@ export default function CatalogStickyRail({
           align-items: stretch;
           max-width: min(280px, calc(100vw - 48px));
         }
-        .catalog-sticky-rail-link {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          padding: 11px 16px;
-          border-radius: 6px;
-          text-decoration: none;
-          font-weight: 600;
-          font-size: 0.82rem;
-          letter-spacing: 0.3px;
-          transition: transform 0.15s ease, box-shadow 0.15s ease;
-          font-family: 'Lato', -apple-system, sans-serif;
-          text-align: center;
-          line-height: 1.25;
-        }
         .catalog-sticky-rail-link--catalog {
           background: #008080;
           color: #ffffff;
@@ -67,14 +77,13 @@ export default function CatalogStickyRail({
           box-shadow: 0 10px 24px rgba(0, 64, 64, 0.45);
         }
         .catalog-sticky-rail-link--quote {
-          background: #ffffff;
-          color: #0a253c;
-          border: 2px solid #0a253c;
-          box-shadow: 0 4px 14px rgba(10, 37, 60, 0.12);
+          background: #0a253c;
+          color: #ffffff;
+          box-shadow: 0 6px 20px rgba(10, 37, 60, 0.35);
         }
         .catalog-sticky-rail-link--quote:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 18px rgba(10, 37, 60, 0.18);
+          box-shadow: 0 10px 24px rgba(10, 37, 60, 0.45);
         }
         @media (min-width: 1024px) {
           .catalog-sticky-rail-wrap {
@@ -82,8 +91,9 @@ export default function CatalogStickyRail({
           }
         }
         @media (prefers-reduced-motion: reduce) {
-          .catalog-sticky-rail-link {
-            transition: none;
+          .catalog-sticky-rail-link--catalog:hover,
+          .catalog-sticky-rail-link--quote:hover {
+            transform: none;
           }
         }
       `}</style>
@@ -93,7 +103,8 @@ export default function CatalogStickyRail({
       >
         <Link
           href={catalogUrl}
-          className="catalog-sticky-rail-link catalog-sticky-rail-link--catalog"
+          className="catalog-sticky-rail-link--catalog"
+          style={linkBase}
           data-cta="catalog-sticky-rail"
           data-cta-slug={slug}
         >
@@ -102,12 +113,30 @@ export default function CatalogStickyRail({
         </Link>
         <Link
           href={quoteUrl}
-          className="catalog-sticky-rail-link catalog-sticky-rail-link--quote"
+          className="catalog-sticky-rail-link--quote"
+          style={linkBase}
           data-cta="sticky-rail-request-quote"
           data-cta-slug={slug}
         >
-          Custom quote
+          Request custom quote
           <span aria-hidden="true">→</span>
+        </Link>
+        <Link
+          href={COMMERCIAL_LINKS.customHub}
+          style={{
+            ...linkBase,
+            padding: '6px 12px',
+            fontSize: '0.72rem',
+            fontWeight: 500,
+            color: '#0a253c',
+            background: 'rgba(255,255,255,0.95)',
+            border: '1px solid #d8e3e6',
+            boxShadow: '0 2px 8px rgba(10, 37, 60, 0.08)',
+          }}
+          data-cta="sticky-rail-custom-services"
+          data-cta-slug={slug}
+        >
+          Custom model services
         </Link>
       </nav>
     </>

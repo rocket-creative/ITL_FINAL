@@ -10,6 +10,8 @@ import {
   BreadcrumbSchema,
 } from '@/components/UXUIDC';
 import { IconQuote } from '@/components/UXUIDC/Icons';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import { 
   VERIFIED_TESTIMONIALS, 
   formatAuthorWithCredentials,
@@ -183,7 +185,7 @@ export default function TestimonialsPage() {
                 color: 'white',
               }}
             >
-              Request a Quote
+              Request Custom Quote
             </a>
             <a
               href="/publications"

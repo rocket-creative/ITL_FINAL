@@ -10,6 +10,7 @@
  */
 
 import Link from 'next/link';
+import { COMMERCIAL_LINKS } from '@/data/commercialCtas';
 import PricingUnlockForm from './PricingUnlockForm';
 
 export interface ServicePricingFaq {
@@ -140,8 +141,8 @@ export default function UXUIDCServicePricingAnchor({
             </div>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <Link
-                href={quoteHref}
-                data-cta="service-pricing-primary"
+                href={secondaryHref ?? COMMERCIAL_LINKS.catalogAll}
+                data-cta="service-pricing-catalog"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -156,31 +157,29 @@ export default function UXUIDCServicePricingAnchor({
                   letterSpacing: '0.3px',
                 }}
               >
-                Get a Quote in 24h
+                {secondaryLabel ?? 'Browse 14,774+ Catalog Models'}
                 <span aria-hidden="true">→</span>
               </Link>
-              {secondaryHref && secondaryLabel && (
-                <Link
-                  href={secondaryHref}
-                  data-cta="service-pricing-secondary"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    backgroundColor: 'transparent',
-                    color: '#008080',
-                    padding: '10px 16px',
-                    borderRadius: '4px',
-                    textDecoration: 'none',
-                    fontWeight: 600,
-                    fontSize: '0.85rem',
-                    border: '1px solid #008080',
-                  }}
-                >
-                  {secondaryLabel}
-                  <span aria-hidden="true">→</span>
-                </Link>
-              )}
+              <Link
+                href={quoteHref}
+                data-cta="service-pricing-custom-quote"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  backgroundColor: '#0a253c',
+                  color: '#ffffff',
+                  padding: '11px 18px',
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                  fontWeight: 700,
+                  fontSize: '0.85rem',
+                  letterSpacing: '0.3px',
+                }}
+              >
+                Request Custom Quote
+                <span aria-hidden="true">→</span>
+              </Link>
             </div>
           </div>
         </div>

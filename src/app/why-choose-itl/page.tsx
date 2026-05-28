@@ -6,6 +6,8 @@
 'use client';
 
 import { useRef } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
@@ -204,7 +206,7 @@ export default function WhyChooseItlPage() {
                   textDecoration: 'none'
                 }}
               >
-                <span>Request a Quote</span>
+                <span>Request Custom Quote</span>
                 <IconChevronRight size={16} />
               </Link>
               <Link 
@@ -543,45 +545,7 @@ export default function WhyChooseItlPage() {
             }}>
               Start your next mouse model project with a team you can trust.
             </p>
-            <div className="animate-in flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
-              <Link 
-                href="/request-quote"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  backgroundColor: 'white',
-                  color: '#008080',
-                  padding: '14px 28px',
-                  borderRadius: '6px',
-                  fontSize: '.9rem',
-                  fontWeight: 600,
-                  textDecoration: 'none'
-                }}
-              >
-                Request a Quote
-                <IconChevronRight size={16} />
-              </Link>
-              <Link 
-                href="/publications"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  backgroundColor: 'transparent',
-                  color: 'white',
-                  padding: '14px 28px',
-                  borderRadius: '6px',
-                  border: '2px solid rgba(255,255,255,0.3)',
-                  fontSize: '.9rem',
-                  fontWeight: 600,
-                  textDecoration: 'none'
-                }}
-              >
-                View Publications
-                <IconChevronRight size={16} />
-              </Link>
-            </div>
+            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="why-choose-itl" />
           </div>
         </section>
 

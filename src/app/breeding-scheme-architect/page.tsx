@@ -301,6 +301,28 @@ function BreedingSchemeArchitectContent() {
               <IconArrowRight size={16} />
             </a>
             <Link
+              href="/all-catalog-mouse-models"
+              style={{
+                backgroundColor: '#008080',
+                color: 'white',
+                padding: '10px 20px',
+                minWidth: '160px',
+                fontFamily: 'var(--system-ui)',
+                fontSize: '.85rem',
+                fontWeight: 500,
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                transition: 'all 0.3s',
+              }}
+              className="hover:-translate-y-1 hover:shadow-lg"
+            >
+              Browse 14,774+ Catalog Models
+              <IconArrowRight size={16} />
+            </Link>
+            <Link
               href="/request-quote"
               style={{
                 backgroundColor: 'transparent',
@@ -319,7 +341,7 @@ function BreedingSchemeArchitectContent() {
               }}
               className="hover:bg-white hover:text-[#0a253c]"
             >
-              Request Consultation
+              Request Custom Quote
             </Link>
           </div>
         </div>

@@ -5,6 +5,8 @@
  */
 
 import { useEffect, useRef } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -101,7 +103,7 @@ export default function InducibleRosa26Page() {
                   fontWeight: 500,
                 }}
               >
-                <span>Request a Quote</span>
+                <span>Request Custom Quote</span>
                 <span>→</span>
               </Link>
             </div>

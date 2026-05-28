@@ -1,4 +1,6 @@
 import { notFound } from 'next/navigation';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { applyCatalogFirstMeta } from '@/lib/seo';
@@ -756,7 +758,7 @@ export default async function GlossaryTermPage({
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request a Quote
+                Request Custom Quote
                 <IconChevronRight size={16} color={BRAND.teal} />
               </Link>
               <Link href="/contact" style={{

@@ -7,6 +7,8 @@ import {
   BreadcrumbSchema,
 } from '@/components/UXUIDC';
 import Link from 'next/link';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 
 export default function SingleCheckpointMicePage() {
@@ -63,7 +65,7 @@ export default function SingleCheckpointMicePage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request a Quote
+                Request Custom Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
             </div>

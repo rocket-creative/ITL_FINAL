@@ -5,6 +5,8 @@
  */
 
 import Link from 'next/link';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
@@ -225,7 +227,7 @@ export default function CustomMouseModelCompaniesPage() {
                   borderRadius: '4px',
                 }}
               >
-                Request a Quote from iTL
+                Request Custom Quote from iTL
                 <IconChevronRight size={16} color="#008080" />
               </Link>
               <Link
@@ -529,7 +531,7 @@ export default function CustomMouseModelCompaniesPage() {
                   borderRadius: '4px',
                 }}
               >
-                Request a Quote
+                Request Custom Quote
                 <IconChevronRight size={16} color="#008080" />
               </Link>
               <Link

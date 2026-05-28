@@ -7,6 +7,8 @@
  */
 
 import { useState } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
@@ -287,7 +289,7 @@ export default function VideoLibraryPage() {
                 }}
               >
                 <IconFileText size={18} />
-                Request a Quote
+                Request Custom Quote
               </Link>
               <Link
                 href="/schedule-meeting"

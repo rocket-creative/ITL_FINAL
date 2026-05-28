@@ -9,6 +9,8 @@
  */
 
 import type { Metadata } from 'next';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import Link from 'next/link';
 import { applyCatalogFirstMeta } from '@/lib/seo';
 import {
@@ -579,7 +581,7 @@ export default function PricingPage() {
                   fontSize: '0.95rem',
                 }}
               >
-                Request a Quote
+                Request Custom Quote
                 <span aria-hidden="true">→</span>
               </Link>
               <Link

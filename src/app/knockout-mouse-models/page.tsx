@@ -7,6 +7,8 @@
  */
 
 import { useEffect, useRef } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import Link from 'next/link';
 import {
@@ -203,7 +205,7 @@ const relatedTech = [
 const relatedResources = [
   { label: 'Knockout Strategy Guide', href: '/knockout-strategy-guide' },
   { label: 'Conditional vs Conventional Guide', href: '/conditional-vs-conventional-guide' },
-  { label: 'Request a Quote', href: '/request-quote' },
+  { label: 'Request Custom Quote', href: '/request-quote' },
   { label: 'FAQs', href: '/faqs' },
 ];
 
@@ -295,7 +297,22 @@ export default function KnockoutMouseModelsPage() {
               {heroData.description}
             </p>
             <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-              <Link
+                            <Link
+                href="/all-catalog-mouse-models"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{
+                  backgroundColor: '#008080',
+                  color: 'white',
+                  padding: '10px 16px',
+                  minWidth: '160px',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Browse 14,774+ Catalog Models</span>
+                <span>→</span>
+              </Link>
+<Link
                 href="/request-quote"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
@@ -307,7 +324,7 @@ export default function KnockoutMouseModelsPage() {
                   fontWeight: 500,
                 }}
               >
-                <span>Request a Quote</span>
+                <span>Request Custom Quote</span>
                 <span>→</span>
               </Link>
               <Link

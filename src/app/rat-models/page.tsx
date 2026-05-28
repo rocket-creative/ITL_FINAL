@@ -1,6 +1,8 @@
 'use client';
 
 import { useRef } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
@@ -120,7 +122,7 @@ export default function RatModelsPage() {
                   fontSize: '.85rem',
                   fontWeight: 500}}
               >
-                <span>Request a Quote</span>
+                <span>Request Custom Quote</span>
                 <span>→</span>
               </Link>
               <Link
@@ -315,7 +317,7 @@ export default function RatModelsPage() {
                   fontSize: '.9rem',
                   fontWeight: 500}}
               >
-                <span>Request a Quote</span>
+                <span>Request Custom Quote</span>
                 <span>→</span>
               </Link>
             </div>

@@ -213,7 +213,10 @@ export default async function GeneModTierPage({ params }: Props) {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>Build timeline and pricing</h2>
             <p style={{ color: '#444', lineHeight: 1.85 }}>{timeline}</p>
-            <Link href="/request-quote/" style={{ display: 'inline-block', marginTop: '16px', color: '#008080', fontWeight: 700 }}>Open the request quote form</Link>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '16px' }}>
+              <Link href="/all-catalog-mouse-models" style={{ display: 'inline-block', padding: '10px 18px', background: '#008080', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Browse 14,774+ Catalog Models</Link>
+              <Link href="/request-quote" style={{ display: 'inline-block', padding: '10px 18px', background: '#0a253c', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Request Custom Quote</Link>
+            </div>
           </div>
         </section>
 

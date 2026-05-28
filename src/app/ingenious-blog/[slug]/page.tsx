@@ -1,4 +1,6 @@
 import fs from 'fs';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import path from 'path';
 import { applyCatalogFirstMeta } from '@/lib/seo';
 import Link from 'next/link';
@@ -108,7 +110,7 @@ function markdownToHtml(markdown: string): string {
         // Determine CTA type from URL
         const isQuote = href.includes('quote') || href.includes('request');
         const isDownload = href.includes('white-paper') || href.includes('guide') || href.includes('chart');
-        const ctaText = isQuote ? 'Request a Quote' : isDownload ? 'Download Resource' : 'Learn More';
+        const ctaText = isQuote ? 'Request Custom Quote' : isDownload ? 'Download Resource' : 'Learn More';
         const buttonClass = isDownload ? 'blog-button blog-button-download' : 'blog-button';
         htmlBlocks.push(`<div class="blog-cta"><a href="${href}" class="${buttonClass}">${ctaText} →</a></div>`);
       } else {
@@ -180,7 +182,7 @@ function markdownToHtml(markdown: string): string {
             alt.toLowerCase().includes('quote') || alt.toLowerCase().includes('get a quote')) {
           const isQuote = href.includes('quote') || href.includes('request');
           const isDownload = href.includes('white-paper') || href.includes('guide') || href.includes('chart');
-          const ctaText = isQuote ? 'Request a Quote' : isDownload ? 'Download Resource' : 'Learn More';
+          const ctaText = isQuote ? 'Request Custom Quote' : isDownload ? 'Download Resource' : 'Learn More';
           const buttonClass = isDownload ? 'blog-button blog-button-download' : 'blog-button';
           htmlBlocks.push(`<div class="blog-cta"><a href="${href}" class="${buttonClass}">${ctaText} →</a></div>`);
         } else {
@@ -943,26 +945,29 @@ export default async function IngeniousBlogPost({
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
               {[
                 ...(contentExists
-                  ? [{ label: 'Browse catalog', href: catalogRelatedHref }]
-                  : []),
+                  ? [
+                      { label: 'Browse 14,774+ Catalog Models', href: catalogRelatedHref },
+                      { label: 'Request Custom Quote', href: '/request-quote' },
+                    ]
+                  : [
+                      { label: 'Browse 14,774+ Catalog Models', href: '/all-catalog-mouse-models/' },
+                      { label: 'Request Custom Quote', href: '/request-quote' },
+                    ]),
                 ...(slug === 'what-is-a-point-mutation'
                   ? [
                       { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
-                      { label: 'Request a Quote', href: '/request-quote' },
                       { label: 'Types of Point Mutations', href: '/ingenious-blog/types-of-point-mutations/' },
                       { label: 'Point Mutation Diseases', href: '/ingenious-blog/point-mutation-diseases/' },
                     ]
                   : slug === 'types-of-point-mutations'
                     ? [
                         { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
-                        { label: 'Request a Quote', href: '/request-quote' },
                         { label: 'What Is a Point Mutation', href: '/ingenious-blog/what-is-a-point-mutation/' },
                         { label: 'Point Mutation Diseases', href: '/ingenious-blog/point-mutation-diseases/' },
                       ]
                     : slug === 'point-mutation-diseases'
                       ? [
                           { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
-                          { label: 'Request a Quote', href: '/request-quote' },
                           { label: 'What Is a Point Mutation', href: '/ingenious-blog/what-is-a-point-mutation/' },
                           { label: 'Types of Point Mutations', href: '/ingenious-blog/types-of-point-mutations/' },
                         ]
@@ -1016,13 +1021,13 @@ export default async function IngeniousBlogPost({
             slug === 'point-mutation-diseases'
               ? [
                   { label: 'Browse Catalog', href: catalogRelatedHref },
-                  { label: 'Request a Custom Quote', href: '/request-quote' },
+                  { label: 'Request Custom Quote', href: '/request-quote' },
                   { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
                   { label: 'Contact Us', href: '/contact' },
                 ]
               : [
                   { label: 'Browse Catalog', href: catalogRelatedHref },
-                  { label: 'Request a Custom Quote', href: '/request-quote' },
+                  { label: 'Request Custom Quote', href: '/request-quote' },
                   { label: 'Contact Us', href: '/contact' },
                 ]
           }

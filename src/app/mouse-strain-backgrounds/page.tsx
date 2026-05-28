@@ -7,6 +7,8 @@
  */
 
 import { useRef } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import Link from 'next/link';
 import {
   UXUIDCNavigation,
@@ -166,7 +168,7 @@ export default function MouseStrainBackgroundsPage() {
                   fontWeight: 600,
                   textDecoration: 'none'}}
               >
-                Request a Quote
+                Request Custom Quote
                 <IconChevronRight size={16} color={BRAND.navy} />
               </Link>
               <Link 

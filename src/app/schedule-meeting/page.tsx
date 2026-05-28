@@ -6,6 +6,8 @@
  */
 
 import Link from 'next/link';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import {
   UXUIDCNavigation,
@@ -375,7 +377,7 @@ export default function ScheduleMeetingPage() {
                     <IconFileText size={20} color="#008080" />
                     <div>
                       <p style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'Poppins, sans-serif', fontWeight: 500, margin: 0 }}>
-                        Request a Quote
+                        Request Custom Quote
                       </p>
                       <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
                         Get project pricing

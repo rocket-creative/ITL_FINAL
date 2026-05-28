@@ -10,7 +10,8 @@
  * for which slug gets which offer copy and CTA targets.
  */
 
-import Link from 'next/link';
+import CatalogCustomCtaButtons from './CatalogCustomCtaButtons';
+import { COMMERCIAL_LINKS } from '@/data/commercialCtas';
 
 export interface EducationalSalesOffer {
   /** Eyebrow label, all caps */
@@ -34,8 +35,8 @@ const DEFAULT_OFFER: EducationalSalesOffer = {
   headline: 'We turn this concept into your model.',
   subline:
     'Start in the 14,774+ model catalog when a line fits your study. Need knockout, knockin, or humanization beyond the library? Custom quote in 24 hours. 800+ peer reviewed publications.',
-  primaryCta: { label: 'Request a Quote', href: '/request-quote' },
-  secondaryCta: { label: 'Browse 14,774 Catalog Models', href: '/all-catalog-mouse-models/' },
+  primaryCta: { label: 'Request Custom Quote', href: COMMERCIAL_LINKS.requestQuote },
+  secondaryCta: { label: 'Browse 14,774+ Catalog Models', href: COMMERCIAL_LINKS.catalogAll },
 };
 
 /**
@@ -50,7 +51,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Need a point mutation knockin mouse?',
     subline:
       'Custom point mutation models at endogenous loci. 800+ publications. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=point-mutation-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=point-mutation-banner' },
     secondaryCta: { label: 'Already know your gene? Search the catalog', href: '/all-catalog-mouse-models/?q=point+mutation' },
   },
   'types-of-point-mutations': {
@@ -58,7 +59,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Modeling a missense, nonsense, or substitution variant?',
     subline:
       'We build custom point mutation knockin mice for any substitution, deletion, or insertion. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=types-point-mutations-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=types-point-mutations-banner' },
     secondaryCta: { label: 'See Point Mutation Models in Catalog', href: '/all-catalog-mouse-models/?q=point+mutation' },
   },
   'point-mutation-diseases': {
@@ -66,7 +67,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Model a disease-associated point mutation in mice.',
     subline:
       'Custom knockin mice for sickle cell, cystic fibrosis, cancer, and other disease variants. Quote in 24 hours. 800+ publications.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=point-mutation-diseases-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=point-mutation-diseases-banner' },
     secondaryCta: { label: 'Browse Disease Model Catalog', href: '/all-catalog-mouse-models/' },
   },
   'point-mutation': {
@@ -74,7 +75,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Need a point mutation knockin mouse?',
     subline:
       'Custom point mutation models at endogenous loci. ES cell or CRISPR. 800+ publications. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=point-mutation-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=point-mutation-banner' },
     secondaryCta: { label: 'Browse Point Mutation Catalog Models', href: '/all-catalog-mouse-models/?q=point+mutation' },
   },
 
@@ -100,7 +101,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Need a knockout mouse built for your project?',
     subline:
       'Custom knockout mice. ES cell or CRISPR. 100% germline guarantee. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=how-knockout-made-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=how-knockout-made-banner' },
     secondaryCta: { label: 'Browse Knockout Catalog', href: '/all-catalog-mouse-models/?q=knockout' },
   },
 
@@ -118,7 +119,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Need an inducible knockout? We build CreERT2 lines.',
     subline:
       'Custom CreERT2 + floxed allele projects. Tissue-specific or ubiquitous. 2,800+ custom projects shipped.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=inducible-cre-ert2-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=inducible-cre-ert2-banner' },
     secondaryCta: { label: 'Browse Cre Driver Catalog', href: '/all-catalog-mouse-models/?q=cre' },
   },
   'cre-recombinase': {
@@ -126,7 +127,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Custom Cre driver lines and floxed alleles.',
     subline:
       'Tissue-specific Cre, CreERT2, and conditional knockouts. Quote in 24 hours. 2,800+ custom projects shipped.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=cre-recombinase-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=cre-recombinase-banner' },
     secondaryCta: { label: 'Browse Cre Driver Catalog', href: '/all-catalog-mouse-models/?q=cre' },
   },
   'cre-lox-system': {
@@ -134,7 +135,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Building a conditional knockout? Start with our Cre/lox expertise.',
     subline:
       'Custom floxed alleles + tissue-specific Cre lines. 2,800+ custom projects, 800+ publications.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=cre-lox-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=cre-lox-banner' },
     secondaryCta: { label: 'Browse Cre/lox Catalog', href: '/all-catalog-mouse-models/?q=cre' },
   },
   'cre-flox': {
@@ -142,7 +143,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Building a conditional knockout? Start with our Cre/lox expertise.',
     subline:
       'Custom floxed alleles + tissue-specific Cre lines. 2,800+ custom projects, 800+ publications.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=cre-flox-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=cre-flox-banner' },
     secondaryCta: { label: 'Browse Cre/lox Catalog', href: '/all-catalog-mouse-models/?q=cre' },
   },
 
@@ -160,7 +161,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Replacing or modifying an ORF in mice?',
     subline:
       'Custom ORF replacement, humanization, and reporter knockin. ES cell or CRISPR.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=orf-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=orf-banner' },
     secondaryCta: { label: 'Browse Knockin Catalog', href: '/all-catalog-mouse-models/?q=knockin' },
   },
   'c57bl6j-vs-c57bl6n': {
@@ -168,7 +169,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'We build on C57BL/6J and C57BL/6N — your choice.',
     subline:
       'Custom mouse models on the background you need. 14,774 ready catalog models on multiple strains. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=c57bl6-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=c57bl6-banner' },
     secondaryCta: { label: 'Browse Catalog by Strain', href: '/all-catalog-mouse-models/?q=C57BL%2F6' },
   },
   'allele-genotype-phenotype': {
@@ -184,7 +185,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Modeling a regulatory or promoter variant?',
     subline:
       'Custom knockin mice at endogenous regulatory loci. Reporter integration available.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=promoter-enhancer-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=promoter-enhancer-banner' },
     secondaryCta: { label: 'Browse Reporter & Knockin Catalog', href: '/all-catalog-mouse-models/?q=reporter' },
   },
 
@@ -246,7 +247,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Targeting Rosa26? We do it all the time.',
     subline:
       'Custom Rosa26 knockin mice — reporters, conditional cassettes, inducible expression. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=rosa26-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=rosa26-banner' },
     secondaryCta: { label: 'Browse Rosa26 Catalog', href: '/all-catalog-mouse-models/?q=rosa26' },
   },
   'rosa26-mice': {
@@ -254,7 +255,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Targeting Rosa26? We do it all the time.',
     subline:
       'Custom Rosa26 knockin mice — reporters, conditional cassettes, inducible expression. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=rosa26-mice-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=rosa26-mice-banner' },
     secondaryCta: { label: 'Browse Rosa26 Catalog', href: '/all-catalog-mouse-models/?q=rosa26' },
   },
 
@@ -264,7 +265,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Need a floxed allele for your conditional knockout?',
     subline:
       'Custom floxed mice. Critical exon selection included. 2,800+ custom projects shipped.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=floxing-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=floxing-banner' },
     secondaryCta: { label: 'Browse Floxed Catalog', href: '/all-catalog-mouse-models/?q=floxed' },
   },
   'floxed-cre-lox-flox': {
@@ -272,7 +273,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Need a floxed allele for your conditional knockout?',
     subline:
       'Custom floxed mice. Critical exon selection included. 2,800+ custom projects shipped.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=floxed-cre-lox-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=floxed-cre-lox-banner' },
     secondaryCta: { label: 'Browse Floxed Catalog', href: '/all-catalog-mouse-models/?q=floxed' },
   },
   'flox-sequence': {
@@ -280,7 +281,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Designing a flox sequence? Hand it to our scientists.',
     subline:
       'Custom floxed alleles with critical exon selection. Quote in 24 hours. 100% germline guarantee.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=flox-sequence-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=flox-sequence-banner' },
     secondaryCta: { label: 'Browse Floxed Catalog', href: '/all-catalog-mouse-models/?q=floxed' },
   },
   'conditional-mutation': {
@@ -288,7 +289,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Conditional mutation modeling — done right.',
     subline:
       'Custom conditional knockout and knockin mice. Tissue-specific or inducible. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=conditional-mutation-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=conditional-mutation-banner' },
     secondaryCta: { label: 'Browse Conditional Catalog', href: '/all-catalog-mouse-models/?q=conditional' },
   },
 
@@ -298,7 +299,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Our ES cell platform builds your custom mouse.',
     subline:
       'Validated C57BL/6 ES cells. 100% germline guarantee. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=stem-cell-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=stem-cell-banner' },
     secondaryCta: { label: 'See Custom Mouse Services', href: '/custom-mouse-models/' },
   },
 
@@ -309,7 +310,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     headline: 'Custom mice on C57BL/6J or C57BL/6N — your choice.',
     subline:
       'We build on the background you need. 14,774 ready catalog models. Quote in 24 hours.',
-    primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=c57bl6-bg-banner' },
+    primaryCta: { label: 'Request Custom Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=c57bl6-bg-banner' },
     secondaryCta: { label: 'Browse Catalog by Strain', href: '/all-catalog-mouse-models/?q=C57BL%2F6' },
   },
 };
@@ -337,7 +338,7 @@ interface Props {
 
 export default function UXUIDCEducationalSalesBanner({
   slug,
-  secondaryCtaStyle = 'secondary-link',
+  secondaryCtaStyle: _secondaryCtaStyle = 'primary',
 }: Props) {
   const offer = getEducationalOffer(slug);
 
@@ -407,84 +408,21 @@ export default function UXUIDCEducationalSalesBanner({
         >
           {offer.subline}
         </p>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: secondaryCtaStyle === 'secondary-link' ? 'column' : 'row',
-            alignItems: secondaryCtaStyle === 'secondary-link' ? 'flex-start' : 'center',
-            flexWrap: 'wrap',
-            gap: secondaryCtaStyle === 'secondary-link' ? '10px' : '12px',
-            marginTop: '6px',
-          }}
-        >
-          <Link
-            href={offer.secondaryCta.href}
-            data-cta="commercial-banner-catalog"
-            data-cta-slug={slug}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              backgroundColor: '#ffffff',
-              color: '#0a253c',
-              padding: '13px 24px',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontWeight: 700,
-              fontSize: '0.95rem',
-              letterSpacing: '0.3px',
-              boxShadow: '0 2px 6px rgba(0,0,0,0.18)',
-            }}
-          >
-            {offer.secondaryCta.label}
-            <span aria-hidden="true">→</span>
-          </Link>
-          {secondaryCtaStyle === 'primary' ? (
-            <Link
-              href={offer.primaryCta.href}
-              data-cta="commercial-banner-custom"
-              data-cta-slug={slug}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                backgroundColor: 'transparent',
-                color: '#ffffff',
-                padding: '12px 22px',
-                borderRadius: '4px',
-                textDecoration: 'none',
-                fontWeight: 600,
-                fontSize: '0.95rem',
-                letterSpacing: '0.3px',
-                border: '2px solid rgba(255,255,255,0.55)',
-              }}
-            >
-              {offer.primaryCta.label}
-              <span aria-hidden="true">→</span>
-            </Link>
-          ) : (
-            <Link
-              href={offer.primaryCta.href}
-              data-cta="commercial-banner-custom"
-              data-cta-slug={slug}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '4px',
-                color: 'rgba(255,255,255,0.78)',
-                fontSize: '0.85rem',
-                fontWeight: 500,
-                textDecoration: 'underline',
-                textDecorationColor: 'rgba(255,255,255,0.35)',
-                textUnderlineOffset: '3px',
-                padding: '2px 0',
-              }}
-            >
-              {offer.primaryCta.label}
-              <span aria-hidden="true">→</span>
-            </Link>
-          )}
-        </div>
+        <CatalogCustomCtaButtons
+          variant="banner"
+          buttons={[
+            { label: offer.secondaryCta.label, href: offer.secondaryCta.href },
+            {
+              label: offer.primaryCta.label.includes('Quote')
+                ? 'Request Custom Quote'
+                : offer.primaryCta.label,
+              href: offer.primaryCta.href,
+            },
+          ]}
+          utmMedium="commercial-banner"
+          slug={slug}
+          className="!justify-start"
+        />
         <div
           style={{
             display: 'flex',

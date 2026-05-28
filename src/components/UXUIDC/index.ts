@@ -27,6 +27,8 @@ export type { PublicationData } from './PublicationCard';
 export { default as UXUIDCAnimatedCounter } from './AnimatedCounter';
 export { default as UXUIDCAnimatedFAQ } from './AnimatedFAQ';
 export { default as UXUIDCStartProjectCTA } from './StartProjectCTA';
+export { default as CatalogCustomCtaButtons } from './CatalogCustomCtaButtons';
+export { default as PageClosingCta } from './PageClosingCta';
 export { default as UXUIDCEducationalSalesBanner, getEducationalOffer } from './EducationalSalesBanner';
 export type { EducationalSalesOffer } from './EducationalSalesBanner';
 export { default as CatalogGeneLookup, getCatalogLookup, hasEducationalCatalogMap } from './CatalogGeneLookup';

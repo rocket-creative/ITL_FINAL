@@ -1,6 +1,8 @@
 'use client';
 
 import { useRef } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -189,7 +191,7 @@ export default function TechnologiesPage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request a Quote</span>
+                    <span>Request Custom Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
@@ -393,37 +395,7 @@ export default function TechnologiesPage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Our scientific consultants can help you select the optimal technology approach for your research goals. From allele design through study ready animals, ingenious targeting laboratory provides comprehensive technical expertise.
             </p>
-            <div className="animate-in flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
-              <Link
-                href="/request-quote"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{
-                  backgroundColor: '#008080',
-                  color: 'white',
-                  padding: '12px 24px',
-                  fontSize: '.9rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Request a Quote</span>
-                <span>→</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                style={{
-                  backgroundColor: 'transparent',
-                  color: 'white',
-                  padding: '12px 24px',
-                  border: '2px solid white',
-                  fontSize: '.9rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Free Consultation</span>
-                <span>→</span>
-              </Link>
-            </div>
+            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="technologies" />
           </div>
         </section>
 

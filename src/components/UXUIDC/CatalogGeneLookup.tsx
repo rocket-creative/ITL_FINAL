@@ -1,17 +1,22 @@
 /**
  * |UXUIDC| Catalog Gene Lookup
  *
- * Mid-article widget that pivots a researcher reading educational content
- * into the off-the-shelf catalog. Two halves:
- *  - Left: a "Search the catalog" prompt with a pre-filled query link
- *  - Right: 3 hero genes hand-picked per topic, each linking to its
- *           catalog gene page (/all-catalog-mouse-models/gene/[geneName]/)
+ * Mid-article widget with equal catalog + custom paths (50/50 columns).
+ *  - Left: ready-to-ship catalog search, hero genes, catalog CTA
+ *  - Right: custom model services, bullets, quote + services CTAs
  *
  * Per-slug data lives below as the single source of truth. Slugs match
  * both blog and glossary surfaces.
  */
 
+import type { CSSProperties } from 'react';
 import Link from 'next/link';
+import {
+  CATALOG_OR_CUSTOM_WIDGET_INTRO,
+  COMMERCIAL_LINKS,
+  CUSTOM_MODEL_PANEL,
+  commercialUtmHref,
+} from '@/data/commercialCtas';
 
 export interface CatalogGene {
   /** Gene symbol shown to user (case as published, e.g. "Trp53") */
@@ -38,10 +43,10 @@ export interface CatalogLookup {
 }
 
 const DEFAULT_LOOKUP: CatalogLookup = {
-  eyebrow: 'Catalog first',
+  eyebrow: 'Ready to ship',
   headline: 'Search 14,774 strains. Many ship from live colonies.',
   subline:
-    'Browse by gene, model type, or therapeutic area. If your allele is not listed, our scientists deliver custom knockouts, knockins, and humanized mice.',
+    'Browse by gene, model type, or therapeutic area. Live colonies available for many top requested knockouts, knockins, and humanized lines.',
   searchHref: '/all-catalog-mouse-models/',
   searchLabel: 'Browse Full Catalog',
   genes: [
@@ -54,7 +59,7 @@ const DEFAULT_LOOKUP: CatalogLookup = {
 const LOOKUP_MAP: Record<string, CatalogLookup> = {
   // POINT MUTATION cluster
   'what-is-a-point-mutation': {
-    eyebrow: 'Catalog first',
+    eyebrow: 'Catalog Models',
     headline: 'Point mutation knockins. Check live colonies before you plan a build.',
     subline:
       'Hundreds of disease variant knockin models are in stock. Search by gene or browse popular hits. Need a unique variant? We design custom knockins.',
@@ -418,185 +423,230 @@ interface Props {
   slug: string;
 }
 
+const panelEyebrow: CSSProperties = {
+  fontSize: '0.7rem',
+  fontWeight: 700,
+  letterSpacing: '1.4px',
+  textTransform: 'uppercase',
+  marginBottom: '8px',
+};
+
+const panelTitle: CSSProperties = {
+  color: '#0a253c',
+  fontFamily: 'Poppins, sans-serif',
+  fontSize: '1.15rem',
+  fontWeight: 700,
+  lineHeight: 1.3,
+  margin: '0 0 8px 0',
+};
+
+const panelBody: CSSProperties = {
+  color: '#444',
+  fontFamily: 'Lato, -apple-system, sans-serif',
+  fontSize: '0.9rem',
+  lineHeight: 1.6,
+  margin: '0 0 16px 0',
+};
+
+const panelBtn: CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '8px',
+  width: '100%',
+  padding: '12px 20px',
+  borderRadius: '4px',
+  textDecoration: 'none',
+  fontWeight: 600,
+  fontSize: '0.88rem',
+  letterSpacing: '0.3px',
+  boxSizing: 'border-box',
+};
+
 export default function CatalogGeneLookup({ slug }: Props) {
   const lookup = getCatalogLookup(slug);
+  const catalogSearchUrl = `${lookup.searchHref}${lookup.searchHref.includes('?') ? '&' : '?'}utm_source=organic&utm_medium=educational&utm_campaign=catalog-search-${slug}`;
+  const quoteUrl = commercialUtmHref(COMMERCIAL_LINKS.requestQuote, {
+    source: 'organic',
+    medium: 'educational',
+    campaign: `catalog-widget-custom-${slug}`,
+  });
 
   return (
     <aside
-      aria-label="Catalog model lookup"
+      aria-label="Catalog or custom mouse model options"
       style={{
         margin: '2.5rem 0',
         padding: '24px',
         backgroundColor: '#f7f9fa',
         border: '1px solid #d8e3e6',
-        borderLeft: '4px solid #008080',
         borderRadius: '6px',
       }}
     >
-      <div
-        style={{
-          color: '#008080',
-          fontSize: '0.7rem',
-          fontWeight: 700,
-          letterSpacing: '1.4px',
-          textTransform: 'uppercase',
-          marginBottom: '8px',
-        }}
-      >
-        {lookup.eyebrow}
+      <div style={{ marginBottom: '20px', textAlign: 'center' }}>
+        <div style={{ ...panelEyebrow, color: '#0a253c' }}>{CATALOG_OR_CUSTOM_WIDGET_INTRO.eyebrow}</div>
+        <h3
+          style={{
+            ...panelTitle,
+            fontSize: '1.35rem',
+            marginBottom: '6px',
+          }}
+        >
+          {CATALOG_OR_CUSTOM_WIDGET_INTRO.headline}
+        </h3>
+        <p style={{ ...panelBody, marginBottom: 0, maxWidth: '640px', margin: '0 auto' }}>
+          {CATALOG_OR_CUSTOM_WIDGET_INTRO.subline}
+        </p>
       </div>
-      <h3
-        style={{
-          color: '#0a253c',
-          fontFamily: 'Poppins, sans-serif',
-          fontSize: '1.25rem',
-          fontWeight: 700,
-          lineHeight: 1.3,
-          margin: '0 0 8px 0',
-        }}
-      >
-        {lookup.headline}
-      </h3>
-      <p
-        style={{
-          color: '#444',
-          fontFamily: 'Lato, -apple-system, sans-serif',
-          fontSize: '0.95rem',
-          lineHeight: 1.6,
-          margin: '0 0 18px 0',
-        }}
-      >
-        {lookup.subline}
-      </p>
 
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: '10px',
-          marginBottom: '18px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '16px',
+          alignItems: 'stretch',
         }}
       >
-        {lookup.genes.map((gene) => (
-          <Link
-            key={gene.slug}
-            href={`/all-catalog-mouse-models/gene/${gene.slug}/?utm_source=organic&utm_medium=educational&utm_campaign=catalog-gene-${slug}`}
-            data-cta="catalog-gene-chip"
-            data-cta-slug={slug}
-            data-cta-gene={gene.symbol}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '4px',
-              padding: '12px 14px',
-              backgroundColor: '#ffffff',
-              border: '1px solid #d8e3e6',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              transition: 'border-color 0.15s ease',
-            }}
-          >
-            <span
-              style={{
-                color: '#0a253c',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '0.95rem',
-                fontWeight: 700,
-                fontStyle: 'italic',
-              }}
-            >
-              {gene.symbol}
-            </span>
-            <span
-              style={{
-                color: '#555',
-                fontSize: '0.78rem',
-                lineHeight: 1.4,
-              }}
-            >
-              {gene.blurb}
-            </span>
-          </Link>
-        ))}
-      </div>
-
-      <Link
-        href={`${lookup.searchHref}${lookup.searchHref.includes('?') ? '&' : '?'}utm_source=organic&utm_medium=educational&utm_campaign=catalog-search-${slug}`}
-        data-cta="catalog-search"
-        data-cta-slug={slug}
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '8px',
-          backgroundColor: '#008080',
-          color: '#ffffff',
-          padding: '10px 18px',
-          borderRadius: '4px',
-          textDecoration: 'none',
-          fontWeight: 600,
-          fontSize: '0.88rem',
-          letterSpacing: '0.3px',
-        }}
-      >
-        {lookup.searchLabel}
-        <span aria-hidden="true">→</span>
-      </Link>
-
-      <div
-        style={{
-          marginTop: '22px',
-          paddingTop: '18px',
-          borderTop: '1px solid #d8e3e6',
-        }}
-      >
-        <p
+        {/* Catalog path — equal column */}
+        <section
+          aria-label="Browse catalog models"
           style={{
-            margin: '0 0 10px 0',
-            color: '#444',
-            fontFamily: 'Lato, -apple-system, sans-serif',
-            fontSize: '0.9rem',
-            lineHeight: 1.5,
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '20px',
+            backgroundColor: '#ffffff',
+            border: '1px solid #d8e3e6',
+            borderLeft: '4px solid #008080',
+            borderRadius: '6px',
           }}
         >
-          Do not see your allele? Same team builds custom models with guaranteed germline transmission.
-        </p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center' }}>
+          <div style={{ ...panelEyebrow, color: '#008080' }}>{lookup.eyebrow}</div>
+          <h4 style={panelTitle}>{lookup.headline}</h4>
+          <p style={panelBody}>{lookup.subline}</p>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr',
+              gap: '8px',
+              marginBottom: '16px',
+              flex: 1,
+            }}
+          >
+            {lookup.genes.map((gene) => (
+              <Link
+                key={gene.slug}
+                href={`/all-catalog-mouse-models/gene/${gene.slug}/?utm_source=organic&utm_medium=educational&utm_campaign=catalog-gene-${slug}`}
+                data-cta="catalog-gene-chip"
+                data-cta-slug={slug}
+                data-cta-gene={gene.symbol}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '4px',
+                  padding: '12px 14px',
+                  backgroundColor: '#f7f9fa',
+                  border: '1px solid #d8e3e6',
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                }}
+              >
+                <span
+                  style={{
+                    color: '#0a253c',
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '0.95rem',
+                    fontWeight: 700,
+                    fontStyle: 'italic',
+                  }}
+                >
+                  {gene.symbol}
+                </span>
+                <span style={{ color: '#555', fontSize: '0.78rem', lineHeight: 1.4 }}>{gene.blurb}</span>
+              </Link>
+            ))}
+          </div>
+
           <Link
-            href={`/request-quote?utm_source=organic&utm_medium=educational&utm_campaign=catalog-widget-custom-${slug}`}
+            href={catalogSearchUrl}
+            data-cta="catalog-search"
+            data-cta-slug={slug}
+            style={{
+              ...panelBtn,
+              backgroundColor: '#008080',
+              color: '#ffffff',
+              marginTop: 'auto',
+            }}
+          >
+            {lookup.searchLabel}
+            <span aria-hidden="true">→</span>
+          </Link>
+        </section>
+
+        {/* Custom path — equal column */}
+        <section
+          aria-label="Request a custom mouse model"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '20px',
+            backgroundColor: '#ffffff',
+            border: '1px solid #d8e3e6',
+            borderLeft: '4px solid #0a253c',
+            borderRadius: '6px',
+          }}
+        >
+          <div style={{ ...panelEyebrow, color: '#0a253c' }}>{CUSTOM_MODEL_PANEL.eyebrow}</div>
+          <h4 style={panelTitle}>{CUSTOM_MODEL_PANEL.headline}</h4>
+          <p style={panelBody}>{CUSTOM_MODEL_PANEL.subline}</p>
+
+          <ul
+            style={{
+              margin: '0 0 16px 0',
+              paddingLeft: '18px',
+              color: '#444',
+              fontFamily: 'Lato, -apple-system, sans-serif',
+              fontSize: '0.88rem',
+              lineHeight: 1.65,
+              flex: 1,
+            }}
+          >
+            {CUSTOM_MODEL_PANEL.bullets.map((item) => (
+              <li key={item} style={{ marginBottom: '6px' }}>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <Link
+            href={quoteUrl}
             data-cta="catalog-widget-request-quote"
             data-cta-slug={slug}
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
+              ...panelBtn,
               backgroundColor: '#0a253c',
               color: '#ffffff',
-              padding: '9px 16px',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontWeight: 600,
-              fontSize: '0.85rem',
+              marginBottom: '10px',
             }}
           >
-            Request a Quote
+            {CUSTOM_MODEL_PANEL.quoteLabel}
             <span aria-hidden="true">→</span>
           </Link>
           <Link
-            href="/custom-mouse-models"
+            href={COMMERCIAL_LINKS.customHub}
+            data-cta="catalog-widget-custom-services"
+            data-cta-slug={slug}
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              color: '#008080',
-              fontWeight: 600,
-              fontSize: '0.85rem',
-              textDecoration: 'underline',
-              textUnderlineOffset: '3px',
+              ...panelBtn,
+              backgroundColor: 'transparent',
+              color: '#0a253c',
+              border: '2px solid #0a253c',
             }}
           >
-            Custom model services
+            {CUSTOM_MODEL_PANEL.servicesLabel}
+            <span aria-hidden="true">→</span>
           </Link>
-        </div>
+        </section>
       </div>
     </aside>
   );

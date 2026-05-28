@@ -6,6 +6,8 @@
  */
 
 import { useEffect, useRef, useState } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
@@ -848,7 +850,7 @@ export default function StartYourProjectPage() {
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                Request a Custom Quote
+                Request Custom Quote
                 <IconArrowRight size={16} color="#008080" />
               </Link>
               <Link

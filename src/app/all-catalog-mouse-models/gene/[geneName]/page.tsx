@@ -5,6 +5,8 @@
  */
 
 import type { Metadata } from 'next';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes } from '@/lib/catalog/serverCatalog';
@@ -392,7 +394,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                   borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
                 }}
               >
-                Request a Quote <IconChevronRight size={16} color="#fff" />
+                Request Custom Quote <IconChevronRight size={16} color="#fff" />
               </Link>
               <Link
                 href="/all-catalog-mouse-models"
@@ -702,29 +704,20 @@ export default async function GenePage({ params, searchParams }: Props) {
                 ? `Get a confirmed quote in 24 hours. All ${geneName} models ship with full QC documentation, health certificates, and lifetime technical support.`
                 : `Our team can deliver a custom ${geneName} mouse model with fast turnaround. Competitive pricing, expert project management, and full QC documentation included.`}
             </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <Link
-                href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}`}
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: '8px',
-                  background: '#fff', color: '#008080', padding: '14px 28px',
-                  borderRadius: '6px', fontSize: '.9rem', fontWeight: 700, textDecoration: 'none',
-                }}
-              >
-                {hasLiveModels ? 'Order Now' : 'Get a Custom Quote'} <IconChevronRight size={16} color="#008080" />
-              </Link>
-              <Link
-                href="/request-quote"
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: '8px',
-                  background: 'transparent', color: '#fff', padding: '14px 28px',
-                  borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
-                  border: '2px solid rgba(255,255,255,0.5)',
-                }}
-              >
-                Request a Quote
-              </Link>
-            </div>
+            <CatalogCustomCtaButtons
+              variant="banner"
+              utmMedium="gene-page-closing"
+              slug={geneName}
+              buttons={[
+                {
+                  label: hasLiveModels ? 'Order Catalog Model' : 'Browse 14,774+ Catalog Models',
+                  href: hasLiveModels
+                    ? `/order-catalog-models?gene=${encodeURIComponent(geneName)}`
+                    : '/all-catalog-mouse-models',
+                },
+                { label: 'Request Custom Quote', href: '/request-quote' },
+              ]}
+            />
           </div>
         </section>
 

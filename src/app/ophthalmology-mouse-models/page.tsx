@@ -1,6 +1,8 @@
 'use client';
 
 import { useRef } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -256,7 +258,22 @@ export default function OphthalmologyMouseModelsPage() {
                 </p>
 
                 <div className="hero-animate flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-                  <Link
+                                <Link
+                href="/all-catalog-mouse-models"
+                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{
+                  backgroundColor: '#008080',
+                  color: 'white',
+                  padding: '10px 16px',
+                  minWidth: '160px',
+                  fontSize: '.85rem',
+                  fontWeight: 500
+                }}
+              >
+                <span>Browse 14,774+ Catalog Models</span>
+                <span>→</span>
+              </Link>
+<Link
                     href="/request-quote"
                     className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{
@@ -268,7 +285,7 @@ export default function OphthalmologyMouseModelsPage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request a Quote</span>
+                    <span>Request Custom Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
@@ -741,37 +758,7 @@ export default function OphthalmologyMouseModelsPage() {
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
               Ready to discuss custom mouse models for your eye disease research? Our scientific team provides complimentary consultation to help you design the optimal model for your ophthalmology research goals.
             </p>
-            <div className="animate-in flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
-              <Link
-                href="/request-quote"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{
-                  backgroundColor: '#008080',
-                  color: 'white',
-                  padding: '12px 24px',
-                  fontSize: '.9rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Request a Quote</span>
-                <span>→</span>
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                style={{
-                  backgroundColor: 'transparent',
-                  color: 'white',
-                  padding: '12px 24px',
-                  border: '2px solid white',
-                  fontSize: '.9rem',
-                  fontWeight: 500
-                }}
-              >
-                <span>Free Consultation</span>
-                <span>→</span>
-              </Link>
-            </div>
+            <CatalogCustomCtaButtons variant="dark" utmMedium="page-closing" slug="ophthalmology-mouse-models" />
           </div>
         </section>
 

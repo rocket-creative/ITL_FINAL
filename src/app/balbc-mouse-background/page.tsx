@@ -1,6 +1,10 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import PageClosingCta from '@/components/UXUIDC/PageClosingCta';
+
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import { makeFooterCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -313,7 +317,7 @@ export default function BALBcMouseBackgroundPage() {
                 textDecoration: 'none',
                 transition: 'background 0.2s ease'
               }}>
-                Request a Quote
+                Request Custom Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link href="/c57bl6-mouse-background" style={{
@@ -710,60 +714,7 @@ export default function BALBcMouseBackgroundPage() {
         {/* Testimonials Section */}
         <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
-        {/* CTA Section */}
-        <section style={{ background: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#ffffff',
-              marginBottom: '16px'
-            }}>
-              {ctaData.title}
-            </h2>
-            <p className="animate-in" style={{
-              fontSize: '.9rem',
-              color: 'rgba(255,255,255,0.9)',
-              marginBottom: '30px',
-              lineHeight: 1.7
-            }}>
-              {ctaData.description}
-            </p>
-            <div className="animate-in" style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href={ctaData.primaryButton.href} style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: '#ffffff',
-                color: '#008080',
-                padding: '14px 28px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                {ctaData.primaryButton.label}
-                <IconChevronRight size={16} color="#008080" />
-              </Link>
-              <Link href={ctaData.secondaryButton.href} style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'transparent',
-                color: '#ffffff',
-                padding: '14px 28px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                border: '2px solid rgba(255,255,255,0.3)'
-              }}>
-                {ctaData.secondaryButton.label}
-              </Link>
-            </div>
-          </div>
-        </section>
+        <PageClosingCta title={ctaData.title} description={ctaData.description} slug="balbc-mouse-background" />
 
         {/* FAQ Section */}
         <section style={{ background: '#ffffff', padding: '60px 20px' }}>

@@ -2,15 +2,15 @@
 
 /**
  * |UXUIDC| Start Project CTA Section
- * Catalog first → custom when ready dual path.
+ * Catalog first → custom when ready dual path (equal weight buttons).
  */
 
-import Link from 'next/link';
 import {
-  CtaButton,
   startProjectDefaults,
   withCatalogBridge,
+  type CtaButton,
 } from '@/data/commercialCtas';
+import CatalogCustomCtaButtons from './CatalogCustomCtaButtons';
 
 interface StartProjectCTAProps {
   title?: string;
@@ -58,28 +58,7 @@ export default function UXUIDCStartProjectCTA({
           {body}
         </p>
 
-        <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center">
-          {buttons.map((btn, i) => (
-            <Link
-              key={`${btn.href}-${btn.label}`}
-              href={btn.href}
-              className="group inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-              style={{
-                backgroundColor: i === 0 ? '#008080' : 'transparent',
-                color: 'white',
-                padding: '12px 24px',
-                border: i === 0 ? 'none' : '2px solid rgba(255,255,255,0.4)',
-                fontFamily: 'var(--system-ui)',
-                fontSize: '.9rem',
-                fontWeight: 500,
-                borderRadius: '4px',
-              }}
-            >
-              <span>{btn.label}</span>
-              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </Link>
-          ))}
-        </div>
+        <CatalogCustomCtaButtons variant="dark" buttons={buttons} utmMedium="start-project-cta" />
       </div>
     </section>
   );

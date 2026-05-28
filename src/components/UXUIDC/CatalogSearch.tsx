@@ -355,13 +355,21 @@ export function CatalogSearch({
           {results.length === 0 && !isSearching && searchTerm && (
             <div style={{ textAlign: 'center', padding: '40px 20px', background: '#f9f9f9', borderRadius: '8px' }}>
               <p style={{ margin: '0 0 16px', color: '#666', fontSize: '.95rem' }}>No models found matching your search criteria.</p>
-              <p style={{ margin: '0 0 20px', color: '#999', fontSize: '.85rem' }}>Try a different gene name or keyword, or contact us for custom model development.</p>
-              <Link href="/custom-mouse-models" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', background: '#008080', color: '#fff', borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none' }}>
-                Explore Custom Models
-                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
+              <p style={{ margin: '0 0 20px', color: '#999', fontSize: '.85rem' }}>Try a different gene name or keyword, or request a custom knockout, knockin, or humanized line.</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
+                <Link href="/all-catalog-mouse-models" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', background: '#008080', color: '#fff', borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none' }}>
+                  Browse 14,774+ Catalog Models
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+                <Link href="/request-quote" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', background: '#0a253c', color: '#fff', borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none' }}>
+                  Request Custom Quote
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           )}
 

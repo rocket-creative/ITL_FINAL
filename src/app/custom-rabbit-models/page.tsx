@@ -5,6 +5,8 @@
  */
 
 import { useEffect, useRef } from 'react';
+import CatalogCustomCtaButtons from '@/components/UXUIDC/CatalogCustomCtaButtons';
+
 import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -232,7 +234,7 @@ export default function CustomRabbitModelsPage() {
           content="Contact our scientific team to explore custom rabbit model options for your research."
           buttons={[
             { label: 'Contact Us', href: '/contact' },
-            { label: 'Request a Quote', href: '/request-quote' },
+            { label: 'Request Custom Quote', href: '/request-quote' },
           ]}
         />
       </main>
