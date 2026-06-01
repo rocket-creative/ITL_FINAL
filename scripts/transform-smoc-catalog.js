@@ -5,9 +5,10 @@
  * to ITL format, extracts gene names, and outputs a Google Sheets-ready CSV.
  *
  * Usage:
- *   node scripts/transform-smoc-catalog.js
+ *   node scripts/transform-smoc-catalog.js [path-to-smoc-export.csv]
  *
- * Input:  ~/Downloads/total and humanized 2026.1.16.xlsx - Total.csv
+ * Input:  first CLI arg, else SMOC_CSV env var, else the default Downloads path
+ *         (~/Downloads/total and humanized 2026.1.16.xlsx - Total.csv)
  * Output: scripts/data/itl-catalog-ready.csv
  *
  * Then upload to Google Sheets:
@@ -20,13 +21,27 @@
 const fs   = require('fs');
 const path = require('path');
 
-const INPUT_PATH = path.join(
+const DEFAULT_INPUT_PATH = path.join(
   process.env.HOME || '',
   'Downloads',
   'total and humanized 2026.1.16.xlsx - Total.csv'
 );
+
+// Resolve the SMOC export: CLI arg > SMOC_CSV env var > default Downloads path.
+const INPUT_PATH = path.resolve(
+  process.argv[2] || process.env.SMOC_CSV || DEFAULT_INPUT_PATH
+);
 const OUTPUT_DIR  = path.join(__dirname, 'data');
 const OUTPUT_PATH = path.join(OUTPUT_DIR, 'itl-catalog-ready.csv');
+
+// Best-effort export date detection from the filename (e.g. "2026.1.16" or "2026-01-16").
+function detectExportDate(filePath) {
+  const name = path.basename(filePath);
+  const m = name.match(/(\d{4})[.\-_/](\d{1,2})[.\-_/](\d{1,2})/);
+  if (!m) return null;
+  const [, y, mo, d] = m;
+  return `${y}-${String(mo).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+}
 
 // ─── Model type lookup (from SMOC type code) ──────────────────────────────────
 const MODEL_TYPE_MAP = {
@@ -104,9 +119,15 @@ function toCSVRow(fields) { return fields.map(csvField).join(','); }
 function main() {
   if (!fs.existsSync(INPUT_PATH)) {
     console.error(`\nERROR: Input file not found:\n  ${INPUT_PATH}\n`);
+    console.error('Pass the SMOC export path as the first argument, e.g.:');
+    console.error('  node scripts/transform-smoc-catalog.js "/path/to/SMOC export.csv"\n');
     process.exit(1);
   }
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+
+  const exportDate = detectExportDate(INPUT_PATH);
+  console.log(`\nSMOC export:  ${INPUT_PATH}`);
+  console.log(`Export date:  ${exportDate ?? 'unknown (no date in filename)'}`);
 
   const lines     = fs.readFileSync(INPUT_PATH, 'utf8').split('\n').filter(l => l.trim());
   const dataLines = lines.slice(1); // skip SMOC header row

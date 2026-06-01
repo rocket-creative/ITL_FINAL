@@ -9,20 +9,35 @@
  *   node scripts/upload-catalog-to-supabase.js
  *
  *   OR: add both vars to .env.local and run:
- *   node -r dotenv/config scripts/upload-catalog-to-supabase.js
+ *   node scripts/upload-catalog-to-supabase.js
  *
- * NOTE: Supabase anon key can INSERT if RLS allows it.
- * If you get a permission error, use your SERVICE_ROLE_KEY instead of ANON_KEY.
+ * NOTE: The Supabase anon key CANNOT write while RLS only allows public SELECT
+ * (see scripts/supabase-schema.sql). Set SUPABASE_SERVICE_ROLE_KEY in .env.local
+ * for the delete/insert to succeed.
  */
-
-// Load .env.local automatically if present
-try {
-  require('dotenv').config({ path: require('path').join(__dirname, '..', '.env.local') });
-} catch { /* dotenv optional */ }
 
 const fs   = require('fs');
 const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
+
+// Load .env.local without requiring the optional `dotenv` package.
+function loadEnvLocal() {
+  const envPath = path.join(__dirname, '..', '.env.local');
+  if (!fs.existsSync(envPath)) return;
+  for (const rawLine of fs.readFileSync(envPath, 'utf8').split('\n')) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith('#')) continue;
+    const eq = line.indexOf('=');
+    if (eq === -1) continue;
+    const key = line.slice(0, eq).trim();
+    let val = line.slice(eq + 1).trim();
+    if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+      val = val.slice(1, -1);
+    }
+    if (key && process.env[key] === undefined) process.env[key] = val;
+  }
+}
+loadEnvLocal();
 
 const CSV_PATH = path.join(__dirname, 'data', 'itl-catalog-ready.csv');
 const BATCH    = 500;
@@ -43,11 +58,16 @@ function parseCSVLine(line) {
 
 async function main() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  // Prefer the service-role key: RLS only grants public SELECT, so the anon key cannot delete/insert.
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (!url || !key) {
-    console.error('\nERROR: Missing Supabase credentials.\nSet NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY (or SUPABASE_SERVICE_ROLE_KEY).\n');
+    console.error('\nERROR: Missing Supabase credentials.\nSet NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in .env.local.\n');
     process.exit(1);
+  }
+  if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    console.warn('\nWARNING: SUPABASE_SERVICE_ROLE_KEY not set; using anon key.');
+    console.warn('Writes will fail unless RLS allows it. Set SUPABASE_SERVICE_ROLE_KEY in .env.local.\n');
   }
   if (!fs.existsSync(CSV_PATH)) {
     console.error(`\nERROR: CSV not found. Run first:\n  node scripts/transform-smoc-catalog.js\n`);

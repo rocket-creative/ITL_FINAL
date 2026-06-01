@@ -57,6 +57,17 @@ function rowToCatalogPayload(r: DbCatalogRow): CatalogPayload {
   };
 }
 
+/** Returns the digit run if the query looks like a catalog number ("KI 253470", "KI253470", "253470"). */
+function catalogNumberDigits(raw: string): string | null {
+  const m = raw.match(/\d{4,}/);
+  return m ? m[0] : null;
+}
+
+/** Strip characters that break PostgREST .or() syntax; keep letters, digits, spaces, hyphens. */
+function sanitizeForOr(s: string): string {
+  return s.replace(/[(),%*]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
 function readableMod(mt: string): string {
   if (mt === 'Conditional Knockout') return 'Conditional knockout';
   if (mt === 'Knockout') return 'Knockout';
@@ -147,10 +158,14 @@ async function tieredFallback(
   const compact = rawTrim.replace(/\s+/g, '').replace(/%/g, '');
   const q3 = compact.length > 2 ? compact.slice(0, 40) : rawTrim.slice(0, 20).replace(/%/g, '');
   if (q3.length > 2) {
+    const conds = [`model_abbreviation.ilike.%${q3}%`, `itl_catalog_number.ilike.%${q3}%`];
+    // Preserve the spaced form so "KI 253470" still matches the stored value.
+    const rawSafe = sanitizeForOr(rawTrim);
+    if (rawSafe && rawSafe !== q3) conds.push(`itl_catalog_number.ilike.%${rawSafe}%`);
     const { data: t3 } = await supabase
       .from('catalog_models')
       .select(ROW_FIELDS)
-      .or(`model_abbreviation.ilike.%${q3}%,itl_catalog_number.ilike.%${q3}%`)
+      .or(conds.join(','))
       .order('gene_name')
       .limit(cap);
 
@@ -183,10 +198,27 @@ async function mergedCatalogResults(
     }
   };
 
+  // Catalog-number queries first, so the cap is not consumed by unrelated gene hits.
+  // Numbers are stored with a prefix + space ("KI 253470"); match both the raw form
+  // and the digit run so "KI 253470", "KI253470" and "253470" all resolve.
+  const catNum = catalogNumberDigits(rawQuery);
+  if (catNum) {
+    const rawSafe = sanitizeForOr(rawQuery.trim());
+    const conds = [`itl_catalog_number.ilike.%${catNum}%`];
+    if (rawSafe && rawSafe !== catNum) conds.unshift(`itl_catalog_number.ilike.%${rawSafe}%`);
+    const { data } = await supabase
+      .from('catalog_models')
+      .select(ROW_FIELDS)
+      .or(conds.join(','))
+      .order('gene_name')
+      .limit(limit);
+    pushRows((data ?? []) as DbCatalogRow[]);
+  }
+
   const gene = parsed.geneCandidates[0];
   const mod = parsed.modificationTypes[0];
 
-  if (gene && mod) {
+  if (rows.length < limit && gene && mod) {
     const boost = await fetchGeneModBoost(gene, mod, limit);
     pushRows(boost);
   }

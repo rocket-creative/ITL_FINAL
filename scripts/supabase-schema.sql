@@ -17,10 +17,11 @@ CREATE TABLE IF NOT EXISTS catalog_models (
   itl_catalog_number  TEXT NOT NULL DEFAULT '',
 
   -- Auto-computed full-text search vector
-  -- gene_name weighted A (highest), model_abbreviation B, type/category C/D
+  -- gene_name weighted A (highest), model_abbreviation B, catalog number / type / category C/D
   search_vector TSVECTOR GENERATED ALWAYS AS (
     setweight(to_tsvector('simple', coalesce(gene_name, '')),           'A') ||
     setweight(to_tsvector('simple', coalesce(model_abbreviation, '')), 'B') ||
+    setweight(to_tsvector('simple', coalesce(itl_catalog_number, '')), 'C') ||
     setweight(to_tsvector('simple', coalesce(model_type, '')),         'C') ||
     setweight(to_tsvector('simple', coalesce(category, '')),           'D')
   ) STORED,
