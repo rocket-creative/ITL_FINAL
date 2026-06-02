@@ -11,6 +11,7 @@ export const dynamic = 'force-dynamic';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllModels } from '@/lib/catalog/serverCatalog';
+import { availabilityColor } from '@/lib/catalog/availability';
 import { buildStandalonePageMetadata } from '@/lib/seo';
 import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
@@ -309,21 +310,11 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                                 <span style={{
                                   display: 'inline-flex', alignItems: 'center', gap: '5px',
                                   fontSize: '.78rem',
-                                  color: (() => {
-                                    const a = model.availability.toLowerCase();
-                                    if (a.includes('live')) return '#2e7d32';
-                                    if (a.includes('sperm') || a.includes('embryo') || a.includes('cryo')) return '#e65100';
-                                    return '#555';
-                                  })(),
+                                  color: availabilityColor(model.availability),
                                 }}>
                                   <span style={{
                                     width: '6px', height: '6px', borderRadius: '50%', flexShrink: 0,
-                                    background: (() => {
-                                      const a = model.availability.toLowerCase();
-                                      if (a.includes('live')) return '#2e7d32';
-                                      if (a.includes('sperm') || a.includes('embryo') || a.includes('cryo')) return '#e65100';
-                                      return '#555';
-                                    })(),
+                                    background: availabilityColor(model.availability),
                                   }} />
                                   {model.availability}
                                 </span>

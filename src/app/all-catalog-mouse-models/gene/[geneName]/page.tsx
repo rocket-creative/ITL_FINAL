@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
+import { availabilityColor } from '@/lib/catalog/availability';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 
@@ -158,13 +159,6 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     },
     twitter: { card: 'summary_large_image', title, description },
   };
-}
-
-function getAvailabilityColor(a: string): string {
-  const v = (a || '').toLowerCase();
-  if (v.includes('live')) return '#2e7d32';
-  if (v.includes('sperm') || v.includes('embryo') || v.includes('cryo')) return '#e65100';
-  return '#555';
 }
 
 export default async function GenePage({ params, searchParams }: Props) {
@@ -466,8 +460,8 @@ export default async function GenePage({ params, searchParams }: Props) {
                         {model.category || 'N/A'}
                       </td>
                       <td style={{ padding: '14px 16px', whiteSpace: 'nowrap' }}>
-                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '.85rem', color: getAvailabilityColor(model.availability) }}>
-                          <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: getAvailabilityColor(model.availability), flexShrink: 0 }} />
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '.85rem', color: availabilityColor(model.availability) }}>
+                          <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: availabilityColor(model.availability), flexShrink: 0 }} />
                           {model.availability || 'Inquire'}
                         </span>
                       </td>

@@ -10,6 +10,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
+import { availabilityColor, isDeveloping } from '@/lib/catalog/availability';
 
 export interface CatalogModel {
   id: string;
@@ -57,15 +58,16 @@ export function CatalogSearch({
   const [isSearching, setIsSearching]       = useState(false);
   const [hasSearched, setHasSearched]       = useState(preloadedModels.length > 0 && !!initialQuery);
   const [error, setError]                   = useState<string | null>(null);
-  const [availabilityFilter, setAvailabilityFilter] = useState<'all' | 'live' | 'sperm' | 'embryo'>('all');
+  const [availabilityFilter, setAvailabilityFilter] = useState<'all' | 'live' | 'sperm' | 'embryo' | 'developing'>('all');
   const searchInputRef                      = useRef<HTMLInputElement>(null);
   const debounceRef                         = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const filteredResults = results.filter((m) => {
-    if (availabilityFilter === 'all')    return true;
-    if (availabilityFilter === 'live')   return (m.availability || '').toLowerCase().includes('live');
-    if (availabilityFilter === 'sperm')  return (m.availability || '').toLowerCase().includes('sperm');
-    if (availabilityFilter === 'embryo') return (m.availability || '').toLowerCase().includes('embryo');
+    if (availabilityFilter === 'all')        return true;
+    if (availabilityFilter === 'developing') return isDeveloping(m.availability);
+    if (availabilityFilter === 'live')       return (m.availability || '').toLowerCase().includes('live');
+    if (availabilityFilter === 'sperm')      return (m.availability || '').toLowerCase().includes('sperm');
+    if (availabilityFilter === 'embryo')     return (m.availability || '').toLowerCase().includes('embryo');
     return true;
   });
 
@@ -247,10 +249,11 @@ export function CatalogSearch({
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
               {(
                 [
-                  { key: 'all',    label: 'All',         color: '#008080' },
-                  { key: 'live',   label: 'Live',        color: '#2e7d32' },
-                  { key: 'sperm',  label: 'Sperm Cryo',  color: '#e65100' },
-                  { key: 'embryo', label: 'Embryo Cryo', color: '#e65100' },
+                  { key: 'all',        label: 'All',            color: '#008080' },
+                  { key: 'live',       label: 'Live',           color: '#2e7d32' },
+                  { key: 'sperm',      label: 'Sperm Cryo',     color: '#e65100' },
+                  { key: 'embryo',     label: 'Embryo Cryo',    color: '#e65100' },
+                  { key: 'developing', label: 'Developing',     color: '#546e7a' },
                 ] as const
               ).map(({ key, label, color }) => {
                 const isActive = availabilityFilter === key;
@@ -318,8 +321,8 @@ export function CatalogSearch({
                         {model.category || 'N/A'}
                       </td>
                       <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', minWidth: '120px' }}>
-                        <span style={{ display: 'inline-flex', alignItems: 'flex-start', gap: '6px', fontSize: '.85rem', color: getAvailabilityColor(model.availability) }}>
-                          <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: getAvailabilityColor(model.availability), flexShrink: 0, marginTop: '4px' }} />
+                        <span style={{ display: 'inline-flex', alignItems: 'flex-start', gap: '6px', fontSize: '.85rem', color: availabilityColor(model.availability) }}>
+                          <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: availabilityColor(model.availability), flexShrink: 0, marginTop: '4px' }} />
                           <span>{model.availability || 'Inquire'}</span>
                         </span>
                       </td>
@@ -420,13 +423,6 @@ function getModelTypeColor(t: string): string {
   if (v.includes('transgenic'))  return '#444';
   if (v.includes('immunodeficient')) return '#8b0000';
   return '#008080';
-}
-
-function getAvailabilityColor(a: string): string {
-  const v = (a || '').toLowerCase();
-  if (v.includes('live')) return '#2e7d32';
-  if (v.includes('sperm') || v.includes('embryo')) return '#e65100';
-  return '#555';
 }
 
 export default CatalogSearch;
