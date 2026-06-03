@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllModels } from '@/lib/catalog/serverCatalog';
-import { availabilityColor } from '@/lib/catalog/availability';
+import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { buildStandalonePageMetadata } from '@/lib/seo';
 import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
@@ -316,7 +316,7 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                                     width: '6px', height: '6px', borderRadius: '50%', flexShrink: 0,
                                     background: availabilityColor(model.availability),
                                   }} />
-                                  {model.availability}
+                                  {availabilityLabel(model.availability)}
                                 </span>
                               ) : '—'}
                             </td>

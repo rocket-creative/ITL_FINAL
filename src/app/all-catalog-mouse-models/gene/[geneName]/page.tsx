@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
-import { availabilityColor } from '@/lib/catalog/availability';
+import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 
@@ -462,7 +462,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                       <td style={{ padding: '14px 16px', whiteSpace: 'nowrap' }}>
                         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '.85rem', color: availabilityColor(model.availability) }}>
                           <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: availabilityColor(model.availability), flexShrink: 0 }} />
-                          {model.availability || 'Inquire'}
+                          {availabilityLabel(model.availability)}
                         </span>
                       </td>
                       <td style={{ padding: '14px 16px', color: '#134978', fontFamily: 'monospace', fontSize: '.82rem', fontWeight: 600, whiteSpace: 'nowrap' }}>

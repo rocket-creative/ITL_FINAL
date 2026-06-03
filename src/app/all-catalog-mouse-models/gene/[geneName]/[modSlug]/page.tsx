@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
-import { availabilityColor } from '@/lib/catalog/availability';
+import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import { tier1GenerateStaticParams } from '@/data/seoKeywords';
@@ -180,7 +180,7 @@ export default async function GeneModTierPage({ params }: Props) {
                         <td style={{ padding: '14px 16px' }}>{model.modelType}</td>
                         <td style={{ padding: '14px 16px', color: '#666', fontSize: '.85rem' }}>{model.category}</td>
                         <td style={{ padding: '14px 16px' }}>
-                          <span style={{ color: availabilityColor(model.availability) }}>{model.availability}</span>
+                          <span style={{ color: availabilityColor(model.availability) }}>{availabilityLabel(model.availability)}</span>
                         </td>
                         <td style={{ padding: '14px 16px', fontFamily: 'monospace', color: '#134978' }}>{model.catalogNumber}</td>
                         <td style={{ padding: '14px 16px', textAlign: 'center' }}>

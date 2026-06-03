@@ -10,7 +10,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
-import { availabilityColor, isDeveloping } from '@/lib/catalog/availability';
+import { availabilityColor, availabilityLabel, isDeveloping, isLive } from '@/lib/catalog/availability';
 
 export interface CatalogModel {
   id: string;
@@ -65,7 +65,7 @@ export function CatalogSearch({
   const filteredResults = results.filter((m) => {
     if (availabilityFilter === 'all')        return true;
     if (availabilityFilter === 'developing') return isDeveloping(m.availability);
-    if (availabilityFilter === 'live')       return (m.availability || '').toLowerCase().includes('live');
+    if (availabilityFilter === 'live')       return isLive(m.availability);
     if (availabilityFilter === 'sperm')      return (m.availability || '').toLowerCase().includes('sperm');
     if (availabilityFilter === 'embryo')     return (m.availability || '').toLowerCase().includes('embryo');
     return true;
@@ -323,7 +323,7 @@ export function CatalogSearch({
                       <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', minWidth: '120px' }}>
                         <span style={{ display: 'inline-flex', alignItems: 'flex-start', gap: '6px', fontSize: '.85rem', color: availabilityColor(model.availability) }}>
                           <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: availabilityColor(model.availability), flexShrink: 0, marginTop: '4px' }} />
-                          <span>{model.availability || 'Inquire'}</span>
+                          <span>{availabilityLabel(model.availability)}</span>
                         </span>
                       </td>
                       <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', color: '#555', fontSize: '.85rem', fontFamily: 'monospace', whiteSpace: 'nowrap', minWidth: '100px' }}>
