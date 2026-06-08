@@ -9,6 +9,7 @@ import { benchToBedsideCarTArticleBody } from './_labSignalsBenchToBedsideCarTAr
 import { ckoBreedingCostEfficiencyArticleBody } from './_labSignalsCkoBreedingCostEfficiencyArticle';
 import { geneTherapyNeurodegenerativeArticleBody } from './_labSignalsGeneTherapyNeurodegenerativeArticle';
 import { beyondGlp1ObesityArticleBody } from './_labSignalsBeyondGlp1ObesityArticle';
+import { humanizedAutoimmuneArticleBody } from './_labSignalsHumanizedAutoimmuneArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1086,6 +1087,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/metabolic-disease-mouse-models",
     body: beyondGlp1ObesityArticleBody,
     publishedAt: "2026-05-27",
+  },
+  {
+    id: "humanized-mouse-models-autoimmune-disease-research",
+    slug: "humanized-mouse-models-autoimmune-disease-research",
+    title: "Humanized Mouse Models in Autoimmune Disease Research",
+    subtitle: "SLE, RA, and IBD in humanized immune system mice",
+    description:
+      "Humanized mouse models advance SLE, RA, and IBD research with patient PBMC engraftment, HSC platforms, and NSG-IBD models for human-specific therapeutic testing.",
+    category: "Immunology",
+    relatedPage: "/humanized-mouse-models",
+    body: humanizedAutoimmuneArticleBody,
+    publishedAt: "2026-06-09",
   },
 ];
 
