@@ -7,7 +7,43 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import { IconChevronRight, IconFlask, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
-const featuredModels = [
+type FeaturedModelEntry = {
+  month: string;
+  name: string;
+  fullName: string;
+  catalogNumber: string;
+  background: string;
+  availability: string;
+  category: string;
+  teaser: string;
+  specs: string[];
+  href: string;
+  pdfHref?: string;
+};
+
+const featuredModels: FeaturedModelEntry[] = [
+  {
+    month: 'June 2026',
+    name: 'hIL4/hIL4R',
+    fullName: 'Dual Humanized IL4/IL4R Mouse',
+    catalogNumber: 'HU 2000106',
+    background: 'C57BL/6',
+    availability: 'Repository live (ready to ship)',
+    category: 'Humanized Mouse Models',
+    teaser:
+      'The hIL4/hIL4R dual humanized mouse model is a critical tool for studying IL4/IL13 signaling pathways and developing targeted therapeutics for allergic diseases and asthma.',
+    specs: [
+      'Model name: hIL4/hIL4R',
+      'Catalog number: HU 2000106',
+      'Strain state: Repository live (ready to ship)',
+      'Humanized genes: IL4, IL4R',
+    ],
+    href: '/featured-model/hil4-hil4r',
+    pdfHref: '/downloads/hil4-hil4r-ingenious.pdf',
+  },
+];
+
+const pastModels: FeaturedModelEntry[] = [
   {
     month: 'March 2026',
     name: 'hCD3EDG',
@@ -29,8 +65,6 @@ const featuredModels = [
   },
 ];
 
-const pastModelsPlaceholder = true;
-
 export default function FeaturedModelPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -49,8 +83,8 @@ export default function FeaturedModelPage() {
     description:
       'Monthly spotlight on humanized catalog mouse models from ingenious targeting laboratory',
     url: 'https://www.genetargeting.com/featured-model/',
-    numberOfItems: featuredModels.length,
-    itemListElement: featuredModels.map((m, i) => ({
+    numberOfItems: featuredModels.length + pastModels.length,
+    itemListElement: [...featuredModels, ...pastModels].map((m, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: `${m.name} ${m.fullName}`,
@@ -341,26 +375,28 @@ export default function FeaturedModelPage() {
                             View Full Profile
                             <IconChevronRight size={16} color="#ffffff" />
                           </Link>
-                          <a
-                            href={model.pdfHref}
-                            download
-                            style={{
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              gap: '8px',
-                              background: 'transparent',
-                              color: '#0a253c',
-                              padding: '12px 24px',
-                              borderRadius: '6px',
-                              fontSize: '.9rem',
-                              fontWeight: 600,
-                              textDecoration: 'none',
-                              border: '2px solid #0a253c',
-                            }}
-                          >
-                            Download Data Sheet
-                            <IconChevronRight size={16} color="#0a253c" />
-                          </a>
+                          {model.pdfHref ? (
+                            <a
+                              href={model.pdfHref}
+                              download
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                background: 'transparent',
+                                color: '#0a253c',
+                                padding: '12px 24px',
+                                borderRadius: '6px',
+                                fontSize: '.9rem',
+                                fontWeight: 600,
+                                textDecoration: 'none',
+                                border: '2px solid #0a253c',
+                              }}
+                            >
+                              Download Data Sheet
+                              <IconChevronRight size={16} color="#0a253c" />
+                            </a>
+                          ) : null}
                         </div>
                       </div>
 
@@ -425,40 +461,105 @@ export default function FeaturedModelPage() {
                 </h2>
               </div>
 
-              {pastModelsPlaceholder && (
-                <div style={{
-                  background: '#ffffff',
-                  border: '1px dashed #ccc',
-                  borderRadius: '12px',
-                  padding: '60px 40px',
-                  textAlign: 'center',
-                }}>
-                  <div style={{
-                    width: '56px',
-                    height: '56px',
-                    borderRadius: '50%',
-                    background: 'rgba(0,128,128,0.08)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    margin: '0 auto 20px',
-                  }}>
-                    <IconFlask size={24} color="#008080" />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                {pastModels.map((model) => (
+                  <div
+                    key={model.catalogNumber}
+                    style={{
+                      background: '#ffffff',
+                      border: '1px solid #e0e0e0',
+                      borderRadius: '12px',
+                      padding: '28px 32px',
+                      display: 'grid',
+                      gridTemplateColumns: '1fr auto',
+                      gap: '24px',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px', flexWrap: 'wrap' }}>
+                        <span style={{
+                          background: 'rgba(0,128,128,0.08)',
+                          color: '#008080',
+                          fontSize: '.75rem',
+                          fontWeight: 600,
+                          padding: '4px 12px',
+                          borderRadius: '12px',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.06em',
+                        }}>
+                          {model.month}
+                        </span>
+                        <span style={{ color: '#888', fontSize: '.8rem' }}>{model.catalogNumber}</span>
+                      </div>
+                      <h3 style={{
+                        fontFamily: 'Poppins, sans-serif',
+                        fontSize: '1.35rem',
+                        fontWeight: 700,
+                        color: '#0a253c',
+                        marginBottom: '4px',
+                      }}>
+                        {model.name}
+                      </h3>
+                      <p style={{
+                        fontFamily: 'Poppins, sans-serif',
+                        fontSize: '.95rem',
+                        color: '#2384da',
+                        marginBottom: '10px',
+                      }}>
+                        {model.fullName}
+                      </p>
+                      <p style={{ fontSize: '.875rem', color: '#666', lineHeight: 1.6, margin: 0, maxWidth: '620px' }}>
+                        {model.teaser}
+                      </p>
+                    </div>
+                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                      <Link
+                        href={model.href}
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          background: '#008080',
+                          color: '#ffffff',
+                          padding: '10px 18px',
+                          borderRadius: '6px',
+                          fontSize: '.85rem',
+                          fontWeight: 600,
+                          textDecoration: 'none',
+                          whiteSpace: 'nowrap',
+                        }}
+                      >
+                        View Profile
+                        <IconChevronRight size={14} color="#ffffff" />
+                      </Link>
+                      {model.pdfHref ? (
+                        <a
+                          href={model.pdfHref}
+                          download
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                            background: 'transparent',
+                            color: '#0a253c',
+                            padding: '10px 18px',
+                            borderRadius: '6px',
+                            fontSize: '.85rem',
+                            fontWeight: 600,
+                            textDecoration: 'none',
+                            border: '2px solid #0a253c',
+                            whiteSpace: 'nowrap',
+                          }}
+                        >
+                          Data Sheet
+                          <IconChevronRight size={14} color="#0a253c" />
+                        </a>
+                      ) : null}
+                    </div>
                   </div>
-                  <p style={{
-                    fontFamily: 'Poppins, sans-serif',
-                    fontSize: '1rem',
-                    fontWeight: 600,
-                    color: '#333',
-                    marginBottom: '8px',
-                  }}>
-                    Archive coming soon
-                  </p>
-                  <p style={{ fontSize: '.875rem', color: '#888', lineHeight: 1.6, maxWidth: '400px', margin: '0 auto' }}>
-                    Past featured models will appear here each month as the series grows.
-                  </p>
-                </div>
-              )}
+                ))}
+              </div>
             </div>
           </section>
 
