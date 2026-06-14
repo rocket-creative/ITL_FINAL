@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 export const metadata = generateMetadata({
   title: 'hIL4/hIL4R Dual Humanized IL4/IL4R Mouse',
   description:
-    'The hIL4/hIL4R dual humanized mouse model supports IL4/IL13 signaling research and anti IL4/IL4R therapeutic development. Catalog HU 2000106. Repository live (ready to ship).',
+    'The hIL4/hIL4R dual humanized mouse model supports IL-4 signaling research and anti IL4/IL4R therapeutic development. Catalog HU 2000106. Repository live (ready to ship).',
   path: '/featured-model/hil4-hil4r',
 });
 

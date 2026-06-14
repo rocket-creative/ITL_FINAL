@@ -84,6 +84,7 @@ type FigureItem = {
   body?: string;
   src: string;
   alt: string;
+  maxWidth?: string;
 };
 
 const VALIDATION_FIGURES: FigureItem[] = [
@@ -92,6 +93,7 @@ const VALIDATION_FIGURES: FigureItem[] = [
     body: 'The homozygous KI mice express hIL4 in serum after treatment with concanavalin.',
     src: `${IMG}/validation-fig-01-hil4-elisa.png`,
     alt: 'Fig.1 Analysis of hIL4 expression in serum by ELISA.',
+    maxWidth: '400px',
   },
   {
     caption: 'Fig.2 Analysis of hIL4R expression in the spleen by FACS.',
@@ -324,6 +326,8 @@ function FigureBlock({
         style={{
           position: 'relative',
           width: '100%',
+          maxWidth: fig.maxWidth,
+          margin: fig.maxWidth ? '0 auto' : undefined,
           borderRadius: '6px',
           overflow: 'hidden',
           border: '1px solid #e8e8e8',
@@ -430,7 +434,7 @@ export default function HIL4HIL4RPage() {
     '@type': 'Product',
     name: 'hIL4/hIL4R Dual Humanized IL4/IL4R Mouse',
     description:
-      'The hIL4/hIL4R dual humanized mouse model is a critical tool for studying IL4/IL13 signaling pathways and developing targeted therapeutics for allergic diseases and asthma. Catalog HU 2000106. Repository live (ready to ship).',
+      'The hIL4/hIL4R dual humanized mouse model is a critical tool for studying IL-4 signaling pathways and developing targeted therapeutics for allergic diseases and asthma. Catalog HU 2000106. Repository live (ready to ship).',
     sku: 'HU 2000106',
     brand: {
       '@type': 'Organization',
@@ -607,7 +611,7 @@ export default function HIL4HIL4RPage() {
                 }}
               >
                 The hIL4/hIL4R dual humanized mouse model is a critical tool for
-                studying IL4/IL13 signaling pathways and developing targeted
+                studying IL-4 signaling pathways and developing targeted
                 therapeutics for allergic diseases and asthma.
               </p>
 

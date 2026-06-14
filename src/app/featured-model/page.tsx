@@ -31,7 +31,7 @@ const featuredModels: FeaturedModelEntry[] = [
     availability: 'Repository live (ready to ship)',
     category: 'Humanized Mouse Models',
     teaser:
-      'The hIL4/hIL4R dual humanized mouse model is a critical tool for studying IL4/IL13 signaling pathways and developing targeted therapeutics for allergic diseases and asthma.',
+      'The hIL4/hIL4R dual humanized mouse model is a critical tool for studying IL-4 signaling pathways and developing targeted therapeutics for allergic diseases and asthma.',
     specs: [
       'Model name: hIL4/hIL4R',
       'Catalog number: HU 2000106',
