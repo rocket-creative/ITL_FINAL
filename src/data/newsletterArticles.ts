@@ -10,6 +10,7 @@ import { ckoBreedingCostEfficiencyArticleBody } from './_labSignalsCkoBreedingCo
 import { geneTherapyNeurodegenerativeArticleBody } from './_labSignalsGeneTherapyNeurodegenerativeArticle';
 import { beyondGlp1ObesityArticleBody } from './_labSignalsBeyondGlp1ObesityArticle';
 import { humanizedAutoimmuneArticleBody } from './_labSignalsHumanizedAutoimmuneArticle';
+import { dnaSequencesAreDataArticleBody } from './_labSignalsDnaSequencesAreDataArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1099,6 +1100,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/humanized-mouse-models",
     body: humanizedAutoimmuneArticleBody,
     publishedAt: "2026-06-09",
+  },
+  {
+    id: "dna-sequences-are-data-complete-sequence-reporting",
+    slug: "dna-sequences-are-data-complete-sequence-reporting",
+    title: "DNA Sequences Are Data: Why Complete Sequence Reporting Matters",
+    subtitle: "From the CBh promoter to mouse model reproducibility",
+    description:
+      "Incomplete DNA sequence reporting undermines reproducibility in molecular biology and mouse model research. Why complete, validated sequences should be standard.",
+    category: "Industry Insights",
+    relatedPage: "/transgenic-mouse-service",
+    body: dnaSequencesAreDataArticleBody,
+    publishedAt: "2026-06-23",
   },
 ];
 
