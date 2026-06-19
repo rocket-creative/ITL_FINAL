@@ -124,6 +124,13 @@ const VALIDATION_FIGURES: FigureItem[] = [
   },
   {
     caption:
+      'Fig.6 Pathological analysis of hIL4/hIL4R knockin mice by H&E staining.',
+    body: 'There were no obvious pathological changes in these tissues (n=3, 8-10 weeks old, 100x magnification).',
+    src: `${IMG}/validation-fig-06-he-staining.png`,
+    alt: 'Fig.6 Pathological analysis of hIL4/hIL4R knockin mice by H&E staining of spleen, small intestine, thymus, and mesenteric lymph nodes.',
+  },
+  {
+    caption:
       'Table 1. Blood routine test results of Hom hIL4/hIL4R mice (Data are presented as mean and ± SEM).',
     src: `${IMG}/validation-table-01-blood-routine.png`,
     alt: 'Table 1. Blood routine test results of Hom hIL4/hIL4R mice.',
@@ -147,6 +154,7 @@ const CASE1_FIGURES: FigureItem[] = [
       'Case 1 — Fig.1 Body weight of DNFB-induced Atopic dermatitis Model hIL4/hIL4R mice treated with dupilumab. (*P<0.05)',
     src: `${IMG}/case1-fig-01-body-weight.png`,
     alt: 'Case 1 Fig.1 Body weight of DNFB-induced Atopic dermatitis Model hIL4/hIL4R mice treated with dupilumab.',
+    maxWidth: '480px',
   },
   {
     caption:
@@ -206,6 +214,7 @@ const CASE3_FIGURES: FigureItem[] = [
       'Case 3 — Fig.1 Body weight of HDM induced hIL4/hIL4R mice asthma model treated with dupilumab. (n=6, Data are presented as Mean and ± SEM)',
     src: `${IMG}/case3-fig-01-body-weight.png`,
     alt: 'Case 3 Fig.1 Body weight of HDM induced hIL4/hIL4R mice asthma model treated with dupilumab.',
+    maxWidth: '480px',
   },
   {
     caption:
