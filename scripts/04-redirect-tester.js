@@ -21,11 +21,29 @@ if (!domain) {
 }
 
 // Load redirects from config
-const redirects = require('../itl-website/src/lib/legacy/redirects.json');
+const redirects = require('../src/lib/legacy/redirects.json');
+const gsc404 = require('../src/lib/legacy/404-redirects.json');
+
+const TRUNCATED = [/\/what-is-a-stem-$/, /for-accele$/, /for-custo$/, /trurat-mode$/];
+
+function mergeRedirectRules(primary, supplemental) {
+  const bySource = new Map();
+  for (const rule of primary) {
+    if (rule.source && rule.destination) bySource.set(rule.source, rule);
+  }
+  for (const rule of supplemental) {
+    if (!rule.source || !rule.destination) continue;
+    if (TRUNCATED.some((re) => re.test(rule.source))) continue;
+    if (!bySource.has(rule.source)) bySource.set(rule.source, rule);
+  }
+  return [...bySource.values()];
+}
+
+const allRedirects = mergeRedirectRules(redirects, gsc404);
 
 console.log(`\n🔍 REDIRECT TESTER\n`);
 console.log(`Testing domain: ${domain}`);
-console.log(`Total redirects to test: ${redirects.length}\n`);
+console.log(`Total redirects to test: ${allRedirects.length}\n`);
 
 const results = {
   passed: [],
@@ -53,7 +71,7 @@ async function testRedirect(redirect) {
       const location = res.headers.location;
       
       completed++;
-      process.stdout.write(`\rProgress: ${completed}/${redirects.length}`);
+      process.stdout.write(`\rProgress: ${completed}/${allRedirects.length}`);
       
       // Check status code
       if (permanent && statusCode !== 301) {
@@ -111,7 +129,7 @@ async function testRedirect(redirect) {
     
     req.on('error', (err) => {
       completed++;
-      process.stdout.write(`\rProgress: ${completed}/${redirects.length}`);
+      process.stdout.write(`\rProgress: ${completed}/${allRedirects.length}`);
       
       results.failed.push({
         source,
@@ -124,7 +142,7 @@ async function testRedirect(redirect) {
     req.setTimeout(5000, () => {
       req.destroy();
       completed++;
-      process.stdout.write(`\rProgress: ${completed}/${redirects.length}`);
+      process.stdout.write(`\rProgress: ${completed}/${allRedirects.length}`);
       
       results.failed.push({
         source,
@@ -138,17 +156,17 @@ async function testRedirect(redirect) {
 
 async function runTests() {
   // Test in batches of 5 to avoid overwhelming server
-  for (let i = 0; i < redirects.length; i += 5) {
-    const batch = redirects.slice(i, i + 5);
+  for (let i = 0; i < allRedirects.length; i += 5) {
+    const batch = allRedirects.slice(i, i + 5);
     await Promise.all(batch.map(testRedirect));
   }
   
   console.log('\n\n');
   
   // Print results
-  console.log(`✅ Passed: ${results.passed.length}/${redirects.length}`);
-  console.log(`❌ Failed: ${results.failed.length}/${redirects.length}`);
-  console.log(`⚠️  Warnings: ${results.warnings.length}/${redirects.length}\n`);
+  console.log(`✅ Passed: ${results.passed.length}/${allRedirects.length}`);
+  console.log(`❌ Failed: ${results.failed.length}/${allRedirects.length}`);
+  console.log(`⚠️  Warnings: ${results.warnings.length}/${allRedirects.length}\n`);
   
   if (results.failed.length > 0) {
     console.log(`\n❌ FAILED REDIRECTS:\n`);
@@ -170,7 +188,7 @@ async function runTests() {
     });
   }
   
-  if (results.passed.length === redirects.length) {
+  if (results.passed.length === allRedirects.length) {
     console.log(`\n🎉 All redirects working perfectly!\n`);
   }
   
@@ -182,7 +200,7 @@ async function runTests() {
   fs.writeFileSync(reportPath, JSON.stringify({
     testDate: new Date().toISOString(),
     domain,
-    totalTested: redirects.length,
+    totalTested: allRedirects.length,
     passed: results.passed.length,
     failed: results.failed.length,
     warnings: results.warnings.length,

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import { buildFeaturedProductOffer } from '@/lib/seo/productSchema';
 
 const IMG = '/model-of-month-images/hil4-hil4r';
 const PDF_HREF = '/downloads/hil4-hil4r-ingenious.pdf';
@@ -452,17 +453,7 @@ export default function HIL4HIL4RPage() {
       foundingDate: '1998',
     },
     category: 'Humanized Mouse Models',
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      url: 'https://www.genetargeting.com/order-catalog-models/',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        priceCurrency: 'USD',
-        valueAddedTaxIncluded: false,
-        description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
-      },
-    },
+    offers: buildFeaturedProductOffer('https://www.genetargeting.com/order-catalog-models/', 'Humanized'),
   };
 
   return (

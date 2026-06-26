@@ -4,6 +4,7 @@ import Link from 'next/link';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import { buildFeaturedProductOffer } from '@/lib/seo/productSchema';
 
 /** Inline icons so this page stays a Server Component (avoids client Icons + hydration issues). */
 function ChevronRight({
@@ -196,17 +197,7 @@ export default function HCD3EDGPage() {
       foundingDate: '1998',
     },
     category: 'Humanized Mouse Models',
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      url: 'https://www.genetargeting.com/request-quote/',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        priceCurrency: 'USD',
-        valueAddedTaxIncluded: false,
-        description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
-      },
-    },
+    offers: buildFeaturedProductOffer('https://www.genetargeting.com/request-quote/', 'Humanized'),
   };
 
   return (

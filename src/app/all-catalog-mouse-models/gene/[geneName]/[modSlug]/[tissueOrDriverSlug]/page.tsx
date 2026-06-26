@@ -24,6 +24,7 @@ import { buildTemplateIntro } from '@/lib/seo/contentTemplates';
 import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { getPublicationsForPage } from '@/data/pagePublications';
+import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -92,6 +93,8 @@ export default async function GeneModContextTierPage({ params }: Props) {
   const rawModels = await getModelsByGene(geneName);
   if (rawModels.length === 0) notFound();
   const models = rawModels.map(cleanModel).filter((m) => m.modelType === modCanon);
+  if (models.length === 0) notFound();
+
   const relatedGenes = await getRelatedGenes(geneName, 6);
 
   const driverRow = resolved.kind === 'driver' ? CRE_DRIVERS.find((d) => d.driver === resolved.canonical) : undefined;
@@ -122,32 +125,13 @@ export default async function GeneModContextTierPage({ params }: Props) {
     if (bias) extraProps.push({ '@type': 'PropertyValue', name: 'Tissue bias', value: bias });
   }
 
-  const productSchemas = models.map((m) => {
-    const isInStock = (m.availability || '').toLowerCase().includes('live');
-    return {
-      '@type': 'Product',
+  const productSchemas = models.map((m) =>
+    buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
       description: `${m.modelType} mouse model for ${geneName}.`,
-      sku: m.catalogNumber,
       additionalProperty: [{ '@type': 'PropertyValue', name: 'Modification type', value: modCanon }, ...extraProps],
-      brand: { '@type': 'Brand', name: SITE_NAME },
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          description: 'Custom quote on request',
-        },
-        availability: isInStock ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
-        url: `${BASE_URL}/order-catalog-models?gene=${encodeURIComponent(geneName)}&catalog=${encodeURIComponent(m.catalogNumber)}`,
-        seller: {
-          '@type': 'Organization',
-          '@id': 'https://www.genetargeting.com/#organization',
-          name: SITE_NAME,
-        },
-      },
-    };
-  });
+    }),
+  );
 
   const pubs = getPublicationsForPage('/tissue-specific-knockout');
   const h1Third =

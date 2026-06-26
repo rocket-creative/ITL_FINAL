@@ -11,5 +11,7 @@ export const metadata = generateMetadata({
   description: 'Internal tool for previewing Open Graph images.',
   path: '/og-preview',
   catalogFirst: false,
+  index: false,
+  follow: false,
 });
 

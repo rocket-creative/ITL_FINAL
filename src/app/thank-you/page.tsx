@@ -25,13 +25,6 @@ export default function ThankYouPage() {
   }, []);
   return (
     <>
-      {/* SEO: Hidden from search engines */}
-      <head>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
-        <title>Thank You | Ingenious Targeting Laboratory</title>
-      </head>
-
       <UXUIDCNavigation />
       
       <main id="main-content" style={{

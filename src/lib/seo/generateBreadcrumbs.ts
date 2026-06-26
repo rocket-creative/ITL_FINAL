@@ -45,7 +45,8 @@ export function generateBreadcrumbs(options: BreadcrumbOptions): BreadcrumbSchem
     itemListElement: items.map((item, index) => {
       // Ensure path starts with /
       const normalizedPath = item.path.startsWith('/') ? item.path : `/${item.path}`;
-      const fullUrl = `${BASE_URL}${normalizedPath}`;
+      const withSlash = normalizedPath === '/' ? normalizedPath : `${normalizedPath.replace(/\/$/, '')}/`;
+      const fullUrl = `${BASE_URL}${withSlash}`;
 
       return {
         '@type': 'ListItem',

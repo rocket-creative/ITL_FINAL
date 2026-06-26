@@ -19,6 +19,7 @@ import { buildTemplateIntro } from '@/lib/seo/contentTemplates';
 import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { getPublicationsForPage } from '@/data/pagePublications';
+import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -78,6 +79,8 @@ export default async function GeneModTierPage({ params }: Props) {
   if (rawModels.length === 0) notFound();
 
   const models = rawModels.map(cleanModel).filter((m) => m.modelType === modCanon);
+  if (models.length === 0) notFound();
+
   const relatedGenes = await getRelatedGenes(geneName, 8);
 
   const curated = getCuratedIntro(geneName);
@@ -87,37 +90,13 @@ export default async function GeneModTierPage({ params }: Props) {
   const faqs = buildTierGeneModFaqs({ gene: geneName, modLabel: modCanon });
   const timeline = `Typical custom projects target study ready cohorts near twenty six weeks from contract start when breeding is direct. Quotes return in about twenty four hours with milestones, pricing, and options for cryo or live dispatch.`;
 
-  const productSchemas = models.map((m) => {
-    const isInStock = (m.availability || '').toLowerCase().includes('live');
-    return {
-      '@type': 'Product',
+  const productSchemas = models.map((m) =>
+    buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
       description: `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}.`,
-      sku: m.catalogNumber,
-      additionalProperty: [
-        { '@type': 'PropertyValue', name: 'Modification type', value: modCanon },
-      ],
-      brand: { '@type': 'Brand', name: SITE_NAME },
-      category: m.category || 'Genetically engineered mouse model',
-      offers: {
-        '@type': 'Offer',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          priceCurrency: 'USD',
-          valueAddedTaxIncluded: false,
-          description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
-        },
-        availability: isInStock ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
-        url: `${BASE_URL}/order-catalog-models?gene=${encodeURIComponent(geneName)}&catalog=${encodeURIComponent(m.catalogNumber)}`,
-        seller: {
-          '@type': 'Organization',
-          '@id': 'https://www.genetargeting.com/#organization',
-          name: SITE_NAME,
-          url: BASE_URL,
-        },
-      },
-    };
-  });
+      additionalProperty: [{ '@type': 'PropertyValue', name: 'Modification type', value: modCanon }],
+    }),
+  );
 
   const pubs = getPublicationsForPage('/conditional-knockout-mouse-models');
   const tissues = [...new Set(CRE_DRIVERS.map((d) => d.tissue))].slice(0, 5);
@@ -161,9 +140,7 @@ export default async function GeneModTierPage({ params }: Props) {
             </h2>
             <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '20px' }}>{rationale}</p>
             <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '24px' }}>{rationale2}</p>
-            {models.length === 0 ? (
-              <p style={{ color: '#666' }}>We do not list a {modCanon} allele for {geneName} in the live catalog yet. Use the quote path for a custom build.</p>
-            ) : (
+            {models.length === 0 ? null : (
               <div style={{ overflowX: 'auto' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', minWidth: '700px' }}>
                   <thead>

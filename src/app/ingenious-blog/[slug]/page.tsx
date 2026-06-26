@@ -3,6 +3,7 @@ import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import path from 'path';
 import { applyCatalogFirstMeta } from '@/lib/seo';
+import { buildServiceOffer } from '@/lib/seo/productSchema';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import {
@@ -602,21 +603,10 @@ export default async function IngeniousBlogPost({
       url: 'https://www.genetargeting.com',
     },
     areaServed: 'Worldwide',
-    offers: {
-      '@type': 'Offer',
-      url: `https://www.genetargeting.com${offer.primaryCta.href.split('?')[0]}`,
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        priceCurrency: 'USD',
-        valueAddedTaxIncluded: false,
-        description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
-      },
-      availability: 'https://schema.org/InStock',
-      seller: {
-        '@type': 'Organization',
-        name: 'ingenious targeting laboratory',
-      },
-    },
+    offers: buildServiceOffer(
+      `https://www.genetargeting.com${offer.primaryCta.href.split('?')[0]}`,
+      offer.eyebrow,
+    ),
   };
 
   return (

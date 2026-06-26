@@ -11,6 +11,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { applyCatalogFirstMeta } from '@/lib/seo';
+import { buildServiceOffer } from '@/lib/seo/productSchema';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -105,21 +106,7 @@ export default function HumanizedMouseServicesPage() {
             areaServed: 'Worldwide',
             description:
               'Custom humanized mouse models for drug development. Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), and complete gene replacement. Since 1998. 800+ peer-reviewed publications.',
-            offers: {
-              '@type': 'Offer',
-              url: 'https://www.genetargeting.com/request-quote/',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                valueAddedTaxIncluded: false,
-                description: 'Custom quote on request. Submit a brief and receive humanized mouse pricing within 24 hours.',
-              },
-              availability: 'https://schema.org/InStock',
-              seller: {
-                '@type': 'Organization',
-                name: 'ingenious targeting laboratory',
-              },
-            },
+            offers: buildServiceOffer('https://www.genetargeting.com/request-quote/', 'Humanized'),
           }),
         }}
       />

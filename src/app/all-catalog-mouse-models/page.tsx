@@ -27,12 +27,13 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   if (query) {
     const title       = `${query} Mouse Models | ${SITE_NAME}`;
     const description = `Find ${query} genetically engineered mouse models from our catalog of 14,774+ knockout, knockin, humanized, and Cre driver strains. Request a model or get a quote.`;
-    const canonical   = `${BASE_URL}/all-catalog-mouse-models/?q=${encodeURIComponent(query)}`;
+    const canonical   = `${BASE_URL}/all-catalog-mouse-models/`;
 
     return {
       title,
       description,
       alternates: { canonical },
+      robots: { index: false, follow: true },
       openGraph:  { title, description, url: canonical, siteName: SITE_NAME, locale: 'en_US', type: 'website' },
       twitter:    { card: 'summary_large_image', title, description },
     };

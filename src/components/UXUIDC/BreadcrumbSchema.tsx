@@ -21,7 +21,8 @@ export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
     '@type': 'BreadcrumbList',
     itemListElement: items.map((item, index) => {
       const normalizedPath = item.path.startsWith('/') ? item.path : `/${item.path}`;
-      const fullUrl = `${BASE_URL}${normalizedPath}`;
+      const withSlash = normalizedPath === '/' ? normalizedPath : `${normalizedPath.replace(/\/$/, '')}/`;
+      const fullUrl = `${BASE_URL}${withSlash}`;
 
       return {
         '@type': 'ListItem',

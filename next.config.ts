@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 import path from "path";
 import { fileURLToPath } from "url";
 import legacyRedirects from "./src/lib/legacy/redirects.json";
+import gsc404Redirects from "./src/lib/legacy/404-redirects.json";
+import { mergeRedirectRules } from "./src/lib/legacy/mergeRedirects";
 
 /** Pin Turbopack root when multiple lockfiles exist (avoids wrong workspace inference). */
 const turbopackRoot = path.dirname(fileURLToPath(import.meta.url));
@@ -171,9 +173,14 @@ const nextConfig: NextConfig = {
       { source: '/mouse-model-pricing', destination: '/custom-mouse-model-pricing/', permanent: true },
       { source: '/knockout-mouse-pricing', destination: '/custom-mouse-model-pricing/', permanent: true },
       { source: '/transgenic-mouse-pricing', destination: '/custom-mouse-model-pricing/', permanent: true },
+      { source: '/contact', destination: '/contact/', permanent: true },
     ];
+    const mergedLegacy = mergeRedirectRules(
+      legacyRedirects as { source: string; destination: string; permanent: boolean }[],
+      gsc404Redirects as { source: string; destination: string; permanent: boolean }[],
+    );
     return [
-      ...legacyRedirects.map((redirect) => ({
+      ...mergedLegacy.map((redirect) => ({
         source: redirect.source,
         destination: redirect.destination,
         permanent: redirect.permanent,

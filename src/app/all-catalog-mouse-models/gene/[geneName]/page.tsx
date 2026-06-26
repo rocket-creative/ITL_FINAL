@@ -24,6 +24,7 @@ import { getCachedCatalogGeneNames } from '@/lib/search/catalogGeneCache';
 import { parseQuery } from '@/lib/search/parseQuery';
 import { buildSeoUrl } from '@/lib/seo/searchUrl';
 import { modCanonicalToSlug, tissueCanonicalToSlug } from '@/lib/seo/slugs';
+import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
 
 // On-demand ISR: pages render on first request, cache at edge for 24h.
 // After 24h, next visitor triggers background re-render (stale-while-revalidate).
@@ -210,43 +211,12 @@ export default async function GenePage({ params, searchParams }: Props) {
     ? models.filter((m) => m.modelType === focusType).length
     : 0;
 
-  // Google Merchant Listings rich-result eligibility:
-  //  - Use AggregateOffer with lowPrice (price: '0' is rejected by Google)
-  //  - Real availability mapped from the catalog row
-  //  - Seller + brand identify ITL as the merchant
-  // Each catalog model becomes a Product entry; collectively they make this
-  // page eligible for product rich results in Google.
-  const productSchemas = models.map((m) => {
-    const isInStock = (m.availability || '').toLowerCase().includes('live');
-    return {
-      '@type': 'Product',
+  const productSchemas = models.map((m) =>
+    buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
       description: `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}. ${m.category ? `Category: ${m.category}.` : ''} Availability: ${m.availability || 'On request'}.`,
-      sku: m.catalogNumber,
-      mpn: m.catalogNumber,
-      brand: { '@type': 'Brand', name: SITE_NAME },
-      category: m.category || 'Genetically engineered mouse model',
-      offers: {
-        '@type': 'Offer',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          priceCurrency: 'USD',
-          valueAddedTaxIncluded: false,
-          description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
-        },
-        availability: isInStock
-          ? 'https://schema.org/InStock'
-          : 'https://schema.org/PreOrder',
-        url: `${BASE_URL}/order-catalog-models?gene=${encodeURIComponent(geneName)}&catalog=${encodeURIComponent(m.catalogNumber)}`,
-        seller: {
-          '@type': 'Organization',
-          '@id': 'https://www.genetargeting.com/#organization',
-          name: SITE_NAME,
-          url: BASE_URL,
-        },
-      },
-    };
-  });
+    }),
+  );
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

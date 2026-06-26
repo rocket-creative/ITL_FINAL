@@ -10,6 +10,8 @@ export const metadata = generateMetadata({
   description: 'Thank you for your inquiry. Our team will review your request and respond within one business day.',
   path: '/thank-you',
   catalogFirst: false,
+  index: false,
+  follow: false,
 });
 
 // BreadcrumbList structured data

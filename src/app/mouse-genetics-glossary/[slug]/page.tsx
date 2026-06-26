@@ -4,6 +4,7 @@ import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { applyCatalogFirstMeta } from '@/lib/seo';
+import { buildServiceOffer } from '@/lib/seo/productSchema';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCEducationalSalesBanner from '@/components/UXUIDC/EducationalSalesBanner';
@@ -310,21 +311,9 @@ export default async function GlossaryTermPage({
               url: 'https://www.genetargeting.com',
             },
             areaServed: 'Worldwide',
-            offers: {
-              '@type': 'Offer',
-              url: `https://www.genetargeting.com${getEducationalOffer(slug).primaryCta.href.split('?')[0]}`,
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                valueAddedTaxIncluded: false,
-                description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
-              },
-              availability: 'https://schema.org/InStock',
-              seller: {
-                '@type': 'Organization',
-                name: 'ingenious targeting laboratory',
-              },
-            },
+            offers: buildServiceOffer(
+              `https://www.genetargeting.com${getEducationalOffer(slug).primaryCta.href.split('?')[0]}`,
+            ),
           }),
         }}
       />

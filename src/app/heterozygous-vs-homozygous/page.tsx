@@ -10,6 +10,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildStandalonePageMetadata } from '@/lib/seo';
+import { buildServiceOffer } from '@/lib/seo/productSchema';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -94,18 +95,7 @@ export default function HetVsHomPage() {
               url: 'https://www.genetargeting.com',
             },
             areaServed: 'Worldwide',
-            offers: {
-              '@type': 'Offer',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                valueAddedTaxIncluded: false,
-                description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
-              },
-              availability: 'https://schema.org/InStock',
-              url: 'https://www.genetargeting.com/request-quote/',
-              seller: { '@type': 'Organization', name: 'ingenious targeting laboratory' },
-            },
+            offers: buildServiceOffer('https://www.genetargeting.com/request-quote/'),
           }),
         }}
       />

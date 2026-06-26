@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: `${base.title} | ingenious targeting laboratory`,
   description: base.description,
   alternates: {
-    canonical: 'https://www.genetargeting.com/request-quote',
+    canonical: 'https://www.genetargeting.com/request-quote/',
   },
   openGraph: {
     title: `${base.title} | ingenious targeting laboratory`,

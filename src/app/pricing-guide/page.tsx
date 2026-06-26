@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     'Detailed pricing reference for custom mouse, rat, and rabbit models. Available after submitting your work email. Guaranteed germline-confirmed delivery with flexible funding options.',
   alternates: {
-    canonical: 'https://www.genetargeting.com/pricing-guide',
+    canonical: 'https://www.genetargeting.com/pricing-guide/',
   },
   robots: {
     index: false,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'Custom Mouse Model Pricing Guide | ingenious targeting laboratory',
     description:
       'Detailed pricing reference for custom mouse, rat, and rabbit models. Available after submitting your work email.',
-    url: 'https://www.genetargeting.com/pricing-guide',
+    url: 'https://www.genetargeting.com/pricing-guide/',
     siteName: 'ingenious targeting laboratory',
     type: 'website',
     images: [

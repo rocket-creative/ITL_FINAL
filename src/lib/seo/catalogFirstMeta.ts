@@ -3,6 +3,8 @@
  * Applied site wide via generateMetadata unless catalogFirst: false.
  */
 
+import { isRevenuePillarPath } from './revenuePillars';
+
 export const CATALOG_MODEL_COUNT = '14,774+';
 
 const DESCRIPTION_MAX = 160;
@@ -50,6 +52,7 @@ export function hasCatalogSignal(text: string): boolean {
 
 export function shouldSkipCatalogMeta(path: string): boolean {
   const normalized = path.startsWith('/') ? path : `/${path}`;
+  if (isRevenuePillarPath(normalized)) return true;
   return SKIP_PATH_PREFIXES.some((prefix) => normalized === prefix || normalized.startsWith(`${prefix}/`));
 }
 

@@ -5,6 +5,8 @@
  */
 
 import { supabase, type CatalogRow } from './supabaseClient';
+import { tier4GenerateStaticParams } from '@/data/seoKeywords';
+import { modCanonicalToSlug } from '@/lib/seo/slugs';
 
 export interface ServerCatalogModel {
   id: string;
@@ -243,4 +245,21 @@ export async function getTopConditionalGeneNames(limit = 8): Promise<string[]> {
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .slice(0, limit)
     .map(([g]) => g);
+}
+
+/** Tier 4 sitemap entries backed by at least one catalog row for gene × mod. */
+export async function getIndexableTier4Params(): Promise<
+  ReturnType<typeof tier4GenerateStaticParams>
+> {
+  const pairs = await getDistinctGeneModelTypePairs();
+  const pairSet = new Set(
+    pairs.map(({ gene_name, model_type }) => {
+      const slug = modCanonicalToSlug(model_type);
+      return slug ? `${gene_name.toLowerCase()}\u0001${slug}` : '';
+    }).filter(Boolean),
+  );
+
+  return tier4GenerateStaticParams().filter((t) =>
+    pairSet.has(`${t.geneName.toLowerCase()}\u0001${t.modSlug}`),
+  );
 }

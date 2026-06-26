@@ -10,7 +10,7 @@ import { getAllBlogSlugs } from '@/lib/blog/blogUtils';
 import { glossaryTerms } from '@/data/glossaryTerms';
 import { getAllArticleSlugs } from '@/data/newsletterArticles';
 import { BASE_URL } from '@/lib/seo/types';
-import { getAllGeneNames, getDistinctGeneModelTypePairs } from '@/lib/catalog/serverCatalog';
+import { getAllGeneNames, getDistinctGeneModelTypePairs, getIndexableTier4Params } from '@/lib/catalog/serverCatalog';
 import {
   allTissueLineSlugs,
   driverCanonicalToSlug,
@@ -18,7 +18,7 @@ import {
   modSlugToCanonical,
 } from '@/lib/seo/slugs';
 import { CRE_DRIVERS } from '@/lib/search/creDrivers';
-import { tier4GenerateStaticParams } from '@/data/seoKeywords';
+import { REVENUE_PILLAR_PATHS } from '@/lib/seo/revenuePillars';
 
 type SitemapEntry = {
   url: string;
@@ -205,28 +205,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // long-tail. These match the GSC commercial-intent queries we are
   // trying to capture (humanized services/price, transgenic, knockin,
   // catalog gene queries, etc.).
-  const REVENUE_PILLARS = new Set([
-    '/all-catalog-mouse-models',
-    '/order-catalog-models',
-    '/humanized-mouse-models',
-    '/humanized-mouse-services',
-    '/point-mutation-mice',
-    '/knockout-mouse-models',
-    '/knockin-mouse-models',
-    '/conditional-knockout-mouse-models',
-    '/conventional-knockout-mouse-models',
-    '/tamoxifen-inducible-cre',
-    '/transgenic-mouse-service',
-    '/mouse-genotyping-service',
-    '/custom-mouse-models',
-    '/cre-recombinase-mice',
-    '/cre-lox-system',
-    '/custom-mouse-model-pricing',
-    '/request-quote',
-    '/start-your-project',
-  ]);
-
-  // Comparison/pillar pages that should rank highly for AI and search
+  const REVENUE_PILLARS = new Set<string>(REVENUE_PILLAR_PATHS);
   const highPriorityPaths = new Set(['/custom-mouse-model-companies']);
 
   for (const route of staticPages) {
@@ -352,7 +331,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  for (const t of tier4GenerateStaticParams()) {
+  for (const t of await getIndexableTier4Params()) {
     entries.push({
       url: url(
         `/all-catalog-mouse-models/gene/${encodeURIComponent(t.geneName)}/${t.modSlug}/${t.tissueOrDriverSlug}`

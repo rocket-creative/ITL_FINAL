@@ -13,6 +13,7 @@ import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import { applyCatalogFirstMeta } from '@/lib/seo';
+import { getTierLowPrice } from '@/lib/seo/productSchema';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -189,12 +190,8 @@ export default function PricingPage() {
               name: t.name,
               sku: t.sku,
               description: t.description,
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                valueAddedTaxIncluded: false,
-                description: 'Custom quote on request. Submit a brief and receive pricing within 24 hours.',
-              },
+              priceCurrency: 'USD',
+              price: String(getTierLowPrice(t.name)),
               url: `https://www.genetargeting.com${t.quoteHref.split('?')[0]}`,
               availability: 'https://schema.org/InStock',
               seller: {

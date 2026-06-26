@@ -19,8 +19,8 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Resources",
   title: "Mouse Model Resources",
-  intro: "ingenious targeting laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects.",
-  description: "From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,800 custom projects completed since 1998."
+  intro: "Plan stronger experiments with strategy guides, technical references, and planning tools built from more than 2,800 custom mouse model projects since 1998.",
+  description: "Use this hub to choose knockout versus conditional designs, compare humanization options, select Cre drivers, and access FAQs before you request a quote. Each guide links to deeper service pages and catalog search when a live model may already exist."
 };
 
 // Stats Data
@@ -90,7 +90,21 @@ const planningGuidesData: {
 } = {
   title: "Planning Guides",
   guides: [
-    // Planning guides to be added in future
+    {
+      href: "/technology-overview",
+      title: "Technology Overview",
+      description: "ES cell and CRISPR workflows, allele design options, and how ITL validates germline transmission before delivery."
+    },
+    {
+      href: "/custom-mouse-models",
+      title: "Custom Model Services",
+      description: "Service paths for knockout, knockin, humanized, conditional, and transgenic programs with quote timelines."
+    },
+    {
+      href: "/faq",
+      title: "Project FAQs",
+      description: "Answers to common questions about quoting, breeding, QC, and shipping live or cryopreserved materials."
+    },
   ]
 };
 
@@ -338,7 +352,7 @@ export default function ResourcesPage() {
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link
-                href="/resources"
+                href="#strategy-guides"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -712,7 +726,7 @@ export default function ResourcesPage() {
         </section>
 
         {/* Selection Guides Section */}
-        <section style={{ background: 'white', padding: '60px 20px' }}>
+        <section id="strategy-guides" style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
               fontFamily: 'Poppins, sans-serif',
