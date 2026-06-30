@@ -6,9 +6,18 @@ Allow: /
 Allow: /all-catalog-mouse-models/
 Allow: /cre-lines/
 Allow: /cre-drivers/
+Disallow: /request-quote?
+Disallow: /request-quote/?
+Disallow: /start-your-project?
+Disallow: /start-your-project/?
 Disallow: /*?type=
+Disallow: /*&type=
+Disallow: /*?gene=
+Disallow: /*&gene=
 Disallow: /*?tissue=
+Disallow: /*&tissue=
 Disallow: /*?driver=
+Disallow: /*&driver=
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
@@ -18,6 +27,7 @@ Disallow: /pricing-guide/
 
 # Sitemaps
 Sitemap: https://www.genetargeting.com/sitemap.xml
+Sitemap: https://www.genetargeting.com/sitemaps/gene-modifications/sitemap-index.xml
 
 # AI assistant crawlers and indexers (explicitly allowed)
 # Allowing these so iTL is accurately represented in AI generated answers.

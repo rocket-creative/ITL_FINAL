@@ -45,6 +45,18 @@ export async function proxy(request: NextRequest) {
     return redirectWithNoindex(url, 301);
   }
 
+  const isQuotePath =
+    pathname === '/request-quote' ||
+    pathname === '/request-quote/' ||
+    pathname === '/start-your-project' ||
+    pathname === '/start-your-project/';
+
+  if (isQuotePath && searchParams.toString()) {
+    const response = NextResponse.next();
+    response.headers.set('X-Robots-Tag', 'noindex, follow');
+    return response;
+  }
+
   if (pathname === '/pricing-guide' || pathname.startsWith('/pricing-guide/')) {
     const cookie = request.cookies.get(PRICING_UNLOCK_COOKIE)?.value;
     const ok = await verifyUnlockCookie(cookie);

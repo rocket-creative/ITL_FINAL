@@ -5,6 +5,8 @@ import "./globals.css";
 import { AllPixels } from "@/components/analytics";
 import { Analytics } from "@vercel/analytics/next";
 import { CommercialCTATracker } from "@/components/UXUIDC";
+import BuildAwarenessBanner from "@/components/UXUIDC/BuildAwarenessBanner";
+import { BannerVisibilityProvider } from "@/components/UXUIDC/BannerVisibilityContext";
 import { ROOT_CATALOG_FIRST_META } from "@/lib/seo";
 
 // Only load Vercel Analytics on Vercel (avoids 404 and MIME errors on localhost)
@@ -159,7 +161,10 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        {children}
+        <BannerVisibilityProvider>
+          <BuildAwarenessBanner />
+          {children}
+        </BannerVisibilityProvider>
       </body>
     </html>
   );

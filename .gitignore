@@ -27,5 +27,8 @@ itl-website/extracted-changes/
 node_modules
 tsconfig.tsbuildinfo
 
+# Gene expansion ingest caches
+scripts/gene-expansion/.cache/
+
 # Next 16: use src/proxy.ts only; a middleware.ts re-export conflicts with proxy.
 /src/middleware.ts
