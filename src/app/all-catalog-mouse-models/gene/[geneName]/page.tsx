@@ -25,6 +25,7 @@ import { parseQuery } from '@/lib/search/parseQuery';
 import { buildSeoUrl } from '@/lib/seo/searchUrl';
 import { modCanonicalToSlug, tissueCanonicalToSlug } from '@/lib/seo/slugs';
 import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
+import { getIndexableBuildInquiryLinksForGene } from '@/lib/gene-expansion/db';
 
 // On-demand ISR: pages render on first request, cache at edge for 24h.
 // After 24h, next visitor triggers background re-render (stale-while-revalidate).
@@ -124,10 +125,34 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const qs = await searchParams;
   const focusType = qs?.type?.trim();
   const tissueKey = qs?.tissue?.trim();
-  const models = (await getModelsByGene(geneName)).map(cleanModel);
+  const [rawModels, buildInquiryLinks] = await Promise.all([
+    getModelsByGene(geneName),
+    getIndexableBuildInquiryLinksForGene(geneName),
+  ]);
+  const models = rawModels.map(cleanModel);
+
+  if (models.length === 0 && buildInquiryLinks.length === 0) {
+    return { title: `${geneName} Mouse Models | ${SITE_NAME}` };
+  }
 
   if (models.length === 0) {
-    return { title: `${geneName} Mouse Models | ${SITE_NAME}` };
+    const title = `${geneName} Mouse Models | ${SITE_NAME}`;
+    const description = `Explore ${geneName} mouse model types available to build from ${SITE_NAME}. ${buildInquiryLinks.length} modification types with scientific rationale and quote ready project intake.`;
+    const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        title,
+        description,
+        url: canonical,
+        siteName: SITE_NAME,
+        locale: 'en_US',
+        type: 'website',
+      },
+      twitter: { card: 'summary_large_image', title, description },
+    };
   }
 
   const title =
@@ -187,12 +212,15 @@ export default async function GenePage({ params, searchParams }: Props) {
   const tissueKey = qs?.tissue?.trim();
   const creDriverQuery = qs?.driver?.trim();
 
-  const [rawModels, relatedGenes] = await Promise.all([
+  const [rawModels, relatedGenes, buildInquiryLinks] = await Promise.all([
     getModelsByGene(geneName),
     getRelatedGenes(geneName),
+    getIndexableBuildInquiryLinksForGene(geneName),
   ]);
 
-  if (rawModels.length === 0) return notFound();
+  if (rawModels.length === 0 && buildInquiryLinks.length === 0) return notFound();
+
+  const isBuildInquiryOnly = rawModels.length === 0 && buildInquiryLinks.length > 0;
 
   let models = rawModels.map(cleanModel);
   models = sortModelsForType(models, focusType);
@@ -239,7 +267,9 @@ export default async function GenePage({ params, searchParams }: Props) {
             }}>
               <span style={{ color: '#00d4d4', fontSize: '10px' }}>●</span>
               <span style={{ color: '#fff', fontSize: '.85rem', fontWeight: 500 }}>
-                {models.length} Model{models.length !== 1 ? 's' : ''} Available
+                {isBuildInquiryOnly
+                  ? `${buildInquiryLinks.length} Model Type${buildInquiryLinks.length !== 1 ? 's' : ''} Available to Build`
+                  : `${models.length} Model${models.length !== 1 ? 's' : ''} Available`}
               </span>
             </div>
 
@@ -334,9 +364,11 @@ export default async function GenePage({ params, searchParams }: Props) {
               fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700,
               color: '#fff', marginBottom: '16px', lineHeight: 1.2,
             }}>
-              {focusType
-                ? `${geneName} ${focusType} mouse models`
-                : `${geneName} ${typeStr} mouse model${models.length !== 1 ? 's' : ''}`}
+              {isBuildInquiryOnly
+                ? `${geneName} mouse models`
+                : focusType
+                  ? `${geneName} ${focusType} mouse models`
+                  : `${geneName} ${typeStr} mouse model${models.length !== 1 ? 's' : ''}`}
             </h1>
 
             {/* Intro paragraph includes gene+type combos for long tail SEO */}
@@ -344,9 +376,11 @@ export default async function GenePage({ params, searchParams }: Props) {
               fontSize: '1rem', color: 'rgba(255,255,255,0.9)',
               marginBottom: '30px', lineHeight: 1.7, maxWidth: '800px',
             }}>
-              {hasLiveModels
-                ? `Browse ${models.length} ${geneName} mouse model${models.length !== 1 ? 's' : ''} including ${typeStr.toLowerCase()} variants — in stock and ready to ship from ${SITE_NAME}. ${types.length > 1 ? `Available as ${types.map(t => `${geneName} ${t.toLowerCase()} mouse`).join(', ')}.` : ''} Request a quote within 24 hours.`
-                : `Browse ${models.length} ${geneName} mouse model${models.length !== 1 ? 's' : ''} including ${typeStr.toLowerCase()} variants from ${SITE_NAME}. ${types.length > 1 ? `Available as ${types.map(t => `${geneName} ${t.toLowerCase()} mouse`).join(', ')}.` : ''} Contact us for availability and fast turnaround.`}
+              {isBuildInquiryOnly
+                ? `No ${geneName} catalog inventory yet. Explore ${buildInquiryLinks.length} modification type${buildInquiryLinks.length !== 1 ? 's' : ''} you can build with ${SITE_NAME}, each with scientific rationale and a quote ready project intake.`
+                : hasLiveModels
+                  ? `Browse ${models.length} ${geneName} mouse model${models.length !== 1 ? 's' : ''} including ${typeStr.toLowerCase()} variants — in stock and ready to ship from ${SITE_NAME}. ${types.length > 1 ? `Available as ${types.map(t => `${geneName} ${t.toLowerCase()} mouse`).join(', ')}.` : ''} Request a quote within 24 hours.`
+                  : `Browse ${models.length} ${geneName} mouse model${models.length !== 1 ? 's' : ''} including ${typeStr.toLowerCase()} variants from ${SITE_NAME}. ${types.length > 1 ? `Available as ${types.map(t => `${geneName} ${t.toLowerCase()} mouse`).join(', ')}.` : ''} Contact us for availability and fast turnaround.`}
             </p>
 
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -376,6 +410,7 @@ export default async function GenePage({ params, searchParams }: Props) {
         </section>
 
         {/* Models Table */}
+        {models.length > 0 && (
         <section style={{ background: '#fff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             {/* H2 includes gene+type for SEO: "Available Brca1 Knockout & Conditional KO Models" */}
@@ -459,6 +494,7 @@ export default async function GenePage({ params, searchParams }: Props) {
             </div>
           </div>
         </section>
+        )}
 
         {/* Sales / About section */}
         <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
@@ -560,7 +596,7 @@ export default async function GenePage({ params, searchParams }: Props) {
           </section>
         )}
 
-        {types.length > 0 && (
+        {(types.length > 0 || buildInquiryLinks.length > 0) && (
           <section style={{ background: '#f8f9fa', padding: '50px 20px', borderBottom: '1px solid #eee' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 style={{
@@ -570,7 +606,9 @@ export default async function GenePage({ params, searchParams }: Props) {
                 Modifications available
               </h2>
               <p style={{ color: '#444', fontSize: '.92rem', marginBottom: '16px', lineHeight: 1.7 }}>
-                Jump to catalog backed pages for {geneName} organized by modification type. Each URL is indexable and matches common search patterns.
+                {types.length > 0
+                  ? `Jump to catalog backed pages for ${geneName} organized by modification type. Each URL is indexable and matches common search patterns.`
+                  : `Explore indexable ${geneName} modification pages organized by type. Each URL matches common search patterns and includes scientific rationale with quote ready intake.`}
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {types.map((t) => (
@@ -586,6 +624,21 @@ export default async function GenePage({ params, searchParams }: Props) {
                     {geneName} {t}
                   </Link>
                 ))}
+                {buildInquiryLinks
+                  .filter((link) => !types.some((t) => modCanonicalToSlug(t) === link.slug))
+                  .map((link) => (
+                    <Link
+                      key={link.slug}
+                      href={link.href}
+                      style={{
+                        padding: '8px 16px', background: '#f0f9f9',
+                        border: '1px solid #134978', borderRadius: '4px',
+                        color: '#134978', fontSize: '.85rem', fontWeight: 600, textDecoration: 'none',
+                      }}
+                    >
+                      {geneName} {link.displayName}
+                    </Link>
+                  ))}
               </div>
             </div>
           </section>
