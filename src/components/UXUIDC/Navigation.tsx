@@ -323,20 +323,21 @@ export function UXUIDCNavigation() {
         Skip to main content
       </a>
 
-      <nav ref={navRef} className="w-full z-50 sticky top-0 bg-white" aria-label="Main navigation">
+      <header className="w-full bg-white">
+      <nav ref={navRef} className="w-full z-50 sticky top-0 bg-white border-b border-gray-100" aria-label="Main navigation">
         {/* All rows inside main wrapper so dropdown never overflows */}
         <div className="container px-4 sm:px-6 lg:px-8">
         {/* Row 1: Logo, Search, Input, CTAs */}
         <div>
-            <div className="flex items-center justify-end h-auto sm:h-14 gap-0 py-4 sm:py-3">
+            <div className="flex items-center justify-end h-auto sm:h-14 gap-0 py-2 sm:py-3">
               {/* Logo - auto, pushed left */}
-              <Link href="/" className="mr-auto" aria-label="Home">
+              <Link href="/" className="mr-auto shrink-0" aria-label="Home">
                 <Image
                   src="/images/logo.png"
                   alt="ingenious targeting laboratory"
                   width={224}
                   height={54}
-                  className="h-auto"
+                  className="h-auto w-[148px] sm:w-[180px] lg:w-[224px]"
                   priority
                 />
               </Link>
@@ -485,15 +486,14 @@ export function UXUIDCNavigation() {
         </div>
 
         </div>
+      </nav>
 
-        {/* Announcement bar - full width edge to edge */}
-        <div className="w-full flex justify-center items-start sm:items-center py-2 px-4" style={{ backgroundColor: '#008080' }}>
+        {/* Announcement bar - scrolls away on mobile so it does not cover hero content */}
+        <div className="w-full flex justify-center items-center py-1.5 sm:py-2 px-4" style={{ backgroundColor: '#008080' }}>
           <Link href="/contact" className="text-center">
-            {/* Mobile: Stacked version */}
-            <span className="block sm:hidden text-xs leading-relaxed" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
-              Is uncertain NIH funding holding you back?
-              <br />
-              <span className="font-semibold">Start now, pay later.</span>
+            {/* Mobile: single line */}
+            <span className="block sm:hidden text-[11px] leading-snug" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
+              Uncertain NIH funding? <span className="font-semibold">Start now, pay later.</span>
             </span>
             {/* Tablet+ : Full version */}
             <span className="hidden sm:block text-xs leading-relaxed" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
@@ -578,7 +578,7 @@ export function UXUIDCNavigation() {
             </div>
           </div>
         ) : null}
-      </nav>
+      </header>
     </>
   );
 }
