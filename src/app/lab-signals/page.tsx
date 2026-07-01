@@ -103,8 +103,38 @@ export default function LabSignalsPage() {
           }
         }
         @media (max-width: 809px) {
+          .lab-signals-hero {
+            min-height: auto !important;
+            padding: 0 !important;
+            flex-direction: column !important;
+            background-size: cover !important;
+            background-position: center !important;
+          }
           .lab-signals-hero-spacer {
             display: none !important;
+          }
+          .lab-signals-hero-content {
+            width: 100% !important;
+            max-width: none !important;
+            margin: 0 !important;
+            padding: 1.5rem 1.25rem 2rem !important;
+            text-align: center !important;
+            border-radius: 0 !important;
+            background-color: #ffffff !important;
+            box-shadow: none !important;
+            border: none !important;
+            backdrop-filter: none !important;
+          }
+          .lab-signals-hero-content h1 {
+            font-size: clamp(1.625rem, 4.8vw, 2.25rem) !important;
+            line-height: 1.15 !important;
+          }
+          .lab-signals-hero-badge {
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+          .lab-signals-hero-buttons {
+            justify-content: center !important;
           }
           .lab-signals-video-section {
             min-height: 280px !important;

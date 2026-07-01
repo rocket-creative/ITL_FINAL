@@ -389,11 +389,10 @@ export default function FAQPage() {
       <main id="main-content">
         {/* Hero Section */}
         <section 
-        className="flex flex-col justify-center items-center"
-        style={{ 
-          backgroundColor: BRAND.navy, 
-          padding: '100px 20px 80px',
-          minHeight: '400px',
+        className="flex flex-col justify-center items-center page-hero page-hero--solid page-hero--center"
+        style={{
+          backgroundColor: BRAND.navy,
+          minHeight: 'auto',
         }}
       >
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>

@@ -55,7 +55,7 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
       <UXUIDCNavigation />
       <main id="main-content">
         {/* Zone 1 — Trust and positioning */}
-        <section style={{ background: '#0a253c', padding: '80px 20px 60px' }}>
+        <section className="page-hero" style={{ background: '#0a253c', padding: '80px 20px 60px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <nav aria-label="Breadcrumb" style={{ marginBottom: '16px' }}>
               <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexWrap: 'wrap', gap: '4px 8px', fontSize: '.85rem' }}>

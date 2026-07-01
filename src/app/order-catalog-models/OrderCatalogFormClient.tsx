@@ -151,7 +151,7 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
       <main className="min-h-screen" style={{ backgroundColor: '#f8fafc' }}>
 
         {/* ========== COMPACT HEADER + FORM SECTION ========== */}
-        <section
+        <section className="page-hero"
           style={{
             background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
             padding: '70px 20px 50px',

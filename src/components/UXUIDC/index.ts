@@ -12,6 +12,8 @@ export { default as UXUIDCAnnouncementBar } from './AnnouncementBar';
 export { ThankYouPageShell } from './ThankYouPageShell';
 
 // Hero & Sections
+export { default as UXUIDCPageHero } from './PageHero';
+export type { PageHeroProps } from './PageHero';
 export { default as UXUIDCHeroSection } from './HeroSection';
 export { default as UXUIDCFeatureGrid } from './FeatureGrid';
 export { default as UXUIDCWorkflowSection } from './WorkflowSection';

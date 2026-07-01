@@ -219,7 +219,7 @@ export default function HCD3EDGPage() {
 
         <main>
           {/* Hero */}
-          <section
+          <section className="page-hero"
             style={{
               background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
               padding: '72px 20px 56px',

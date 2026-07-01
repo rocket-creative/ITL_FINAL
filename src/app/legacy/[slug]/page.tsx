@@ -199,7 +199,7 @@ export default async function LegacyPage({ params }: { params: Promise<{ slug: s
 
       <main id="main-content">
         {/* Header Banner */}
-        <section className="legacy-page-hero">
+        <section className="legacy-page-hero page-hero">
           <div className="legacy-page-hero-inner">
             <div className="legacy-page-badge">
               <span>Legacy Content from genetargeting.com</span>

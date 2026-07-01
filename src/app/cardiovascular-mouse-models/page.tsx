@@ -249,7 +249,7 @@ export default function CardiovascularMouseModelsPage() {
       
       <main id="main-content">
         {/* Hero Section */}
-        <section 
+        <section className="page-hero" 
           ref={heroRef}
           style={{
             background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',

@@ -141,7 +141,7 @@ export default function AccessibilityPage() {
           </nav>
 
           {/* Hero Section */}
-          <section style={{ 
+          <section className="page-hero" style={{ 
             padding: '80px 24px', 
             background: BRAND.navy,
             color: BRAND.white,

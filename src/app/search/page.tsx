@@ -122,8 +122,7 @@ export default function SearchPage() {
         </nav>
 
         {/* Search Section */}
-        <section style={{ 
-          padding: '80px 24px', 
+        <section className="page-hero page-hero--solid page-hero--center" style={{ 
           background: BRAND.navy,
           color: BRAND.white,
           textAlign: 'center'

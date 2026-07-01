@@ -27,7 +27,7 @@ export default function ConditionalVsConventionalPage() {
     <div>
       <UXUIDCNavigation />
 
-      <section style={{ backgroundColor: BRAND.navy, padding: '80px 20px 60px' }}>
+      <section className="page-hero" style={{ backgroundColor: BRAND.navy, padding: '80px 20px 60px' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
           <h1 style={{ color: BRAND.white, fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700, marginBottom: '20px' }}>
             Conditional vs Conventional Knockout

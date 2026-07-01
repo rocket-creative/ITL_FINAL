@@ -189,7 +189,7 @@ export default function TIM3HumanizedMicePage() {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section style={{
+        <section className="page-hero" style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
           padding: '80px 20px 60px'}}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>

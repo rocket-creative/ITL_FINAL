@@ -221,7 +221,7 @@ export default function KnockoutMouseModelsPage() {
 
       <main id="main-content">
         {/* ========== HERO SECTION ========== */}
-        <section
+        <section className="page-hero"
           ref={heroRef}
           style={{
             background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',

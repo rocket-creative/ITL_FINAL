@@ -17,7 +17,7 @@ export default function SingleCheckpointMicePage() {
       <UXUIDCNavigation />
       <main id="main-content">
         {/* Hero Section */}
-        <section style={{
+        <section className="page-hero" style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
           padding: '80px 20px 60px',
         }}>

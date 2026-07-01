@@ -27,6 +27,7 @@ export default function RequestQuoteThankYouPage() {
     <ThankYouPageShell>
       <main id="main-content">
         <section
+          className="page-hero"
           style={{
             background: HERO_GRADIENT,
             padding: '72px 20px 64px',

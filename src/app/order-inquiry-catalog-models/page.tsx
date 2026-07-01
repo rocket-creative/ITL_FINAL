@@ -191,7 +191,7 @@ export default function OrderInquiryCatalogModelsPage() {
         </nav>
 
         {/* Hero Section with Form Above the Fold */}
-        <section style={{ 
+        <section className="page-hero" style={{ 
           padding: '70px 24px 60px', 
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
           position: 'relative',

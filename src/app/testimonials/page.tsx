@@ -71,7 +71,7 @@ export default function TestimonialsPage() {
       <main id="main-content">
         {/* Hero Section */}
         <section 
-          className="py-16 px-6 text-center"
+          className="py-16 px-6 text-center page-hero"
           style={{ 
             background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)',
             color: 'white',

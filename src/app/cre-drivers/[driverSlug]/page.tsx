@@ -78,7 +78,7 @@ export default async function CreDriverPage({ params }: Props) {
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       <main id="main-content">
-        <section style={{ background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)', padding: '80px 20px 60px' }}>
+        <section className="page-hero" style={{ background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)', padding: '80px 20px 60px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <nav aria-label="Breadcrumb" style={{ marginBottom: '16px' }}>
               <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexWrap: 'wrap', gap: '4px 8px', fontSize: '.85rem' }}>

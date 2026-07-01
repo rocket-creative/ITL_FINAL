@@ -104,7 +104,7 @@ export default function FeaturedModelPage() {
 
         <main>
           {/* Hero */}
-          <section style={{
+          <section className="page-hero" style={{
             background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
             padding: '80px 20px 60px',
             position: 'relative',

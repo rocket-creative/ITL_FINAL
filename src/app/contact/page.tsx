@@ -65,7 +65,7 @@ export default function ContactPage() {
 
       <main id="main-content" style={{ backgroundColor: '#f8fafc', minHeight: '100vh' }}>
         {/* ========== HERO SECTION WITH FORM ========== */}
-        <section 
+        <section className="page-hero" 
           style={{ 
             background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
             padding: '80px 20px 80px',

@@ -101,7 +101,7 @@ export default function HetVsHomPage() {
       />
 
       <main id="main-content">
-        <section
+        <section className="page-hero"
           style={{
             background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 100%)',
             padding: '70px 20px 50px',

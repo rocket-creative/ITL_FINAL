@@ -193,7 +193,7 @@ function BreedingSchemeArchitectContent() {
 
       {/* ========== HERO SECTION ========== */}
       <section
-        className="animate-initial animate-fade-in-up"
+        className="animate-initial animate-fade-in-up page-hero"
         style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
           padding: '80px 20px 60px',

@@ -35,7 +35,7 @@ export default function CurrentOpeningsPage() {
       
       <main id="main-content">
         {/* Hero Section */}
-        <section style={{
+        <section className="page-hero" style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
           padding: '70px 20px 50px',
         }}>

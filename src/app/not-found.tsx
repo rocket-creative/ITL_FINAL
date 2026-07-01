@@ -26,6 +26,7 @@ export default function NotFound() {
     <ThankYouPageShell>
       <main id="main-content">
         <section
+          className="page-hero"
           style={{
             background: HERO_GRADIENT,
             padding: "64px 20px 56px",

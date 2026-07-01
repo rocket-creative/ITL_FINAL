@@ -32,8 +32,8 @@ export default function ScientificLeadershipPage() {
       <UXUIDCNavigation />
 
       {/* Hero Section */}
-      <section style={{ backgroundColor: BRAND.navy, padding: '80px 20px 60px' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+      <section className="page-hero page-hero--solid page-hero--center">
+        <div className="page-hero-inner">
           <h1 style={{
             color: BRAND.white,
             fontFamily: 'Poppins, sans-serif',
