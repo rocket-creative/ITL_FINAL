@@ -1,5 +1,6 @@
 /**
  * Sitewide build awareness banner — spec §6b.
+ * Sits above the 1200px page column; matches nav typography and spacing.
  */
 
 'use client';
@@ -38,31 +39,45 @@ export default function BuildAwarenessBanner() {
 
   return (
     <div
-      className="bg-[#0a253c] text-white"
-      style={{ minHeight: '52px' }}
+      style={{ maxWidth: '1200px', margin: '0 auto' }}
+      className="bg-white border-b border-[#e0e0e0]"
       role="region"
       aria-label="Build capability"
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 px-4 py-2.5">
-        <div className="flex-1 text-center sm:text-left">
-          <p className="text-sm font-semibold leading-snug m-0">
+      <div className="container flex flex-row items-center justify-between gap-2 sm:gap-8 py-2.5 sm:py-4">
+        <div className="flex-1 min-w-0 text-left pr-1 sm:pr-4">
+          <p
+            className="m-0 text-xs sm:text-[0.9375rem] font-semibold leading-snug"
+            style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif' }}
+          >
             We build the exact model your study needs.
           </p>
-          <p className="text-xs leading-snug m-0 mt-0.5 opacity-90 hidden sm:block">
+          <p
+            className="m-0 mt-1 text-xs sm:text-sm leading-relaxed hidden sm:block"
+            style={{ color: '#666', fontFamily: 'system-ui, sans-serif' }}
+          >
             Designed and delivered by ingenious targeting laboratory. Quote in 24 hours.
           </p>
         </div>
-        <div className="flex items-center gap-2 flex-shrink-0">
+
+        <div className="flex items-center justify-end gap-1.5 sm:gap-4 flex-shrink-0">
           <Link
             href="/request-quote/"
-            className="inline-block bg-[#008080] text-white text-xs font-semibold uppercase tracking-wide px-3 py-2 rounded-sm hover:opacity-90 no-underline"
+            className="group inline-flex items-center gap-1 bg-[#008080] text-white text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-sm hover:opacity-90 no-underline whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2"
           >
-            Get a Quote
+            <span className="sm:hidden">Quote</span>
+            <span className="hidden sm:inline">Get a Quote</span>
+            <span
+              className="transition-transform duration-300 group-hover:translate-x-1"
+              aria-hidden="true"
+            >
+              →
+            </span>
           </Link>
           <button
             type="button"
             onClick={handleDismiss}
-            className="p-1 hover:bg-white/20 rounded"
+            className="p-2 text-[#666] hover:text-[#0a253c] hover:bg-[#f7f7f7] rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-600"
             aria-label="Dismiss banner"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
