@@ -31,7 +31,10 @@ function getSupabase(requireServiceRole = true) {
     (requireServiceRole ? null : process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 
   if (!url || !key) {
-    console.error('Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in .env.local');
+    const hint = process.env.CI
+      ? 'Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY as GitHub Actions repository secrets.'
+      : 'Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in .env.local.';
+    console.error(`Missing Supabase credentials. ${hint}`);
     process.exit(1);
   }
 
