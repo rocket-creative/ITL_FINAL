@@ -11,6 +11,7 @@ import { geneTherapyNeurodegenerativeArticleBody } from './_labSignalsGeneTherap
 import { beyondGlp1ObesityArticleBody } from './_labSignalsBeyondGlp1ObesityArticle';
 import { humanizedAutoimmuneArticleBody } from './_labSignalsHumanizedAutoimmuneArticle';
 import { dnaSequencesAreDataArticleBody } from './_labSignalsDnaSequencesAreDataArticle';
+import { senescentCellClearanceArticleBody } from './_labSignalsSenescentCellClearanceArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1112,6 +1113,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/transgenic-mouse-service",
     body: dnaSequencesAreDataArticleBody,
     publishedAt: "2026-06-23",
+  },
+  {
+    id: "senescent-cell-clearance-zombie-cell-research",
+    slug: "senescent-cell-clearance-zombie-cell-research",
+    title: 'Senescent Cell Clearance and the Rise of "Zombie Cell" Research',
+    subtitle: "How transgenic mouse models are advancing senolytic science",
+    description:
+      "Senescent zombie cells drive aging, fibrosis, and chronic disease. How INK-ATTAC, p21-ATTAC, and senolytic mouse models advance senescence research.",
+    category: "Technical Guide",
+    relatedPage: "/transgenic-mouse-service",
+    body: senescentCellClearanceArticleBody,
+    publishedAt: "2026-07-07",
   },
 ];
 
