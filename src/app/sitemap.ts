@@ -19,6 +19,7 @@ import {
 } from '@/lib/seo/slugs';
 import { CRE_DRIVERS } from '@/lib/search/creDrivers';
 import { REVENUE_PILLAR_PATHS } from '@/lib/seo/revenuePillars';
+import { resolveCanonicalModSlug } from '@/lib/gene-expansion/synonymRedirects';
 
 type SitemapEntry = {
   url: string;
@@ -29,7 +30,10 @@ type SitemapEntry = {
 
 function url(path: string): string {
   const normalized = path.startsWith('/') ? path : `/${path}`;
-  return `${BASE_URL}${normalized}${normalized ? '/' : ''}`;
+  // Root path must return the base with a single trailing slash (never "//").
+  if (normalized === '/') return `${BASE_URL}/`;
+  const trimmed = normalized.endsWith('/') ? normalized.slice(0, -1) : normalized;
+  return `${BASE_URL}${trimmed}/`;
 }
 
 function getLegacySlugs(): string[] {
@@ -303,7 +307,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const pairs = await getDistinctGeneModelTypePairs();
   for (const { gene_name, model_type } of pairs) {
-    const ms = modCanonicalToSlug(model_type);
+    // Canonicalize synonym slugs (e.g. transgenic -> overexpression) so the
+    // sitemap never lists a URL that will 301-redirect at request time.
+    const ms = resolveCanonicalModSlug(modCanonicalToSlug(model_type));
     if (!modSlugToCanonical(ms)) continue;
     entries.push({
       url: url(`/all-catalog-mouse-models/gene/${encodeURIComponent(gene_name)}/${ms}`),
@@ -332,9 +338,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   for (const t of await getIndexableTier4Params()) {
+    const modSlug = resolveCanonicalModSlug(t.modSlug);
     entries.push({
       url: url(
-        `/all-catalog-mouse-models/gene/${encodeURIComponent(t.geneName)}/${t.modSlug}/${t.tissueOrDriverSlug}`
+        `/all-catalog-mouse-models/gene/${encodeURIComponent(t.geneName)}/${modSlug}/${t.tissueOrDriverSlug}`
       ),
       lastModified: new Date(),
       changeFrequency: 'weekly',

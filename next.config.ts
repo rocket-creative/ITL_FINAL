@@ -173,7 +173,11 @@ const nextConfig: NextConfig = {
       { source: '/mouse-model-pricing', destination: '/custom-mouse-model-pricing/', permanent: true },
       { source: '/knockout-mouse-pricing', destination: '/custom-mouse-model-pricing/', permanent: true },
       { source: '/transgenic-mouse-pricing', destination: '/custom-mouse-model-pricing/', permanent: true },
-      { source: '/contact', destination: '/contact/', permanent: true },
+      // Orphaned/renamed technology page reported as 404 in GSC
+      { source: '/technologies-3', destination: '/technology-overview/', permanent: true },
+      // NOTE: Do NOT add `/contact` -> `/contact/` here. With `trailingSlash: true`,
+      // Next.js already normalizes `/contact` to `/contact/`; an explicit same-path
+      // slash redirect creates a redirect loop (GSC "Redirect error").
     ];
     const mergedLegacy = mergeRedirectRules(
       legacyRedirects as { source: string; destination: string; permanent: boolean }[],

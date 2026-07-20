@@ -485,11 +485,6 @@
     "permanent": true
   },
   {
-    "source": "/contact",
-    "destination": "/contact/",
-    "permanent": true
-  },
-  {
     "source": "/knockin-mice",
     "destination": "/knockin-mouse-models/",
     "permanent": true

@@ -58,7 +58,7 @@ export async function generateMetadata({
       type: 'article',
       publishedTime: article.publishedAt,
       siteName: 'Lab Signals',
-      url: `https://www.genetargeting.com/lab-signals/${article.slug}`,
+      url: `https://www.genetargeting.com/lab-signals/${article.slug}/`,
       images: [
         {
           url: ogImageUrl,
@@ -75,6 +75,7 @@ export async function generateMetadata({
       images: [ogImageUrl],
     },
     alternates: {
+      canonical: `https://www.genetargeting.com/lab-signals/${article.slug}/`,
       types: {
         'application/rss+xml': '/api/rss/lab-signals',
       },
