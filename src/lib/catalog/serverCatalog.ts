@@ -18,6 +18,17 @@ export interface ServerCatalogModel {
   catalogNumber: string;
 }
 
+/**
+ * A gene name must resolve to a single URL path segment. A slash (or
+ * backslash) cannot survive path routing even when percent-encoded (`%2F`
+ * is normalized back to `/` and splits the segment), so any such value is
+ * unroutable as a gene page and must never be turned into a URL. Malformed
+ * catalog values such as "hOX40(BALB/c)" fall into this bucket.
+ */
+export function isUrlSafeGeneName(name: string): boolean {
+  return name.length > 0 && !/[/\\]/.test(name);
+}
+
 /** Map DB row → component shape */
 function toModel(row: CatalogRow): ServerCatalogModel {
   return {
@@ -111,7 +122,7 @@ export async function getAllGeneNames(): Promise<string[]> {
 
     for (const row of data) {
       const g = (row.gene_name ?? '').trim();
-      if (g) seen.add(g);
+      if (isUrlSafeGeneName(g)) seen.add(g);
     }
 
     if (data.length < PAGE) break; // last page
@@ -147,7 +158,9 @@ export async function getAllModels(): Promise<ServerCatalogModel[]> {
     from += PAGE;
   }
 
-  return results.map(toModel);
+  return results
+    .filter((row) => isUrlSafeGeneName((row.gene_name ?? '').trim()))
+    .map(toModel);
 }
 
 /**
@@ -180,7 +193,7 @@ export async function getRelatedGenes(geneName: string, limit = 10): Promise<str
     .limit(limit * 3);
 
   if (!data) return [];
-  return [...new Set(data.map((r) => r.gene_name).filter(Boolean))].slice(0, limit);
+  return [...new Set(data.map((r) => (r.gene_name ?? '').trim()).filter(isUrlSafeGeneName))].slice(0, limit);
 }
 
 // Legacy alias used by gene-index page
@@ -208,7 +221,7 @@ export async function getDistinctGeneModelTypePairs(): Promise<
     for (const row of data) {
       const g = (row.gene_name ?? '').trim();
       const t = (row.model_type ?? '').trim();
-      if (g && t) keys.add(`${g}\u0001${t}`);
+      if (t && isUrlSafeGeneName(g)) keys.add(`${g}\u0001${t}`);
     }
     if (data.length < PAGE) break;
     from += PAGE;
@@ -262,4 +275,48 @@ export async function getIndexableTier4Params(): Promise<
   return tier4GenerateStaticParams().filter((t) =>
     pairSet.has(`${t.geneName.toLowerCase()}\u0001${t.modSlug}`),
   );
+}
+
+/**
+ * Per-gene indexable Tier 4 params (gene × mod × tissue/driver) that are backed
+ * by at least one catalog row of the matching model type. Pure over
+ * already-fetched models so callers can reuse getModelsByGene without a second
+ * round trip. A combo in this list is guaranteed to render a live Tier 4 page.
+ */
+export function indexableTier4ParamsForModels(
+  geneName: string,
+  models: ServerCatalogModel[],
+): ReturnType<typeof tier4GenerateStaticParams> {
+  if (models.length === 0) return [];
+  const typeSlugs = new Set(
+    models.map((m) => modCanonicalToSlug(m.modelType)).filter(Boolean),
+  );
+  const lc = geneName.toLowerCase();
+  return tier4GenerateStaticParams().filter(
+    (t) => t.geneName.toLowerCase() === lc && typeSlugs.has(t.modSlug),
+  );
+}
+
+/**
+ * Prefix-sibling genes that also carry >=1 catalog row of `modelType`.
+ * Guarantees cross-links to /gene/{sibling}/{modSlug}(/{tissue}) resolve 200
+ * instead of 404-ing when a sibling happens to lack that model type.
+ */
+export async function getRelatedGenesWithModelType(
+  geneName: string,
+  modelType: string,
+  limit = 8,
+): Promise<string[]> {
+  const prefix = geneName.slice(0, 3);
+  const { data } = await supabase
+    .from('catalog_models')
+    .select('gene_name')
+    .ilike('gene_name', `${prefix}%`)
+    .neq('gene_name', geneName)
+    .eq('model_type', modelType)
+    .order('gene_name')
+    .limit(limit * 4);
+
+  if (!data) return [];
+  return [...new Set(data.map((r) => r.gene_name).filter(Boolean))].slice(0, limit);
 }

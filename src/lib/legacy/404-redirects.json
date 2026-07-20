@@ -543,5 +543,105 @@
     "source": "/tag/mouse-models",
     "destination": "/",
     "permanent": true
+  },
+  {
+    "source": "/privacy-policy",
+    "destination": "/privacy/",
+    "permanent": true
+  },
+  {
+    "source": "/cookies",
+    "destination": "/privacy/",
+    "permanent": true
+  },
+  {
+    "source": "/resources-1",
+    "destination": "/resources/",
+    "permanent": true
+  },
+  {
+    "source": "/resources-2",
+    "destination": "/resources/",
+    "permanent": true
+  },
+  {
+    "source": "/resources-6",
+    "destination": "/resources/",
+    "permanent": true
+  },
+  {
+    "source": "/publications-4",
+    "destination": "/publications/",
+    "permanent": true
+  },
+  {
+    "source": "/publications-8",
+    "destination": "/publications/",
+    "permanent": true
+  },
+  {
+    "source": "/lab-signals-1",
+    "destination": "/lab-signals/",
+    "permanent": true
+  },
+  {
+    "source": "/lab-signals-5",
+    "destination": "/lab-signals/",
+    "permanent": true
+  },
+  {
+    "source": "/request-quote-1",
+    "destination": "/request-quote/",
+    "permanent": true
+  },
+  {
+    "source": "/mouse-model-budgeting-guide",
+    "destination": "/pricing-guide/",
+    "permanent": true
+  },
+  {
+    "source": "/gaining-inducible-control",
+    "destination": "/inducible-gene-expression/",
+    "permanent": true
+  },
+  {
+    "source": "/floxed-mouse-models",
+    "destination": "/conditional-knockout-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/breast-cancer-mouse-models",
+    "destination": "/oncology-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/neurological-disease-mice",
+    "destination": "/neuroscience-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/lipid-metabolism-mice",
+    "destination": "/metabolic-disease-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/lysosomal-storage-disorder-mice",
+    "destination": "/rare-disease-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/macular-degeneration-mice",
+    "destination": "/ophthalmology-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/retinal-disease-mice",
+    "destination": "/ophthalmology-mouse-models/",
+    "permanent": true
+  },
+  {
+    "source": "/cell-sorting-reporter-mice",
+    "destination": "/reporter-knockin/",
+    "permanent": true
   }
 ]

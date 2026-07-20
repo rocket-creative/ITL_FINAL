@@ -5,8 +5,14 @@
 
 import type { Metadata } from 'next';
 import { notFound, permanentRedirect } from 'next/navigation';
-import { getModelsByGene, getRelatedGenes } from '@/lib/catalog/serverCatalog';
-import { modSlugToCanonical } from '@/lib/seo/slugs';
+import {
+  getModelsByGene,
+  getRelatedGenesWithModelType,
+  indexableTier4ParamsForModels,
+} from '@/lib/catalog/serverCatalog';
+import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
+import { modSlugToCanonical, resolveTissueOrDriverSlug } from '@/lib/seo/slugs';
+import { getDisplayLabelForTissueKey } from '@/lib/search/creDrivers';
 import { tier1GenerateStaticParams } from '@/data/seoKeywords';
 import { getBuildInquiryPage } from '@/lib/gene-expansion/db';
 import { buildGeneModRedirectPath } from '@/lib/gene-expansion/synonymRedirects';
@@ -27,6 +33,28 @@ const SITE_NAME = 'ingenious targeting laboratory';
 const BASE_URL = 'https://www.genetargeting.com';
 
 type Props = { params: Promise<{ geneName: string; modSlug: string }> };
+
+/** Catalog-backed Tier 4 links for this gene × mod (each guaranteed to 200). */
+function buildTier4Links(
+  geneName: string,
+  rawModels: ServerCatalogModel[],
+  modCanon: string,
+): { href: string; label: string }[] {
+  return indexableTier4ParamsForModels(geneName, rawModels)
+    .filter((t) => modSlugToCanonical(t.modSlug) === modCanon)
+    .map((t) => {
+      const resolved = resolveTissueOrDriverSlug(t.tissueOrDriverSlug);
+      const context = resolved
+        ? resolved.kind === 'tissue'
+          ? getDisplayLabelForTissueKey(resolved.canonical)
+          : resolved.canonical
+        : '';
+      return {
+        href: `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${t.modSlug}/${t.tissueOrDriverSlug}/`,
+        label: context ? `${geneName} ${modCanon.toLowerCase()}, ${context}` : `${geneName} ${modCanon.toLowerCase()}`,
+      };
+    });
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { geneName: rawG, modSlug: rawSlug } = await params;
@@ -77,7 +105,7 @@ export default async function GeneModTierPage({ params }: Props) {
   if (modCanon && rawModels.length > 0) {
     const models = rawModels.filter((m) => m.modelType === modCanon);
     if (models.length >= 1) {
-      const relatedGenes = await getRelatedGenes(geneName, 8);
+      const relatedGenes = await getRelatedGenesWithModelType(geneName, modCanon, 8);
       return (
         <GeneModCatalogPage
           geneName={geneName}
@@ -85,6 +113,7 @@ export default async function GeneModTierPage({ params }: Props) {
           modCanon={modCanon}
           rawModels={rawModels}
           relatedGenes={relatedGenes}
+          tier4Links={buildTier4Links(geneName, rawModels, modCanon)}
         />
       );
     }
@@ -92,7 +121,7 @@ export default async function GeneModTierPage({ params }: Props) {
 
   const catalogFiltered = filterCatalogForSlug(rawModels, modSlug as CanonicalModSlug);
   if (catalogFiltered.length >= 1 && modCanon) {
-    const relatedGenes = await getRelatedGenes(geneName, 8);
+    const relatedGenes = await getRelatedGenesWithModelType(geneName, modCanon, 8);
     return (
       <GeneModCatalogPage
         geneName={geneName}
@@ -100,6 +129,7 @@ export default async function GeneModTierPage({ params }: Props) {
         modCanon={modCanon}
         rawModels={rawModels}
         relatedGenes={relatedGenes}
+        tier4Links={buildTier4Links(geneName, rawModels, modCanon)}
       />
     );
   }

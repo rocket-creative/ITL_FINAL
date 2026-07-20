@@ -494,8 +494,11 @@ export default async function IngeniousBlogPost({
       .join(' ');
 
   const category = String(frontmatter.category) || 'General';
+  const rawLegacyUrl = frontmatter.legacy_url;
   const legacyUrl =
-    String(frontmatter.legacy_url) || `https://www.genetargeting.com/ingenious-blog/${slug}`;
+    rawLegacyUrl && String(rawLegacyUrl) !== 'undefined'
+      ? String(rawLegacyUrl)
+      : `https://www.genetargeting.com/ingenious-blog/${slug}`;
 
   const catalogLookup = getCatalogLookup(slug);
   const catalogRelatedHref = `${catalogLookup.searchHref}${

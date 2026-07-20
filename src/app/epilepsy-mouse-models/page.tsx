@@ -49,7 +49,7 @@ const relatedLinks = [
   { title: "Knockin Mouse Models", href: "/knockin-mouse-models" },
   { title: "Point Mutation Mice", href: "/point-mutation-mice" },
   { title: "Conditional Knockout Mouse Models", href: "/conditional-knockout-mouse-models" },
-  { title: "Tissue Specific Cre Lines", href: "/tissue specific-cre-lines" }
+  { title: "Tissue Specific Cre Lines", href: "/tissue-specific-cre-lines/" }
 ];
 
 export default function EpilepsyMouseModelsPage() {

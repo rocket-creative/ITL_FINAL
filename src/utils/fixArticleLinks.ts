@@ -43,6 +43,11 @@ export function fixArticleLinks(html: string): string {
       if (path.includes('http') || path.includes('.pdf') || path.includes('.doc')) {
         return match;
       }
+      // Guard against authored content leaking a stray token (e.g. "$") that
+      // would otherwise emit a crawlable href="/$". Real slugs start alphanumeric.
+      if (!/^[A-Za-z0-9]/.test(path)) {
+        return match;
+      }
       return `href="/${path}"`;
     }
   );

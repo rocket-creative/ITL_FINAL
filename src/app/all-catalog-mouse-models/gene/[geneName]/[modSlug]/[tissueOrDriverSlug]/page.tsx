@@ -6,7 +6,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getModelsByGene, getRelatedGenes } from '@/lib/catalog/serverCatalog';
+import { getModelsByGene, getRelatedGenesWithModelType } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta } from '@/components/UXUIDC';
@@ -95,7 +95,9 @@ export default async function GeneModContextTierPage({ params }: Props) {
   const models = rawModels.map(cleanModel).filter((m) => m.modelType === modCanon);
   if (models.length === 0) notFound();
 
-  const relatedGenes = await getRelatedGenes(geneName, 6);
+  // Cross-links reuse this page's modSlug + tissue/driver slug; only siblings
+  // that also carry a matching catalog model type resolve to a live Tier 4 page.
+  const relatedGenes = await getRelatedGenesWithModelType(geneName, modCanon, 6);
 
   const driverRow = resolved.kind === 'driver' ? CRE_DRIVERS.find((d) => d.driver === resolved.canonical) : undefined;
   const tissueKey = resolved.kind === 'tissue' ? resolved.canonical : driverRow?.tissue;

@@ -9,23 +9,24 @@ import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
-import { getModelsByGene, getRelatedGenes } from '@/lib/catalog/serverCatalog';
+import { getModelsByGene, getRelatedGenes, indexableTier4ParamsForModels } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 
 import {
-  CRE_DRIVERS,
   getTopCreDriversForTissue,
   getDisplayLabelForTissueKey,
 } from '@/lib/search/creDrivers';
 import { getCachedCatalogGeneNames } from '@/lib/search/catalogGeneCache';
 import { parseQuery } from '@/lib/search/parseQuery';
 import { buildSeoUrl } from '@/lib/seo/searchUrl';
-import { modCanonicalToSlug, tissueCanonicalToSlug } from '@/lib/seo/slugs';
+import { modCanonicalToSlug, modSlugToCanonical, resolveTissueOrDriverSlug } from '@/lib/seo/slugs';
 import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
 import { getIndexableBuildInquiryLinksForGene } from '@/lib/gene-expansion/db';
+import { slugToCatalogDisplay } from '@/lib/gene-expansion/catalogTypeMap';
+import { resolveCanonicalModSlug } from '@/lib/gene-expansion/synonymRedirects';
 
 // On-demand ISR: pages render on first request, cache at edge for 24h.
 // After 24h, next visitor triggers background re-render (stale-while-revalidate).
@@ -233,6 +234,54 @@ export default async function GenePage({ params, searchParams }: Props) {
   const types = [...new Set(models.map(m => m.modelType))].filter(Boolean);
   const typeStr = types.length > 0 ? types.slice(0, 3).join(', ') : 'genetically engineered';
   const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
+
+  // Only emit modification links that resolve to a live (non-404) page. Catalog
+  // type links are canonicalized (e.g. transgenic -> overexpression) and gated
+  // to types whose slug maps back to a model type this gene actually has.
+  const modLinks: Array<{ slug: string; label: string; href: string; catalog: boolean }> = [];
+  {
+    const seen = new Set<string>();
+    for (const t of types) {
+      const slug = resolveCanonicalModSlug(modCanonicalToSlug(t));
+      const resolvedCanon = modSlugToCanonical(slug) ?? slugToCatalogDisplay(slug);
+      if (resolvedCanon !== t || seen.has(slug)) continue;
+      seen.add(slug);
+      modLinks.push({
+        slug,
+        label: `${geneName} ${t}`,
+        href: `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${slug}/`,
+        catalog: true,
+      });
+    }
+    for (const link of buildInquiryLinks) {
+      if (seen.has(link.slug)) continue;
+      seen.add(link.slug);
+      modLinks.push({
+        slug: link.slug,
+        label: `${geneName} ${link.displayName}`,
+        href: link.href,
+        catalog: false,
+      });
+    }
+  }
+
+  // Tier 4 (tissue/driver) links restricted to catalog-backed, indexable combos
+  // for this gene — never the generic hardcoded tissue list, which 404s for
+  // genes without matching catalog rows.
+  const tissueLinks = indexableTier4ParamsForModels(geneName, models)
+    .map((t) => {
+      const resolved = resolveTissueOrDriverSlug(t.tissueOrDriverSlug);
+      const modCanon = modSlugToCanonical(t.modSlug);
+      if (!resolved || !modCanon) return null;
+      const context =
+        resolved.kind === 'tissue' ? getDisplayLabelForTissueKey(resolved.canonical) : resolved.canonical;
+      return {
+        key: `${t.modSlug}/${t.tissueOrDriverSlug}`,
+        href: `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${t.modSlug}/${t.tissueOrDriverSlug}/`,
+        label: `${context} ${geneName} ${modCanon.toLowerCase()}`,
+      };
+    })
+    .filter((x): x is NonNullable<typeof x> => x !== null);
 
   const topDrivers = tissueKey ? [...getTopCreDriversForTissue(tissueKey, 3)] : [];
   const matchedFocusCount = focusType
@@ -603,7 +652,7 @@ export default async function GenePage({ params, searchParams }: Props) {
           </section>
         )}
 
-        {(types.length > 0 || buildInquiryLinks.length > 0) && (
+        {modLinks.length > 0 && (
           <section style={{ background: '#f8f9fa', padding: '50px 20px', borderBottom: '1px solid #eee' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 style={{
@@ -618,40 +667,28 @@ export default async function GenePage({ params, searchParams }: Props) {
                   : `Explore indexable ${geneName} modification pages organized by type. Each URL matches common search patterns and includes scientific rationale with quote ready intake.`}
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                {types.map((t) => (
+                {modLinks.map((link) => (
                   <Link
-                    key={t}
-                    href={`/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modCanonicalToSlug(t)}/`}
+                    key={link.slug}
+                    href={link.href}
                     style={{
-                      padding: '8px 16px', background: '#fff',
-                      border: '1px solid #008080', borderRadius: '4px',
-                      color: '#008080', fontSize: '.85rem', fontWeight: 600, textDecoration: 'none',
+                      padding: '8px 16px',
+                      background: link.catalog ? '#fff' : '#f0f9f9',
+                      border: `1px solid ${link.catalog ? '#008080' : '#134978'}`,
+                      borderRadius: '4px',
+                      color: link.catalog ? '#008080' : '#134978',
+                      fontSize: '.85rem', fontWeight: 600, textDecoration: 'none',
                     }}
                   >
-                    {geneName} {t}
+                    {link.label}
                   </Link>
                 ))}
-                {buildInquiryLinks
-                  .filter((link) => !types.some((t) => modCanonicalToSlug(t) === link.slug))
-                  .map((link) => (
-                    <Link
-                      key={link.slug}
-                      href={link.href}
-                      style={{
-                        padding: '8px 16px', background: '#f0f9f9',
-                        border: '1px solid #134978', borderRadius: '4px',
-                        color: '#134978', fontSize: '.85rem', fontWeight: 600, textDecoration: 'none',
-                      }}
-                    >
-                      {geneName} {link.displayName}
-                    </Link>
-                  ))}
               </div>
             </div>
           </section>
         )}
 
-        {types.includes('Conditional Knockout') && (
+        {tissueLinks.length > 0 && (
           <section style={{ background: '#fff', padding: '50px 20px', borderBottom: '1px solid #eee' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
               <h2 style={{
@@ -661,20 +698,20 @@ export default async function GenePage({ params, searchParams }: Props) {
                 Tissue-specific options
               </h2>
               <p style={{ color: '#444', fontSize: '.92rem', marginBottom: '16px', lineHeight: 1.7 }}>
-                Representative conditional routes pairing {geneName} with common tissue restricted programs.
+                Catalog backed tissue and driver restricted routes for {geneName}.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                {[...new Set(CRE_DRIVERS.map((d) => d.tissue))].slice(0, 6).map((tk) => (
+                {tissueLinks.map((link) => (
                   <Link
-                    key={tk}
-                    href={`/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/conditional-knockout/${tissueCanonicalToSlug(tk)}/`}
+                    key={link.key}
+                    href={link.href}
                     style={{
                       padding: '8px 16px', background: '#f0f9f9',
                       border: '1px solid #134978', borderRadius: '4px',
                       color: '#134978', fontSize: '.85rem', fontWeight: 600, textDecoration: 'none',
                     }}
                   >
-                    {getDisplayLabelForTissueKey(tk)} specific {geneName} knockout
+                    {link.label}
                   </Link>
                 ))}
               </div>

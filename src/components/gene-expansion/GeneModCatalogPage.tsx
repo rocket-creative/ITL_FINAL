@@ -7,8 +7,6 @@ import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
-import { tissueCanonicalToSlug } from '@/lib/seo/slugs';
-import { CRE_DRIVERS, getDisplayLabelForTissueKey } from '@/lib/search/creDrivers';
 import { getCuratedIntro } from '@/lib/seo/curatedIntros';
 import { buildTemplateIntro } from '@/lib/seo/contentTemplates';
 import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
@@ -40,6 +38,8 @@ export interface GeneModCatalogPageProps {
   modCanon: string;
   rawModels: ServerCatalogModel[];
   relatedGenes: string[];
+  /** Catalog-backed Tier 4 routes for this gene × mod; each resolves to a live page. */
+  tier4Links: { href: string; label: string }[];
 }
 
 export default function GeneModCatalogPage({
@@ -48,6 +48,7 @@ export default function GeneModCatalogPage({
   modCanon,
   rawModels,
   relatedGenes,
+  tier4Links,
 }: GeneModCatalogPageProps) {
   const models = rawModels.map(cleanModel).filter((m) => m.modelType === modCanon);
 
@@ -67,7 +68,6 @@ export default function GeneModCatalogPage({
   );
 
   const pubs = getPublicationsForPage('/conditional-knockout-mouse-models');
-  const tissues = [...new Set(CRE_DRIVERS.map((d) => d.tissue))].slice(0, 5);
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -183,16 +183,15 @@ export default function GeneModCatalogPage({
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>Related models and routes</h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
               <Link href={`/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`} style={{ padding: '8px 14px', border: '1px solid #008080', borderRadius: '4px', color: '#008080', fontWeight: 600, textDecoration: 'none' }}>All {geneName} models</Link>
-              {modCanon === 'Conditional Knockout' &&
-                tissues.map((tk) => (
-                  <Link
-                    key={tk}
-                    href={`/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/conditional-knockout/${tissueCanonicalToSlug(tk)}/`}
-                    style={{ padding: '8px 14px', border: '1px solid #134978', borderRadius: '4px', color: '#134978', fontWeight: 600, textDecoration: 'none' }}
-                  >
-                    {geneName} conditional, {getDisplayLabelForTissueKey(tk)}
-                  </Link>
-                ))}
+              {tier4Links.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  style={{ padding: '8px 14px', border: '1px solid #134978', borderRadius: '4px', color: '#134978', fontWeight: 600, textDecoration: 'none' }}
+                >
+                  {l.label}
+                </Link>
+              ))}
             </div>
             {relatedGenes.length > 0 ? (
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
