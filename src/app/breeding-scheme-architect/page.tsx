@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import Link from 'next/link';
 import {
+  CatalogCustomDualCta,
   UXUIDCNavigation,
   UXUIDCFooter,
   UXUIDCAnimatedFAQ,
@@ -344,6 +345,13 @@ function BreedingSchemeArchitectContent() {
               Request Custom Quote
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Top dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="breeding-scheme-architect" utmMedium="page-hero" flush />
         </div>
       </section>
 

@@ -208,6 +208,13 @@ export default function StartYourProjectPage() {
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="start-your-project" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         {/* What's Inside Section */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -882,6 +889,13 @@ export default function StartYourProjectPage() {
           </div>
         </section>
       </main>
+
+      {/* Bottom dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="start-your-project" utmMedium="page-closing" flush />
+        </div>
+      </section>
 
       <UXUIDCFooter />
 

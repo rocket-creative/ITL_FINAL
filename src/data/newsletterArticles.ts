@@ -12,6 +12,7 @@ import { beyondGlp1ObesityArticleBody } from './_labSignalsBeyondGlp1ObesityArti
 import { humanizedAutoimmuneArticleBody } from './_labSignalsHumanizedAutoimmuneArticle';
 import { dnaSequencesAreDataArticleBody } from './_labSignalsDnaSequencesAreDataArticle';
 import { senescentCellClearanceArticleBody } from './_labSignalsSenescentCellClearanceArticle';
+import { hivVaccineArticleBody } from './_labSignalsHivVaccineArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1125,6 +1126,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/transgenic-mouse-service",
     body: senescentCellClearanceArticleBody,
     publishedAt: "2026-07-07",
+  },
+  {
+    id: "mouse-models-next-generation-hiv-vaccine-development",
+    slug: "mouse-models-next-generation-hiv-vaccine-development",
+    title: "How Mouse Models Are Supporting Next-Generation HIV Vaccine Development",
+    subtitle: "How immunoglobulin knock-in and humanized mouse models advance bnAb-based vaccine design",
+    description:
+      "Immunoglobulin knock-in and humanized mouse models advance HIV vaccine development, guiding broadly neutralizing antibody design from bench to clinical trials.",
+    category: "Immunology",
+    relatedPage: "/humanized-mouse-models",
+    body: hivVaccineArticleBody,
+    publishedAt: "2026-07-21",
   },
 ];
 

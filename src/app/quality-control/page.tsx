@@ -11,6 +11,7 @@ import {
   UXUIDCCookieConsent,
   BreadcrumbSchema,
   UXUIDCStartProjectCTA,
+  CatalogCustomDualCta,
   IconCheckCircle,
   IconDNA,
   IconTarget,
@@ -43,6 +44,13 @@ export default function QualityControlPage() {
           <p style={{ color: '#b0c4d4', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>
             Rigorous quality control protocols ensuring stable germline transmission, verified allele structure, and reproducible phenotypes
           </p>
+        </div>
+      </section>
+
+      {/* Top dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="quality-control" utmMedium="page-hero" flush />
         </div>
       </section>
 

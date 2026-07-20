@@ -270,6 +270,13 @@ export default function KnockinMouseModelsPage() {
             </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="knockin-mouse-models" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         {/* ========== STATS BAR ========== */}
         <section style={{ backgroundColor: '#f7f7f7', padding: '40px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>

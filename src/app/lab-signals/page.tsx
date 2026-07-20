@@ -19,6 +19,7 @@ import {
   IconFlask,
   IconMail,
   BreadcrumbSchema,
+  CatalogCustomDualCta,
 } from '@/components/UXUIDC';
 import { 
   getPublishedArticles,
@@ -344,6 +345,13 @@ export default function LabSignalsPage() {
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Top dual-path CTA */}
+        <section style={{ backgroundColor: BRAND.white, padding: '40px 20px 0' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="lab-signals" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -713,6 +721,13 @@ export default function LabSignalsPage() {
               </button>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Bottom dual-path CTA */}
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="lab-signals" utmMedium="page-closing" flush />
           </div>
         </section>
 

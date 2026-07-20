@@ -4,6 +4,7 @@ import Link from 'next/link';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 import { buildFeaturedProductOffer } from '@/lib/seo/productSchema';
 
 /** Inline icons so this page stays a Server Component (avoids client Icons + hydration issues). */
@@ -417,6 +418,13 @@ export default function HCD3EDGPage() {
             </div>
           </section>
 
+          {/* Top dual-path CTA */}
+          <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+            <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+              <CatalogCustomDualCta slug="featured-model" utmMedium="page-hero" flush />
+            </div>
+          </section>
+
           {/* Strain snapshot */}
           <section style={{ background: '#ffffff', padding: '56px 20px' }}>
             <div style={{ maxWidth: '920px', margin: '0 auto' }}>
@@ -694,6 +702,13 @@ export default function HCD3EDGPage() {
                   <ChevronRight size={16} color="#ffffff" />
                 </Link>
               </div>
+            </div>
+          </section>
+
+          {/* Bottom dual-path CTA */}
+          <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+            <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+              <CatalogCustomDualCta slug="featured-model" utmMedium="page-closing" flush />
             </div>
           </section>
         </main>

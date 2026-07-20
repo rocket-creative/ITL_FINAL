@@ -5,6 +5,7 @@ import Link from 'next/link';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 import { IconChevronRight, IconFlask, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 type FeaturedModelEntry = {
@@ -163,6 +164,13 @@ export default function FeaturedModelPage() {
                 and triple humanized mouse models that deliver immediate insights for your latest
                 experiments. Contact us today to get started on your project.
               </p>
+            </div>
+          </section>
+
+          {/* Top dual-path CTA */}
+          <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+            <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+              <CatalogCustomDualCta slug="featured-model" utmMedium="page-hero" flush />
             </div>
           </section>
 
@@ -621,6 +629,13 @@ export default function FeaturedModelPage() {
                   </Link>
                 ))}
               </div>
+            </div>
+          </section>
+
+          {/* Bottom dual-path CTA */}
+          <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+            <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+              <CatalogCustomDualCta slug="featured-model" utmMedium="page-closing" flush />
             </div>
           </section>
 

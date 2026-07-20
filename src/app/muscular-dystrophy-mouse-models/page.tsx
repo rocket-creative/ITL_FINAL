@@ -77,6 +77,13 @@ export default function MuscularDystrophyMouseModelsPage() {
             </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="muscular-dystrophy-mouse-models" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

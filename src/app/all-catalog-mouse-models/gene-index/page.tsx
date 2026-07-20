@@ -13,7 +13,7 @@ import Link from 'next/link';
 import { getAllModels } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { buildStandalonePageMetadata } from '@/lib/seo';
-import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import { IconChevronRight, IconLayers } from '@/components/UXUIDC/Icons';
 import JumpNav from './JumpNav';
@@ -147,6 +147,13 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                 </Link>
               )}
             </div>
+          </div>
+        </section>
+
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -329,7 +336,7 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                             </td>
                             <td style={{ padding: '10px 14px', textAlign: 'center' }}>
                               <Link
-                                href={`/order-catalog-models?gene=${encodeURIComponent(model.geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`}
+                                href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || model.geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`}
                                 style={{
                                   display: 'inline-flex', alignItems: 'center', gap: '4px',
                                   background: '#008080', color: '#fff',
@@ -394,6 +401,13 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                 Custom Model Quote
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-closing" flush />
           </div>
         </section>
 

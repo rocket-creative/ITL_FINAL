@@ -13,6 +13,7 @@ import {
   UXUIDCCookieConsent,
   BreedingSchemeArchitectCTA,
   LabSignalsSignup,
+  CatalogCustomDualCta,
 } from '@/components/UXUIDC';
 
 // Critical above-fold components - loaded immediately
@@ -242,6 +243,13 @@ export default function HomePage() {
         {/* 1. Hero Section */}
         <HeroSection data={heroData} />
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="homepage" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         {/* 2. Core Research Services */}
         <CoreServicesSection data={servicesData} />
 
@@ -282,6 +290,13 @@ export default function HomePage() {
 
         {/* 10. Frequently Asked Questions */}
         <FAQSection data={faqData} />
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="homepage" utmMedium="page-closing" flush />
+          </div>
+        </section>
       </main>
 
       <UXUIDCFooter />

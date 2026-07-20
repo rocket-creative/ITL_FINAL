@@ -4,7 +4,7 @@
 
 import Link from 'next/link';
 import { getRelatedGenes, getModelsByGene } from '@/lib/catalog/serverCatalog';
-import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta } from '@/components/UXUIDC';
 import SuppressBuildBannerEffect from '@/components/UXUIDC/SuppressBuildBannerEffect';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import { modCanonicalToSlug } from '@/lib/seo/slugs';
@@ -83,6 +83,13 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
             >
               Get a Quote in 24 Hours <IconChevronRight size={16} color="#fff" />
             </Link>
+          </div>
+        </section>
+
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -191,6 +198,13 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
             <Link href={quoteHref} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#008080', color: '#fff', padding: '14px 28px', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>
               Get a Quote in 24 Hours <IconChevronRight size={16} color="#fff" />
             </Link>
+          </div>
+        </section>
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-closing" flush />
           </div>
         </section>
       </main>

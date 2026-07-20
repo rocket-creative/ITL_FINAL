@@ -23,6 +23,19 @@ describe('productSchema', () => {
     expect(offer.priceCurrency).toBe('USD');
   });
 
+  it('prefers model abbreviation in catalog order offer URL', () => {
+    const offer = buildCatalogProductOffer({
+      geneName: 'Tp53',
+      modelAbbrev: 'Tp53-KO',
+      modelType: 'Knockout',
+      availability: 'Live',
+      catalogNumber: 'HU 123456',
+    });
+    expect(offer.url).toContain('model=Tp53-KO');
+    expect(offer.url).toContain('catalog=HU%20123456');
+    expect(offer.url).not.toContain('gene=');
+  });
+
   it('emits numeric price on service Offer', () => {
     const offer = buildServiceOffer('https://www.genetargeting.com/request-quote/', 'Humanized');
     expect(offer.price).toBe('22298');

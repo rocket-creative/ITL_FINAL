@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { FlodeskForm } from '@/components/UXUIDC';
+import { FlodeskForm, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { 
   getArticleBySlugIncludingStaged,
   getAllArticleSlugsIncludingStaged,
@@ -184,6 +184,13 @@ export default async function LabSignalsArticlePage({
           )}
         </section>
 
+        {/* Top dual-path CTA */}
+        <section style={{ backgroundColor: BRAND.white, padding: '30px 20px 0' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="lab-signals" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         {/* Article Content */}
         <LabSignalsArticleClient 
           article={article}
@@ -244,6 +251,13 @@ export default async function LabSignalsArticlePage({
                 ← Back to Ingenious
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Bottom dual-path CTA */}
+        <section style={{ backgroundColor: BRAND.lightGray, padding: '40px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <CatalogCustomDualCta slug="lab-signals" utmMedium="page-closing" flush />
           </div>
         </section>
 

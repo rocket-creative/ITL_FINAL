@@ -118,6 +118,13 @@ export default function TestimonialsPage() {
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="testimonials" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         {/* Featured Quote Banner */}
         <section 
           className="py-12 px-6"
@@ -201,7 +208,14 @@ export default function TestimonialsPage() {
           </div>
         </section>
       </main>
-      
+
+      {/* Bottom dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="testimonials" utmMedium="page-closing" flush />
+        </div>
+      </section>
+
       <UXUIDCFooter />
           
       {/* Schema.org Structured Data */}

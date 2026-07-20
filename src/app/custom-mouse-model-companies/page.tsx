@@ -252,6 +252,13 @@ export default function CustomMouseModelCompaniesPage() {
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="custom-mouse-model-companies" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         <section style={{ background: '#ffffff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <h2
@@ -553,6 +560,13 @@ export default function CustomMouseModelCompaniesPage() {
                 Contact iTL
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="custom-mouse-model-companies" utmMedium="page-closing" flush />
           </div>
         </section>
       </main>

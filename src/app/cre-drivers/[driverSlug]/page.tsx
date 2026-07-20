@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { applyCatalogFirstMeta } from '@/lib/seo';
 import { CRE_DRIVERS, getDisplayLabelForTissueKey } from '@/lib/search/creDrivers';
-import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta } from '@/components/UXUIDC';
 import {
   driverCanonicalToSlug,
   driverSlugToCanonical,
@@ -101,6 +101,13 @@ export default async function CreDriverPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="cre-drivers" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         <section style={{ background: '#fff', padding: '56px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.5rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>
@@ -176,6 +183,13 @@ export default async function CreDriverPage({ params }: Props) {
           <Link href="/request-quote" style={{ display: 'inline-flex', background: '#fff', color: '#008080', padding: '14px 28px', borderRadius: '6px', fontWeight: 700, textDecoration: 'none' }}>
             Request a quote
           </Link>
+        </section>
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="cre-drivers" utmMedium="page-closing" flush />
+          </div>
         </section>
       </main>
       <UXUIDCFooter />

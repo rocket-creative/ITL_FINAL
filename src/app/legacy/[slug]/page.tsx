@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import fs from 'fs';
 import path from 'path';
 import { applyCatalogFirstMeta } from '@/lib/seo';
-import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import Link from 'next/link';
 
 // Simple frontmatter parser (no external dependencies)
@@ -221,6 +221,13 @@ export default async function LegacyPage({ params }: { params: Promise<{ slug: s
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="legacy" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         {/* Content */}
         <section className="legacy-page-content-section">
           <div className="legacy-page-content-inner">
@@ -264,6 +271,13 @@ export default async function LegacyPage({ params }: { params: Promise<{ slug: s
             </div>
           </section>
         )}
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="legacy" utmMedium="page-closing" flush />
+          </div>
+        </section>
       </main>
 
       <UXUIDCFooter />

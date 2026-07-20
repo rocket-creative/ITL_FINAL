@@ -409,6 +409,13 @@ export default async function GlossaryTermPage({
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="mouse-genetics-glossary" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         {/* Above-the-fold commercial offer — primary sales surface */}
         <UXUIDCEducationalSalesBanner slug={slug} />
 

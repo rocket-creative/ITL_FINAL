@@ -18,6 +18,7 @@ import {
   UXUIDCStartProjectCTA,
   FAQPageSchema,
   BreadcrumbSchema,
+  CatalogCustomDualCta,
 } from '@/components/UXUIDC';
 
 // Brand colors
@@ -464,6 +465,13 @@ export default function FAQPage() {
               }}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Top dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="faq" utmMedium="page-hero" flush />
         </div>
       </section>
 

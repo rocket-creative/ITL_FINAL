@@ -68,18 +68,22 @@ export function isCatalogInStock(availability: string | undefined | null): boole
 
 export type ProductOfferOptions = {
   geneName?: string;
+  modelAbbrev?: string;
   catalogNumber?: string;
   orderUrl?: string;
 };
 
 export function buildCatalogProductOffer(
-  model: Pick<ServerCatalogModel, 'modelType' | 'availability' | 'catalogNumber' | 'geneName'>,
+  model: Pick<ServerCatalogModel, 'modelType' | 'availability' | 'catalogNumber' | 'geneName'> &
+    Partial<Pick<ServerCatalogModel, 'modelAbbrev'>>,
   options: ProductOfferOptions = {},
 ) {
   const geneName = options.geneName ?? model.geneName;
+  const modelAbbrev = options.modelAbbrev ?? model.modelAbbrev;
   const catalogNumber = options.catalogNumber ?? model.catalogNumber;
   const lowPrice = getTierLowPrice(model.modelType);
   const inStock = isCatalogInStock(model.availability);
+  const modelParam = modelAbbrev || geneName;
 
   return {
     '@type': 'AggregateOffer' as const,
@@ -90,7 +94,7 @@ export function buildCatalogProductOffer(
     availability: inStock ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
     url:
       options.orderUrl ??
-      `${BASE_URL}/order-catalog-models/?gene=${encodeURIComponent(geneName)}&catalog=${encodeURIComponent(catalogNumber)}`,
+      `${BASE_URL}/order-catalog-models/?model=${encodeURIComponent(modelParam)}&catalog=${encodeURIComponent(catalogNumber)}`,
     priceValidUntil: priceValidUntil(),
     seller: {
       '@type': 'Organization' as const,

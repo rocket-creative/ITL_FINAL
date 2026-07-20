@@ -12,6 +12,7 @@ import {
   SpotlightResearcherCard,
   SpotlightFooterCTA,
 } from '@/components/UXUIDC/spotlight';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 export async function generateStaticParams() {
   return getPublishedSpotlights().map((s) => ({ slug: s.slug }));
@@ -128,11 +129,26 @@ export default async function SpotlightPage(
   return (
     <article>
       <SpotlightHero spotlight={spotlight} />
+
+      {/* Top dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="researcher-spotlight" utmMedium="page-hero" flush />
+        </div>
+      </section>
+
       <SpotlightCitation spotlight={spotlight} />
       <SpotlightBody spotlight={spotlight} />
       <SpotlightModelSection spotlight={spotlight} />
       <SpotlightResearcherCard spotlight={spotlight} />
       <SpotlightFooterCTA modelType={spotlight.modelType} />
+
+      {/* Bottom dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="researcher-spotlight" utmMedium="page-closing" flush />
+        </div>
+      </section>
 
       <script
         type="application/ld+json"

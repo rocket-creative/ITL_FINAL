@@ -302,6 +302,13 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="custom-mouse-model-pricing" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         <section style={{ backgroundColor: '#ffffff', padding: '50px 20px' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <h2
@@ -601,6 +608,13 @@ export default function PricingPage() {
                 <span aria-hidden="true">→</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="custom-mouse-model-pricing" utmMedium="page-closing" flush />
           </div>
         </section>
       </main>

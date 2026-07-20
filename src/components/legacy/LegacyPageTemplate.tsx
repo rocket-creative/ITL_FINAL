@@ -14,6 +14,7 @@ import {
   UXUIDCNavigation,
   UXUIDCFooter,
   UXUIDCStartProjectCTA,
+  CatalogCustomDualCta,
 } from '@/components/UXUIDC';
 
 
@@ -115,6 +116,13 @@ export default function LegacyPageTemplate({
                 Original: {legacyUrl}
               </p>
             )}
+          </div>
+        </section>
+
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta utmMedium="page-hero" flush />
           </div>
         </section>
 

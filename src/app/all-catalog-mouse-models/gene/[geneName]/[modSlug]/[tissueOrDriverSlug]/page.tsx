@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
-import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import { tier4GenerateStaticParams } from '@/data/seoKeywords';
 import {
@@ -169,6 +169,13 @@ export default async function GeneModContextTierPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         {resolved.kind === 'driver' && driverRow && (
           <section style={{ background: '#fff', padding: '40px 20px', borderBottom: '1px solid #eee' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -219,7 +226,7 @@ export default async function GeneModContextTierPage({ params }: Props) {
                         <td style={{ padding: '12px', color: availabilityColor(model.availability) }}>{availabilityLabel(model.availability)}</td>
                         <td style={{ padding: '12px', fontFamily: 'monospace', color: '#134978' }}>{model.catalogNumber}</td>
                         <td style={{ padding: '12px', textAlign: 'center' }}>
-                          <Link href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`} style={{ background: '#008080', color: '#fff', padding: '8px 12px', borderRadius: '4px', textDecoration: 'none', fontWeight: 600, fontSize: '.8rem' }}>Inquire</Link>
+                          <Link href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`} style={{ background: '#008080', color: '#fff', padding: '8px 12px', borderRadius: '4px', textDecoration: 'none', fontWeight: 600, fontSize: '.8rem' }}>Inquire</Link>
                         </td>
                       </tr>
                     ))}
@@ -302,6 +309,13 @@ export default async function GeneModContextTierPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-closing" flush />
+          </div>
+        </section>
       </main>
       <UXUIDCFooter />
 

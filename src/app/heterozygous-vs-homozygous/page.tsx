@@ -16,6 +16,7 @@ import {
   UXUIDCFooter,
   BreadcrumbSchema,
   BreedingSchemeArchitectCTA,
+  CatalogCustomDualCta,
 } from '@/components/UXUIDC';
 
 export const metadata: Metadata = buildStandalonePageMetadata({
@@ -185,6 +186,13 @@ export default function HetVsHomPage() {
                 <span aria-hidden="true">→</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="heterozygous-vs-homozygous" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -477,6 +485,13 @@ export default function HetVsHomPage() {
                 <span aria-hidden="true">→</span>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="heterozygous-vs-homozygous" utmMedium="page-closing" flush />
           </div>
         </section>
       </main>

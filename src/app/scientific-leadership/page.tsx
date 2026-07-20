@@ -6,6 +6,7 @@
  * Built following RULES_2026 guidelines
  */
 
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -56,6 +57,14 @@ export default function ScientificLeadershipPage() {
           </p>
         </div>
       </section>
+
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="scientific-leadership" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
 
       {/* Mission Section */}
       <section style={{ backgroundColor: BRAND.white, padding: '60px 20px' }}>

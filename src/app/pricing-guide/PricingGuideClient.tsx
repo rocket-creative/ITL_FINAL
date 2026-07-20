@@ -13,6 +13,7 @@ import {
   UXUIDCFooter,
   IconArrowLeft,
   IconCheckCircle,
+  CatalogCustomDualCta,
 } from '@/components/UXUIDC';
 
 
@@ -185,6 +186,13 @@ export default function PricingGuideClient() {
             >
               ingenious targeting laboratory (ingenious) specializes in creating advanced genetically engineered animal models for academic and commercial researchers worldwide. Trusted by <strong>over 900 laboratories</strong> and published in <strong>hundreds of journal articles</strong>, we deliver high-quality, germline confirmed models built to your specifications - <strong>guaranteed</strong>. Lock in today with transparent pricing that you can count on for your budget and timeline.
             </p>
+          </div>
+        </section>
+
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="pricing-guide" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -492,6 +500,13 @@ export default function PricingGuideClient() {
           </div>
         </section>
       </main>
+
+      {/* Bottom dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="pricing-guide" utmMedium="page-closing" flush />
+        </div>
+      </section>
 
       <UXUIDCFooter />
 

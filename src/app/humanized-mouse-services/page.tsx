@@ -17,6 +17,7 @@ import {
   UXUIDCFooter,
   UXUIDCServicePricingAnchor,
   BreadcrumbSchema,
+  CatalogCustomDualCta,
 } from '@/components/UXUIDC';
 
 const servicesMeta = applyCatalogFirstMeta(
@@ -203,6 +204,13 @@ export default function HumanizedMouseServicesPage() {
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="humanized-mouse-services" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         <UXUIDCServicePricingAnchor
           serviceLabel="Humanized Mouse"
           headline="Custom humanized mice — fixed-fee quote in 24 hours."
@@ -382,6 +390,13 @@ export default function HumanizedMouseServicesPage() {
           </div>
         </section>
       </main>
+
+      {/* Bottom dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="humanized-mouse-services" utmMedium="page-closing" flush />
+        </div>
+      </section>
 
       <UXUIDCFooter />
     </div>

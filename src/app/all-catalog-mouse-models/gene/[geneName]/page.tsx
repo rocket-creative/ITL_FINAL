@@ -409,6 +409,13 @@ export default async function GenePage({ params, searchParams }: Props) {
           </div>
         </section>
 
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
         {/* Models Table */}
         {models.length > 0 && (
         <section style={{ background: '#fff', padding: '60px 20px' }}>
@@ -475,7 +482,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                       </td>
                       <td style={{ padding: '14px 16px', textAlign: 'center' }}>
                         <Link
-                          href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`}
+                          href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`}
                           style={{
                             display: 'inline-flex', alignItems: 'center', gap: '4px',
                             background: '#008080', color: '#fff',

@@ -9,6 +9,7 @@ import {
   UXUIDCNavigation,
   UXUIDCFooter,
   CatalogSearch,
+  CatalogCustomDualCta,
 } from '@/components/UXUIDC';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -94,6 +95,13 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
                 Custom Model Quote
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -255,6 +263,13 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
                 Custom Model Quote
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Bottom dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-closing" flush />
           </div>
         </section>
       </main>

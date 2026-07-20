@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getPublishedSpotlights } from '@/content/spotlights';
 import SpotlightIndexCard from '@/components/UXUIDC/spotlight/SpotlightIndexCard';
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 const CANONICAL = 'https://www.genetargeting.com/researcher-spotlight/';
 
@@ -92,11 +93,25 @@ export default function ResearcherSpotlightIndexPage() {
         </div>
       </section>
 
+      {/* Top dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="researcher-spotlight" utmMedium="page-hero" flush />
+        </div>
+      </section>
+
       <section className="spotlight-index-list" aria-label="Featured spotlights">
         <div className="spotlight-container">
           {spotlights.map((spotlight) => (
             <SpotlightIndexCard key={spotlight.slug} spotlight={spotlight} />
           ))}
+        </div>
+      </section>
+
+      {/* Bottom dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="researcher-spotlight" utmMedium="page-closing" flush />
         </div>
       </section>
 

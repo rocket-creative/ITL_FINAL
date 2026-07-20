@@ -53,7 +53,10 @@ const fallbackFields: FormField[] = [
   { name: 'email', label: 'Email', type: 'email', required: true },
   { name: 'phone', label: 'Phone', type: 'tel', required: false },
   { name: 'institution', label: 'Institution / Company', type: 'text', required: true },
-  { name: 'mouse_strain_name', label: 'Strain Name', type: 'text', required: true, placeholder: 'e.g., Exoc2-KO' },
+  // HubSpot internal name stays mouse_strain_name; update the Catalog Order form
+  // (a422e900-2fd9-4bbb-95c0-fb9299852ecf) field label in HubSpot to "Model Abbreviation"
+  // so the embed matches this fallback label when it loads without prefill.
+  { name: 'mouse_strain_name', label: 'Model Abbreviation', type: 'text', required: true, placeholder: 'e.g., Exoc2-KO' },
   { name: 'catalog_number', label: 'Catalog Number', type: 'text', required: true, placeholder: 'e.g., KO 2109194' },
   {
     name: 'how_did_you_hear_about_ingenious_',

@@ -12,7 +12,7 @@ import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { BreedingSchemeArchitectCTA, LabSignalsSignup, CatalogCustomDualCta } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -287,6 +287,13 @@ export default function DiseaseModelCatalogPage() {
                 All Catalog Models
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="disease-model-catalog" utmMedium="page-hero" flush />
           </div>
         </section>
 

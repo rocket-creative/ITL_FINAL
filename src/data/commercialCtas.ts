@@ -48,7 +48,7 @@ export const CUSTOM_MODEL_PANEL = {
 } as const;
 
 export const CATALOG_OR_CUSTOM_WIDGET_INTRO = {
-  eyebrow: 'Catalog Models',
+  eyebrow: 'Mouse Models',
   headline: 'Two paths. One scientific team.',
   subline:
     'Search 14,774+ study ready strains—or commission the exact knockout, knockin, or humanized model your program requires.',

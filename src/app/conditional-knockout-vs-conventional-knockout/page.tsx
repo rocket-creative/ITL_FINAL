@@ -5,7 +5,7 @@
  * AI Search Optimization - Comparison content for "X vs Y" queries
  */
 
-import {
+import { CatalogCustomDualCta,
   UXUIDCNavigation,
   UXUIDCFooter,
   UXUIDCCookieConsent,
@@ -35,6 +35,13 @@ export default function ConditionalVsConventionalPage() {
           <p style={{ color: '#b0c4d4', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto' }}>
             Choose the right knockout strategy for your research. Complete comparison of conditional and conventional knockout approaches.
           </p>
+        </div>
+      </section>
+
+      {/* Top dual-path CTA */}
+      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+          <CatalogCustomDualCta slug="conditional-knockout-vs-conventional-knockout" utmMedium="page-hero" flush />
         </div>
       </section>
 
