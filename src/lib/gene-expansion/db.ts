@@ -147,23 +147,42 @@ export async function getIndexableBuildInquiryLinksForGene(
     .sort((a, b) => a.displayName.localeCompare(b.displayName));
 }
 
+/**
+ * Every indexable build-inquiry URL for a modification, across all genes.
+ * Paginates in 1 000-row pages to work around Supabase's default row cap;
+ * this spans the whole gene set, so it routinely exceeds a single page.
+ */
 export async function getIndexableBuildInquiryUrlsByModSlug(
   modSlug: string,
 ): Promise<Array<{ url: string; lastModified: Date }>> {
   const modelType = await getModelTypeBySlug(modSlug);
   if (!modelType) return [];
 
-  const { data: pages } = await supabase
-    .from('gene_type_page')
-    .select('canonical_url, generated_at')
-    .eq('model_type_id', modelType.id)
-    .eq('page_mode', 'build_inquiry')
-    .eq('is_indexable', true);
+  const out: Array<{ url: string; lastModified: Date }> = [];
+  const PAGE = 1000;
+  let from = 0;
 
-  return (pages ?? []).map((p) => ({
-    url: p.canonical_url,
-    lastModified: new Date(p.generated_at),
-  }));
+  for (;;) {
+    const { data, error } = await supabase
+      .from('gene_type_page')
+      .select('canonical_url, generated_at')
+      .eq('model_type_id', modelType.id)
+      .eq('page_mode', 'build_inquiry')
+      .eq('is_indexable', true)
+      .order('canonical_url')
+      .range(from, from + PAGE - 1);
+
+    if (error || !data || data.length === 0) break;
+
+    for (const p of data) {
+      out.push({ url: p.canonical_url, lastModified: new Date(p.generated_at) });
+    }
+
+    if (data.length < PAGE) break; // last page
+    from += PAGE;
+  }
+
+  return out;
 }
 
 export async function getSiblingBuildInquiryPages(

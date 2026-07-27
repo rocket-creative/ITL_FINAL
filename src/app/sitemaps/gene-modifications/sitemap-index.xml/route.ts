@@ -3,8 +3,10 @@ import { BASE_URL } from '@/lib/seo/types';
 
 export async function GET() {
   const now = new Date().toISOString();
+  // generateSitemaps() in [modSlug]/sitemap.ts serves each child one level
+  // deeper, at /{modSlug}/sitemap/{id}.xml, where the id is the mod slug.
   const sitemaps = CANONICAL_MOD_SLUGS.map(
-    (slug) => `${BASE_URL}/sitemaps/gene-modifications/${slug}/sitemap.xml`,
+    (slug) => `${BASE_URL}/sitemaps/gene-modifications/${slug}/sitemap/${slug}.xml`,
   );
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
