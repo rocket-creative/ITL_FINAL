@@ -116,7 +116,8 @@ export default async function GeneModContextTierPage({ params }: Props) {
     modLabel: modCanon,
     tissueOrDriver: tissueOrDriverSlug,
   });
-  const quoteNote = `We return quotes in about twenty four hours and map milestones for genotyping, QC, and dispatch.`;
+  const catalogQuoteNote = `The ${geneName} ${modCanon} lines listed above are catalog models. Send us the catalog number and our team confirms current availability, pricing, and whether the line ships cryopreserved or live.`;
+  const generationQuoteNote = `If your study needs a ${geneName} allele configuration that is not listed above, our scientific team designs and generates it. Model generation quotes return in about twenty four hours with milestones for genotyping, QC, and dispatch.`;
 
   const extraProps: { '@type': 'PropertyValue'; name: string; value: string }[] = [];
   if (resolved.kind === 'tissue') {
@@ -159,13 +160,13 @@ export default async function GeneModContextTierPage({ params }: Props) {
             <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.35rem', fontWeight: 700, color: '#fff', marginBottom: '16px', lineHeight: 1.2 }}>
               {geneName} {modCanon} mouse — {h1Third}
             </h1>
-            <div style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.92)', lineHeight: 1.75, maxWidth: '900px' }}>
-              {curated && <p style={{ marginBottom: '14px' }}>{curated}</p>}
-              <p>{template}</p>
+            <div style={{ fontSize: '1rem', lineHeight: 1.75, maxWidth: '900px' }}>
+              {curated && <p style={{ color: 'rgba(255,255,255,0.92)', marginBottom: '14px' }}>{curated}</p>}
+              <p style={{ color: 'rgba(255,255,255,0.92)' }}>{template}</p>
             </div>
             <div style={{ marginTop: '20px' }}>
               <Link href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#008080', color: '#fff', padding: '12px 24px', borderRadius: '6px', fontWeight: 600, textDecoration: 'none' }}>
-                Request a quote <IconChevronRight size={16} color="#fff" />
+                Order catalog model <IconChevronRight size={16} color="#fff" />
               </Link>
             </div>
           </div>
@@ -249,10 +250,11 @@ export default async function GeneModContextTierPage({ params }: Props) {
         <section style={{ background: '#fff', padding: '40px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0a253c', marginBottom: '8px' }}>Pricing and quotes</h2>
-            <p style={{ color: '#444', lineHeight: 1.85 }}>{quoteNote}</p>
+            <p style={{ color: '#444', lineHeight: 1.85 }}>{catalogQuoteNote}</p>
+            <p style={{ color: '#444', lineHeight: 1.85, marginTop: '12px' }}>{generationQuoteNote}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '14px' }}>
-              <Link href="/all-catalog-mouse-models" style={{ display: 'inline-block', padding: '10px 18px', background: '#008080', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Browse 14,774+ Catalog Models</Link>
-              <Link href="/request-quote" style={{ display: 'inline-block', padding: '10px 18px', background: '#0a253c', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Request a Quote</Link>
+              <Link href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}`} style={{ display: 'inline-block', padding: '10px 18px', background: '#008080', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Order a catalog {geneName} model</Link>
+              <Link href="/request-quote" style={{ display: 'inline-block', padding: '10px 18px', background: '#0a253c', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Request a model generation quote</Link>
             </div>
           </div>
         </section>
