@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.079Z"
 
 # BAC Targeting
 
-Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases. This specialized approach enables researchers to study gene regulation in physiologically relevant contexts impossible to replicate with smaller insert designs.
+Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases. This specialized approach enables researchers to study gene regulation in physiologically relevant contexts impossible to replicate with smaller insert designs.
 
 BAC targeting converts large genomic fragments into functional targeting vectors while maintaining complete regulatory architecture spanning 5 prime promoters, enhancer elements, coding sequences, and 3 prime regulatory regions. This methodology has become increasingly valuable as research emphasis shifts toward understanding complex gene regulation rather than simplified knockout or knockin modifications.
 
@@ -46,25 +46,25 @@ Studies examining long range regulatory elements including silencers and locus c
 
 ### Copy Number and Integration Site Considerations
 
-BAC inserts at safe harbor loci (H11, ROSA26, HPRT) typically integrate as single copy events when ES cell characterization confirms appropriate clones. Researchers should anticipate the possibility of multi copy or partial rearrangement events and screen founder lines for expected phenotype when direct genotypic characterization is not performed. 
+BAC inserts at safe harbor loci (H11, ROSA26, HPRT) typically integrate as single copy events when allele characterization confirms appropriate clones. Researchers should anticipate the possibility of multi copy or partial rearrangement events and screen founder lines for expected phenotype when direct genotypic characterization is not performed. 
 
-Ectopic integration outside intended safe harbor locus occasionally occurs during ES cell targeting, introducing unexplained variability into transgenic lines. Junction PCR across integration sites coupled with whole genome sequencing can identify unexpected integrations.
+Ectopic integration outside intended safe harbor locus occasionally occurs during gene targeting, introducing unexplained variability into transgenic lines. Junction PCR across integration sites coupled with whole genome sequencing can identify unexpected integrations.
 
 ### Internal Rearrangement Risk Assessment
 
-Large genomic fragments carry inherent risk of internal rearrangement during bacterial propagation, recombineering procedures, or ES cell targeting. BAC DNA inherent genetic instability in some E. coli strains can introduce deletions or rearrangements unpredictable in nature and extent. Careful strain selection using recombineering proficient strains with minimal rearrangement rates minimizes risk.
+Large genomic fragments carry inherent risk of internal rearrangement during bacterial propagation, recombineering procedures, or gene targeting. BAC DNA inherent genetic instability in some E. coli strains can introduce deletions or rearrangements unpredictable in nature and extent. Careful strain selection using recombineering proficient strains with minimal rearrangement rates minimizes risk.
 
 Researchers should verify BAC insert structure before recombineering through restriction mapping and gel electrophoresis, and again after recombineering modifications to confirm stability. 
 
-## ES Cell Targeting of Large Recombineered BACs
+## gene targeting of Large Recombineered BACs
 
-Targeting vector construction using recombineered BACs creates very large targeting constructs (often 200+ kilobases) requiring special electroporation and ES cell selection protocols. Standard ES cell electroporation equipment accommodates these large DNA molecules, though transfection efficiency may be reduced compared to standard vectors.
+Targeting vector construction using recombineered BACs creates very large targeting constructs (often 200+ kilobases) requiring special electroporation and clone selection protocols. Standard targeted clone electroporation equipment accommodates these large DNA molecules, though transfection efficiency may be reduced compared to standard vectors.
 
 ### Pre Germline Characterization Importance
 
-Pre germline ES cell analysis becomes particularly critical for large insert targeting to detect internal rearrangement events originating during vector construction or ES cell targeting. 
+Pre germline allele analysis becomes particularly critical for large insert targeting to detect internal rearrangement events originating during vector construction or gene targeting. 
 
-Copy number verification through PCR or qPCR confirms single copy integration rather than unexpected multi copy events or partial integrations. Researchers should not proceed with mouse generation until ES cell characterization confirms clone adequacy, preventing months wasted on invalid genetic material.
+Copy number verification through PCR or qPCR confirms single copy integration rather than unexpected multi copy events or partial integrations. Researchers should not proceed with mouse generation until allele characterization confirms clone adequacy, preventing months wasted on invalid genetic material.
 
 ### Junction Characterization
 
@@ -72,7 +72,6 @@ PCR and sequencing across insertion junctions between endogenous genome and tran
 
 ## Timeline and Project Planning for BAC Targeting
 
-BAC targeting projects typically require 8-12 months from project initiation through germline confirmation. Timeline variability reflects BAC complexity, recombineering round requirements, and ES cell characterization thoroughness.
 
 **Phase 1: BAC Selection and Characterization **
 
@@ -82,13 +81,13 @@ Genomic library searches identify candidate BAC clones. Physical characterizatio
 
 Targeting vector sequences and functional cassettes insert into BAC clones via sequential recombineering rounds. Each round requires bacterial growth, selection, and characterization, with multiple rounds often necessary for complex modifications. 
 
-**Phase 3: ES Cell Targeting and Selection **
+**Phase 3: gene targeting and Selection **
 
-Targeting vectors transfect into ES cells, undergo selection, and yield correctly targeted clones at frequencies 10 to 100 fold lower than standard vectors. Clonal isolation and extended characterization is required, as well as junction sequencing. 
+Targeting vectors transfect into host cells, undergo selection, and yield correctly targeted clones at frequencies 10 to 100 fold lower than standard vectors. Clonal isolation and extended characterization is required, as well as junction sequencing. 
 
 **Phase 4: Chimera Generation **
 
-Correctly targeted ES cell clones contribute to chimeric mice via blastocyst injection. Germline transmission verification through breeding of male chimeras and genotyping of offspring establishes stable transgenic lines. 
+Correctly characterized targeted clones contribute to chimeric mice via blastocyst injection. Germline transmission verification through breeding of male chimeras and genotyping of offspring establishes stable transgenic lines. 
 
 ## Applications Ideally Suited to BAC Targeting
 
@@ -126,13 +125,13 @@ Complex transgenic studies combining multiple functional elements (promoters, ge
 
 (/research-applications) — Learn how BAC inserts preserve regulatory architecture.
 
-(/model-generation-timeline) — Plan project schedules for extended BAC targeting workflows.
+ — Plan project schedules for extended BAC targeting workflows.
 
 ## Frequently Asked Questions
 
 **What is the maximum insert size for BAC targeting?**
 
-BAC inserts typically span 100 to 180 kilobases with practical capacity for full genomic features. Inserts exceeding 200 kilobases face declining insertion efficiency and increasing structural instability. Custom vector engineering may accommodate larger inserts for specific applications, though standard BAC protocols optimize for 100 to 150 kilobase inserts.
+BAC inserts typically span 100 to 180 kilobases with practical capacity for full genomic features. Inserts exceeding 200 kilobases face declining insertion efficiency and increasing structural instability. Generated vector engineering may accommodate larger inserts for specific applications, though standard BAC protocols optimize for 100 to 150 kilobase inserts.
 
 **How does internal rearrangement risk affect BAC targeting?**
 
@@ -148,7 +147,7 @@ PCR or qPCR confirms single copy integration. Junction PCR across integration bo
 
 ## Start Your BAC Large Scale Targeting Project
 
-BAC recombineering enables preservation of complex regulatory elements and large genomic features critical for physiologically relevant transgenic models. Our experienced team can guide BAC selection, manage recombineering construction, oversee ES cell targeting, and deliver study ready mice efficiently.
+BAC recombineering enables preservation of complex regulatory elements and large genomic features critical for physiologically relevant transgenic models. Our experienced team can guide BAC selection, manage recombineering construction, oversee gene targeting, and deliver study ready mice efficiently.
 
 (/request-quote)
 

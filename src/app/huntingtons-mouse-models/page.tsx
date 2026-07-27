@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Huntington Mouse Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -20,16 +20,16 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Huntington Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported Huntington disease research with custom mouse models enabling mechanistic studies of polyglutamine toxicity, CAG repeat instability, and therapeutic strategies targeting mutant huntingtin. Huntington mouse models provide essential platforms for investigating the molecular pathways underlying striatal neurodegeneration, testing hypotheses about protein aggregation and transcriptional dysregulation, and developing therapies including huntingtin lowering approaches and modifiers of somatic repeat expansion.",
+  intro: "Since 1998, ingenious targeting laboratory has supported Huntington disease research with mouse model generation enabling mechanistic studies of polyglutamine toxicity, CAG repeat instability, and therapeutic strategies targeting mutant huntingtin. Huntington mouse models provide essential platforms for investigating the molecular pathways underlying striatal neurodegeneration, testing hypotheses about protein aggregation and transcriptional dysregulation, and developing therapies including huntingtin lowering approaches and modifiers of somatic repeat expansion.",
   description: ""
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -146,7 +146,6 @@ export default function HuntingtonsMouseModelsPage() {
             <CatalogCustomDualCta slug="huntingtons-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
-
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>

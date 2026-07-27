@@ -1,12 +1,12 @@
+'use client';
+
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * Hypertension Mouse Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
-'use client';
-
 import { useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -14,22 +14,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Hypertension Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with custom mouse models for studying hypertension, blood pressure regulation, and antihypertensive therapeutics.",
+  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with mouse model generation for studying hypertension, blood pressure regulation, and antihypertensive therapeutics.",
   description: "Our hypertension models have contributed to research on renin angiotensin system, renal function, and vascular biology. Hypertension mouse models provide essential platforms for investigating blood pressure regulatory pathways, testing hypotheses about genetic susceptibility, and developing therapies for hypertension affecting millions of patients worldwide."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -143,7 +143,6 @@ export default function HypertensionMouseModelsPage() {
           </div>
         </section>
 
-
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -160,22 +159,6 @@ export default function HypertensionMouseModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start your project today
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
-            </p>
-            <CatalogCustomDualCta slug="hypertension-mouse-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
@@ -189,16 +172,6 @@ export default function HypertensionMouseModelsPage() {
             </div>
           </section>
         )}
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Updated on Hypertension Research Models"
-              description="Get the latest insights on blood pressure regulation, renin angiotensin system, and cardiovascular therapeutics."
-            />
-          </div>
-        </section>
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
@@ -268,6 +241,11 @@ export default function HypertensionMouseModelsPage() {
       />
       </main>
       
+      <StandardPageCtaStack
+        slug="hypertension-mouse-models"
+        labSignalsTitle="Stay Updated on Hypertension Research Models"
+        labSignalsDescription="Get the latest insights on blood pressure regulation, renin angiotensin system, and cardiovascular therapeutics."
+      />
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}

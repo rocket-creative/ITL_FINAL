@@ -19,7 +19,7 @@ We're the only mouse model company to perform all service steps in the USA.
 >
 > — **Jody Groenendyk, PhD**, University of Alberta
 
-## Choosing Between Off-the-Shelf and Custom Models
+## Choosing Between Off-the-Shelf and Model Generation
 
 When evaluating mouse models for your research you're presented with a wide variety of options for obtaining new lines. The major decision to make is whether your experiments can be done using existing lines or if a new model is required.
 
@@ -27,7 +27,7 @@ A tremendous variety of lines already exist and most are available from respecte
 
 However you may notice that although the existing lines are interesting they don't exactly fit your research questions. Creating a new line requires a greater initial investment of time and resources but it's worth considering the advantages:
 
-### Advantages of Custom Models
+### Advantages of Model Generation
 
 - **Work with a line that will answer your specific research questions.** Designing your experiments around the mice you can order off-the-shelf can only take you so far. For example your research may benefit from a Cre line that's only expressed in your tissue of interest rather than multiple tissues. Using the right lines will simplify your experiments at all stages from breeding through analyzing the results.
 
@@ -35,7 +35,7 @@ However you may notice that although the existing lines are interesting they don
 
 - **The right model will pay for itself.** The time invested in creating the right model can be paid back many times over. This is true not just in terms of being able to perform the experiments you really want to do, but also in simplified breeding and in confidence that the model will perform as designed.
 
-With the right custom line you can feel confident that your results are truly due to your gene being specifically targeted and not something unexpected or out of your control.
+With the right generated line you can feel confident that your results are truly due to your gene being specifically targeted and not something unexpected or out of your control.
 
 ## Working with Core Facilities vs. Private Companies
 
@@ -104,7 +104,7 @@ At minimum you must sequence around the site of the mutation. It's a good idea t
 
 ## About ingenious targeting laboratory
 
-**ingenious targeting laboratory** specializes in generating custom genetically modified mouse, rat, and rabbit models. Since 1998, we've completed over 2,800 custom projects for researchers at universities, institutions, and companies around the world. Our model capabilities include knockins, knockouts, humanization, point mutations, targeted transgenics, and more. Generated using both traditional and cutting-edge technologies, our animal models have been published in notable journals such as *Science*, *Nature*, and *Cell*.
+**ingenious targeting laboratory** specializes in generating genetically modified mouse, rat, and rabbit models. Since 1998, we've completed over 2,800 models generated for researchers at universities, institutions, and companies around the world. Our model capabilities include knockins, knockouts, humanization, point mutations, targeted transgenics, and more. Generated using both traditional and cutting-edge technologies, our animal models have been published in notable journals such as *Science*, *Nature*, and *Cell*.
 
 ## Related Pages
 

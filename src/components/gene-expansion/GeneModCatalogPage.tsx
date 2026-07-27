@@ -57,7 +57,7 @@ export default function GeneModCatalogPage({
   const rationale = rationaleForModTissue(modCanon, undefined);
   const rationale2 = rationaleForModTissue(modCanon, 'liver');
   const faqs = buildTierGeneModFaqs({ gene: geneName, modLabel: modCanon });
-  const timeline = `Typical custom projects target study ready cohorts near twenty six weeks from contract start when breeding is direct. Quotes return in about twenty four hours with milestones, pricing, and options for cryo or live dispatch.`;
+  const pricingNote = `Quotes return in about twenty four hours with milestones, pricing, and options for cryo or live dispatch.`;
 
   const productSchemas = models.map((m) =>
     buildCatalogProductSchema(m, {
@@ -157,11 +157,11 @@ export default function GeneModCatalogPage({
 
         <section style={{ background: '#fff', padding: '48px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>Build timeline and pricing</h2>
-            <p style={{ color: '#444', lineHeight: 1.85 }}>{timeline}</p>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>Pricing and quote</h2>
+            <p style={{ color: '#444', lineHeight: 1.85 }}>{pricingNote}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '16px' }}>
               <Link href="/all-catalog-mouse-models" style={{ display: 'inline-block', padding: '10px 18px', background: '#008080', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Browse 14,774+ Catalog Models</Link>
-              <Link href="/request-quote" style={{ display: 'inline-block', padding: '10px 18px', background: '#0a253c', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Request Custom Quote</Link>
+              <Link href="/request-quote" style={{ display: 'inline-block', padding: '10px 18px', background: '#0a253c', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Request a Quote</Link>
             </div>
           </div>
         </section>

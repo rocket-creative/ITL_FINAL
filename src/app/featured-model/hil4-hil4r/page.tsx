@@ -284,7 +284,7 @@ const CASE_HEADING: CSSProperties = {
 
 function AboutItlParagraph() {
   const before =
-    'Ingenious targeting laboratory maintains a catalog of over 14,774 mouse models, including humanized strains, Cre driver lines for conditional expression, and reporter mice for cell tracking and imaging. These quality-controlled models on defined genetic backgrounds ship as breeding pairs or cohorts with complete genotyping protocols and health documentation. Researchers gain immediate access to mouse strains without custom generation timelines, accelerating experiments across immunology, oncology, neurology, and metabolic disease applications. If you are interested in our hIL4/hIL4R mouse model, please ';
+    'Ingenious targeting laboratory maintains a catalog of over 14,774 mouse models, including humanized strains, Cre driver lines for conditional expression, and reporter mice for cell tracking and imaging. These quality-controlled models on defined genetic backgrounds ship as breeding pairs or cohorts with complete genotyping protocols and health documentation. Researchers gain immediate access to mouse strains without generated generation lead time, accelerating experiments across immunology, oncology, neurology, and metabolic disease applications. If you are interested in our hIL4/hIL4R mouse model, please ';
   const mid = '. Or, please search our ';
   const after = ' for your gene of interest.';
 

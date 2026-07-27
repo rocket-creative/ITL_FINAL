@@ -1,12 +1,12 @@
+'use client';
+
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * Safe Harbor Locus Integration Strategies Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
-'use client';
-
 import { useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -15,22 +15,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Safe Harbor Locus Integration Strategies",
-  intro: "Since 1998, ingenious targeting laboratory has employed safe harbor locus targeting in over 800 custom mouse models, enabling predictable transgene expression with minimal disruption to endogenous mouse genomics and contributing to 215+ peer reviewed publications using safe harbor integration approaches. Safe harbor loci are genomic locations that tolerate large DNA insertions without disrupting essential genes, altering developmental patterns, or creating unpredictable expression effects.",
+  intro: "Since 1998, ingenious targeting laboratory has employed safe harbor locus targeting in over 800 mouse model generation, enabling predictable transgene expression with minimal disruption to endogenous mouse genomics and contributing to 215+ peer reviewed publications using safe harbor integration approaches. Safe harbor loci are genomic locations that tolerate large DNA insertions without disrupting essential genes, altering developmental patterns, or creating unpredictable expression effects.",
   description: "Unlike random integration or multi-copy insertions, safe harbor targeting provides consistent, copy number controlled expression while preserving normal mouse biology. This approach has become essential for researchers requiring reliable transgene expression combined with genetic predictability."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -145,7 +145,7 @@ export default function SafeHarborLocusPage() {
                     fontWeight: 500
                   }}
                 >
-                  <span>Request Custom Quote</span>
+                  <span>Request a Quote</span>
                   <span>→</span>
                 </Link>
                 <Link 
@@ -176,7 +176,6 @@ export default function SafeHarborLocusPage() {
           </div>
         </section>
 
-
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -193,22 +192,6 @@ export default function SafeHarborLocusPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start your project today
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
-            </p>
-            <CatalogCustomDualCta slug="safe-harbor-locus" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
@@ -222,12 +205,6 @@ export default function SafeHarborLocusPage() {
             </div>
           </section>
         )}
-
-        {/* Lab Signals Signup */}
-        <LabSignalsSignup 
-          title="Safe Harbor Locus Project Updates"
-          description="Receive real-time notifications on your Rosa26, H11, or HPRT locus targeting project milestones and transgene integration progress."
-        />
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
@@ -297,6 +274,11 @@ export default function SafeHarborLocusPage() {
       />
       </main>
       
+      <StandardPageCtaStack
+        slug="safe-harbor-locus"
+        labSignalsTitle="Safe Harbor Locus Project Updates"
+        labSignalsDescription="Receive real-time notifications on your Rosa26, H11, or HPRT locus targeting project milestones and transgene integration progress."
+      />
       <UXUIDCFooter />
           
       {/* Schema.org Structured Data */}

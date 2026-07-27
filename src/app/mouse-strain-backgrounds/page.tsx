@@ -17,11 +17,9 @@ import {
   UXUIDCAnimatedFAQ,
   UXUIDCAnimatedCounter,
   BreadcrumbSchema,
-  UXUIDCStartProjectCTA,
   GlossaryTermLink,
-  BreedingSchemeArchitectCTA,
-  LabSignalsSignup,
   FAQPageSchema,
+  StandardPageCtaStack,
   IconDNA,
   IconCheckCircle,
   IconChevronRight,
@@ -40,16 +38,16 @@ const BRAND = {
 const heroData = {
   badge: "Strain Selection",
   title: "Mouse Strain Backgrounds",
-  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models on multiple genetic backgrounds, with strain selection guided by experimental requirements and phenotype considerations.",
+  intro: "Since 1998, ingenious targeting laboratory has mouse model generation on multiple genetic backgrounds, with strain selection guided by experimental requirements and phenotype considerations.",
   description: "Understanding the characteristics of different inbred strains is essential for choosing the optimal background for your research. Genetic background profoundly influences phenotype penetrance, disease susceptibility, and therapeutic response."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -58,7 +56,7 @@ const faqData = [
     question: "What are the key differences between common mouse strain backgrounds?",
     answer: (
       <>
-        <GlossaryTermLink term="c57bl6-mouse-background">C57BL/6</GlossaryTermLink> is standard for most research, shows Th1 immune bias, susceptible to diet induced obesity, and widely used for behavioral assays. BALB/c shows Th2 immune bias, more susceptible to some infections, relatively resistant to diet induced obesity. 129 strains are commonly used for ES cell derivation. FVB/N is good for transgenic generation due to large pronuclei.
+        <GlossaryTermLink term="c57bl6-mouse-background">C57BL/6</GlossaryTermLink> is standard for most research, shows Th1 immune bias, susceptible to diet induced obesity, and widely used for behavioral assays. BALB/c shows Th2 immune bias, more susceptible to some infections, relatively resistant to diet induced obesity. 129 strains are commonly used for gene targeting projects. FVB/N is good for transgenic generation due to large pronuclei.
       </>
     )
   },
@@ -68,7 +66,7 @@ const faqData = [
   },
   {
     question: "When should I use C57BL/6 vs BALB/c?",
-    answer: "Use C57BL/6 for standard research applications, metabolic studies, behavioral assays, or when using C57BL/6N ES cells for targeting. Use BALB/c for Th2 biased immune responses, infectious disease models where BALB/c susceptibility is advantageous, or when matching existing BALB/c based research protocols."
+    answer: "Use C57BL/6 for standard research applications, metabolic studies, behavioral assays, or when targeting on C57BL/6N background. Use BALB/c for Th2 biased immune responses, infectious disease models where BALB/c susceptibility is advantageous, or when matching existing BALB/c based research protocols."
   },
   {
     question: "Can I backcross my model to a different background?",
@@ -76,7 +74,7 @@ const faqData = [
   },
   {
     question: "What is the difference between C57BL/6J and C57BL/6N substrains?",
-    answer: "C57BL/6J carries a mutation in the Nnt gene affecting glucose metabolism and insulin secretion. C57BL/6N has intact Nnt and different metabolic characteristics. C57BL/6N ES cells (JM8 lines) are standard for gene targeting. Substrains also differ in some behavioral phenotypes and seizure susceptibility. Consistency within a study is critical."
+    answer: "C57BL/6J carries a mutation in the Nnt gene affecting glucose metabolism and insulin secretion. C57BL/6N has intact Nnt and different metabolic characteristics. C57BL/6N is the standard background for IKMC and community knockout resources. Substrains also differ in some behavioral phenotypes and seizure susceptibility. Consistency within a study is critical."
   },
   {
     question: "Why is C57BL/6 the most commonly used strain background?",
@@ -168,7 +166,7 @@ export default function MouseStrainBackgroundsPage() {
                   fontWeight: 600,
                   textDecoration: 'none'}}
               >
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color={BRAND.navy} />
               </Link>
               <Link 
@@ -326,7 +324,7 @@ export default function MouseStrainBackgroundsPage() {
                     { feature: 'rd8 Retinal Mutation', j: 'Absent', n: 'Present in some colonies' },
                     { feature: 'IKMC Allele Compatibility', j: 'Requires backcrossing', n: 'Native background' },
                     { feature: 'Historical Literature', j: 'More extensive', n: 'Growing rapidly' },
-                    { feature: 'Best For', j: 'Behavioral, oncology studies', n: 'Metabolic studies, ES cell targeting' },
+                    { feature: 'Best For', j: 'Behavioral, oncology studies', n: 'Metabolic studies, gene targeting' },
                   ].map((row, index) => (
                     <tr key={index} style={{ 
                       borderBottom: '1px solid #e0e0e0',
@@ -872,7 +870,7 @@ export default function MouseStrainBackgroundsPage() {
               {[
                 {
                   title: '129 Strains',
-                  description: 'Commonly used for ES cell derivation due to excellent germline transmission. Multiple substrains exist (129S1, 129S4, 129Sv). Often backcrossed to C57BL/6 for pure background.'},
+                  description: 'Commonly used for gene targeting projects with excellent germline transmission. Multiple substrains exist (129S1, 129S4, 129Sv). Often backcrossed to C57BL/6 for pure background.'},
                 {
                   title: 'FVB/N',
                   description: 'Excellent for transgenic generation via pronuclear injection due to large, visible pronuclei. Good breeding performance with large litters. Carries rd1 retinal degeneration allele.'},
@@ -1080,21 +1078,15 @@ export default function MouseStrainBackgroundsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA variant="gradient" />
-
-        {/* Lab Signals */}
-        <LabSignalsSignup 
-          title="Stay Informed on Strain Background Research"
-          description="Get updates on the latest strain background selection strategies, backcrossing protocols, and genetic considerations for your mouse models."
-        />
-
-        {/* Final CTA */}
-        <UXUIDCStartProjectCTA 
-          title="Expert Guidance on Strain Selection"
-          content="Our scientific team provides complimentary consultation on strain background selection, substrain considerations, and backcrossing strategies for your custom mouse models."
-        />
       </main>
+
+      <StandardPageCtaStack
+        slug="mouse-strain-backgrounds"
+        closingTitle="Expert Guidance on Strain Selection"
+        closingDescription="Our scientific team provides complimentary consultation on strain background selection, substrain considerations, and backcrossing strategies for your mouse model generation."
+        labSignalsTitle="Stay Informed on Strain Background Research"
+        labSignalsDescription="Get updates on the latest strain background selection strategies, backcrossing protocols, and genetic considerations for your mouse models."
+      />
 
       <UXUIDCFooter />
       <UXUIDCCookieConsent />

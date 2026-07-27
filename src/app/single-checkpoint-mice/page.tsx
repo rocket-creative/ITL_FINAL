@@ -65,7 +65,7 @@ export default function SingleCheckpointMicePage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
             </div>
@@ -249,7 +249,7 @@ export default function SingleCheckpointMicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Single Checkpoint Mice', path: '/single-checkpoint-mice' },
         ]}
       />

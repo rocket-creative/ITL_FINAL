@@ -14,15 +14,15 @@ import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/compone
 const heroData = {
   badge: "Metabolic Research",
   title: "Obesity Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported obesity research with custom mouse models enabling mechanistic studies of energy homeostasis, adipose tissue biology, and metabolic dysfunction underlying the global obesity epidemic.",
+  intro: "Since 1998, ingenious targeting laboratory has supported obesity research with mouse model generation enabling mechanistic studies of energy homeostasis, adipose tissue biology, and metabolic dysfunction underlying the global obesity epidemic.",
   description: "Obesity mouse models provide essential platforms for investigating the molecular pathways regulating appetite, energy expenditure, and fat storage."
 };
 
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 const geneticModels = [
@@ -196,7 +196,7 @@ export default function ObesityMouseModelsPage() {
           { name: 'Obesity Mouse Models', path: '/obesity-mouse-models' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Obesity Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Custom obesity mouse models for metabolic research since 1998.", "serviceType": "Obesity Mouse Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Obesity Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Generated obesity mouse models for metabolic research since 1998.", "serviceType": "Obesity Mouse Models" }) }} />
     </div>
   );
 }

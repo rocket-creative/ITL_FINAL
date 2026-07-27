@@ -74,7 +74,7 @@ Accurate genotyping is essential for colony management:
 
 ## Assay Development
 
-For new alleles or complex genotypes, we develop and validate custom genotyping assays:
+For new alleles or complex genotypes, we develop and validate generated genotyping assays:
 
 - Primer design for targeted alleles
 - Assay optimization and validation
@@ -282,9 +282,7 @@ Colony management scales with your needs:
 
 # Project Resources
 
-- (/model-generation-timeline)
-- (/model-generation-timeline)
-- (/faqs)
+- - - (/faqs)
 
 # Discuss Your Colony Management Needs
 
@@ -298,7 +296,7 @@ Our team is ready to discuss colony management solutions for your research progr
 
 **What is included in colony management services?**
 
-Colony management includes breeding to maintain your mouse lines, genotyping to identify animals with desired alleles, health monitoring, cohort production for experiments, and reporting on colony status. Services can be customized based on your needs, from simple maintenance breeding to complex multi-allele cohort production.
+Colony management includes breeding to maintain your mouse lines, genotyping to identify animals with desired alleles, health monitoring, cohort production for experiments, and reporting on colony status. Services can be scoped based on your needs, from simple maintenance breeding to complex multi-allele cohort production.
 
 **How do you maintain SPF (specific pathogen free) health status?**
 

@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.796Z"
 
 # Mouse Model Resources
 
-Ingenious Targeting Laboratory provides comprehensive resources to help researchers design, implement, and optimize custom mouse model projects. From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,800 custom projects completed since 1998.
+Ingenious Targeting Laboratory provides comprehensive resources to help researchers design, implement, and optimize mouse model generation projects. From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,800 models generated since 1998.
 
 ## Selection Guides
 
@@ -48,13 +48,13 @@ Identify appropriate Cre driver lines for tissue specific gene deletion. Underst
 
 ### Planning Guides
 
-**(/model-generation-timeline)**
+****
 
 Detailed breakdown of project phases from targeting vector construction through germline transmission. Understand what determines timeline and options for acceleration.
 
 **(/mouse-model-budgeting-guide)**
 
-Comprehensive guide to project costs including targeting vector, ES cell targeting, microinjection, breeding, and ongoing colony maintenance considerations.
+Comprehensive guide to project costs including targeting vector, gene targeting, microinjection, breeding, and ongoing colony maintenance considerations.
 
 **(/bench-to-breeding-guide)**
 
@@ -109,11 +109,11 @@ Our publications database includes:
 
 **What is included in a complete project?**
 
-Complete projects include targeting vector design and construction, ES cell targeting and characterization, blastocyst injection, chimera generation, and germline transmission confirmation. Colony expansion and cohort development are available as additional services.
+Complete projects include targeting vector design and construction, gene targeting and characterization, blastocyst injection, chimera generation, and germline transmission confirmation. Colony expansion and cohort development are available as additional services.
 
-**Can you work with my existing targeting vector or ES cells?**
+**Can you work with my existing targeting vector or other reagents?**
 
-Yes, Ingenious Targeting Laboratory offers partial services including ES cell targeting with client provided vectors, microinjection of client provided ES cells, and project completion from various starting points.
+Yes, Ingenious Targeting Laboratory offers partial services including gene targeting with client provided vectors, microinjection of client provided targeted clones, and project completion from various starting points.
 
 (/faqs)
 
@@ -132,7 +132,7 @@ Technical terminology reference for gene targeting and mouse genetics:
 
 - Allele nomenclature conventions
 - Recombinase system terminology
-- ES cell and mouse genetics terms
+- gene targeting and mouse genetics terms
 - Project phase definitions
 
 (/glossary)

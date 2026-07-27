@@ -1,11 +1,11 @@
+'use client';
+
 /**
  * |UXUIDC| HubSpot Form Component
  * @version 1.0.0
  * @created 2026
  * @description Reusable HubSpot form embed component for contact forms
  */
-
-'use client';
 
 import { useEffect, useRef, useState } from 'react';
 

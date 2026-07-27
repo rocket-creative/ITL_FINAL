@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.348Z"
 
 **Url: /pdl1-humanized-mice**
 
-**Meta Description: Custom PDL1 humanized mouse models for anti PDL1 antibody testing. Human CD274 knockin for immuno oncology and checkpoint research. Since 1998.**
+**Meta Description: Generated PDL1 humanized mouse models for anti PDL1 antibody testing. Human CD274 knockin for immuno oncology and checkpoint research. Since 1998.**
 
 **Primary Keyword: PDL1 humanized mouse**
 
@@ -18,11 +18,11 @@ extracted: "2026-01-09T17:03:05.348Z"
 
 # PDL1 Humanized Mouse
 
-Since 1998, Ingenious Targeting Laboratory has supported immuno oncology researchers with custom humanized mouse models for checkpoint immunotherapy development. Our PDL1 humanized mice enable direct testing of anti human PDL1 therapeutic antibodies in immunocompetent mouse systems, supporting preclinical evaluation of atezolizumab, durvalumab, avelumab, and novel anti PDL1 candidates.
+Since 1998, Ingenious Targeting Laboratory has supported immuno oncology researchers with model generation humanized mouse models for checkpoint immunotherapy development. Our PDL1 humanized mice enable direct testing of anti human PDL1 therapeutic antibodies in immunocompetent mouse systems, supporting preclinical evaluation of atezolizumab, durvalumab, avelumab, and novel anti PDL1 candidates.
 
 PDL1 (programmed death ligand 1, encoded by CD274) is expressed on tumor cells, antigen presenting cells, and other cell types, providing the ligand for the PD1 checkpoint receptor. Therapeutic antibodies targeting PDL1 block the PD1/PDL1 interaction, releasing T cell inhibition and enabling anti tumor immunity. Because anti PDL1 antibodies are designed specifically for human PDL1, humanized models are essential for preclinical efficacy testing.
 
-Ingenious Targeting Laboratory generates custom PDL1 humanized mice tailored to your specific research requirements, supporting both monotherapy evaluation and combination studies with other checkpoint inhibitors.
+Ingenious Targeting Laboratory generates PDL1 humanized mice tailored to your specific research requirements, supporting both monotherapy evaluation and combination studies with other checkpoint inhibitors.
 
 # Why Humanize PDL1
 
@@ -234,12 +234,12 @@ Multi humanized models enable comprehensive evaluation of combination checkpoint
 
 ## Pre Germline Characterization
 
-ES cell based targeting enables comprehensive characterization of PDL1 humanized alleles before mouse generation:
+homologous recombination targeting enables comprehensive characterization of PDL1 humanized alleles before mouse generation:
 
 - Sequence verification confirms exact human sequence integration
 - Junction analysis verifies mouse to human transitions
 - Expression testing confirms human PDL1 protein
-- Antibody binding validation in ES cells where applicable
+- Antibody binding validation in targeted cells where applicable
 
 Pre germline characterization ensures that humanized mice express functional human PDL1 that engages therapeutic antibodies as intended.
 
@@ -305,12 +305,11 @@ Clausen BE et al. 1999. Conditional gene targeting in macrophages and granulocyt
 
 - (/es-cell-gene-targeting)
 - (/c57bl6-mouse-background)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 # Start Your PDL1 Humanization Project
 
-Our scientific consultants are ready to discuss your PDL1 humanization requirements and recommend the optimal strategy for your immuno oncology program. Initial consultation is provided at no charge and includes humanization approach recommendations, strain background guidance, and timeline estimates.
+Our scientific consultants are ready to discuss your PDL1 humanization requirements and recommend the optimal strategy for your immuno oncology program. Initial consultation is provided at no charge and includes humanization approach recommendations, strain background guidance.
 
 (/request-quote)
 
@@ -330,9 +329,6 @@ Yes. PDL1 humanization can be combined with PD1, CTLA4, LAG3, TIM3, or other che
 
 Pre-germline characterization includes Southern blot analysis to confirm correct targeting and sequence verification to ensure human sequence fidelity. Post-germline validation includes flow cytometry for surface expression on tumor cells, dendritic cells, and macrophages, Western blot for protein expression, and functional confirmation through binding of anti-PDL1 antibodies (atezolizumab, durvalumab).
 
-**What is the timeline for generating PDL1 humanized mice?**
-
-Standard custom model generation takes 26-36 weeks from project initiation to delivery of germline-transmitted founders. Humanized models follow the same timeline. Pre-germline characterization enables early validation of targeting and human sequence confirmation before mouse generation.
 
 **How do PDL1 humanized models work with syngeneic tumors?**
 
@@ -358,6 +354,6 @@ PDL1 humanized mice on C57BL/6 background work with syngeneic tumor models (MC38
 - Tumor model compatibility table
 - Multi checkpoint combination table
 - Project timeline table
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - CTA to /request-quote
 - Word count ~2,000 (appropriate for specific model page)

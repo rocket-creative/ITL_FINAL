@@ -17,25 +17,25 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
 const heroData = {
-  badge: "Custom Services",
-  title: "Custom Mouse Model Projects",
-  intro: "When your research requires a unique mouse model, ingenious targeting laboratory delivers custom solutions tailored to your specific scientific objectives.",
-  description: "With over 2,800 custom projects completed since 1998, we have the expertise to design and generate virtually any genetically modified mouse model your research requires."
+  badge: "Generated Services",
+  title: "Mouse Model Generation Projects",
+  intro: "When your research requires a unique mouse model, ingenious targeting laboratory delivers model generation solutions for your specific scientific objectives.",
+  description: "With over 2,800 models generated since 1998, we have the expertise to design and generate virtually any genetically modified mouse model your research requires."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
-// Custom Approach Data
+// Generated Approach Data
 const customApproachData = [
   {
     title: "Scientific Consultation",
-    description: "Every custom project begins with in depth scientific consultation. Our team works with you to understand your research questions, experimental design, and specific requirements.",
+    description: "Every model generation project begins with in depth scientific consultation. Our team works with you to understand your research questions, experimental design, and specific requirements.",
     points: [
       "Discussion of research objectives and experimental approach",
       "Review of gene structure and available allele designs",
@@ -47,7 +47,7 @@ const customApproachData = [
     title: "Tailored Allele Design",
     description: "We design alleles specifically optimized for your experimental needs, drawing on our extensive experience with gene targeting strategies.",
     points: [
-      "Custom targeting vector design",
+      "Generated targeting vector design",
       "Selection of appropriate genetic elements",
       "Consideration of downstream applications",
       "Flexibility for future experiments"
@@ -80,7 +80,7 @@ const projectTypesData = [
   {
     title: "Complex Projects",
     description: "Multi allele designs, large insertions, and specialized applications.",
-    features: ["BAC transgenesis", "Multiple modifications", "Dual recombinase systems", "Custom requirements"]
+    features: ["BAC transgenesis", "Multiple modifications", "Dual recombinase systems", "Generated requirements"]
   }
 ];
 
@@ -97,7 +97,7 @@ const testimonialsData = [
 // Publications Data
 const publicationsData = {
   title: "Published Research",
-  description: "Here are some custom mouse model publications for your review.",
+  description: "Here are some mouse model generation publications for your review.",
   journals: ["Nature", "Cell", "Science", "PNAS", "Journal of Clinical Investigation", "Nature Medicine", "Cell Metabolism", "Immunity"]
 };
 
@@ -134,8 +134,8 @@ const relatedLinksData = {
 
 // CTA Data
 const ctaData = makeFooterCta(
-  'Start Your Custom Project',
-  'Contact us to discuss your custom mouse model requirements. Our scientific team will work with you to design the optimal approach for your research.',
+  'Start Your Model Generation Project',
+  'Contact us to discuss your mouse model generation requirements. Our scientific team will work with you to design the optimal approach for your research.',
 );
 
 export default function CustomProjectsPage() {
@@ -153,14 +153,14 @@ export default function CustomProjectsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Custom Mouse Model Projects",
-            "description": "Custom mouse model generation services including knockout, knockin, conditional, and humanized models. Over 2,800 custom projects completed since 1998.",
+            "name": "Mouse Model Generation Projects",
+            "description": "Mouse model generation services including knockout, knockin, conditional, and humanized models. Over 2,800 models generated since 1998.",
             "provider": {
               "@type": "Organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
-            "serviceType": "Custom Genetic Engineering Services"
+            "serviceType": "Generated Genetic Engineering Services"
           })
         }}
       />
@@ -264,7 +264,7 @@ export default function CustomProjectsPage() {
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.3)'
               }}>
-                Request Custom Quote
+                Request a Quote
               </Link>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function CustomProjectsPage() {
         {/* Top dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
           <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-            <CatalogCustomDualCta slug="custom-projects" utmMedium="page-hero" flush />
+            <CatalogCustomDualCta slug="generated-projects" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -293,7 +293,7 @@ export default function CustomProjectsPage() {
           </div>
         </section>
 
-        {/* Custom Approach Section */}
+        {/* Generated Approach Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
@@ -304,7 +304,7 @@ export default function CustomProjectsPage() {
               marginBottom: '40px',
               textAlign: 'center'
             }}>
-              Our Custom Approach
+              Our Generated Approach
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {customApproachData.map((item, index) => (
@@ -498,7 +498,7 @@ export default function CustomProjectsPage() {
         {/* Testimonials Section */}
         <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
-        <PageClosingCta title={ctaData.title} description={ctaData.description} slug="custom-projects" />
+        <PageClosingCta title={ctaData.title} description={ctaData.description} slug="generated-projects" />
 
         {/* FAQ Section */}
         <section style={{ background: '#ffffff', padding: '60px 20px' }}>
@@ -617,7 +617,7 @@ export default function CustomProjectsPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Projects', path: '/custom-projects' },
+          { name: 'Model Generation Projects', path: '/custom-projects' },
         ]}
       />
     </div>

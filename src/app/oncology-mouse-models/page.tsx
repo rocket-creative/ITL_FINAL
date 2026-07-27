@@ -15,16 +15,16 @@ import { LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitect
 const heroData = {
   badge: "Cancer Research",
   title: "Oncology Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported oncology researchers with custom mouse models contributing to peer reviewed publications in Cancer Cell, Cancer Research, Nature Medicine, and leading oncology journals worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported oncology researchers with mouse model generation contributing to peer reviewed publications in Cancer Cell, Cancer Research, Nature Medicine, and leading oncology journals worldwide.",
   description: "Our oncology mouse models have advanced understanding of tumor biology, cancer genetics, and therapeutic response across solid tumors and hematological malignancies."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Intro Data
@@ -993,8 +993,8 @@ export default function OncologyMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom oncology mouse models for cancer research. Tumor suppressor knockouts, oncogene knockins, and genetically engineered cancer models. Since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Generated oncology mouse models for cancer research. Tumor suppressor knockouts, oncogene knockins, and genetically engineered cancer models. Since 1998.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

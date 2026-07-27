@@ -15,16 +15,16 @@ import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/compone
 const heroData = {
   badge: "Knockout Design",
   title: "Critical Exon Selection",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including Science, Nature, and Cell.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including Science, Nature, and Cell.",
   description: "Selecting which exon to delete for knockout or flanking for conditional control is arguably the most important decision in targeting design. A well chosen exon maximizes loss of function. A poorly chosen exon may leave residual protein activity."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Exon Selection Criteria
@@ -226,7 +226,7 @@ export default function CriticalExonSelectionPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link

@@ -1,9 +1,8 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import PageClosingCta from '@/components/UXUIDC/PageClosingCta';
-
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useEffect, useRef } from 'react';
+
 
 import { makeFooterCta } from '@/data/commercialCtas';
 import { getPublicationsForPageAsCitations } from '@/data/pagePublications';
@@ -15,7 +14,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import { IconTarget, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -271,13 +270,13 @@ export default function PD1HumanizedMicePage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "PD1 Humanized Mouse Models",
-            "description": "Custom PD1 humanized mouse models for anti PD1 antibody testing. Human PDCD1 extracellular domain knockin for immuno oncology research.",
+            "description": "Generated PD1 humanized mouse models for anti PD1 antibody testing. Human PDCD1 extracellular domain knockin for immuno oncology research.",
             "provider": {
               "@type": "Organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
-            "serviceType": "Custom Mouse Model Generation",
+            "serviceType": "Mouse Model Generation",
             "areaServed": "Worldwide"
           })
         }}
@@ -333,7 +332,7 @@ export default function PD1HumanizedMicePage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
             </div>
@@ -811,11 +810,6 @@ export default function PD1HumanizedMicePage() {
         {/* Testimonials Section */}
         <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        <PageClosingCta title={ctaData.title} description={ctaData.description} slug="pd1-humanized-mice" />
-
         {/* FAQ Section */}
         <section style={{ background: '#ffffff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -832,16 +826,6 @@ export default function PD1HumanizedMicePage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Updated on Checkpoint Immunotherapy Models"
-              description="Get the latest insights on PD1 humanization and immuno oncology research."
-            />
           </div>
         </section>
 
@@ -937,13 +921,20 @@ export default function PD1HumanizedMicePage() {
           </div>
         </section>
       </main>
+      <StandardPageCtaStack
+        slug="pd1-humanized-mice"
+        closingTitle={ctaData.title}
+        closingDescription={ctaData.description}
+        labSignalsTitle="Stay Updated on Checkpoint Immunotherapy Models"
+        labSignalsDescription="Get the latest insights on PD1 humanization and immuno oncology research."
+      />
       <UXUIDCFooter />
           
       {/* Schema.org Structured Data */}
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'PD1 Humanized Mice', path: '/pd1-humanized-mice' },
         ]}
       />

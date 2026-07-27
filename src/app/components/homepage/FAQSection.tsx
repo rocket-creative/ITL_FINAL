@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * Frequently Asked Questions Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 80-86
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
-
-'use client';
 
 import { useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';

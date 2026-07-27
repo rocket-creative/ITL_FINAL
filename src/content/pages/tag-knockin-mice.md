@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.959Z"
 
 **Url: /tag-knockin-mice**
 
-**Meta Description: Epitope tag knockin mouse models with FLAG, HA, V5, and other tags. Track endogenous proteins without gene specific antibodies. Custom models since 1998.**
+**Meta Description: Epitope tag knockin mouse models with FLAG, HA, V5, and other tags. Track endogenous proteins without gene specific antibodies. Model generation since 1998.**
 
 **Primary Keyword: tag knockin mice**
 

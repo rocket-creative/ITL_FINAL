@@ -15,16 +15,16 @@ import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle }
 const heroData = {
   badge: "Comprehensive Support",
   title: "Post Project Services",
-  intro: "Beyond custom mouse model generation, ingenious targeting laboratory provides comprehensive support services to maintain, expand, and preserve your valuable mouse colonies. Since 1998, we have supported researchers with colony management, cryopreservation, rederivation, and breeding services that maximize research productivity while ensuring genetic integrity.",
+  intro: "Beyond mouse model generation, ingenious targeting laboratory provides comprehensive support services to maintain, expand, and preserve your valuable mouse colonies. Since 1998, we have supported researchers with colony management, cryopreservation, rederivation, and breeding services that maximize research productivity while ensuring genetic integrity.",
   description: "From colony maintenance through phenotypic characterization, our support services enable you to focus on your research while we manage the logistics."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Colony Management Services
@@ -35,7 +35,7 @@ const colonyManagementServices = [
   },
   {
     name: "Genotyping Services",
-    description: "PCR based assays to identify carriers, homozygotes, and compound mutants. ingenious targeting laboratory develops custom genotyping protocols for each targeted allele."
+    description: "PCR based assays to identify carriers, homozygotes, and compound mutants. ingenious targeting laboratory develops generated genotyping protocols for each targeted allele."
   },
   {
     name: "Cohort Development",
@@ -58,8 +58,8 @@ const cryopreservationServices = [
     description: "Freezes two cell stage embryos for rapid colony recovery. This approach preserves both maternal and paternal genetics in a single archive."
   },
   {
-    name: "ES Cell Cryopreservation",
-    description: "Maintains targeted ES cell clones for future use, enabling generation of additional mice or derivative alleles without repeating the targeting process."
+    name: "targeted clone cryopreservation",
+    description: "Maintains characterized targeted clones for future use, enabling generation of additional mice or derivative alleles without repeating the targeting process."
   },
   {
     name: "Archive and Recovery",
@@ -142,7 +142,7 @@ const testimonials = [
 const faqData = [
   {
     question: "What support services does ingenious targeting laboratory provide beyond model generation?",
-    answer: "ingenious targeting laboratory provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, ES cell archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation)."
+    answer: "ingenious targeting laboratory provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, and targeted clone archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation)."
   },
   {
     question: "How do colony management services help maintain mouse lines?",
@@ -150,7 +150,7 @@ const faqData = [
   },
   {
     question: "What cryopreservation methods are available?",
-    answer: "Cryopreservation methods include sperm cryopreservation (most cost-effective archival solution), embryo cryopreservation (preserves both maternal and paternal genetics), and ES cell cryopreservation (maintains targeted ES cell clones for future use). Archive and recovery services include quality-controlled storage with validated recovery procedures."
+    answer: "Cryopreservation methods include sperm cryopreservation (most cost-effective archival solution), embryo cryopreservation (preserves both maternal and paternal genetics), and targeted clone cryopreservation (maintains characterized targeted clones for future use). Archive and recovery services include quality-controlled storage with validated recovery procedures."
   },
   {
     question: "When is rederivation needed?",
@@ -256,7 +256,7 @@ export default function SupportServicesPage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request Custom Quote</span>
+                    <span>Request a Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
@@ -558,7 +558,7 @@ export default function SupportServicesPage() {
 
               <div className="animate-in">
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>
-                  Custom Models
+                  Model Generation
                 </h3>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {relatedModels.map((link, index) => (

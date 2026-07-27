@@ -42,7 +42,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   // Default metadata — targets buyer-intent queries: "lab mice for sale",
   // "knock out mice model market", "knock in mice", "transgenic mouse models".
   const title       = `Lab Mice for Sale | 14,774 Ready Knockout, Knockin & Humanized Mouse Models | ${SITE_NAME}`;
-  const description = '14,774 genetically engineered mouse models ready to ship — knockout, knockin, humanized, Cre driver, transgenic & reporter strains. Live colonies. Request a custom quote when the library does not list your allele.';
+  const description = '14,774 genetically engineered mouse models ready to ship — knockout, knockin, humanized, Cre driver, transgenic & reporter strains. Live colonies. Request a quote when the library does not list your allele.';
   const canonical   = `${BASE_URL}/all-catalog-mouse-models/`;
 
   return {

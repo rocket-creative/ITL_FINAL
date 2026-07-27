@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.464Z"
 
 **Url: /point-mutation-mice**
 
-**Meta Description: Custom point mutation mouse models for disease variant modeling. Precise SNP knockin at endogenous loci with pre germline verification. Since 1998.**
+**Meta Description: Generated point mutation mouse models for disease variant modeling. Precise SNP knockin at endogenous loci with pre germline verification. Since 1998.**
 
 **Primary Keyword: point mutation mouse**
 
@@ -268,8 +268,7 @@ Hockemeyer K, Sakellaropoulos T, Chen X, Ivashkiv O, Sirenko M, Zhou H, Gambi G,
 
 ## Project Resources
 
-- (/model-generation-timeline)
-- (/strain-selection-guide)
+- - (/strain-selection-guide)
 - (/faqs)
 
 ## Start Your Point Mutation Project
@@ -317,6 +316,6 @@ Heterozygous models are used for dominant mutations or haploinsufficiency studie
 - Common disease mutations table
 - Types of point mutations explained
 - Selection cassette removal explained
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - CTA to /request-quote
 - Word count ~1,900 (appropriate for model type page)

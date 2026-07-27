@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * |UXUIDC| AutoAnimate Component
  * Automatic scroll-triggered animations using Intersection Observer
@@ -7,8 +9,6 @@
  *   <h1>Content</h1>
  * </AutoAnimate>
  */
-
-'use client';
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 

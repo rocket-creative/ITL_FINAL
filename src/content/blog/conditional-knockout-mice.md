@@ -14,7 +14,7 @@ author: "ingenious"
 
 [Conditional knockout mice](/conditional-knockout-mouse-models/) play a critical role in genetics and biology research, because they allow scientists to manage how and when a specific gene is deleted. Genes can have different functions during an individual’s lifespan. Most dramatically, a gene may be essential for the proper development of an organism before birth, and then later in life can maintain a different function and influence the individual’s susceptibility towards a disease.
 
-Techniques and technologies for creating conditional knockout mice continue to be developed, to help make the process more straightforward. By pairing conditional knockout mice with various existing Cre mouse lines, researchers are able to investigate many different gene knockout outcomes based on specific cells or tissues in which the gene has been deleted. In cases where an appropriate cell- or tissue-specific Cre mouse line does not already exist, researchers can develop their own custom Cre mouse line, which can then be shared with the research community as well.
+Techniques and technologies for creating conditional knockout mice continue to be developed, to help make the process more straightforward. By pairing conditional knockout mice with various existing Cre mouse lines, researchers are able to investigate many different gene knockout outcomes based on specific cells or tissues in which the gene has been deleted. In cases where an appropriate cell- or tissue-specific Cre mouse line does not already exist, researchers can develop their own generated Cre mouse line, which can then be shared with the research community as well.
 
 ### What Is Conditional Knockout?
 

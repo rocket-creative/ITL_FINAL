@@ -1,11 +1,11 @@
+'use client';
+
 /**
  * Start Your Project Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 76-79
  * Features: DNA helix + floating particles, bigger dots, visible blur, color variety
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
-
-'use client';
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';

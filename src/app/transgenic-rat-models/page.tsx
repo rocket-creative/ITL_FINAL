@@ -1,12 +1,12 @@
+'use client';
+
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * Transgenic Rat Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
-'use client';
-
 import { useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -15,22 +15,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Transgenic Rat Models",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 custom mouse and rat models, with hundreds of transgenic rat projects enabling stable overexpression of transgenes, ectopic expression of therapeutic genes, and BAC based integration of large regulatory elements in larger rodents providing superior phenotypic complexity. Transgenic rats represent a valuable platform for disease models where gene overexpression or tissue specific expression patterns require rodent body size and behavioral sophistication.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 generated mouse and rat models, with hundreds of transgenic rat projects enabling stable overexpression of transgenes, ectopic expression of therapeutic genes, and BAC based integration of large regulatory elements in larger rodents providing superior phenotypic complexity. Transgenic rats represent a valuable platform for disease models where gene overexpression or tissue specific expression patterns require rodent body size and behavioral sophistication.",
   description: "Transgenic rat models permit investigation of gain of function mechanisms through controlled transgene overexpression in intact animals with physiological complexity exceeding transgenic mice. The ability to monitor disease progression in larger organisms enables longitudinal studies revealing temporal dynamics and chronic consequences of transgene expression."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -144,7 +144,7 @@ export default function TransgenicRatModelsPage() {
                     fontWeight: 500
                   }}
                 >
-                  <span>Request Custom Quote</span>
+                  <span>Request a Quote</span>
                   <span>→</span>
                 </Link>
                 <Link 
@@ -175,7 +175,6 @@ export default function TransgenicRatModelsPage() {
           </div>
         </section>
 
-
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -192,57 +191,6 @@ export default function TransgenicRatModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* Testimonial Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <h2
-              className="animate-in text-center"
-              style={{
-                color: '#2384da',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '2rem',
-                fontWeight: 700,
-                marginBottom: '40px'}}
-            >
-              Trusted by Leading Researchers
-            </h2>
-            <div
-              className="animate-in"
-              style={{
-                backgroundColor: '#f8f9fa',
-                padding: '40px',
-                borderLeft: '4px solid #008080',
-                borderRadius: '4px'}}
-            >
-              <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '25px' }}>
-                &ldquo;The rat knock-in model from ingenious was reliable, precise, and accelerated our immunology research significantly.&rdquo;
-              </p>
-              <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '1rem', marginBottom: '5px' }}>
-                — Carla Rothlin, Professor and Director of Center of Immunology
-              </p>
-              <p style={{ color: '#666', fontSize: '.9rem' }}>
-                Yale University
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start your project today
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
-            </p>
-            <CatalogCustomDualCta slug="transgenic-rat-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
@@ -256,13 +204,6 @@ export default function TransgenicRatModelsPage() {
             </div>
           </section>
         )}
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="Transgenic Rat Model Insights" />
-          </div>
-        </section>
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
@@ -332,6 +273,10 @@ export default function TransgenicRatModelsPage() {
       />
       </main>
       
+      <StandardPageCtaStack
+        slug="transgenic-rat-models"
+        labSignalsTitle="Transgenic Rat Model Insights"
+      />
       <UXUIDCFooter />
           
       {/* Schema.org Structured Data */}

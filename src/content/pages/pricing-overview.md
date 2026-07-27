@@ -4,21 +4,21 @@ slug: "pricing-overview"
 extracted: "2026-01-09T17:03:05.574Z"
 ---
 
-# Pricing Overview | Custom Mouse Model Costs | Ingenious Targeting Laboratory
+# Pricing Overview | Mouse Model Generation Costs | Ingenious Targeting Laboratory
 
 **Url: /pricing-overview**
 
-**Meta Description: Custom mouse model pricing factors and budget planning. Understand costs for knockout, knockin, conditional, and humanized models. Request custom quote.**
+**Meta Description: Mouse model generation pricing factors and budget planning. Understand costs for knockout, knockin, conditional, and humanized models. Request quote.**
 
 **Primary Keyword: mouse model pricing**
 
-**Secondary Keywords: knockout mouse cost, custom model pricing, gene targeting cost, project budget**
+**Secondary Keywords: knockout mouse cost, model generation pricing, gene targeting cost, project budget**
 
 **Word Count: 1500**
 
 # Mouse Model Pricing Overview
 
-Custom mouse model pricing depends on project complexity, model type, and scope of services. Ingenious Targeting Laboratory provides customized quotes based on your specific research requirements. This overview explains the factors that influence project pricing and helps you understand what to expect.
+Mouse model generation pricing depends on project complexity, model type, and scope of services. Ingenious Targeting Laboratory provides project quotes based on your specific research requirements. This overview explains the factors that influence project pricing and helps you understand what to expect.
 
 ## Pricing Factors
 
@@ -52,13 +52,13 @@ Factors that increase allele complexity:
 
 ### Strain Background
 
-Standard strain options include C57BL/6, BALB/c, and 129 strain ES cells. 
+Standard strain options include C57BL/6, BALB/c, and 129 strain backgrounds. 
 
 ### Project Scope
 
 **Complete Projects** include targeting vector through germline transmission.
 
-**Partial Services** such as vector only, ES cell targeting only, or microinjection only are priced according to scope.
+**Partial Services** such as vector only, gene targeting only, or microinjection only are priced according to scope.
 
 **Post Project Services** including cohort expansion, colony management, and cryopreservation are quoted separately.
 
@@ -68,20 +68,20 @@ Standard strain options include C57BL/6, BALB/c, and 129 strain ES cells.
 
 **Targeting Vector**
 
-- Custom vector design optimized for your target
+- Generated vector design optimized for your target
 - Vector construction and quality control
 - Sequence verified plasmid
 - Vector map and documentation
 
-**ES Cell Targeting**
+**gene targeting**
 
-- ES cell electroporation
+- targeted clone electroporation
 - Drug selection
 - Clone picking and expansion
 - Southern blot screening
 - PCR confirmation
 - Sequence verification of targeted clones
-- Characterized ES cell stocks (frozen)
+- Characterized targeted clone stocks (frozen)
 
 **Mouse Generation**
 
@@ -95,7 +95,7 @@ Standard strain options include C57BL/6, BALB/c, and 129 strain ES cells.
 - Germline transmitted founders (typically 2 to 4 mice)
 - Comprehensive project documentation
 - Genotyping protocol and primers
-- Archived ES cell clones
+- Archived targeted clones
 
 ### Not Typically Included
 
@@ -106,7 +106,7 @@ These services are quoted separately based on need:
 - Cryopreservation services
 - Rederivation
 - International shipping
-- Rush timeline acceleration
+- Rush project acceleration
 - Phenotyping and characterization
 
 ## Payment Structure
@@ -115,7 +115,7 @@ Projects are typically billed in milestone payments aligned with project phases:
 
 **Milestone 1**: Project initiation (targeting vector construction)
 
-**Milestone 2**: ES cell targeting complete (clone characterization)
+**Milestone 2**: gene targeting complete (clone characterization)
 
 **Milestone 3**: Microinjection complete (chimera generation)
 
@@ -132,7 +132,7 @@ Submit your project details including:
 - Target gene and modification type
 - Model type (knockout, knockin, humanized)
 - Strain background preference
-- Timeline requirements
+- Project scope requirements
 - Cohort needs
 
 (/request-quote)
@@ -143,13 +143,13 @@ Within 1 business day, you will receive:
 
 - Recommended targeting strategy
 - Allele design overview
-- Project timeline by phase
+- Project phases
 - Itemized pricing
 - Terms and conditions
 
 ### Quote Validity
 
-Quotes are typically valid for 90 days. Timeline estimates may be updated if significant time passes before project initiation.
+Quotes are typically valid for 90 days. Quotes may be updated if significant time passes before project initiation.
 
 ## Budget Planning
 
@@ -174,7 +174,7 @@ For certain applications, Ingenious Targeting Laboratory offers catalog models a
 - TIM3 humanized
 - Single and double checkpoint combinations
 
-Catalog models provide defined genetics at predictable pricing with shorter lead times than custom projects.
+Catalog models provide defined genetics at predictable pricing with shorter lead times than model generation projects.
 
 (/all-catalog-mouse-models)
 
@@ -196,7 +196,7 @@ Scope changes during a project may affect pricing. Any adjustments are discussed
 
 Cancellation terms are included in project agreements. Costs incurred through the date of cancellation typically apply.
 
-## Get Your Custom Quote
+## Get Your Quote
 
 Every project receives individualized attention and customized pricing based on your specific requirements.
 
@@ -208,19 +208,18 @@ Every project receives individualized attention and customized pricing based on 
 
 **What factors affect mouse model pricing?**
 
-Pricing depends on model type (conventional knockout, conditional knockout, knockin, humanized, transgenic), allele design complexity (multiple recombinase sites, reporters, large insertions), strain background (standard vs specialty strains), project scope (complete project vs partial services), and timeline requirements (standard vs rush).
+Pricing depends on model type (conventional knockout, conditional knockout, knockin, humanized, transgenic), allele design complexity (multiple recombinase sites, reporters, large insertions), strain background (standard vs specialty strains), project scope (complete project vs partial services), and Project scope requirements (standard vs rush).
 
 **What is included in standard project pricing?**
 
-Standard complete projects include targeting vector design and construction, ES cell targeting and clone characterization, chimera generation, germline transmission verification, genotyping protocols, and documentation. Pre-germline characterization validates allele structure before mouse generation. Additional services (cohort expansion, cryopreservation) are quoted separately.
+Standard complete projects include targeting vector design and construction, gene targeting and clone characterization, chimera generation, germline transmission verification, genotyping protocols, and documentation. Pre-germline characterization validates allele structure before mouse generation. Additional services (cohort expansion, cryopreservation) are quoted separately.
 
 **Can I get pricing for partial services?**
 
-Yes. ITL provides pricing for partial services including targeting vector only, ES cell targeting only, microinjection only, or other partial services. Partial service pricing is based on the specific scope of work. Contact ITL to discuss your partial service needs and receive a customized quote.
+Yes. ITL provides pricing for partial services including targeting vector only, gene targeting only, microinjection only, or other partial services. Partial service pricing is based on the specific scope of work. Contact ITL to discuss your partial service needs and receive a project quote.
 
 ## Related Resources
 
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 - (/mouse-model-services)
 - (/mouse-model-budgeting-guide)

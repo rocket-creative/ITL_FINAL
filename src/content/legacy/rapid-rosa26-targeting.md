@@ -11,7 +11,7 @@ title: "Rapid-Rosa26™ Targeting Technology"
 
 ## Targeted transgenic mice using the Rosa26 locus.
 
-Rapid-Rosa26™ Targeting technology is ingenious' solution to the call for custom targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.
+Rapid-Rosa26™ Targeting technology is ingenious' solution to the call for model generation targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.
 
 We utilize well-validated gene targeting strategies combined with our ready-to-go enhancing vectors to ensure delivery of your expression cassette or cDNA to the Rosa26 locus in record time.
 
@@ -33,22 +33,22 @@ Now with Rapid-Rosa26™ Targeting from ingenious targeting laboratory the costs
 
 ## Introducing ingenious' Rapid-Rosa26™ Targeting Models
 
-Rapid-Rosa26™ Targeting models are ingenious' solution to the call for custom targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.
+Rapid-Rosa26™ Targeting models are ingenious' solution to the call for model generation targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.
 
 We utilize well validated gene targeting strategies combined with our ready-to-go vectors to deliver your expression cassette or cDNA to the Rosa26 safe harbor locus in record time.
 
-By combining these technologies, we generate precisely targeted, custom transgenic mouse models with a variety of expression possibilities at up to **25% reduced time and cost** when compared to traditional targeted knockin models.
+By combining these technologies, we generate precisely targeted, generated transgenic mouse models with a variety of expression possibilities at up to **25% reduced time and cost** when compared to traditional targeted knockin models.
 
 ## Enhancing Cassette Options
 
-Our Rapid-Rosa26™ Targeting models can be custom designed with the following traditional and novel expression strategies:
+Our Rapid-Rosa26™ Targeting models can be designed with the following traditional and novel expression strategies:
 
 - Incorporate our proprietary F.A.S.T.™ cassette, enabling inducible/reversible expression control of your cDNA
 - LoxP flanked, removable stop cassette for tissue specific expression
 - Tissue specific promoters to control expression
 - Reporter or tag cassettes for co-expression with your cDNA
 - Tetracycline system expression cassettes for use with inducible models
-- Custom designs according to your specifications
+- Generated designs according to your specifications
 
 ## Rapid-Rosa26™ technology provides:
 

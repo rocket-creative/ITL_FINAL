@@ -1,5 +1,5 @@
 /**
- * |UXUIDC| Sitewide dual-path CTA — equal catalog + custom columns.
+ * |UXUIDC| Sitewide dual-path CTA — equal catalog + generation columns.
  * Use everywhere a commercial CTA appears (closing sections, heroes, banners).
  */
 
@@ -91,12 +91,12 @@ export default function CatalogCustomDualCta({
   const quoteUrl = commercialUtmHref(COMMERCIAL_LINKS.requestQuote, {
     source: utmSource,
     medium: utmMedium,
-    campaign: `catalog-widget-custom-${slug}`,
+    campaign: `catalog-widget-generated-${slug}`,
   });
 
   return (
     <aside
-      aria-label="Catalog or custom mouse model options"
+      aria-label="Catalog or mouse model generation options"
       className={className}
       style={{
         margin: flush ? 0 : '2.5rem 0',
@@ -210,7 +210,7 @@ export default function CatalogCustomDualCta({
         </section>
 
         <section
-          aria-label="Request a custom mouse model"
+          aria-label="Request a generated mouse model"
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -259,7 +259,7 @@ export default function CatalogCustomDualCta({
           </Link>
           <Link
             href={COMMERCIAL_LINKS.customHub}
-            data-cta="catalog-widget-custom-services"
+            data-cta="catalog-widget-generated-services"
             data-cta-slug={slug}
             style={{
               ...panelBtn,

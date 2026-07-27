@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * |UXUIDC| Hero Section - mobile-first; delegates to PageHero patterns on small screens.
  * @version 5.0.0
  */
-
-'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';

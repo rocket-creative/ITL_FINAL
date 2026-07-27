@@ -110,7 +110,7 @@ function markdownToHtml(markdown: string): string {
         // Determine CTA type from URL
         const isQuote = href.includes('quote') || href.includes('request');
         const isDownload = href.includes('white-paper') || href.includes('guide') || href.includes('chart');
-        const ctaText = isQuote ? 'Request Custom Quote' : isDownload ? 'Download Resource' : 'Learn More';
+        const ctaText = isQuote ? 'Request a Quote' : isDownload ? 'Download Resource' : 'Learn More';
         const buttonClass = isDownload ? 'blog-button blog-button-download' : 'blog-button';
         htmlBlocks.push(`<div class="blog-cta"><a href="${href}" class="${buttonClass}">${ctaText} →</a></div>`);
       } else {
@@ -182,7 +182,7 @@ function markdownToHtml(markdown: string): string {
             alt.toLowerCase().includes('quote') || alt.toLowerCase().includes('get a quote')) {
           const isQuote = href.includes('quote') || href.includes('request');
           const isDownload = href.includes('white-paper') || href.includes('guide') || href.includes('chart');
-          const ctaText = isQuote ? 'Request Custom Quote' : isDownload ? 'Download Resource' : 'Learn More';
+          const ctaText = isQuote ? 'Request a Quote' : isDownload ? 'Download Resource' : 'Learn More';
           const buttonClass = isDownload ? 'blog-button blog-button-download' : 'blog-button';
           htmlBlocks.push(`<div class="blog-cta"><a href="${href}" class="${buttonClass}">${ctaText} →</a></div>`);
         } else {
@@ -295,109 +295,109 @@ export async function generateStaticParams() {
 // surfaces our differentiators (price, publications, projects).
 const COMMERCIAL_META: Record<string, { title: string; description: string }> = {
   'what-is-a-point-mutation': {
-    title: 'Point Mutation: Types, Examples & Custom Knockin Mice | ITL',
+    title: 'Point Mutation: Types, Examples & Generated Knockin Mice | ITL',
     description:
-      'Point mutation explained: substitution, missense, nonsense. Search catalog strains or request a custom knockin. 800+ publications. Quote in 24h.',
+      'Point mutation explained: substitution, missense, nonsense. Search catalog strains or request a generated knockin. 800+ publications. Quote in 24h.',
   },
   'types-of-point-mutations': {
-    title: 'Types of Point Mutations + Custom Knockin Mouse Models | ITL',
+    title: 'Types of Point Mutations + Generated Knockin Mouse Models | ITL',
     description:
-      'Substitution, insertion, deletion mutations. Browse catalog disease variants or request a custom knockin. 26+ years experience. Quote in 24h.',
+      'Substitution, insertion, deletion mutations. Browse catalog disease variants or request a generated knockin. 26+ years experience. Quote in 24h.',
   },
   'point-mutation-diseases': {
-    title: 'Point Mutation Diseases + Custom Disease-Variant Mice | ITL',
+    title: 'Point Mutation Diseases + Generated Disease-Variant Mice | ITL',
     description:
       'Point mutation diseases: sickle cell, cystic fibrosis, cancer. Browse catalog knockins or we build your variant. Quote in 24h.',
   },
   'difference-between-knock-in-and-knockout': {
-    title: 'Knock-in vs Knockout Mice + Custom & Catalog Models | ITL',
+    title: 'Knock-in vs Knockout Mice + Generated & Catalog Models | ITL',
     description:
-      'Knock-in vs knockout explained. Search 14,774+ catalog models or order a custom build. 100% germline guarantee. 800+ publications.',
+      'Knock-in vs knockout explained. Search 14,774+ catalog models or order a generated build. 100% germline guarantee. 800+ publications.',
   },
   'conventional-vs-conditional-knockout': {
-    title: 'Conventional vs Conditional Knockout + Custom Mice | ITL',
+    title: 'Conventional vs Conditional Knockout + Generated Mice | ITL',
     description:
-      'Conventional vs conditional knockout compared. Catalog floxed and Cre lines plus custom Cre/lox projects. 2,800+ custom projects.',
+      'Conventional vs conditional knockout compared. Catalog floxed and Cre lines plus generated Cre/lox projects. 2,800+ models generated.',
   },
   'how-a-knockout-mouse-is-made': {
-    title: 'How a Knockout Mouse Is Made + Custom Knockout Service | ITL',
+    title: 'How a Knockout Mouse Is Made + Generated Knockout Service | ITL',
     description:
-      'How knockout mice are made. Many genes are already in our catalog. Custom knockouts when you need a new allele. Quote in 24h.',
+      'How knockout mice are made. Many genes are already in our catalog. Generated knockouts when you need a new allele. Quote in 24h.',
   },
   'humanized-mice': {
-    title: 'Humanized Mice: Services, Pricing & Custom Models | ITL',
+    title: 'Humanized Mice: Services, Pricing & Model Generation | ITL',
     description:
-      'Humanized mice: catalog checkpoint and reporter lines plus TruHumanization custom services. Drug-target and immune models. Quote in 24h.',
+      'Humanized mice: catalog checkpoint and reporter lines plus TruHumanization model generation services. Drug-target and immune models. Quote in 24h.',
   },
   'why-make-a-humanized-mouse': {
-    title: 'Why Use Humanized Mice + Custom Humanization Services | ITL',
+    title: 'Why Use Humanized Mice + Generated Humanization Services | ITL',
     description:
-      'Why humanized mice matter. Browse catalog humanized strains or design a custom humanization. 800+ publications. Quote in 24h.',
+      'Why humanized mice matter. Browse catalog humanized strains or design a generated humanization. 800+ publications. Quote in 24h.',
   },
   'history-of-creating-genetically-humanized-mice': {
-    title: 'Humanized Mice: History + Custom Humanization Service | ITL',
+    title: 'Humanized Mice: History + Generated Humanization Service | ITL',
     description:
-      'History of humanized mice. Today: broad catalog plus custom humanization since 1998. Immune checkpoint and drug-target. Quote in 24h.',
+      'History of humanized mice. Today: broad catalog plus generated humanization since 1998. Immune checkpoint and drug-target. Quote in 24h.',
   },
   'what-is-a-transgene': {
-    title: 'Transgene Explained + Custom Transgenic Mouse Service | ITL',
+    title: 'Transgene Explained + Generated Transgenic Mouse Service | ITL',
     description:
-      'Transgene defined with examples. Catalog reporters and custom BAC or targeted transgenics. 800+ publications. Quote in 24h.',
+      'Transgene defined with examples. Catalog reporters and model generation BAC or targeted transgenics. 800+ publications. Quote in 24h.',
   },
   'transgenic-mice': {
-    title: 'Transgenic Mice + Custom Transgenic Mouse Service | ITL',
+    title: 'Transgenic Mice + Generated Transgenic Mouse Service | ITL',
     description:
-      'Transgenic mice explained. Ready strains in catalog plus custom BAC, pronuclear, or targeted work. 800+ publications.',
+      'Transgenic mice explained. Ready strains in catalog plus generated BAC, pronuclear, or targeted work. 800+ publications.',
   },
   'how-to-make-a-transgenic-mouse': {
-    title: 'How to Make a Transgenic Mouse + Custom Service | ITL',
+    title: 'How to Make a Transgenic Mouse + Generated Service | ITL',
     description:
-      'Transgenic mouse protocols explained. Compare DIY timelines to catalog strains or a full custom build. Quote in 24h.',
+      'Transgenic mouse protocols explained. Compare DIY timelines to catalog strains or a full generated build. Quote in 24h.',
   },
   'rosa26-mice': {
-    title: 'Rosa26 Mice + Custom Rosa26 Knockin Service | ITL',
+    title: 'Rosa26 Mice + Generated Rosa26 Knockin Service | ITL',
     description:
-      'Rosa26 safe harbor explained. Many Rosa26 alleles in catalog. Custom reporters and cassettes when you need them. Quote in 24h.',
+      'Rosa26 safe harbor explained. Many Rosa26 alleles in catalog. Generated reporters and cassettes when you need them. Quote in 24h.',
   },
   'floxing': {
-    title: 'Floxing Explained + Custom Floxed Allele Service | ITL',
+    title: 'Floxing Explained + Generated Floxed Allele Service | ITL',
     description:
-      'Floxing for conditional knockouts. Search catalog floxed lines or request custom critical exon design. Germline guarantee.',
+      'Floxing for conditional knockouts. Search catalog floxed lines or request generated critical exon design. Germline guarantee.',
   },
   'floxed-cre-lox-flox': {
-    title: 'Floxed, Cre, lox: Explained + Custom Floxed Mice | ITL',
+    title: 'Floxed, Cre, lox: Explained + Generated Floxed Mice | ITL',
     description:
-      'Floxed alleles, Cre, loxP explained. Catalog Cre drivers and floxed strains plus custom projects. Quote in 24h.',
+      'Floxed alleles, Cre, loxP explained. Catalog Cre drivers and floxed strains plus model generation projects. Quote in 24h.',
   },
   'flox-sequence': {
-    title: 'Flox Sequence Design + Custom Floxed Allele Service | ITL',
+    title: 'Flox Sequence Design + Generated Floxed Allele Service | ITL',
     description:
-      'Flox sequence design tips. Browse conditional catalog alleles or partner with us on custom floxed mice. Quote in 24h.',
+      'Flox sequence design tips. Browse conditional catalog alleles or partner with us on generated floxed mice. Quote in 24h.',
   },
   'conditional-mutation': {
-    title: 'Conditional Mutation Explained + Custom Conditional Mice | ITL',
+    title: 'Conditional Mutation Explained + Generated Conditional Mice | ITL',
     description:
-      'Conditional mutations explained. Catalog conditional lines and full custom knockout or knockin services. Quote in 24h.',
+      'Conditional mutations explained. Catalog conditional lines and full generated knockout or knockin services. Quote in 24h.',
   },
   'cre-flox': {
-    title: 'Cre/flox Conditional Knockout + Custom Service | ITL',
+    title: 'Cre/flox Conditional Knockout + Generated Service | ITL',
     description:
-      'Cre/flox conditional knockout explained. Catalog Cre and floxed mice plus custom allele pairing. 800+ publications.',
+      'Cre/flox conditional knockout explained. Catalog Cre and floxed mice plus study-specific allele pairing. 800+ publications.',
   },
   'what-is-a-stem-cell-line': {
-    title: 'Stem Cell Lines + Custom ES Cell Mouse Targeting | ITL',
+    title: 'Stem Cell Lines + Generated Mouse Targeting | ITL',
     description:
-      'Stem cell lines for mouse targeting. Validated C57BL/6 ES platform for custom mice. Browse catalog while you plan. Germline guarantee.',
+      'Stem cell lines for mouse targeting. Validated C57BL/6 ES platform for model generation mice. Browse catalog while you plan. Germline guarantee.',
   },
   'gene-knockout': {
-    title: 'Gene Knockout: Methods + Custom Knockout Mice | ITL',
+    title: 'Gene Knockout: Methods + Generated Knockout Mice | ITL',
     description:
-      'Gene knockout methods: ES cells and CRISPR. Search catalog knockouts first, then request a custom allele. Quote in 24h.',
+      'Gene knockout methods: homologous recombination and CRISPR. Search catalog knockouts first, then request a study-specific allele. Quote in 24h.',
   },
   'crispr-knockout': {
-    title: 'CRISPR Knockout + Custom CRISPR Knockout Mice | ITL',
+    title: 'CRISPR Knockout + Generated CRISPR Knockout Mice | ITL',
     description:
-      'CRISPR knockout overview. Off-the-shelf catalog strains or custom CRISPR projects with germline guarantee.',
+      'CRISPR knockout overview. Off-the-shelf catalog strains or generated CRISPR projects with germline guarantee.',
   },
 };
 
@@ -418,7 +418,7 @@ export async function generateMetadata({
     const baseTitle = String(data.title || slug.replace(/-/g, ' '));
     const baseDescription = data.description && String(data.description) !== 'undefined'
       ? String(data.description)
-      : `${baseTitle} explained for researchers comparing catalog strains and custom mouse models.`;
+      : `${baseTitle} explained for researchers comparing catalog strains and mouse model generation.`;
 
     const blogPath = `/ingenious-blog/${slug}`;
     const rawTitle = commercial?.title ?? baseTitle;
@@ -452,9 +452,9 @@ export async function generateMetadata({
   } catch {
     const blogPath = `/ingenious-blog/${slug}`;
     const enhanced = applyCatalogFirstMeta(
-      commercial?.title ?? 'Custom Mouse Model Insights | Catalog + Custom | ITL',
+      commercial?.title ?? 'Mouse Model Generation Insights | Catalog + Generation | ITL',
       commercial?.description ??
-        'Mouse model insights from ingenious targeting laboratory. Browse 14,774+ catalog strains or custom knockout, knockin, and humanized mice.',
+        'Mouse model insights from ingenious targeting laboratory. Browse 14,774+ catalog strains or generated knockout, knockin, and humanized mice.',
       blogPath,
     );
     return {
@@ -522,9 +522,9 @@ export default async function IngeniousBlogPost({
     slug === 'what-is-a-point-mutation'
       ? [
           {
-            question: 'How do I get a custom point mutation mouse model?',
+            question: 'How do I get a generated point mutation mouse model?',
             answer:
-              'ingenious targeting laboratory generates custom point mutation knockin mice at endogenous loci. Request a quote to discuss your project requirements, timeline, and pricing.',
+              'ingenious targeting laboratory generates point mutation knockin mice at endogenous loci. Request a quote to discuss your project requirements, timeline, and pricing.',
           },
           {
             question: 'What types of point mutations can be modeled?',
@@ -537,7 +537,7 @@ export default async function IngeniousBlogPost({
             {
               question: 'Can you model substitution, deletion, or insertion mutations?',
               answer:
-                'Yes. ingenious targeting laboratory generates custom point mutation knockin mice for all mutation types. Request a quote to discuss your specific variant and allele design.',
+                'Yes. ingenious targeting laboratory generates point mutation knockin mice for all mutation types. Request a quote to discuss your specific variant and allele design.',
             },
             {
               question: 'How do I choose which point mutation type to model?',
@@ -550,7 +550,7 @@ export default async function IngeniousBlogPost({
               {
                 question: 'Can you model disease-associated point mutations in mice?',
                 answer:
-                  'Yes. ingenious targeting laboratory generates custom point mutation knockin mice for sickle cell, cystic fibrosis, cancer, and other disease variants. Request a quote to discuss your project.',
+                  'Yes. ingenious targeting laboratory generates point mutation knockin mice for sickle cell, cystic fibrosis, cancer, and other disease variants. Request a quote to discuss your project.',
               },
               {
                 question: 'How do mouse models help study point mutation diseases?',
@@ -598,7 +598,7 @@ export default async function IngeniousBlogPost({
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: offer.eyebrow,
-    serviceType: 'Custom mouse model generation',
+    serviceType: 'Mouse model generation',
     provider: {
       '@type': 'Organization',
       '@id': 'https://www.genetargeting.com/#organization',
@@ -937,11 +937,11 @@ export default async function IngeniousBlogPost({
                 ...(contentExists
                   ? [
                       { label: 'Browse 14,774+ Catalog Models', href: catalogRelatedHref },
-                      { label: 'Request Custom Quote', href: '/request-quote' },
+                      { label: 'Request a Quote', href: '/request-quote' },
                     ]
                   : [
                       { label: 'Browse 14,774+ Catalog Models', href: '/all-catalog-mouse-models/' },
-                      { label: 'Request Custom Quote', href: '/request-quote' },
+                      { label: 'Request a Quote', href: '/request-quote' },
                     ]),
                 ...(slug === 'what-is-a-point-mutation'
                   ? [
@@ -1003,8 +1003,8 @@ export default async function IngeniousBlogPost({
             slug === 'what-is-a-point-mutation' ||
             slug === 'types-of-point-mutations' ||
             slug === 'point-mutation-diseases'
-              ? 'Search catalog point mutation strains from live colonies, or meet with us about a custom knockin at your exact locus.'
-              : 'Browse thousands of catalog strains or partner with us on a custom knockout, knockin, or humanized model tailored to your study.'
+              ? 'Search catalog point mutation strains from live colonies, or meet with us about a generated knockin at your exact locus.'
+              : 'Browse thousands of catalog strains or partner with us on a generated knockout, knockin, or humanized model for your study.'
           }
         />
       </main>

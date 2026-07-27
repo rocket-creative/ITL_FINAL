@@ -1,18 +1,18 @@
+'use client';
+
 /**
- * |UXUIDC| Custom HubSpot Form Component
+ * |UXUIDC| Model Generation HubSpot Form Component
  * @version 1.0.0
  * @created 2026
- * @description Fully custom-styled form that submits programmatically to HubSpot
+ * @description Fully generated-styled form that submits programmatically to HubSpot
  * 
  * Features:
- * - Custom ITL brand styling (no HubSpot embed)
+ * - Generated ITL brand styling (no HubSpot embed)
  * - Programmatic API submission
  * - Client-side validation
  * - Loading & success/error states
  * - Accessible & mobile-responsive
  */
-
-'use client';
 
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { submitToHubSpot, isValidEmail, isValidPhone } from '@/lib/hubspot';
@@ -112,7 +112,7 @@ export default function CustomHubSpotForm({
         newErrors[field.name] = 'Please enter a valid phone number';
       }
 
-      // Custom validation
+      // Generated validation
       if (field.validation && typeof value === 'string') {
         const error = field.validation(value);
         if (error) {

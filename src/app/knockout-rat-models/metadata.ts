@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Knockout Rat Models',
-  description: 'Custom knockout rat models with complete gene deletion. Ideal for cardiovascular, metabolic, and behavioral research requiring larger animal size.',
+  description: 'Generated knockout rat models with complete gene deletion. Ideal for cardiovascular, metabolic, and behavioral research requiring larger animal size.',
   path: '/knockout-rat-models',
 });
 

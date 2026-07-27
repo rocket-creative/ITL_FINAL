@@ -1,8 +1,8 @@
 'use client';
 
 /**
- * Custom Animal Models Page - ingenious targeting laboratory
- * Overview of custom animal model services beyond mice
+ * Animal Model Generation Page - ingenious targeting laboratory
+ * Overview of animal model generation services beyond mice
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
@@ -25,27 +25,27 @@ import {
 } from '@/components/UXUIDC';
 
 const heroData = {
-  badge: 'Custom Animal Model Services',
-  title: 'Custom Animal Models',
-  description: 'While mice remain the most widely used model organism for biomedical research, ingenious targeting laboratory also provides custom genetic engineering services for other species. Our expertise in gene targeting extends to rats, rabbits, and other animal models to meet specific research requirements.',
+  badge: 'Animal Model Generation Services',
+  title: 'Animal Model Generation',
+  description: 'While mice remain the most widely used model organism for biomedical research, ingenious targeting laboratory also provides generated genetic engineering services for other species. Our expertise in gene targeting extends to rats, rabbits, and other animal models to meet specific research requirements.',
 };
 
 const services = [
   {
     title: 'Rat Models',
-    description: 'Custom knockout, knockin, and targeted transgenic rat models. Rats offer advantages for certain research applications including larger size for surgical procedures, physiological similarity to humans in cardiovascular and metabolic studies, and established behavioral paradigms.',
+    description: 'Generated knockout, knockin, and targeted transgenic rat models. Rats offer advantages for certain research applications including larger size for surgical procedures, physiological similarity to humans in cardiovascular and metabolic studies, and established behavioral paradigms.',
     href: '/rat-models',
     Icon: IconTarget,
   },
   {
     title: 'Rabbit Models',
-    description: 'Custom genetically modified rabbit models for research applications requiring larger animal size, specific immunological characteristics, or physiological features not available in rodent models.',
+    description: 'Generated genetically modified rabbit models for research applications requiring larger animal size, specific immunological characteristics, or physiological features not available in rodent models.',
     href: '/custom-rabbit-models',
     Icon: IconMicroscope,
   },
   {
     title: 'Mouse Models',
-    description: 'Our core expertise in custom mouse model generation spans knockout, knockin, humanized, and targeted transgenic approaches with over 2,800 completed custom projects since 1998.',
+    description: 'Our core expertise in mouse model generation spans knockout, knockin, humanized, and targeted transgenic approaches with over 2,800 completed model generation projects since 1998.',
     href: '/custom-mouse-models',
     Icon: IconDNA,
   },
@@ -54,11 +54,11 @@ const services = [
 const faqData = [
   {
     question: 'What species does ingenious targeting laboratory work with?',
-    answer: 'Our primary expertise is in mouse model generation, with over 2,800 completed custom projects. We also offer custom rat and rabbit model services. Contact us to discuss your specific requirements for other species.',
+    answer: 'Our primary expertise is in mouse model generation, with over 2,800 completed model generation projects. We also offer generated rat and rabbit model services. Contact us to discuss your specific requirements for other species.',
   },
   {
     question: 'How do rat models differ from mouse models?',
-    answer: 'Rats offer larger size for surgical procedures and sample collection, physiological similarities to humans for certain disease models, and well-established behavioral testing paradigms. Project timelines and approaches may differ from mouse projects.',
+    answer: 'Rats offer larger size for surgical procedures and sample collection, physiological similarities to humans for certain disease models, and well-established behavioral testing paradigms. Approaches may differ from mouse projects.',
   },
   {
     question: 'What genetic modifications are available for non-mouse species?',
@@ -149,7 +149,7 @@ export default function CustomAnimalModelsPage() {
                   fontWeight: 500,
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link
@@ -174,7 +174,7 @@ export default function CustomAnimalModelsPage() {
         {/* Top dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
           <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-            <CatalogCustomDualCta slug="custom-animal-models" utmMedium="page-hero" flush />
+            <CatalogCustomDualCta slug="generated-animal-models" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -283,7 +283,7 @@ export default function CustomAnimalModelsPage() {
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                { label: 'Custom Mouse Models', href: '/custom-mouse-models' },
+                { label: 'Mouse Model Generation', href: '/custom-mouse-models' },
                 { label: 'Knockout Mouse Models', href: '/knockout-mouse-models' },
                 { label: 'Knockin Mouse Models', href: '/knockin-mouse-models' },
                 { label: 'Humanized Mouse Models', href: '/humanized-mouse-models' },
@@ -320,7 +320,7 @@ export default function CustomAnimalModelsPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Animal Models', path: '/custom-animal-models' },
+          { name: 'Animal Model Generation', path: '/custom-animal-models' },
         ]}
       />
     </div>

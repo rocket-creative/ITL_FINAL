@@ -22,10 +22,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Reporter Types Data
@@ -347,7 +347,7 @@ export default function ReporterKnockinPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -861,7 +861,7 @@ export default function ReporterKnockinPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Reporter Knockin', path: '/reporter-knockin' },
         ]}
       />
@@ -876,8 +876,8 @@ export default function ReporterKnockinPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom reporter knockin mouse models for gene expression analysis. LacZ, fluorescent protein, and luciferase reporters at endogenous loci. Since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Generated reporter knockin mouse models for gene expression analysis. LacZ, fluorescent protein, and luciferase reporters at endogenous loci. Since 1998.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

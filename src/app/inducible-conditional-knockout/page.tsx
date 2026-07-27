@@ -20,16 +20,16 @@ import { UXUIDCResourceLinks, conditionalReversibleResources, BreedingSchemeArch
 const heroData = {
   badge: "Inducible Gene Targeting",
   title: "Inducible Conditional Knockout",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, including conditional alleles compatible with inducible Cre systems. Our knockout models have supported research published in more than 800 peer reviewed articles, including in Science, Nature and Cell.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, including conditional alleles compatible with inducible Cre systems. Our knockout models have supported research published in more than 800 peer reviewed articles, including in Science, Nature and Cell.",
   description: "Inducible conditional knockout combines the tissue specificity of conditional gene targeting with temporal control over when deletion occurs. By using tamoxifen inducible CreERT2 or doxycycline regulated systems, researchers can trigger gene deletion at any point in development or adult life, enabling study of gene function independent of developmental requirements and modeling acute versus chronic loss of function phenotypes."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Two Component System Data
@@ -250,13 +250,13 @@ export default function InducibleConditionalKnockoutPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Inducible Conditional Knockout Mouse Models",
-            "description": "Custom inducible conditional knockout mouse models. Tamoxifen inducible CreERT2 and doxycycline regulated systems for temporal gene control since 1998.",
+            "description": "Generated inducible conditional knockout mouse models. Tamoxifen inducible CreERT2 and doxycycline regulated systems for temporal gene control since 1998.",
             "provider": {
               "@type": "Organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
-            "serviceType": "Custom Mouse Model Generation",
+            "serviceType": "Mouse Model Generation",
             "areaServed": "Worldwide"
           })
         }}
@@ -345,7 +345,7 @@ export default function InducibleConditionalKnockoutPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link href="/conditional-knockout-mouse-models" style={{
@@ -1098,7 +1098,7 @@ export default function InducibleConditionalKnockoutPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Inducible Conditional Knockout', path: '/inducible-conditional-knockout' },
         ]}
       />

@@ -220,7 +220,7 @@ Professional inventory tracking ensures sample accessibility:
 Cryopreservation integrates seamlessly with model generation projects:
 
 - Archive germline confirmed founders as part of project completion
-- Preserve characterized ES cell clones for future use
+- Preserve characterized targeted clones for future use for future use
 - Create backup before shipping live animals
 - Establish archive before colony expansion
 
@@ -260,9 +260,7 @@ Cryopreservation supports active research programs:
 
 # Project Resources
 
-- (/model-generation-timeline)
-- (/model-generation-timeline)
-- (/faqs)
+- - - (/faqs)
 
 # Protect Your Mouse Models
 

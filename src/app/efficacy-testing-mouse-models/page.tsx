@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Efficacy Testing Mouse Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -21,16 +21,16 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Efficacy Testing Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom mouse model projects supporting preclinical therapeutics development, with hundreds of efficacy testing models enabling validation of drug candidates and therapeutic biologics before clinical translation. Efficacy testing mouse models provide essential preclinical platform for demonstrating target engagement, dose-response relationships, and therapeutic efficacy reducing clinical trial failure risk.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects supporting preclinical therapeutics development, with hundreds of efficacy testing models enabling validation of drug candidates and therapeutic biologics before clinical translation. Efficacy testing mouse models provide essential preclinical platform for demonstrating target engagement, dose-response relationships, and therapeutic efficacy reducing clinical trial failure risk.",
   description: "Efficacy testing mouse models integrate relevant disease mechanisms, appropriate target expression systems, and sensitive efficacy readouts enabling comprehensive characterization of therapeutic candidate function. Successful preclinical validation in appropriate models substantially improves clinical trial success probability while accelerating therapeutic development."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -139,7 +139,6 @@ export default function EfficacyTestingMouseModelsPage() {
             <CatalogCustomDualCta slug="efficacy-testing-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
-
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>

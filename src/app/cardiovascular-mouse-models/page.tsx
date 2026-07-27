@@ -15,16 +15,16 @@ import { IconSettings, IconQuote, IconChevronRight, IconCheckCircle, IconHeart }
 const heroData = {
   badge: "Heart & Vascular Research",
   title: "Cardiovascular Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with custom mouse models enabling mechanistic studies of atherosclerosis, heart failure, hypertension, and other cardiovascular diseases that represent leading causes of morbidity and mortality worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with mouse model generation enabling mechanistic studies of atherosclerosis, heart failure, hypertension, and other cardiovascular diseases that represent leading causes of morbidity and mortality worldwide.",
   description: "Cardiovascular mouse models provide essential platforms for investigating the molecular mechanisms underlying vascular disease, testing hypotheses about lipid metabolism and inflammation, and developing therapies targeting cardiovascular risk factors and disease pathways."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Challenge Data - Species Considerations
@@ -133,7 +133,7 @@ const backgroundStrains = [
   { name: "C57BL/6", description: "Susceptible to atherosclerosis and diet induced metabolic dysfunction. The most common background for cardiovascular studies. However, C57BL/6J carries the Nnt mutation affecting glucose metabolism." },
   { name: "BALB/c", description: "Relatively resistant to atherosclerosis compared to C57BL/6. May be useful for studies requiring less aggressive disease progression." },
   { name: "DBA/2", description: "Distinct cardiac phenotypes and response to cardiac stress compared to C57BL/6. Consider for specific cardiac physiology studies." },
-  { name: "129", description: "ES cell donor strains carry varying degrees of 129 background that can influence cardiovascular phenotypes. Backcrossing to pure backgrounds eliminates these effects." }
+  { name: "129", description: "129 derived backgrounds carry varying degrees of mixed strain contribution that can influence cardiovascular phenotypes. Backcrossing to pure backgrounds eliminates these effects." }
 ];
 
 // Clinical Relevance Strategies
@@ -1106,8 +1106,8 @@ export default function CardiovascularMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom cardiovascular mouse models for heart disease research. Study cardiac function, vascular disease, and cardiovascular therapeutics.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Generated cardiovascular mouse models for heart disease research. Study cardiac function, vascular disease, and cardiovascular therapeutics.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Cell Therapy Mouse Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -21,16 +21,16 @@ import { BreedingSchemeArchitectCTA, LabSignalsSignup, getRelatedLabSignalsArtic
 const heroData = {
   badge: "Our Services",
   title: "Cell Therapy Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 110 custom cell therapy mouse models including xenograft-compatible mice, humanized immune system models, and conditional transgenic approaches supporting CAR-T, stem cell, and engineered cell therapies, contributing to 92+ peer reviewed publications in cell-based therapeutic research. Cell therapy—transplanting or infusing functional cells to replace damaged tissue or modulate immunity—requires specialized animal models.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 110 generated cell therapy mouse models including xenograft-compatible mice, humanized immune system models, and conditional transgenic approaches supporting CAR-T, stem cell, and engineered cell therapies, contributing to 92+ peer reviewed publications in cell-based therapeutic research. Cell therapy—transplanting or infusing functional cells to replace damaged tissue or modulate immunity—requires specialized animal models.",
   description: "Unlike small molecule drugs that distribute systemically, cell therapies demand appropriate tissue microenvironments, compatible immune systems, and survival niches. Engineered mouse models enable testing engraftment, homing, persistence, and functional integration essential for clinical translation."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -140,7 +140,6 @@ export default function CellTherapyMouseModelsPage() {
             <CatalogCustomDualCta slug="cell-therapy-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
-
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>

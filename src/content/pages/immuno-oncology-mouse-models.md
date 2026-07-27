@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.524Z"
 
 **Url: /immuno-oncology-mouse-models**
 
-**Meta Description: Custom immuno oncology mouse models for cancer immunotherapy research. Humanized PD1, PDL1, CTLA4, and checkpoint combination models. Since 1998.**
+**Meta Description: Generated immuno oncology mouse models for cancer immunotherapy research. Humanized PD1, PDL1, CTLA4, and checkpoint combination models. Since 1998.**
 
 **Primary Keyword: immuno oncology mouse model**
 
@@ -18,11 +18,11 @@ extracted: "2026-01-09T17:03:04.524Z"
 
 # Immuno-Oncology Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported immuno-oncology researchers with custom mouse models contributing to peer reviewed publications in Cancer Research, Nature Medicine, Immunity, and leading oncology journals worldwide. Our immuno oncology mouse models have advanced understanding of tumor immunity, immune checkpoint biology, and the mechanisms underlying cancer immunotherapy response.
+Since 1998, Ingenious Targeting Laboratory has supported immuno-oncology researchers with mouse model generation contributing to peer reviewed publications in Cancer Research, Nature Medicine, Immunity, and leading oncology journals worldwide. Our immuno oncology mouse models have advanced understanding of tumor immunity, immune checkpoint biology, and the mechanisms underlying cancer immunotherapy response.
 
 Immuno oncology mouse models enable researchers to investigate the complex interactions between tumors and the immune system, from T cell exhaustion and checkpoint regulation to tumor microenvironment dynamics. Humanized immune checkpoint models express human versions of PD1, PDL1, CTLA4, and other targets, allowing direct testing of clinical antibody candidates in immunocompetent mice.
 
-The immuno oncology revolution has transformed cancer treatment, creating demand for sophisticated mouse models that support therapeutic development. Ingenious Targeting Laboratory designs and generates custom immuno oncology models tailored to your specific research questions and therapeutic programs.
+The immuno oncology revolution has transformed cancer treatment, creating demand for sophisticated mouse models that support therapeutic development. Ingenious Targeting Laboratory designs and generates immuno oncology models tailored to your specific research questions and therapeutic programs.
 
 ## Humanized Immune Checkpoint Models
 
@@ -260,9 +260,9 @@ Reporter knockins enable visualization and tracking of immune cells:
 
 ### Pre Germline Characterization
 
-ES cell based targeting enables comprehensive characterization of immuno oncology alleles before mouse generation. This pre germline analysis confirms correct human sequence integration, proper allele structure, and absence of random integration events.
+homologous recombination targeting enables comprehensive characterization of immuno oncology alleles before mouse generation. This pre germline analysis confirms correct human sequence integration, proper allele structure, and absence of random integration events.
 
-For humanized checkpoint models, sequence verification confirms exact human sequence incorporation. Functional testing can verify human specific antibody binding in ES cells prior to mouse production.
+For humanized checkpoint models, sequence verification confirms exact human sequence incorporation. Functional testing can verify human specific antibody binding in targeted cells prior to mouse production.
 
 ### Strain Background Considerations
 
@@ -354,12 +354,11 @@ Chakrabarti S et al. 2024. Touch sensation requires the mechanically gated ion c
 ## Project Resources
 
 - (/es-cell-gene-targeting)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Start Your Immuno Oncology Model Project
 
-Our scientific consultants are ready to discuss your immuno oncology research requirements and recommend the optimal model design for your therapeutic program. Initial consultation is provided at no charge and includes target analysis, checkpoint humanization strategy, and timeline estimates.
+Our scientific consultants are ready to discuss your immuno oncology research requirements and recommend the optimal model design for your therapeutic program. Initial consultation is provided at no charge and includes target analysis, checkpoint humanization strategy.
 
 (/request-quote)
 
@@ -406,6 +405,6 @@ C57BL/6 is most common for Th1-biased immune responses and compatibility with MC
 - Syngeneic tumor cell line table included
 - Covers humanized checkpoints, genetic tumor models, syngeneic models
 - Single vs dual humanization explained
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - CTA to /request-quote
 - Word count ~2,100 (appropriate for therapeutic area page)

@@ -21,8 +21,8 @@ import {
 } from '@/components/UXUIDC';
 
 const servicesMeta = applyCatalogFirstMeta(
-  'Humanized Mouse Services | Catalog + Custom | 24h Quote',
-  'Humanized mouse services since 1998. Browse catalog checkpoint lines or request custom humanization (PD1, PDL1, CTLA4, LAG3, TIM3). 800+ publications.',
+  'Humanized Mouse Services | Catalog + Generation | 24h Quote',
+  'Humanized mouse services since 1998. Browse catalog checkpoint lines or request generated humanization (PD1, PDL1, CTLA4, LAG3, TIM3). 800+ publications.',
   '/humanized-mouse-services',
 );
 
@@ -85,7 +85,7 @@ export default function HumanizedMouseServicesPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Humanized Mouse Services', path: '/humanized-mouse-services' },
         ]}
       />
@@ -97,7 +97,7 @@ export default function HumanizedMouseServicesPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             name: 'Humanized Mouse Services',
-            serviceType: 'Custom humanized mouse model generation',
+            serviceType: 'Generated humanized mouse model generation',
             provider: {
               '@type': 'Organization',
               '@id': 'https://www.genetargeting.com/#organization',
@@ -106,7 +106,7 @@ export default function HumanizedMouseServicesPage() {
             },
             areaServed: 'Worldwide',
             description:
-              'Custom humanized mouse models for drug development. Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), and complete gene replacement. Since 1998. 800+ peer-reviewed publications.',
+              'Generated humanized mouse models for drug development. Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), and complete gene replacement. Since 1998. 800+ peer-reviewed publications.',
             offers: buildServiceOffer('https://www.genetargeting.com/request-quote/', 'Humanized'),
           }),
         }}
@@ -213,9 +213,9 @@ export default function HumanizedMouseServicesPage() {
 
         <UXUIDCServicePricingAnchor
           serviceLabel="Humanized Mouse"
-          headline="Custom humanized mice — fixed-fee quote in 24 hours."
+          headline="Generated humanized mice — fixed-fee quote in 24 hours."
           unlockInterest="Humanized Mouse"
-          subline="Pricing scales with humanization strategy (drug-target replacement, immune checkpoint, complete gene replacement), allele complexity, and timeline. Free scientific consultation included."
+          subline="Pricing scales with humanization strategy (drug-target replacement, immune checkpoint, complete gene replacement) and allele complexity. Free scientific consultation included."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-services-pricing"
           secondaryHref="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-services-catalog-pricing"
           secondaryLabel="See Off-the-Shelf Lines"
@@ -224,13 +224,7 @@ export default function HumanizedMouseServicesPage() {
               question: 'How much do humanized mice cost?',
               answer:
                 'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint humanization, complete gene replacement), allele complexity, and delivery timeline. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours after a free scientific consultation. We deliver germline-confirmed founders.',
-            },
-            {
-              question: 'How long does it take to build a humanized mouse?',
-              answer:
-                'Typical humanized mouse projects deliver germline-confirmed founders in 9–14 months depending on humanization strategy, ES cell vs CRISPR approach, and validation requirements. Many off-the-shelf humanized models in our catalog ship from live colonies in weeks.',
-            },
-            {
+            },            {
               question: 'What humanization strategies do you offer?',
               answer:
                 'Three strategies: (1) drug-target humanization — replace the gene encoding your therapeutic target so mouse models become predictive of human pharmacology, (2) immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3) — for checkpoint inhibitor efficacy testing, and (3) complete gene replacement — replace the entire mouse gene with the human ortholog for human-specific biology studies.',
@@ -238,12 +232,12 @@ export default function HumanizedMouseServicesPage() {
             {
               question: 'Do you have ready-to-ship humanized mice?',
               answer:
-                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, PD1 humanized, and PDL1 humanized. Search the catalog by gene to see live-colony availability before commissioning a custom build.',
+                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, PD1 humanized, and PDL1 humanized. Search the catalog by gene to see live-colony availability before commissioning a generated build.',
             },
             {
               question: 'Do you guarantee germline transmission?',
               answer:
-                'Yes. Every custom humanized mouse project from ingenious targeting laboratory carries a 100% germline transmission guarantee. We deliver germline-confirmed founders or we keep working until we do.',
+                'Yes. Every model generation humanized mouse project from ingenious targeting laboratory carries a 100% germline transmission guarantee. We deliver germline-confirmed founders or we keep working until we do.',
             },
           ]}
         />

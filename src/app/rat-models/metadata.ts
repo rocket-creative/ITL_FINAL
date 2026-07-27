@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Custom Rat Models',
-  description: 'Custom knockout, knockin, and transgenic rat models for research. Larger size and physiology advantages for cardiovascular and neuro studies.',
+  title: 'Generated Rat Models',
+  description: 'Generated knockout, knockin, and transgenic rat models for research. Larger size and physiology advantages for cardiovascular and neuro studies.',
   path: '/rat-models',
 });
 

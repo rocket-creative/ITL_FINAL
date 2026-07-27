@@ -15,16 +15,16 @@ import { IconTarget, IconQuote, IconChevronRight, IconCheckCircle } from '@/comp
 const heroData = {
   badge: "Amyloid & Tau Pathology Models",
   title: "Alzheimer Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported Alzheimer disease researchers with custom mouse models contributing to peer reviewed publications in Nature Neuroscience, Neuron, Journal of Neuroscience, and leading neurology journals worldwide. Our Alzheimer disease mouse models have advanced understanding of amyloid pathology, tau biology, and the complex mechanisms underlying neurodegeneration.",
+  intro: "Since 1998, ingenious targeting laboratory has supported Alzheimer disease researchers with mouse model generation contributing to peer reviewed publications in Nature Neuroscience, Neuron, Journal of Neuroscience, and leading neurology journals worldwide. Our Alzheimer disease mouse models have advanced understanding of amyloid pathology, tau biology, and the complex mechanisms underlying neurodegeneration.",
   description: "Alzheimer disease mouse models enable researchers to investigate the molecular and cellular mechanisms driving disease pathogenesis, from amyloid plaque formation and tau hyperphosphorylation to neuroinflammation and synaptic dysfunction."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Amyloid Cascade Features
@@ -796,7 +796,7 @@ export default function AlzheimersMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom Alzheimer disease mouse models for AD research. APP knockin, tau models, and amyloid pathology. Expert model design since 1998.",
+            "description": "Generated Alzheimer disease mouse models for AD research. APP knockin, tau models, and amyloid pathology. Expert model design since 1998.",
             "serviceType": "Alzheimer Disease Mouse Model Generation"
           })
         }}

@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:02.956Z"
 
 **Url: /allergy-asthma-mouse-models**
 
-**Meta Description: Custom allergy and asthma mouse models for respiratory disease research. Airway inflammation, allergic responses, and therapeutic testing platforms.**
+**Meta Description: Generated allergy and asthma mouse models for respiratory disease research. Airway inflammation, allergic responses, and therapeutic testing platforms.**
 
 **Primary Keyword: allergy asthma mouse models**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:02.956Z"
 
 # Allergy Asthma Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported allergy and asthma research with custom mouse models enabling mechanistic studies of airway inflammation, allergic responses, and therapeutic interventions. Our allergy and asthma models have contributed to research on Th2 immune responses, airway remodeling, and anti inflammatory therapeutics.
+Since 1998, Ingenious Targeting Laboratory has supported allergy and asthma research with mouse model generation enabling mechanistic studies of airway inflammation, allergic responses, and therapeutic interventions. Our allergy and asthma models have contributed to research on Th2 immune responses, airway remodeling, and anti inflammatory therapeutics.
 
 Allergy and asthma mouse models provide essential platforms for investigating the molecular pathways underlying allergic inflammation, testing hypotheses about immune cell contributions, and developing therapies for respiratory diseases affecting millions of patients worldwide.
 
@@ -99,8 +99,7 @@ Investigate disease pathways:
 ## Related Resources
 
 - (/therapeutic-areas)
-- (/model-generation-timeline)
-
+- 
 ## Request Allergy and Asthma Models
 
 Contact us to discuss allergy and asthma mouse models for your research.

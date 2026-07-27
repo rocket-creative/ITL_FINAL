@@ -193,7 +193,7 @@ function formatFieldName(fieldName: string): string {
     modification_type: 'Modification Type',
     model_type: 'Model Type',
     strain_background: 'Strain Background',
-    timeline_requirements: 'Timeline Requirements',
+    timeline_requirements: 'Project scope requirements',
     cohort_needs: 'Cohort Needs',
     additional_notes: 'Additional Notes',
     preferred_contact: 'Preferred Contact Method',

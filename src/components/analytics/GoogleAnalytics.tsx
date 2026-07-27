@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Google Analytics 4 + Google Ads Integration
  * @version 1.0.0
@@ -11,8 +13,6 @@
  * - Time on page / engagement tracking
  * - Scroll depth tracking
  */
-
-'use client';
 
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -227,7 +227,7 @@ export default function GoogleAnalytics() {
 // ============================================
 
 /**
- * Track a custom event
+ * Track a generated event
  */
 export function trackEvent(
   eventName: string,

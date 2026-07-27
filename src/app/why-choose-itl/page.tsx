@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Why Choose ingenious targeting laboratory Page
  * Built from approved content: src/content/pages/why-choose-itl.md
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -14,7 +14,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconCheckCircle, IconChevronRight, IconAward, IconUsers, IconGlobe } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Import verified testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
@@ -30,10 +30,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 28, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Key Differentiators
@@ -42,8 +42,8 @@ const differentiators = [
     title: "Proven Track Record",
     icon: IconAward,
     points: [
-      "28 years of exclusive focus on custom mouse model generation",
-      "2,800+ custom projects completed across every model type",
+      "28 years of exclusive focus on mouse model generation",
+      "2,800+ models generated completed across every model type",
       "800+ peer reviewed publications in Nature, Cell, Science",
       "Clients worldwide across academic and industry sectors"
     ]
@@ -104,18 +104,18 @@ const comparisonFactors = [
 const faqData = [
   { 
     question: "What makes ingenious targeting laboratory different from other mouse model providers?", 
-    answer: "ingenious targeting laboratory has 28 years of exclusive focus on custom mouse model generation, 2,800+ completed custom projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success." 
+    answer: "ingenious targeting laboratory has 28 years of exclusive focus on mouse model generation, 2,800+ completed model generation projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success." 
   },
   { 
     question: "How does ingenious targeting laboratory's experience benefit my project?", 
-    answer: "ingenious targeting laboratory's 2,800+ custom projects across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application." 
+    answer: "ingenious targeting laboratory's 2,800+ models generated across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application." 
   },
   { 
     question: "What support does ingenious targeting laboratory provide after model delivery?", 
     answer: "ingenious targeting laboratory provides ongoing support including colony management services, cryopreservation for line archival, rederivation for health status upgrade, and technical consultation. We work with you throughout your research program to ensure model performance and address any questions that arise." 
   },
   { 
-    question: "How do I get started with a custom mouse model project?", 
+    question: "How do I get started with a mouse model generation project?", 
     answer: "Contact ingenious targeting laboratory through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs." 
   }
 ];
@@ -206,7 +206,7 @@ export default function WhyChooseItlPage() {
                   textDecoration: 'none'
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <IconChevronRight size={16} />
               </Link>
               <Link 
@@ -236,7 +236,6 @@ export default function WhyChooseItlPage() {
             <CatalogCustomDualCta slug="why-choose-itl" utmMedium="page-hero" flush />
           </div>
         </section>
-
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
@@ -430,9 +429,6 @@ export default function WhyChooseItlPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA variant="gradient" />
-
         {/* Testimonials */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -522,41 +518,6 @@ export default function WhyChooseItlPage() {
           </div>
         </section>
 
-        {/* Lab Signals Newsletter */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              variant="banner"
-              title="Expert Research Insights Delivered"
-              description="Join researchers worldwide who receive cutting-edge insights, breakthrough studies, and practical guidance from our team of PhD scientists. Delivered biweekly to your inbox."
-            />
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: 'white',
-              marginBottom: '16px'
-            }}>
-              Experience the ingenious Difference
-            </h2>
-            <p className="animate-in" style={{
-              fontSize: '1rem',
-              color: 'rgba(255,255,255,0.9)',
-              marginBottom: '30px',
-              lineHeight: '1.7'
-            }}>
-              Start your next mouse model project with a team you can trust.
-            </p>
-            <CatalogCustomDualCta slug="why-choose-itl" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* JSON-LD Structured Data */}
         <BreadcrumbSchema 
           items={[
@@ -582,6 +543,14 @@ export default function WhyChooseItlPage() {
           }}
         />
       </main>
+
+      <StandardPageCtaStack
+        slug="why-choose-itl"
+        closingTitle="Experience the ingenious Difference"
+        closingDescription="Start your next mouse model project with a team you can trust."
+        labSignalsTitle="Expert Research Insights Delivered"
+        labSignalsDescription="Join researchers worldwide who receive cutting-edge insights, breakthrough studies, and practical guidance from our team of PhD scientists. Delivered biweekly to your inbox."
+      />
       
       <UXUIDCFooter />
     </div>

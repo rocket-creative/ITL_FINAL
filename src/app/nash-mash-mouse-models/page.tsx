@@ -15,16 +15,16 @@ import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconLayers } f
 const heroData = {
   badge: "Fatty Liver Disease Models",
   title: "NASH Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported metabolic liver disease research with custom mouse models enabling mechanistic studies of hepatic steatosis, steatohepatitis, and fibrosis progression underlying the global epidemic of metabolic dysfunction associated fatty liver disease.",
+  intro: "Since 1998, ingenious targeting laboratory has supported metabolic liver disease research with mouse model generation enabling mechanistic studies of hepatic steatosis, steatohepatitis, and fibrosis progression underlying the global epidemic of metabolic dysfunction associated fatty liver disease.",
   description: "NASH MASH mouse models provide essential platforms for investigating the molecular pathways driving progression from simple steatosis to steatohepatitis and cirrhosis, testing hypotheses about lipotoxicity and inflammation, and developing therapies for this increasingly prevalent condition."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Nomenclature Data
@@ -168,12 +168,7 @@ const faqData = [
   {
     question: "Which mouse background is best for MASH studies?",
     answer: "C57BL/6 is the standard background for MASH studies due to susceptibility to diet-induced obesity and steatosis. Substrains differ: C57BL/6J carries Nnt mutation affecting glucose metabolism. C57BL/6N is commonly used and well-characterized. Both work, but consistency within a study is critical."
-  },
-  {
-    question: "How long does it take to generate a MASH mouse model?",
-    answer: "Custom model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Conditional approaches for cell-type-specific studies follow similar workflows. Pre-germline characterization provides early validation of targeting before mouse generation. Contact us for current timeline estimates."
-  }
-];
+  },];
 
 export default function NashMashMouseModelsPage() {
   const heroRef = useRef<HTMLDivElement>(null);  return (
@@ -833,7 +828,7 @@ export default function NashMashMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom NASH and MASH mouse models for fatty liver disease research. Study non alcoholic steatohepatitis and metabolic liver disease.",
+            "description": "Generated NASH and MASH mouse models for fatty liver disease research. Study non alcoholic steatohepatitis and metabolic liver disease.",
             "serviceType": "NASH Mouse Model Generation"
           })
         }}

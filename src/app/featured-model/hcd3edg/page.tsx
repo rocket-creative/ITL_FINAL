@@ -158,7 +158,7 @@ const TABLE_HEADER: CSSProperties = {
 
 function AboutItlParagraph() {
   const before =
-    'Ingenious targeting laboratory maintains a catalog of over 14,774 mouse models, including humanized strains, Cre driver lines for conditional expression, and reporter mice for cell tracking and imaging. These quality-controlled models on defined genetic backgrounds ship as breeding pairs or cohorts with complete genotyping protocols and health documentation. Researchers gain immediate access to mouse strains without custom generation timelines, accelerating experiments across immunology, oncology, neurology, and metabolic disease applications. If you are interested in our hCD3EDG mouse model, please ';
+    'Ingenious targeting laboratory maintains a catalog of over 14,774 mouse models, including humanized strains, Cre driver lines for conditional expression, and reporter mice for cell tracking and imaging. These quality-controlled models on defined genetic backgrounds ship as breeding pairs or cohorts with complete genotyping protocols and health documentation. Researchers gain immediate access to mouse strains without generated generation lead time, accelerating experiments across immunology, oncology, neurology, and metabolic disease applications. If you are interested in our hCD3EDG mouse model, please ';
   const mid = '. Or, please search our ';
   const after = ' for your gene of interest.';
 
@@ -370,7 +370,7 @@ export default function HCD3EDGPage() {
                 The hCD3EDG strain replaces all three signaling subunits of the
                 murine CD3 complex (CD3 epsilon, CD3 delta, and CD3 gamma) with
                 their human orthologs on a C57BL/6 background. This is a full CD3
-                complex humanization, not a single-chain knock-in, custom-built
+                complex humanization, not a single-chain knock-in, generated
                 for preclinical evaluation of human CD3-directed
                 immunotherapies.
               </p>

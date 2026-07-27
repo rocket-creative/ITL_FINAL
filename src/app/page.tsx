@@ -43,10 +43,6 @@ const TestimonialsSection = dynamic(
   () => import('./components/homepage/TestimonialsSection'),
   { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
 );
-const StartProjectSection = dynamic(
-  () => import('./components/homepage/StartProjectSection'),
-  { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
-);
 const FAQSection = dynamic(
   () => import('./components/homepage/FAQSection'),
   { ssr: true, loading: () => <div className="min-h-[400px]" aria-hidden="true" /> }
@@ -68,17 +64,17 @@ export const metadata: Metadata = {
 
 // Hero Section - lines 8-13
 const heroData = {
-  headline: 'Custom Mouse Models Designed for Study Ready, Reproducible Research',
-  description1: 'ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,800+ custom genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
+  headline: 'Mouse Model Generation Designed for Study Ready, Reproducible Research',
+  description1: 'ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
   description2: 'For more than two decades, researchers have partnered with our U.S. based scientific team for sequence informed allele design, rigorous QC oversight, and study ready germline transmitting mouse lines. iTL helps researchers determine the most appropriate approach for long term allele stability, clear genotype interpretation, and successful model creation.',
   cta1: { label: 'Browse Catalog Models', href: '/catalog-mouse-models' },
-  cta2: { label: 'Request Custom Quote', href: '/request-quote' },
+  cta2: { label: 'Request a Quote', href: '/request-quote' },
 };
 
 // Core Research Services - lines 14-27
 const servicesData = [
   {
-    title: 'Custom Mouse Models',
+    title: 'Mouse Model Generation',
     description: 'We create genetically engineered mouse models aligned with your genetic, regulatory, and phenotype-driven research questions—supporting precise allele design and background control.',
     href: '/custom-mouse-models',
   },
@@ -94,7 +90,7 @@ const servicesData = [
   },
   {
     title: 'Preclinical Services',
-    description: 'Non-GLP phenotype characterization, PK/PD, pharmacology, and exploratory in-vivo support for your custom or catalog animal models.',
+    description: 'Non-GLP phenotype characterization, PK/PD, pharmacology, and exploratory in-vivo support for your generated or catalog animal models.',
     href: '/preclinical-services',
   },
 ];
@@ -109,10 +105,10 @@ const overviewData = {
   whatWeProvide: {
     title: 'What We Provide',
     items: [
-      'Custom mouse models including conventional knockouts, conditional knockouts, knock-ins (point mutation, cDNA, gene replacement), reporter alleles, Rosa26 and other targeted transgenics, and humanized models.',
+      'Mouse model generation including conventional knockouts, conditional knockouts, knock-ins (point mutation, cDNA, gene replacement), reporter alleles, Rosa26 and other targeted transgenics, and humanized models.',
       'Multi-generation cohort development and colony planning for study readiness.',
       'Animal model catalog access to 14,774+ lines for study ready biomedical research.',
-      'Integrated non-GLP preclinical services for your custom or catalog model to support translational decisions.',
+      'Integrated non-GLP preclinical services for your generated or catalog model to support translational decisions.',
     ],
   },
 };
@@ -133,7 +129,7 @@ const approachData = {
     },
     {
       title: 'U.S.-Based QC Oversight',
-      description: 'Each stage of custom development—allele confirmation, germline transmission, colony establishment, and cohort expansion—is validated through U.S.-based QC. This comprehensive oversight ensures consistent quality and reliable results across all project phases.',
+      description: 'Each stage of model generation—allele confirmation, germline transmission, colony establishment, and cohort expansion—is validated through U.S.-based QC. This comprehensive oversight ensures consistent quality and reliable results across all project phases.',
     },
     {
       title: 'Project Backgrounds',
@@ -155,12 +151,12 @@ const workflowData = {
     {
       number: 1,
       title: 'Project Consultation',
-      description: 'Free scientific consultation to review experimental goals, recommend optimal targeting strategies, and provide timeline and pricing estimates.',
+      description: 'Free scientific consultation to review experimental goals, recommend optimal targeting strategies, and provide pricing estimates.',
     },
     {
       number: 2,
       title: 'Allele Design',
-      description: 'Custom allele design development based on your research requirements, including selection of appropriate targeting approach and cassette configuration.',
+      description: 'Allele design development based on your research requirements, including selection of appropriate targeting approach and cassette configuration.',
     },
     {
       number: 3,
@@ -183,8 +179,8 @@ const workflowData = {
 // Trusted by Researchers - lines 61-64
 const trustedData = {
   title: 'Trusted by Researchers Worldwide',
-  stats: 'Since 1998 · 2,800+ Custom Projects Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell',
-  content: 'ingenious targeting laboratory has generated custom mouse models for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.',
+  stats: 'Since 1998 · 2,800+ Models Generated · 800+ Peer Reviewed Publications · Nature · Science · Cell',
+  content: 'ingenious targeting laboratory has generated mouse models for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.',
   ctaHref: '/publications',
 };
 
@@ -202,28 +198,20 @@ const testimonialsData = {
   ctaHref: '/testimonials',
 };
 
-// Start Your Project - lines 76-79
-const startProjectData = {
-  title: 'Catalog Models. Custom when your study needs more.',
-  content: 'Most projects begin with an established catalog mouse model. When your program needs conditional, mutation, or humanization beyond the library, our scientific consultants provide complimentary guidance on the custom line your study requires.',
-  cta1: { label: 'Browse Catalog Models', href: '/catalog-mouse-models' },
-  cta2: { label: 'Request Custom Quote', href: '/request-quote' },
-};
-
 // FAQs - lines 80-86
 const faqData = {
   title: 'Frequently Asked Questions',
   faqs: [
     {
-      question: 'What types of custom mouse models does ingenious targeting laboratory generate?',
-      answer: 'ingenious targeting laboratory generates custom mouse models including conventional knockouts, conditional knockouts (floxed alleles), knockins (point mutations, cDNA, gene replacement, reporters), Rosa26 and other targeted transgenics, and humanized models.',
+      question: 'What types of mouse models does ingenious targeting laboratory generate?',
+      answer: 'ingenious targeting laboratory generates mouse models including conventional knockouts, conditional knockouts (floxed alleles), knockins (point mutations, cDNA, gene replacement, reporters), Rosa26 and other targeted transgenics, and humanized models.',
     },
     {
-      question: 'What strain backgrounds are available for custom models?',
+      question: 'What strain backgrounds are available for model generation?',
       answer: 'ingenious targeting laboratory primarily works with C57BL/6 background. Other strain backgrounds (BALB/c, 129) are available upon request.',
     },
     {
-      question: 'How do I get started with a custom mouse model project?',
+      question: 'How do I get started with a mouse model generation project?',
       answer: 'Contact ingenious targeting laboratory through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs.',
     },
   ],
@@ -265,36 +253,31 @@ export default function HomePage() {
         {/* 6. Conceptual Workflow */}
         <WorkflowSection data={workflowData} />
 
-        {/* 6.5 Breeding Scheme Architect - New for 2026 */}
-        <BreedingSchemeArchitectCTA variant="gradient" />
-
         {/* 7. Trusted by Researchers Worldwide */}
         <TrustedBySection data={trustedData} />
 
         {/* 8. What Researchers Say (Testimonials) */}
         <TestimonialsSection data={testimonialsData} />
 
-        {/* 8.5 Lab Signals Newsletter CTA */}
-        <section style={{ backgroundColor: '#ffffff', padding: '60px 20px' }}>
+        {/* 9. Frequently Asked Questions */}
+        <FAQSection data={faqData} />
+
+        {/* P0 close → P1 BSA → P2 Lab Signals (nurture last) */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="homepage" utmMedium="page-closing" flush />
+          </div>
+        </section>
+
+        <BreedingSchemeArchitectCTA variant="gradient" />
+
+        <section style={{ backgroundColor: '#ffffff', padding: '48px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
+            <LabSignalsSignup
               variant="banner"
               title="Stay Ahead with Lab Signals"
               description="Subscribe for biweekly insights from our PhD scientists. Expert articles on mouse model design, gene targeting strategies, and research best practices."
             />
-          </div>
-        </section>
-
-        {/* 9. Start Your Project */}
-        <StartProjectSection data={startProjectData} />
-
-        {/* 10. Frequently Asked Questions */}
-        <FAQSection data={faqData} />
-
-        {/* Bottom dual-path CTA */}
-        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
-          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-            <CatalogCustomDualCta slug="homepage" utmMedium="page-closing" flush />
           </div>
         </section>
       </main>
@@ -315,24 +298,24 @@ export default function HomePage() {
             url: 'https://www.genetargeting.com',
             logo: 'https://www.genetargeting.com/images/logo.png',
             description:
-              'ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,800+ custom genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
-            slogan: 'Custom mouse models, U.S. scientific oversight, 100% germline transmission guarantee.',
+              'ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
+            slogan: 'Mouse model generation, U.S. scientific oversight, 100% germline transmission guarantee.',
             foundingDate: '1998',
             foundingLocation: 'Holbrook, NY, United States',
             numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 50, maxValue: 200 },
             award: [
-              '100% germline transmission guarantee on every custom project',
+              '100% germline transmission guarantee on every model generation project',
               '800+ peer reviewed publications citing iTL generated models',
             ],
             knowsAbout: [
-              'Custom mouse model generation',
+              'Mouse model generation',
               'Knockout mouse models',
               'Conditional knockout mouse models',
               'Knockin mouse models',
               'Humanized mouse models',
               'Transgenic mouse models',
               'CRISPR/Cas9 genome editing',
-              'ES cell gene targeting',
+              'gene targeting',
               'Cre/loxP system',
               'Flp/FRT recombination',
               'BAC transgenics',
@@ -376,7 +359,7 @@ export default function HomePage() {
             url: 'https://www.genetargeting.com',
             name: 'ingenious targeting laboratory',
             description:
-              'U.S. based custom mouse model company. Knockout, knockin, humanized, and transgenic models since 1998 with a 100% germline transmission guarantee.',
+              'U.S. based mouse model generation company. Knockout, knockin, humanized, and transgenic models since 1998 with a 100% germline transmission guarantee.',
             publisher: { '@id': 'https://www.genetargeting.com/#organization' },
             potentialAction: {
               '@type': 'SearchAction',

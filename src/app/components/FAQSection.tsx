@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Frequently Asked Questions Section - from homepage.md
  * - Removed GSAP, using CSS animations only
  */
-
-'use client';
 
 import { useState } from 'react';
 

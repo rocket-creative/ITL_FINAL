@@ -1,12 +1,12 @@
+'use client';
+
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * Cystic Fibrosis Mice Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
-'use client';
-
 import { useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -14,22 +14,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Cystic Fibrosis Mice",
-  intro: "Since 1998, ingenious targeting laboratory has supported cystic fibrosis research with custom mouse models enabling mechanistic studies of CFTR function, patient mutation effects, and therapeutic interventions.",
+  intro: "Since 1998, ingenious targeting laboratory has supported cystic fibrosis research with mouse model generation enabling mechanistic studies of CFTR function, patient mutation effects, and therapeutic interventions.",
   description: "Our cystic fibrosis models have contributed to research on ion channel biology, gene therapy, and CFTR modulator development. Cystic fibrosis mouse models provide essential platforms for investigating CFTR mutations, testing gene therapy approaches, and developing therapies for this life limiting genetic disease affecting thousands of patients worldwide."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -148,7 +148,7 @@ export default function CysticFibrosisMicePage() {
                     fontWeight: 500
                   }}
                 >
-                  <span>Request Custom Quote</span>
+                  <span>Request a Quote</span>
                   <span>→</span>
                 </Link>
                 <Link 
@@ -195,22 +195,6 @@ export default function CysticFibrosisMicePage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start your project today
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
-            </p>
-            <CatalogCustomDualCta slug="cystic-fibrosis-mice" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
@@ -224,16 +208,6 @@ export default function CysticFibrosisMicePage() {
             </div>
           </section>
         )}
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Updated on Cystic Fibrosis Research"
-              description="Get the latest insights on CFTR models, ion channel biology, and gene therapy developments."
-            />
-          </div>
-        </section>
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
@@ -301,6 +275,12 @@ export default function CysticFibrosisMicePage() {
           })
         }}
       />
+            <StandardPageCtaStack
+        slug="cystic-fibrosis-mice"
+        labSignalsTitle="Stay Updated on Cystic Fibrosis Research"
+        labSignalsDescription="Get the latest insights on CFTR models, ion channel biology, and gene therapy developments."
+      />
+
       </main>
       
       

@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:06.134Z"
 
 **Url: /tissue-specific-knockout**
 
-**Meta Description: Custom tissue specific knockout mouse models. Cell type specific gene deletion using Cre lox technology. Comprehensive Cre driver guidance since 1998.**
+**Meta Description: Generated tissue specific knockout mouse models. Cell type specific gene deletion using Cre lox technology. Comprehensive Cre driver guidance since 1998.**
 
 **Primary Keyword: tissue specific knockout**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:06.134Z"
 
 # Tissue Specific Knockout
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom mouse models, including conditional knockouts that enable tissue specific gene deletion. Our tissue specific knockout models have supported research published in over 800 peer reviewed publications, including articles in Science, Nature, and Cell.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 mouse model generation, including conditional knockouts that enable tissue specific gene deletion. Our tissue specific knockout models have supported research published in over 800 peer reviewed publications, including articles in Science, Nature, and Cell.
 
 Tissue specific knockout restricts gene deletion to defined cell types or organs while preserving gene function elsewhere in the organism. By crossing a floxed (conditional) allele to a tissue specific Cre driver line, gene deletion occurs only in cells where Cre recombinase is expressed. This approach enables study of genes that cause embryonic lethality when deleted globally, isolation of cell autonomous gene functions, and dissection of tissue specific phenotypes without confounding systemic effects.
 
@@ -469,7 +469,7 @@ Milanick W, Li J, Thomas CI, Al-Yaari M, Guerrero-Given D, Kamasawa N, Young SM 
 
 ## What Researchers Say
 
-*“ingenious Targeting Laboratory is highly recommended for generating custom animal models. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.”*
+*“ingenious Targeting Laboratory is highly recommended for generating animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.”*
 
 *— **Hyekyung Plumley, PhD**, Warren Center for Neuroscience Drug Discovery*
 
@@ -498,8 +498,7 @@ Milanick W, Li J, Thomas CI, Al-Yaari M, Guerrero-Given D, Kamasawa N, Young SM 
 ## Project Resources
 
 - (/conditional-vs-conventional-guide)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Start Your Tissue Specific Knockout Project
 

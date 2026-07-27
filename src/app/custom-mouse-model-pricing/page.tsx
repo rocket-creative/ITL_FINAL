@@ -1,6 +1,6 @@
 /**
  * /custom-mouse-model-pricing — buyer-intent page that ranks for
- * "humanized mice price", "knockout mouse price", "custom mouse model
+ * "humanized mice price", "knockout mouse price", "mouse model generation
  * cost", "transgenic mouse pricing". Surfaces starting prices in a
  * comparison table + Offer schema + dedicated quote CTA per service tier.
  *
@@ -22,8 +22,8 @@ import {
 } from '@/components/UXUIDC';
 
 const pricingMeta = applyCatalogFirstMeta(
-  'Mouse Model Pricing | Catalog + Custom | Quote 24h',
-  'Compare catalog model pricing with custom knockout, knockin, humanized, conditional, and transgenic builds. 800+ peer reviewed publications. Quote in 24 hours.',
+  'Mouse Model Pricing | Catalog + Generation | Quote 24h',
+  'Compare catalog model pricing with generated knockout, knockin, humanized, conditional, and transgenic builds. 800+ peer reviewed publications. Quote in 24 hours.',
   '/custom-mouse-model-pricing',
 );
 
@@ -52,8 +52,7 @@ const tiers = [
     name: 'Knockout Mouse',
     sku: 'KO-CUSTOM',
     description:
-      'CRISPR or ES cell knockout. Constitutive (full-body) loss-of-function with germline-confirmed founders.',
-    timeline: '9–12 months',
+      'CRISPR or gene targeting knockout. Constitutive (full-body) loss-of-function with germline-confirmed founders.',
     bestFor: ['Loss-of-function studies', 'Recessive disease models', 'Pathway analysis'],
     quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=knockout-tier',
     learnMoreHref: '/knockout-mouse-models/',
@@ -63,7 +62,6 @@ const tiers = [
     sku: 'CKO-CUSTOM',
     description:
       'Floxed allele for Cre-mediated conditional deletion. Tissue-specific, inducible, or temporally controlled with CreERT2.',
-    timeline: '10–14 months',
     bestFor: ['Tissue-specific knockouts', 'Embryonic-lethal genes', 'Adult-onset modeling'],
     quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=conditional-tier',
     learnMoreHref: '/conditional-knockout-mouse-models/',
@@ -73,7 +71,6 @@ const tiers = [
     sku: 'KI-CUSTOM',
     description:
       'Point mutation, reporter, tag, or ORF replacement at the endogenous locus. Precise, single-copy integration.',
-    timeline: '10–14 months',
     bestFor: ['Disease variant modeling', 'Reporter lines', 'Protein tagging'],
     quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=knockin-tier',
     learnMoreHref: '/knockin-mouse-models/',
@@ -83,7 +80,7 @@ const tiers = [
     sku: 'HUM-CUSTOM',
     description:
       'Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), or complete gene replacement.',
-    timeline: '9–14 months',
+    
     bestFor: ['Drug development', 'Immuno-oncology', 'Therapeutic antibody testing'],
     quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=humanized-tier',
     learnMoreHref: '/humanized-mouse-models/',
@@ -93,7 +90,6 @@ const tiers = [
     sku: 'TG-CUSTOM',
     description:
       'BAC, pronuclear, or targeted transgenesis at safe harbor loci (Rosa26, H11). Reporter, Cre driver, or overexpression lines.',
-    timeline: '4–9 months',
     bestFor: ['Cre driver lines', 'Reporter lines', 'Overexpression studies'],
     quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=transgenic-tier',
     learnMoreHref: '/transgenic-mouse-service/',
@@ -103,7 +99,6 @@ const tiers = [
     sku: 'CATALOG',
     description:
       '14,774 ready-to-ship genetically engineered mouse models. Live colonies for many top-requested knockouts, knockins, Cre drivers, and humanized lines.',
-    timeline: 'Weeks',
     bestFor: ['Fast project starts', 'Established alleles', 'Lower upfront cost'],
     quoteHref: '/all-catalog-mouse-models/?utm_source=organic&utm_medium=pricing&utm_campaign=catalog-tier',
     learnMoreHref: '/all-catalog-mouse-models/',
@@ -112,19 +107,19 @@ const tiers = [
 
 const faqs = [
   {
-    question: 'How much does a custom mouse model cost?',
+    question: 'How much does a generated mouse model cost?',
     answer:
-      'Custom mouse model pricing depends on the model type and complexity. Conditional knockouts and knockins price higher than constitutive knockouts; humanized mice are the most complex tier. Every project includes a free scientific consultation, fixed-fee quote in 24 hours, and a 100% germline transmission guarantee. Add your work email above to receive current starting prices.',
+      'Mouse model generation pricing depends on the model type and complexity. Conditional knockouts and knockins price higher than constitutive knockouts; humanized mice are the most complex tier. Every project includes a free scientific consultation, fixed-fee quote in 24 hours, and a 100% germline transmission guarantee. Add your work email above to receive current starting prices.',
   },
   {
     question: 'How much do humanized mice cost?',
     answer:
-      'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint humanization, complete gene replacement), allele complexity, and timeline. We have built humanized mice since 1998 with 800+ peer-reviewed publications. Submit your work email above to receive the current humanized starting price and a free 24-hour quote.',
+      'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint humanization, complete gene replacement) and allele complexity. We have built humanized mice since 1998 with 800+ peer-reviewed publications. Submit your work email above to receive the current humanized starting price and a free 24-hour quote.',
   },
   {
     question: 'What is the price of a knockout mouse?',
     answer:
-      'A custom knockout mouse project includes design, CRISPR or ES cell targeting, screening, and germline-confirmed founders with a 100% germline transmission guarantee. Many knockouts are also available as ready-to-ship catalog models — search by gene to check. Add your email above to receive the current knockout starting price and a fixed-fee quote in 24 hours.',
+      'A generated knockout mouse project includes design, CRISPR or homologous recombination targeting, screening, and germline-confirmed founders with a 100% germline transmission guarantee. Many knockouts are also available as ready-to-ship catalog models — search by gene to check. Add your email above to receive the current knockout starting price and a fixed-fee quote in 24 hours.',
   },
   {
     question: 'Do you offer fixed-fee pricing?',
@@ -132,14 +127,14 @@ const faqs = [
       'Yes. After a free scientific consultation we provide a fixed-fee quote within 24 hours. The fee covers the full project scope through germline-confirmed founders. There are no surprise charges if a project requires additional rounds — we work until we deliver, with a 100% germline transmission guarantee.',
   },
   {
-    question: 'Are catalog mouse models cheaper than custom?',
+    question: 'Are catalog mouse models cheaper than generated?',
     answer:
-      'Catalog mouse models typically have lower upfront cost and ship in weeks rather than 9–14 months. We have 14,774 ready-to-ship models including knockouts, knockins, Cre drivers, transgenic lines, and humanized strains. If a model already exists in our catalog or can be derived from one, this is almost always faster and cheaper than commissioning a custom build.',
+      'Catalog mouse models typically have lower upfront cost and ship in weeks from live colonies. We have 14,774 ready-to-ship models including knockouts, knockins, Cre drivers, transgenic lines, and humanized strains. If a model already exists in our catalog or can be derived from one, this is almost always faster and cheaper than commissioning a generated build.',
   },
   {
     question: 'Why does ingenious targeting laboratory cost what it does?',
     answer:
-      'Our pricing reflects 26+ years of mouse model expertise, validated C57BL/6 ES cell lines, dedicated scientific project management, a 100% germline transmission guarantee, and the track record of 2,800+ custom projects supporting 800+ peer-reviewed publications including in Nature, Cell, and Science. We deliver the mice; you do not pay for failed rounds.',
+      'Our pricing reflects 26+ years of mouse model expertise, validated C57BL/6 targeting workflows, dedicated scientific project management, a 100% germline transmission guarantee, and the track record of 2,800+ models generated supporting 800+ peer-reviewed publications including in Nature, Cell, and Science. We deliver the mice; you do not pay for failed rounds.',
   },
 ];
 
@@ -151,7 +146,7 @@ export default function PricingPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Pricing', path: '/custom-mouse-model-pricing' },
         ]}
       />
@@ -177,7 +172,7 @@ export default function PricingPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'OfferCatalog',
-            name: 'Custom Mouse Model Pricing',
+            name: 'Mouse Model Generation Pricing',
             url: 'https://www.genetargeting.com/custom-mouse-model-pricing/',
             provider: {
               '@type': 'Organization',
@@ -233,14 +228,14 @@ export default function PricingPage() {
                 margin: '0 0 16px 0',
               }}
             >
-              Custom mouse model pricing.
+              Mouse model generation pricing.
               <br />
               <span style={{ color: '#00d4d4' }}>Add your email. Quote in 24 hours.</span>
             </h1>
             <div style={{ maxWidth: '520px', margin: '0 0 22px 0' }}>
               <PricingUnlockForm
-                interest="Custom Mouse Model Pricing"
-                source="custom-mouse-model-pricing-hero"
+                interest="Mouse Model Generation Pricing"
+                source="generated-mouse-model-pricing-hero"
                 ctaLabel="Get prices"
                 placeholder="Add your work email"
                 theme="dark"
@@ -276,7 +271,7 @@ export default function PricingPage() {
                   fontSize: '0.95rem',
                 }}
               >
-                Get a Custom Quote in 24h
+                Get a Quote in 24h
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
@@ -305,7 +300,7 @@ export default function PricingPage() {
         {/* Top dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
           <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-            <CatalogCustomDualCta slug="custom-mouse-model-pricing" utmMedium="page-hero" flush />
+            <CatalogCustomDualCta slug="generated-mouse-model-pricing" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -331,7 +326,7 @@ export default function PricingPage() {
                 fontSize: '0.95rem',
               }}
             >
-              Final pricing depends on allele complexity, validation needs, and timeline. Free 24h quote.
+              Final pricing depends on allele complexity and validation needs. Free 24h quote.
             </p>
 
             <div
@@ -401,28 +396,6 @@ export default function PricingPage() {
                   >
                     {tier.description}
                   </p>
-                  <div
-                    style={{
-                      color: '#666',
-                      fontSize: '0.78rem',
-                      fontWeight: 600,
-                      letterSpacing: '0.4px',
-                      textTransform: 'uppercase',
-                      marginBottom: '4px',
-                    }}
-                  >
-                    Typical timeline
-                  </div>
-                  <div
-                    style={{
-                      color: '#0a253c',
-                      fontWeight: 600,
-                      fontSize: '0.95rem',
-                      marginBottom: '14px',
-                    }}
-                  >
-                    {tier.timeline}
-                  </div>
                   <div
                     style={{
                       color: '#666',
@@ -556,7 +529,7 @@ export default function PricingPage() {
                 margin: '0 0 14px 0',
               }}
             >
-              Get your custom mouse model quote in 24 hours.
+              Get your mouse model generation quote in 24 hours.
             </h2>
             <p
               style={{
@@ -585,7 +558,7 @@ export default function PricingPage() {
                   fontSize: '0.95rem',
                 }}
               >
-                Request Custom Quote
+                Request a Quote
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
@@ -614,7 +587,7 @@ export default function PricingPage() {
         {/* Bottom dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
           <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-            <CatalogCustomDualCta slug="custom-mouse-model-pricing" utmMedium="page-closing" flush />
+            <CatalogCustomDualCta slug="generated-mouse-model-pricing" utmMedium="page-closing" flush />
           </div>
         </section>
       </main>

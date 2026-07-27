@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.943Z"
 
 **Url: /current-openings**
 
-**Meta Description: Career opportunities at Ingenious Targeting Laboratory. Join our team of scientists developing custom mouse models for research worldwide.**
+**Meta Description: Career opportunities at Ingenious Targeting Laboratory. Join our team of scientists developing mouse model generation for research worldwide.**
 
 **Primary Keyword: current openings**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.943Z"
 
 # Current Openings
 
-Ingenious Targeting Laboratory is always looking for talented scientists to join our team. Since 1998, we have built a team of experts dedicated to advancing research through custom mouse model generation. We offer opportunities for scientists at all career stages to contribute to cutting edge research while working with leading academic and industry partners.
+Ingenious Targeting Laboratory is always looking for talented scientists to join our team. Since 1998, we have built a team of experts dedicated to advancing research through mouse model generation. We offer opportunities for scientists at all career stages to contribute to cutting edge research while working with leading academic and industry partners.
 
 Our team members work on diverse projects across all therapeutic areas, from oncology and neuroscience to metabolic disease and immunology. We provide a collaborative environment where scientists can develop expertise in gene targeting, mouse genetics, and model development.
 
@@ -28,7 +28,7 @@ Our team members work on diverse projects across all therapeutic areas, from onc
 
 Join a team that has:
 
-- Completed over 2,800 custom projects
+- Completed over 2,800 models generated
 - Contributed to 800+ publications
 - Worked with leading research institutions
 - Advanced gene targeting technologies
@@ -82,7 +82,7 @@ Contact us to learn more about current openings and career opportunities at Inge
 - All elements labeled
 - Primary keyword "current openings" in H1 and first paragraph
 - Secondary keywords in H2/H3 headers
-- Quantified credibility (1998, 2,800+ custom projects)
+- Quantified credibility (1998, 2,800+ models generated)
 - Zone 1: Trust &amp; Positioning
 - Zone 2: Career information
 - Zone 3: Navigation and CTAs

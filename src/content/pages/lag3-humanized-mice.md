@@ -300,7 +300,7 @@ Changes in immune cell infiltration and phenotype.
 
 ### Pre Germline Characterization
 
-ES cell based targeting enables comprehensive verification:
+homologous recombination targeting enables comprehensive verification:
 
 **Sequence Confirmation**
 

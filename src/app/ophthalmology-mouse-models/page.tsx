@@ -15,16 +15,16 @@ import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } f
 const heroData = {
   badge: "Eye Disease Research",
   title: "Ophthalmology Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported ophthalmology research with custom mouse models enabling mechanistic studies of retinal degeneration, glaucoma, macular degeneration, and other blinding conditions affecting millions worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported ophthalmology research with mouse model generation enabling mechanistic studies of retinal degeneration, glaucoma, macular degeneration, and other blinding conditions affecting millions worldwide.",
   description: "Ophthalmology mouse models provide essential platforms for investigating the molecular pathways underlying vision loss, testing gene therapy approaches for inherited retinal diseases, and developing neuroprotective strategies for glaucoma and other optic neuropathies."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Value of Ocular Disease Models
@@ -168,7 +168,7 @@ const faqData = [
   },
   {
     question: "What is involved in generating an ophthalmology mouse model?",
-    answer: "Custom model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Conditional approaches for cell-type-specific studies follow similar workflows. Pre-germline characterization provides early validation of targeting before mouse generation. Contact us for current timeline estimates."
+    answer: "Model generation includes targeting construct design, allele design, founder generation, and germline transmission. Conditional approaches for cell-type-specific studies follow similar workflows. Pre-germline characterization provides early validation of targeting before mouse generation. Contact us to discuss your project requirements."
   }
 ];
 
@@ -813,7 +813,7 @@ export default function OphthalmologyMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom ophthalmology mouse models for eye disease research. Study retinal degeneration, glaucoma, and vision disorders.",
+            "description": "Generated ophthalmology mouse models for eye disease research. Study retinal degeneration, glaucoma, and vision disorders.",
             "serviceType": "Ophthalmology Mouse Model Generation"
           })
         }}

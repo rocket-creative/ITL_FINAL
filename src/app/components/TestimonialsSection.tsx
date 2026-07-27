@@ -1,11 +1,11 @@
+'use client';
+
 /**
  * What Researchers Say - Testimonials Section
  * Supports both light and dark background variants
  * Cards are always solid white with dark text for maximum legibility
  * - Removed GSAP, using CSS animations only
  */
-
-'use client';
 
 import Link from 'next/link';
 

@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Knockin Mouse Models | Point Mutations & Reporters',
-  description: 'Create knockin mice for point mutations, reporters, and humanized genes. 26+ years, 800+ publications in Nature/Cell/Science. ES cell and CRISPR expertise.',
+  description: 'Create knockin mice for point mutations, reporters, and humanized genes. 26+ years, 800+ publications in Nature/Cell/Science. gene targeting and CRISPR expertise.',
   path: '/knockin-mouse-models',
 });
 
@@ -15,7 +15,7 @@ export const metadata = generateMetadata({
 export const breadcrumbSchema = generateBreadcrumbs({
   items: [
     { name: 'Home', path: '/' },
-    { name: 'Custom Models', path: '/custom-mouse-models' },
+    { name: 'Model Generation', path: '/custom-mouse-models' },
     { name: 'Knockin Mouse Models', path: '/knockin-mouse-models' },
   ],
 });

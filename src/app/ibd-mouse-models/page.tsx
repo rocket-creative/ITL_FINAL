@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,20 +9,20 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Gastrointestinal Research",
   title: "IBD Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported inflammatory bowel disease research with custom mouse models enabling mechanistic studies of intestinal inflammation, mucosal immunity, and therapeutic interventions for Crohn disease and ulcerative colitis.",
+  intro: "Since 1998, ingenious targeting laboratory has supported inflammatory bowel disease research with mouse model generation enabling mechanistic studies of intestinal inflammation, mucosal immunity, and therapeutic interventions for Crohn disease and ulcerative colitis.",
   description: "IBD mouse models provide essential platforms for investigating the molecular pathways underlying chronic intestinal inflammation and developing therapies for millions of patients affected by these conditions."
 };
 
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 const geneticModels = [
@@ -78,6 +78,17 @@ export default function IBDMouseModelsPage() {
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       <main id="main-content">
+
+<section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h3 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related resources</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {relatedLinks.map((link, index) => (<div key={index} className="animate-in"><Link href={link.href} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600" style={{ color: '#2384da', fontSize: '.85rem' }}><IconChevronRight size={12} color="#2384da" /><span>{link.title}</span></Link></div>))}
+            </div>
+          </div>
+        </section>
+
+
         <section className="page-hero" ref={heroRef} style={{ background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)', padding: '80px 20px 60px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div className="hero-animate" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: '20px', marginBottom: '20px' }}><IconDNA size={16} color="white" /><span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span></div>
@@ -168,39 +179,17 @@ export default function IBDMouseModelsPage() {
         </section>
 
         {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="ibd-mouse-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+<section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently asked questions</h2>
             <div className="animate-in"><UXUIDCAnimatedFAQ faqs={faqData} /></div>
           </div>
         </section>
 
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Current on IBD Research"
-              description="Subscribe to Lab Signals for the latest inflammatory bowel disease model updates and research insights."
-            />
-          </div>
-        </section>
-
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h3 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related resources</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {relatedLinks.map((link, index) => (<div key={index} className="animate-in"><Link href={link.href} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600" style={{ color: '#2384da', fontSize: '.85rem' }}><IconChevronRight size={12} color="#2384da" /><span>{link.title}</span></Link></div>))}
-            </div>
-          </div>
-        </section>
+      <StandardPageCtaStack
+        slug="ibd-mouse-models"
+        showLabSignals={false}
+      />
       </main>
       <UXUIDCFooter />
       
@@ -212,7 +201,7 @@ export default function IBDMouseModelsPage() {
           { name: 'IBD Mouse Models', path: '/ibd-mouse-models' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "IBD Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Custom inflammatory bowel disease mouse models for gastrointestinal research since 1998.", "serviceType": "IBD Mouse Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "IBD Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Generated inflammatory bowel disease mouse models for gastrointestinal research since 1998.", "serviceType": "IBD Mouse Models" }) }} />
     </div>
   );
 }

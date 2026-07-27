@@ -26,6 +26,6 @@ To learn more about ingenious targeting laboratory’s services, please [contact
 
 About ingenious targeting laboratory
 
-Since 1998, ingenious targeting laboratory is a leading global provider in generating custom genetically modified mouse, rat, and rabbit models. Each of our models is tailored to the exact needs of our clients for study in the fields of immunology, neuroscience, cancer, and more. We use classic and cutting-edge technologies, such as CRISPR and ES cells, for advanced animal model production. When our clients choose to work with us, they can expect full confidentiality and to retain full intellectual property rights to their projects.
+Since 1998, ingenious targeting laboratory is a leading global provider in generating genetically modified mouse, rat, and rabbit models. Each of our models is tailored to the exact needs of our clients for study in the fields of immunology, neuroscience, cancer, and more. We use classic and cutting-edge technologies, such as CRISPR and ES cells, for advanced animal model production. When our clients choose to work with us, they can expect full confidentiality and to retain full intellectual property rights to their projects.
 
 ‍

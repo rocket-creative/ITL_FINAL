@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * Hero Section - displays MASTER TEXT exactly
  * @version 4.0.0 - Mobile-first layout with readable content panel
  * Source: homepage.md lines 8-13
  */
-
-'use client';
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';

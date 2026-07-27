@@ -14,8 +14,8 @@ import {
 import BlogIndexClient from './BlogIndexClient';
 
 const blogIndexMeta = applyCatalogFirstMeta(
-  'Mouse Model Insights | Catalog + Custom | ITL',
-  'Technical articles and guides on knockout, knockin, and humanized mice. Browse 14,774+ catalog strains or request a custom build.',
+  'Mouse Model Insights | Catalog + Generation | ITL',
+  'Technical articles and guides on knockout, knockin, and humanized mice. Browse 14,774+ catalog strains or request a generated build.',
   '/ingenious-blog',
 );
 

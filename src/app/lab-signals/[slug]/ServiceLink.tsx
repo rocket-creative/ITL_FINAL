@@ -32,7 +32,7 @@ export default function ServiceLink({ href }: ServiceLinkProps) {
           marginBottom: '18px',
           lineHeight: 1.6,
         }}>
-          Explore catalog strains ready to ship and full custom design from one partner.
+          Explore catalog strains ready to ship and full generated design from one partner.
         </p>
         <Link
           href={href}

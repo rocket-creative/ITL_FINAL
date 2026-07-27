@@ -15,7 +15,7 @@ import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from
 const heroData = {
   badge: "Rare Disease Research",
   title: "Rare Disease Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported rare disease researchers with custom mouse models for studying disease mechanisms and developing therapeutics. Our rare disease models have contributed to research on lysosomal storage disorders, metabolic diseases, neurodegenerative conditions, and hundreds of other genetic diseases, with results published in peer reviewed journals and supporting therapeutic development for underserved patient populations.",
+  intro: "Since 1998, ingenious targeting laboratory has supported rare disease researchers with mouse model generation for studying disease mechanisms and developing therapeutics. Our rare disease models have contributed to research on lysosomal storage disorders, metabolic diseases, neurodegenerative conditions, and hundreds of other genetic diseases, with results published in peer reviewed journals and supporting therapeutic development for underserved patient populations.",
   description: "With over 7,000 rare diseases affecting an estimated 300 million people worldwide, mouse models provide essential platforms for developing therapies for conditions that have historically lacked treatment options."
 };
 
@@ -24,7 +24,7 @@ const statsData = [
   { value: 7000, suffix: "+", label: "Known Rare Diseases" },
   { value: 300, suffix: "M", label: "Patients Worldwide" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Patient Mutation Knockins
@@ -660,7 +660,7 @@ export default function RareDiseaseMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom rare disease mouse models for orphan disease research. Patient mutation knockins, gene therapy testing, and therapeutic development support since 1998.",
+            "description": "Generated rare disease mouse models for orphan disease research. Patient mutation knockins, gene therapy testing, and therapeutic development support since 1998.",
             "serviceType": "Rare Disease Mouse Models"
           })
         }}

@@ -2,7 +2,7 @@
  * GTM dataLayer event helpers
  *
  * Single source of truth for the named events the GTM workspace listens for.
- * Each helper pushes a normalized payload to `window.dataLayer`. GTM custom
+ * Each helper pushes a normalized payload to `window.dataLayer`. GTM generated
  * event triggers match on `event` and read value/currency via DataLayer
  * Variables (`dlv.value`, `dlv.currency`).
  *

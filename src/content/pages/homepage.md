@@ -4,19 +4,19 @@ slug: "homepage"
 extracted: "2026-01-09T17:03:04.381Z"
 ---
 
-# Custom Mouse Models | Knockout, Knockin &amp; Humanized Mice | ingenious targeting laboratory
+# Mouse Model Generation | Knockout, Knockin &amp; Humanized Mice | ingenious targeting laboratory
 
 **Url: /**
 
-**Meta Description: Custom mouse models since 1998. 2,800+ custom projects, 800+ publications. Knockout, knockin, humanized and transgenic models for research.**
+**Meta Description: Mouse model generation since 1998. 2,800+ models generated, 800+ publications. Knockout, knockin, humanized and transgenic models for research.**
 
-**Primary Keyword: custom mouse model**
+**Primary Keyword: mouse model generation**
 
 **Word Count: 2200**
 
-# Custom Mouse Models Designed for Study Ready, Reproducible Research
+# Mouse Model Generation Designed for Study Ready, Reproducible Research
 
-## ingenious targeting laboratory creates custom genetically engineered mouse models (GEMMs) designed for stable inheritance, controlled C57BL/6 backgrounds, and reproducible experimental cohorts. For more than two decades, researchers have partnered with our U.S.–based scientific team to achieve sequence-informed allele design, rigorous QC oversight, and study ready, germline-transmitting mouse lines.
+## ingenious targeting laboratory creates genetically engineered mouse models (GEMMs) designed for stable inheritance, controlled C57BL/6 backgrounds, and reproducible experimental cohorts. For more than two decades, researchers have partnered with our U.S.–based scientific team to achieve sequence-informed allele design, rigorous QC oversight, and study ready, germline-transmitting mouse lines.
 
 ## ingenious targeting laboratory helps researchers determine the most appropriate approach for long-term allele stability, clear genotype interpretation, and successful model creation.
 
@@ -26,7 +26,7 @@ extracted: "2026-01-09T17:03:04.381Z"
 
 ## Core Research Services
 
-### Custom Mouse Models
+### Mouse Model Generation
 
 We create genetically engineered mouse models aligned with your genetic, regulatory, and phenotype-driven research questions—supporting precise allele design and background control.
 
@@ -46,7 +46,7 @@ Access our catalog of 14,774+ genome engineered mouse and rat models for study r
 
 ### Preclinical Services
 
-Non-GLP phenotype characterization, PK/PD, pharmacology, and exploratory in vivo support for your custom or catalog animal models.
+Non-GLP phenotype characterization, PK/PD, pharmacology, and exploratory in vivo support for your model generation or catalog animal models.
 
 (/preclinical-services)
 
@@ -58,13 +58,13 @@ For more than 30 years, ingenious targeting laboratory has supported biomedical 
 
 ### What We Provide
 
-• Custom mouse models including conventional knockouts, conditional knockouts, knock-ins (point mutation, cDNA, gene replacement), reporter alleles, Rosa26 and other targeted transgenics, and humanized models.
+• Mouse model generation including conventional knockouts, conditional knockouts, knock-ins (point mutation, cDNA, gene replacement), reporter alleles, Rosa26 and other targeted transgenics, and humanized models.
 
 • Multi-generation cohort development and colony planning for study readiness.
 
 • Animal model catalog access to 14,774+ lines for study ready biomedical research. 
 
-• Integrated non-GLP preclinical services for your custom or catalog model to support translational decisions
+• Integrated non-GLP preclinical services for your model generation or catalog model to support translational decisions
 
 ## Modern Model-Generation Landscape
 
@@ -78,7 +78,7 @@ We evaluate all available genome engineering technologies to determine the best 
 
 ### U.S.-Based QC Oversight
 
-Each stage of custom development—allele confirmation, germline transmission, colony establishment, and cohort expansion—is validated through U.S.-based QC. This comprehensive oversight ensures consistent quality and reliable results across all project phases.
+Each stage of model generation—allele confirmation, germline transmission, colony establishment, and cohort expansion—is validated through U.S.-based QC. This comprehensive oversight ensures consistent quality and reliable results across all project phases.
 
 ### Project Backgrounds
 
@@ -94,11 +94,11 @@ Our systematic approach ensures consistent results from project initiation throu
 
 **1. Project Consultation**
 
-Free scientific consultation to review experimental goals, recommend optimal targeting strategies, and provide timeline and pricing estimates.
+Free scientific consultation to review experimental goals, recommend optimal targeting strategies, and provide pricing estimates.
 
 **2. Allele Design**
 
-Custom allele design development based on your research requirements, including selection of appropriate targeting approach and cassette configuration.
+Study-specific allele design development based on your research requirements, including selection of appropriate targeting approach and cassette configuration.
 
 **3. Targeting Materials** 
 
@@ -112,13 +112,12 @@ Injection and breeding of F0s to achieve germline transmission.
 
 Study ready cohort expansion with structured breeding for statistical power.
 
-(/model-generation-timeline)
 
 ## Trusted by Researchers Worldwide
 
-Since 1998 · 2,800+ Custom Projects Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell
+Since 1998 · 2,800+ Models Generated Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell
 
-ingenious targeting laboratory has generated custom mouse models for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.
+ingenious targeting laboratory has mouse model generation for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.
 
 (/publications)
 
@@ -140,7 +139,7 @@ ingenious targeting laboratory has generated custom mouse models for researchers
 
 ## Start Your Project
 
-Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your project. Initial consultation is provided at no charge and includes allele design recommendations, timeline estimates, and project pricing.
+Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your project. Initial consultation is provided at no charge and includes allele design recommendations, and project pricing.
 
 (/request-quote)
 
@@ -148,22 +147,22 @@ Our scientific consultants are ready to discuss your research requirements and r
 
 ## Frequently Asked Questions
 
-**What types of custom mouse models does ingenious targeting laboratory generate?**
+**What types of mouse model generation does ingenious targeting laboratory generate?**
 
-ingenious targeting laboratory generates custom mouse models including conventional knockouts, conditional knockouts (floxed alleles), knockins (point mutations, cDNA, gene replacement, reporters), Rosa26 and other targeted transgenics, and humanized models. 
+ingenious targeting laboratory generates mouse model generation including conventional knockouts, conditional knockouts (floxed alleles), knockins (point mutations, cDNA, gene replacement, reporters), Rosa26 and other targeted transgenics, and humanized models. 
 
-**What strain backgrounds are available for custom models?**
+**What strain backgrounds are available for model generation?**
 
 ingenious targeting laboratory primarily works with C57BL/6 background. Other strain backgrounds (BALB/c, 129) are available upon request.
 
-**How do I get started with a custom mouse model project?**
+**How do I get started with a mouse model generation project?**
 
 Contact ingenious targeting laboratory through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs.
 
 ## Quality Confirmation
 
 - All elements labeled
-- Primary keyword "custom mouse model" in title and meta
+- Primary keyword "mouse model generation" in title and meta
 - Hero section matches Webflow design structure
 - Core Research Services (4 cards) as per Webflow
 - Overview section with Why Choose + What We Provide

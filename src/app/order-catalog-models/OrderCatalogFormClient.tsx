@@ -44,7 +44,7 @@ const quantityOptions = [
   'Medium cohort (10-25 mice)',
   'Large cohort (25+ mice)',
   'Cryopreserved (embryos/sperm)',
-  'Custom quantity',
+  'Generated quantity',
 ];
 
 const fallbackFields: FormField[] = [
@@ -86,7 +86,7 @@ const fallbackFields: FormField[] = [
 const faqData = [
   {
     question: 'How do I find a specific model in your catalog?',
-    answer: 'Use the search tool on this page or visit our Catalog Mouse Models page to browse by category. You can search by gene symbol, model name, or research application. If you cannot find what you need, contact us and we can help identify the right model or discuss custom options.',
+    answer: 'Use the search tool on this page or visit our Catalog Mouse Models page to browse by category. You can search by gene symbol, model name, or research application. If you cannot find what you need, contact us and we can help identify the right model or discuss generated options.',
   },
   {
     question: 'What is included with a catalog model order?',
@@ -112,7 +112,7 @@ const faqData = [
 
 const alternativeContactData = [
   {
-    title: 'Custom Model Quote',
+    title: 'Model Generation Quote',
     content: 'Need a model not in our catalog?',
     href: '/request-quote',
     label: 'Request Quote',
@@ -286,7 +286,7 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
                   <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-2 gap-4">
                     {[
                       { num: '14,774+', label: 'Models' },
-                      { num: '25+', label: 'Years' },
+                      { num: '26+', label: 'Years' },
                       { num: 'Global', label: 'Shipping' },
                       { num: '100%', label: 'QC Tested' },
                     ].map((stat, i) => (
@@ -302,7 +302,7 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
                   </div>
                 </div>
 
-                {/* Need Custom? */}
+                {/* Need Generated? */}
                 <div
                   className="hero-animate"
                   style={{
@@ -314,10 +314,10 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
                   }}
                 >
                   <p style={{ color: 'white', fontSize: '.9rem', marginBottom: '8px', fontWeight: 600 }}>
-                    Need a Custom Model?
+                    Need a Model Generation?
                   </p>
                   <p style={{ color: 'rgba(255,255,255,0.95)', fontSize: '.85rem', marginBottom: '12px', lineHeight: '1.5' }}>
-                    Request a custom project quote for knockout, knockin, humanized, or transgenic models.
+                    Request a model generation project quote for knockout, knockin, humanized, or transgenic models.
                   </p>
                   <Link
                     href="/request-quote"
@@ -596,7 +596,7 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
                 marginBottom: '20px',
               }}
             >
-              Our team can help you find the right model or create a custom solution tailored to your research.
+              Our team can help you find the right model or build a model generation solution for your research.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
               <Link
@@ -633,7 +633,7 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
                   border: '2px solid rgba(255,255,255,0.9)',
                 }}
               >
-                Request Custom Quote
+                Request a Quote
               </Link>
             </div>
           </div>

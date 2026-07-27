@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,7 +9,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema, UXUIDCServicePricingAnchor } from '@/components/UXUIDC';
+import { BreadcrumbSchema, UXUIDCServicePricingAnchor, StandardPageCtaStack } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Temporal Gene Control",
@@ -19,7 +19,7 @@ const heroData = {
 };
 
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Germline Guarantee" }
@@ -107,7 +107,7 @@ export default function TamoxifenInducibleCrePage() {
             <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: 400, lineHeight: '1.7rem', marginBottom: '15px', maxWidth: '800px' }}>{heroData.intro}</p>
             <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '25px', maxWidth: '800px' }}>{heroData.description}</p>
             <div className="hero-animate flex flex-wrap gap-4">
-              <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 20px', fontSize: '.85rem', fontWeight: 500 }}><span>Request Custom Quote</span><span>→</span></Link>
+              <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 20px', fontSize: '.85rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
               <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 20px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
             </div>
           </div>
@@ -137,9 +137,9 @@ export default function TamoxifenInducibleCrePage() {
         {/* Pricing anchor — converts the 11K monthly impression CreERT2 query cluster */}
         <UXUIDCServicePricingAnchor
           serviceLabel="Tamoxifen Inducible Cre"
-          headline="Custom CreERT2 mice — fixed-fee quote in 24 hours."
+          headline="Generated CreERT2 mice — fixed-fee quote in 24 hours."
           unlockInterest="Tamoxifen Inducible Cre"
-          subline="Custom CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,800+ custom projects shipped. Free scientific consultation."
+          subline="Generated CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,800+ models generated. Free scientific consultation."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-pricing-anchor"
           secondaryHref="/all-catalog-mouse-models/?q=cre&utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-catalog"
           secondaryLabel="Browse Cre Driver Catalog"
@@ -147,7 +147,7 @@ export default function TamoxifenInducibleCrePage() {
             {
               question: 'How much does a CreERT2 mouse model cost?',
               answer:
-                'Pricing scales with whether you need a custom CreERT2 driver line, a floxed allele paired with an existing Cre line, or a fully integrated inducible conditional knockout. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours. We deliver germline-confirmed founders.',
+                'Pricing scales with whether you need a generated CreERT2 driver line, a floxed allele paired with an existing Cre line, or a fully integrated inducible conditional knockout. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours. We deliver germline-confirmed founders.',
             },
             {
               question: 'What is the difference between Cre, Cre-ERT2, and CreERT2?',
@@ -155,7 +155,7 @@ export default function TamoxifenInducibleCrePage() {
                 'Cre is a constitutively active recombinase that excises loxP-flanked DNA. CreERT2 (also written Cre-ERT2 or Cre/ERT2) fuses Cre to a mutant estrogen receptor that sequesters the protein in the cytoplasm until tamoxifen is administered. Tamoxifen displaces HSP90 binding and lets CreERT2 enter the nucleus to perform recombination — giving you precise temporal control over gene deletion in adult animals.',
             },
             {
-              question: 'How long does a custom CreERT2 mouse project take?',
+              question: 'How long does a generated CreERT2 mouse project take?',
               answer:
                 'CreERT2 project timelines depend on allele complexity and whether you need a tissue-specific driver, a floxed allele, or both. Our scientific consultants scope an exact timeline during a free consultation. Many tissue-specific CreERT2 lines are also available from our catalog and ship from live colonies in weeks.',
             },
@@ -251,12 +251,157 @@ export default function TamoxifenInducibleCrePage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
+<section className="page-hero" ref={heroRef} style={{ background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)', padding: '80px 20px 60px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <div className="hero-animate" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: '20px', marginBottom: '20px' }}>
+              <IconDNA size={16} color="white" />
+              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span>
+            </div>
+            <h1 className="hero-animate" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '20px' }}>{heroData.title}</h1>
+            <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: 400, lineHeight: '1.7rem', marginBottom: '15px', maxWidth: '800px' }}>{heroData.intro}</p>
+            <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '25px', maxWidth: '800px' }}>{heroData.description}</p>
+            <div className="hero-animate flex flex-wrap gap-4">
+              <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 20px', fontSize: '.85rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
+              <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 20px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
+            </div>
+          </div>
+        </section>
 
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="tamoxifen-inducible-cre" utmMedium="page-closing" flush />
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="tamoxifen-inducible-cre" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
+
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {statsData.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}><UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} /></div>
+                  <div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing anchor — converts the 11K monthly impression CreERT2 query cluster */}
+        <UXUIDCServicePricingAnchor
+          serviceLabel="Tamoxifen Inducible Cre"
+          headline="Generated CreERT2 mice — fixed-fee quote in 24 hours."
+          unlockInterest="Tamoxifen Inducible Cre"
+          subline="Generated CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,800+ models generated. Free scientific consultation."
+          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-pricing-anchor"
+          secondaryHref="/all-catalog-mouse-models/?q=cre&utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-catalog"
+          secondaryLabel="Browse Cre Driver Catalog"
+          faqs={[
+            {
+              question: 'How much does a CreERT2 mouse model cost?',
+              answer:
+                'Pricing scales with whether you need a generated CreERT2 driver line, a floxed allele paired with an existing Cre line, or a fully integrated inducible conditional knockout. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours. We deliver germline-confirmed founders.',
+            },
+            {
+              question: 'What is the difference between Cre, Cre-ERT2, and CreERT2?',
+              answer:
+                'Cre is a constitutively active recombinase that excises loxP-flanked DNA. CreERT2 (also written Cre-ERT2 or Cre/ERT2) fuses Cre to a mutant estrogen receptor that sequesters the protein in the cytoplasm until tamoxifen is administered. Tamoxifen displaces HSP90 binding and lets CreERT2 enter the nucleus to perform recombination — giving you precise temporal control over gene deletion in adult animals.',
+            },
+            {
+              question: 'How long does a generated CreERT2 mouse project take?',
+              answer:
+                'CreERT2 project timelines depend on allele complexity and whether you need a tissue-specific driver, a floxed allele, or both. Our scientific consultants scope an exact timeline during a free consultation. Many tissue-specific CreERT2 lines are also available from our catalog and ship from live colonies in weeks.',
+            },
+            {
+              question: 'Do you have ready-to-ship CreERT2 driver lines?',
+              answer:
+                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models including Rosa26-CreERT2 ubiquitous driver and tissue-specific CreERT2 lines. Search the catalog by tissue or gene to see live-colony availability.',
+            },
+          ]}
+        />
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>How the CreERT2 System Works</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {howItWorks.map((item, index) => (
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '10px' }}>
+                    <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: '#008080', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <span style={{ color: 'white', fontSize: '.85rem', fontWeight: 600 }}>{index + 1}</span>
+                    </div>
+                    <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600 }}>{item.step}</h3>
+                  </div>
+                  <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Advantages of Temporal Control</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {advantages.map((item, index) => (
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px' }}>
+                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.title}</h3>
+                  <p style={{ color: '#555', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Tamoxifen Administration Routes</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {dosingRoutes.map((item, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '25px', borderRadius: '8px' }}>
+                  <h3 style={{ color: 'white', fontSize: '1rem', fontWeight: 600, marginBottom: '10px' }}>{item.route}</h3>
+                  <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', lineHeight: '1.5rem' }}>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Tissue Specific Inducible Cre Lines</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {creERT2Lines.map((category, index) => (
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>{category.category}</h3>
+                  <ul style={{ listStyle: 'none', padding: 0 }}>
+                    {category.lines.map((line, idx) => (
+                      <li key={idx} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', paddingBottom: '8px', borderBottom: idx < category.lines.length - 1 ? '1px solid #ddd' : 'none' }}>
+                        <span style={{ color: '#008080', fontSize: '.85rem', fontWeight: 500 }}>{line.name}</span>
+                        <span style={{ color: '#555', fontSize: '.85rem' }}>{line.tissue}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>What Researchers Say</h2>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="animate-in" style={{ backgroundColor: 'white', padding: '30px', borderRadius: '8px' }}>
+                <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '15px' }}>
+                  <IconQuote size={20} color="#008080" />
+                </div>
+                <blockquote style={{ color: '#333', fontSize: '.9rem', lineHeight: '1.6rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote>
+                <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.85rem', marginBottom: '2px' }}>— {testimonial.author}</p>
+                <p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -267,38 +412,11 @@ export default function TamoxifenInducibleCrePage() {
           </div>
         </section>
 
-        {/* Lab Signals Signup */}
-        <LabSignalsSignup 
-          title="Monitor Your Inducible Cre Project"
-          description="Get real-time updates on your CreERT2 model development, floxed allele validation, and tamoxifen induction protocol optimization."
-        />
-
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="animate-in">
-                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related Technologies</h3>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  {relatedTechnologies.map((link, index) => (
-                    <li key={index} style={{ marginBottom: '10px' }}>
-                      <Link href={link.href} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600" style={{ color: '#2384da', fontSize: '.85rem' }}><IconChevronRight size={12} color="#2384da" /><span>{link.title}</span></Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="animate-in">
-                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related Model Types</h3>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  {relatedModelTypes.map((link, index) => (
-                    <li key={index} style={{ marginBottom: '10px' }}>
-                      <Link href={link.href} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600" style={{ color: '#2384da', fontSize: '.85rem' }}><IconChevronRight size={12} color="#2384da" /><span>{link.title}</span></Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+      <StandardPageCtaStack
+        slug="tamoxifen-inducible-cre"
+        labSignalsTitle="Monitor Your Inducible Cre Project"
+        labSignalsDescription="Get real-time updates on your CreERT2 model development, floxed allele validation, and tamoxifen induction protocol optimization."
+      />
       </main>
       <UXUIDCFooter />
       
@@ -306,7 +424,7 @@ export default function TamoxifenInducibleCrePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Tamoxifen Inducible Cre', path: '/tamoxifen-inducible-cre' },
         ]}
       />

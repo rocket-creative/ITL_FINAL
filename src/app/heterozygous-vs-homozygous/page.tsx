@@ -11,19 +11,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buildStandalonePageMetadata } from '@/lib/seo';
 import { buildServiceOffer } from '@/lib/seo/productSchema';
-import {
-  UXUIDCNavigation,
-  UXUIDCFooter,
-  BreadcrumbSchema,
-  BreedingSchemeArchitectCTA,
-  CatalogCustomDualCta,
-} from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta, StandardPageCtaStack } from '@/components/UXUIDC';
 
 export const metadata: Metadata = buildStandalonePageMetadata({
   path: '/heterozygous-vs-homozygous',
-  title: 'Heterozygous vs Homozygous in Mice | Catalog + Custom | ITL',
+  title: 'Heterozygous vs Homozygous in Mice | Catalog + Generation | ITL',
   description:
-    'Heterozygous vs homozygous explained for mouse research. Browse catalog strains or request a custom line with a breeding scheme designed for your study. Quote in 24 hours.',
+    'Heterozygous vs homozygous explained for mouse research. Browse catalog strains or request a generated line with a breeding scheme designed for your study. Quote in 24 hours.',
 });
 
 const faqs = [
@@ -45,12 +39,12 @@ const faqs = [
   {
     question: 'Can ingenious targeting laboratory build my homozygous mouse?',
     answer:
-      'Yes. Every custom mouse model project from ingenious targeting laboratory delivers germline-confirmed founders. We can also expand colonies to homozygosity, perform speed-expansion breeding, and ship homozygous animals on the timeline you need. Quote in 24 hours. Quote in 24 hours.',
+      'Yes. Every mouse model generation project from ingenious targeting laboratory delivers germline-confirmed founders. We can also expand colonies to homozygosity, perform speed-expansion breeding, and ship homozygous animals on the timeline you need. Quote in 24 hours. Quote in 24 hours.',
   },
   {
     question: 'How long does it take to get homozygous mice?',
     answer:
-      'After germline transmission of founders (typical timeline 9–14 months for a custom build), reaching homozygosity requires one additional generation of Het × Het crosses — roughly 8–10 weeks for sexual maturity plus another 3 weeks of gestation. Total time from project start to homozygous experimental cohort is typically 12–18 months. Catalog models with established homozygous colonies ship in weeks.',
+      'After germline transmission of founders (typical timeline 9–14 months for a generated build), reaching homozygosity requires one additional generation of Het × Het crosses — roughly 8–10 weeks for sexual maturity plus another 3 weeks of gestation. Total time from project start to homozygous experimental cohort is typically 12–18 months. Catalog models with established homozygous colonies ship in weeks.',
   },
 ];
 
@@ -88,7 +82,7 @@ export default function HetVsHomPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: 'Custom Mouse Model Generation',
+            name: 'Mouse Model Generation',
             provider: {
               '@type': 'Organization',
               '@id': 'https://www.genetargeting.com/#organization',
@@ -182,7 +176,7 @@ export default function HetVsHomPage() {
                   border: '2px solid rgba(255,255,255,0.55)',
                 }}
               >
-                Get a Custom Mouse Quote
+                Get a Generated Mouse Quote
                 <span aria-hidden="true">→</span>
               </Link>
             </div>
@@ -411,89 +405,10 @@ export default function HetVsHomPage() {
             </div>
           </div>
         </section>
-
-        <BreedingSchemeArchitectCTA />
-
-        <section
-          style={{
-            backgroundColor: '#0a253c',
-            padding: '50px 20px',
-            textAlign: 'center',
-          }}
-        >
-          <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-            <h2
-              style={{
-                color: 'white',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '1.7rem',
-                fontWeight: 700,
-                margin: '0 0 14px 0',
-              }}
-            >
-              Skip the breeding plan — we build the mice for you.
-            </h2>
-            <p
-              style={{
-                color: 'rgba(255,255,255,0.85)',
-                fontSize: '1rem',
-                lineHeight: 1.6,
-                margin: '0 0 22px 0',
-              }}
-            >
-              Custom knockout, knockin, and humanized mice with quote in 24 hours. We
-              deliver germline-confirmed founders and can ship homozygous
-              animals on your timeline. Or pick from 14,774 ready catalog
-              models.
-            </p>
-            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link
-                href="/request-quote/?utm_source=organic&utm_medium=resource&utm_campaign=het-vs-hom-footer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  backgroundColor: '#ffffff',
-                  color: '#0a253c',
-                  padding: '13px 22px',
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                  fontWeight: 700,
-                  fontSize: '0.95rem',
-                }}
-              >
-                Get a Custom Mouse Quote
-                <span aria-hidden="true">→</span>
-              </Link>
-              <Link
-                href="/all-catalog-mouse-models/?utm_source=organic&utm_medium=resource&utm_campaign=het-vs-hom-footer"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  backgroundColor: 'transparent',
-                  color: '#ffffff',
-                  padding: '12px 20px',
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                  fontWeight: 600,
-                  fontSize: '0.95rem',
-                  border: '2px solid rgba(255,255,255,0.4)',
-                }}
-              >
-                Browse 14,774 Catalog Models
-                <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Bottom dual-path CTA */}
-        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
-          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-            <CatalogCustomDualCta slug="heterozygous-vs-homozygous" utmMedium="page-closing" flush />
-          </div>
-        </section>
+      <StandardPageCtaStack
+        slug="heterozygous-vs-homozygous"
+        showLabSignals={false}
+      />
       </main>
 
       <UXUIDCFooter />

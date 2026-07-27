@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * AdRoll Retargeting Pixel Integration
  * @version 1.0.0
@@ -8,8 +10,6 @@
  * - Conversion tracking
  * - Audience segmentation
  */
-
-'use client';
 
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
@@ -182,7 +182,7 @@ export function identifyAdRollUser(email: string) {
 }
 
 /**
- * Track custom segment
+ * Track generated segment
  */
 export function trackAdRollSegment(segmentName: string) {
   if (typeof window !== 'undefined') {

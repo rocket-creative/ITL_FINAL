@@ -225,7 +225,7 @@ export default function ContactPage() {
                   marginBottom: '20px',
                   flex: 1,
                 }}>
-                  Get detailed pricing and timeline for your custom mouse model project. Submit your project details and receive a quote within 1 business day.
+                  Get detailed pricing and timeline for your mouse model generation project. Submit your project details and receive a quote within 1 business day.
                 </p>
                 <div 
                   className="flex items-center gap-2 transition-all duration-300 group-hover:gap-3"
@@ -651,7 +651,7 @@ export default function ContactPage() {
             '@context': 'https://schema.org',
             '@type': 'ContactPage',
             name: 'Contact ingenious targeting laboratory',
-            description: 'Contact ingenious targeting laboratory for custom mouse model projects.',
+            description: 'Contact ingenious targeting laboratory for mouse model generation projects.',
             mainEntity: {
               '@type': 'Organization',
               name: 'ingenious targeting laboratory',

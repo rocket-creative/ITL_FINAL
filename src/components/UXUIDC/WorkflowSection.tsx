@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * |UXUIDC| Workflow Section - Matches Webflow Design
  * @version 4.0.0 - Removed GSAP, using CSS animations only
  * Interactive workflow steps with animations
  */
-
-'use client';
 
 interface WorkflowStep {
   number: number;

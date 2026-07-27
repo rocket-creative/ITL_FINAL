@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.282Z"
 
 **Url: /pd1-humanized-mice**
 
-**Meta Description: Custom PD1 humanized mouse models for anti PD1 antibody testing. Human PDCD1 extracellular domain knockin for immuno oncology research. Since 1998.**
+**Meta Description: Generated PD1 humanized mouse models for anti PD1 antibody testing. Human PDCD1 extracellular domain knockin for immuno oncology research. Since 1998.**
 
 **Primary Keyword: PD1 humanized mouse**
 
@@ -18,11 +18,11 @@ extracted: "2026-01-09T17:03:05.282Z"
 
 # PD1 Humanized Mouse
 
-Since 1998, Ingenious Targeting Laboratory has supported immuno oncology researchers with custom humanized mouse models for checkpoint immunotherapy development. Our PD1 humanized mice enable direct testing of anti human PD1 therapeutic antibodies in immunocompetent mouse systems, supporting preclinical evaluation of clinical candidates.
+Since 1998, Ingenious Targeting Laboratory has supported immuno oncology researchers with model generation humanized mouse models for checkpoint immunotherapy development. Our PD1 humanized mice enable direct testing of anti human PD1 therapeutic antibodies in immunocompetent mouse systems, supporting preclinical evaluation of clinical candidates.
 
 PD1 (programmed cell death protein 1, encoded by PDCD1) is a key immune checkpoint receptor expressed on activated T cells. Therapeutic antibodies targeting PD1 have transformed cancer treatment, with pembrolizumab, nivolumab, and other anti PD1 agents approved across multiple tumor types. Because these antibodies are designed specifically for human PD1 and show limited cross reactivity with mouse PD1, humanized models are essential for preclinical efficacy testing.
 
-Ingenious Targeting Laboratory generates custom PD1 humanized mice tailored to your specific research requirements, from extracellular domain humanization for antibody testing to complete gene replacement for comprehensive human PD1 biology studies.
+Ingenious Targeting Laboratory generates PD1 humanized mice tailored to your specific research requirements, from extracellular domain humanization for antibody testing to complete gene replacement for comprehensive human PD1 biology studies.
 
 # Why Humanize PD1
 
@@ -192,12 +192,12 @@ For complex combination studies, multiple checkpoint humanizations can be combin
 
 ## Pre Germline Characterization
 
-ES cell based targeting enables comprehensive characterization of PD1 humanized alleles before mouse generation:
+homologous recombination targeting enables comprehensive characterization of PD1 humanized alleles before mouse generation:
 
 - Sequence verification confirms exact human sequence integration
 - Junction analysis verifies mouse to human transitions
-- Expression testing confirms human PD1 protein in ES cells
-- Antibody binding can be tested in ES cells where applicable
+- Expression testing confirms human PD1 protein in targeted cells
+- Antibody binding can be tested in targeted cells where applicable
 
 Pre germline characterization ensures that humanized mice express functional human PD1 that engages therapeutic antibodies as intended.
 
@@ -265,12 +265,11 @@ Clausen BE et al. 1999. Conditional gene targeting in macrophages and granulocyt
 
 - (/es-cell-gene-targeting)
 - (/c57bl6-mouse-background)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 # Start Your PD1 Humanization Project
 
-Our scientific consultants are ready to discuss your PD1 humanization requirements and recommend the optimal strategy for your immuno oncology program. Initial consultation is provided at no charge and includes humanization approach recommendations, strain background guidance, and timeline estimates.
+Our scientific consultants are ready to discuss your PD1 humanization requirements and recommend the optimal strategy for your immuno oncology program. Initial consultation is provided at no charge and includes humanization approach recommendations, strain background guidance.
 
 (/request-quote)
 
@@ -309,6 +308,6 @@ Yes. PD1 humanized mice on C57BL/6 background are compatible with syngeneic tumo
 - Tumor model compatibility table
 - Dual checkpoint combination table
 - Project timeline table
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - CTA to /request-quote
 - Word count ~2,000 (appropriate for specific model page)

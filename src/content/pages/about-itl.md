@@ -4,21 +4,21 @@ slug: "about-itl"
 extracted: "2026-01-09T17:03:02.893Z"
 ---
 
-# About Ingenious Targeting Laboratory | Custom Mouse Model Experts Since 1998
+# About Ingenious Targeting Laboratory | Mouse Model Generation Experts Since 1998
 
 **Url: /about-ingenious**
 
-**Meta Description: Ingenious Targeting Laboratory has generated 2,800+ custom mouse models since 1998, contributing to 800+ publications. Learn about our mission and expertise.**
+**Meta Description: Ingenious Targeting Laboratory has generated 2,800+ mouse model generation since 1998, contributing to 800+ publications. Learn about our mission and expertise.**
 
 **Primary Keyword: about Ingenious Targeting Laboratory**
 
-**Secondary Keywords: custom mouse models, gene targeting services, ES cell targeting, mouse model company**
+**Secondary Keywords: mouse model generation, gene targeting services, gene targeting, mouse model company**
 
 **Word Count: 1400**
 
 # About Ingenious Targeting Laboratory
 
-Since 1998, Ingenious Targeting Laboratory has been generating custom mouse models for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,800 custom gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.
+Since 1998, Ingenious Targeting Laboratory has been generating mouse model generation for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,800 generated gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.
 
 ## Our Mission
 
@@ -26,7 +26,7 @@ Ingenious Targeting Laboratory exists to accelerate biomedical research by provi
 
 ## Our History
 
-Ingenious Targeting Laboratory was founded in 1998 to address the growing demand for custom knockout and knockin mouse models. What began as a small gene targeting service has grown into a comprehensive mouse model provider serving academic institutions, pharmaceutical companies, and biotechnology organizations worldwide.
+Ingenious Targeting Laboratory was founded in 1998 to address the growing demand for generated knockout and knockin mouse models. What began as a small gene targeting service has grown into a comprehensive mouse model provider serving academic institutions, pharmaceutical companies, and biotechnology organizations worldwide.
 
 ### Key Milestones
 
@@ -42,7 +42,7 @@ Ingenious Targeting Laboratory was founded in 1998 to address the growing demand
 
 **2018**: Celebrated 20 years and 2,000 projects
 
-**2026**: 2,800 custom projects completed with 800+ publications
+**2026**: 2,800 models generated with 800+ publications
 
 Throughout this history, Ingenious Targeting Laboratory has maintained commitment to rigorous scientific standards, transparent communication, and personalized project support.
 
@@ -57,10 +57,10 @@ Every project begins with scientific consultation. Our team reviews your researc
 Every Ingenious Targeting Laboratory project includes comprehensive documentation:
 
 - Targeting vector maps and sequences
-- ES cell clone characterization data
+- targeted clone characterization data
 - Chimera and germline transmission records
 - Genotyping protocols and primers
-- Archival ES cell stocks
+- Archival targeted clone stocks
 
 ### Ongoing Support
 
@@ -84,15 +84,15 @@ This breadth of experience enables informed project design and anticipation of p
 
 Ingenious Targeting Laboratory operates AAALAC accredited animal facilities meeting the highest standards for animal care and welfare. Our infrastructure includes:
 
-**Molecular Biology Laboratories** for targeting vector construction, ES cell culture, and molecular characterization.
+**Molecular Biology Laboratories** for targeting vector construction, cell culture, and molecular characterization.
 
-**ES Cell Facilities** with optimized conditions for C57BL/6 and 129 strain ES cell maintenance and targeting.
+**Cell Culture Facilities** with optimized conditions for C57BL/6 and 129 strain cell maintenance and targeting.
 
 **Microinjection Suites** equipped for blastocyst injection and embryo transfer.
 
 **Breeding Facilities** supporting colony maintenance, expansion, and cohort development.
 
-**Cryopreservation Infrastructure** for sperm, embryo, and ES cell archival.
+**Cryopreservation Infrastructure** for sperm, embryo, and targeted clone archival.
 
 ## What Researchers Say
 
@@ -131,13 +131,13 @@ Holbrook, New York
 
 **What services does Ingenious Targeting Laboratory provide?**
 
-ingenious targeting laboratory provides custom genetically engineered mouse and rat model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services. 
+ingenious targeting laboratory provides genetically engineered mouse and rat model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services. 
 
 **How long has ingenious targeting laboratory been in business?**
 
-ingenious targeting laboratory has been generating custom mouse models since 1998, with over 25 years of experience and 2,800+ successful custom projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact.
+ingenious targeting laboratory has been generating mouse model generation since 1998, with over 25 years of experience and 2,800+ successful models generated. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact.
 
-**How do I get started with a custom mouse model project?**
+**How do I get started with a mouse model generation project?**
 
 Contact ingenious targeting laboratory through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs.
 

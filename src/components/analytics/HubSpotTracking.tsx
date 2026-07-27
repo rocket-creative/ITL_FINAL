@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * HubSpot Tracking Code
  * @version 1.1.0
@@ -12,8 +14,6 @@
  * - Uses lazyOnload strategy to prevent hydration conflicts
  * - Chat widget loads during browser idle time after hydration
  */
-
-'use client';
 
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -107,7 +107,7 @@ export function identifyHubSpotUser(email: string, properties?: {
 }
 
 /**
- * Track custom event
+ * Track generated event
  */
 export function trackHubSpotEvent(eventName: string, properties?: Record<string, any>) {
   hsq('trackCustomBehavioralEvent', {

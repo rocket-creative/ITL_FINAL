@@ -4,10 +4,10 @@ new_build_url: "/knockin-mouse-models/"
 url_handling: "reuse"
 link_from: ["/custom-mouse-models/"]
 extracted_date: "2026-01-11"
-title: "Custom Knockin Mouse Models"
+title: "Generated Knockin Mouse Models"
 ---
 
-# Custom Knockins for your Research
+# Generated Knockins for your Research
 
 ## What do I need to consider when creating a knockin mouse?
 
@@ -17,19 +17,19 @@ Whether you require a single point mutation, reporter or other cassette insertio
 
 ## What Researchers Say
 
-> "I have been always very satisfied by the work done by ingenious targeting laboratory for my custom mouse projects."
+> "I have been always very satisfied by the work done by ingenious targeting laboratory for my generated mouse projects."
 >
 > — **Cem Gabay, MD**, University Hospitals of Geneva
 
-## Custom Knockins Overview
+## Generated Knockins Overview
 
 A knockin mouse (KI mouse) has an element inserted into a specific locus in the genome. This can be accomplished with several strategies.
 
-**No design is out of reach.** From single point mutations to the most intricate designs ingenious has delivered custom knockin mice again and again for over 20 years. With a complete toolkit of different approaches and an experienced scientific staff, there is no knockin design that is out of reach.
+**No design is out of reach.** From single point mutations to the most intricate designs ingenious has delivered generated knockin mice again and again for over 20 years. With a complete toolkit of different approaches and an experienced scientific staff, there is no knockin design that is out of reach.
 
-Contact us today to discuss the custom knockin mouse model your lab will use for years to come.
+Contact us today to discuss the generated knockin mouse model your lab will use for years to come.
 
-## Custom Knockins For Your Research
+## Generated Knockins For Your Research
 
 ### Conventional Strategy
 
@@ -45,7 +45,7 @@ Target your gene of interest with a cassette insertion to express an alternate s
 Bypass embryonic lethality with a conditional point mutation model. Precisely control expression of your mutant gene sequence.
 
 #### Cassette Insertions
-Enhance your model by taking advantage of the Cre/lox system. Express cDNAs, reporter genes, tags, or a unique custom expression cassette in a conditional manner.
+Enhance your model by taking advantage of the Cre/lox system. Express cDNAs, reporter genes, tags, or a unique generated expression cassette in a conditional manner.
 
 ### Novel Knockins
 

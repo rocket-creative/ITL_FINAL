@@ -1,11 +1,11 @@
+'use client';
+
 /**
  * |UXUIDC| Footer - Dark grey background with white text
  * @version 2.4.0
  * Fixed padding/margin, all text white
  * Fixed hydration mismatch using useSyncExternalStore for currentYear
  */
-
-'use client';
 
 import { useCallback, useSyncExternalStore } from 'react';
 import Link from 'next/link';
@@ -34,7 +34,7 @@ function useCurrentYear() {
 
 const footerSections = [
   {
-    title: 'Custom Models',
+    title: 'Model Generation',
     links: [
       { label: 'Knockout Models', href: '/knockout-mouse-models' },
       { label: 'Conditional Knockout', href: '/conditional-knockout-mouse-models' },

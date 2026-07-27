@@ -162,7 +162,7 @@ export default function UXUIDCServicePricingAnchor({
               </Link>
               <Link
                 href={quoteHref}
-                data-cta="service-pricing-custom-quote"
+                data-cta="service-pricing-generated-quote"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -177,7 +177,7 @@ export default function UXUIDCServicePricingAnchor({
                   letterSpacing: '0.3px',
                 }}
               >
-                Request Custom Quote
+                Request a Quote
                 <span aria-hidden="true">→</span>
               </Link>
             </div>

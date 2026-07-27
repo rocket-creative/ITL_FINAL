@@ -1,7 +1,7 @@
 ---
 title: "Types of Point Mutations: Substitutions, Deletions & Insertions"
 slug: "types-of-point-mutations"
-description: "Substitutions, deletions, insertions: how each type affects protein function. Browse catalog point mutation mice or request a custom knockin for your project."
+description: "Substitutions, deletions, insertions: how each type affects protein function. Browse catalog point mutation mice or request a generated knockin for your project."
 date: "Thu Jul 10 2025 15:33:51 GMT+0000 (Coordinated Universal Time)"
 category: "Educational"
 legacy_url: "https://www.genetargeting.com/ingenious-blog/types-of-point-mutations"
@@ -27,13 +27,13 @@ Non-conservative mutations can be more severe because they cause a greater chang
 
 Then there are the point mutations with the greatest effect which alter the code that marks the start or stop of the gene’s coding sequence. Mutations of this type may occur in the existing “start” or “stop” codons of the gene’s sequence or they can happen somewhere else and create a new “start” or “stop” codon in the wrong place. A final type of point mutation affects a non-coding region of a gene. These can affect the gene in unpredictable ways, for example if the mutation is in the promoter region that controls the gene’s activity. Such a mutation could alter the level of protein that is made from the gene but not change the protein sequence. This varied list of different effects from point mutations highlights why it’s so important to evaluate them carefully, especially if considering them for use in experiments. 
 
-[Browse catalog point mutation models](/all-catalog-mouse-models/?q=point+mutation), [explore custom services](/point-mutation-mice/), or [request a quote](/request-quote/) for your mutation type.
+[Browse catalog point mutation models](/all-catalog-mouse-models/?q=point+mutation), [explore generated services](/point-mutation-mice/), or [request a quote](/request-quote/) for your mutation type.
 
 ### Why It’s Important to Understand Types of Mutations
 
 The different effects from point mutations listed above are only an introduction to the complex ways that a single nucleotide change can alter a gene’s function. There are even more layers of complexity when looking at the effects of a mutation in the context of an animal or person because a gene may have different functions in different tissues or at different stages of life. However, a basic understanding of the different types of point mutation can provide guidance when looking at a list of different mutations and deciding which ones are most likely to be interesting for your specific research project.
 
-**Ready to model a substitution, deletion, or insertion?** [Search catalog strains](/all-catalog-mouse-models/?q=point+mutation), [see custom knockins](/point-mutation-mice/), or [request a quote](/request-quote/).
+**Ready to model a substitution, deletion, or insertion?** [Search catalog strains](/all-catalog-mouse-models/?q=point+mutation), [see generated knockins](/point-mutation-mice/), or [request a quote](/request-quote/).
 
 Related: [What Is a Point Mutation](/ingenious-blog/what-is-a-point-mutation/), [Point Mutation Diseases](/ingenious-blog/point-mutation-diseases/).
 

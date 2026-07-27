@@ -244,7 +244,7 @@ const faqData = [
   },
   {
     question: "What is involved in generating PDL1 humanized mice?",
-    answer: "Custom humanized model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Pre-germline characterization enables early validation of targeting and human sequence confirmation before mouse generation. Contact us for current timeline estimates."
+    answer: "Generated humanized model generation includes targeting construct design, allele design, founder generation, and germline transmission. Pre-germline characterization enables early validation of targeting and human sequence confirmation before mouse generation. Contact us to discuss your project requirements."
   },
   {
     question: "How do PDL1 humanized models work with syngeneic tumors?",
@@ -270,7 +270,7 @@ const relatedLinksData = {
   ],
   resources: [
     { href: "/c57bl6-mouse-background", label: "C57BL/6 Mouse Background" },
-    { href: "/request-quote", label: "Request Custom Quote" },
+    { href: "/request-quote", label: "Request a Quote" },
     { href: "/faqs", label: "FAQs" }
   ]
 };
@@ -278,7 +278,7 @@ const relatedLinksData = {
 // CTA Data
 const ctaData = makeFooterCta(
   'Start Your PDL1 Humanization Project',
-  'Our scientific consultants are ready to discuss your PDL1 humanization requirements and recommend the optimal strategy for your immuno oncology program. Initial consultation is provided at no charge and includes humanization approach recommendations, strain background guidance, and timeline estimates.',
+  'Our scientific consultants are ready to discuss your PDL1 humanization requirements and recommend the optimal strategy for your immuno oncology program. Initial consultation is provided at no charge and includes humanization approach recommendations, strain background guidance.',
 );
 
 export default function PDL1HumanizedMicePage() {
@@ -297,13 +297,13 @@ export default function PDL1HumanizedMicePage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "PDL1 Humanized Mouse Models",
-            "description": "Custom PDL1 humanized mouse models for anti PDL1 antibody testing. Human CD274 knockin for immuno oncology and checkpoint research.",
+            "description": "Generated PDL1 humanized mouse models for anti PDL1 antibody testing. Human CD274 knockin for immuno oncology and checkpoint research.",
             "provider": {
               "@type": "Organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
-            "serviceType": "Custom Mouse Model Generation",
+            "serviceType": "Mouse Model Generation",
             "areaServed": "Worldwide"
           })
         }}
@@ -359,7 +359,7 @@ export default function PDL1HumanizedMicePage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
             </div>
@@ -1015,7 +1015,7 @@ export default function PDL1HumanizedMicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'PDL1 Humanized Mice', path: '/pdl1-humanized-mice' },
         ]}
       />

@@ -52,7 +52,7 @@ Once the right cells are prepared, it’s time to inject them into the blastocys
 
 Once the chimeric mouse is successfully generated, the final process is to validate and breed it. The chimeric mouse will normally be bred with a normal, black mouse, in order to pass down the altered genetic material to its offspring. Typically, if the experiment is successful, the resulting mice will have a normal version of the knockout gene from their mother and a knocked out version of the gene resulting from their father. These results will become apparent when performing DNA sequencing on the gene in question. By regularly making knockout mice, it’s possible to become more proficient, learn better techniques for targeting genes more successfully, and more.
 
-[Explore custom knockout services](/knockout-mouse-models/). Many genes are already available as [catalog knockout strains](/all-catalog-mouse-models/?q=knockout).
+[Explore generated knockout services](/knockout-mouse-models/). Many genes are already available as [catalog knockout strains](/all-catalog-mouse-models/?q=knockout).
 
 ### Knockout Mice Using CRISPR:
 
@@ -84,6 +84,6 @@ In contrast, knockin mice are often designed for studying specific mutations of 
 
 RELATED: [Difference Between Knock In and Knockout](/ingenious-blog/difference-between-knock-in-and-knockout)
 
-When you are ready to move forward, [browse catalog knockout mice](/all-catalog-mouse-models/?q=knockout) or [request a quote](/request-quote/) for a custom project.
+When you are ready to move forward, [browse catalog knockout mice](/all-catalog-mouse-models/?q=knockout) or [request a quote](/request-quote/) for a model generation project.
 
 ‍

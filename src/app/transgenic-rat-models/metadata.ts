@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Transgenic Rat Models',
-  description: 'Custom transgenic rat models expressing your gene of interest. Overexpression and tissue specific promoters in rat backgrounds.',
+  description: 'Generated transgenic rat models expressing your gene of interest. Overexpression and tissue specific promoters in rat backgrounds.',
   path: '/transgenic-rat-models',
 });
 

@@ -70,7 +70,6 @@ export default function ConditionalVsConventionalPage() {
               </h3>
               <ul style={{ color: '#666', fontSize: '1rem', lineHeight: '1.8', paddingLeft: '20px' }}>
                 <li>You want global, constitutive knockout</li>
-                <li>Faster timeline is critical (9-12 vs 12-15 months)</li>
                 <li>Lower cost is priority</li>
                 <li>Developmental effects are part of research question</li>
                 <li>Gene knockout is viable and fertile</li>
@@ -98,8 +97,7 @@ export default function ConditionalVsConventionalPage() {
               </thead>
               <tbody>
                 {[
-                  { feature: 'Timeline', conditional: '12-15 months', conventional: '9-12 months' },
-                  { feature: 'Cost', conditional: 'Higher (custom quote)', conventional: 'Lower (custom quote)' },
+                  { feature: 'Cost', conditional: 'Higher (quote)', conventional: 'Lower (quote)' },
                   { feature: 'Deletion Pattern', conditional: 'Tissue-specific or inducible', conventional: 'Global, all cells' },
                   { feature: 'Temporal Control', conditional: 'Yes (with inducible Cre)', conventional: 'No, constitutive from zygote' },
                   { feature: 'Embryonic Lethality', conditional: 'Bypassed by tissue-specific deletion', conventional: 'Potential barrier to obtaining adults' },
@@ -204,8 +202,8 @@ export default function ConditionalVsConventionalPage() {
               },
               {
                 '@type': 'HowToStep',
-                name: 'Evaluate Timeline and Budget',
-                text: 'Compare 9-12 month conventional vs 12-15 month conditional timeline and associated costs',
+                name: 'Evaluate Budget and Complexity',
+                text: 'Compare cost, breeding complexity, and experimental flexibility for conditional versus conventional approaches',
               },
               {
                 '@type': 'HowToStep',

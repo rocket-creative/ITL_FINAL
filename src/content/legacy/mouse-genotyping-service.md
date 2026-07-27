@@ -11,11 +11,11 @@ title: "Mouse Genotyping Service"
 
 ## Guaranteed with 100% accuracy, starting at $10 per tail.
 
-Building upon your custom mouse model production. Convenient, affordable, and accurate.
+Building upon your mouse model generation production. Convenient, affordable, and accurate.
 
-Ingenious offers a convenient and valuable PCR genotyping service that you can take advantage of when the production of your custom mouse model is complete. This service can include any PCR assay we developed when screening the targeted mouse ES cells or genotyping the mice during our production of your knockout or knockin mouse model.
+Ingenious offers a convenient and valuable PCR genotyping service that you can take advantage of when the production of your mouse model generation is complete. This service can include any PCR assay we developed when screening the targeted mouse ES cells or genotyping the mice during our production of your knockout or knockin mouse model.
 
-Our service provides unambiguous detection of your targeted allele, whether it is the primary allele or the recombined allele after Cre or Flp activity. We can help you identify which mice you need to keep from the new generations of mice that you generate from breeding your custom mouse model.
+Our service provides unambiguous detection of your targeted allele, whether it is the primary allele or the recombined allele after Cre or Flp activity. We can help you identify which mice you need to keep from the new generations of mice that you generate from breeding your mouse model generation.
 
 ## What Researchers Say
 

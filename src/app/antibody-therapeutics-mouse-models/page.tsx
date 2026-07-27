@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Antibody Therapeutics Mouse Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -21,16 +21,16 @@ import { LabSignalsSignup, getRelatedLabSignalsArticles } from '@/components/UXU
 const heroData = {
   badge: "Our Services",
   title: "Antibody Therapeutics Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported antibody therapeutic development with custom mouse models enabling preclinical evaluation of monoclonal antibodies, bispecific antibodies, and antibody drug conjugates across oncology, immunology, and other therapeutic areas.",
+  intro: "Since 1998, ingenious targeting laboratory has supported antibody therapeutic development with mouse model generation enabling preclinical evaluation of monoclonal antibodies, bispecific antibodies, and antibody drug conjugates across oncology, immunology, and other therapeutic areas.",
   description: "Antibody therapeutics mouse models provide essential platforms for testing clinical antibody candidates in relevant in vivo contexts. Humanized target models enable direct evaluation of antibodies designed for human epitopes, while syngeneic compatible models support efficacy studies in immunocompetent animals with intact tumor immunity."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -38,7 +38,7 @@ const faqData = [
   { question: "What humanized models are needed for antibody therapeutic testing?", answer: "Humanized models express human target genes (receptors, checkpoint molecules, drug targets) to enable testing of clinical antibody candidates. Common targets include immune checkpoints (PD1, PDL1, CTLA4, LAG3), cytokine receptors, and disease-specific targets. Full gene humanization (complete human sequence) or ECD-only humanization (extracellular domain) are available." },
   { question: "Can you combine humanized targets with syngeneic tumor models?", answer: "Yes. Humanized checkpoint models can be combined with syngeneic tumor cell lines to create systems where both tumor and immune compartments express human targets. This enables evaluation of checkpoint blockade in immunocompetent animals with intact tumor immunity, providing more physiologically relevant testing." },
   { question: "How do you validate human target expression in humanized models?", answer: "Pre-germline characterization includes Southern blot analysis to confirm correct targeting and sequence verification to ensure human sequence fidelity. Post-germline validation includes flow cytometry for surface expression, Western blot for protein expression, and functional confirmation through binding of clinical antibody candidates." },
-  { question: "What is involved in generating humanized antibody testing models?", answer: "Custom model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Pre-germline characterization enables early validation of targeting and human sequence confirmation before mouse generation. Contact us for current timeline estimates." },
+  { question: "What is involved in generating humanized antibody testing models?", answer: "Model generation includes targeting construct design, allele design, founder generation, and germline transmission. Pre-germline characterization enables early validation of targeting and human sequence confirmation before mouse generation. Contact us to discuss your project requirements." },
   { question: "Can multiple checkpoints be humanized in a single model?", answer: "Yes. We can combine multiple checkpoint humanizations (double, triple, or multi-checkpoint models) for combination immunotherapy studies. For example, PD1 and CTLA4 humanized models enable testing of dual checkpoint blockade. Multiple humanizations require careful breeding and genotyping to maintain all alleles." }
 ];
 
@@ -148,7 +148,6 @@ export default function AntibodyTherapeuticsMouseModelsPage() {
             <CatalogCustomDualCta slug="antibody-therapeutics-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
-
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>

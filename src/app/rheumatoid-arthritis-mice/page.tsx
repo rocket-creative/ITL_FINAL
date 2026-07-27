@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Rheumatoid Arthritis Mice Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -20,16 +20,16 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Rheumatoid Arthritis Mice",
-  intro: "Since 1998, ingenious targeting laboratory has supported rheumatoid arthritis research with custom mouse models enabling mechanistic studies of joint inflammation, autoimmune responses, and therapeutic interventions.",
+  intro: "Since 1998, ingenious targeting laboratory has supported rheumatoid arthritis research with mouse model generation enabling mechanistic studies of joint inflammation, autoimmune responses, and therapeutic interventions.",
   description: "Our rheumatoid arthritis models have contributed to research on synovial inflammation, cartilage destruction, and anti inflammatory therapeutics. Rheumatoid arthritis mouse models provide essential platforms for investigating the molecular pathways underlying autoimmune joint disease, testing hypotheses about immune cell contributions, and developing therapies for this debilitating condition affecting millions of patients worldwide."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -148,7 +148,7 @@ export default function RheumatoidArthritisMicePage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -177,7 +177,6 @@ export default function RheumatoidArthritisMicePage() {
             <CatalogCustomDualCta slug="rheumatoid-arthritis-mice" utmMedium="page-hero" flush />
           </div>
         </section>
-
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>

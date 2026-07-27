@@ -125,7 +125,7 @@ export function buildFeaturedProductOffer(orderUrl: string, modelTypeLabel = 'Hu
   };
 }
 
-export function buildServiceOffer(url: string, modelTypeLabel = 'Custom mouse model') {
+export function buildServiceOffer(url: string, modelTypeLabel = 'Mouse model generation') {
   const lowPrice = getTierLowPrice(modelTypeLabel);
   return {
     '@type': 'Offer' as const,

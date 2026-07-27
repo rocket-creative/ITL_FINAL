@@ -555,7 +555,7 @@ export default function OrderInquiryCatalogModelsPage() {
                 { title: 'All catalog models', href: '/catalog-mouse-models' },
                 { title: 'Humanized checkpoint mice', href: '/humanized-immune-checkpoint-mice' },
                 { title: 'Double checkpoint mice', href: '/double-checkpoint-mice' },
-                { title: 'Custom mouse models', href: '/custom-mouse-models' },
+                { title: 'Mouse model generation', href: '/custom-mouse-models' },
               ].map((link, index) => (
                 <Link
                   key={index}

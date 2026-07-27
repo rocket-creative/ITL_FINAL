@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.155Z"
 
 **Url: /oncology-mouse-models**
 
-**Meta Description: Custom oncology mouse models for cancer research. Tumor suppressor knockouts, oncogene knockins, and genetically engineered cancer models. Since 1998.**
+**Meta Description: Generated oncology mouse models for cancer research. Tumor suppressor knockouts, oncogene knockins, and genetically engineered cancer models. Since 1998.**
 
 **Primary Keyword: oncology mouse model**
 
@@ -18,11 +18,11 @@ extracted: "2026-01-09T17:03:05.155Z"
 
 # Oncology Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported oncology researchers with custom mouse models contributing to peer reviewed publications in Cancer Cell, Cancer Research, Nature Medicine, and leading oncology journals worldwide. Our oncology mouse models have advanced understanding of tumor biology, cancer genetics, and therapeutic response across solid tumors and hematological malignancies.
+Since 1998, Ingenious Targeting Laboratory has supported oncology researchers with mouse model generation contributing to peer reviewed publications in Cancer Cell, Cancer Research, Nature Medicine, and leading oncology journals worldwide. Our oncology mouse models have advanced understanding of tumor biology, cancer genetics, and therapeutic response across solid tumors and hematological malignancies.
 
 Oncology mouse models enable researchers to investigate the genetic drivers of cancer, study tumor microenvironment interactions, and evaluate therapeutic approaches in immunocompetent systems. From conditional tumor suppressor knockouts that initiate tissue specific tumors to oncogene knockins expressing driver mutations at physiological levels, the right model design is critical for understanding cancer biology and developing effective treatments.
 
-Genetically engineered mouse models (GEMMs) provide advantages over transplantation models by recapitulating tumor initiation, progression, and microenvironment interactions in their native context. Ingenious Targeting Laboratory designs and generates custom oncology models tailored to your specific research questions and therapeutic development goals.
+Genetically engineered mouse models (GEMMs) provide advantages over transplantation models by recapitulating tumor initiation, progression, and microenvironment interactions in their native context. Ingenious Targeting Laboratory designs and generates oncology models tailored to your specific research questions and therapeutic development goals.
 
 ## Tumor Suppressor Models
 
@@ -279,7 +279,7 @@ Humanized checkpoint models enable testing of clinical antibodies:
 
 ### Pre Germline Characterization
 
-ES cell based targeting enables verification of oncology alleles before mouse generation:
+homologous recombination targeting enables verification of oncology alleles before mouse generation:
 
 - Confirm oncogene mutation sequences
 - Verify LSL cassette structure and function
@@ -351,12 +351,11 @@ Clausen BE et al. 1999. Conditional gene targeting in macrophages and granulocyt
 
 - (/tissue-specific-cre-lines)
 - (/es-cell-gene-targeting)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Start Your Oncology Model Project
 
-Our scientific consultants are ready to discuss your oncology research requirements and recommend the optimal model design for your program. Initial consultation is provided at no charge and includes gene analysis, Cre driver recommendations, and timeline estimates.
+Our scientific consultants are ready to discuss your oncology research requirements and recommend the optimal model design for your program. Initial consultation is provided at no charge and includes gene analysis, Cre driver recommendations.
 
 (/request-quote)
 
@@ -404,6 +403,6 @@ C57BL/6 is most common for immuno-oncology studies and is compatible with MC38 a
 - Cancer type specific sections (lung, breast, pancreatic, colorectal, heme)
 - LSL system explained
 - Immuno oncology integration
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - CTA to /request-quote
 - Word count ~2,100 (appropriate for therapeutic area page)

@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * LinkedIn Insight Tag Integration
  * @version 1.0.0
@@ -8,8 +10,6 @@
  * - Audience building for retargeting
  * - B2B demographic insights
  */
-
-'use client';
 
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';

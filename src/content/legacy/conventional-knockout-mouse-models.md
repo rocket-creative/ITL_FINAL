@@ -19,7 +19,7 @@ With our streamlined process and advanced technologies, we are able to create yo
 
 ## What Researchers Say
 
-> "ingenious Targeting Laboratory is highly recommended for generating custom animal models. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress."
+> "ingenious Targeting Laboratory is highly recommended for generating animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress."
 >
 > — **Hyekyung Plumley, PhD**, Warren Center for Neuroscience Drug Discovery
 
@@ -73,7 +73,7 @@ Some researchers prefer to not delete any endogenous gene sequence to avoid dele
 
 By inserting a LoxP flanked strong stop cassette in an early intron of the gene, the gene can be inactivated in a conventional manner. Utilizing Cre recombination to remove the stop cassette, the gene's expression can be rescued in a tissue specific, temporal or global manner, based on the specific Cre used.
 
-In addition, a reporter gene can be included to express when the gene is inactivated. The reporter can be deleted along with the stop cassette, or alternative, custom design options can be incorporated.
+In addition, a reporter gene can be included to express when the gene is inactivated. The reporter can be deleted along with the stop cassette, or alternative, generated design options can be incorporated.
 
 Our proprietary F.A.S.T.™ system can be used to produce a global knockout-first model, due to the stop component within the F.A.S.T. cassette. Expression can be rescued via Cre recombination, as well as inducible and reversible gene expression possibilities using the Tet system.
 

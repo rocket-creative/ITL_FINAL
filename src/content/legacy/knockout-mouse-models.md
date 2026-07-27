@@ -4,16 +4,16 @@ new_build_url: "/knockout-mouse-models/"
 url_handling: "reuse"
 link_from: ["/custom-mouse-models/"]
 extracted_date: "2026-01-11"
-title: "Custom Knockout Mouse Models"
+title: "Generated Knockout Mouse Models"
 ---
 
 # Knockout Mouse Models
 
 ## Expertly crafted for your research
 
-Transform your research with a custom knockout mouse model from ingenious targeting laboratory. We are genome engineers with over 3 decades of published expertise.
+Transform your research with a generated knockout mouse model from ingenious targeting laboratory. We are genome engineers with over 3 decades of published expertise.
 
-Work with us and discover the power of our technologies. Our custom knockout mice, featuring the deactivation of specific genes, are pivotal in unraveling gene function and disease mechanisms.
+Work with us and discover the power of our technologies. Our generated knockout mice, featuring the deactivation of specific genes, are pivotal in unraveling gene function and disease mechanisms.
 
 ## What Researchers Say
 

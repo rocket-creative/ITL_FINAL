@@ -21,7 +21,7 @@ We're the only mouse model company to perform all service steps in the USA.
 
 ## Overview
 
-Take advantage of our expertise and the services offered by your core facility. Together we design a custom DNA targeting vector for your specific needs. **Our scientists handle the complex cloning and verification steps, then you work with your core facility to produce your custom mouse model.**
+Take advantage of our expertise and the services offered by your core facility. Together we design a generated DNA targeting vector for your specific needs. **Our scientists handle the complex cloning and verification steps, then you work with your core facility to produce your mouse model generation.**
 
 ## Donor/Repair Vectors for CRISPR/Cas9 Gene Editing
 
@@ -40,7 +40,7 @@ This rules out efficient production of many popular model types such as conditio
 
 ## Gene Targeted ES Cell Lines
 
-ingenious delivers custom gene targeted ES cells. We design and build the targeting vector, electroporate it into our robust ES cells, and subsequently screen the ES cell clones by PCR and Southern Blotting. The targeted clones can be microinjected into blastocysts at your core facility to generate chimeras and subsequently F1 mice.
+ingenious delivers generated gene targeted ES cells. We design and build the targeting vector, electroporate it into our robust ES cells, and subsequently screen the ES cell clones by PCR and Southern Blotting. The targeted clones can be microinjected into blastocysts at your core facility to generate chimeras and subsequently F1 mice.
 
 **We guarantee the generation of positively targeted ES cell clones if all work is performed at our facility.** This includes all troubleshooting, if necessary, at no additional cost.
 

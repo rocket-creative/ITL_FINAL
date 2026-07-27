@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Technologies',
-  description: 'Gene targeting technologies including Cre LoxP, Flp FRT, ES cell targeting, and CRISPR genome editing.',
+  description: 'Gene targeting technologies including Cre LoxP, Flp FRT, gene targeting, and CRISPR genome editing.',
   path: '/technologies',
 });
 

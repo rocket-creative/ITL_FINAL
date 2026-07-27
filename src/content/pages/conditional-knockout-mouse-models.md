@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.524Z"
 
 **Url: /conditional-knockout-mouse-models**
 
-**Meta Description: Custom conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,800+ custom projects since 1998.**
+**Meta Description: Generated conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,800+ models generated since 1998.**
 
 **Primary Keyword: conditional knockout mouse**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.524Z"
 
 # Conditional Knockout Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom mouse model projects, including conditional knockouts, for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our conditional knockout mouse models have supported research published in more than 800 peer reviewed journals, including Science, Nature, and Cell.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 mouse model generation projects, including conditional knockouts, for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our conditional knockout mouse models have supported research published in more than 800 peer reviewed journals, including Science, Nature, and Cell.
 
 Conditional knockout mouse models enable controlled gene inactivation in specific tissues or at defined times. Unlike conventional knockouts where gene function is lost globally from the earliest developmental stages, conditional knockouts use the Cre lox system to restrict gene deletion to cells expressing Cre recombinase. This approach is essential when studying genes that cause embryonic lethality when deleted globally, when tissue specific gene function is the primary research question, or when temporal control over gene inactivation is required.
 
@@ -122,7 +122,7 @@ Milanick W, Li J, Thomas CI, Al-Yaari M, Guerrero-Given D, Kamasawa N, Young SM 
 
 ## What Researchers Say
 
-*“ingenious Targeting Laboratory is highly recommended for generating custom animal models. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.”*
+*“ingenious Targeting Laboratory is highly recommended for generating animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.”*
 
 *— **Hyekyung Plumley, PhD**, Warren Center for Neuroscience Drug Discovery*
 
@@ -147,8 +147,7 @@ Milanick W, Li J, Thomas CI, Al-Yaari M, Guerrero-Given D, Kamasawa N, Young SM 
 
 - (/knockout-strategy-guide)
 - (/conditional-vs-conventional-guide)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Start Your Conditional Knockout Project
 
@@ -172,6 +171,3 @@ Yes. This is a major advantage of conditional knockout models. A single floxed a
 
 The critical exon must be essential for gene function. Ideal targets are exons present in all transcript variants, exons encoding functional domains, and exons whose deletion causes frameshift in downstream sequence. Our scientific team analyzes gene structure and transcript architecture to identify optimal targets for each project.
 
-**How long does a conditional knockout project take?**
-
-Custom conditional knockout projects typically require 6-10 months. This accounts for more complex allele designs and verification of LoxP site positioning in germline transmission mice. The investment provides greater experimental flexibility through tissue-specific and temporal control.

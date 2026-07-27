@@ -1,7 +1,9 @@
+'use client';
+
 /**
  * |UXUIDC| HubSpot Form With Fallback
  * @version 1.1.0
- * @description Attempts to load HubSpot form, falls back to custom form if it fails
+ * @description Attempts to load HubSpot form, falls back to model generation form if it fails
  *
  * Features:
  * - Renders fallback form immediately (no SDK load until in viewport)
@@ -10,8 +12,6 @@
  * - Form monitoring and diagnostics
  * - Backup submission for all form types
  */
-
-'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import HubSpotFormSimple from './HubSpotFormSimple';
@@ -56,7 +56,7 @@ export default function HubSpotFormWithFallback({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // When pre-fill values are present the custom form handles everything via API.
+    // When pre-fill values are present the generated form handles everything via API.
     // Loading the HubSpot iframe would replace pre-filled fields with an empty embed.
     // This works now that reCAPTCHA is disabled on the form.
     if (initialValues && Object.values(initialValues).some(Boolean)) return;

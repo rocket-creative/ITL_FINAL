@@ -9,7 +9,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, breedingResources, BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
+import { UXUIDCResourceLinks, breedingResources, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -21,10 +21,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Colony Maintenance Features
@@ -141,7 +141,7 @@ const relatedModels = [
 const faqData = [
   {
     question: "What is included in colony management services?",
-    answer: "Colony management includes breeding to maintain your mouse lines, genotyping to identify animals with desired alleles, health monitoring, cohort production for experiments, and reporting on colony status. Services can be customized based on your needs, from simple maintenance breeding to complex multi-allele cohort production."
+    answer: "Colony management includes breeding to maintain your mouse lines, genotyping to identify animals with desired alleles, health monitoring, cohort production for experiments, and reporting on colony status. Services can be scoped based on your needs, from simple maintenance breeding to complex multi-allele cohort production."
   },
   {
     question: "How do you maintain SPF (specific pathogen free) health status?",
@@ -255,7 +255,7 @@ export default function ColonyManagementServicesPage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request Custom Quote</span>
+                    <span>Request a Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
@@ -402,7 +402,7 @@ export default function ColonyManagementServicesPage() {
                   Assay Development
                 </h3>
                 <p style={{ color: '#555', fontSize: '.9rem', marginBottom: '15px' }}>
-                  For new alleles or complex genotypes, we develop and validate custom genotyping assays:
+                  For new alleles or complex genotypes, we develop and validate generated genotyping assays:
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
@@ -654,13 +654,6 @@ export default function ColonyManagementServicesPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="colony-management-services" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* Breeding Resources Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -682,17 +675,6 @@ export default function ColonyManagementServicesPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Newsletter CTA */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              variant="banner"
-              title="Colony Management Insights"
-              description="Subscribe to Lab Signals for expert guides on breeding strategies, colony optimization, and genotyping best practices from our PhD scientists."
-            />
           </div>
         </section>
 
@@ -743,9 +725,13 @@ export default function ColonyManagementServicesPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA variant="gradient" />
       </main>
+
+      <StandardPageCtaStack
+        slug="colony-management-services"
+        labSignalsTitle="Colony Management Insights"
+        labSignalsDescription="Subscribe to Lab Signals for expert guides on breeding strategies, colony optimization, and genotyping best practices from our PhD scientists."
+      />
 
       <UXUIDCFooter />
       

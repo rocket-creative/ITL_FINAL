@@ -1,12 +1,12 @@
+'use client';
+
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * Knockin Rat Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
-'use client';
-
 import { useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -15,22 +15,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Knockin Rat Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom mouse and rat models, enabling precise insertion of human disease mutations, reporter genes, and functional variants in rodents providing superior translational relevance.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated mouse and rat models, enabling precise insertion of human disease mutations, reporter genes, and functional variants in rodents providing superior translational relevance.",
   description: "Knockin rats enable introduction of disease associated human variants within intact rat genomic context, permitting investigation of pathogenic mechanisms with greater translational fidelity than humanized mouse models. The combination of superior behavioral capacity, complex physiology, and precise genetic modifications makes knockin rats optimal for human disease modeling studies requiring maximal biological relevance."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -143,7 +143,7 @@ export default function KnockinRatModelsPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -189,57 +189,6 @@ export default function KnockinRatModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* Testimonial Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <h2
-              className="animate-in text-center"
-              style={{
-                color: '#2384da',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '2rem',
-                fontWeight: 700,
-                marginBottom: '40px'}}
-            >
-              Trusted by Leading Researchers
-            </h2>
-            <div
-              className="animate-in"
-              style={{
-                backgroundColor: '#f8f9fa',
-                padding: '40px',
-                borderLeft: '4px solid #008080',
-                borderRadius: '4px'}}
-            >
-              <p style={{ color: '#555', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '25px' }}>
-                &ldquo;The rat knock-in model from ingenious was reliable, precise, and accelerated our immunology research significantly.&rdquo;
-              </p>
-              <p style={{ color: '#0a253c', fontWeight: 600, fontSize: '1rem', marginBottom: '5px' }}>
-                — Carla Rothlin, Professor and Director of Center of Immunology
-              </p>
-              <p style={{ color: '#666', fontSize: '.9rem' }}>
-                Yale University
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start your project today
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
-            </p>
-            <CatalogCustomDualCta slug="knockin-rat-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
@@ -253,12 +202,6 @@ export default function KnockinRatModelsPage() {
             </div>
           </section>
         )}
-
-        {/* Lab Signals Signup */}
-        <LabSignalsSignup 
-          title="Track Your Knockin Rat Model Progress"
-          description="Receive updates on your humanized or point mutation knockin rat model, including targeting validation, expression analysis, and phenotype characterization."
-        />
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
@@ -328,6 +271,11 @@ export default function KnockinRatModelsPage() {
       />
       </main>
       
+      <StandardPageCtaStack
+        slug="knockin-rat-models"
+        labSignalsTitle="Track Your Knockin Rat Model Progress"
+        labSignalsDescription="Receive updates on your humanized or point mutation knockin rat model, including targeting validation, expression analysis, and phenotype characterization."
+      />
       <UXUIDCFooter />
           
       {/* Schema.org Structured Data */}

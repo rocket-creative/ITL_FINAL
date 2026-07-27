@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * |UXUIDC| Service Card - Matches Webflow Design Exactly
  * @version 4.0.0 - Removed GSAP, using CSS animations only
  * services-card styling with h3 blue, card-button med-blue
  */
-
-'use client';
 
 import Link from 'next/link';
 

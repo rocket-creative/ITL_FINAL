@@ -15,7 +15,7 @@ author: "ingenious"
 The use of transgenic rats vs mice to facilitate genetic research has been an important choice that researchers have needed to consider since the first transgenic rats were developed. Before that, laboratory mice and their use in embryonic stem cell studies dominated the world of genetics. Scientists around the world found them to be the most effective animals for everything from generating basic knockin models to using complex methods to create conditional knockout models for studying a variety of ailments and genetic disorders that affect both mice and humans.
 
 
-[Download Free White Paper: Custom Rat Models for Tissue-Specific Knockout](https://go.genetargeting.com/rat-tissue-specific-white-paper)
+[Download Free White Paper: Generated Rat Models for Tissue-Specific Knockout](https://go.genetargeting.com/rat-tissue-specific-white-paper)
 
 ### Premiere animal model of human heart disease
 

@@ -47,7 +47,7 @@
     "permanent": true
   },
   {
-    "comment": "=== TRANSGENIC & CUSTOM MODELS ===",
+    "comment": "=== TRANSGENIC & MODEL GENERATION ===",
     "source": "/transgenic-mouse-models",
     "destination": "/mouse-model-services/",
     "permanent": true

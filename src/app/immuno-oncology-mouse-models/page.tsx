@@ -15,16 +15,16 @@ import { GlossaryTermLink, BreedingSchemeArchitectCTA, LabSignalsSignup, getRela
 const heroData = {
   badge: "Checkpoint Humanization & Tumor Immunity",
   title: "Immuno-Oncology Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported immuno-oncology researchers with custom mouse models contributing to peer reviewed publications in Cancer Research, Nature Medicine, Immunity, and leading oncology journals worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported immuno-oncology researchers with mouse model generation contributing to peer reviewed publications in Cancer Research, Nature Medicine, Immunity, and leading oncology journals worldwide.",
   description: "Immuno oncology mouse models enable researchers to investigate the complex interactions between tumors and the immune system, from T cell exhaustion and checkpoint regulation to tumor microenvironment dynamics. Humanized immune checkpoint models express human versions of PD1, PDL1, CTLA4, and other targets, allowing direct testing of clinical antibody candidates in immunocompetent mice."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Checkpoint Targets Table
@@ -810,7 +810,7 @@ export default function ImmunoOncologyMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom immuno-oncology mouse models for cancer immunotherapy research. Humanized PD1, PDL1, CTLA4, and checkpoint combination models.",
+            "description": "Generated immuno-oncology mouse models for cancer immunotherapy research. Humanized PD1, PDL1, CTLA4, and checkpoint combination models.",
             "serviceType": "Immuno-Oncology Mouse Model Generation"
           })
         }}

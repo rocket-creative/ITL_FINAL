@@ -41,8 +41,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!canon) return { title: `Cre lines | ${SITE_NAME}` };
   const label = getDisplayLabelForTissueKey(canon);
   const meta = applyCatalogFirstMeta(
-    `${label} Cre Mouse Lines | Catalog + Custom | ITL`,
-    `Browse ${label} biased Cre and CreERT2 drivers in the catalog. Request a custom conditional knockout when you need a paired floxed allele. Quote in twenty four hours.`,
+    `${label} Cre Mouse Lines | Catalog + Generation | ITL`,
+    `Browse ${label} biased Cre and CreERT2 drivers in the catalog. Request a generated conditional knockout when you need a paired floxed allele. Quote in twenty four hours.`,
     `/cre-lines/${tissueSlug}`,
   );
   const title = meta.title;

@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.643Z"
 
 **Url: /inducible-conditional-knockout**
 
-**Meta Description: Custom inducible conditional knockout mouse models. Tamoxifen inducible CreERT2 and doxycycline regulated systems for temporal gene control. Since 1998.**
+**Meta Description: Generated inducible conditional knockout mouse models. Tamoxifen inducible CreERT2 and doxycycline regulated systems for temporal gene control. Since 1998.**
 
 **Primary Keyword: inducible conditional knockout**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.643Z"
 
 # Inducible Conditional Knockout
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom gene targeting projects, including conditional alleles compatible with inducible Cre systems. Our knockout models have supported research published in more than 800 peer reviewed articles, including in  Science, Nature and Cell. 
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects, including conditional alleles compatible with inducible Cre systems. Our knockout models have supported research published in more than 800 peer reviewed articles, including in  Science, Nature and Cell. 
 
 Inducible conditional knockout combines the tissue specificity of conditional gene targeting with temporal control over when deletion occurs. By using tamoxifen inducible CreERT2 or doxycycline regulated systems, researchers can trigger gene deletion at any point in development or adult life, enabling study of gene function independent of developmental requirements and modeling acute versus chronic loss of function phenotypes.
 
@@ -329,9 +329,7 @@ Souza G, Stornetta DS, Shi Y, Lim E, Berry FE, Bayliss DA, Abbott SBG. 2023. [Ne
 # Project Resources
 
 - (/es-cell-gene-targeting)
-- (/model-generation-timeline)
-- (/model-generation-timeline)
-- (/faqs)
+- - - (/faqs)
 
 # Start Your Inducible Conditional Knockout Project
 
@@ -346,7 +344,7 @@ Our scientific consultants are ready to discuss your research requirements and o
 - All elements labeled (H1, H2, H3, PARA, TABLE, etc.)
 - Primary keyword "inducible conditional knockout" in H1 and first paragraph
 - Secondary keywords in H2/H3 headers (inducible knockout, tamoxifen, CreERT2)
-- Quantified credibility (1998, 2,800+ custom projects, 800+ publications)
+- Quantified credibility (1998, 2,800+ models generated, 800+ publications)
 - Zone 1: Trust and Positioning (no procedural methodology)
 - Zone 2: Scientific content with technical depth
 - Zone 3: Navigation and CTAs
@@ -362,7 +360,7 @@ Our scientific consultants are ready to discuss your research requirements and o
 - Tet On/Tet Off comparison table
 - When to use section
 - Technical considerations including controls
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - CTA to /request-quote
 - Word count ~2,100 (appropriate for model type page)
 

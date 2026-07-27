@@ -1,9 +1,8 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import PageClosingCta from '@/components/UXUIDC/PageClosingCta';
-
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useEffect, useRef } from 'react';
+
 
 import { makeFooterCta } from '@/data/commercialCtas';
 import { getPublicationsForPageAsCitations } from '@/data/pagePublications';
@@ -15,22 +14,22 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Strain Background",
   title: "C57BL/6 Mouse Background",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, with the majority generated on C57BL/6 genetic backgrounds. Our experience across thousands of projects provides deep understanding of how strain background affects phenotypic outcomes, breeding performance, and experimental reproducibility.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, with the majority generated on C57BL/6 genetic backgrounds. Our experience across thousands of projects provides deep understanding of how strain background affects phenotypic outcomes, breeding performance, and experimental reproducibility.",
   description: "The C57BL/6 mouse is the most widely used inbred strain for biomedical research and the reference strain for the mouse genome sequence. C57BL/6 backgrounds are preferred for most knockout, knockin, and conditional allele projects due to extensive phenotypic characterization, broad research community adoption, and compatibility with the majority of Cre driver lines."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Substrain Data
@@ -353,7 +352,7 @@ export default function C57BL6MouseBackgroundPage() {
                 textDecoration: 'none',
                 transition: 'background 0.2s ease'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link href="/knockout-mouse-models" style={{
@@ -868,11 +867,6 @@ export default function C57BL6MouseBackgroundPage() {
         {/* Testimonials Section */}
         <TestimonialsSection testimonials={testimonialsData} variant="dark" />
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        <PageClosingCta title={ctaData.title} description={ctaData.description} slug="c57bl6-mouse-background" />
-
         {/* FAQ Section */}
         <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -891,12 +885,6 @@ export default function C57BL6MouseBackgroundPage() {
             </div>
           </div>
         </section>
-
-        {/* Lab Signals Signup */}
-        <LabSignalsSignup 
-          title="Track Your C57BL/6 Model Progress"
-          description="Stay informed with real-time updates on your strain background selection, substrain considerations, and backcrossing milestones throughout your project."
-        />
 
         {/* Related Links Section */}
         <section style={{ background: 'white', padding: '60px 20px' }}>
@@ -990,6 +978,13 @@ export default function C57BL6MouseBackgroundPage() {
           </div>
         </section>
       </main>
+      <StandardPageCtaStack
+        slug="c57bl6-mouse-background"
+        closingTitle={ctaData.title}
+        closingDescription={ctaData.description}
+        labSignalsTitle="Track Your C57BL/6 Model Progress"
+        labSignalsDescription="Stay informed with real-time updates on your strain background selection, substrain considerations, and backcrossing milestones throughout your project."
+      />
       <UXUIDCFooter />
           
       {/* Schema.org Structured Data */}

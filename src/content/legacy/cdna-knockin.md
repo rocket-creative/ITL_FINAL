@@ -7,7 +7,7 @@ extracted_date: "2026-01-11"
 title: "cDNA Knockin Mouse Models"
 ---
 
-# Custom cDNA Knockins
+# Generated cDNA Knockins
 
 ## Precisely express your sequence of interest in a mouse model
 
@@ -25,7 +25,7 @@ Additionally, ingenious offers the possibility to design conditional and reversi
 >
 > — **Hamid M. Said, PhD, PharmD**, University of California, Irvine
 
-## Custom cDNA Knockins Overview
+## Generated cDNA Knockins Overview
 
 Expressing a specific sequence in place of a target gene, or in addition to that gene, is a powerful and versatile strategy. A cDNA mouse knockin model allows expression of a new sequence using most regulatory features of an endogenous gene: the upstream promoter, the 5' UTR and the chromosomal environment.
 
@@ -33,9 +33,9 @@ This strategy allows expression of human sequence in place of mouse, tissue-spec
 
 We can also make your cDNA expression conditional by including LoxP sites in the design. Contact us to discuss available options.
 
-From single point mutations to the most intricate designs ingenious has delivered custom knockin mice again and again for over 20 years. With a complete toolkit of different approaches and an experienced scientific staff, there is no knockin design that is out of reach.
+From single point mutations to the most intricate designs ingenious has delivered generated knockin mice again and again for over 20 years. With a complete toolkit of different approaches and an experienced scientific staff, there is no knockin design that is out of reach.
 
-Contact us today to discuss the custom knockin mouse model your lab will use for years to come.
+Contact us today to discuss the generated knockin mouse model your lab will use for years to come.
 
 ## cDNA Knockin to Replace Expression of Target Gene
 

@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Pathway Analysis Mouse Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -21,16 +21,16 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Pathway Analysis Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom mouse models enabling pathway level investigation of gene function, with hundreds of pathway analysis projects investigating how multiple genes interact within signaling cascades to regulate cellular and organismal phenotypes. Pathway analysis mouse models reveal functional dependencies, redundancy, and regulatory relationships invisible in single gene studies.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation enabling pathway level investigation of gene function, with hundreds of pathway analysis projects investigating how multiple genes interact within signaling cascades to regulate cellular and organismal phenotypes. Pathway analysis mouse models reveal functional dependencies, redundancy, and regulatory relationships invisible in single gene studies.",
   description: "Pathway analysis requires systematic genetic manipulation of pathway components in coordinated ways enabling investigation of how gene interactions shape biological outputs. Multi gene approaches combined with temporal and spatial control of gene expression reveal mechanistic pathways governing normal biology and disease."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -145,7 +145,7 @@ export default function PathwayAnalysisMicePage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 

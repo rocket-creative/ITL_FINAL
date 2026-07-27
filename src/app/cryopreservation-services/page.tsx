@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,7 +9,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -21,10 +21,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Sperm Cryopreservation Advantages
@@ -272,7 +272,7 @@ export default function CryopreservationServicesPage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request Custom Quote</span>
+                    <span>Request a Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
@@ -779,16 +779,6 @@ export default function CryopreservationServicesPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="cryopreservation-services" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -798,13 +788,6 @@ export default function CryopreservationServicesPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="Cryopreservation Service Insights" />
           </div>
         </section>
 
@@ -856,6 +839,10 @@ export default function CryopreservationServicesPage() {
         </section>
       </main>
 
+      <StandardPageCtaStack
+        slug="cryopreservation-services"
+        labSignalsTitle="Cryopreservation Service Insights"
+      />
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}

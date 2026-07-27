@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * |UXUIDC| HubSpot Form - Client Component
  * @version 4.0.0
@@ -5,8 +7,6 @@
  * Uses suppression flag to prevent React from managing HubSpot's DOM
  * Completely isolates HubSpot form from React hydration
  */
-
-'use client';
 
 import { useEffect, useRef } from 'react';
 import './HubSpotFormStyles.css';

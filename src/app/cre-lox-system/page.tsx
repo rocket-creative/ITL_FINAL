@@ -9,22 +9,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconSettings, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, creResources, breedingResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink, BreadcrumbSchema } from '@/components/UXUIDC';
+import { UXUIDCResourceLinks, creResources, breedingResources, getRelatedLabSignalsArticles, GlossaryTermLink, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Conditional Gene Targeting",
   title: "Cre Lox System",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom knockout projects, including conditional, using the Cre lox system. Our Cre lox based models have supported research published in more than 800 peer reviewed journals including Science, Nature, and Cell, enabling tissue specific and temporally controlled gene manipulation across every organ system.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated knockout projects, including conditional, using the Cre lox system. Our Cre lox based models have supported research published in more than 800 peer reviewed journals including Science, Nature, and Cell, enabling tissue specific and temporally controlled gene manipulation across every organ system.",
   description: "The Cre lox system is the foundation of conditional gene targeting in mice. By flanking critical gene elements with LoxP sites, researchers create alleles that function normally until exposed to Cre recombinase. Crossing floxed mice to tissue specific or inducible Cre driver lines enables gene deletion in defined cell populations or at specific times, providing experimental control not possible with conventional knockouts."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Technology Benefits
@@ -359,7 +359,7 @@ export default function CreLoxSystemPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -865,13 +865,6 @@ export default function CreLoxSystemPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="cre-lox-system" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* Downloadable Resources Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -880,19 +873,6 @@ export default function CreLoxSystemPage() {
               description="Download our free guides and tools for your Cre-lox project."
               resources={[...creResources, ...breedingResources]}
               variant="card"
-            />
-          </div>
-        </section>
-
-        {/* Lab Signals Newsletter Section */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              variant="banner"
-              title="Master the Cre-Lox System"
-              description="Subscribe to Lab Signals for expert articles on Cre-lox design, floxed allele optimization, and conditional gene targeting strategies."
-              showArticles={true}
-              relatedArticles={getRelatedLabSignalsArticles('/cre-lox-system')}
             />
           </div>
         </section>
@@ -976,9 +956,15 @@ export default function CreLoxSystemPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA variant="gradient" />
       </main>
+
+      <StandardPageCtaStack
+        slug="cre-lox-system"
+        labSignalsTitle="Master the Cre-Lox System"
+        labSignalsDescription="Subscribe to Lab Signals for expert articles on Cre-lox design, floxed allele optimization, and conditional gene targeting strategies."
+        labSignalsShowArticles={true}
+        labSignalsRelatedArticles={getRelatedLabSignalsArticles('/cre-lox-system')}
+      />
 
       <UXUIDCFooter />
             
@@ -1001,7 +987,7 @@ export default function CreLoxSystemPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Cre lox system for conditional gene targeting in mice. LoxP site design, Cre recombinase drivers, and floxed allele generation. 2,800+ custom projects since 1998.",
+            "description": "Cre lox system for conditional gene targeting in mice. LoxP site design, Cre recombinase drivers, and floxed allele generation. 2,800+ models generated since 1998.",
             "serviceType": "Conditional Gene Targeting Technology"
           })
         }}

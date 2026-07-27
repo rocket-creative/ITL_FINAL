@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * |UXUIDC| Coming Soon Page Component
  * @version 1.0.0
  * @description Reusable "coming soon" placeholder for pages awaiting content
  */
-
-'use client';
 
 import Link from 'next/link';
 import { IconChevronRight, IconTarget, IconMessageCircle } from './Icons';

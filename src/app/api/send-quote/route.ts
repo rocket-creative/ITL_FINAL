@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
         <div class="field"><span class="label">Modification Type:</span> <span class="value">${data.modificationType || 'Not provided'}</span></div>
         <div class="field"><span class="label">Model Type:</span> <span class="value">${data.modelType || 'Not provided'}</span></div>
         <div class="field"><span class="label">Strain Background:</span> <span class="value">${data.strainBackground || 'Not provided'}</span></div>
-        <div class="field"><span class="label">Timeline Requirements:</span> <span class="value">${data.timelineRequirements || 'Not provided'}</span></div>
+        <div class="field"><span class="label">Project scope requirements:</span> <span class="value">${data.timelineRequirements || 'Not provided'}</span></div>
         <div class="field"><span class="label">Cohort Needs:</span> <span class="value">${data.cohortNeeds || 'Not provided'}</span></div>
       </div>
       
@@ -117,7 +117,7 @@ Gene Symbol: ${data.geneSymbol || 'Not provided'}
 Modification Type: ${data.modificationType || 'Not provided'}
 Model Type: ${data.modelType || 'Not provided'}
 Strain Background: ${data.strainBackground || 'Not provided'}
-Timeline Requirements: ${data.timelineRequirements || 'Not provided'}
+Project scope requirements: ${data.timelineRequirements || 'Not provided'}
 Cohort Needs: ${data.cohortNeeds || 'Not provided'}
 
 ${data.additionalNotes ? `ADDITIONAL NOTES\n----------------\n${data.additionalNotes}` : ''}

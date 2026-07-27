@@ -2,30 +2,126 @@
   "description": "Legacy pages that should be built at the same URL path (reuse strategy)",
   "generated": "2026-01-11",
   "pages": [
-    { "path": "/", "legacyMd": "home.md", "notes": "Home page" },
-    { "path": "/knockout-mouse-models", "legacyMd": "knockout-mouse-models.md", "notes": "1:1 mapping" },
-    { "path": "/conventional-knockout-mouse-models", "legacyMd": "conventional-knockout-mouse-models.md", "notes": "1:1 mapping" },
-    { "path": "/conditional-knockout-mouse-models", "legacyMd": "conditional-knockout-mouse-models.md", "notes": "1:1 mapping" },
-    { "path": "/knockin-mouse-models", "legacyMd": "knockin-mouse-models.md", "notes": "1:1 mapping" },
-    { "path": "/cdna-knockin", "legacyMd": "cdna-knockin.md", "notes": "1:1 mapping" },
-    { "path": "/safe-harbor-locus", "legacyMd": "safe-harbor-locus.md", "notes": "1:1 mapping" },
-    { "path": "/rosa26", "legacyMd": "rosa26.md", "notes": "1:1 mapping" },
-    { "path": "/fast-mice", "legacyMd": "fast-mice.md", "notes": "1:1 mapping" },
-    { "path": "/humanized-mouse-models", "legacyMd": "humanized-mouse-models.md", "notes": "1:1 mapping" },
-    { "path": "/gene-replacement", "legacyMd": "gene-replacement.md", "notes": "1:1 mapping" },
-    { "path": "/custom-mouse-models", "legacyMd": "custom-mouse-models.md", "notes": "1:1 mapping" },
-    { "path": "/rat-models", "legacyMd": "rat-models.md", "notes": "1:1 mapping" },
-    { "path": "/custom-rabbit-models", "legacyMd": "custom-rabbit-models.md", "notes": "1:1 mapping" },
-    { "path": "/resources", "legacyMd": "resources.md", "notes": "General mapping" },
-    { "path": "/preclinical-services", "legacyMd": "preclinical-services.md", "notes": "General mapping" },
-    { "path": "/point-mutation-mice", "legacyMd": "point-mutation-mice.md", "notes": "1:1 mapping" },
-    { "path": "/custom-animal-models", "legacyMd": "custom-animal-models.md", "notes": "1:1 mapping" },
-    { "path": "/publications", "legacyMd": "publications.md", "notes": "General mapping" },
-    { "path": "/post-project-services", "legacyMd": "post-project-services.md", "notes": "General mapping" },
-    { "path": "/mouse-model-generation-guide", "legacyMd": "mouse-model-generation-guide.md", "notes": "General mapping" },
-    { "path": "/inducible-rosa26", "legacyMd": "inducible-rosa26.md", "notes": "1:1 mapping" },
-    { "path": "/lab-signals", "legacyMd": "lab-signals.md", "notes": "General mapping" },
-    { "path": "/start-your-project", "legacyMd": "start-your-project.md", "notes": "General mapping" }
+    {
+      "path": "/",
+      "legacyMd": "home.md",
+      "notes": "Home page"
+    },
+    {
+      "path": "/knockout-mouse-models",
+      "legacyMd": "knockout-mouse-models.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/conventional-knockout-mouse-models",
+      "legacyMd": "conventional-knockout-mouse-models.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/conditional-knockout-mouse-models",
+      "legacyMd": "conditional-knockout-mouse-models.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/knockin-mouse-models",
+      "legacyMd": "knockin-mouse-models.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/cdna-knockin",
+      "legacyMd": "cdna-knockin.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/safe-harbor-locus",
+      "legacyMd": "safe-harbor-locus.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/rosa26",
+      "legacyMd": "rosa26.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/fast-mice",
+      "legacyMd": "fast-mice.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/humanized-mouse-models",
+      "legacyMd": "humanized-mouse-models.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/gene-replacement",
+      "legacyMd": "gene-replacement.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/custom-mouse-models",
+      "legacyMd": "custom-mouse-models.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/rat-models",
+      "legacyMd": "rat-models.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/custom-rabbit-models",
+      "legacyMd": "custom-rabbit-models.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/resources",
+      "legacyMd": "resources.md",
+      "notes": "General mapping"
+    },
+    {
+      "path": "/preclinical-services",
+      "legacyMd": "preclinical-services.md",
+      "notes": "General mapping"
+    },
+    {
+      "path": "/point-mutation-mice",
+      "legacyMd": "point-mutation-mice.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/custom-animal-models",
+      "legacyMd": "custom-animal-models.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/publications",
+      "legacyMd": "publications.md",
+      "notes": "General mapping"
+    },
+    {
+      "path": "/post-project-services",
+      "legacyMd": "post-project-services.md",
+      "notes": "General mapping"
+    },
+    {
+      "path": "/mouse-model-generation-guide",
+      "legacyMd": "mouse-model-generation-guide.md",
+      "notes": "General mapping"
+    },
+    {
+      "path": "/inducible-rosa26",
+      "legacyMd": "inducible-rosa26.md",
+      "notes": "1:1 mapping"
+    },
+    {
+      "path": "/lab-signals",
+      "legacyMd": "lab-signals.md",
+      "notes": "General mapping"
+    },
+    {
+      "path": "/start-your-project",
+      "legacyMd": "start-your-project.md",
+      "notes": "General mapping"
+    }
   ],
   "notes": "These pages should preserve their legacy URL paths. Content should be extracted from the legacy site and styled with new components."
 }

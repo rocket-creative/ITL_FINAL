@@ -36,8 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canon = driverSlugToCanonical(driverSlug);
   if (!canon) return { title: `Cre driver | ${SITE_NAME}` };
   const meta = applyCatalogFirstMeta(
-    `${canon} Mouse Line | Catalog + Custom | ITL`,
-    `Use ${canon} for tissue restricted recombination in mouse models. Pair with floxed alleles from our catalog or request a custom Cre project. Quote in about twenty four hours.`,
+    `${canon} Mouse Line | Catalog + Generation | ITL`,
+    `Use ${canon} for tissue restricted recombination in mouse models. Pair with floxed alleles from our catalog or request a generated Cre project. Quote in about twenty four hours.`,
     `/cre-drivers/${driverSlug}`,
   );
   const title = meta.title;

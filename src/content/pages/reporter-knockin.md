@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.694Z"
 
 **Url: /reporter-knockin**
 
-**Meta Description: Custom reporter knockin mouse models for gene expression analysis. LacZ, fluorescent protein, and luciferase reporters at endogenous loci. Since 1998.**
+**Meta Description: Generated reporter knockin mouse models for gene expression analysis. LacZ, fluorescent protein, and luciferase reporters at endogenous loci. Since 1998.**
 
 **Primary Keyword: reporter knockin mouse**
 
@@ -314,8 +314,7 @@ Li H, Chaitankar V, Cui L, Chen W, Chin K, Zhu J, Liu W, Rodgers GP. 2023. [Char
 
 ## Project Resources
 
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 - (/technologies)
 
 ## Start Your Reporter Knockin Project
@@ -363,6 +362,6 @@ Knockin reporters express from the endogenous gene locus under native regulatory
 - Reporter selection comparison table
 - Design options explained (replacement, fusion, IRES, 2A)
 - Applications covered (expression, lineage, sorting, imaging)
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - CTA to /request-quote
 - Word count ~2,000 (appropriate for model type page)

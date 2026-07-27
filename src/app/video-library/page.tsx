@@ -14,8 +14,7 @@ import Link from 'next/link';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
-  BreedingSchemeArchitectCTA,
-  LabSignalsSignup,
+  StandardPageCtaStack,
 } from '@/components/UXUIDC';
 import {
   IconPlay,
@@ -32,7 +31,7 @@ const videosData = [
   {
     id: 'itl-20-years',
     title: 'ingenious targeting laboratory - 20 Years of Innovation',
-    description: 'Celebrating two decades of excellence in custom mouse model generation and gene targeting services.',
+    description: 'Celebrating two decades of excellence in mouse model generation and gene targeting services.',
     youtubeId: '4b5VS7-td0Y',
     category: 'Company',
     featured: true,
@@ -70,9 +69,9 @@ const videosData = [
     featured: false,
   },
   {
-    id: 'custom-animal-models',
-    title: 'Custom Animal Models',
-    description: 'Overview of our custom animal model services including mouse, rat, and rabbit models.',
+    id: 'generated-animal-models',
+    title: 'Animal Model Generation',
+    description: 'Overview of our animal model generation services including mouse, rat, and rabbit models.',
     youtubeId: 'IEVpRnX9Fsk',
     category: 'Services',
     featured: false,
@@ -240,9 +239,6 @@ export default function VideoLibraryPage() {
         </div>
       </section>
 
-      {/* Breeding Scheme Architect CTA */}
-      <BreedingSchemeArchitectCTA variant="light" />
-
       {/* CTA Section */}
       <section style={{ backgroundColor: 'white', padding: '50px 20px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -296,7 +292,7 @@ export default function VideoLibraryPage() {
                 }}
               >
                 <IconFileText size={18} />
-                Request Custom Quote
+                Request a Quote
               </Link>
               <Link
                 href="/schedule-meeting"
@@ -321,17 +317,6 @@ export default function VideoLibraryPage() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Lab Signals Newsletter */}
-      <section style={{ backgroundColor: '#f8f9fa', padding: '50px 20px' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <LabSignalsSignup 
-            variant="banner"
-            title="Stay Informed with Lab Signals"
-            description="Get the latest research breakthroughs, technical guides, and expert insights delivered directly to your inbox. Join researchers worldwide who rely on Lab Signals for cutting-edge knowledge."
-          />
         </div>
       </section>
 
@@ -413,12 +398,12 @@ export default function VideoLibraryPage() {
       )}
       </main>
 
-      {/* Bottom dual-path CTA */}
-      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
-        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-          <CatalogCustomDualCta slug="video-library" utmMedium="page-closing" flush />
-        </div>
-      </section>
+      <StandardPageCtaStack
+        slug="video-library"
+        breedingSchemeVariant="light"
+        labSignalsTitle="Stay Informed with Lab Signals"
+        labSignalsDescription="Get the latest research breakthroughs, technical guides, and expert insights delivered directly to your inbox. Join researchers worldwide who rely on Lab Signals for cutting-edge knowledge."
+      />
 
       <UXUIDCFooter />
           

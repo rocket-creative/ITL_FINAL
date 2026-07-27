@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.085Z"
 
 **Url: /neuroscience-mouse-models**
 
-**Meta Description: Custom neuroscience mouse models for brain and behavior research. Neuronal knockouts, circuit dissection, and neurodegenerative disease models. Since 1998.**
+**Meta Description: Generated neuroscience mouse models for brain and behavior research. Neuronal knockouts, circuit dissection, and neurodegenerative disease models. Since 1998.**
 
 **Primary Keyword: neuroscience mouse model**
 
@@ -18,11 +18,11 @@ extracted: "2026-01-09T17:03:05.085Z"
 
 # Neuroscience Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported neuroscience researchers with custom mouse models contributing to peer reviewed publications in Nature Neuroscience, Neuron, Cell, Journal of Neuroscience, and leading neuroscience journals worldwide. Our neuroscience mouse models have advanced understanding of neural development, synaptic function, behavior, and neurological disease.
+Since 1998, Ingenious Targeting Laboratory has supported neuroscience researchers with mouse model generation contributing to peer reviewed publications in Nature Neuroscience, Neuron, Cell, Journal of Neuroscience, and leading neuroscience journals worldwide. Our neuroscience mouse models have advanced understanding of neural development, synaptic function, behavior, and neurological disease.
 
 Neuroscience mouse models enable researchers to investigate the molecular and cellular mechanisms underlying brain function and dysfunction. From cell type specific knockouts that dissect neural circuit function to disease mutation knockins that model neurological conditions, the right model design is critical for understanding the nervous system and developing treatments for neurological disorders.
 
-Conditional approaches are particularly important in neuroscience, where the same gene often has distinct functions in different neuronal populations, glial cells, and developmental stages. Ingenious Targeting Laboratory designs and generates custom neuroscience models tailored to your specific research questions.
+Conditional approaches are particularly important in neuroscience, where the same gene often has distinct functions in different neuronal populations, glial cells, and developmental stages. Ingenious Targeting Laboratory designs and generates neuroscience models for your specific research questions.
 
 ## Cell Type Specific Approaches
 
@@ -297,7 +297,7 @@ Visualize gene expression and cell populations:
 
 ### Pre Germline Characterization
 
-ES cell based targeting enables verification of neuroscience alleles before mouse generation:
+homologous recombination targeting enables verification of neuroscience alleles before mouse generation:
 
 - Confirm correct allele structure
 - Verify disease mutation sequences
@@ -368,8 +368,7 @@ Clausen BE et al. 1999. Conditional gene targeting in macrophages and granulocyt
 ## Project Resources
 
 - (/es-cell-gene-targeting)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Start Your Neuroscience Model Project
 
@@ -421,6 +420,6 @@ Standardize age, sex, circadian timing, and environmental conditions. Use litter
 - Neurodegenerative disease coverage (AD, PD, ALS, HD)
 - Research applications covered
 - Strain background considerations for behavior
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - CTA to /request-quote
 - Word count ~2,100 (appropriate for therapeutic area page)

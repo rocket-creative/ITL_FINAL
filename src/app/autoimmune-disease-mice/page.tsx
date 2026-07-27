@@ -15,16 +15,16 @@ import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } f
 const heroData = {
   badge: "Immune System Models",
   title: "Autoimmune Mouse Model",
-  intro: "Since 1998, ingenious targeting laboratory has supported autoimmune disease research with custom mouse models enabling mechanistic studies of immune tolerance breakdown, autoreactive lymphocyte development, and therapeutic interventions targeting aberrant immune responses.",
+  intro: "Since 1998, ingenious targeting laboratory has supported autoimmune disease research with mouse model generation enabling mechanistic studies of immune tolerance breakdown, autoreactive lymphocyte development, and therapeutic interventions targeting aberrant immune responses.",
   description: "Autoimmune disease mouse models provide essential platforms for investigating the molecular pathways underlying loss of self tolerance, testing hypotheses about genetic susceptibility, and developing therapies for conditions including lupus, rheumatoid arthritis, multiple sclerosis, and type 1 diabetes."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Disease Categories
@@ -214,7 +214,7 @@ export default function AutoimmuneDiseaseMicePage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request Custom Quote</span>
+                    <span>Request a Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
@@ -597,7 +597,7 @@ export default function AutoimmuneDiseaseMicePage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom autoimmune disease mouse models for immune system research. Study lupus, rheumatoid arthritis, and other autoimmune conditions.",
+            "description": "Generated autoimmune disease mouse models for immune system research. Study lupus, rheumatoid arthritis, and other autoimmune conditions.",
             "serviceType": "Autoimmune Disease Mouse Model Generation"
           })
         }}

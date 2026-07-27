@@ -116,7 +116,7 @@ function buildMetaDescription(geneName: string, models: ServerCatalogModel[]): s
   if (hasReady) parts.push('ready to ship');
   parts.push(`from ${SITE_NAME}`);
   if (combos) parts.push(`Browse ${combos} models`);
-  parts.push('Request a quote or inquire about custom models');
+  parts.push('Request a quote or inquire about model generation');
   return parts.join('. ') + '.';
 }
 
@@ -367,7 +367,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                   lineHeight: 1.6,
                 }}
               >
-                No listed {geneName} {focusType.toLowerCase()} allele yet — browse other {geneName} strains then request a custom {focusType.toLowerCase()} build.
+                No listed {geneName} {focusType.toLowerCase()} allele yet — browse other {geneName} strains then request a generated {focusType.toLowerCase()} build.
               </div>
             ) : null}
 
@@ -404,7 +404,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                   lineHeight: 1.65,
                 }}
               >
-                {creDriverQuery} crossed to {geneName} floxed animals — submit a cohort plan. Typical timelines run about 26 weeks from contract activation to study ready pups.
+                {creDriverQuery} crossed to {geneName} floxed animals — submit a cohort plan for genotyping, QC, and dispatch milestones.
               </div>
             ) : null}
 
@@ -441,7 +441,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                   borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
                 }}
               >
-                Request Custom Quote <IconChevronRight size={16} color="#fff" />
+                Request a Quote <IconChevronRight size={16} color="#fff" />
               </Link>
               <Link
                 href="/all-catalog-mouse-models"
@@ -645,7 +645,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                   </Link>
                 )}
                 <Link href="/custom-mouse-models/" style={{ padding: '6px 14px', background: '#f0f9f9', border: '1px solid #008080', borderRadius: '4px', color: '#008080', fontSize: '.83rem', fontWeight: 600, textDecoration: 'none' }}>
-                  Custom Mouse Model Services
+                  Mouse Model Generation Services
                 </Link>
               </div>
             </div>
@@ -763,7 +763,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                   : `Need a ${geneName} mouse model?`,
                 subline: hasLiveModels
                   ? `Get a confirmed quote in 24 hours. All ${geneName} models ship with full QC documentation, health certificates, and lifetime technical support.`
-                  : `Our team can deliver a custom ${geneName} mouse model with fast turnaround. Competitive pricing, expert project management, and full QC documentation included.`,
+                  : `Our team can deliver a generated ${geneName} mouse model with fast turnaround. Competitive pricing, expert project management, and full QC documentation included.`,
                 searchHref: hasLiveModels
                   ? `/order-catalog-models?gene=${encodeURIComponent(geneName)}`
                   : `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`,

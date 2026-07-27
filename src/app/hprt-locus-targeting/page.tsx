@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * HPRT Locus Targeting Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -21,23 +21,23 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "HPRT Locus Targeting",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, with hundreds utilizing safe harbor locus integration to achieve stable and predictable transgene expression. The HPRT locus represents one of the most versatile genomic sites for insertion of exogenous DNA, enabling researchers to generate consistent models without the variability associated with random integration approaches.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, with hundreds utilizing safe harbor locus integration to achieve stable and predictable transgene expression. The HPRT locus represents one of the most versatile genomic sites for insertion of exogenous DNA, enabling researchers to generate consistent models without the variability associated with random integration approaches.",
   description: "HPRT locus targeting allows researchers to insert reporter genes, selection markers, or therapeutic transgenes at a well-characterized genomic location that supports robust expression across diverse tissue types. This approach is particularly valuable when studying genes where single-copy integration and consistent expression levels are essential for research outcomes."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
 const faqData = [
-  { question: "Can HPRT targeted models support large insert capacity?", answer: "HPRT locus targeting successfully accommodates large genomic fragments, including BAC inserts spanning 100+ kilobases. Pre germline ES cell characterization confirms insertion structure regardless of insert size, ensuring researchers receive predictable models." },
+  { question: "Can HPRT targeted models support large insert capacity?", answer: "HPRT locus targeting successfully accommodates large genomic fragments, including BAC inserts spanning 100+ kilobases. Pre germline allele characterization confirms insertion structure regardless of insert size, ensuring researchers receive predictable models." },
   { question: "How does HPRT X-linked inheritance affect heterozygous females?", answer: "Heterozygous females carry one copy of the targeted HPRT allele and one wild-type allele on their second X chromosome. X inactivation results in approximately 50% of cells expressing the transgene, creating a mosaic tissue distribution. Hemizygous males express the transgene uniformly across all tissues." },
-  { question: "What expression levels typically result from HPRT safe harbor integration?", answer: "HPRT locus expression generally yields intermediate levels suitable for most reporter and transgenic applications. Specific expression depends on the transgene promoter driving expression, the surrounding chromatin context, and the specific insert design. ES cell characterization does not predict transgene expression levels, so researchers should plan founder line screening." },
+  { question: "What expression levels typically result from HPRT safe harbor integration?", answer: "HPRT locus expression generally yields intermediate levels suitable for most reporter and transgenic applications. Specific expression depends on the transgene promoter driving expression, the surrounding chromatin context, and the specific insert design. Allele characterization does not predict transgene expression levels, so researchers should plan founder line screening." },
   { question: "Can HPRT targeted alleles be combined with conditional knockout designs?", answer: "Yes, HPRT safe harbor locus targeting is fully compatible with LoxP site insertion enabling Cre mediated excision. This combination creates conditional transgenic models where exogenous gene expression can be induced or eliminated in tissue specific or temporally controlled contexts." }
 ];
 
@@ -145,7 +145,7 @@ export default function HprtLocusTargetingPage() {
                     fontWeight: 500
                   }}
                 >
-                  <span>Request Custom Quote</span>
+                  <span>Request a Quote</span>
                   <span>→</span>
                 </Link>
                 <Link 

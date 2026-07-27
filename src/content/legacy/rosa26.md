@@ -11,7 +11,7 @@ title: "Rapid-Rosa26™ Targeting Technology"
 
 ## Targeted transgenic mice using the Rosa26 locus.
 
-Rapid-Rosa26™ Targeting technology is ingenious' solution to the call for custom targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.
+Rapid-Rosa26™ Targeting technology is ingenious' solution to the call for model generation targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.
 
 We utilize well-validated gene targeting strategies combined with our ready-to-go enhancing vectors to ensure delivery of your expression cassette or cDNA to the Rosa26 locus in record time.
 

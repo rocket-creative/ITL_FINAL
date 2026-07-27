@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * Conceptual Workflow Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 48-60
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
-
-'use client';
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 

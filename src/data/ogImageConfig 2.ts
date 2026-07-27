@@ -36,7 +36,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   },
   '/why-choose-itl': {
     slug: 'why-choose-itl',
-    line1: '100% Success Rate',
+    line1: '900+ Laboratories Served',
     line2: '800+ Publications',
     line3: 'Guaranteed Germline',
     tier: 1,
@@ -72,7 +72,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   '/quality-control': {
     slug: 'quality-control',
     line1: 'Rigorous QC Protocols',
-    line2: 'ES Cell Validation',
+    line2: 'Pre Germline Validation',
     line3: 'Germline Verification',
     tier: 2,
   },

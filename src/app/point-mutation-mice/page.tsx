@@ -23,10 +23,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Applications Data
@@ -311,7 +311,7 @@ export default function PointMutationMicePage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -811,7 +811,7 @@ export default function PointMutationMicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Point Mutation Mice', path: '/point-mutation-mice' },
         ]}
       />
@@ -826,8 +826,8 @@ export default function PointMutationMicePage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom point mutation mouse models for disease variant modeling. Precise SNP knockin at endogenous loci with pre germline verification. Since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Generated point mutation mouse models for disease variant modeling. Precise SNP knockin at endogenous loci with pre germline verification. Since 1998.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

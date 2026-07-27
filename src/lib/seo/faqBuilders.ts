@@ -16,10 +16,6 @@ export function buildTierGeneModFaqs(params: {
   const ctx = tissueOrDriver ? `${tissueOrDriver.replace(/-/g, ' ')} focused ` : '';
   return [
     {
-      question: `How long does a ${gene} ${modLabel.toLowerCase()} project take?`,
-      answer: `Most custom ${modLabel.toLowerCase()} projects run near twenty six weeks from contract activation to study ready animals when breeding is straightforward. Complex humanization or multi allele stacks can add time. We return detailed quotes within about twenty four hours so you can align cohort start dates with grant or IND milestones.`,
-    },
-    {
       question: `Is ${gene} knockout embryonic lethal in mice?`,
       answer: `Lethality depends on genetic background and exact allele design. Some ${gene} germline knockouts are viable, others require conditional alleles or mixed backgrounds. We review publications and our own experience, then recommend floxed versus null approaches before you commit.`,
     },
@@ -29,7 +25,7 @@ export function buildTierGeneModFaqs(params: {
     },
     {
       question: `Do you ship live ${gene} animals?`,
-      answer: `When catalog lines are live, we ship with health certificates and QC documentation. If your exact combo is not listed, we quote a custom project with cryo or live dispatch options depending on cohort timing and geography.`,
+      answer: `When catalog lines are live, we ship with health certificates and QC documentation. If your exact combo is not listed, we quote a model generation project with cryo or live dispatch options depending on cohort timing and geography.`,
     },
     {
       question: `How do I request a quote for ${gene}?`,
@@ -51,7 +47,7 @@ export function buildCreLineFaqs(params: { tissueLabel: string }): FaqItem[] {
     },
     {
       question: `Where do I find floxed models to pair with these drivers?`,
-      answer: `Our catalog lists floxed conditional lines by gene. If your favorite target is not listed, we quote custom flox builds and crossing plans so you reach cohort size on a clear schedule.`,
+      answer: `Our catalog lists floxed conditional lines by gene. If your favorite target is not listed, we quote generated flox builds and crossing plans so you reach cohort size on a clear schedule.`,
     },
   ];
 }

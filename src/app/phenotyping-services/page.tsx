@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -10,22 +10,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconFlask, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Model Characterization",
   title: "Mouse Phenotyping Services",
-  intro: "ingenious targeting laboratory provides comprehensive phenotyping services to characterize your custom mouse models across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.",
+  intro: "ingenious targeting laboratory provides comprehensive phenotyping services to characterize your mouse model generation across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.",
   description: "From basic clinical observations through specialized disease specific endpoints, our phenotyping capabilities help you understand your model's biology and validate its utility for your research program."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Basic Phenotyping Items
@@ -68,11 +68,11 @@ const specialStains = [
 const histopathologyServices = [
   {
     name: "Tissue Collection",
-    description: "Standardized tissue collection protocols ensure optimal preservation for histological analysis. Collection can be customized based on expected phenotype."
+    description: "Standardized tissue collection protocols ensure optimal preservation for histological analysis. Collection can be scoped based on expected phenotype."
   },
   {
     name: "Routine Histology",
-    description: "Hematoxylin and eosin (H&E) staining provides overview of tissue architecture and pathology. Standard panels include major organs; custom panels focus on tissues of interest."
+    description: "Hematoxylin and eosin (H&E) staining provides overview of tissue architecture and pathology. Standard panels include major organs; generated panels focus on tissues of interest."
   },
   {
     name: "Immunohistochemistry",
@@ -148,7 +148,7 @@ const relatedServices = [
 ];
 
 const relatedModels = [
-  { title: "Custom Mouse Models", href: "/custom-mouse-models" },
+  { title: "Mouse Model Generation", href: "/custom-mouse-models" },
   { title: "Knockout Mouse Models", href: "/knockout-mouse-models" },
   { title: "Conditional Knockout Mouse Models", href: "/conditional-knockout-mouse-models" }
 ];
@@ -271,7 +271,7 @@ export default function PhenotypingServicesPage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request Custom Quote</span>
+                    <span>Request a Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
@@ -599,16 +599,6 @@ export default function PhenotypingServicesPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="phenotyping-services" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -618,13 +608,6 @@ export default function PhenotypingServicesPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="Phenotyping Service Insights" />
           </div>
         </section>
 
@@ -676,6 +659,10 @@ export default function PhenotypingServicesPage() {
         </section>
       </main>
 
+      <StandardPageCtaStack
+        slug="phenotyping-services"
+        labSignalsTitle="Phenotyping Service Insights"
+      />
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}

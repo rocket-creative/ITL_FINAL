@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,22 +9,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Motor Neuron Disease Models",
   title: "ALS Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported amyotrophic lateral sclerosis research with custom mouse models enabling mechanistic studies of motor neuron degeneration, evaluation of neuroprotective strategies, and preclinical testing of disease modifying therapeutics.",
+  intro: "Since 1998, ingenious targeting laboratory has supported amyotrophic lateral sclerosis research with mouse model generation enabling mechanistic studies of motor neuron degeneration, evaluation of neuroprotective strategies, and preclinical testing of disease modifying therapeutics.",
   description: "ALS mouse models provide essential platforms for investigating the molecular pathways underlying motor neuron death, testing hypotheses about protein aggregation and RNA metabolism, and developing therapies targeting SOD1, TDP43, FUS, C9orf72, and other genetically validated targets."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Major ALS Genes
@@ -537,16 +537,6 @@ export default function ALSMouseModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="als-mouse-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -556,16 +546,6 @@ export default function ALSMouseModelsPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Current on ALS Research"
-              description="Subscribe to Lab Signals for the latest motor neuron disease model updates and research insights."
-            />
           </div>
         </section>
 
@@ -637,6 +617,11 @@ export default function ALSMouseModelsPage() {
         </section>
       </main>
 
+      <StandardPageCtaStack
+        slug="als-mouse-models"
+        labSignalsTitle="Stay Current on ALS Research"
+        labSignalsDescription="Subscribe to Lab Signals for the latest motor neuron disease model updates and research insights."
+      />
       <UXUIDCFooter />
 
       {/* Schema.org Structured Data */}
@@ -658,7 +643,7 @@ export default function ALSMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom ALS mouse models for amyotrophic lateral sclerosis research. SOD1, TDP43, FUS, and C9orf72 models for motor neuron disease studies.",
+            "description": "Generated ALS mouse models for amyotrophic lateral sclerosis research. SOD1, TDP43, FUS, and C9orf72 models for motor neuron disease studies.",
             "serviceType": "ALS Mouse Model Generation"
           })
         }}

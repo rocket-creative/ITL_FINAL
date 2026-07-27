@@ -215,12 +215,12 @@ export default function TermsPage() {
               <div style={sectionStyle}>
                 <h2 style={headingStyle}>2. Description of services</h2>
                 <p style={paragraphStyle}>
-                  ingenious targeting laboratory provides custom gene targeting services for the 
+                  ingenious targeting laboratory provides generated gene targeting services for the 
                   generation of genetically modified mouse models. Our services include but are 
                   not limited to:
                 </p>
                 <ul style={listStyle}>
-                  <li>Custom knockout and knockin mouse model design and generation</li>
+                  <li>Generated knockout and knockin mouse model design and generation</li>
                   <li>Conditional and inducible mouse model development</li>
                   <li>Humanized mouse model engineering</li>
                   <li>Colony management and breeding services</li>
@@ -274,7 +274,7 @@ export default function TermsPage() {
 
                 <h3 style={subheadingStyle}>Project intellectual property</h3>
                 <p style={paragraphStyle}>
-                  Intellectual property rights related to custom projects are governed by the 
+                  Intellectual property rights related to model generation projects are governed by the 
                   specific service agreement for each project. Generally, clients retain ownership 
                   of project designs and resulting mouse models, while iTL retains rights to its 
                   proprietary technologies and methods.

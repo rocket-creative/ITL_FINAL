@@ -217,8 +217,8 @@ const modelDesignData = {
 const itlApproachData = {
   title: "Our Approach to LAG3 Humanization",
   points: [
-    "ES cell based gene targeting for precise humanization",
-    "Custom design to meet specific research requirements",
+    "homologous recombination targeting for precise humanization",
+    "Generated design to meet specific research requirements",
     "Pre germline characterization confirms targeting before mouse generation",
     "Sequence verification ensures correct human LAG3 integration",
     "Available on C57BL/6 or BALB/c backgrounds",
@@ -261,12 +261,7 @@ const faqData = [
   {
     question: "How do you validate LAG3 expression in humanized mice?",
     answer: "Validation includes flow cytometry for surface LAG3 expression on activated T cells, Western blot for protein expression, therapeutic antibody binding assays, and functional assessment of LAG3-mediated T cell inhibition. Pre-germline characterization confirms correct targeting before mouse generation."
-  },
-  {
-    question: "What is the timeline for generating LAG3 humanized mice?",
-    answer: "Custom LAG3 humanized mouse generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Pre-germline characterization enables early validation. Contact us for current timeline estimates based on your specific project requirements."
-  }
-];
+  },];
 
 // Related Links Data
 const relatedLinksData = {
@@ -292,7 +287,7 @@ const relatedLinksData = {
 // CTA Data
 const ctaData = makeFooterCta(
   'Start Your LAG3 Humanization Project',
-  'Our scientific consultants are ready to discuss your LAG3 humanization requirements and recommend the optimal strategy for your immuno oncology program. Initial consultation is provided at no charge and includes humanization approach recommendations, strain background guidance, and timeline estimates.',
+  'Our scientific consultants are ready to discuss your LAG3 humanization requirements and recommend the optimal strategy for your immuno oncology program. Initial consultation is provided at no charge and includes humanization approach recommendations, strain background guidance.',
 );
 
 export default function LAG3HumanizedMicePage() {
@@ -311,13 +306,13 @@ export default function LAG3HumanizedMicePage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "LAG3 Humanized Mouse Models",
-            "description": "Custom LAG3 humanized mouse models for anti LAG3 antibody testing. Human LAG3 knockin for immuno oncology checkpoint research and combination therapy evaluation.",
+            "description": "Generated LAG3 humanized mouse models for anti LAG3 antibody testing. Human LAG3 knockin for immuno oncology checkpoint research and combination therapy evaluation.",
             "provider": {
               "@type": "Organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
-            "serviceType": "Custom Mouse Model Generation",
+            "serviceType": "Mouse Model Generation",
             "areaServed": "Worldwide"
           })
         }}
@@ -373,7 +368,7 @@ export default function LAG3HumanizedMicePage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
             </div>
@@ -1006,7 +1001,7 @@ export default function LAG3HumanizedMicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'LAG3 Humanized Mice', path: '/lag3-humanized-mice' },
         ]}
       />

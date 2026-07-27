@@ -27,10 +27,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // What Is Section Data
@@ -194,13 +194,13 @@ export default function GeneReplacementPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Gene Replacement Mouse Models",
-            "description": "Gene replacement humanization substitutes mouse genes with human orthologs for preclinical testing of human specific therapeutics. Custom models since 1998.",
+            "description": "Gene replacement humanization substitutes mouse genes with human orthologs for preclinical testing of human specific therapeutics. Model generation since 1998.",
             "provider": {
               "@type": "Organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
-            "serviceType": "Custom Mouse Model Generation",
+            "serviceType": "Mouse Model Generation",
             "areaServed": "Worldwide"
           })
         }}
@@ -289,7 +289,7 @@ export default function GeneReplacementPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link href="/humanized-mouse-models" style={{
@@ -735,7 +735,7 @@ export default function GeneReplacementPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Gene Replacement', path: '/gene-replacement' },
         ]}
       />

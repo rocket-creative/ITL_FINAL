@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Facebook/Meta Pixel Integration
  * @version 1.0.0
@@ -5,11 +7,9 @@
  * @features
  * - Page view tracking
  * - Conversion events (Lead, Contact, etc.)
- * - Custom audiences for retargeting
+ * - Generated audiences for retargeting
  * - Consent mode integration
  */
-
-'use client';
 
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -172,7 +172,7 @@ export function trackFBSearch(searchString: string) {
 }
 
 /**
- * Track custom event
+ * Track generated event
  */
 export function trackFBCustomEvent(
   eventName: string,

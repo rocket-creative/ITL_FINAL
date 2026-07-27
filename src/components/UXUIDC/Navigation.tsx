@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * |UXUIDC| Navigation Component - Matches Screenshot Exactly
  * @version 2.1.0
  * Layout: Logo | Search (teal) | Nav Items | Start an Order | Start Your Project (grey)
  */
-
-'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
@@ -26,7 +26,7 @@ interface NavItem {
 // Complete Navigation Structure - Redesigned February 2026
 const navigationItems: NavItem[] = [
   {
-    label: 'Custom Models',
+    label: 'Model Generation',
     href: '/custom-mouse-models',
     categorizedChildren: {
       categories: [
@@ -203,7 +203,7 @@ const navigationItems: NavItem[] = [
         {
           title: 'Model Creation',
           items: [
-            { label: 'Custom Projects', href: '/custom-projects' },
+            { label: 'Model Generation Projects', href: '/custom-projects' },
             { label: 'Support Services', href: '/support-services' },
             { label: 'Post Project Services', href: '/post-project-services' },
           ],

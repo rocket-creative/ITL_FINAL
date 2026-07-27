@@ -4,21 +4,21 @@ slug: "mouse-model-services"
 extracted: "2026-01-09T17:03:04.960Z"
 ---
 
-# Custom Mouse Model Services | Knockout, Knockin, Humanized Models | Ingenious Targeting Laboratory
+# Mouse Model Generation Services | Knockout, Knockin, Humanized Models | Ingenious Targeting Laboratory
 
 **Url: /mouse-model-services**
 
-**Meta Description: Custom mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,800+ custom projects since 1998. Request consultation.**
+**Meta Description: Mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,800+ models generated since 1998. Request consultation.**
 
-**Primary Keyword: custom mouse models**
+**Primary Keyword: mouse model generation**
 
 **Secondary Keywords: mouse model services, knockout mouse, knockin mouse, humanized mouse, conditional knockout**
 
 **Word Count: 1800**
 
-# Custom Mouse Models
+# Mouse Model Generation
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.
 
 Whether you need a simple knockout to eliminate gene function, a conditional allele for tissue specific studies, a knockin model to introduce precise modifications, or a humanized mouse for translational research, Ingenious Targeting Laboratory provides the scientific expertise and technical infrastructure to bring your project from concept to study ready animals.
 
@@ -70,7 +70,7 @@ Ingenious Targeting Laboratory's targeted transgenic approach uses safe harbor l
 
 ### Conditional Gene Targeting
 
-Ingenious Targeting Laboratory specializes in conditional allele design using the Cre lox recombination system. Our derivative allele approach creates flexible alleles that can generate multiple model types from a single targeted ES cell clone.
+Ingenious Targeting Laboratory specializes in conditional allele design using the Cre lox recombination system. Our derivative allele approach creates flexible alleles that can generate multiple model types from a single targeted allele.
 
 The tm1a knockout first allele can be converted to:
 
@@ -84,13 +84,13 @@ This flexibility maximizes research value while minimizing project timelines and
 
 ## Strain Background Options
 
-Ingenious Targeting Laboratory generates custom models on the genetic background most appropriate for your research goals:
+Ingenious Targeting Laboratory generates model generation on the genetic background most appropriate for your research goals:
 
 **C57BL/6** remains the most widely used inbred strain, with extensive phenotypic data and compatibility with most disease models.
 
 **BALB/c** offers advantages for immunology research and certain tumor models.
 
-**129 Strain** ES cells provide exceptional targeting efficiency for complex allele designs.
+**129 Strain** offers advantages for certain complex allele designs for complex allele designs.
 
 **Mixed Backgrounds** can be backcrossed to your preferred strain following model generation.
 
@@ -140,16 +140,16 @@ Our scientific team designs and constructs targeting vectors tailored to your sp
 
 - Plasmid based vectors for standard targeting projects
 - BAC based vectors for large scale targeting (up to 200kb)
-- Custom cassette configurations for complex allele designs
+- Generated cassette configurations for complex allele designs
 - Validated vector backbones with proven targeting efficiency
 
 Vector design incorporates optimal LoxP and FRT site positioning, selection cassette configuration, and homology arm lengths to maximize targeting success.
 
 ### Microinjection Services
 
-Ingenious Targeting Laboratory's microinjection services deliver targeted ES cells into blastocysts for chimera generation:
+Ingenious Targeting Laboratory's microinjection services deliver targeted modifications into blastocysts for chimera generation:
 
-- Blastocyst injection with characterized ES cell clones
+- Blastocyst injection with characterized targeted clones
 - Morula injection for accelerated timelines
 - High efficiency injection protocols
 - Quality controlled injection procedures
@@ -167,8 +167,7 @@ Our experienced injection team ensures optimal chimera generation rates, support
 
 - (/knockout-strategy-guide)
 - (/conditional-vs-conventional-guide)
-- (/model-generation-timeline)
-
+- 
 ## Start Your Project
 
 Our scientific consultants can help you design the optimal mouse model strategy for your research goals. From initial concept through study ready animals, Ingenious Targeting Laboratory provides comprehensive support at every project phase.
@@ -181,8 +180,8 @@ Our scientific consultants can help you design the optimal mouse model strategy 
 
 **Can Ingenious Targeting Laboratory provide partial services if I already have reagents?**
 
-Yes. Partial service options are available for researchers with existing targeting vectors, ES cells, or other reagents. Services include ES cell targeting only, microinjection only, or germline transmission breeding. Contact us to discuss your specific requirements and receive a customized quote.
+Yes. Partial service options are available for researchers with existing targeting vectors or other reagents. Services include gene targeting only, microinjection only, or germline transmission breeding. Contact us to discuss your specific requirements and receive a project quote.
 
-**What strain backgrounds are available for custom models?**
+**What strain backgrounds are available for model generation?**
 
-Ingenious Targeting Laboratory offers C57BL/6, BALB/c, and 129 strain ES cells for targeted models. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological and metabolic studies. Strain selection depends on your research requirements and downstream breeding plans.
+Ingenious Targeting Laboratory offers C57BL/6, BALB/c, and 129 strain backgrounds for targeted models. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological and metabolic studies. Strain selection depends on your research requirements and downstream breeding plans.

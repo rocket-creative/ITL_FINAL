@@ -15,7 +15,7 @@ export const metadata = generateMetadata({
 export const breadcrumbSchema = generateBreadcrumbs({
   items: [
     { name: 'Home', path: '/' },
-    { name: 'Custom Models', path: '/custom-mouse-models' },
+    { name: 'Model Generation', path: '/custom-mouse-models' },
     { name: 'LAG3 Humanized Mice', path: '/lag3-humanized-mice' },
   ],
 });

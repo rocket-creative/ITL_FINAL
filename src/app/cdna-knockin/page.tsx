@@ -22,10 +22,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Key Characteristics
@@ -301,7 +301,7 @@ export default function CDNAKnockinPage() {
                     fontWeight: 500
                   }}
                 >
-                  <span>Request Custom Quote</span>
+                  <span>Request a Quote</span>
                   <span>→</span>
                 </Link>
                 <Link 
@@ -710,7 +710,7 @@ export default function CDNAKnockinPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'cDNA Knockin', path: '/cdna-knockin' },
         ]}
       />
@@ -725,8 +725,8 @@ export default function CDNAKnockinPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom cDNA knockin mouse models for gene expression studies. Insert complementary DNA sequences into specific genomic loci. Since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Generated cDNA knockin mouse models for gene expression studies. Insert complementary DNA sequences into specific genomic loci. Since 1998.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

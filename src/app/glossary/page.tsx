@@ -22,7 +22,7 @@ const heroData = {
   badge: "Glossary",
   title: "Mouse Genetics Glossary",
   intro: "A comprehensive reference of 60 technical terms used in mouse genetics and gene targeting.",
-  description: "This glossary covers essential concepts across 7 key categories: core genetics, mouse model strategies, recombination systems, vectors and ES cells, validation and QC, immunology and humanization, and study design applications."
+  description: "This glossary covers essential concepts across 7 key categories: core genetics, mouse model strategies, recombination systems, targeting vectors and delivery, validation and QC, immunology and humanization, and study design applications."
 };
 
 // CTA Data

@@ -62,10 +62,10 @@ describe('copy lint', () => {
     expect(r.pass).toBe(true);
   });
 
-  it('fails custom in h1', () => {
+  it('fails generated in h1', () => {
     const r = lintBuildInquiryCopy({
       title: 'Trp53 Knockout mouse | ingenious targeting laboratory',
-      h1: 'Custom Trp53 Knockout Mouse',
+      h1: 'Generated Trp53 Knockout Mouse',
       headings: [],
       bodyParagraphs: [],
     });

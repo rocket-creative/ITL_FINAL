@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.181Z"
 
 # Double Immune Checkpoint Mice
 
-Double immune checkpoint humanized mouse models express two human immune checkpoint proteins simultaneously, enabling evaluation of combination checkpoint inhibitor therapies. Since 1998, Ingenious Targeting Laboratory has generated custom mouse models, including dual checkpoint models such as PD1+CTLA4, PD1+PDL1, and other combinations for immunotherapy research.
+Double immune checkpoint humanized mouse models express two human immune checkpoint proteins simultaneously, enabling evaluation of combination checkpoint inhibitor therapies. Since 1998, Ingenious Targeting Laboratory has mouse model generation, including dual checkpoint models such as PD1+CTLA4, PD1+PDL1, and other combinations for immunotherapy research.
 
 Combination checkpoint blockade has shown enhanced efficacy compared to monotherapy in multiple cancer types. Double immune checkpoint humanized models enable preclinical evaluation of combination therapies using clinical antibody candidates, supporting therapeutic development programs.
 
@@ -49,7 +49,7 @@ Additional dual checkpoint combinations:
 - PD1 + LAG3
 - PD1 + TIM3
 - CTLA4 + PDL1
-- Custom combinations
+- Generated combinations
 
 ## Applications
 
@@ -112,9 +112,6 @@ Double checkpoint models are generated through sequential targeting and breeding
 
 Double immune checkpoint models enable testing of combination checkpoint blockade therapies in a single model system. This is important because combination therapies (e.g., PD1 + CTLA4) show enhanced efficacy in clinical trials. Testing combinations in double humanized models provides more physiologically relevant preclinical data.
 
-**How long does it take to generate double immune checkpoint models?**
-
-Combining two checkpoints requires sequential targeting (if starting from scratch) plus breeding time to generate double-humanized animals. If single-humanized models already exist, combining them requires only breeding time. We also have a catalog of already-created double immune checkpoint models that are maintained as live colonies for quick distribution. Contact us to determine the timeline for your specific model of interest.
 
 **Can triple or multi-checkpoint models be created?**
 

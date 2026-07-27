@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Gene Therapy Mouse Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -21,16 +21,16 @@ import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUID
 const heroData = {
   badge: "Our Services",
   title: "Gene Therapy Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported gene therapy research with custom mouse models that enable preclinical evaluation of viral vectors, gene editing approaches, and therapeutic transgene expression strategies.",
+  intro: "Since 1998, ingenious targeting laboratory has supported gene therapy research with mouse model generation that enable preclinical evaluation of viral vectors, gene editing approaches, and therapeutic transgene expression strategies.",
   description: "Gene therapy mouse models provide essential platforms for testing therapeutic gene delivery and expression in relevant disease contexts before advancing to clinical trials. These models allow researchers to evaluate vector tropism, expression levels, duration of therapeutic effect, and potential off target activities in a controlled in vivo setting."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -146,7 +146,6 @@ export default function GeneTherapyMouseModelsPage() {
             <CatalogCustomDualCta slug="gene-therapy-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
-
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>

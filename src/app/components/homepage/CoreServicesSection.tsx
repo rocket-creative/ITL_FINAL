@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * Core Research Services Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 14-27
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
-
-'use client';
 
 import Link from 'next/link';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';

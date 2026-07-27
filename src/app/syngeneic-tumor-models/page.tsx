@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -10,20 +10,20 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconDNA } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Immuno Oncology",
   title: "Syngeneic Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported immuno oncology research with custom mouse models that enable syngeneic tumor studies, providing immunocompetent platforms for evaluating cancer immunotherapies, checkpoint inhibitors, and combination treatment strategies.",
+  intro: "Since 1998, ingenious targeting laboratory has supported immuno oncology research with mouse model generation that enable syngeneic tumor studies, providing immunocompetent platforms for evaluating cancer immunotherapies, checkpoint inhibitors, and combination treatment strategies.",
   description: "Syngeneic tumor models involve implanting tumor cell lines into genetically compatible mouse hosts, enabling study of tumor immunity in the context of a fully functional immune system."
 };
 
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 const keyAdvantages = [
@@ -79,6 +79,17 @@ export default function SyngeneicTumorModelsPage() {
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       <main id="main-content">
+
+<section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h3 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related Humanized Models</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {relatedLinks.map((link, index) => (<div key={index} className="animate-in"><Link href={link.href} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600" style={{ color: '#2384da', fontSize: '.85rem' }}><IconChevronRight size={12} color="#2384da" /><span>{link.title}</span></Link></div>))}
+            </div>
+          </div>
+        </section>
+
+
         <section className="page-hero" ref={heroRef} style={{ background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)', padding: '80px 20px 60px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div className="hero-animate" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: '20px', marginBottom: '20px' }}><IconDNA size={16} color="white" /><span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span></div>
@@ -86,7 +97,7 @@ export default function SyngeneicTumorModelsPage() {
             <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: 400, lineHeight: '1.7rem', marginBottom: '15px', maxWidth: '800px' }}>{heroData.intro}</p>
             <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '25px', maxWidth: '800px' }}>{heroData.description}</p>
             <div className="hero-animate flex flex-wrap gap-4">
-              <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 20px', fontSize: '.85rem', fontWeight: 500 }}><span>Request Custom Quote</span><span>→</span></Link>
+              <Link href="/request-quote" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'white', color: '#0a253c', padding: '10px 20px', fontSize: '.85rem', fontWeight: 500 }}><span>Request a Quote</span><span>→</span></Link>
               <Link href="/contact" className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1" style={{ backgroundColor: 'transparent', color: 'white', padding: '10px 20px', border: '2px solid white', fontSize: '.85rem', fontWeight: 500 }}><span>Talk to a Scientist</span><span>→</span></Link>
             </div>
           </div>
@@ -154,35 +165,17 @@ export default function SyngeneicTumorModelsPage() {
         </section>
 
         {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="syngeneic-tumor-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+<section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently asked questions</h2>
             <div className="animate-in"><UXUIDCAnimatedFAQ faqs={faqData} /></div>
           </div>
         </section>
 
-        {/* Lab Signals Signup */}
-        <LabSignalsSignup 
-          title="Track Your Syngeneic Tumor Study"
-          description="Stay informed on your immuno-oncology model development, tumor cell line compatibility, and checkpoint inhibitor testing progress."
-        />
-
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h3 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related Humanized Models</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {relatedLinks.map((link, index) => (<div key={index} className="animate-in"><Link href={link.href} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600" style={{ color: '#2384da', fontSize: '.85rem' }}><IconChevronRight size={12} color="#2384da" /><span>{link.title}</span></Link></div>))}
-            </div>
-          </div>
-        </section>
+      <StandardPageCtaStack
+        slug="syngeneic-tumor-models"
+        showLabSignals={false}
+      />
       </main>
       <UXUIDCFooter />
       

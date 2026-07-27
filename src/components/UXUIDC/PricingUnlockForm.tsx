@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * |UXUIDC| PricingUnlockForm
  *
@@ -12,8 +14,6 @@
  * Submits to a real endpoint (not the previous client-only sham). Surfaces
  * a clear error state and disables the button while in flight.
  */
-
-'use client';
 
 import { useState } from 'react';
 
@@ -77,7 +77,7 @@ export default function PricingUnlockForm({
 
   // Inline styles instead of Tailwind so the widget renders correctly even
   // when injected into pages whose parents apply their own typography or
-  // utility classes (e.g. the dark hero section in custom-mouse-model-pricing).
+  // utility classes (e.g. the dark hero section in generated-mouse-model-pricing).
   const formStyle: React.CSSProperties = isStacked
     ? { display: 'flex', flexDirection: 'column', gap: '8px', width: '100%' }
     : { display: 'flex', flexWrap: 'wrap', gap: '8px', width: '100%', alignItems: 'stretch' };

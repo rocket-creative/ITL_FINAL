@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Preclinical Mouse Study Services',
-  description: 'Preclinical efficacy studies using custom and catalog mouse models. Drug screening, target validation, and pharmacology in disease models.',
+  description: 'Preclinical efficacy studies using generated and catalog mouse models. Drug screening, target validation, and pharmacology in disease models.',
   path: '/preclinical-services',
 });
 

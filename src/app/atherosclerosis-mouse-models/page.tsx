@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,22 +9,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Cardiovascular Disease Models",
   title: "Atherosclerosis Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with custom atherosclerosis mouse models enabling mechanistic studies of plaque development, lipid metabolism, and therapeutic interventions targeting the leading cause of death worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with model generation atherosclerosis mouse models enabling mechanistic studies of plaque development, lipid metabolism, and therapeutic interventions targeting the leading cause of death worldwide.",
   description: "Atherosclerosis mouse models provide essential platforms for investigating the molecular pathways underlying plaque initiation and progression, testing hypotheses about inflammation and lipid handling, and developing therapies for coronary artery disease and stroke prevention."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Disease Progression Stages
@@ -478,16 +478,6 @@ export default function AtherosclerosisMouseModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="atherosclerosis-mouse-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -497,16 +487,6 @@ export default function AtherosclerosisMouseModelsPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Current on Atherosclerosis Research"
-              description="Subscribe to Lab Signals for the latest cardiovascular disease model updates and research insights."
-            />
           </div>
         </section>
 
@@ -578,6 +558,11 @@ export default function AtherosclerosisMouseModelsPage() {
         </section>
       </main>
 
+      <StandardPageCtaStack
+        slug="atherosclerosis-mouse-models"
+        labSignalsTitle="Stay Current on Atherosclerosis Research"
+        labSignalsDescription="Subscribe to Lab Signals for the latest cardiovascular disease model updates and research insights."
+      />
       <UXUIDCFooter />
 
       {/* Schema.org Structured Data */}
@@ -599,7 +584,7 @@ export default function AtherosclerosisMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom atherosclerosis mouse models for cardiovascular research. Study plaque formation, lipid metabolism, and vascular disease mechanisms.",
+            "description": "Generated atherosclerosis mouse models for cardiovascular research. Study plaque formation, lipid metabolism, and vascular disease mechanisms.",
             "serviceType": "Atherosclerosis Mouse Model Generation"
           })
         }}

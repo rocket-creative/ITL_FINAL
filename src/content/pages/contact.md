@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.640Z"
 
 **Url: /general-contact**
 
-**Meta Description: Contact Ingenious Targeting Laboratory for custom mouse model projects. Request quotes, schedule consultations, and discuss research needs.**
+**Meta Description: Contact Ingenious Targeting Laboratory for mouse model generation projects. Request quotes, schedule consultations, and discuss research needs.**
 
 **Primary Keyword: contact Ingenious Targeting Laboratory**
 
@@ -22,7 +22,7 @@ Ready to discuss your mouse model project? Ingenious Targeting Laboratory's scie
 
 ## Request a Quote
 
-For project pricing and timeline estimates, submit your project details through our quote request form. Include information about:
+For project pricing, submit your project details through our quote request form. Include information about:
 
 - Target gene and intended modification
 - Model type (knockout, knockin, humanized, conditional)
@@ -42,7 +42,7 @@ Prefer to discuss your project directly? Schedule a virtual consultation with ou
 
 ## Why Choose Ingenious Targeting Laboratory
 
-With over 2,800 custom mouse model projects completed, Ingenious Targeting Laboratory brings extensive experience to every project. Our scientific consultants work closely with researchers to design optimal targeting strategies and ensure project success.
+With over 2,800 mouse model generation projects completed, Ingenious Targeting Laboratory brings extensive experience to every project. Our scientific consultants work closely with researchers to design optimal targeting strategies and ensure project success.
 
 We understand that each research program has unique requirements, and we tailor our approach to match your experimental goals, timeline, and budget. From initial consultation through delivery of study ready cohorts, we provide comprehensive support for your mouse model needs.
 
@@ -107,8 +107,7 @@ We typically respond to inquiries within one business day. Complex project inqui
 These resources may answer common questions:
 
 - (/faqs)
-- (/model-generation-timeline)
-- (/guides)
+- - (/guides)
 - (/technologies)
 
 ## Partners and Collaborators

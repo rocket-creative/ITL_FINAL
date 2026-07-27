@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * |UXUIDC| Flat SVG Icon System
  * Consistent flat icons across the site - NO emojis
  * @version 1.1.0 - Force rebuild for Turbopack compatibility
  */
-
-'use client';
 
 import React from 'react';
 

@@ -19,16 +19,16 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Strain Background",
   title: "BALB/c Mouse Background",
-  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models on multiple strain backgrounds including BALB/c. Understanding strain specific characteristics is essential for selecting the optimal genetic background for your research.",
+  intro: "Since 1998, ingenious targeting laboratory has mouse model generation on multiple strain backgrounds including BALB/c. Understanding strain specific characteristics is essential for selecting the optimal genetic background for your research.",
   description: "BALB/c mice are particularly valuable for immunological studies, syngeneic tumor models, and research where the strain's unique characteristics provide experimental advantages. Whether you are generating new knockout or knockin models on BALB/c background or backcrossing existing models onto this strain, ingenious targeting laboratory provides the expertise to deliver well characterized models suited to your research needs."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Strain Characteristics Data
@@ -107,7 +107,7 @@ const geneTargetingData = {
   sections: [
     {
       title: "Strain Availability",
-      description: "For more complex targeting projects, BALB/c derived ES cells can be used for direct targeting on this background. For simpler project types, direct injection into BALB/c embryos is possible."
+      description: "For more complex targeting projects, Direct targeting on BALB/c background is available for complex projects on this background. For simpler project types, direct injection into BALB/c embryos is possible."
     },
     {
       title: "Backcrossing Strategy",
@@ -173,7 +173,7 @@ const faqData = [
   },
   {
     question: "When should I choose BALB/c over C57BL/6 for my model?",
-    answer: "Choose BALB/c for Th2-biased immune responses, infectious disease models where BALB/c susceptibility is advantageous, or when matching existing BALB/c-based research protocols. Choose C57BL/6 for metabolic studies, standard behavioral assays, or when using C57BL/6N ES cells for targeting."
+    answer: "Choose BALB/c for Th2-biased immune responses, infectious disease models where BALB/c susceptibility is advantageous, or when matching existing BALB/c-based research protocols. Choose C57BL/6 for metabolic studies, standard behavioral assays, or when targeting on C57BL/6N background."
   },
   {
     question: "Can I backcross my existing model to BALB/c background?",
@@ -185,7 +185,7 @@ const faqData = [
   },
   {
     question: "What is involved in generating a model on BALB/c background?",
-    answer: "Custom mouse model generation timelines vary based on project complexity, model type, and specific requirements. Contact us for a detailed timeline estimate tailored to your project."
+    answer: "Model generation includes targeting construct design, allele verification, founder generation, and germline transmission. Contact us to discuss your project requirements."
   }
 ];
 
@@ -204,7 +204,7 @@ const relatedLinksData = {
 // CTA Data
 const ctaData = makeFooterCta(
   'Start Your Project',
-  'Ready to discuss custom mouse models on BALB/c or other strain backgrounds? Our scientific team provides complimentary consultation to help you select the optimal genetic background for your research.',
+  'Ready to discuss mouse model generation on BALB/c or other strain backgrounds? Our scientific team provides complimentary consultation to help you select the optimal genetic background for your research.',
 );
 
 export default function BALBcMouseBackgroundPage() {
@@ -223,7 +223,7 @@ export default function BALBcMouseBackgroundPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             "name": "BALB/c Mouse Background",
-            "description": "BALB/c mouse strain characteristics, immunological applications, and gene targeting considerations. Custom mouse models on BALB/c background since 1998.",
+            "description": "BALB/c mouse strain characteristics, immunological applications, and gene targeting considerations. Mouse model generation on BALB/c background since 1998.",
             "publisher": {
               "@type": "Organization",
               "name": "ingenious targeting laboratory",
@@ -317,7 +317,7 @@ export default function BALBcMouseBackgroundPage() {
                 textDecoration: 'none',
                 transition: 'background 0.2s ease'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link href="/c57bl6-mouse-background" style={{

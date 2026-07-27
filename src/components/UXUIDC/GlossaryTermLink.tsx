@@ -17,7 +17,7 @@ const BRAND = {
 interface GlossaryTermLinkProps {
   /** The slug of the glossary term (e.g., "cre-lox-system") */
   term: string;
-  /** Custom display text (defaults to the term name from glossary) */
+  /** Generated display text (defaults to the term name from glossary) */
   children?: React.ReactNode;
   /** Show tooltip on hover (default: true) */
   showTooltip?: boolean;

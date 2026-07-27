@@ -66,7 +66,7 @@ export default function ReporterMouseCatalogPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
             </div>

@@ -20,7 +20,7 @@ In order to understand transgenic mice, it is first necessary to learn about tra
 
 The most common methods of introducing a transgene into an animal model involve genetic manipulation, such as by pronuclear injection of embryos or by homologous recombination in cells. As a result, the use of genetically enhanced transgenic mice has become a crucial part of the science behind finding new treatments for human diseases.
 
-[Explore Custom Transgenic Mice](/transgenic-mouse-models/)
+[Explore Generated Transgenic Mice](/transgenic-mouse-models/)
 
 ## History of Transgenic Mice
 
@@ -62,7 +62,7 @@ Raghu Mirmira, MD, PhDIndiana University
 
 Over time as you continue to study your gene of interest, you may find that the random insertion that’s inherent in transgenic mice has become an obstacle. A common problem is that it’s better if the mouse gene is knocked out at the same time as the corresponding human gene is expressed. Because the transgene is inserted in a random location, scientists will have to cross the new line with a knockout line and track two alleles throughout their research.
 
-A targeted knockin model can eliminate this additional work by combining expression of the human sequence with knockout of the mouse sequence at a single genomic location. These advantages and others can make this [custom transgenic model](/transgenic-mouse-models/) into a cornerstone of your research for years. Even if you’re focused on your immediate research objectives, a transgenic mouse may be the tool you need.
+A targeted knockin model can eliminate this additional work by combining expression of the human sequence with knockout of the mouse sequence at a single genomic location. These advantages and others can make this [generated transgenic model](/transgenic-mouse-models/) into a cornerstone of your research for years. Even if you’re focused on your immediate research objectives, a transgenic mouse may be the tool you need.
 
 ### The Usefulness of the Transgenic Mouse for Research
 

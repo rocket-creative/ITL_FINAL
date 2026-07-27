@@ -1,28 +1,28 @@
 ---
-title: "Custom Projects"
-slug: "custom-projects"
+title: "Model Generation Projects"
+slug: "generated-projects"
 extracted: "2026-01-09T17:03:04.058Z"
 ---
 
-# Custom Mouse Model Projects | Knockout, Knockin, Humanized | Ingenious Targeting Laboratory
+# Mouse Model Generation Projects | Knockout, Knockin, Humanized | Ingenious Targeting Laboratory
 
 **Url: /custom-projects**
 
-**Meta Description: Custom mouse model generation tailored to your research. Knockout, knockin, conditional, and humanized models. 2,800+ custom projects since 1998.**
+**Meta Description: Mouse model generation for your research. Knockout, knockin, conditional, and humanized models. 2,800+ models generated since 1998.**
 
-**Primary Keyword: custom mouse model projects**
+**Primary Keyword: mouse model generation projects**
 
-**Secondary Keywords: custom knockout mouse, custom knockin, tailored mouse models, bespoke gene targeting**
+**Secondary Keywords: generated knockout mouse, generated knockin, tailored mouse models, bespoke gene targeting**
 
 **Word Count: 1800**
 
-# Custom Mouse Model Projects
+# Mouse Model Generation Projects
 
-Every research question is unique. Ingenious Targeting Laboratory specializes in designing and generating custom mouse models precisely matched to your experimental requirements. Since 1998, we have completed more than 2,800 custom projects, developing expertise across every model type and therapeutic area.
+Every research question is unique. Ingenious Targeting Laboratory specializes in designing and generating mouse model generation precisely matched to your experimental requirements. Since 1998, we have completed more than 2,800 model generation projects, developing expertise across every model type and therapeutic area.
 
 Whether you need a straightforward knockout, a sophisticated conditional allele, a precise point mutation, or a complex humanization, Ingenious Targeting Laboratory's scientific team provides the design expertise and technical capability to deliver study ready animals.
 
-## Our Custom Approach
+## Our Generated Approach
 
 ### Scientific Consultation
 
@@ -168,7 +168,7 @@ Ingenious Targeting Laboratory excels in sophisticated designs including:
 
 ## Selected Publications
 
-Ingenious Targeting Laboratory’s custom projects have contributed to more than 800 peer reviewed publications including:
+Ingenious Targeting Laboratory’s model generation projects have contributed to more than 800 peer reviewed publications including:
 
 - Landmark discoveries in cancer biology
 - Breakthrough findings in neurodegeneration
@@ -177,7 +177,7 @@ Ingenious Targeting Laboratory’s custom projects have contributed to more than
 
 (/publications)
 
-## Start Your Custom Project
+## Start Your Model Generation Project
 
 Our scientific consultants are ready to discuss your research goals and recommend optimal targeting strategies.
 
@@ -189,26 +189,25 @@ Our scientific consultants are ready to discuss your research goals and recommen
 
 ## Frequently Asked Questions
 
-**What types of custom projects does ITL handle?**
+**What types of model generation projects does ITL handle?**
 
-ITL handles all types of custom genetically engineered mouse models including knockout, knockin (point mutations, reporters, humanized), conditional knockout, transgenic models, and complex multi-allele combinations. We also provide services for colony management, cryopreservation, backcrossing, and preclinical studies.
+ITL handles all types of genetically engineered mouse models including knockout, knockin (point mutations, reporters, humanized), conditional knockout, transgenic models, and complex multi-allele combinations. We also provide services for colony management, cryopreservation, backcrossing, and preclinical studies.
 
-**How does the custom project process work?**
+**How does the model generation project process work?**
 
 The process includes scientific consultation, materials design and synthesis, mouse generation via injection, and germline transmission. 
 
-**What deliverables are included with custom projects?**
+**What deliverables are included with model generation projects?**
 
 Standard deliverables include germline-transmitted F1 heterozygous mice, genotyping protocols, and complete project documentation including materials information and confirmation of all project milestone steps. 
 
 **Can ITL help with complex or unusual project requirements?**
 
-Yes. ITL excels at complex projects including multi-allele combinations, conditional approaches, humanized models, and other custom designs. Our scientific team provides consultation to evaluate feasibility and recommend optimal strategies. Contact us to discuss your specific project requirements.
+Yes. ITL excels at complex projects including multi-allele combinations, conditional approaches, humanized models, and other generated designs. Our scientific team provides consultation to evaluate feasibility and recommend optimal strategies. Contact us to discuss your specific project requirements.
 
 ## Related Resources
 
-- (/model-generation-timeline)
-- (/knockout-strategy-guide)
+- - (/knockout-strategy-guide)
 - (/conditional-vs-conventional-guide)
 - (/technologies)
 - (/pricing-overview)

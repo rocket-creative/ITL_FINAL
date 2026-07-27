@@ -1,12 +1,12 @@
+'use client';
+
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * C57BL/6J vs C57BL/6N Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
-'use client';
-
 import { useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -15,22 +15,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "C57BL/6J vs C57BL/6N",
   intro: "C57BL/6 is the most widely used inbred mouse strain, but two major substrains exist with important genetic and phenotypic differences.",
-  description: "Understanding the distinction between C57BL/6J (Jackson) and C57BL/6N (NIH) is essential for reproducible research and appropriate model selection. Since 1998, ingenious targeting laboratory has generated custom mouse models on defined C57BL/6 backgrounds, with substrain selection guided by research requirements and phenotype considerations."
+  description: "Understanding the distinction between C57BL/6J (Jackson) and C57BL/6N (NIH) is essential for reproducible research and appropriate model selection. Since 1998, ingenious targeting laboratory has mouse model generation on defined C57BL/6 backgrounds, with substrain selection guided by research requirements and phenotype considerations."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -47,7 +47,7 @@ const relatedLinks = [
   { title: "C57bl6 Mouse Background", href: "/c57bl6-mouse-background" },
   { title: "Mouse Strain Backgrounds", href: "/mouse-strain-backgrounds" },
   { title: "Balbc Mouse Background", href: "/balbc-mouse-background" },
-  { title: "Custom Mouse Models", href: "/custom-mouse-models" },
+  { title: "Mouse Model Generation", href: "/custom-mouse-models" },
   { title: "Backcrossing Services", href: "/backcrossing-services" },
   { title: "Colony Management Services", href: "/colony-management-services" }
 ];
@@ -152,7 +152,7 @@ export default function C57bl6jVsC57bl6nPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -198,22 +198,6 @@ export default function C57bl6jVsC57bl6nPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start your project today
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
-            </p>
-            <CatalogCustomDualCta slug="c57bl6j-vs-c57bl6n" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
@@ -227,13 +211,6 @@ export default function C57bl6jVsC57bl6nPage() {
             </div>
           </section>
         )}
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="C57BL/6 Substrain Selection Insights" />
-          </div>
-        </section>
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
@@ -303,6 +280,12 @@ export default function C57bl6jVsC57bl6nPage() {
       />
       </main>
       
+      <StandardPageCtaStack
+        slug="c57bl6j-vs-c57bl6n"
+        closingTitle="Start your project today"
+        closingDescription="Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge."
+        labSignalsTitle="C57BL/6 Substrain Selection Insights"
+      />
       <UXUIDCFooter />
           
       {/* Schema.org Structured Data */}

@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * Animated Overview Section - Matches Webflow Design Exactly
  * science-overview container with overview-card styling
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
-
-'use client';
 
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -130,7 +130,7 @@ export default function AnimatedOverviewSection() {
               fontWeight: 400,
               lineHeight: '1.3rem'
             }}>
-              Custom mouse models including conventional knockouts, conditional knockouts, knock-ins (point mutation, cDNA, gene replacement), reporter alleles, Rosa26 and other targeted transgenics, and humanized models.
+              Mouse model generation including conventional knockouts, conditional knockouts, knock-ins (point mutation, cDNA, gene replacement), reporter alleles, Rosa26 and other targeted transgenics, and humanized models.
             </li>
             <li className="animate-item" style={{ 
               color: '#666',
@@ -160,7 +160,7 @@ export default function AnimatedOverviewSection() {
               fontWeight: 400,
               lineHeight: '1.3rem'
             }}>
-              Integrated non-GLP preclinical services for your custom or catalog model to support translational decisions.
+              Integrated non-GLP preclinical services for your model generation or catalog model to support translational decisions.
             </li>
           </ul>
         </div>

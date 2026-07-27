@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Animated Final CTA Section — sitewide dual-path widget
  * @version 4.0.0
  */
-
-'use client';
 
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 

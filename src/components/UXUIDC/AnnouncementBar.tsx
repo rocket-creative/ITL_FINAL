@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * |UXUIDC| Announcement Bar - Matches Screenshot
  * @version 2.2.0
  * Uses useSyncExternalStore to avoid hydration mismatch and setState-in-effect
  */
-
-'use client';
 
 import { useState, useCallback, useSyncExternalStore } from 'react';
 import Link from 'next/link';

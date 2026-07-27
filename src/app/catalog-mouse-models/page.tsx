@@ -19,8 +19,8 @@ import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 const heroData = {
   badge: "Ready to Ship Models",
   title: "Catalog Mouse Models",
-  intro: "In addition to custom gene targeting and editing services, ingenious targeting laboratory maintains catalog models available for rapid shipment. These include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging.",
-  description: "Catalog models provide immediate access to study ready strains without the timeline required for custom model generation. All catalog models are maintained under rigorous quality standards and shipped with complete documentation."
+  intro: "In addition to model generation gene targeting and editing services, ingenious targeting laboratory maintains catalog models available for rapid shipment. These include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging.",
+  description: "Catalog models provide immediate access to study ready strains without the timeline required for model generation. All catalog models are maintained under rigorous quality standards and shipped with complete documentation."
 };
 
 // Stats Data
@@ -132,7 +132,7 @@ const faqData = [
   },
   {
     question: "Can catalog models be customized or modified?",
-    answer: "Catalog models are provided as-is. If you need modifications (different background, additional alleles, or custom changes), we recommend a custom model generation project. Custom projects can sometimes build upon existing catalog models to reduce timeline and cost."
+    answer: "Catalog models are provided as-is. If you need modifications (different background, additional alleles, or generated changes), we recommend a model generation project. Generated projects can sometimes build upon existing catalog models to reduce timeline and cost."
   },
   {
     question: "How long does it take to receive catalog models?",
@@ -151,7 +151,7 @@ const relatedLinksData = {
     { href: "/disease-model-catalog", label: "Disease Model Catalog" }
   ],
   resources: [
-    { href: "/custom-mouse-models", label: "Custom Mouse Models" },
+    { href: "/custom-mouse-models", label: "Mouse Model Generation" },
     { href: "/cre-lox-system", label: "Cre Lox System" }
   ]
 };
@@ -286,7 +286,7 @@ export default function CatalogMouseModelsPage() {
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.3)'
               }}>
-                Request Custom Quote
+                Request a Quote
               </Link>
             </div>
           </div>

@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.281Z"
 
 **Url: /gene-replacement**
 
-**Meta Description: Gene replacement humanization substitutes mouse genes with human orthologs for preclinical testing of human specific therapeutics. Custom models since 1998.**
+**Meta Description: Gene replacement humanization substitutes mouse genes with human orthologs for preclinical testing of human specific therapeutics. Model generation since 1998.**
 
 **Primary Keyword: gene replacement mouse**
 
@@ -119,8 +119,7 @@ Serrano J, Boyd J, Brown IS, Mason C, Smith KR, Karolyi K, Maurya SK, Meshram NN
 ## Related Resources
 
 - (/es-cell-gene-targeting)
-- (/model-generation-timeline)
-- (/target-validation-mouse-models)
+- - (/target-validation-mouse-models)
 - (/antibody-therapeutics-mouse-models)
 
 ## Start Your Project

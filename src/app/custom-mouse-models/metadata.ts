@@ -1,13 +1,13 @@
 /**
- * SEO Metadata for Custom Mouse Models
+ * SEO Metadata for Mouse Model Generation
  * Auto-generated for canonical URLs and structured data
  */
 
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Custom Mouse Models | Gene Targeting',
-  description: 'Custom mouse models designed and engineered for your research. Knockouts, knockins, humanized, and transgenic models. 2,800+ custom projects delivered since 1998.',
+  title: 'Mouse Model Generation | Gene Targeting',
+  description: 'Mouse model generation designed and engineered for your research. Knockouts, knockins, humanized, and transgenic models. 2,800+ models generated since 1998.',
   path: '/custom-mouse-models',
 });
 
@@ -15,6 +15,6 @@ export const metadata = generateMetadata({
 export const breadcrumbSchema = generateBreadcrumbs({
   items: [
     { name: 'Home', path: '/' },
-    { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+    { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
   ],
 });

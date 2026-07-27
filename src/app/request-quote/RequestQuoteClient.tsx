@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Mouse Model Quote Request Page
  * With embedded HubSpot form in hero section
  */
-
-'use client';
 
 import { useRef, useState, useEffect } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
@@ -22,24 +22,24 @@ const REQUEST_QUOTE_THANK_YOU = '/request-quote/thank-you/';
 const heroData = {
   badge: "Our Services",
   title: "Mouse Model Quote Request",
-  intro: "Submit your mouse model project details to receive a customized quote including timeline, deliverables, and pricing. ingenious targeting laboratory\'s scientific consultants will review your request and provide strategic recommendations along with project pricing.",
+  intro: "Submit your mouse model project details to receive a project quote including timeline, deliverables, and pricing. ingenious targeting laboratory\'s scientific consultants will review your request and provide strategic recommendations along with project pricing.",
   description: ""
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
 const faqData = [
   { question: "What information do I need to provide for a quote request?", answer: "Provide target gene information (gene symbol, species, target region), model type (knockout, knockin, conditional, humanized, transgenic), strain background preference (C57BL/6, BALB/c, 129, or no preference), project scope (complete project or partial services), and cohort requirements (founders, breeding pairs, or study ready cohort)." },
   { question: "How long does it take to receive a quote?", answer: "Quotes are typically delivered within 1 business day after receiving your request. For complex projects requiring additional technical review, ingenious targeting laboratory will provide an estimated timeline for quote delivery." },
-  { question: "What is included in a project quote?", answer: "Quotes include recommended targeting strategy, allele design overview, project timeline by phase, deliverables at each milestone, pricing breakdown, and terms and conditions. Quotes are customized based on your specific research requirements and project scope." },
-  { question: "Can I get a quote for partial services?", answer: "Yes. We provide quotes for partial services including targeting vector only, ES cell targeting only, microinjection only, or other partial services. Pricing is based on the specific scope of work requested. Contact us to discuss your partial service needs." },
+  { question: "What is included in a project quote?", answer: "Quotes include recommended targeting strategy, allele design overview, Project phases, deliverables at each milestone, pricing breakdown, and terms and conditions. Quotes are scoped based on your specific research requirements and project scope." },
+  { question: "Can I get a quote for partial services?", answer: "Yes. We provide quotes for partial services including targeting vector only, gene targeting only, microinjection only, or other partial services. Pricing is based on the specific scope of work requested. Contact us to discuss your partial service needs." },
   { question: "What happens after I receive my quote?", answer: "After receiving your quote, our team is available to discuss any questions or concerns. We can adjust project scope, explore alternative approaches, or provide additional detail about any aspect of the proposed work. Our goal is to ensure you have all the information needed to make informed decisions." }
 ];
 
@@ -163,7 +163,7 @@ export default function RequestQuoteClient() {
                     marginBottom: '20px'
                   }}
                 >
-                  Custom Animal Model Quote Request Form
+                  Animal Model Generation Quote Request Form
                 </h1>
                 
                 <p 
@@ -243,7 +243,7 @@ export default function RequestQuoteClient() {
                 </div>
               </div>
               
-              {/* Right Column: Custom HubSpot Form (60%) */}
+              {/* Right Column: HubSpot Form (60%) */}
               <div className="lg:col-span-3 hero-animate">
                 <div style={{
                   backgroundColor: 'white',

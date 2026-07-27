@@ -120,7 +120,7 @@ export function trackPhoneCallAllPlatforms() {
     trackCTAClick('phone_call', 'header', 'tel:');
   });
 
-  // Facebook custom event
+  // Facebook generated event
   import('./FacebookPixel').then(({ trackFBCustomEvent }) => {
     trackFBCustomEvent('PhoneCall');
   });
@@ -146,7 +146,7 @@ export function trackEmailClickAllPlatforms() {
     trackCTAClick('email_click', 'contact', 'mailto:');
   });
 
-  // Facebook custom event
+  // Facebook generated event
   import('./FacebookPixel').then(({ trackFBCustomEvent }) => {
     trackFBCustomEvent('EmailClick');
   });

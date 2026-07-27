@@ -15,16 +15,16 @@ import { IconDNA, IconSettings, IconQuote, IconChevronRight, IconCheckCircle, Ic
 const heroData = {
   badge: "Autoimmune & Inflammatory Research",
   title: "Immunology Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported immunology researchers with custom mouse models contributing to peer reviewed publications in Immunity, Nature Immunology, Journal of Experimental Medicine, and leading immunology journals worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported immunology researchers with mouse model generation contributing to peer reviewed publications in Immunity, Nature Immunology, Journal of Experimental Medicine, and leading immunology journals worldwide.",
   description: "Our immunology mouse models have advanced understanding of immune cell development, autoimmune pathogenesis, and inflammatory disease mechanisms."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Intro Data
@@ -1097,8 +1097,8 @@ export default function ImmunologyMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom immunology mouse models for immune system research. Study immune function, disease mechanisms, and therapeutics. Autoimmune and inflammatory disease models since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Generated immunology mouse models for immune system research. Study immune function, disease mechanisms, and therapeutics. Autoimmune and inflammatory disease models since 1998.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

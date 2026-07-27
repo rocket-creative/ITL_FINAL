@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Mouse Model Research Applications Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -20,21 +20,21 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Mouse Model Research Applications",
-  intro: "Since 1998, ingenious targeting laboratory has generated custom mouse models supporting research across every major therapeutic area. Our models have contributed to more than 800 peer reviewed publications and advanced drug discovery programs from target validation through preclinical efficacy testing.",
+  intro: "Since 1998, ingenious targeting laboratory has mouse model generation supporting research across every major therapeutic area. Our models have contributed to more than 800 peer reviewed publications and advanced drug discovery programs from target validation through preclinical efficacy testing.",
   description: "Mouse models remain essential tools for understanding disease mechanisms, validating therapeutic targets, and testing novel interventions before clinical trials. ingenious targeting laboratory\'s expertise spans oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare diseases, and ophthalmology."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
 const faqData = [
-  { question: "What types of research applications use custom mouse models?", answer: "Custom mouse models are used for basic research (gene function studies, developmental biology, disease mechanisms), target validation (confirming therapeutic target relevance), drug discovery (preclinical testing, biomarker development), gene therapy development (AAV testing, therapeutic evaluation), and rare disease research (patient mutation modeling, therapeutic testing)." },
+  { question: "What types of research applications use mouse model generation?", answer: "Mouse model generation are used for basic research (gene function studies, developmental biology, disease mechanisms), target validation (confirming therapeutic target relevance), drug discovery (preclinical testing, biomarker development), gene therapy development (AAV testing, therapeutic evaluation), and rare disease research (patient mutation modeling, therapeutic testing)." },
   { question: "How do mouse models support target validation?", answer: "Target validation models demonstrate phenotypic consequences of target inhibition, disease pathway involvement, potential for therapeutic intervention, and safety signals from complete target elimination. Knockout or conditional knockout models provide definitive evidence for therapeutic target relevance before committing to drug discovery programs." },
   { question: "Can mouse models be used for biomarker discovery?", answer: "Yes. Reporter knockin models enable in vivo biomarker discovery and validation by visualizing gene expression patterns, cell populations, and pathway activation in living animals. Models enable tracking of biomarker expression during disease progression or treatment response, supporting translation to clinical assays." },
   { question: "What is the advantage of humanized models for drug development?", answer: "Humanized models express human target genes, enabling preclinical testing of therapeutics that target human-specific proteins. This is particularly important for monoclonal antibodies with species-specific epitopes, checkpoint inhibitors requiring human immune molecules, and gene therapy approaches targeting human sequences." }
@@ -143,7 +143,7 @@ export default function ResearchApplicationsPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -172,7 +172,6 @@ export default function ResearchApplicationsPage() {
             <CatalogCustomDualCta slug="research-applications" utmMedium="page-hero" flush />
           </div>
         </section>
-
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>

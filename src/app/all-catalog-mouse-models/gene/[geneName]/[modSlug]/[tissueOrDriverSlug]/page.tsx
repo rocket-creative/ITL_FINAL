@@ -116,7 +116,7 @@ export default async function GeneModContextTierPage({ params }: Props) {
     modLabel: modCanon,
     tissueOrDriver: tissueOrDriverSlug,
   });
-  const timeline = `Expect roughly twenty six weeks to study ready animals for many standard conditional crosses after contract start. We return quotes in about twenty four hours and map milestones for genotyping, QC, and dispatch.`;
+  const quoteNote = `We return quotes in about twenty four hours and map milestones for genotyping, QC, and dispatch.`;
 
   const extraProps: { '@type': 'PropertyValue'; name: string; value: string }[] = [];
   if (resolved.kind === 'tissue') {
@@ -208,7 +208,7 @@ export default async function GeneModContextTierPage({ params }: Props) {
             <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.4rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>Catalog options</h2>
             <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '20px' }}>{rationale}</p>
             {models.length === 0 ? (
-              <p style={{ color: '#666' }}>No published {modCanon} line is listed for {geneName} today. Request a custom build using the quote link above.</p>
+              <p style={{ color: '#666' }}>No published {modCanon} line is listed for {geneName} today. Request a generated build using the quote link above.</p>
             ) : (
               <div style={{ overflowX: 'auto' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '700px', fontSize: '.9rem' }}>
@@ -248,11 +248,11 @@ export default async function GeneModContextTierPage({ params }: Props) {
 
         <section style={{ background: '#fff', padding: '40px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0a253c', marginBottom: '8px' }}>Build timeline and pricing</h2>
-            <p style={{ color: '#444', lineHeight: 1.85 }}>{timeline}</p>
+            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0a253c', marginBottom: '8px' }}>Pricing and quotes</h2>
+            <p style={{ color: '#444', lineHeight: 1.85 }}>{quoteNote}</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '14px' }}>
               <Link href="/all-catalog-mouse-models" style={{ display: 'inline-block', padding: '10px 18px', background: '#008080', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Browse 14,774+ Catalog Models</Link>
-              <Link href="/request-quote" style={{ display: 'inline-block', padding: '10px 18px', background: '#0a253c', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Request Custom Quote</Link>
+              <Link href="/request-quote" style={{ display: 'inline-block', padding: '10px 18px', background: '#0a253c', color: '#fff', borderRadius: '4px', fontWeight: 700, textDecoration: 'none' }}>Request a Quote</Link>
             </div>
           </div>
         </section>

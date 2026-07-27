@@ -415,7 +415,7 @@ export const rosa26Resources: ResourceLink[] = [
 export const ratModelResources: ResourceLink[] = [
   {
     title: "Rat Model Quick Guide",
-    description: "Guide to custom rat model generation",
+    description: "Guide to model generation rat model generation",
     href: "https://go.genetargeting.com/rat-model-technology-guide",
     type: 'guide'
   },

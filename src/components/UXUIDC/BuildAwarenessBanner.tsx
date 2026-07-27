@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Sitewide build awareness banner — spec §6b.
  * Mobile-first: stacks on phone, row layout from md (iPad) up.
  */
-
-'use client';
 
 import { useState, useCallback, useSyncExternalStore } from 'react';
 import Link from 'next/link';

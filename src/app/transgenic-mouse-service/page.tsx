@@ -17,16 +17,16 @@ import { GlossaryTermLink, BreedingSchemeArchitectCTA, UXUIDCServicePricingAncho
 const heroData = {
   badge: "BAC Transgenics & ROSA26",
   title: "Transgenic Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including in Science, Nature, and Cell.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including in Science, Nature, and Cell.",
   description: "Transgenic mouse models introduce exogenous DNA sequences into the mouse genome for overexpression studies, tissue specific Cre driver generation, reporter line creation, and other applications requiring expression of non native sequences. Unlike knockin models that modify endogenous loci, transgenic approaches add new genetic elements either through random integration or targeted insertion at safe harbor loci."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Transgenic Approaches
@@ -258,7 +258,7 @@ export default function TransgenicMouseServicePage() {
                     fontWeight: 500
                   }}
                 >
-                  <span>Request Custom Quote</span>
+                  <span>Request a Quote</span>
                   <span>→</span>
                 </Link>
                 <Link 
@@ -309,7 +309,7 @@ export default function TransgenicMouseServicePage() {
         {/* Pricing anchor — captures "transgenic mouse" buyer queries */}
         <UXUIDCServicePricingAnchor
           serviceLabel="Transgenic Mouse"
-          headline="Custom transgenic mice — fixed-fee quote in 24 hours."
+          headline="Generated transgenic mice — fixed-fee quote in 24 hours."
           unlockInterest="Transgenic Mouse"
           subline="Pronuclear injection, BAC transgenics, and targeted transgenesis at safe harbor loci. Pricing scales with construct size and integration strategy. Free scientific consultation included."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=transgenic-pricing-anchor"
@@ -325,13 +325,7 @@ export default function TransgenicMouseServicePage() {
               question: 'What transgenic approaches do you offer?',
               answer:
                 'Three approaches: (1) conventional pronuclear injection for rapid, multi-copy random integration; (2) BAC transgenics for large constructs (up to ~200 kb) with native regulatory elements — ideal for tissue-specific Cre driver lines; (3) targeted transgenesis at Rosa26 or other safe harbor loci for single-copy integration with predictable expression.',
-            },
-            {
-              question: 'How long does it take to make a transgenic mouse?',
-              answer:
-                'Typical transgenic mouse projects deliver germline-confirmed founders in 4–9 months depending on approach. Pronuclear injection is fastest. BAC and targeted transgenesis take longer due to construct preparation and screening but deliver more predictable expression.',
-            },
-            {
+            },            {
               question: 'Do you have ready-to-ship transgenic mice?',
               answer:
                 'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models including Rosa26 reporter and Cre driver transgenic lines. Many ship from live colonies in weeks, not months.',
@@ -755,7 +749,7 @@ export default function TransgenicMouseServicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Transgenic Mouse Service', path: '/transgenic-mouse-service' },
         ]}
       />
@@ -773,8 +767,8 @@ export default function TransgenicMouseServicePage() {
               "alternateName": "iTL",
               "url": "https://www.genetargeting.com"
             },
-            "description": "Custom transgenic mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. BAC transgenics, Rosa26 and H11 safe harbor targeting, Cre drivers, and reporter lines. 2,800+ custom projects since 1998.",
-            "serviceType": "Custom Transgenic Mouse Model Generation",
+            "description": "Generated transgenic mouse models from ingenious targeting laboratory (iTL), a U.S. based mouse model generation company with a 100% germline transmission guarantee. BAC transgenics, Rosa26 and H11 safe harbor targeting, Cre drivers, and reporter lines. 2,800+ models generated since 1998.",
+            "serviceType": "Generated Transgenic Mouse Model Generation",
             "areaServed": "Worldwide",
             "award": "100% germline transmission guarantee"
           })
@@ -787,7 +781,7 @@ export default function TransgenicMouseServicePage() {
             "@context": "https://schema.org",
             "@type": ["Article", "TechArticle"],
             "headline": "Transgenic Mouse Models: BAC Transgenics, Safe Harbor Targeting, and Cre Drivers",
-            "description": "Guide to custom transgenic mouse model generation from ingenious targeting laboratory, a U.S. based custom mouse model company since 1998 with a 100% germline transmission guarantee.",
+            "description": "Guide to model generation transgenic mouse model generation from ingenious targeting laboratory, a U.S. based mouse model generation company since 1998 with a 100% germline transmission guarantee.",
             "url": "https://www.genetargeting.com/transgenic-mouse-service/",
             "mainEntityOfPage": "https://www.genetargeting.com/transgenic-mouse-service/",
             "inLanguage": "en-US",
@@ -805,8 +799,8 @@ export default function TransgenicMouseServicePage() {
               "name": "ingenious targeting laboratory",
               "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
             },
-            "about": ["Transgenic mouse models", "BAC transgenics", "Rosa26", "H11 safe harbor", "Cre drivers", "Reporter mice", "Custom mouse models"],
-            "keywords": "transgenic mouse models, BAC transgenics, Rosa26, H11, Cre drivers, reporter mice, custom mouse model company, ingenious targeting laboratory, iTL"
+            "about": ["Transgenic mouse models", "BAC transgenics", "Rosa26", "H11 safe harbor", "Cre drivers", "Reporter mice", "Mouse model generation"],
+            "keywords": "transgenic mouse models, BAC transgenics, Rosa26, H11, Cre drivers, reporter mice, mouse model generation company, ingenious targeting laboratory, iTL"
           })
         }}
       />

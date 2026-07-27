@@ -1,7 +1,7 @@
 ---
 title: "Diseases Caused by Point Mutations: Examples & Mechanisms"
 slug: "point-mutation-diseases"
-description: "Sickle cell, cystic fibrosis, cancer: how point mutations drive disease. Browse catalog disease models or request a custom variant for your study."
+description: "Sickle cell, cystic fibrosis, cancer: how point mutations drive disease. Browse catalog disease models or request a generated variant for your study."
 date: "Thu Jul 10 2025 15:33:51 GMT+0000 (Coordinated Universal Time)"
 category: "Educational"
 legacy_url: "https://www.genetargeting.com/ingenious-blog/point-mutation-diseases"
@@ -31,7 +31,7 @@ RELATED: [Browse catalog disease models](/all-catalog-mouse-models/?q=disease), 
 
 Tay-Sachs disease is one of those point mutation diseases that you don’t often hear about. However, it is very real, and the genetic defect that causes it is often passed down from parent to child. The defect is in the HEXA gene, on chromosome 15. This gene plays an important role in the function of the nervous system, and its impairment can lead to dangerously high levels of fatty tissue in the brain and spinal cord.
 
-[Search catalog disease variants](/all-catalog-mouse-models/?q=disease), [review custom options](/point-mutation-mice/), or [request a quote](/request-quote/).
+[Search catalog disease variants](/all-catalog-mouse-models/?q=disease), [review generated options](/point-mutation-mice/), or [request a quote](/request-quote/).
 
 #### Cancer and Tumors – The Main Diseases That Have to Be Studied
 
@@ -39,4 +39,4 @@ If the point mutation occurs in multiple tumor suppressors, the result is cancer
 
 Related: [What Is a Point Mutation](/ingenious-blog/what-is-a-point-mutation/), [Types of Point Mutations](/ingenious-blog/types-of-point-mutations/).
 
-**Ready to model a disease variant?** [Browse catalog knockins](/all-catalog-mouse-models/?q=disease), [explore custom work](/point-mutation-mice/), or [request a quote](/request-quote/).
+**Ready to model a disease variant?** [Browse catalog knockins](/all-catalog-mouse-models/?q=disease), [explore generated work](/point-mutation-mice/), or [request a quote](/request-quote/).

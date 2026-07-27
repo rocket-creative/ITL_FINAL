@@ -29,7 +29,7 @@ const combinationModels = [
   { combination: "PD1/CTLA4 Double Humanized", application: "Testing combinations similar to nivolumab plus ipilimumab" },
   { combination: "PD1/LAG3 Double Humanized", application: "Next generation combination therapies" },
   { combination: "Triple Checkpoint Models", application: "Multi agent regimens testing" },
-  { combination: "Custom Combinations", application: "Tailored to specific immunotherapy programs" }
+  { combination: "Generated Combinations", application: "Tailored to specific immunotherapy programs" }
 ];
 
 const humanizationStrategies = [
@@ -60,7 +60,7 @@ const relatedLinks = [
 
 const faqData = [
   { question: "Why do I need humanized checkpoint models instead of using mouse checkpoint inhibitors?", answer: "Most clinical checkpoint inhibitor antibodies are designed to target human proteins and do not cross react with mouse orthologs. Humanized checkpoint models express human PD1, PDL1, CTLA4, or other targets, enabling efficacy testing of clinical antibodies in immunocompetent mice with functional immune systems." },
-  { question: "What checkpoint models are available as catalog models?", answer: "We offer humanized models for PD1, PDL1, CTLA4, LAG3, TIM3, and other checkpoints, as well as single and dual checkpoint combinations. Catalog models provide study ready mice with shorter lead times than custom projects." },
+  { question: "What checkpoint models are available as catalog models?", answer: "We offer humanized models for PD1, PDL1, CTLA4, LAG3, TIM3, and other checkpoints, as well as single and dual checkpoint combinations. Catalog models provide study ready mice with shorter lead times than model generation projects." },
   { question: "Can I combine multiple humanized checkpoints in one mouse?", answer: "Yes. Dual or triple humanized checkpoint mice are commonly used for combination therapy studies. For example, PD1/CTLA4 double humanized mice enable testing of dual checkpoint blockade, which is increasingly important in clinical practice." },
   { question: "What syngeneic tumors can I use with humanized checkpoint models?", answer: "Humanized checkpoint models on C57BL/6 background are compatible with MC38, B16, E0771, and Lewis lung carcinoma. BALB/c models are compatible with CT26 and 4T1 tumors. Syngeneic tumor compatibility enables evaluation of checkpoint inhibitors in immunocompetent mice." }
 ];
@@ -117,7 +117,7 @@ export default function HumanizedImmuneCheckpointMicePage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
             </div>
@@ -233,7 +233,7 @@ export default function HumanizedImmuneCheckpointMicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Humanized Immune Checkpoint Mice', path: '/humanized-immune-checkpoint-mice' },
         ]}
       />

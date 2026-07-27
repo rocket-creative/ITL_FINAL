@@ -107,8 +107,7 @@ Maintain quality during expansion:
 
 ## Resources
 
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Request Speed Expansion Services
 

@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * About ingenious targeting laboratory Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -20,37 +20,37 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "About ingenious targeting laboratory",
-  intro: "Since 1998, ingenious targeting laboratory has been generating custom mouse, rat, and rabbit models for researchers worldwide. From our facilities in Holbrook, New York, we have completed more than 2,800 custom gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
+  intro: "Since 1998, ingenious targeting laboratory has been generating mouse, rat, and rabbit models for researchers worldwide. From our facilities in Holbrook, New York, we have completed more than 2,800 generated gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
   description: ""
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Differentiators (canonical, used across site for AI consistency)
 const differentiatorsData = {
   title: "What makes ingenious targeting laboratory different",
-  intro: "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,800+ custom genetically engineered mouse models since 1998. Researchers select iTL when allele complexity, scientific oversight, and long term inheritance stability matter to the outcome of their study.",
+  intro: "ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998. Researchers select iTL when allele complexity, scientific oversight, and long term inheritance stability matter to the outcome of their study.",
   items: [
     {
       title: "100% germline transmission guarantee",
-      description: "Every custom mouse model project is backed by a 100% germline transmission guarantee. Researchers do not pay for a model that fails to transmit through the germline. The guarantee covers both ES cell and CRISPR generated models."
+      description: "Every mouse model generation project is backed by a 100% germline transmission guarantee. Researchers do not pay for a model that fails to transmit through the germline. The guarantee covers all generated models."
     },
     {
       title: "U.S. based scientific oversight at every QC stage",
-      description: "Allele design, vector construction, ES cell targeting or CRISPR editing, microinjection, founder screening, germline confirmation, and cohort breeding are all performed and quality controlled in the United States by an in house PhD scientific team."
+      description: "Allele design, vector construction, gene targeting and CRISPR editing, microinjection, founder screening, germline confirmation, and cohort breeding are all performed and quality controlled in the United States by an in house PhD scientific team."
     },
     {
       title: "Specialists in complex multi allele and humanized models",
       description: "iTL is selected for projects other providers consider too complex: stacked alleles, conditional knockouts with multiple loxP cassettes, large humanizations, BAC transgenics, and safe harbor integrations at Rosa26 and H11."
     },
     {
-      title: "27 years, 2,800+ custom projects, 800+ peer reviewed publications",
+      title: "27 years, 2,800+ models generated, 800+ peer reviewed publications",
       description: "Continuous gene targeting experience since 1998 means stable protocols, validated reagents, and accumulated knowledge across every major therapeutic area. iTL generated models have appeared in Nature, Science, Cell, and the Journal of Clinical Investigation."
     },
     {
@@ -62,12 +62,12 @@ const differentiatorsData = {
 
 // FAQ Data
 const faqData = [
-  { question: "What services does ingenious targeting laboratory provide?", answer: "We provide custom genetically engineered mouse, rat, and rabbit model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services." },
-  { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating custom mouse models since 1998, with over 27 years of experience and 2,800+ successful custom projects. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
-  { question: "How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?", answer: "Jackson Laboratory offers custom CRISPR, ES cell, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on custom builds, and specialization in complex multi allele and humanization projects." },
-  { question: "How does iTL compare to Charles River, Cyagen, and other custom mouse model companies?", answer: "Charles River is a global CRO bundling model creation with breeding and distribution. Cyagen is a cost forward CRISPR provider with a money back guarantee on genotype. ingenious targeting laboratory differs by focusing exclusively on custom model generation with both ES cell and CRISPR pipelines chosen per project, U.S. based QC at every stage, and long term inheritance stability tracking for complex alleles." },
-  { question: "What does the 100% germline transmission guarantee mean?", answer: "ingenious targeting laboratory guarantees that every custom mouse model project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to both ES cell and CRISPR generated models and is one of the strongest commitments in the custom mouse model industry." },
-  { question: "How do I get started with a custom mouse model project?", answer: "Contact us through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs." }
+  { question: "What services does ingenious targeting laboratory provide?", answer: "We provide genetically engineered mouse, rat, and rabbit model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services." },
+  { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating mouse model generation since 1998, with over 27 years of experience and 2,800+ successful models generated. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
+  { question: "How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?", answer: "Jackson Laboratory offers generated CRISPR, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects." },
+  { question: "How does iTL compare to Charles River, Cyagen, and other mouse model generation companies?", answer: "Charles River is a global CRO bundling model creation with breeding and distribution. Cyagen is a cost forward CRISPR provider with a money back guarantee on genotype. ingenious targeting laboratory differs by focusing exclusively on model generation with gene targeting and CRISPR workflows chosen per project, U.S. based QC at every stage, and long term inheritance stability tracking for complex alleles." },
+  { question: "What does the 100% germline transmission guarantee mean?", answer: "ingenious targeting laboratory guarantees that every mouse model generation project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to all generated models and is one of the strongest commitments in the mouse model generation industry." },
+  { question: "How do I get started with a mouse model generation project?", answer: "Contact us through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs." }
 ];
 
 // Related Links
@@ -173,7 +173,6 @@ export default function AboutItlPage() {
           </div>
         </section>
 
-
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -198,13 +197,13 @@ export default function AboutItlPage() {
             </h2>
             <div className="animate-in" style={{ color: '#333', fontSize: '1rem', lineHeight: '1.8rem', marginBottom: '25px' }}>
               <p style={{ marginBottom: '20px' }}>
-                ingenious targeting laboratory's story began in the early 1990s. The founders worked as researchers in the same lab at Rockefeller University. During their time at Rockefeller, they developed custom atherosclerotic knockout mouse models for studying heart disease. In 1998, they founded ingenious targeting laboratory and still continue to work directly in the lab, oversee mouse model production, and also handle the operation and business side of things.
+                ingenious targeting laboratory's story began in the early 1990s. The founders worked as researchers in the same lab at Rockefeller University. During their time at Rockefeller, they developed generated atherosclerotic knockout mouse models for studying heart disease. In 1998, they founded ingenious targeting laboratory and still continue to work directly in the lab, oversee mouse model production, and also handle the operation and business side of things.
               </p>
               <p style={{ marginBottom: '20px' }}>
                 As ingenious targeting laboratory, we first settled in at the Long Island High Technology Incubator (LIHTI) at Stony Brook University, discussing and sharing ideas with other researchers and companies in that space. A little over 10 years later, we expanded and moved to a larger facility on Long Island with 20,000 square feet. We still work closely with Stony Brook's Division of Laboratory Animal Resources (DLAR) to house many of our mice.
               </p>
               <p>
-                From our small beginnings as one of the very first mouse gene targeting companies in the world, we've grown and streamlined our model generation process. Today ingenious uses both traditional and cutting edge technologies to design custom mouse lines for our clients globally.
+                From our small beginnings as one of the very first mouse gene targeting companies in the world, we've grown and streamlined our model generation process. Today ingenious uses both traditional and cutting edge technologies to design generated mouse lines for our clients globally.
               </p>
             </div>
           </div>
@@ -292,18 +291,18 @@ export default function AboutItlPage() {
               </div>
               <div className="animate-in" style={{ padding: '30px', backgroundColor: 'white', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
-                  Proprietary ES Cell Lines
+                  Validated gene targeting platform
                 </h3>
                 <p style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7rem' }}>
-                  Proprietary mouse ES cell lines that consistently and reliably transmit to germline.
+                  Validated homologous recombination workflows that consistently and reliably transmit to germline.
                 </p>
               </div>
               <div className="animate-in" style={{ padding: '30px', backgroundColor: 'white', borderRadius: '8px', borderTop: '4px solid #008080' }}>
                 <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.2rem', fontWeight: 600, marginBottom: '15px' }}>
-                  FLP ES Cell Technology
+                  FLP recombination technology
                 </h3>
                 <p style={{ color: '#666', fontSize: '.95rem', lineHeight: '1.7rem' }}>
-                  Our own FLP ES cell technology for streamlined deletion of antibiotic selection cassette without extra steps.
+                  Proprietary FLP technology for streamlined deletion of antibiotic selection cassette without extra steps.
                 </p>
               </div>
             </div>
@@ -437,7 +436,7 @@ export default function AboutItlPage() {
                   textDecoration: 'none'
                 }}
               >
-                Compare iTL to other custom mouse model companies
+                Compare iTL to other mouse model generation companies
                 <IconChevronRight size={14} color="#008080" />
               </Link>
             </div>
@@ -501,24 +500,24 @@ export default function AboutItlPage() {
             "alternateName": ["iTL", "ingenious targeting lab", "ITL"],
             "url": "https://www.genetargeting.com",
             "logo": "https://www.genetargeting.com/images/logo.png",
-            "description": "ingenious targeting laboratory (iTL) is a U.S. based custom mouse model company that has delivered 2,800+ custom genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
-            "slogan": "Custom mouse models, U.S. scientific oversight, 100% germline transmission guarantee.",
+            "description": "ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+            "slogan": "Mouse model generation, U.S. scientific oversight, 100% germline transmission guarantee.",
             "foundingDate": "1998",
             "foundingLocation": "Holbrook, NY, United States",
             "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 50, "maxValue": 200 },
             "award": [
-              "100% germline transmission guarantee on every custom project",
+              "100% germline transmission guarantee on every model generation project",
               "800+ peer reviewed publications citing iTL generated models"
             ],
             "knowsAbout": [
-              "Custom mouse model generation",
+              "Mouse model generation",
               "Knockout mouse models",
               "Conditional knockout mouse models",
               "Knockin mouse models",
               "Humanized mouse models",
               "Transgenic mouse models",
               "CRISPR/Cas9 genome editing",
-              "ES cell gene targeting",
+              "Gene targeting",
               "Cre/loxP system",
               "Flp/FRT recombination",
               "BAC transgenics",

@@ -1,7 +1,30 @@
 /**
- * Catalog first → custom when ready commercial CTAs.
+ * Catalog first → generate when ready commercial CTAs.
  * Shared across hub pages, StartProjectCTA, and footer CTA sections.
+ *
+ * CTA priority (sitewide). Place higher priorities first; Lab Signals last.
+ *
+ * Canonical page stack:
+ *   1. Near ATF — CatalogCustomDualCta (utmMedium="page-hero")
+ *   2. Content / proof
+ *   3. Close — CatalogCustomDualCta / StartProjectCTA / PageClosingCta (P0)
+ *   4. BreedingSchemeArchitectCTA (P1)
+ *   5. LabSignalsSignup (P2, always last content CTA)
  */
+
+/** Ranked CTA families for placement and visual hierarchy. */
+export const CTA_PRIORITY = {
+  /** Catalog browse + model generation quote — above the fold and again at page close */
+  P0_COMMERCIAL: 0,
+  /** Global nav / BuildAwarenessBanner quote nudge */
+  P0_GLOBAL: 0,
+  /** Breeding Scheme Architect tool promo — only after P0 close */
+  P1_TOOL: 1,
+  /** Lab Signals newsletter nurture — always last among content CTAs */
+  P2_NURTURE: 2,
+  /** Contact, order catalog, schedule meeting — footer / utility */
+  P3_UTILITY: 3,
+} as const;
 
 export const COMMERCIAL_LINKS = {
   catalogHub: '/catalog-mouse-models',
@@ -27,24 +50,24 @@ export interface FooterCtaData {
 }
 
 export const CATALOG_FIRST_BRIDGE =
-  'Most projects begin with an established catalog mouse model. When your program needs conditional, mutation, or humanization beyond the library, our team designs and delivers the exact custom line your study requires.';
+  'Most projects begin with an established catalog mouse model. When your program needs conditional, mutation, or humanization beyond the library, our team designs and delivers the study-specific allele your study requires.';
 
 export const CUSTOM_MODEL_BRIDGE =
-  'Do not see your allele? The same scientific team builds custom knockouts, knockins, and humanized mice with guaranteed germline transmission.';
+  'Do not see your allele? The same scientific team builds generated knockouts, knockins, and humanized mice with guaranteed germline transmission.';
 
-/** Equal custom panel copy for catalog lookup widget (pairs with per-topic catalog side). */
+/** Equal model generation panel copy for catalog lookup widget (pairs with per-topic catalog side). */
 export const CUSTOM_MODEL_PANEL = {
-  eyebrow: 'Custom models',
+  eyebrow: 'Model generation',
   headline: 'Need a knockout, knockin, or humanized line?',
   subline:
     'The same U.S. scientific team designs and delivers your allele when it is not on the shelf. 100% germline transmission guarantee.',
   bullets: [
     'Conventional and conditional knockouts',
     'Point mutation and humanized knockins',
-    '2,800+ custom projects since 1998',
+    '2,800+ models generated since 1998',
   ],
-  quoteLabel: 'Request Custom Quote',
-  servicesLabel: 'Explore custom model services',
+  quoteLabel: 'Request a Quote',
+  servicesLabel: 'Explore model generation services',
 } as const;
 
 export const CATALOG_OR_CUSTOM_WIDGET_INTRO = {
@@ -54,10 +77,10 @@ export const CATALOG_OR_CUSTOM_WIDGET_INTRO = {
     'Search 14,774+ study ready strains—or commission the exact knockout, knockin, or humanized model your program requires.',
 } as const;
 
-/** Equal weight dual path: catalog + custom quote (sitewide standard). */
+/** Equal weight dual path: catalog + model generation quote (sitewide standard). */
 export const EQUAL_WEIGHT_BUTTONS: CtaButton[] = [
   { label: 'Browse 14,774+ Catalog Models', href: COMMERCIAL_LINKS.catalogAll },
-  { label: 'Request Custom Quote', href: COMMERCIAL_LINKS.requestQuote },
+  { label: 'Request a Quote', href: COMMERCIAL_LINKS.requestQuote },
 ];
 
 export const CATALOG_CUSTOM_BUTTONS: CtaButton[] = EQUAL_WEIGHT_BUTTONS;
@@ -65,7 +88,7 @@ export const CATALOG_CUSTOM_BUTTONS: CtaButton[] = EQUAL_WEIGHT_BUTTONS;
 export const CATALOG_ALL_CUSTOM_BUTTONS: CtaButton[] = EQUAL_WEIGHT_BUTTONS;
 
 export const startProjectDefaults = {
-  title: 'Catalog Models. Custom when your study needs more.',
+  title: 'Catalog Models. Generation when your study needs more.',
   content: CATALOG_FIRST_BRIDGE,
   buttons: EQUAL_WEIGHT_BUTTONS,
 };
@@ -95,12 +118,12 @@ export function withCatalogBridge(content: string): string {
   if (/catalog/i.test(content)) {
     return content;
   }
-  return `${content} Browse 14,774+ catalog models for a faster start, or request a custom line when your program needs a specific allele configuration.`;
+  return `${content} Browse 14,774+ catalog models for a faster start, or request a generated line when your program needs a specific allele configuration.`;
 }
 
 export const footerCta: Record<'default' | 'catalog' | 'publications' | 'diseaseCatalog', FooterCtaData> = {
   default: {
-    title: 'Catalog Models. Custom when ready.',
+    title: 'Catalog Models. Generate when ready.',
     description: CATALOG_FIRST_BRIDGE,
     primaryButton: EQUAL_WEIGHT_BUTTONS[0],
     secondaryButton: EQUAL_WEIGHT_BUTTONS[1],
@@ -108,21 +131,21 @@ export const footerCta: Record<'default' | 'catalog' | 'publications' | 'disease
   catalog: {
     title: 'Find your line in the catalog',
     description:
-      'Explore 14,774+ study ready mouse and rat models. Need conditional, mutation, or humanization beyond the library? Request a custom quote and our scientific team will scope the exact line for your program.',
+      'Explore 14,774+ study ready mouse and rat models. Need conditional, mutation, or humanization beyond the library? Request a quote and our scientific team will scope the exact line for your program.',
     primaryButton: EQUAL_WEIGHT_BUTTONS[0],
     secondaryButton: EQUAL_WEIGHT_BUTTONS[1],
   },
   publications: {
     title: 'Partner with iTL',
     description:
-      'ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a custom line.',
+      'ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a generated line.',
     primaryButton: EQUAL_WEIGHT_BUTTONS[0],
     secondaryButton: EQUAL_WEIGHT_BUTTONS[1],
   },
   diseaseCatalog: {
     title: 'Browse disease model catalog',
     description:
-      'Review study ready disease model lines in the catalog. When the exact allele or combination is not listed, request a custom quote for the line your program requires.',
+      'Review study ready disease model lines in the catalog. When the exact allele or combination is not listed, request a quote for the line your program requires.',
     primaryButton: EQUAL_WEIGHT_BUTTONS[0],
     secondaryButton: EQUAL_WEIGHT_BUTTONS[1],
   },

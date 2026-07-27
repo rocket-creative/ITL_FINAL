@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.251Z"
 
 **Url: /cardiovascular-mouse-models**
 
-**Meta Description: Custom cardiovascular mouse models for heart disease research. Study cardiac function, vascular disease, and cardiovascular therapeutics.**
+**Meta Description: Generated cardiovascular mouse models for heart disease research. Study cardiac function, vascular disease, and cardiovascular therapeutics.**
 
 **Primary Keyword: cardiovascular mouse model**
 
@@ -16,7 +16,7 @@ extracted: "2026-01-09T17:03:03.251Z"
 
 # Cardiovascular Mouse Models
 
-Since 1998, ingenious targeting laboratory has supported cardiovascular research with custom mouse models enabling mechanistic studies of atherosclerosis, heart failure, hypertension, and other cardiovascular diseases that represent leading causes of morbidity and mortality worldwide.
+Since 1998, ingenious targeting laboratory has supported cardiovascular research with mouse model generation enabling mechanistic studies of atherosclerosis, heart failure, hypertension, and other cardiovascular diseases that represent leading causes of morbidity and mortality worldwide.
 
 Cardiovascular mouse models provide essential platforms for investigating the molecular mechanisms underlying vascular disease, testing hypotheses about lipid metabolism and inflammation, and developing therapies targeting cardiovascular risk factors and disease pathways.
 
@@ -148,7 +148,7 @@ Distinct cardiac phenotypes and response to cardiac stress compared to C57BL/6. 
 
 **129**
 
-ES cell donor strains carry varying degrees of 129 background that can influence cardiovascular phenotypes. Backcrossing to pure backgrounds eliminates these effects.
+129 derived backgrounds carry varying degrees of mixed strain contribution that can influence cardiovascular phenotypes. Backcrossing to pure backgrounds eliminates these effects.
 
 (/c57bl6-mouse-background)
 

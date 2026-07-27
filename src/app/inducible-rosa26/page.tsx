@@ -1,24 +1,16 @@
 'use client';
 
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * Inducible Rosa26 Page - ingenious targeting laboratory
  */
 
 import { useEffect, useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
-import {
-  UXUIDCNavigation,
-  UXUIDCFooter,
-  UXUIDCStartProjectCTA,
-  IconDNA,
-  IconArrowRight,
-  BreedingSchemeArchitectCTA,
-  LabSignalsSignup,
-} from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, IconDNA, IconArrowRight, StandardPageCtaStack } from '@/components/UXUIDC';
 
 
 export default function InducibleRosa26Page() {
@@ -103,7 +95,7 @@ export default function InducibleRosa26Page() {
                   fontWeight: 500,
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
             </div>
@@ -211,69 +203,12 @@ export default function InducibleRosa26Page() {
             </ul>
           </div>
         </section>
-
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* Related Links */}
-        <section style={{ backgroundColor: '#f7f7f7', padding: '50px 20px' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <h3
-              className="animate-in text-center"
-              style={{
-                color: '#333',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '1.3rem',
-                fontWeight: 600,
-                marginBottom: '20px',
-              }}
-            >
-              Related Technologies
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                { label: 'Rosa26 Locus', href: '/rosa26' },
-                { label: 'Safe Harbor Targeting', href: '/safe-harbor-locus' },
-                { label: 'Knockin Mouse Models', href: '/knockin-mouse-models' },
-              ].map((item, i) => (
-                <Link
-                  key={i}
-                  href={item.href}
-                  className="animate-in transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                  style={{
-                    backgroundColor: 'white',
-                    padding: '10px 20px',
-                    border: '1px solid #e0e0e0',
-                    color: '#008080',
-                    fontSize: '.9rem',
-                    fontWeight: 500,
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                  }}
-                >
-                  {item.label}
-                  <IconArrowRight size={14} color="#008080" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <UXUIDCStartProjectCTA
-          title="Start Your Inducible Rosa26 Project"
-          content="Our scientific consultants can help design the optimal inducible expression system for your research goals."
-        />
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#ffffff', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Updated on Rosa26 and Inducible Expression Technologies"
-              description="Get the latest insights on safe harbor targeting, temporal control systems, and advanced gene targeting strategies."
-            />
-          </div>
-        </section>
+      <StandardPageCtaStack
+        slug="inducible-rosa26"
+        closingTitle="Start Your Inducible Rosa26 Project"
+        closingDescription="Our scientific consultants can help design the optimal inducible expression system for your research goals."
+        showLabSignals={false}
+      />
       </main>
 
       <UXUIDCFooter />

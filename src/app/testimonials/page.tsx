@@ -20,7 +20,7 @@ import {
 
 export const metadata = {
   title: 'Client Testimonials | What Researchers Say | ingenious targeting laboratory',
-  description: 'Read testimonials from researchers at leading institutions worldwide who have partnered with ingenious targeting laboratory for custom mouse models.',
+  description: 'Read testimonials from researchers at leading institutions worldwide who have partnered with ingenious targeting laboratory for mouse model generation.',
 };
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
@@ -109,7 +109,7 @@ export default function TestimonialsPage() {
               className="mt-8 flex flex-wrap justify-center gap-8"
               style={{ fontSize: '0.95rem', color: '#ffffff', fontWeight: 500 }}
             >
-              <span>2,800+ Custom Projects Completed</span>
+              <span>2,800+ Models Generated Completed</span>
               <span style={{ color: 'rgba(255,255,255,0.9)' }}>•</span>
               <span>800+ Publications</span>
               <span style={{ color: 'rgba(255,255,255,0.9)' }}>•</span>
@@ -181,7 +181,7 @@ export default function TestimonialsPage() {
           </h2>
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Join the thousands of researchers who have trusted ingenious targeting laboratory 
-            for their custom mouse model needs.
+            for their mouse model generation needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
@@ -192,7 +192,7 @@ export default function TestimonialsPage() {
                 color: 'white',
               }}
             >
-              Request Custom Quote
+              Request a Quote
             </a>
             <a
               href="/publications"

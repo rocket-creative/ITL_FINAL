@@ -22,10 +22,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Why Use Tag Knockin Data
@@ -282,7 +282,7 @@ export default function TagKnockinMicePage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -742,7 +742,7 @@ export default function TagKnockinMicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Tag Knockin Mice', path: '/tag-knockin-mice' },
         ]}
       />
@@ -757,8 +757,8 @@ export default function TagKnockinMicePage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Epitope tag knockin mouse models with FLAG, HA, V5, and other tags. Track endogenous proteins without gene-specific antibodies. Custom models since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Epitope tag knockin mouse models with FLAG, HA, V5, and other tags. Track endogenous proteins without gene-specific antibodies. Model generation since 1998.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

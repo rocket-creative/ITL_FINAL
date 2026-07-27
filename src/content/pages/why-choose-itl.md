@@ -8,11 +8,11 @@ extracted: "2026-01-09T17:03:06.286Z"
 
 **Url: /why-choose-itl**
 
-**Meta Description: Why researchers choose Ingenious Targeting Laboratory for custom mouse models. 2,800+ custom projects, 800+ publications, pre germline characterization since 1998.**
+**Meta Description: Why researchers choose Ingenious Targeting Laboratory for mouse model generation. 2,800+ models generated, 800+ publications, pre germline characterization since 1998.**
 
 **Primary Keyword: why choose Ingenious Targeting Laboratory**
 
-**Secondary Keywords: mouse model expertise, gene targeting experience, ES cell advantages, trusted mouse model provider**
+**Secondary Keywords: mouse model expertise, gene targeting experience, gene targeting advantages, trusted mouse model provider**
 
 **Word Count: 1600**
 
@@ -24,9 +24,9 @@ Selecting a mouse model provider is a consequential decision that affects resear
 
 ### 28 Years of Experience
 
-Since 1998, Ingenious Targeting Laboratory has focused exclusively on custom mouse model generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
+Since 1998, Ingenious Targeting Laboratory has focused exclusively on mouse model generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
 
-**2,800+ Custom Projects Completed**
+**2,800+ Models Generated Completed**
 
 Spanning every model type and therapeutic area, this volume of experience means we have likely encountered challenges similar to yours and developed effective solutions.
 
@@ -66,7 +66,7 @@ Ingenious Targeting Laboratory provides complete project management from initial
 
 - Scientific consultation and design optimization
 - Targeting vector construction
-- ES cell targeting and characterization
+- gene targeting and characterization
 - Blastocyst injection and chimera generation
 - Germline transmission and founder delivery
 - Optional colony expansion and management
@@ -111,7 +111,7 @@ Ingenious Targeting Laboratory's animal facilities meet the highest standards fo
 Standardized protocols and quality control checkpoints ensure consistent, reproducible results:
 
 - Validated targeting vector construction
-- Characterized ES cell clone selection
+- Characterized targeted clone selection
 - Confirmed chimera identification
 - Verified germline transmission
 
@@ -120,7 +120,7 @@ Standardized protocols and quality control checkpoints ensure consistent, reprod
 Every project includes thorough documentation:
 
 - Targeting vector maps and sequences
-- ES cell characterization data
+- allele characterization data
 - Genotyping protocols and primers
 - Project summary reports
 
@@ -198,17 +198,17 @@ Experience the Ingenious Targeting Laboratory difference on your next mouse mode
 
 **What makes Ingenious Targeting Laboratory different from other mouse model providers?**
 
-ingenious targeting laboratory has 28 years of exclusive focus on custom mouse model generation, 2,800+ completed custom projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
+ingenious targeting laboratory has 28 years of exclusive focus on mouse model generation, 2,800+ completed model generation projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
 
 **How does ingenious targeting laboratory's experience benefit my project?**
 
-ingenious targeting laboratory's 2,800+ custom projects across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application.
+ingenious targeting laboratory's 2,800+ models generated across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application.
 
 **What support does ingenious targeting laboratory provide after model delivery?**
 
 ingenious targeting laboratory provides ongoing support including colony management services, cryopreservation for line archival, rederivation for health status upgrade, and technical consultation. We work with you throughout your research program to ensure model performance and address any questions that arise.
 
-**How do I get started with a custom mouse model project?**
+**How do I get started with a mouse model generation project?**
 
 Contact ingenious targeting laboratory through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs.
 

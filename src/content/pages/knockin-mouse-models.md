@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.694Z"
 
 **Url: /knockin-mouse-models**
 
-**Meta Description: Custom knockin mouse models for gene modification. Point mutations, reporters, tags, and cDNA insertions for research applications.**
+**Meta Description: Generated knockin mouse models for gene modification. Point mutations, reporters, tags, and cDNA insertions for research applications.**
 
 **Primary Keyword: knockin mouse**
 
@@ -18,11 +18,11 @@ extracted: "2026-01-09T17:03:04.694Z"
 
 # Knockin Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.
 
 Knockin mouse models enable precise genetic modifications at endogenous loci. Unlike knockout models that eliminate gene function, knockin models modify genes in specific ways: introducing point mutations that mimic human disease alleles, inserting reporter genes to visualize expression patterns, or adding epitope tags to track protein localization. Because modifications occur at the native locus, knockin alleles maintain endogenous regulatory control over expression timing, tissue distribution, and transcript processing.
 
-From single nucleotide changes to complete gene replacements, ITL designs and delivers knockin mice tailored to your experimental requirements.
+From single nucleotide changes to complete gene replacements, ITL designs and delivers knockin mice for your experimental requirements.
 
 ## Knockin Approaches
 
@@ -152,13 +152,12 @@ Mohassel P, Hearn H, Rooney J, Zou Y, Johnson K, Norato G, Nalls MA, Yun P, Ogat
 ## Related Resources
 
 - (/es-cell-gene-targeting)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 - (/technologies)
 
 ## Start Your Knockin Project
 
-Our scientific consultants are ready to discuss your research requirements and recommend the optimal knockin strategy for your experimental goals. Initial consultation is provided at no charge and includes modification site analysis, allele design recommendations, and timeline estimates.
+Our scientific consultants are ready to discuss your research requirements and recommend the optimal knockin strategy for your experimental goals. Initial consultation is provided at no charge and includes modification site analysis, allele design recommendations.
 
 (/request-quote)
 
@@ -178,6 +177,3 @@ Common reporters include fluorescent proteins (GFP, EGFP, tdTomato, mCherry), en
 
 Tag placement depends on protein structure and function. N-terminal tags can interfere with signal peptides or membrane targeting. C-terminal tags avoid signal sequence issues but may affect protein interactions at the terminus. Contact us to discuss tag positioning.
 
-**How long does it take to generate a knockin mouse model?**
-
-Knockin projects typically require 6-10 months depending on complexity. Point mutations and small tags are faster. Large insertions require more time. Timelines include gene analysis, target design determination, material generation, injection, and breeding of F0s to obtain germline transmission mice.

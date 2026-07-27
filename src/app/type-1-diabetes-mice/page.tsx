@@ -1,12 +1,12 @@
+'use client';
+
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * Type 1 Diabetes Mice Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
-'use client';
-
 import { useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -14,22 +14,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Type 1 Diabetes Mice",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 85 custom type 1 diabetes models including NOD transgenic variants, streptozotocin-responsive knockins, and humanized immune checkpoint models, contributing to 68+ peer reviewed publications in autoimmune diabetes research. Type 1 diabetes results from loss of immune tolerance to pancreatic beta cells.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 85 generated type 1 diabetes models including NOD transgenic variants, streptozotocin-responsive knockins, and humanized immune checkpoint models, contributing to 68+ peer reviewed publications in autoimmune diabetes research. Type 1 diabetes results from loss of immune tolerance to pancreatic beta cells.",
   description: "Unlike type 2 diabetes driven by metabolic dysfunction, type 1 involves T cell-mediated destruction of insulin-producing cells. Mouse models recapitulate the autoimmune progression through transgenic disease susceptibility genes, chemical induction of beta cell destruction, and combination approaches capturing human disease complexity."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -144,7 +144,7 @@ export default function Type1DiabetesMicePage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -174,7 +174,6 @@ export default function Type1DiabetesMicePage() {
           </div>
         </section>
 
-
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -191,22 +190,6 @@ export default function Type1DiabetesMicePage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start your project today
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
-            </p>
-            <CatalogCustomDualCta slug="type-1-diabetes-mice" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
@@ -220,16 +203,6 @@ export default function Type1DiabetesMicePage() {
             </div>
           </section>
         )}
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Current on Type 1 Diabetes Research"
-              description="Subscribe to Lab Signals for the latest autoimmune diabetes model updates and research insights."
-            />
-          </div>
-        </section>
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
@@ -297,6 +270,12 @@ export default function Type1DiabetesMicePage() {
           })
         }}
       />
+            <StandardPageCtaStack
+        slug="type-1-diabetes-mice"
+        labSignalsTitle="Stay Current on Type 1 Diabetes Research"
+        labSignalsDescription="Subscribe to Lab Signals for the latest autoimmune diabetes model updates and research insights."
+      />
+
       </main>
       
       

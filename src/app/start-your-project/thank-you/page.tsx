@@ -101,7 +101,7 @@ export default function StartProjectThankYouPage() {
               }}
             >
               Thank you. Your pricing guide access is ready. Open the guide for starting prices,
-              timelines, and flexible payment options.
+              and flexible payment options.
             </p>
           </div>
         </section>

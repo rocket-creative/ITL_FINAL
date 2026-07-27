@@ -92,7 +92,7 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.3)'
               }}>
-                Custom Model Quote
+                Model Generation Quote
               </Link>
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
               color: 'rgba(255,255,255,0.9)',
               marginBottom: '24px',
             }}>
-              Our team can help you find the right model or create a custom solution tailored to your research.
+              Our team can help you find the right model or build a model generation solution for your research.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
               <Link href="/order-catalog-models" style={{
@@ -260,7 +260,7 @@ export default function AllCatalogContent({ initialQuery, preloadedModels = [] }
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.5)'
               }}>
-                Custom Model Quote
+                Model Generation Quote
               </Link>
             </div>
           </div>

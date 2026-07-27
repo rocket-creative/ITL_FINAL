@@ -392,68 +392,85 @@ export default function LabSignalsSignup({
     );
   }
 
-  // Default banner variant
+  // Default banner variant — softer than P0 commercial CTAs (P2 nurture)
   return (
-    <div style={{
-      background: '#ffffff',
-      borderRadius: '0',
-      padding: '20px',
-      border: '6px solid #fb0',
-      transition: 'box-shadow 0.3s ease',
-      cursor: 'pointer'
-    }}
-    className="hover:shadow-lg"
-    onMouseEnter={(e) => {
-      e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
-    }}
-    onMouseLeave={(e) => {
-      e.currentTarget.style.boxShadow = 'none';
-    }}>
-      <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-8 items-center">
-        <div style={{ width: 'auto', height: '125px', maxHeight: '125px' }}>
-          <Image 
-            src="/images/lab-signals-logo.svg" 
+    <div
+      style={{
+        background: '#fafaf9',
+        borderRadius: '0',
+        padding: '18px 20px',
+        border: '1px solid #e7e5e4',
+        borderLeft: '3px solid #d4a017',
+        transition: 'box-shadow 0.3s ease',
+      }}
+      className="hover:shadow-sm"
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.06)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = 'none';
+      }}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-6 items-center">
+        <div style={{ width: 'auto', height: '72px', maxHeight: '72px' }}>
+          <Image
+            src="/images/lab-signals-logo.svg"
             alt="Lab Signals"
-            width={250}
-            height={125}
-            style={{ objectFit: 'contain', width: 'auto', height: '125px', maxHeight: '125px' }}
+            width={160}
+            height={72}
+            style={{ objectFit: 'contain', width: 'auto', height: '72px', maxHeight: '72px' }}
           />
         </div>
-        
+
         <div>
-          <h3 style={{
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: '1.5rem',
-            fontWeight: 700,
-            color: '#000',
-            marginBottom: '12px',
-            marginTop: 0
-          }}>
+          <p
+            style={{
+              fontSize: '0.7rem',
+              fontWeight: 600,
+              letterSpacing: '1.2px',
+              textTransform: 'uppercase',
+              color: '#78716c',
+              margin: '0 0 6px 0',
+            }}
+          >
+            Newsletter
+          </p>
+          <h3
+            style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '1.15rem',
+              fontWeight: 600,
+              color: '#0a253c',
+              marginBottom: '8px',
+              marginTop: 0,
+            }}
+          >
             {title}
           </h3>
-          <p style={{ fontSize: '.95rem', color: '#000', lineHeight: 1.6, marginBottom: 0 }}>
+          <p style={{ fontSize: '.9rem', color: '#57534e', lineHeight: 1.6, marginBottom: 0 }}>
             {description}
           </p>
         </div>
-        
+
         <Link
           href="/lab-signals"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '10px',
-            padding: '14px 28px',
-            background: '#fb0',
-            color: '#000',
+            gap: '8px',
+            padding: '10px 18px',
+            background: 'transparent',
+            color: '#0a253c',
             borderRadius: '0',
-            fontSize: '1rem',
-            fontWeight: 700,
+            fontSize: '.85rem',
+            fontWeight: 600,
             textDecoration: 'none',
-            whiteSpace: 'nowrap'
+            whiteSpace: 'nowrap',
+            border: '1px solid #0a253c',
           }}
         >
           Subscribe Free
-          <IconArrowRight size={18} color="#000" />
+          <IconArrowRight size={14} color="#0a253c" />
         </Link>
       </div>
     </div>

@@ -18,13 +18,13 @@ extracted: "2026-01-09T17:03:05.510Z"
 
 # Preclinical Mouse Model Services
 
-Since 1998, Ingenious Targeting Laboratory has provided comprehensive preclinical support extending from custom model generation through in vivo studies and phenotyping. Our integrated approach enables seamless progression from model design to actionable preclinical data, eliminating handoffs between multiple service providers.
+Since 1998, Ingenious Targeting Laboratory has provided comprehensive preclinical support extending from model generation through in vivo studies and phenotyping. Our integrated approach enables seamless progression from model design to actionable preclinical data, eliminating handoffs between multiple service providers.
 
 Whether you need standalone preclinical studies or end to end support from model conception through data delivery, Ingenious Targeting Laboratory offers the scientific expertise and operational infrastructure to advance your drug development program.
 
 ## In Vivo Efficacy Studies
 
-Efficacy studies evaluate therapeutic candidates in disease relevant mouse models. Ingenious Targeting Laboratory designs and executes studies using your custom models or established disease models appropriate for your therapeutic target.
+Efficacy studies evaluate therapeutic candidates in disease relevant mouse models. Ingenious Targeting Laboratory designs and executes studies using your model generation or established disease models appropriate for your therapeutic target.
 
 ### Study Design
 
@@ -80,7 +80,7 @@ Integration of pharmacokinetic and pharmacodynamic data enables modeling of expo
 
 ### Model to Data
 
-Ingenious Targeting Laboratory's integrated capabilities enable seamless progression from custom model generation through breeding, cohort development, and preclinical studies. This eliminates the complexity and delays associated with transferring animals between service providers.
+Ingenious Targeting Laboratory's integrated capabilities enable seamless progression from model generation through breeding, cohort development, and preclinical studies. This eliminates the complexity and delays associated with transferring animals between service providers.
 
 ### Study Coordination
 
@@ -143,7 +143,7 @@ GLP (Good Laboratory Practice) studies follow strict regulatory guidelines for d
 
 **What types of preclinical studies can be conducted?**
 
-Services include efficacy testing (therapeutic response), PK/PD studies (pharmacokinetics and pharmacodynamics), safety/toxicology assessments, biomarker discovery, and combination therapy studies. Studies are customized based on your therapeutic program and regulatory requirements.
+Services include efficacy testing (therapeutic response), PK/PD studies (pharmacokinetics and pharmacodynamics), safety/toxicology assessments, biomarker discovery, and combination therapy studies. Studies are scoped based on your therapeutic program and regulatory requirements.
 
 **Can you conduct studies using my existing mouse models?**
 

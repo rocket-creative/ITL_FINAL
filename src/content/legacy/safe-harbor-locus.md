@@ -15,7 +15,7 @@ A safe harbor locus is a place in the genome which allows for expression of a pr
 
 Gene targeting at this type of locus gives you control of copy number while avoiding the undesirable effects of random insertion transgenics, namely undesirable position effects that can cause unstable phenotypes, gene silencing, or unexpected gene expression.
 
-Ingenious targeting laboratory provides options for constitutive or inducible transgene overexpression at reduced timelines and costs compared to traditional methods. By utilizing well-validated gene targeting strategies, we can generate custom transgenic mouse models with various expression possibilities.
+Ingenious targeting laboratory provides options for constitutive or inducible transgene overexpression at reduced timelines and costs compared to traditional methods. By utilizing well-validated gene targeting strategies, we can generate transgenic mouse models with various expression possibilities.
 
 Safe harbor loci targeting can provide more consistent expression patterns across generations, eliminating uncertainties associated with random insertion transgenics and thereby enhancing research reliability and reproducibility.
 

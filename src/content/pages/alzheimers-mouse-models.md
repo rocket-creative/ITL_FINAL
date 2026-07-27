@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.028Z"
 
 **Url: /alzheimers-mouse-models**
 
-**Meta Description: Custom Alzheimer disease mouse models for AD research. APP knockin, tau models, and amyloid pathology. Expert model design since 1998.**
+**Meta Description: Generated Alzheimer disease mouse models for AD research. APP knockin, tau models, and amyloid pathology. Expert model design since 1998.**
 
 **Primary Keyword: Alzheimer mouse model**
 
@@ -18,11 +18,11 @@ extracted: "2026-01-09T17:03:03.028Z"
 
 # Alzheimer Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported Alzheimer disease researchers with custom mouse models contributing to peer reviewed publications in Nature Neuroscience, Neuron, Journal of Neuroscience, and leading neurology journals worldwide. Our Alzheimer disease mouse models have advanced understanding of amyloid pathology, tau biology, and the complex mechanisms underlying neurodegeneration.
+Since 1998, Ingenious Targeting Laboratory has supported Alzheimer disease researchers with mouse model generation contributing to peer reviewed publications in Nature Neuroscience, Neuron, Journal of Neuroscience, and leading neurology journals worldwide. Our Alzheimer disease mouse models have advanced understanding of amyloid pathology, tau biology, and the complex mechanisms underlying neurodegeneration.
 
 Alzheimer disease mouse models enable researchers to investigate the molecular and cellular mechanisms driving disease pathogenesis, from amyloid plaque formation and tau hyperphosphorylation to neuroinflammation and synaptic dysfunction. From APP knockin models expressing familial AD mutations at physiological levels to conditional approaches enabling adult onset pathology, the right model design is critical for understanding disease biology and developing effective therapeutics.
 
-Ingenious Targeting Laboratory designs and generates custom Alzheimer models tailored to your specific research questions, whether you're studying basic disease mechanisms, validating therapeutic targets, or testing novel interventions.
+Ingenious Targeting Laboratory designs and generates Alzheimer models tailored to your specific research questions, whether you're studying basic disease mechanisms, validating therapeutic targets, or testing novel interventions.
 
 ## Modeling Alzheimer Disease Pathology
 
@@ -195,9 +195,9 @@ Knockin models provide more physiologically relevant disease modeling but requir
 
 ### Pre Germline Characterization
 
-ES cell based targeting enables comprehensive characterization of AD alleles before mouse generation. This pre germline analysis confirms correct mutation sequence, proper allele structure, and absence of random integration events.
+homologous recombination targeting enables comprehensive characterization of AD alleles before mouse generation. This pre germline analysis confirms correct mutation sequence, proper allele structure, and absence of random integration events.
 
-For knockin models expressing familial AD mutations, sequence verification confirms the exact pathogenic change has been incorporated. The characterized ES cell clone provides a defined starting point for model generation.
+For knockin models expressing familial AD mutations, sequence verification confirms the exact pathogenic change has been incorporated. The characterized targeted clone provides a defined starting point for model generation.
 
 ### Strain Background Considerations
 
@@ -271,13 +271,12 @@ Clausen BE et al. 1999. Conditional gene targeting in macrophages and granulocyt
 
 ## Project Resources
 
-- (/model-generation-timeline)
-- (/strain-selection-guide)
+- - (/strain-selection-guide)
 - (/faqs)
 
 ## Start Your Alzheimer Model Project
 
-Our scientific consultants are ready to discuss your Alzheimer disease research requirements and recommend the optimal model design for your program. Initial consultation is provided at no charge and includes target analysis, model strategy recommendations, and timeline estimates.
+Our scientific consultants are ready to discuss your Alzheimer disease research requirements and recommend the optimal model design for your program. Initial consultation is provided at no charge and includes target analysis, model strategy recommendations.
 
 (/request-quote)
 
@@ -320,6 +319,6 @@ Knockin models with APP or PSEN mutations typically develop amyloid pathology ov
 - Knockin vs transgenic comparison table
 - Tau model table included
 - Phenotypic assessment endpoints listed
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - CTA to /request-quote
 - Word count ~2,100 (appropriate for disease model page)

@@ -42,7 +42,7 @@ Southern blot provides definitive verification of complex allele structures:
 - Correct Integration**: Confirms targeting at intended locus
 - Single Copy Verification**: Ensures no random insertions
 - Allele Structure**: Verifies complete allele architecture
-- Pre Germline Characterization**: ES cell clone verification
+- Pre Germline Characterization**: targeted clone verification
 
 ### Quantitative PCR (qPCR)
 
@@ -102,7 +102,7 @@ Samples can be submitted in multiple formats:
 - Tail Biopsies**: Standard tail snip samples
 - Ear Punches**: Alternative tissue samples
 - Blood Samples**: For specific applications
-- ES Cell Samples**: For pre germline characterization
+- Targeted Clone Samples**: For pre germline characterization
 
 ### Analysis and Reporting
 
@@ -113,11 +113,11 @@ Genotyping results are provided with:
 - Gel Images**: Visual confirmation when applicable
 - Interpretation Guidance**: Help with result interpretation
 
-## Custom Genotyping Development
+## Generated Genotyping Development
 
 ### Assay Design
 
-Ingenious Targeting Laboratory can design custom genotyping assays for:
+Ingenious Targeting Laboratory can design generated genotyping assays for:
 
 - Novel Alleles**: New targeting projects
 - Complex Alleles**: Multi component alleles
@@ -151,8 +151,7 @@ We optimize genotyping protocols for:
 ## Related Resources
 
 - (/es-cell-gene-targeting)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Request Genotyping Services
 
@@ -168,9 +167,9 @@ Our team can help you determine the optimal genotyping approach for your mouse m
 
 ITL uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements.
 
-**Can ITL develop custom genotyping assays for new alleles?**
+**Can ITL develop generated genotyping assays for new alleles?**
 
-Yes. ITL can design custom genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Custom assay development includes protocol optimization and validation.
+Yes. ITL can design generated genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Generated assay development includes protocol optimization and validation.
 
 **What information is provided with genotyping results?**
 

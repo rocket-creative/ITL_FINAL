@@ -42,15 +42,15 @@ import {
 const heroData = {
   badge: 'Precision Gene Modification Since 1998',
   title: 'Knockin Mouse Models',
-  intro: 'Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.',
+  intro: 'Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.',
   description: 'Knockin mouse models enable precise genetic modifications at endogenous loci. Unlike knockout models that eliminate gene function, knockin models modify genes in specific ways: introducing point mutations that mimic human disease alleles, inserting reporter genes to visualize expression patterns, or adding epitope tags to track protein localization. Because modifications occur at the native locus, knockin alleles maintain endogenous regulatory control over expression timing, tissue distribution, and transcript processing.',
 };
 
 const stats = [
-  { number: '2,800+', label: 'Custom Projects Completed' },
+  { number: '2,800+', label: 'Models Generated' },
   { number: '800+', label: 'Publications' },
-  { number: '25+', label: 'Years of Excellence' },
-  { number: '100%', label: 'Custom Solutions' },
+  { number: '26+', label: 'Years of Excellence' },
+  { number: '900+', label: 'Laboratories Served' },
 ];
 
 const approachesData = [
@@ -152,16 +152,7 @@ const getFaqData = () => [
   {
     question: 'How do I choose between N-terminal and C-terminal tag placement?',
     answer: 'Tag placement depends on protein structure and function. N-terminal tags can interfere with signal peptides or membrane targeting. C-terminal tags avoid signal sequence issues but may affect protein interactions at the terminus. Contact us to discuss tag positioning.',
-  },
-  {
-    question: 'How long does it take to generate a knockin mouse model?',
-    answer: (
-      <>
-        Knockin project timelines depend on complexity. <GlossaryTermLink term="point-mutation">Point mutations</GlossaryTermLink> and small tags are generally faster. Large insertions require more time. All projects include gene analysis, target design determination, material generation, injection, and breeding of F0s to obtain <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. Contact us for current timeline estimates tailored to your project.
-      </>
-    ),
-  },
-];
+  },];
 
 const relatedServices = [
   { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
@@ -178,7 +169,7 @@ const relatedModels = [
 ];
 
 const relatedResources = [
-  { label: 'Request Custom Quote', href: '/request-quote' },
+  { label: 'Request a Quote', href: '/request-quote' },
   { label: 'FAQs', href: '/faqs' },
   { label: 'Technologies', href: '/technologies' },
 ];
@@ -636,7 +627,7 @@ export default function KnockinMouseModelsPage() {
         {/* ========== START YOUR PROJECT CTA ========== */}
         <UXUIDCStartProjectCTA
           title="Start Your Knockin Project"
-          content="Our scientific consultants are ready to discuss your research requirements and recommend the optimal knockin strategy for your experimental goals. Initial consultation is provided at no charge and includes modification site analysis, allele design recommendations, and timeline estimates."
+          content="Our scientific consultants are ready to discuss your research requirements and recommend the optimal knockin strategy for your experimental goals. Initial consultation is provided at no charge and includes modification site analysis, allele design recommendations."
         />
 
         {/* ========== BREEDING SCHEME ARCHITECT CTA ========== */}
@@ -725,7 +716,7 @@ export default function KnockinMouseModelsPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Knockin Mouse Models', path: '/knockin-mouse-models' },
         ]}
       />
@@ -743,8 +734,8 @@ export default function KnockinMouseModelsPage() {
               alternateName: 'iTL',
               url: 'https://www.genetargeting.com',
             },
-            description: 'Custom knockin mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. Point mutations, reporters, tags, and cDNA insertions since 1998.',
-            serviceType: 'Custom Knockin Mouse Model Generation',
+            description: 'Generated knockin mouse models from ingenious targeting laboratory (iTL), a U.S. based mouse model generation company with a 100% germline transmission guarantee. Point mutations, reporters, tags, and cDNA insertions since 1998.',
+            serviceType: 'Generated Knockin Mouse Model Generation',
             areaServed: 'Worldwide',
             award: '100% germline transmission guarantee',
           }),
@@ -757,7 +748,7 @@ export default function KnockinMouseModelsPage() {
             '@context': 'https://schema.org',
             '@type': ['Article', 'TechArticle'],
             headline: 'Knockin Mouse Models: Point Mutation, Reporter, Tag, and cDNA Insertions',
-            description: 'Guide to custom knockin mouse model generation from ingenious targeting laboratory, a U.S. based custom mouse model company since 1998 with a 100% germline transmission guarantee.',
+            description: 'Guide to generated knockin mouse model generation from ingenious targeting laboratory, a U.S. based mouse model generation company since 1998 with a 100% germline transmission guarantee.',
             url: 'https://www.genetargeting.com/knockin-mouse-models/',
             mainEntityOfPage: 'https://www.genetargeting.com/knockin-mouse-models/',
             inLanguage: 'en-US',
@@ -775,8 +766,8 @@ export default function KnockinMouseModelsPage() {
               name: 'ingenious targeting laboratory',
               logo: { '@type': 'ImageObject', url: 'https://www.genetargeting.com/images/logo.png' },
             },
-            about: ['Knockin mouse models', 'Point mutation', 'Reporter knockin', 'Tag knockin', 'cDNA knockin', 'Custom mouse models'],
-            keywords: 'knockin mouse models, point mutation knockin, reporter knockin, tag knockin, cDNA knockin, custom mouse model company, ingenious targeting laboratory, iTL',
+            about: ['Knockin mouse models', 'Point mutation', 'Reporter knockin', 'Tag knockin', 'cDNA knockin', 'Mouse model generation'],
+            keywords: 'knockin mouse models, point mutation knockin, reporter knockin, tag knockin, cDNA knockin, mouse model generation company, ingenious targeting laboratory, iTL',
           }),
         }}
       />

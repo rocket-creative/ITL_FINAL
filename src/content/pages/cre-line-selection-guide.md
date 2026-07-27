@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.762Z"
 
 # Cre Line Selection Guide
 
-Selecting the appropriate Cre driver line is critical for successful conditional knockout experiments. Since 1998, Ingenious Targeting Laboratory has created over 2,800 custom models, including Cre driver lines, specific to your research projects. 
+Selecting the appropriate Cre driver line is critical for successful conditional knockout experiments. Since 1998, Ingenious Targeting Laboratory has created over 2,800 model generation, including Cre driver lines, specific to your research projects. 
 
 This guide helps researchers navigate Cre line selection by tissue specificity, expression timing, recombination efficiency, and experimental requirements. Proper Cre selection ensures gene deletion occurs in the intended cell population with appropriate temporal control.
 
@@ -237,7 +237,7 @@ Review literature for reported background recombination in unintended tissues. C
 
 ### Step 5: Verify Cre Line Availability
 
-Confirm Cre line availability from repositories or consider custom Cre line generation if standard lines don't meet requirements.
+Confirm Cre line availability from repositories or consider generated Cre line generation if standard lines don't meet requirements.
 
 ## Common Selection Mistakes
 
@@ -263,9 +263,9 @@ Several catalog available Cre lines:
 - MGI Cre Line Database
 - Cre Line Publications
 
-### Custom Cre Line Generation
+### Generated Cre Line Generation
 
-If standard Cre lines don't meet requirements, Ingenious Targeting Laboratory can generate custom Cre specific to your experimental goals.
+If standard Cre lines don't meet requirements, Ingenious Targeting Laboratory can generate generated Cre specific to your experimental goals.
 
 (/request-quote)
 
@@ -288,8 +288,7 @@ If standard Cre lines don't meet requirements, Ingenious Targeting Laboratory ca
 
 - (/knockout-strategy-guide)
 - (/conditional-vs-conventional-guide)
-- (/model-generation-timeline)
-
+- 
 ## Cre Driver Catalog
 
 (/cre-driver-catalog)

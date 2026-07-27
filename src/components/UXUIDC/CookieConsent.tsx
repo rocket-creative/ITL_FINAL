@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * |UXUIDC| Cookie Consent Component
  * @version 1.2.0
@@ -11,8 +13,6 @@
  * - Facebook, LinkedIn, Twitter, AdRoll consent handling
  * - Accessible
  */
-
-'use client';
 
 import { useState, useEffect, useSyncExternalStore, useCallback } from 'react';
 import Link from 'next/link';

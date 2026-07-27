@@ -138,9 +138,6 @@ Expression is controlled through Cre recombinase. Tissue-specific Cre drivers en
 
 Conditional knockin can insert point mutations, reporters (GFP, luciferase), epitope tags, humanized gene sequences, or cDNA sequences. The conditional cassette (LoxP-flanked stop) prevents expression until Cre recombination removes it, enabling controlled expression of the inserted sequence.
 
-**What is the timeline for generating a conditional knockin model?**
-
-Custom model generation takes 6-10 months from project initiation to identification of germline-transmitted mice. 
 
 Quality Confirmation
 

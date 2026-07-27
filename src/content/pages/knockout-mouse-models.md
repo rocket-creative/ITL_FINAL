@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.744Z"
 
 **Url: /knockout-mouse-models**
 
-**Meta Description: Custom knockout mouse models for loss of function studies. Conventional and conditional knockouts with guaranteed transmission.**
+**Meta Description: Generated knockout mouse models for loss of function studies. Conventional and conditional knockouts with guaranteed transmission.**
 
 **Primary Keyword: knockout mouse**
 
@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:04.744Z"
 
 # Knockout Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our knockout mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, Cell.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our knockout mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, Cell.
 
-Knockout mouse models enable loss of function studies by inactivating specific genes. Whether you need complete gene deletion throughout the organism or controlled inactivation in specific tissues at defined times, ITL designs and delivers knockout mice tailored to your experimental requirements. From conventional knockouts for straightforward gene deletion to sophisticated conditional systems using Cre lox and other recombinase technologies, the right knockout strategy is critical for your research success.
+Knockout mouse models enable loss of function studies by inactivating specific genes. Whether you need complete gene deletion throughout the organism or controlled inactivation in specific tissues at defined times, ITL designs and delivers knockout mice for your experimental requirements. From conventional knockouts for straightforward gene deletion to sophisticated conditional systems using Cre lox and other recombinase technologies, the right knockout strategy is critical for your research success.
 
 ## Knockout Approaches
 
@@ -28,7 +28,7 @@ Knockout mouse models enable loss of function studies by inactivating specific g
 
 Conventional knockout models provide global gene inactivation from the earliest stages of development. The target gene is disrupted throughout all tissues for the lifetime of the animal. This approach is appropriate when studying genes that are not essential for embryonic development and when whole organism effects are the primary research interest.
 
-Conventional knockouts offer a straightforward path to loss of function phenotypes with shorter project timelines and lower complexity than conditional approaches.
+Conventional knockouts offer a straightforward path to loss of function phenotypes with lower complexity than conditional approaches.
 
 (/conventional-knockout-mouse-models)
 
@@ -139,8 +139,7 @@ MacDowell Kaswan ZA, Hurtado M, Chen EY, Steelman AJ, McCusker RH. 2025. [Ido1 o
 
 - (/knockout-strategy-guide)
 - (/conditional-vs-conventional-guide)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Start Your Knockout Project
 
@@ -200,9 +199,6 @@ If homozygous null mutations of your target gene result in embryonic lethality i
 
 A floxed allele contains LoxP sites flanking a critical exon of your target gene. The gene functions normally until exposed to Cre recombinase, which excises the DNA between LoxP sites. This deletion removes a critical exon(s) and eliminates gene function. Floxed alleles are the foundation of conditional knockout strategies.
 
-**How long does it take to generate a knockout mouse model?**
-
-Conventional knockout projects typically require 6-8 months. Conditional knockout projects can take  8-10 months due to additional complexity in allele design and verification. Timelines include strategy design, materials generation and confirmation, injection, and breeding of F0s to obtain germline transmission mice.
 
 **What deliverables will I receive at the end of a knockout project?**
 

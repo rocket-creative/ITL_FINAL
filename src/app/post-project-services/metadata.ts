@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Post Project Services',
-  description: 'Post Project Services from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  description: 'Post Project Services from ingenious targeting laboratory. Mouse model generation since 1998.',
   path: '/post-project-services',
 });
 

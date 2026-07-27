@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Double Checkpoint Mice',
-  description: 'Double Checkpoint Mice from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  description: 'Double Checkpoint Mice from ingenious targeting laboratory. Mouse model generation since 1998.',
   path: '/double-checkpoint-mice',
 });
 

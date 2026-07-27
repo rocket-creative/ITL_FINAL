@@ -10,7 +10,7 @@ author: "ingenious"
 # Meet ingenious Scientist Richard Row
 
 ![__wf_reserved_inherit](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b20afd05977b17197a610_Richard-Icon-500.jpg)
-Richard is a Scientific Strategy Consultant at ingenious. As a graduate student at the University of Washington he used zebrafish as a model organism to investigate embryonic development, and he continued similar research as a postdoc at Stony Brook University before joining ingenious. When he’s not helping scientists evaluate their options for new custom genetically modified animal models you can find him out taking photos or watching foreign movies.
+Richard is a Scientific Strategy Consultant at ingenious. As a graduate student at the University of Washington he used zebrafish as a model organism to investigate embryonic development, and he continued similar research as a postdoc at Stony Brook University before joining ingenious. When he’s not helping scientists evaluate their options for new generated genetically modified animal models you can find him out taking photos or watching foreign movies.
 
 ‍
 
@@ -40,6 +40,6 @@ Richard is a Scientific Strategy Consultant at ingenious. As a graduate student 
 
 8) [Mouse Knockout Screen Leads To Discovery](/ingenious-blog/mouse-knockout-hearing-genes/)The International Mouse Phenotyping Consortium (IMPC) has identified 67 genes related to hearing, including 52 genes not previously associated with that process. This was accomplished by analyzing 3006 lines of knockout mice. The IMPC’s goal is to test the function of 20,000 genes in mouse models. [Read more](/ingenious-blog/mouse-knockout-hearing-genes/)
 
-Want to get in touch with Richard? Just fill out [our form to get a quote](/request-quote/) or [schedule a meeting](https://go.genetargeting.com/schedule-meeting) to discuss your next custom animal model.
+Want to get in touch with Richard? Just fill out [our form to get a quote](/request-quote/) or [schedule a meeting](https://go.genetargeting.com/schedule-meeting) to discuss your next animal model generation.
 
 ‍

@@ -11,18 +11,17 @@ import {
   LegacyInfoLink,
   UXUIDCResourceLinks,
   ratModelResources,
-  BreedingSchemeArchitectCTA,
-  LabSignalsSignup} from '@/components/UXUIDC';
+  StandardPageCtaStack} from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
 const legacyContentUrl = '/legacy/rat-models';
 
 const heroData = {
-  badge: 'Custom Animal Models',
+  badge: 'Animal Model Generation',
   title: 'Rat Models',
-  intro: 'Get your custom rat model in less time & with more certainty.',
-  description: 'Our process ensures faster germline transmission modifications. We offer custom rat models, including conventional knockouts, conditional knockouts, reporter knockins, and humanized cDNA knockins, tailored to your research needs.'};
+  intro: 'Get your model generation rat model in less time & with more certainty.',
+  description: 'Our process ensures faster germline transmission modifications. We offer generated rat models, including conventional knockouts, conditional knockouts, reporter knockins, and humanized cDNA knockins, for your research needs.'};
 
 const modelTypes = [
   { title: 'Conventional Knockout', description: 'Standard gene deletion for loss-of-function studies' },
@@ -122,7 +121,7 @@ export default function RatModelsPage() {
                   fontSize: '.85rem',
                   fontWeight: 500}}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link
@@ -266,9 +265,6 @@ export default function RatModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
         {/* Testimonial Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
@@ -324,18 +320,12 @@ export default function RatModelsPage() {
                   fontSize: '.9rem',
                   fontWeight: 500}}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
             </div>
           </div>
         </section>
-
-        {/* Lab Signals Signup */}
-        <LabSignalsSignup 
-          title="Track Your Custom Rat Model Project"
-          description="Get real-time updates on your knockout, knockin, or conditional rat model development including germline transmission and phenotype validation milestones."
-        />
 
         {/* Legacy Content Link */}
         <section style={{ backgroundColor: '#e8f5f5', padding: '30px 20px', borderTop: '3px solid #008080' }}>
@@ -357,7 +347,7 @@ export default function RatModelsPage() {
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <UXUIDCResourceLinks
               title="Rat Model Resources"
-              description="Download our free guides to learn more about custom rat model generation."
+              description="Download our free guides to learn more about model generation rat model generation."
               resources={ratModelResources}
               variant="card"
             />
@@ -372,8 +362,8 @@ export default function RatModelsPage() {
             </h3>
             <div className="flex flex-wrap gap-3">
               {[
-                { label: 'Custom Animal Models', href: '/custom-animal-models' },
-                { label: 'Custom Rabbit Models', href: '/custom-rabbit-models' },
+                { label: 'Animal Model Generation', href: '/custom-animal-models' },
+                { label: 'Rabbit Model Generation', href: '/custom-rabbit-models' },
                 { label: 'Transgenic Mouse Service', href: '/transgenic-mouse-service' },
                 { label: 'Knockout Mouse Models', href: '/knockout-mouse-models' },
               ].map((link, i) => (
@@ -392,12 +382,11 @@ export default function RatModelsPage() {
         </section>
       </main>
 
-      {/* Bottom dual-path CTA */}
-      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
-        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-          <CatalogCustomDualCta slug="rat-models" utmMedium="page-closing" flush />
-        </div>
-      </section>
+      <StandardPageCtaStack
+        slug="rat-models"
+        labSignalsTitle="Track Your Generated Rat Model Project"
+        labSignalsDescription="Get real-time updates on your knockout, knockin, or conditional rat model development including germline transmission and phenotype validation milestones."
+      />
 
       <UXUIDCFooter />
           

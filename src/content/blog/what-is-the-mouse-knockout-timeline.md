@@ -43,7 +43,7 @@ Total time to CRISPR mice for simple KO/KI alleles: 6 months.
 ![What Is The Mouse Knockout Timeline?](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b94bac1fd0c0d879027fa_What-Is-The-Mouse-Knockout-Timeline.jpeg)
 ### Generation of knockout mice by gene targeting in ES cells
 
-Gene targeting in ES cells was first used to make a knockout mouse almost 30 years ago. Although many advances have made this technique more reliable and accessible since then basic strategy is unchanged. For each desired genetic modification a new, custom DNA molecule is created and introduced into ES cells where it can be used as a template for re-writing a region of the genome. The cells where this occurs are identified and used to generate gene-targeted mice.
+Gene targeting in ES cells was first used to make a knockout mouse almost 30 years ago. Although many advances have made this technique more reliable and accessible since then basic strategy is unchanged. For each desired genetic modification a new, generated DNA molecule is created and introduced into ES cells where it can be used as a template for re-writing a region of the genome. The cells where this occurs are identified and used to generate gene-targeted mice.
 
 Creation of targeting strategy and targeting materials:
 
@@ -67,6 +67,6 @@ From injection to the identification of germline confirmed F1 mice takes ~ 4 mon
 
 Total time to ES cell-mediated KO/KI mice, including complex alleles: ~ 8-9 months.
 
-[Contact](/request-quote/) ingenious today to get started on your custom animal model.
+[Contact](/request-quote/) ingenious today to get started on your animal model generation.
 
 ‍

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import PageClosingCta from '@/components/UXUIDC/PageClosingCta';
 
 import { footerCta } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
@@ -12,7 +11,7 @@ import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup, CatalogCustomDualCta } from '@/components/UXUIDC';
+import { CatalogCustomDualCta, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -24,10 +23,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Catalog Categories Data
@@ -509,117 +508,6 @@ export default function DiseaseModelCatalogPage() {
             </div>
           </div>
         </section>
-
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* Shipping Section */}
-        <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="animate-in" style={{
-              background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
-              borderRadius: '12px',
-              padding: '40px',
-              position: 'relative',
-              overflow: 'hidden'
-            }}>
-              <div style={{
-                position: 'absolute',
-                top: '-100px',
-                right: '-100px',
-                width: '300px',
-                height: '300px',
-                borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(0,212,212,0.1) 0%, transparent 70%)'
-              }} />
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <h2 style={{
-                  fontFamily: 'Poppins, sans-serif',
-                  fontSize: '1.8rem',
-                  fontWeight: 700,
-                  color: '#ffffff',
-                  marginBottom: '16px',
-                  textAlign: 'center'
-                }}>
-                  {shippingData.title}
-                </h2>
-                <p style={{
-                  fontSize: '.95rem',
-                  color: 'rgba(255,255,255,0.9)',
-                  textAlign: 'center',
-                  marginBottom: '24px'
-                }}>
-                  {shippingData.description}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '12px', maxWidth: '500px', margin: '0 auto' }}>
-                  {shippingData.points.map((point, index) => (
-                    <div key={index} style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                      fontSize: '.9rem',
-                      color: 'rgba(255,255,255,0.9)'
-                    }}>
-                      <IconCheckCircle size={16} color="#00d4d4" />
-                      <span>{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <TestimonialsSection testimonials={testimonialsData} variant="light" />
-
-        {/* Browse by Category Section */}
-        <section style={{ background: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '2rem',
-              fontWeight: 700,
-              color: '#2384da',
-              marginBottom: '40px',
-              textAlign: 'center'
-            }}>
-              Browse by Category
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {browseCategoriesData.map((category, index) => (
-                <Link key={index} href={category.href} className="animate-in" style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  background: '#ffffff',
-                  border: '1px solid #e0e0e0',
-                  borderRadius: '8px',
-                  padding: '16px 20px',
-                  fontSize: '.9rem',
-                  fontWeight: 600,
-                  color: '#008080',
-                  textDecoration: 'none',
-                  textAlign: 'center'
-                }}>
-                  {category.label}
-                  <IconChevronRight size={14} color="#008080" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <PageClosingCta title={ctaData.title} description={ctaData.description} slug="disease-model-catalog" />
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="Disease Model Catalog Updates" />
-          </div>
-        </section>
-
         {/* Related Resources Section */}
         <section style={{ background: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -656,6 +544,12 @@ export default function DiseaseModelCatalogPage() {
           </div>
         </section>
       </main>
+      <StandardPageCtaStack
+        slug="disease-model-catalog"
+        closingTitle={ctaData.title}
+        closingDescription={ctaData.description}
+        labSignalsTitle="Disease Model Catalog Updates"
+      />
       <UXUIDCFooter />
           
       {/* Schema.org Structured Data */}

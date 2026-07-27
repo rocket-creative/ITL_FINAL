@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * |UXUIDC| Equal weight catalog + custom dual path buttons.
+ * |UXUIDC| Equal weight catalog + generation dual path buttons.
  */
 
 import Link from 'next/link';
@@ -26,7 +26,7 @@ interface CatalogCustomCtaButtonsProps {
 const BTN_PADDING = '12px 24px';
 const BTN_FONT = '0.9rem';
 
-function buttonStyles(variant: CatalogCustomCtaVariant, role: 'catalog' | 'custom') {
+function buttonStyles(variant: CatalogCustomCtaVariant, role: 'catalog' | 'generated') {
   if (variant === 'banner') {
     return role === 'catalog'
       ? {
@@ -73,7 +73,7 @@ export default function CatalogCustomCtaButtons({
       }}
     >
       {buttons.map((btn, i) => {
-        const role = i === 0 ? 'catalog' : 'custom';
+        const role = i === 0 ? 'catalog' : 'generated';
         const href = commercialUtmHref(btn.href, {
           source: 'organic',
           medium: utmMedium,
@@ -85,7 +85,7 @@ export default function CatalogCustomCtaButtons({
           <Link
             key={`${btn.href}-${btn.label}`}
             href={href}
-            data-cta={role === 'catalog' ? 'dual-cta-catalog' : 'dual-cta-custom-quote'}
+            data-cta={role === 'catalog' ? 'dual-cta-catalog' : 'dual-cta-generated-quote'}
             data-cta-slug={slug}
             className="group inline-flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             style={{

@@ -48,30 +48,21 @@ interface FAQ {
 
 // Comprehensive FAQ Data
 const allFAQs: FAQ[] = [
-  // Getting Started (8 questions)
-  {
-    category: 'Getting Started',
-    question: 'How long does it take to generate a custom mouse model?',
-    answer: (
-      <>
-        Timeline depends on model complexity. Conventional <GlossaryTermLink term="knockout-mouse-models">knockout mice</GlossaryTermLink> typically take 9 to 12 months from design to germline transmission. <GlossaryTermLink term="conditional-knockout-mouse-models">Conditional knockout mice</GlossaryTermLink> with LoxP sites take 12 to 15 months. Point mutations and reporter knockins take 10 to 14 months. Timeline includes targeting vector design, ES cell targeting, founder generation, and germline verification.
-      </>
-    )
-  },
+  // Getting Started
   {
     category: 'Getting Started',
     question: 'What information do I need to start a project?',
-    answer: 'To begin, we need your target gene name or Ensembl ID, desired modification type (knockout, knockin, point mutation, etc.), preferred mouse strain background (C57BL/6, 129, BALB/c), and research application. Our team will guide you through allele design strategy, selection strategy, and timeline planning during initial consultation.'
+    answer: 'To begin, we need your target gene name or Ensembl ID, desired modification type (knockout, knockin, point mutation, etc.), preferred mouse strain background (C57BL/6, 129, BALB/c), and research application. Our team will guide you through allele design strategy and selection strategy during initial consultation.'
   },
   {
     category: 'Getting Started',
-    question: 'What is the cost of generating a custom mouse model?',
+    question: 'What is the cost of generating a generated mouse model?',
     answer: 'Project cost varies based on model complexity, allele design, and additional services required. Conditional knockouts with LoxP sites and humanization projects price higher than conventional knockouts. Submit your work email through our pricing guide or request a quote and we will return a fixed-fee quote within 24 hours, tailored to your specific project requirements.'
   },
   {
     category: 'Getting Started',
     question: 'What happens after I submit a project request?',
-    answer: 'After submission, a project manager contacts you within 1 business day to discuss your research goals. We provide allele design recommendations, timeline estimates, and a detailed quote. Once approved, we begin targeting vector design, proceed through ES cell targeting, generate founders, and verify germline transmission. You receive regular progress updates at each milestone.'
+    answer: 'After submission, a project manager contacts you within 1 business day to discuss your research goals. We provide allele design recommendations and a detailed quote. Once approved, we begin targeting vector design, generate founders, and verify germline transmission. You receive regular progress updates at each milestone.'
   },
   {
     category: 'Getting Started',
@@ -88,14 +79,14 @@ const allFAQs: FAQ[] = [
     question: 'What strain background should I choose for my model?',
     answer: (
       <>
-        <GlossaryTermLink term="c57bl6-mouse-background">C57BL/6</GlossaryTermLink> is the most common background, offering excellent breeding performance, robust phenotypes, and extensive published data. 129 strains excel for ES cell targeting efficiency. BALB/c is preferred for immunology studies. FVB/N is ideal for transgenics and pronuclear injection. Background choice depends on your research application and phenotyping requirements.
+        <GlossaryTermLink term="c57bl6-mouse-background">C57BL/6</GlossaryTermLink> is the most common background, offering excellent breeding performance, robust phenotypes, and extensive published data. BALB/c is preferred for immunology studies. FVB/N is ideal for transgenics and pronuclear injection. Background choice depends on your research application and phenotyping requirements.
       </>
     )
   },
   {
     category: 'Getting Started',
     question: 'Do you guarantee germline transmission?',
-    answer: 'Yes. We guarantee germline transmission for all custom mouse models. If initial founders fail to transmit, we generate additional founders at no extra cost until germline transmission is achieved. All germline founders are verified by PCR genotyping and breeding analysis before delivery.'
+    answer: 'Yes. We guarantee germline transmission for all mouse model generation. If initial founders fail to transmit, we generate additional founders at no extra cost until germline transmission is achieved. All germline founders are verified by PCR genotyping and breeding analysis before delivery.'
   },
 
   // Model Types (10 questions)
@@ -197,7 +188,7 @@ const allFAQs: FAQ[] = [
   {
     category: 'Technology',
     question: 'What is germline transmission and why does it matter?',
-    answer: 'Germline transmission occurs when targeted ES cells contribute to germ cells (sperm/eggs) in chimeric founders, passing the mutation to offspring. Only germline-transmitted alleles can establish stable mouse lines. We verify germline transmission by breeding chimeras and genotyping offspring. All delivered founders are guaranteed to show germline transmission.'
+    answer: 'Germline transmission occurs when a genetic modification is passed through germ cells (sperm/eggs) in founders to offspring. Only germline-transmitted alleles can establish stable mouse lines. We verify germline transmission by breeding founders and genotyping offspring. All delivered founders are guaranteed to show germline transmission.'
   },
   {
     category: 'Technology',
@@ -218,19 +209,13 @@ const allFAQs: FAQ[] = [
     question: 'What QC steps ensure model quality?',
     answer: 'Quality control includes: targeting vector sequence verification, Southern blot confirmation of correct integration, PCR genotyping of founders, germline transmission verification through breeding, karyotype analysis to ensure normal chromosomes, and expression analysis to confirm expected mRNA/protein changes. All QC data is provided with delivered animals.'
   },
-  {
-    category: 'Technology',
-    question: 'What is the difference between ES cell targeting and CRISPR?',
-    answer: 'ES cell targeting uses homologous recombination in embryonic stem cells, offering precise control over complex modifications (conditional alleles, large insertions). CRISPR uses genome editing in zygotes, offering faster timelines but less control over insertion sites. We primarily use ES cell targeting for conditional alleles and complex modifications requiring precise allele structure.'
-  },
-
-  // Strain Backgrounds (6 questions)
+  // Strain Backgrounds
   {
     category: 'Strain Backgrounds',
     question: 'What is the difference between C57BL/6J and C57BL/6N?',
     answer: (
       <>
-        C57BL/6J (Jackson Laboratory) and C57BL/6N (NIH/Taconic) are C57BL/6 substrains with minor genetic differences from decades of separate breeding. C57BL/6N is commonly used for ES cell targeting. C57BL/6J is preferred for behavioral and metabolic studies. Differences include: Nnt deletion in C57BL/6J affecting metabolism, Crb1 mutation in C57BL/6N affecting retina. See our <GlossaryTermLink term="c57bl6j-vs-c57bl6n">C57BL/6J vs C57BL/6N comparison</GlossaryTermLink> for details.
+        C57BL/6J (Jackson Laboratory) and C57BL/6N (NIH/Taconic) are C57BL/6 substrains with minor genetic differences from decades of separate breeding. C57BL/6J is preferred for behavioral and metabolic studies. Differences include: Nnt deletion in C57BL/6J affecting metabolism, Crb1 mutation in C57BL/6N affecting retina. See our <GlossaryTermLink term="c57bl6j-vs-c57bl6n">C57BL/6J vs C57BL/6N comparison</GlossaryTermLink> for details.
       </>
     )
   },
@@ -242,7 +227,7 @@ const allFAQs: FAQ[] = [
   {
     category: 'Strain Backgrounds',
     question: 'What is backcrossing and when is it needed?',
-    answer: 'Backcrossing breeds targeted mice to a desired background strain repeatedly to eliminate unwanted genetic contributions from ES cell strain (typically 129). Each generation removes approximately 50% of residual 129 DNA. N5 backcross (5 generations) achieves ~97% background purity. N10 achieves >99.9%. Backcrossing is essential when strain background affects phenotype or when comparing to literature using pure backgrounds.'
+    answer: 'Backcrossing breeds targeted mice to a desired background strain repeatedly to eliminate unwanted genetic contributions from the original donor strain (typically 129). Each generation removes approximately 50% of residual 129 DNA. N5 backcross (5 generations) achieves ~97% background purity. N10 achieves >99.9%. Backcrossing is essential when strain background affects phenotype or when comparing to literature using pure backgrounds.'
   },
   {
     category: 'Strain Backgrounds',
@@ -279,7 +264,7 @@ const allFAQs: FAQ[] = [
   {
     category: 'Services',
     question: 'Do you offer genotyping services?',
-    answer: 'Yes. We provide PCR genotyping, Southern blot analysis, and copy number determination for all standard and custom alleles. Routine genotyping uses tail or ear DNA. We provide primers, protocols, and positive control DNA to enable in-house genotyping, or can perform genotyping as an ongoing service.'
+    answer: 'Yes. We provide PCR genotyping, Southern blot analysis, and copy number determination for all standard and study-specific alleles. Routine genotyping uses tail or ear DNA. We provide primers, protocols, and positive control DNA to enable in-house genotyping, or can perform genotyping as an ongoing service.'
   },
   {
     category: 'Services',
@@ -301,7 +286,7 @@ const allFAQs: FAQ[] = [
   {
     category: 'Quality & Support',
     question: 'What characterization do you provide with delivered mice?',
-    answer: 'All mice include: complete genotyping data, germline transmission verification, targeting strategy documentation, breeding genealogy, health certificates, and recommended breeding schemes. For knockouts, we can provide RT-PCR or Western blot confirming reduced/absent expression. Custom characterization packages available upon request.'
+    answer: 'All mice include: complete genotyping data, germline transmission verification, targeting strategy documentation, breeding genealogy, health certificates, and recommended breeding schemes. For knockouts, we can provide RT-PCR or Western blot confirming reduced/absent expression. Generated characterization packages available upon request.'
   },
   {
     category: 'Quality & Support',
@@ -326,7 +311,7 @@ const allFAQs: FAQ[] = [
   {
     category: 'Quality & Support',
     question: 'Can I visit your facility?',
-    answer: 'Yes. We welcome facility tours for potential and current clients. Tours showcase our ES cell culture facility, microinjection suite, breeding facility, and quality control laboratory. Virtual tours and consultations are also available. Contact us to schedule a visit or virtual meeting with our scientific team.'
+    answer: 'Yes. We welcome facility tours for potential and current clients. Tours showcase our gene targeting laboratory, microinjection suite, breeding facility, and quality control laboratory. Virtual tours and consultations are also available. Contact us to schedule a visit or virtual meeting with our scientific team.'
   },
 ];
 
@@ -416,7 +401,7 @@ export default function FAQPage() {
             margin: '0 auto 50px',
             fontFamily: 'var(--system-ui)',
           }}>
-            Everything you need to know about custom mouse models, gene targeting technology, and our services
+            Everything you need to know about mouse model generation, gene targeting technology, and our services
           </p>
 
           {/* Search Bar */}

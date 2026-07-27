@@ -11,7 +11,7 @@ const MODEL_HEADLINE: Record<string, string> = {
   conditional_knockout: 'Tissue specific conditional knockout, Cre driven, C57BL/6.',
   humanized: 'Humanized allele, endogenous regulation, C57BL/6.',
   transgenic: 'Transgenic overexpression, characterized cohorts, C57BL/6.',
-  rat: 'Custom rat model, endogenous locus, defined background.',
+  rat: 'Generated rat model, endogenous locus, defined background.',
 };
 
 const MODEL_CTA: Record<string, string> = {

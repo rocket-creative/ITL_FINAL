@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.587Z"
 
 # Conditional vs Conventional Knockout
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals. Understanding the differences between conditional and conventional knockout strategies is essential for designing a model that answers your scientific questions.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals. Understanding the differences between conditional and conventional knockout strategies is essential for designing a model that answers your scientific questions.
 
 Both conditional and conventional knockouts create loss of function alleles, but they differ fundamentally in how and when gene inactivation occurs. This guide provides a direct comparison to help you choose the right approach for your project.
 
@@ -95,7 +95,7 @@ Conventional knockout permanently inactivates a gene throughout the entire organ
 ### Advantages
 
 - Simpler allele design
-- Shorter project timeline 
+- Lower project complexity 
 - Lower project cost
 - No Cre driver breeding required
 - Complete gene inactivation guaranteed
@@ -227,8 +227,7 @@ This approach provides:
 ## Related Guides
 
 - (/knockout-strategy-guide)
-- (/model-generation-timeline)
-- (/mouse-model-budgeting-guide)
+- - (/mouse-model-budgeting-guide)
 - (/cre-line-selection-guide)
 
 ## Model Types
@@ -272,7 +271,7 @@ Choose conditional knockout if: the gene causes embryonic lethality, you need ti
 - All elements labeled
 - Primary keyword "conditional vs conventional knockout" in H1 and first paragraph
 - Secondary keywords in H2/H3 headers
-- Quantified credibility (1998, 2,800+ custom projects)
+- Quantified credibility (1998, 2,800+ models generated)
 - Zone 1: Trust &amp; Positioning
 - Zone 2: Educational comparison content
 - Zone 3: Navigation and CTAs

@@ -19,16 +19,16 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Resources",
   title: "Mouse Model Resources",
-  intro: "Plan stronger experiments with strategy guides, technical references, and planning tools built from more than 2,800 custom mouse model projects since 1998.",
+  intro: "Plan stronger experiments with strategy guides, technical references, and planning tools built from more than 2,800 mouse model generation projects since 1998.",
   description: "Use this hub to choose knockout versus conditional designs, compare humanization options, select Cre drivers, and access FAQs before you request a quote. Each guide links to deeper service pages and catalog search when a live model may already exist."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Featured Tool Data (New for 2026)
@@ -93,11 +93,11 @@ const planningGuidesData: {
     {
       href: "/technology-overview",
       title: "Technology Overview",
-      description: "ES cell and CRISPR workflows, allele design options, and how ITL validates germline transmission before delivery."
+      description: "gene targeting and CRISPR workflows, allele design options, and how ITL validates germline transmission before delivery."
     },
     {
       href: "/custom-mouse-models",
-      title: "Custom Model Services",
+      title: "Model Generation Services",
       description: "Service paths for knockout, knockin, humanized, conditional, and transgenic programs with quote timelines."
     },
     {
@@ -163,7 +163,7 @@ const glossaryData = {
   items: [
     "Allele nomenclature conventions",
     "Recombinase system terminology",
-    "ES cell and mouse genetics terms",
+    "gene targeting and mouse genetics terms",
     "Project phase definitions"
   ],
   href: "/glossary"
@@ -348,7 +348,7 @@ export default function ResourcesPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link

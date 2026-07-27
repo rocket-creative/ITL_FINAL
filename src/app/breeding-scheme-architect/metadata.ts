@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Breeding Scheme Architect',
-  description: 'Breeding Scheme Architect from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  description: 'Breeding Scheme Architect from ingenious targeting laboratory. Mouse model generation since 1998.',
   path: '/breeding-scheme-architect',
 });
 

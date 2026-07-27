@@ -30,7 +30,7 @@ const SCHEDULE_MEETING_THANK_YOU = '/schedule-meeting/thank-you/';
 const meetingBenefits = [
   'Review your targeting strategy options',
   'Discuss allele design considerations',
-  'Understand project timeline & deliverables',
+  'Understand project deliverables',
   'Get answers to technical questions',
   'Receive personalized recommendations',
 ];
@@ -134,7 +134,7 @@ export default function ScheduleMeetingPage() {
                   marginBottom: '25px',
                 }}
               >
-                The ingenious targeting laboratory team of experts is available to discuss your custom mouse project with you!
+                The ingenious targeting laboratory team of experts is available to discuss your model generation mouse project with you!
               </p>
               <p
                 style={{
@@ -377,7 +377,7 @@ export default function ScheduleMeetingPage() {
                     <IconFileText size={20} color="#008080" />
                     <div>
                       <p style={{ color: '#0a253c', fontSize: '.875rem', fontFamily: 'Poppins, sans-serif', fontWeight: 500, margin: 0 }}>
-                        Request Custom Quote
+                        Request a Quote
                       </p>
                       <p style={{ color: '#666', fontSize: '.75rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
                         Get project pricing
@@ -435,7 +435,7 @@ export default function ScheduleMeetingPage() {
                       2,800+
                     </p>
                     <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', fontFamily: 'var(--system-ui)', margin: 0 }}>
-                      Custom Projects Completed
+                      Models Generated
                     </p>
                   </div>
                 </div>

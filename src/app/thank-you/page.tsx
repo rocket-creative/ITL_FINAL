@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * Thank You Page
  * Displays after successful form submission
  * Hidden from search engines (noindex, nofollow)
  */
-
-'use client';
 
 import { useEffect } from 'react';
 import Link from 'next/link';

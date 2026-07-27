@@ -1,13 +1,13 @@
 /**
- * SEO Metadata for Custom Animal Models
+ * SEO Metadata for Animal Model Generation
  * Auto-generated for canonical URLs and structured data
  */
 
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Custom Animal Models',
-  description: 'Custom Animal Models from ingenious targeting laboratory. Custom mouse model engineering since 1998.',
+  title: 'Animal Model Generation',
+  description: 'Animal Model Generation from ingenious targeting laboratory. Mouse model generation since 1998.',
   path: '/custom-animal-models',
 });
 
@@ -15,6 +15,6 @@ export const metadata = generateMetadata({
 export const breadcrumbSchema = generateBreadcrumbs({
   items: [
     { name: 'Home', path: '/' },
-    { name: 'Custom Animal Models', path: '/custom-animal-models' },
+    { name: 'Animal Model Generation', path: '/custom-animal-models' },
   ],
 });

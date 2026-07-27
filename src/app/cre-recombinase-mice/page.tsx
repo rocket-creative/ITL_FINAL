@@ -24,7 +24,7 @@ const statsData = [
   { value: 1500, suffix: "+", label: "Conditional Projects" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Mechanism of Action
@@ -249,7 +249,7 @@ export default function CreRecombinaseMicePage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link
@@ -717,7 +717,7 @@ export default function CreRecombinaseMicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Cre Recombinase Mice', path: '/cre-recombinase-mice' },
         ]}
       />

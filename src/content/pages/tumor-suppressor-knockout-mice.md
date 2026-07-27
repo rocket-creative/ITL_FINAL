@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:06.229Z"
 
 **Url: /tumor-suppressor-knockout-mice**
 
-**Meta Description: Custom tumor suppressor knockout mouse models for cancer research. p53, Rb, PTEN, APC, and other tumor suppressor gene targeting since 1998.**
+**Meta Description: Generated tumor suppressor knockout mouse models for cancer research. p53, Rb, PTEN, APC, and other tumor suppressor gene targeting since 1998.**
 
 **Primary Keyword: tumor suppressor knockout mice**
 

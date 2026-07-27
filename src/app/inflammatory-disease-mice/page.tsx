@@ -1,12 +1,12 @@
+'use client';
+
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * Inflammatory Disease Mice Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
-'use client';
-
 import { useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -14,22 +14,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Inflammatory Disease Mice",
-  intro: "Since 1998, ingenious targeting laboratory has supported inflammatory disease research with custom mouse models enabling mechanistic studies of chronic inflammation, immune dysregulation, and therapeutic interventions.",
+  intro: "Since 1998, ingenious targeting laboratory has supported inflammatory disease research with mouse model generation enabling mechanistic studies of chronic inflammation, immune dysregulation, and therapeutic interventions.",
   description: "Our inflammatory disease models have contributed to research on autoimmune diseases, inflammatory bowel disease, and anti inflammatory therapeutics. Inflammatory disease mouse models provide essential platforms for investigating the molecular pathways underlying chronic inflammation, testing hypotheses about immune cell contributions, and developing therapies for inflammatory conditions affecting millions of patients worldwide."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -150,7 +150,7 @@ export default function InflammatoryDiseaseMicePage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -196,22 +196,6 @@ export default function InflammatoryDiseaseMicePage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start your project today
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
-            </p>
-            <CatalogCustomDualCta slug="inflammatory-disease-mice" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
@@ -225,16 +209,6 @@ export default function InflammatoryDiseaseMicePage() {
             </div>
           </section>
         )}
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Current on Inflammatory Disease Research"
-              description="Subscribe to Lab Signals for the latest chronic inflammation model updates and research insights."
-            />
-          </div>
-        </section>
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
@@ -302,6 +276,12 @@ export default function InflammatoryDiseaseMicePage() {
           })
         }}
       />
+            <StandardPageCtaStack
+        slug="inflammatory-disease-mice"
+        labSignalsTitle="Stay Current on Inflammatory Disease Research"
+        labSignalsDescription="Subscribe to Lab Signals for the latest chronic inflammation model updates and research insights."
+      />
+
       </main>
       
       

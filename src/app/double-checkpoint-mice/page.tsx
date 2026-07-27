@@ -20,16 +20,16 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Dual Checkpoint Models",
   title: "Double Immune Checkpoint Mice",
-  intro: "Double immune checkpoint humanized mouse models express two human immune checkpoint proteins simultaneously, enabling evaluation of combination checkpoint inhibitor therapies. Since 1998, ingenious targeting laboratory has generated custom mouse models, including dual checkpoint models such as PD1+CTLA4, PD1+PDL1, and other combinations for immunotherapy research.",
+  intro: "Double immune checkpoint humanized mouse models express two human immune checkpoint proteins simultaneously, enabling evaluation of combination checkpoint inhibitor therapies. Since 1998, ingenious targeting laboratory has mouse model generation, including dual checkpoint models such as PD1+CTLA4, PD1+PDL1, and other combinations for immunotherapy research.",
   description: "Combination checkpoint blockade has shown enhanced efficacy compared to monotherapy in multiple cancer types. Double immune checkpoint humanized models enable preclinical evaluation of combination therapies using clinical antibody candidates, supporting therapeutic development programs."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Models Data - Top 2 Featured
@@ -127,10 +127,6 @@ const faqData = [
     answer: "Double immune checkpoint models enable testing of combination checkpoint blockade therapies in a single model system. This is important because combination therapies (e.g., PD1 + CTLA4) show enhanced efficacy in clinical trials. Testing combinations in double humanized models provides more physiologically relevant preclinical data."
   },
   {
-    question: "How long does it take to generate double immune checkpoint models?",
-    answer: "Combining two checkpoints requires sequential targeting (if starting from scratch) plus breeding time to generate double-humanized animals. If single-humanized models already exist, combining them requires only breeding time. We also have a catalog of already-created double immune checkpoint models that are maintained as live colonies for quick distribution. Contact us to determine the timeline for your specific model of interest."
-  },
-  {
     question: "Can triple or multi-checkpoint models be created?",
     answer: "Yes. Ingenious targeting laboratory can combine three or more checkpoint humanizations for complex immunotherapy combination studies. Multiple humanizations require careful breeding and genotyping to maintain all alleles. Triple-checkpoint models enable testing of triple combination therapies or more sophisticated experimental designs."
   }
@@ -178,7 +174,7 @@ export default function DoubleCheckpointMicePage() {
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
-            "serviceType": "Custom Mouse Model Generation",
+            "serviceType": "Mouse Model Generation",
             "areaServed": "Worldwide"
           })
         }}
@@ -267,7 +263,7 @@ export default function DoubleCheckpointMicePage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link href="/humanized-immune-checkpoint-mice" style={{
@@ -644,7 +640,7 @@ export default function DoubleCheckpointMicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Double Checkpoint Mice', path: '/double-checkpoint-mice' },
         ]}
       />

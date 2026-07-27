@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Target Validation Mouse Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -20,16 +20,16 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Target Validation Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported pharmaceutical and biotech companies with custom mouse models for drug target validation. Our target validation models have contributed to therapeutic development programs across oncology, immunology, neuroscience, metabolic disease, and other therapeutic areas, with results published in peer reviewed journals and presented at major scientific conferences.",
-  description: "Target validation mouse models provide genetic evidence that modulating a specific target produces the desired therapeutic effect. Before committing significant resources to drug development, target validation answers fundamental questions: Does inhibiting this target affect disease biology? What are the consequences of target loss in normal tissues? Are there compensatory mechanisms or resistance pathways? ingenious targeting laboratory designs and generates custom target validation models tailored to your therapeutic program, from conventional knockouts demonstrating proof of concept to sophisticated conditional and humanized models supporting clinical development."
+  intro: "Since 1998, ingenious targeting laboratory has supported pharmaceutical and biotech companies with mouse model generation for drug target validation. Our target validation models have contributed to therapeutic development programs across oncology, immunology, neuroscience, metabolic disease, and other therapeutic areas, with results published in peer reviewed journals and presented at major scientific conferences.",
+  description: "Target validation mouse models provide genetic evidence that modulating a specific target produces the desired therapeutic effect. Before committing significant resources to drug development, target validation answers fundamental questions: Does inhibiting this target affect disease biology? What are the consequences of target loss in normal tissues? Are there compensatory mechanisms or resistance pathways? ingenious targeting laboratory designs and generates target validation models for your therapeutic program, from conventional knockouts demonstrating proof of concept to sophisticated conditional and humanized models supporting clinical development."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
@@ -143,7 +143,6 @@ export default function TargetValidationMouseModelsPage() {
             <CatalogCustomDualCta slug="target-validation-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
-
 
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>

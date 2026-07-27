@@ -9,9 +9,9 @@ title: "Rat Models for Genetic Research"
 
 # Rat Models
 
-## Get your custom rat model in less time & with more certainty.
+## Get your model generation rat model in less time & with more certainty.
 
-Our process ensures faster germline transmission modifications. We offer custom rat models, including conventional knockouts, conditional knockouts, reporter knockins, and humanized cDNA knockins, tailored to your research needs.
+Our process ensures faster germline transmission modifications. We offer generated rat models, including conventional knockouts, conditional knockouts, reporter knockins, and humanized cDNA knockins, for your research needs.
 
 Available in various rat strains like Sprague Dawley, Long Evans, Wistar, and Lewis, our models provide reliable and efficient solutions for your scientific questions.
 
@@ -23,7 +23,7 @@ Available in various rat strains like Sprague Dawley, Long Evans, Wistar, and Le
 
 ## What Types of Rat Models Are Possible?
 
-The types of custom rat models that we can make for you include:
+The types of model generation rat models that we can make for you include:
 
 ### Knockout Models
 - **Conventional Knockout** - Standard gene deletion
@@ -52,6 +52,6 @@ Their size and physiological similarity to humans make them an ideal choice for 
 
 ## Related Pages
 
-- Custom Animal Models
+- Animal Model Generation
 - Rabbit Models
 - Transgenic Animal Models

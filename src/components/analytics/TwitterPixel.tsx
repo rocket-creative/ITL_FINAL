@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Twitter/X Pixel Integration
  * @version 1.0.0
@@ -5,10 +7,8 @@
  * @features
  * - Page view tracking
  * - Conversion events
- * - Custom audiences
+ * - Generated audiences
  */
-
-'use client';
 
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
@@ -153,7 +153,7 @@ export function trackTwitterSearch(searchString: string) {
 }
 
 /**
- * Track custom event
+ * Track generated event
  */
 export function trackTwitterCustom(
   eventName: string,

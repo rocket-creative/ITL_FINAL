@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Mouse Model Research Applications',
-  description: 'Custom mouse models for target validation, drug discovery, biomarker research, and mechanistic studies. 800+ publications since 1998.',
+  description: 'Mouse model generation for target validation, drug discovery, biomarker research, and mechanistic studies. 800+ publications since 1998.',
   path: '/research-applications',
 });
 

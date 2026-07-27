@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -235,7 +235,7 @@ export default function TIM3HumanizedMicePage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
             </div>
@@ -758,16 +758,6 @@ export default function TIM3HumanizedMicePage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="tim3-humanized-mice" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -777,16 +767,6 @@ export default function TIM3HumanizedMicePage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Updated on TIM3 Research and Checkpoint Immunotherapy"
-              description="Get the latest insights on next generation checkpoint models and combination immunotherapy strategies."
-            />
           </div>
         </section>
 
@@ -858,13 +838,18 @@ export default function TIM3HumanizedMicePage() {
         </section>
       </main>
 
+      <StandardPageCtaStack
+        slug="tim3-humanized-mice"
+        labSignalsTitle="Stay Updated on TIM3 Research and Checkpoint Immunotherapy"
+        labSignalsDescription="Get the latest insights on next generation checkpoint models and combination immunotherapy strategies."
+      />
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'TIM3 Humanized Mice', path: '/tim3-humanized-mice' },
         ]}
       />

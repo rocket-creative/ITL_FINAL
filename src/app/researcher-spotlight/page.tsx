@@ -8,7 +8,7 @@ const CANONICAL = 'https://www.genetargeting.com/researcher-spotlight/';
 export const metadata: Metadata = {
   title: 'Researcher Spotlight | ingenious targeting laboratory',
   description:
-    'Featured scientists whose published work used ITL custom mouse models. Each spotlight documents the research question, the model strategy, and what the work reveals.',
+    'Featured scientists whose published work used ITL mouse model generation. Each spotlight documents the research question, the model strategy, and what the work reveals.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     siteName: 'ingenious targeting laboratory',
     title: 'Researcher Spotlight | ingenious targeting laboratory',
     description:
-      'Featured scientists whose published work used ITL custom mouse models.',
+      'Featured scientists whose published work used ITL mouse model generation.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Researcher Spotlight | ingenious targeting laboratory',
     description:
-      'Featured scientists whose published work used ITL custom mouse models.',
+      'Featured scientists whose published work used ITL mouse model generation.',
   },
 };
 
@@ -34,7 +34,7 @@ export default function ResearcherSpotlightIndexPage() {
     '@type': 'CollectionPage',
     name: 'Researcher Spotlight',
     description:
-      'Featured scientists whose published work used ITL custom mouse models.',
+      'Featured scientists whose published work used ITL mouse model generation.',
     url: CANONICAL,
     isPartOf: {
       '@type': 'WebSite',
@@ -86,7 +86,7 @@ export default function ResearcherSpotlightIndexPage() {
               <h1>Researcher Spotlight</h1>
             </div>
             <p>
-              Scientists whose published work used ITL custom mouse models. Each feature
+              Scientists whose published work used ITL mouse model generation. Each feature
               documents the research question, the model strategy, and what the work reveals.
             </p>
           </div>

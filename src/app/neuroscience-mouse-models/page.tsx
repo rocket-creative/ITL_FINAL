@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,28 +9,28 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconTarget, IconSettings, IconChevronRight, IconCheckCircle, IconBrain } from '@/components/UXUIDC/Icons';
-import { GlossaryTermLink, BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
+import { GlossaryTermLink, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Brain & Behavior Research",
   title: "Neuroscience Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported neuroscience researchers with custom mouse models contributing to peer reviewed publications in Nature Neuroscience, Neuron, Cell, Journal of Neuroscience, and leading neuroscience journals worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported neuroscience researchers with mouse model generation contributing to peer reviewed publications in Nature Neuroscience, Neuron, Cell, Journal of Neuroscience, and leading neuroscience journals worldwide.",
   description: "Our neuroscience mouse models have advanced understanding of neural development, synaptic function, behavior, and neurological disease."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Intro Data
 const introData = {
   text: "Neuroscience mouse models enable researchers to investigate the molecular and cellular mechanisms underlying brain function and dysfunction. From cell type specific knockouts that dissect neural circuit function to disease mutation knockins that model neurological conditions, the right model design is critical for understanding the nervous system and developing treatments for neurological disorders.",
-  highlight: "Conditional approaches are particularly important in neuroscience, where the same gene often has distinct functions in different neuronal populations, glial cells, and developmental stages. ingenious targeting laboratory designs and generates custom neuroscience models tailored to your specific research questions."
+  highlight: "Conditional approaches are particularly important in neuroscience, where the same gene often has distinct functions in different neuronal populations, glial cells, and developmental stages. ingenious targeting laboratory designs and generates neuroscience models for your specific research questions."
 };
 
 // Neuronal Cre Drivers Table
@@ -845,61 +845,6 @@ export default function NeuroscienceMouseModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* Testimonials Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '700px', margin: '0 auto' }}>
-            <h2 className="animate-in" style={{ textAlign: 'center', color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '40px' }}>
-              What Researchers Say
-            </h2>
-            <div
-              className="animate-in"
-              style={{
-                backgroundColor: '#ffffff',
-                border: '1px solid #e0e0e0',
-                borderRadius: '8px',
-                padding: '40px',
-                textAlign: 'center'}}
-            >
-              <p style={{
-                color: '#666',
-                fontFamily: 'Lato, sans-serif',
-                fontSize: '1.05rem',
-                fontWeight: 400,
-                lineHeight: 1.7,
-                fontStyle: 'italic',
-                marginBottom: '25px'}}>
-                &ldquo;{testimonials[0].quote}&rdquo;
-              </p>
-              <p style={{ color: '#333', fontFamily: 'Poppins, sans-serif', fontSize: '.95rem', fontWeight: 600, marginBottom: '5px' }}>
-                — {testimonials[0].name}
-              </p>
-              <p style={{ color: '#666', fontFamily: 'Lato, sans-serif', fontSize: '.85rem', fontWeight: 400 }}>
-                {testimonials[0].affiliation}
-              </p>
-            </div>
-            <div className="animate-in" style={{ textAlign: 'center', marginTop: '30px' }}>
-              <Link
-                href="/testimonials"
-                className="inline-flex items-center gap-2 transition-colors duration-300"
-                style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
-              >
-                <span>Read more testimonials</span>
-                <IconChevronRight size={16} color="#008080" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="neuroscience-mouse-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -909,13 +854,6 @@ export default function NeuroscienceMouseModelsPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={getFaqData()} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="Neuroscience Mouse Model Insights" />
           </div>
         </section>
 
@@ -1007,6 +945,10 @@ export default function NeuroscienceMouseModelsPage() {
         </section>
       </main>
       
+      <StandardPageCtaStack
+        slug="neuroscience-mouse-models"
+        labSignalsTitle="Neuroscience Mouse Model Insights"
+      />
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}
@@ -1028,8 +970,8 @@ export default function NeuroscienceMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom neuroscience mouse models for brain and behavior research. Neuronal knockouts, circuit dissection, and neurodegenerative disease models. Since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Generated neuroscience mouse models for brain and behavior research. Neuronal knockouts, circuit dissection, and neurodegenerative disease models. Since 1998.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

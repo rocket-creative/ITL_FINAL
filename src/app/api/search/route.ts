@@ -86,7 +86,7 @@ function composeBestBet(
   const mt = parsed.modificationTypes[0];
   if (!gene || !mt) return null;
 
-  const subtitle = `Custom ${readableMod(mt).toLowerCase()} — request a quote in 24 hours`;
+  const subtitle = `Generated ${readableMod(mt).toLowerCase()} — request a quote in 24 hours`;
   const modLabel = readableMod(mt);
   const url = buildSeoUrl(parsed, catalogGeneSet);
 

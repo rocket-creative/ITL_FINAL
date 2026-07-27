@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.399Z"
 
 # Mouse Phenotyping Services
 
-Ingenious Targeting Laboratory provides comprehensive phenotyping services to characterize your custom mouse models across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.
+Ingenious Targeting Laboratory provides comprehensive phenotyping services to characterize your mouse model generation across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.
 
 From basic clinical observations through specialized disease specific endpoints, our phenotyping capabilities help you understand your model's biology and validate its utility for your research program.
 
@@ -68,11 +68,11 @@ Cytokine panels, hormone levels, and other specialized biomarker assays are avai
 
 ### Tissue Collection
 
-Standardized tissue collection protocols ensure optimal preservation for histological analysis. Collection can be customized based on expected phenotype.
+Standardized tissue collection protocols ensure optimal preservation for histological analysis. Collection can be scoped based on expected phenotype.
 
 ### Routine Histology
 
-Hematoxylin and eosin (H&amp;E) staining provides overview of tissue architecture and pathology. Standard panels include major organs; custom panels focus on tissues of interest.
+Hematoxylin and eosin (H&amp;E) staining provides overview of tissue architecture and pathology. Standard panels include major organs; generated panels focus on tissues of interest.
 
 ### Special Stains
 

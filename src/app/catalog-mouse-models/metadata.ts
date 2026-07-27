@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Ready Made Mouse Model Catalog',
-  description: 'Browse ready made mouse models including humanized checkpoint mice and reporter strains. Faster timelines than custom projects.',
+  description: 'Browse ready made mouse models including humanized checkpoint mice and reporter strains. Faster timelines than model generation projects.',
   path: '/catalog-mouse-models',
 });
 

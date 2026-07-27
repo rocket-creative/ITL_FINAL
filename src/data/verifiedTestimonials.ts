@@ -45,11 +45,11 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
     author: 'Julia Maxson',
     credentials: 'PhD',
     affiliation: 'Knight Cancer Institute, Oregon Health & Science University',
-    tags: ['oncology', 'custom-models', 'customer-service'],
+    tags: ['oncology', 'generated-models', 'customer-service'],
   },
   {
     id: 'plumley-warren',
-    quote: 'ingenious Targeting Laboratory is highly recommended for generating custom animal models. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.',
+    quote: 'ingenious Targeting Laboratory is highly recommended for generating animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.',
     author: 'Hyekyung Plumley',
     credentials: 'PhD',
     affiliation: 'Warren Center for Neuroscience Drug Discovery',
@@ -89,11 +89,11 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'gabay-geneva',
-    quote: 'I have been always very satisfied by the work done by ingenious targeting laboratory for my custom mouse projects.',
+    quote: 'I have been always very satisfied by the work done by ingenious targeting laboratory for my generated mouse projects.',
     author: 'Cem Gabay',
     credentials: 'MD',
     affiliation: 'University Hospitals of Geneva',
-    tags: ['custom-models', 'international', 'satisfaction'],
+    tags: ['generated-models', 'international', 'satisfaction'],
   },
   {
     id: 'said-uci',
@@ -277,7 +277,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
     author: 'Richard Chen',
     credentials: 'PhD',
     affiliation: 'CHDI Foundation',
-    tags: ['huntingtons', 'disease-models', 'neuroscience', 'preclinical', 'custom-models'],
+    tags: ['huntingtons', 'disease-models', 'neuroscience', 'preclinical', 'generated-models'],
   },
 ];
 

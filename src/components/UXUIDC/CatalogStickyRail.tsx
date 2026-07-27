@@ -1,7 +1,7 @@
 /**
  * |UXUIDC| Catalog Sticky Rail
  *
- * Persistent floating links on educational pages: catalog browse + custom quote.
+ * Persistent floating links on educational pages: catalog browse + quote.
  * Desktop only — hidden below 1024px to avoid mobile CLS and avoid covering content.
  */
 
@@ -99,7 +99,7 @@ export default function CatalogStickyRail({
       `}</style>
       <nav
         className="catalog-sticky-rail-wrap"
-        aria-label="Browse catalog or request a custom quote"
+        aria-label="Browse catalog or request a quote"
       >
         <Link
           href={catalogUrl}
@@ -118,7 +118,7 @@ export default function CatalogStickyRail({
           data-cta="sticky-rail-request-quote"
           data-cta-slug={slug}
         >
-          Request custom quote
+          Request quote
           <span aria-hidden="true">→</span>
         </Link>
         <Link
@@ -133,10 +133,10 @@ export default function CatalogStickyRail({
             border: '1px solid #d8e3e6',
             boxShadow: '0 2px 8px rgba(10, 37, 60, 0.08)',
           }}
-          data-cta="sticky-rail-custom-services"
+          data-cta="sticky-rail-generated-services"
           data-cta-slug={slug}
         >
-          Custom model services
+          Generated model services
         </Link>
       </nav>
     </>

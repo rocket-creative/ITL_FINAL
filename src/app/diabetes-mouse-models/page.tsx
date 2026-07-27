@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,22 +9,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Metabolic Disease Models",
   title: "Diabetes Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported diabetes researchers with custom mouse models contributing to peer reviewed publications in Diabetes, Cell Metabolism, Diabetologia, and leading metabolism journals worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported diabetes researchers with mouse model generation contributing to peer reviewed publications in Diabetes, Cell Metabolism, Diabetologia, and leading metabolism journals worldwide.",
   description: "Diabetes mouse models enable researchers to investigate the molecular mechanisms underlying glucose homeostasis, insulin secretion, and insulin action. From beta cell specific knockouts that isolate islet function to tissue specific deletions in liver, muscle, and adipose tissue that dissect peripheral insulin resistance."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Type 1 Diabetes Features
@@ -500,16 +500,6 @@ export default function DiabetesMouseModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="diabetes-mouse-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -519,16 +509,6 @@ export default function DiabetesMouseModelsPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Current on Diabetes Research"
-              description="Subscribe to Lab Signals for the latest metabolic disease model updates and research insights."
-            />
           </div>
         </section>
 
@@ -600,6 +580,11 @@ export default function DiabetesMouseModelsPage() {
         </section>
       </main>
 
+      <StandardPageCtaStack
+        slug="diabetes-mouse-models"
+        labSignalsTitle="Stay Current on Diabetes Research"
+        labSignalsDescription="Subscribe to Lab Signals for the latest metabolic disease model updates and research insights."
+      />
       <UXUIDCFooter />
 
       {/* Schema.org Structured Data */}
@@ -621,7 +606,7 @@ export default function DiabetesMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom diabetes mouse models for type 1 and type 2 diabetes research. Beta cell knockouts, insulin signaling models, and metabolic phenotyping.",
+            "description": "Generated diabetes mouse models for type 1 and type 2 diabetes research. Beta cell knockouts, insulin signaling models, and metabolic phenotyping.",
             "serviceType": "Diabetes Mouse Model Generation"
           })
         }}

@@ -187,7 +187,7 @@ export default function LegacyPageTemplate({
         {showCTA && (
           <UXUIDCStartProjectCTA
             title="Ready to Start Your Project?"
-            content="Contact our scientific team to discuss your research requirements and get a customized quote for your project."
+            content="Contact our scientific team to discuss your research requirements and get a project quote for your project."
           />
         )}
       </main>

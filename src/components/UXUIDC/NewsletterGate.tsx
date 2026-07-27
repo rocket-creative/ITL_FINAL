@@ -93,11 +93,11 @@ export default function NewsletterGate({
 
     window.addEventListener('message', handleFlodeskSubmit);
     
-    // Also listen for Flodesk's custom events if they use them
+    // Also listen for Flodesk's generated events if they use them
     const handleFlodeskCustomEvent = (e: Event) => {
       const customEvent = e as CustomEvent;
       if (customEvent.detail?.formId === FLODESK_FORM_ID) {
-        console.log('Flodesk custom event:', customEvent.detail);
+        console.log('Flodesk generated event:', customEvent.detail);
         setCookie(COOKIE_NAME, 'true', COOKIE_DAYS);
         setIsVerified(true);
       }

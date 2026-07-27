@@ -3,7 +3,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Huntington Mouse Models',
-  description: 'Custom Huntington disease mouse models for neurodegenerative research. Study CAG repeat expansion and motor dysfunction.',
+  description: 'Generated Huntington disease mouse models for neurodegenerative research. Study CAG repeat expansion and motor dysfunction.',
   path: '/huntingtons-mouse-models',
 });
 

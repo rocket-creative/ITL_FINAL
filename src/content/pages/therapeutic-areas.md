@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:06.008Z"
 
 **Url: /therapeutic-areas**
 
-**Meta Description: Custom mouse models for oncology, neuroscience, metabolic disease, immunology, cardiovascular, and rare disease research. 2,800+ custom models since 1998.**
+**Meta Description: Mouse model generation for oncology, neuroscience, metabolic disease, immunology, cardiovascular, and rare disease research. 2,800+ model generation since 1998.**
 
 **Primary Keyword: therapeutic area mouse models**
 
@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:06.008Z"
 
 # Therapeutic Area Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has generated custom mouse models supporting research across every major therapeutic area. Our 2,800+ completed custom projects span oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare disease, and ophthalmology, contributing to over 800 peer reviewed publications.
+Since 1998, Ingenious Targeting Laboratory has mouse model generation supporting research across every major therapeutic area. Our 2,800+ completed model generation projects span oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare disease, and ophthalmology, contributing to over 800 peer reviewed publications.
 
-Whether you are studying disease mechanisms, validating therapeutic targets, or testing drug candidates, Ingenious Targeting Laboratory provides the custom knockout, knockin, and humanized models optimized for your specific disease research needs.
+Whether you are studying disease mechanisms, validating therapeutic targets, or testing drug candidates, Ingenious Targeting Laboratory provides the generated knockout, knockin, and humanized models optimized for your specific disease research needs.
 
 ## Oncology Mouse Models
 

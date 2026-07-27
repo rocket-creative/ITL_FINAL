@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.584Z"
 
 **Url: /immunology-mouse-models**
 
-**Meta Description: Custom immunology mouse models for immune system research. Study immune function, disease mechanisms, and therapeutics.**
+**Meta Description: Generated immunology mouse models for immune system research. Study immune function, disease mechanisms, and therapeutics.**
 
 **Primary Keyword: immunology mouse model**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.584Z"
 
 # Immunology Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported immunology researchers with custom mouse models contributing to peer reviewed publications in Immunity, Nature Immunology, Journal of Experimental Medicine, and leading immunology journals worldwide. Our immunology mouse models have advanced understanding of immune cell development, autoimmune pathogenesis, and inflammatory disease mechanisms.
+Since 1998, Ingenious Targeting Laboratory has supported immunology researchers with mouse model generation contributing to peer reviewed publications in Immunity, Nature Immunology, Journal of Experimental Medicine, and leading immunology journals worldwide. Our immunology mouse models have advanced understanding of immune cell development, autoimmune pathogenesis, and inflammatory disease mechanisms.
 
 Immunology mouse models enable researchers to investigate immune cell development, activation, and effector function, as well as the dysregulation underlying autoimmune and inflammatory diseases. From T cell and B cell specific knockouts that dissect lymphocyte biology to humanized immune checkpoint models for therapeutic testing, the right model design is critical for immunological discovery and translational success.
 
@@ -270,9 +270,9 @@ Humanization of cytokines, cytokine receptors, and other immune molecules enable
 
 ### Pre Germline Characterization
 
-ES cell based targeting enables comprehensive characterization of immunology alleles before mouse generation. This pre germline analysis confirms correct allele structure, mutation sequence, and absence of random integration events.
+homologous recombination targeting enables comprehensive characterization of immunology alleles before mouse generation. This pre germline analysis confirms correct allele structure, mutation sequence, and absence of random integration events.
 
-For humanized immune models, sequence verification confirms exact human sequence integration. Functional testing can verify human specific antibody binding in ES cells prior to mouse production.
+For humanized immune models, sequence verification confirms exact human sequence integration. Functional testing can verify human specific antibody binding in targeted cells prior to mouse production.
 
 ### Strain Background Considerations
 
@@ -347,12 +347,11 @@ Luo PY et al. 2025. Autophagy of Kupffer cells modulates CD8 T cell activation i
 
 - (/tissue-specific-cre-lines)
 - (/strain-selection-guide)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Start Your Immunology Model Project
 
-Our scientific consultants are ready to discuss your immunology research requirements and recommend the optimal model design for your program. Initial consultation is provided at no charge and includes target analysis, immune cell specific Cre recommendations, and timeline estimates.
+Our scientific consultants are ready to discuss your immunology research requirements and recommend the optimal model design for your program. Initial consultation is provided at no charge and includes target analysis, immune cell specific Cre recommendations.
 
 ## Frequently Asked Questions
 
@@ -396,7 +395,7 @@ Floxed alleles are crossed to cell type-specific Cre drivers. For example, a flo
 - No prohibited terms
 - Covers autoimmune, inflammatory, immune cell Cre drivers
 - T cell, B cell, Myeloid Cre driver tables included
-- ES cell framed as pre germline characterization advantage
+- pre germline characterization advantage
 - Humanized immune checkpoint section included
 - CTA to /request-quote
 - Word count ~2,100 (appropriate for therapeutic hub)

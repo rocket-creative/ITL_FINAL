@@ -23,14 +23,14 @@ import {
 
 // What's Inside the Guide
 const guideContents = [
-  'Knockout and Point Mutation Models including project phases, timelines, and deliverables',
+  'Knockout and Point Mutation Models including project phases and deliverables',
   'Conditional Knockout Models with targeted exon removal and genotype validation',
   'Targeted Knock In Models including cDNA, reporter, or Cre designs and insertion strategy',
   'TruView Conditional Knockout for advanced conditional model systems',
   'Conditional Point Mutations for precise mutagenesis and conditional control',
   'TruHumanization Large Fragment Models supporting up to 200 kb region replacements',
-  'Custom Rat Models available for specialized studies',
-  'Custom Rabbit Models suitable for targeted transgenesis projects',
+  'Generated Rat Models available for specialized studies',
+  'Rabbit Model Generation suitable for targeted transgenesis projects',
   'Flexible funding lets you begin your project immediately and pay once your funding is secured',
 ];
 
@@ -47,7 +47,7 @@ const specializedServices = [
   { title: 'Genotyping and Screening', desc: 'For rapid identification of alleles and targeted modifications' },
   { title: 'Cryopreservation and Rederivation', desc: 'To secure valuable lines or recover from contamination' },
   { title: 'Colony Management', desc: 'For scalable breeding, maintenance, and colony health monitoring' },
-  { title: 'Custom Breeding Schemes', desc: 'For homozygous, heterozygous, or Cre positive outcomes' },
+  { title: 'Generated Breeding Schemes', desc: 'For homozygous, heterozygous, or Cre positive outcomes' },
   { title: 'Phenotype Analysis', desc: 'For in depth characterization to validate model performance' },
 ];
 
@@ -56,10 +56,6 @@ const faqs = [
   {
     question: 'What technologies do you use?',
     answer: 'We use the most appropriate and proven tools—guided by your project\'s complexity and publication goals—to ensure optimal results.',
-  },
-  {
-    question: 'How long does it take to get a model?',
-    answer: 'Timelines vary depending on complexity, but many projects can be completed within 8 months. Your proposal will include clear timing.',
   },
   {
     question: 'Can I get help with breeding or cohorts?',
@@ -78,7 +74,7 @@ const faqs = [
 // Stats
 const stats = [
   { value: 26, suffix: '+', label: 'Years Experience' },
-  { value: 2800, suffix: '+', label: 'Custom Mouse Models Delivered' },
+  { value: 2800, suffix: '+', label: 'Mouse Model Generation Delivered' },
   { value: 900, suffix: '+', label: 'Research Institutions' },
   { value: 100, suffix: '%', label: 'Germline Guarantee' },
 ];
@@ -165,7 +161,7 @@ export default function StartYourProjectPage() {
               }}
             >
               <IconDNA size={16} color="white" />
-              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>Custom Mouse Models</span>
+              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>Mouse Model Generation</span>
             </div>
             <h1
               className="hero-animate"
@@ -203,7 +199,7 @@ export default function StartYourProjectPage() {
                 marginBottom: '30px',
               }}
             >
-              From conventional knockouts to advanced large fragment humanization, <em>ingenious targeting laboratory</em> delivers genetically engineered models built to your specifications, reliably, efficiently, and within budget. Unlock the complete <strong>2026 Pricing Guide</strong> to view starting prices, timelines, and flexible Start Now Pay Later options that align with your funding cycles.
+              From conventional knockouts to advanced large fragment humanization, <em>ingenious targeting laboratory</em> delivers genetically engineered models built to your specifications, reliably, efficiently, and within budget. Unlock the complete <strong>2026 Pricing Guide</strong> to view starting prices and flexible Start Now Pay Later options that align with your funding cycles.
             </p>
           </div>
         </section>
@@ -289,7 +285,7 @@ export default function StartYourProjectPage() {
                     marginBottom: '10px',
                   }}
                 >
-                  Access the 2026 Custom Mouse Model Pricing Guide
+                  Access the 2026 Mouse Model Generation Pricing Guide
                 </h3>
                 <p style={{ color: '#666', fontSize: '.85rem', marginBottom: '20px', lineHeight: 1.6 }}>
                   We respect your inbox. Access includes exclusive project planning tools and funding strategy resources.
@@ -371,7 +367,7 @@ export default function StartYourProjectPage() {
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                     {[
                       'Model types & starting prices by design tier',
-                      'Typical project phases and delivery timelines',
+                      'Typical project phases and deliverables',
                       'Funding flexibility: Start now, pay later',
                       'Workflow overview and support services',
                     ].map((item, i) => (
@@ -408,7 +404,7 @@ export default function StartYourProjectPage() {
             >
               <strong>Trusted by 900+ universities, biotech startups, and global research institutions for over 26 years.</strong>
               <br />
-              More than <strong>2,800 custom mouse models delivered</strong>.
+              More than <strong>2,800 mouse model generation delivered</strong>.
             </p>
           </div>
         </section>
@@ -429,7 +425,7 @@ export default function StartYourProjectPage() {
                 Catalog Mouse Models
               </h2>
               <p style={{ color: '#666', fontSize: '1rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.7 }}>
-                Not every project requires a custom build. Our catalog of <strong>14,774+ mouse models</strong> offers study ready solutions for a wide range of research areas.
+                Not every project requires a generated build. Our catalog of <strong>14,774+ mouse models</strong> offers study ready solutions for a wide range of research areas.
               </p>
             </div>
 
@@ -771,7 +767,7 @@ export default function StartYourProjectPage() {
             >
               {[
                 'Over 26 years of experience in genetic model development',
-                '2800+ custom mouse models delivered',
+                '2800+ mouse model generation delivered',
                 'Trusted by NIH-funded labs and global biotech teams',
                 'Clear communication, fixed prices and ongoing project support',
                 'No obligation — speak to one of our scientists about your goals today',
@@ -821,7 +817,7 @@ export default function StartYourProjectPage() {
                 marginBottom: '30px',
               }}
             >
-              Whether you&apos;re requesting a custom model or browsing our catalog, we&apos;re here to support your next breakthrough.
+              Whether you&apos;re requesting a model generation or browsing our catalog, we&apos;re here to support your next breakthrough.
             </p>
 
             <div
@@ -857,7 +853,7 @@ export default function StartYourProjectPage() {
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                Request Custom Quote
+                Request a Quote
                 <IconArrowRight size={16} color="#008080" />
               </Link>
               <Link

@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.129Z"
 
 **Url: /balbc-mouse-background**
 
-**Meta Description: BALB/c mouse strain characteristics, immunological applications, and gene targeting considerations. Custom mouse models on BALB/c background since 1998.**
+**Meta Description: BALB/c mouse strain characteristics, immunological applications, and gene targeting considerations. Mouse model generation on BALB/c background since 1998.**
 
 **Primary Keyword: BALB/c mouse**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.129Z"
 
 # BALB/c Mouse Background
 
-Since 1998, Ingenious Targeting Laboratory has generated custom mouse models on multiple strain backgrounds including BALB/c. Understanding strain specific characteristics is essential for selecting the optimal genetic background for your research. BALB/c mice are particularly valuable for immunological studies, syngeneic tumor models, and research where the strain's unique characteristics provide experimental advantages.
+Since 1998, Ingenious Targeting Laboratory has mouse model generation on multiple strain backgrounds including BALB/c. Understanding strain specific characteristics is essential for selecting the optimal genetic background for your research. BALB/c mice are particularly valuable for immunological studies, syngeneic tumor models, and research where the strain's unique characteristics provide experimental advantages.
 
 Whether you are generating new knockout or knockin models on BALB/c background or backcrossing existing models onto this strain, Ingenious Targeting Laboratory provides the expertise to deliver well characterized models suited to your research needs.
 
@@ -78,7 +78,7 @@ BALB/c mice are susceptible to certain autoimmune phenotypes and are used in mod
 
 ### Strain Availability
 
-For more complex targeting projects, BALB/c derived ES cells can be used for direct targeting on this background. For simpler project types, direct injection into BALB/c embryos is possible.
+For more complex targeting projects, Direct targeting on BALB/c background is available for complex projects on this background. For simpler project types, direct injection into BALB/c embryos is possible.
 
 ### Backcrossing Strategy
 
@@ -145,7 +145,7 @@ Mouse models from Ingenious Targeting Laboratory have been successfully establis
 
 ## Start Your Project
 
-Ready to discuss custom mouse models on BALB/c or other strain backgrounds? Our scientific team provides complimentary consultation to help you select the optimal genetic background for your research.
+Ready to discuss mouse model generation on BALB/c or other strain backgrounds? Our scientific team provides complimentary consultation to help you select the optimal genetic background for your research.
 
 ## Frequently Asked Questions
 
@@ -155,7 +155,7 @@ BALB/c shows Th2 immune bias while C57BL/6 shows Th1 bias, affecting susceptibil
 
 **When should I choose BALB/c over C57BL/6 for my model?**
 
-Choose BALB/c for Th2-biased immune responses, infectious disease models where BALB/c susceptibility is advantageous, or when matching existing BALB/c-based research protocols. Choose C57BL/6 for metabolic studies, standard behavioral assays, or when using C57BL/6N ES cells for targeting.
+Choose BALB/c for Th2-biased immune responses, infectious disease models where BALB/c susceptibility is advantageous, or when matching existing BALB/c-based research protocols. Choose C57BL/6 for metabolic studies, standard behavioral assays, or when targeting on C57BL/6N background.
 
 **Can I backcross my existing model to BALB/c background?**
 
@@ -165,9 +165,6 @@ Yes. ITL provides backcrossing services to transfer models to BALB/c or other ba
 
 Genetic background profoundly influences phenotypes. The same genetic modification can show different severity, penetrance, or even opposite effects on different backgrounds. Modifier genes on different backgrounds can mask or enhance phenotypes. Consistent background use within studies is critical for reproducibility.
 
-**What is the timeline for generating a model on BALB/c background?**
-
-The typical timeline for custom mouse model generation is 6-8 months from project initiation to identification of germline transmission mice.
 
 (/request-quote)
 

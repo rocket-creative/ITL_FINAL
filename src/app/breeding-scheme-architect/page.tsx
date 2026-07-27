@@ -65,7 +65,7 @@ const faqs = [
   {
     question: 'How do I get help with my specific breeding project?',
     answer:
-      'Request a project consultation to discuss your breeding scheme with our scientific team. We can help optimize your strategy, recommend appropriate Cre driver lines, and design custom models if needed. Consultation requests receive responses within one business day.',
+      'Request a project consultation to discuss your breeding scheme with our scientific team. We can help optimize your strategy, recommend appropriate Cre driver lines, and design model generation if needed. Consultation requests receive responses within one business day.',
   },
 ];
 
@@ -96,7 +96,7 @@ const howItWorksSteps = [
     number: '4',
     title: 'Export or Consult',
     description:
-      'Save your breeding plan as a PDF, share with collaborators, or request a consultation with our scientific team. We can help optimize your strategy, recommend Cre driver lines, or design custom models for your research.',
+      'Save your breeding plan as a PDF, share with collaborators, or request a consultation with our scientific team. We can help optimize your strategy, recommend Cre driver lines, or design model generation for your research.',
     icon: IconClipboard,
   },
 ];
@@ -124,7 +124,7 @@ const benefits = [
   {
     title: 'Plan Before You Order',
     description:
-      'Use the breeding scheme architect before ordering custom models to understand post delivery breeding requirements and timeline to study ready cohorts.',
+      'Use the breeding scheme architect before ordering model generation to understand post delivery breeding requirements and timeline to study ready cohorts.',
     icon: IconCalendar,
   },
 ];
@@ -144,7 +144,7 @@ const relatedResources = [
   {
     title: 'Breeding Services',
     link: '/speed-expansion-breeding',
-    description: 'Professional breeding services to accelerate your project timeline',
+    description: 'Professional breeding services to accelerate cohort development',
   },
   {
     title: 'Request Project Consultation',
@@ -273,7 +273,7 @@ function BreedingSchemeArchitectContent() {
             and estimate time to experimental cohorts. The breeding scheme architect helps
             researchers plan single allele knockout, knockin, Cre lox, and humanized model
             breeding before starting a project. Since 1998, ingenious targeting laboratory
-            has helped researchers navigate breeding strategies for over 2,800 custom mouse
+            has helped researchers navigate breeding strategies for over 2,800 generated mouse
             model projects.
           </p>
 
@@ -342,7 +342,7 @@ function BreedingSchemeArchitectContent() {
               }}
               className="hover:bg-white hover:text-[#0a253c]"
             >
-              Request Custom Quote
+              Request a Quote
             </Link>
           </div>
         </div>
@@ -771,7 +771,7 @@ function BreedingSchemeArchitectContent() {
 
       {/* ========== START YOUR PROJECT CTA ========== */}
       <UXUIDCStartProjectCTA
-        title="Ready to Start Your Custom Model Project?"
+        title="Ready to Start Your Model Generation Project?"
         content="Our scientific consultants are available to discuss your breeding strategy and help design the optimal mouse model for your experimental goals."
       />
 

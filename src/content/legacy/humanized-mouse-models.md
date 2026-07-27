@@ -13,7 +13,7 @@ title: "Humanized Mouse Models for Research"
 
 A humanized mouse is an animal model that expresses a human genetic sequence or serves as a host for living human cells or tissues.
 
-At ingenious targeting laboratory, we create custom genetically humanized mouse models tailored to the specific research goals of scientists worldwide. We can design your ideal model without limitations – from small genetic changes to large replacements of genomic sequences, including the potential for conditional alleles, cassette knockins, and more.
+At ingenious targeting laboratory, we generate genetically humanized mouse models tailored to the specific research goals of scientists worldwide. We can design your ideal model without limitations – from small genetic changes to large replacements of genomic sequences, including the potential for conditional alleles, cassette knockins, and more.
 
 Create a model precisely suited to your needs, rather than settling for pre-existing models.
 

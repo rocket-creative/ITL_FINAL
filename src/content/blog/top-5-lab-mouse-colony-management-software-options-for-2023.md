@@ -60,7 +60,7 @@ Mausoleum can be purchased for a one-time server license fee. Additional client 
 
 ### Bonus: [Mouse Breeding Planner](https://go.genetargeting.com/mouse-breeding-planner-ingenious) by ingenious targeting laboratory
 
-Before trying out any of the software options we’ve discussed here, you can get a headstart on your mouse colony with our exclusive [Breeding Planner](https://go.genetargeting.com/mouse-breeding-planner-ingenious). This free software allows you to create a fully customized breeding plan before your mice arrive at your facility. Our guided software will help you predict the time and cost of your complete project, based on your strain’s breeding performance and your facility’s operating costs. You can also quickly compare different breeding options with the graphical output feature.
+Before trying out any of the software options we’ve discussed here, you can get a headstart on your mouse colony with our exclusive [Breeding Planner](https://go.genetargeting.com/mouse-breeding-planner-ingenious). This free software allows you to create a fully specified breeding plan before your mice arrive at your facility. Our guided software will help you predict the time and cost of your complete project, based on your strain’s breeding performance and your facility’s operating costs. You can also quickly compare different breeding options with the graphical output feature.
 
 We hope you’ve found this article to be helpful and that you’re able to choose the ideal lab animal management software for your lab!
 

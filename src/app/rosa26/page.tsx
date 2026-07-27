@@ -11,8 +11,7 @@ import {
   LegacyInfoLink,
   UXUIDCResourceLinks,
   rosa26Resources,
-  BreedingSchemeArchitectCTA,
-  LabSignalsSignup} from '@/components/UXUIDC';
+  StandardPageCtaStack} from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconCheckCircle, IconChevronRight } from '@/components/UXUIDC/Icons';
 
 // Legacy content link
@@ -22,7 +21,7 @@ const heroData = {
   badge: 'Safe Harbor Targeting',
   title: 'Rosa26 Locus Targeting',
   intro: 'Targeted transgenic mice using the Rosa26 locus.',
-  description: 'Rapid-Rosa26™ Targeting technology is ingenious\' solution for custom targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.'};
+  description: 'Rapid-Rosa26™ Targeting technology is ingenious\' solution for model generation targeted transgenic models with shorter production timelines and reduced cost, without compromising performance and quality.'};
 
 const benefits = [
   'Predictable targeting',
@@ -120,7 +119,7 @@ export default function Rosa26Page() {
                   fontSize: '.85rem',
                   fontWeight: 500}}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
             </div>
@@ -243,9 +242,6 @@ export default function Rosa26Page() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
         {/* CTA Section */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -266,20 +262,10 @@ export default function Rosa26Page() {
                   fontSize: '.9rem',
                   fontWeight: 500}}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Current on Safe Harbor Targeting"
-              description="Subscribe to Lab Signals for the latest Rosa26 targeting updates and transgenic model insights."
-            />
           </div>
         </section>
 
@@ -338,12 +324,11 @@ export default function Rosa26Page() {
         </section>
       </main>
 
-      {/* Bottom dual-path CTA */}
-      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
-        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-          <CatalogCustomDualCta slug="rosa26" utmMedium="page-closing" flush />
-        </div>
-      </section>
+      <StandardPageCtaStack
+        slug="rosa26"
+        labSignalsTitle="Stay Current on Safe Harbor Targeting"
+        labSignalsDescription="Subscribe to Lab Signals for the latest Rosa26 targeting updates and transgenic model insights."
+      />
 
       <UXUIDCFooter />
           

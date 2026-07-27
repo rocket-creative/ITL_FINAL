@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * Overview Section - displays MASTER TEXT exactly
  * Source: homepage.md lines 28-36
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
-
-'use client';
 
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';

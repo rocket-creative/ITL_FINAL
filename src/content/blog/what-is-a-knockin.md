@@ -24,7 +24,7 @@ What is a knockin gene replacement and how is it used? The process of creating a
 
 ### The Diversity of Knockin Mouse Models
 
-At ingenious targeting laboratory, we can generate a custom knockin mouse model that’s tailored to your next research project. Our classic and advanced technologies allow us to generate quality and precise models with fast timelines. For point mutations and cassette insertions, both conventional and conditional strategies are available.
+At ingenious targeting laboratory, we can generate a generated knockin mouse model that’s tailored to your next research project. Our classic and advanced technologies allow us to generate quality and precise models with fast timelines. For point mutations and cassette insertions, both conventional and conditional strategies are available.
 
 In order to more accurately model human disease, we’ve developed our exclusive TruHumanization™ technology. What sets it apart from other strategies is that it’s possible to completely replace a mouse sequence with human sequence, resulting in a faithful and predictable knockin mouse model.
 

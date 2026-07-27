@@ -1,5 +1,5 @@
 /**
- * |UXUIDC| Mid-article catalog + custom widget (educational pages).
+ * |UXUIDC| Mid-article catalog + generation widget (educational pages).
  * Thin wrapper around sitewide CatalogCustomDualCta.
  */
 

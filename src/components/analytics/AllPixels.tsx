@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * All Tracking Pixels Combined
  * @version 1.5.0
@@ -5,8 +7,6 @@
  * Note: Google Analytics is loaded directly in layout.tsx for Google verification
  * Includes: HubSpot, AdRoll (others available when configured)
  */
-
-'use client';
 
 // Google Analytics moved to layout.tsx with beforeInteractive for Google verification
 // import GoogleAnalytics from './GoogleAnalytics';

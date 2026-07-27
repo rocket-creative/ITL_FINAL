@@ -155,7 +155,7 @@ export default function ScientificLeadershipPage() {
           }}>
             {[
               {
-                title: 'ES Cell Targeting',
+                title: 'Gene Targeting',
                 description: 'Homologous recombination expertise spanning conventional knockouts, conditional alleles, point mutations, and complex humanization strategies. Over 2,800 successful custom targeting events since 1998.',
               },
               {
@@ -359,7 +359,7 @@ export default function ScientificLeadershipPage() {
               },
               {
                 step: '3',
-                title: 'ES Cell Screening',
+                title: 'Clone Screening',
                 description: 'Southern blot confirmation of correct integration, PCR verification of allele structure, and karyotype analysis ensuring chromosomal stability. Only properly targeted clones advance to injection.',
               },
               {
@@ -448,7 +448,7 @@ export default function ScientificLeadershipPage() {
             name: 'ingenious targeting laboratory',
             url: 'https://www.genetargeting.com',
             foundingDate: '1998',
-            description: 'Custom mouse model generation with over 26 years of expertise in ES cell targeting, conditional alleles, and gene targeting technology.',
+            description: 'Custom mouse model generation with over 26 years of expertise in gene targeting, conditional alleles, and gene targeting technology.',
             areaServed: 'Worldwide',
           }),
         }}

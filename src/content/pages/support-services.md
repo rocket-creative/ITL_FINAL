@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.906Z"
 
 # Mouse Model Support Services
 
-Beyond custom mouse model generation, Ingenious Targeting Laboratory provides comprehensive support services to maintain, expand, and preserve your valuable mouse colonies. Since 1998, we have supported researchers with colony management, cryopreservation, rederivation, and breeding services that maximize research productivity while ensuring genetic integrity.
+Beyond mouse model generation, Ingenious Targeting Laboratory provides comprehensive support services to maintain, expand, and preserve your valuable mouse colonies. Since 1998, we have supported researchers with colony management, cryopreservation, rederivation, and breeding services that maximize research productivity while ensuring genetic integrity.
 
 ## Colony Management Services
 
@@ -26,7 +26,7 @@ Maintaining a productive mouse colony requires consistent husbandry, accurate ge
 
 **Breeding Colony Maintenance** with documented pedigrees, organized mating schemes, and regular health monitoring to ensure colony productivity and genetic integrity.
 
-**Genotyping Services** using PCR based assays to identify carriers, homozygotes, and compound mutants. Ingenious Targeting Laboratory develops custom genotyping protocols for each targeted allele.
+**Genotyping Services** using PCR based assays to identify carriers, homozygotes, and compound mutants. Ingenious Targeting Laboratory develops generated genotyping protocols for each targeted allele.
 
 **Cohort Development** to generate study ready animals on your timeline. We can expand from founders to experimental cohorts while you focus on research design and data analysis.
 
@@ -42,7 +42,7 @@ Cryopreservation protects your mouse lines against colony loss while reducing on
 
 **Embryo Cryopreservation** freezes two cell stage embryos for rapid colony recovery. This approach preserves both maternal and paternal genetics in a single archive.
 
-**ES Cell Cryopreservation** maintains targeted ES cell clones for future use, enabling generation of additional mice or derivative alleles without repeating the targeting process.
+**targeted clone cryopreservation** maintains characterized targeted clones for future use, enabling generation of additional mice or derivative alleles without repeating the targeting process.
 
 **Archive and Recovery** services include quality controlled storage with documented inventory and validated recovery procedures to regenerate colonies from frozen stocks.
 
@@ -80,7 +80,7 @@ Ingenious Targeting Laboratory's preclinical solutions extend beyond model gener
 
 ### In Vivo Efficacy Studies
 
-Conduct therapeutic efficacy testing in your custom mouse models:
+Conduct therapeutic efficacy testing in your mouse model generation:
 
 - Tumor growth inhibition studies
 - Disease progression monitoring
@@ -100,7 +100,7 @@ Comprehensive phenotypic characterization of your mouse models:
 
 Support drug development with in vivo pharmacology:
 
-- PK PD studies in custom models
+- PK PD studies in model generation
 - Dose response characterization
 - Biomarker validation
 - Toxicology assessment
@@ -113,11 +113,11 @@ Support drug development with in vivo pharmacology:
 
 Not every project requires end to end service. Ingenious Targeting Laboratory offers flexible engagement options:
 
-**Targeting Vector Only** provides designed and constructed targeting vector for projects using in house ES cell facilities.
+**Targeting Vector Only** provides designed and constructed targeting vector for projects using in house targeting facilities.
 
-**ES Cell Targeting Only** targets client provided vectors or continues projects from existing vector constructs.
+**gene targeting only** targets client provided vectors or continues projects from existing vector constructs.
 
-**Microinjection Only** generates chimeras from client characterized ES cell clones.
+**Microinjection Only** generates chimeras from client characterized targeted clones.
 
 **Project Completion** brings partial projects to germline transmission from various starting points.
 
@@ -191,11 +191,9 @@ Variable
 
 ### Model Generation
 
-- (/model-generation-timeline)
-- (/model-generation-timeline)
-- (/faqs)
+- - - (/faqs)
 
-### Custom Models
+### Model Generation
 
 - (/knockout-mouse-models)
 - (/conditional-knockout-mouse-models)
@@ -211,7 +209,7 @@ Whether you need ongoing colony support, archival services, or complete project 
 
 **What support services does ITL provide beyond model generation?**
 
-ITL provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, ES cell archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation).
+ITL provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, and targeted clone archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation).
 
 **How do colony management services help maintain mouse lines?**
 
@@ -219,7 +217,7 @@ Colony management services provide breeding colony maintenance with documented p
 
 **What cryopreservation methods are available?**
 
-Cryopreservation methods include sperm cryopreservation (most cost-effective archival solution), embryo cryopreservation (preserves both maternal and paternal genetics), and ES cell cryopreservation (maintains targeted ES cell clones for future use). Archive and recovery services include quality-controlled storage with validated recovery procedures.
+Cryopreservation methods include sperm cryopreservation (most cost-effective archival solution), embryo cryopreservation (preserves both maternal and paternal genetics), and targeted clone cryopreservation (maintains characterized targeted clones for future use). Archive and recovery services include quality-controlled storage with validated recovery procedures.
 
 **When is rederivation needed?**
 

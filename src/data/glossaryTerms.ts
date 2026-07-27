@@ -12,7 +12,7 @@ export type GlossaryCategory =
   | "Core Genetics & Mechanisms"
   | "Mouse Model Strategies & Allele Types"
   | "Recombination Systems & Tools"
-  | "Vectors, ES Cells & Delivery"
+  | "Vectors & Delivery"
   | "Validation, QC & Genotyping"
   | "Immunology & Humanization"
   | "Study Design & Applications";
@@ -21,7 +21,7 @@ export const glossaryCategories: GlossaryCategory[] = [
   "Core Genetics & Mechanisms",
   "Mouse Model Strategies & Allele Types",
   "Recombination Systems & Tools",
-  "Vectors, ES Cells & Delivery",
+  "Vectors & Delivery",
   "Validation, QC & Genotyping",
   "Immunology & Humanization",
   "Study Design & Applications",
@@ -263,49 +263,49 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // CATEGORY 4: Vectors, ES Cells & Delivery (8 terms)
+  // CATEGORY 4: Vectors & Delivery (8 terms)
   // ═══════════════════════════════════════════════════════════════════════════
   {
     term: "Targeting Vector (Homology Arms)",
     slug: "targeting-vector",
     definition: "A synthetic DNA construct designed to introduce specific genetic modifications into a genome through homologous recombination or HDR. It contains sequences known as homology arms that align precisely with the genomic target locus.",
-    category: "Vectors, ES Cells & Delivery",
+    category: "Vectors & Delivery",
   },
   {
     term: "Selection Markers (NeoR, PuroR)",
     slug: "selection-markers",
     definition: "Genes incorporated into targeting vectors to identify and isolate cells that have successfully integrated a genetic modification. Common markers include neomycin resistance (NeoR) and puromycin resistance (PuroR).",
-    category: "Vectors, ES Cells & Delivery",
+    category: "Vectors & Delivery",
   },
   {
     term: "Blastocyst Injection / Chimera Production",
     slug: "blastocyst-injection-chimera",
     definition: "The process of introducing genetically modified cells into a developing mouse blastocyst to create a chimera—an organism composed of cells from both the host embryo and the engineered cells.",
-    category: "Vectors, ES Cells & Delivery",
+    category: "Vectors & Delivery",
   },
   {
     term: "Pronuclear Injection (Transgenics)",
     slug: "pronuclear-injection",
     definition: "A technique used to generate transgenic mice by directly introducing foreign DNA into the pronucleus of a fertilized one-cell embryo. The injected DNA integrates randomly into the mouse genome.",
-    category: "Vectors, ES Cells & Delivery",
+    category: "Vectors & Delivery",
   },
   {
     term: "Single-Copy Integration",
     slug: "single-copy-integration",
     definition: "The precise insertion of a single copy of a DNA construct into a defined location within the genome. This approach prevents the variability, gene silencing, and expression artifacts associated with random multi-copy insertions.",
-    category: "Vectors, ES Cells & Delivery",
+    category: "Vectors & Delivery",
   },
   {
     term: "Large-Fragment / BAC Targeting",
     slug: "large-fragment-bac-targeting",
     definition: "Introducing extended genomic DNA segments—often spanning 100–300 kilobases—into the mouse genome using bacterial artificial chromosomes (BACs) to preserve native gene context and regulatory elements.",
-    category: "Vectors, ES Cells & Delivery",
+    category: "Vectors & Delivery",
   },
   {
     term: "Safe-Harbor Targeted Transgenesis",
     slug: "safe-harbor-targeted-transgenesis",
     definition: "A precise genome engineering strategy in which a transgene is inserted into a well-characterized, transcriptionally active, and non-disruptive genomic locus to ensure predictable and stable expression.",
-    category: "Vectors, ES Cells & Delivery",
+    category: "Vectors & Delivery",
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
@@ -338,7 +338,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Germline Confirmation / Coat Color Markers",
     slug: "germline-confirmation-coat-color",
-    definition: "Ensures that a targeted genetic modification has been successfully passed through reproductive cells to offspring. Coat-color markers serve as a visible indicator of ES cell contribution in chimeric founder animals.",
+    definition: "Ensures that a targeted genetic modification has been successfully passed through reproductive cells to offspring. Coat-color markers serve as a visible indicator of targeted clone contribution in chimeric founder animals.",
     category: "Validation, QC & Genotyping",
   },
   {
@@ -430,7 +430,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "C57BL/6 Mouse Background",
     slug: "c57bl6-mouse-background",
-    definition: "The most widely used inbred mouse strain in biomedical research and the reference strain for the mouse genome sequence. C57BL/6 mice are preferred for gene targeting due to extensive phenotypic characterization, ES cell compatibility, robust breeding performance, and compatibility with the majority of tissue-specific Cre driver lines.",
+    definition: "The most widely used inbred mouse strain in biomedical research and the reference strain for the mouse genome sequence. C57BL/6 mice are preferred for gene targeting due to extensive phenotypic characterization, gene targeting compatibility, robust breeding performance, and compatibility with the majority of tissue-specific Cre driver lines.",
     category: "Study Design & Applications",
   },
   {

@@ -1,12 +1,12 @@
+'use client';
+
+import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 /**
  * Epilepsy Mouse Models Page
  * Built from FINAL TEXT PAGES ALL content
  */
 
-'use client';
-
 import { useRef } from 'react';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -14,29 +14,29 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Epilepsy Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported epilepsy research with custom mouse models enabling mechanistic studies of seizure generation, ictogenesis, and therapeutic interventions targeting ion channels, synaptic transmission, and neuronal network excitability. Epilepsy mouse models provide essential platforms for investigating the molecular pathways underlying seizure disorders, testing hypotheses about genetic susceptibility, and developing novel anti seizure medications and precision therapies for patients with drug resistant epilepsy.",
+  intro: "Since 1998, ingenious targeting laboratory has supported epilepsy research with mouse model generation enabling mechanistic studies of seizure generation, ictogenesis, and therapeutic interventions targeting ion channels, synaptic transmission, and neuronal network excitability. Epilepsy mouse models provide essential platforms for investigating the molecular pathways underlying seizure disorders, testing hypotheses about genetic susceptibility, and developing novel anti seizure medications and precision therapies for patients with drug resistant epilepsy.",
   description: ""
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
 const faqData = [
   { question: "How do you detect seizures in mouse models?", answer: "Video-EEG monitoring with cortical and/or hippocampal electrodes provides gold-standard seizure detection. Behavioral seizure scoring uses modified Racine scale (stages 1-5). Electrographic analysis quantifies spike frequency, ictal duration, and seizure burden. Many models show circadian variation in seizure occurrence." },
   { question: "Should I use knockout or knockin for epilepsy genes?", answer: "Loss-of-function mutations (haploinsufficiency) are modeled with conventional heterozygous knockout (e.g., SCN1A Dravet syndrome). Gain-of-function mutations require point mutation knockin to model the specific patient variant (e.g., SCN8A epileptic encephalopathy). Patient variant knockins enable precision medicine approaches." },
-  { question: "What is involved in generating an epilepsy mouse model?", answer: "Custom model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Point mutation knockins or conditional approaches follow similar workflows. Pre-germline characterization enables early validation of targeting and sequence confirmation before mouse generation. Contact us for current timeline estimates." },
+  { question: "What is involved in generating an epilepsy mouse model?", answer: "Model generation includes targeting construct design, ES cell targeting, chimera generation, and germline transmission. Point mutation knockins or conditional approaches follow similar workflows. Pre-germline characterization enables early validation of targeting and sequence confirmation before mouse generation. Contact us for current timeline estimates." },
   { question: "Can you create inducible epilepsy models?", answer: "Yes. Tamoxifen-inducible Cre (CreER) enables temporal control of gene deletion, avoiding developmental effects and enabling adult-onset studies. This is particularly useful for genes with essential developmental functions that would cause lethality if deleted constitutively." },
   { question: "How do genetic backgrounds affect seizure susceptibility?", answer: "Seizure susceptibility varies dramatically with genetic background. C57BL/6 is relatively resistant to some seizure models. DBA/2 is susceptible to audiogenic seizures. FVB/N shows high susceptibility to kainic acid seizures. Strain selection should match experimental goals and seizure induction methods. (/request-quote)" }
 ];
@@ -147,7 +147,6 @@ export default function EpilepsyMouseModelsPage() {
           </div>
         </section>
 
-
         {/* Stats Bar */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -164,22 +163,6 @@ export default function EpilepsyMouseModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '15px' }}>
-              Start your project today
-            </h2>
-            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Our scientific consultants are ready to discuss your research requirements and recommend the optimal approach for your program. Initial consultation is provided at no charge.
-            </p>
-            <CatalogCustomDualCta slug="epilepsy-mouse-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         {faqData.length > 0 && (
           <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
@@ -193,16 +176,6 @@ export default function EpilepsyMouseModelsPage() {
             </div>
           </section>
         )}
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Current on Epilepsy Research"
-              description="Subscribe to Lab Signals for the latest seizure disorder model updates and research insights."
-            />
-          </div>
-        </section>
 
         {/* Related Links Section */}
         {relatedLinks.length > 0 && (
@@ -272,6 +245,11 @@ export default function EpilepsyMouseModelsPage() {
       />
       </main>
       
+      <StandardPageCtaStack
+        slug="epilepsy-mouse-models"
+        labSignalsTitle="Stay Current on Epilepsy Research"
+        labSignalsDescription="Subscribe to Lab Signals for the latest seizure disorder model updates and research insights."
+      />
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}

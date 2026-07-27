@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Gene Targeting Technology Overview',
-  description: 'Overview of gene targeting technologies for mouse model generation. ES cell targeting, CRISPR, Cre lox, and knockin strategies explained.',
+  description: 'Overview of gene targeting technologies for mouse model generation. gene targeting, CRISPR, Cre lox, and knockin strategies explained.',
   path: '/technology-overview',
 });
 

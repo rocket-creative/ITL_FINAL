@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:03.299Z"
 
 # Catalog Mouse Models
 
-In addition to custom gene targeting and editing services, ingenious targeting laboratory maintains catalog models available for rapid shipment. These include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging.
+In addition to model generation gene targeting and editing services, ingenious targeting laboratory maintains catalog models available for rapid shipment. These include humanized immune checkpoint mice for immuno-oncology research, Cre driver lines for conditional gene expression, and reporter strains for cell tracking and imaging.
 
-Catalog models provide immediate access to study ready strains without the timeline required for custom model generation. All catalog models are maintained under rigorous quality standards and shipped with complete documentation.
+Catalog models provide immediate access to study ready strains without the timeline required for model generation. All catalog models are maintained under rigorous quality standards and shipped with complete documentation.
 
 ## Humanized Immune Checkpoint Mice
 
@@ -112,9 +112,9 @@ All catalog models include genotyping protocols, strain background information, 
 
 Standard material transfer agreements govern use of catalog models. Contact us to discuss licensing terms for commercial and academic applications.
 
-## Custom Model Alternative
+## Model Generation Alternative
 
-If catalog models do not meet your specific requirements, ingenious targeting laboratory generates custom knockout, knockin, and humanized models tailored specifically to your research goals. Custom projects include comprehensive documentation and ongoing technical support.
+If catalog models do not meet your specific requirements, ingenious targeting laboratory generates generated knockout, knockin, and humanized models tailored specifically to your research goals. Generated projects include comprehensive documentation and ongoing technical support.
 
 (/custom-mouse-models)
 
@@ -151,7 +151,7 @@ You will receive breeding pairs or cohorts (depending on your order), genotyping
 
 **Can catalog models be customized or modified?**
 
-Catalog models are provided as-is. If you need modifications (different background, additional alleles, or custom changes), we recommend a custom model generation project. Custom projects can sometimes build upon existing catalog models to reduce timeline and cost.
+Catalog models are provided as-is. If you need modifications (different background, additional alleles, or generated changes), we recommend a model generation project. Generated projects can sometimes build upon existing catalog models to reduce timeline and cost.
 
 **How long does it take to receive catalog models?**
 

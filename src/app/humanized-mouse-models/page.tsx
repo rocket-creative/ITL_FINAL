@@ -29,7 +29,7 @@ const statsData = [
   { value: 100, suffix: "s", label: "Humanized Models" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Why Humanize Data
@@ -397,9 +397,9 @@ export default function HumanizedMouseModelsPage() {
         {/* Pricing anchor — captures "humanized mice price" buyer queries */}
         <UXUIDCServicePricingAnchor
           serviceLabel="Humanized Mouse"
-          headline="Custom humanized mice — get a quote in 24 hours."
+          headline="Generated humanized mice — get a quote in 24 hours."
           unlockInterest="Humanized Mouse"
-          subline="Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), and complete gene replacement. Pricing scales with strategy and timeline."
+          subline="Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), and complete gene replacement. Pricing scales with strategy and allele complexity."
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-pricing-anchor"
           secondaryHref="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-catalog"
           secondaryLabel="Browse Humanized Catalog"
@@ -407,22 +407,16 @@ export default function HumanizedMouseModelsPage() {
             {
               question: 'How much do humanized mice cost?',
               answer:
-                'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint, complete gene replacement), allele complexity, and delivery timeline. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours after a free scientific consultation. We deliver germline-confirmed founders.',
+                'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint, complete gene replacement) and allele complexity. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours after a free scientific consultation. We deliver germline-confirmed founders.',
             },
             {
               question: 'What humanized mouse services do you offer?',
               answer:
                 'We have built humanized mouse models since 1998. Services include immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), drug-target humanization for therapeutic antibody and biologic testing, complete gene replacement for human-specific biology, and humanized regulatory elements. 800+ peer-reviewed publications.',
-            },
-            {
-              question: 'How long does it take to build a humanized mouse?',
-              answer:
-                'Typical humanized mouse projects deliver germline-confirmed founders in 9–14 months depending on humanization strategy, ES cell vs CRISPR approach, and validation requirements. Many off-the-shelf humanized models in our catalog ship from live colonies in weeks.',
-            },
-            {
+            },            {
               question: 'Do you offer off-the-shelf humanized mice?',
               answer:
-                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, and humanized immune checkpoint mice. Search the catalog by gene to see availability before commissioning a custom build.',
+                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, and humanized immune checkpoint mice. Search the catalog by gene to see availability before commissioning a generated build.',
             },
           ]}
         />
@@ -933,7 +927,7 @@ export default function HumanizedMouseModelsPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Humanized Mouse Models', path: '/humanized-mouse-models' },
         ]}
       />
@@ -951,8 +945,8 @@ export default function HumanizedMouseModelsPage() {
               "alternateName": "iTL",
               "url": "https://www.genetargeting.com"
             },
-            "description": "Custom humanized mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. Immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), drug target humanization, and complete gene replacement since 1998.",
-            "serviceType": "Custom Humanized Mouse Model Generation",
+            "description": "Generated humanized mouse models from ingenious targeting laboratory (iTL), a U.S. based mouse model generation company with a 100% germline transmission guarantee. Immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), drug target humanization, and complete gene replacement since 1998.",
+            "serviceType": "Generated Humanized Mouse Model Generation",
             "areaServed": "Worldwide",
             "award": "100% germline transmission guarantee"
           })
@@ -965,7 +959,7 @@ export default function HumanizedMouseModelsPage() {
             "@context": "https://schema.org",
             "@type": ["Article", "TechArticle"],
             "headline": "Humanized Mouse Models: Immune Checkpoint, Receptor, and Gene Replacement Humanization",
-            "description": "Guide to custom humanized mouse model generation from ingenious targeting laboratory, a U.S. based custom mouse model company since 1998 with a 100% germline transmission guarantee.",
+            "description": "Guide to model generation humanized mouse model generation from ingenious targeting laboratory, a U.S. based mouse model generation company since 1998 with a 100% germline transmission guarantee.",
             "url": "https://www.genetargeting.com/humanized-mouse-models/",
             "mainEntityOfPage": "https://www.genetargeting.com/humanized-mouse-models/",
             "inLanguage": "en-US",
@@ -983,8 +977,8 @@ export default function HumanizedMouseModelsPage() {
               "name": "ingenious targeting laboratory",
               "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
             },
-            "about": ["Humanized mouse models", "Immune checkpoint humanization", "PD1", "PDL1", "CTLA4", "Gene replacement", "Custom mouse models"],
-            "keywords": "humanized mouse models, immune checkpoint mice, PD1 humanized, PDL1 humanized, CTLA4 humanized, gene replacement, custom mouse model company, ingenious targeting laboratory, iTL"
+            "about": ["Humanized mouse models", "Immune checkpoint humanization", "PD1", "PDL1", "CTLA4", "Gene replacement", "Mouse model generation"],
+            "keywords": "humanized mouse models, immune checkpoint mice, PD1 humanized, PDL1 humanized, CTLA4 humanized, gene replacement, mouse model generation company, ingenious targeting laboratory, iTL"
           })
         }}
       />

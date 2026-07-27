@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * Animated Dark Section (Modern Model-Generation Landscape)
  * Matches Webflow design - why-contain dark blue bg
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
-
-'use client';
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 

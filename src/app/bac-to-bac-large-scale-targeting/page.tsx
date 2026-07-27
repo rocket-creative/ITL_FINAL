@@ -20,13 +20,13 @@ import { getPublicationsForPageAsCitations } from '@/data/pagePublications';
 const heroData = {
   badge: "Large Scale Targeting",
   title: "BAC Targeting",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases.",
   description: "BAC targeting converts large genomic fragments into functional targeting vectors while maintaining complete regulatory architecture spanning 5 prime promoters, enhancer elements, coding sequences, and 3 prime regulatory regions."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 100, suffix: "+", label: "Kilobases Capacity" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 800, suffix: "+", label: "Publications" }
@@ -55,23 +55,23 @@ const preservationData = {
   sections: [
     {
       title: "Copy Number and Integration Site Considerations",
-      description: "BAC inserts at safe harbor loci (H11, ROSA26, HPRT) typically integrate as single copy events when ES cell characterization confirms appropriate clones."
+      description: "BAC inserts at safe harbor loci (H11, ROSA26, HPRT) typically integrate as single copy events when pre germline characterization confirms appropriate clones."
     },
     {
       title: "Internal Rearrangement Risk Assessment",
-      description: "Large genomic fragments carry inherent risk of internal rearrangement during bacterial propagation, recombineering procedures, or ES cell targeting. Careful strain selection using recombineering proficient strains minimizes risk."
+      description: "Large genomic fragments carry inherent risk of internal rearrangement during bacterial propagation, recombineering procedures, or gene targeting. Careful strain selection using recombineering proficient strains minimizes risk."
     }
   ]
 };
 
-// ES Cell Targeting Data
-const esCellData = {
-  title: "ES Cell Targeting of Large Recombineered BACs",
-  intro: "Targeting vector construction using recombineered BACs creates very large targeting constructs (often 200+ kilobases) requiring special electroporation and ES cell selection protocols.",
+// Gene Targeting Data
+const targetingData = {
+  title: "Gene targeting of large recombineered BACs",
+  intro: "Targeting vector construction using recombineered BACs creates very large targeting constructs (often 200+ kilobases) requiring specialized electroporation and clone selection protocols.",
   sections: [
     {
       title: "Pre Germline Characterization Importance",
-      description: "Pre germline ES cell analysis becomes particularly critical for large insert targeting to detect internal rearrangement events originating during vector construction or ES cell targeting."
+      description: "Pre germline allele analysis becomes particularly critical for large insert targeting to detect internal rearrangement events originating during vector construction or gene targeting."
     },
     {
       title: "Junction Characterization",
@@ -80,10 +80,10 @@ const esCellData = {
   ]
 };
 
-// Timeline Data
-const timelineData = {
-  title: "Timeline and Project Planning for BAC Targeting",
-  intro: "BAC targeting projects involve complex allele design and verification. Contact us for current timeline estimates based on your specific project requirements.",
+// Project Planning Data
+const projectPlanningData = {
+  title: "Project planning for BAC targeting",
+  intro: "BAC targeting projects involve complex allele design and verification. Contact us to discuss your project requirements.",
   phases: [
     {
       title: "Phase 1: BAC Selection and Characterization",
@@ -94,12 +94,12 @@ const timelineData = {
       description: "Targeting vector sequences and functional cassettes insert into BAC clones via sequential recombineering rounds. Each round requires bacterial growth, selection, and characterization."
     },
     {
-      title: "Phase 3: ES Cell Targeting and Selection",
-      description: "Targeting vectors transfect into ES cells, undergo selection, and yield correctly targeted clones at frequencies 10 to 100 fold lower than standard vectors."
+      title: "Phase 3: Gene Targeting and Clone Selection",
+      description: "Targeting vectors transfect into host cells, undergo selection, and yield correctly targeted clones at frequencies 10 to 100 fold lower than standard vectors."
     },
     {
-      title: "Phase 4: Chimera Generation",
-      description: "Correctly targeted ES cell clones contribute to chimeric mice via blastocyst injection. Germline transmission verification through breeding establishes stable transgenic lines."
+      title: "Phase 4: Founder Generation",
+      description: "Correctly characterized targeted clones contribute to chimeric mice via blastocyst injection. Germline transmission verification through breeding establishes stable transgenic lines."
     }
   ]
 };
@@ -143,7 +143,7 @@ const testimonialsData = [
 const faqData = [
   {
     question: "What is the maximum insert size for BAC targeting?",
-    answer: "BAC inserts typically span 100 to 180 kilobases with practical capacity for full genomic features. Inserts exceeding 200 kilobases face declining insertion efficiency and increasing structural instability. Custom vector engineering may accommodate larger inserts for specific applications, though standard BAC protocols optimize for 100 to 150 kilobase inserts."
+    answer: "BAC inserts typically span 100 to 180 kilobases with practical capacity for full genomic features. Inserts exceeding 200 kilobases face declining insertion efficiency and increasing structural instability. Generated vector engineering may accommodate larger inserts for specific applications, though standard BAC protocols optimize for 100 to 150 kilobase inserts."
   },
   {
     question: "How does internal rearrangement risk affect BAC targeting?",
@@ -170,7 +170,7 @@ const relatedLinksData = {
 // CTA Data
 const ctaData = makeFooterCta(
   'Start Your BAC Large Scale Targeting Project',
-  'BAC recombineering enables preservation of complex regulatory elements and large genomic features critical for physiologically relevant transgenic models. Our experienced team can guide BAC selection, manage recombineering construction, oversee ES cell targeting, and deliver study ready mice efficiently.',
+  'BAC recombineering enables preservation of complex regulatory elements and large genomic features critical for physiologically relevant transgenic models. Our experienced team can guide BAC selection, manage recombineering construction, oversee gene targeting, and deliver study ready mice efficiently.',
 );
 
 export default function BACTargetingPage() {
@@ -195,7 +195,7 @@ export default function BACTargetingPage() {
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
-            "serviceType": "Custom Mouse Model Generation",
+            "serviceType": "Mouse Model Generation",
             "areaServed": "Worldwide"
           })
         }}
@@ -284,7 +284,7 @@ export default function BACTargetingPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link href="/transgenic-mouse-service" style={{
@@ -440,7 +440,7 @@ export default function BACTargetingPage() {
           </div>
         </section>
 
-        {/* ES Cell Targeting Section */}
+        {/* Gene Targeting Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{
@@ -451,7 +451,7 @@ export default function BACTargetingPage() {
               marginBottom: '16px',
               textAlign: 'center'
             }}>
-              {esCellData.title}
+              {targetingData.title}
             </h2>
             <p className="animate-in" style={{
               fontSize: '.9rem',
@@ -461,10 +461,10 @@ export default function BACTargetingPage() {
               maxWidth: '800px',
               margin: '0 auto 40px'
             }}>
-              {esCellData.intro}
+              {targetingData.intro}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {esCellData.sections.map((section, index) => (
+              {targetingData.sections.map((section, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#ffffff',
                   borderRadius: '8px',
@@ -512,7 +512,7 @@ export default function BACTargetingPage() {
               marginBottom: '16px',
               textAlign: 'center'
             }}>
-              {timelineData.title}
+              {projectPlanningData.title}
             </h2>
             <p className="animate-in" style={{
               fontSize: '.9rem',
@@ -522,10 +522,10 @@ export default function BACTargetingPage() {
               maxWidth: '800px',
               margin: '0 auto 40px'
             }}>
-              {timelineData.intro}
+              {projectPlanningData.intro}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {timelineData.phases.map((phase, index) => (
+              {projectPlanningData.phases.map((phase, index) => (
                 <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
                   background: '#f7f7f7',
                   borderRadius: '8px',

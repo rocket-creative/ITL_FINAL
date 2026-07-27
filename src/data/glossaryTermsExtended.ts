@@ -187,7 +187,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
 
   "homologous-recombination": {
     metaTitle: "Homologous Recombination | Precise Gene Targeting in Mouse Models",
-    metaDescription: "Learn how homologous recombination enables precise DNA repair and targeted gene modification in embryonic stem cells, forming the foundation of engineered mouse models.",
+    metaDescription: "Learn how homologous recombination enables precise DNA repair and targeted gene modification, forming the foundation of engineered mouse models.",
     introduction: "Homologous recombination (HR) is a precise DNA repair and genetic engineering mechanism that uses a homologous sequence as a template to exchange or replace genetic material. It allows for accurate correction or insertion of DNA sequences at defined genomic loci, preserving reading frames and regulatory integrity.",
     faqs: [
       {
@@ -214,7 +214,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     relatedTermSlugs: ["homologous-recombination", "homology-directed-repair", "knockout-mouse-models"],
     relatedServices: [
       { title: "Knockout Mouse Models", href: "/knockout-mouse-models" },
-      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
+      { title: "Mouse Model Generation", href: "/custom-mouse-models" }
     ]
   },
 
@@ -273,13 +273,13 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   // CATEGORY 2: Mouse Model Strategies & Allele Types
   // ═══════════════════════════════════════════════════════════════════════════
   "knockout-mouse-models": {
-    metaTitle: "Knockout Mouse Models | Applications, Strategies, and Custom Development",
-    metaDescription: "Learn how knockout mouse models are engineered, why they're vital for disease research, and how ingenious targeting laboratory designs precise, ES cell-based KO models for functional genomics.",
+    metaTitle: "Knockout Mouse Models | Applications, Strategies, and Generated Development",
+    metaDescription: "Learn how knockout mouse models are engineered, why they're vital for disease research, and how ingenious targeting laboratory designs precise KO models for functional genomics.",
     introduction: "Understanding what a gene does often begins with seeing what happens when it's missing. Knockout (KO) mouse models are among the most fundamental tools in biomedical research, allowing scientists to eliminate a gene's function and observe the resulting effects on physiology, behavior, and disease development.",
     sections: [
       {
         title: "What Is a Knockout Mouse?",
-        content: "A knockout mouse is a genetically engineered organism in which a target gene has been permanently disrupted or deleted in every cell of the body. This is typically achieved by replacing part or all of the gene's coding sequence with a nonfunctional segment of DNA during embryonic stem (ES) cell targeting."
+        content: "A knockout mouse is a genetically engineered organism in which a target gene has been permanently disrupted or deleted in every cell of the body. This is typically achieved by replacing part or all of the gene's coding sequence with a nonfunctional segment of DNA during homologous recombination gene targeting."
       },
       {
         title: "Types of Knockout Models",
@@ -290,17 +290,12 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
       {
         question: "What's the difference between a knockout and a knockdown model?",
         answer: "A knockout completely eliminates gene function through targeted deletion or disruption, while a knockdown model reduces gene expression without fully abolishing it."
-      },
-      {
-        question: "How long does it take to generate a knockout mouse model?",
-        answer: "A typical knockout mouse project takes approximately 6 to 8 months from design to delivery, depending on complexity and validation requirements."
-      }
-    ],
+      },    ],
     relatedTermSlugs: ["conditional-knockout-mouse-models", "conventional-knockout-mouse-models", "knockin-mouse-models"],
     relatedServices: [
       { title: "Knockout Mouse Models", href: "/knockout-mouse-models" },
       { title: "Conditional Knockout Mouse Models", href: "/conditional-knockout-mouse-models" },
-      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
+      { title: "Mouse Model Generation", href: "/custom-mouse-models" }
     ]
   },
 
@@ -371,12 +366,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
       {
         question: "What's the difference between a knockin and a transgenic mouse?",
         answer: "A knockin involves precise insertion of a gene into a specific genomic locus, ensuring predictable and regulated expression. A transgenic mouse introduces DNA randomly, which can result in variable expression and unpredictable phenotypes."
-      },
-      {
-        question: "How long does it take to generate a knockin mouse?",
-        answer: "Generating a knockin mouse typically takes 6-10 months from design through validation and breeding, depending on project complexity."
-      }
-    ],
+      },    ],
     relatedTermSlugs: ["point-mutation", "humanized-mouse-models", "reporter-gene-reporter-allele", "homology-directed-repair"],
     relatedServices: [
       { title: "Knockin Mouse Models", href: "/knockin-mouse-models" },
@@ -486,7 +476,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     relatedTermSlugs: ["hypomorphic-null-allele", "gain-of-function-vs-loss-of-function-mutation", "knockin-mouse-models"],
     relatedServices: [
       { title: "Knockin Mouse Models", href: "/knockin-mouse-models" },
-      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
+      { title: "Mouse Model Generation", href: "/custom-mouse-models" }
     ]
   },
 
@@ -664,7 +654,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["cre-lox-system", "flp-frt-system", "inversion-vs-excision"],
     relatedServices: [
-      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
+      { title: "Mouse Model Generation", href: "/custom-mouse-models" }
     ]
   },
 
@@ -745,7 +735,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["inducible-cre-ert2", "cre-driver-line", "mosaicism"],
     relatedServices: [
-      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
+      { title: "Mouse Model Generation", href: "/custom-mouse-models" }
     ]
   },
 
@@ -759,18 +749,18 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     faqs: [
       {
         question: "How long should homology arms be?",
-        answer: "Homology arms typically range from 1–10 kilobases for ES cell targeting. Longer arms generally increase recombination efficiency."
+        answer: "Homology arms typically range from 1–10 kilobases for gene targeting. Longer arms generally increase recombination efficiency."
       }
     ],
     relatedTermSlugs: ["homologous-recombination", "homology-directed-repair", "es-cell-targeting", "selection-markers"],
     relatedServices: [
-      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
+      { title: "Mouse Model Generation", href: "/custom-mouse-models" }
     ]
   },
 
   "selection-markers": {
-    metaTitle: "Selection Markers (NeoR, PuroR) | Antibiotic Selection in Mouse ES Cell Targeting",
-    metaDescription: "Explore how NeoR and PuroR selection markers are used to isolate correctly targeted ES cells.",
+    metaTitle: "Selection Markers (NeoR, PuroR) | Antibiotic Selection in Mouse gene targeting",
+    metaDescription: "Explore how NeoR and PuroR selection markers are used to isolate correctly targeted clones.",
     introduction: "Selection markers are genes incorporated into targeting vectors to identify and isolate cells that have successfully integrated a genetic modification. Common markers include neomycin resistance (NeoR) and puromycin resistance (PuroR), which confer survival advantages under antibiotic selection.",
     faqs: [
       {
@@ -780,18 +770,18 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     ],
     relatedTermSlugs: ["targeting-vector", "es-cell-targeting", "flp-frt-system"],
     relatedServices: [
-      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
+      { title: "Mouse Model Generation", href: "/custom-mouse-models" }
     ]
   },
 
   "blastocyst-injection-chimera": {
     metaTitle: "Blastocyst Injection and Chimera Production | Germline Transmission in Mouse Models",
-    metaDescription: "Understand how blastocyst injection transfers targeted ES cell modifications into the germline.",
+    metaDescription: "Understand how blastocyst injection transfers targeted genetic modifications into the germline.",
     introduction: "Blastocyst injection is the process of introducing genetically modified cells into a developing mouse blastocyst to create a chimera—an organism composed of cells derived from both the host embryo and the engineered cells. This step is essential for transferring targeted genetic modifications into the germline.",
     faqs: [
       {
         question: "How do you identify high-contribution chimeras?",
-        answer: "Chimeric offspring typically display coat color patterns reflecting ES cell contribution vs. host embryo strain, which can be visually assessed at birth."
+        answer: "Chimeric offspring typically display coat color patterns reflecting targeted clone contribution vs. host embryo strain, which can be visually assessed at birth."
       }
     ],
     relatedTermSlugs: ["es-cell-targeting", "germline-transmission", "germline-confirmation-coat-color"],
@@ -893,7 +883,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     faqs: [
       {
         question: "Is Southern blotting still necessary with modern sequencing?",
-        answer: "While modern tools like qPCR and NGS have supplemented Southern blots, the technique remains valuable for ES cell validation before chimera generation due to its ability to detect both on-target and random integration events."
+        answer: "While modern tools like qPCR and NGS have supplemented Southern blots, the technique remains valuable for Pre Germline Validation before chimera generation due to its ability to detect both on-target and random integration events."
       }
     ],
     relatedTermSlugs: ["genotyping-pcr-qpcr", "sanger-ngs-validation", "es-cell-targeting"],
@@ -937,10 +927,10 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "germline-confirmation-coat-color": {
     metaTitle: "Germline Confirmation / Coat Color Markers | Validating Transmission in Chimeric Mice",
     metaDescription: "Understand how germline confirmation and coat color markers verify heritable transmission.",
-    introduction: "Germline confirmation ensures that a targeted genetic modification has been successfully passed through reproductive cells to offspring. Coat-color markers serve as a visible indicator of ES cell contribution in chimeric founder animals.",
+    introduction: "Germline confirmation ensures that a targeted genetic modification has been successfully passed through reproductive cells to offspring. Coat-color markers serve as a visible indicator of targeted clone contribution in chimeric founder animals.",
     faqs: [
       {
-        question: "How does coat color indicate ES cell contribution?",
+        question: "How does coat color indicate targeted clone contribution?",
         answer: "After blastocyst injection, ES-cell–derived mice exhibit mixed coat colors based on parental strain background (e.g., agouti × albino), helping identify high-contribution chimeras."
       }
     ],
@@ -1178,15 +1168,15 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "c57bl6-mouse-background": {
     metaTitle: "C57BL/6 Mouse Background | The Reference Strain for Gene Targeting",
     metaDescription: "Learn why C57BL/6 is the most widely used mouse strain for gene targeting, knockout models, and biomedical research with extensive phenotypic characterization.",
-    introduction: "C57BL/6 is the most widely used inbred mouse strain in biomedical research and serves as the reference strain for the mouse genome sequence. Since its establishment in 1921, C57BL/6 has become the standard background for gene targeting due to extensive phenotypic characterization, excellent breeding performance, ES cell compatibility, and widespread availability of Cre driver lines on this background.",
+    introduction: "C57BL/6 is the most widely used inbred mouse strain in biomedical research and serves as the reference strain for the mouse genome sequence. Since its establishment in 1921, C57BL/6 has become the standard background for gene targeting due to extensive phenotypic characterization, excellent breeding performance, gene targeting compatibility, and widespread availability of Cre driver lines on this background.",
     sections: [
       {
         title: "Why C57BL/6 is Preferred for Gene Targeting",
-        content: "C57BL/6 mice dominate gene targeting projects for several key reasons: (1) They are the reference strain for the mouse genome sequence, ensuring accurate targeting vector design. (2) ES cell lines derived from C57BL/6N substrains (JM8 cells) have high germline transmission efficiency. (3) The majority of tissue-specific Cre driver lines are maintained on C57BL/6 backgrounds, enabling direct crosses without mixed background effects. (4) Extensive baseline phenotypic data exists for comparison across laboratories and publications."
+        content: "C57BL/6 mice dominate gene targeting projects for several key reasons: (1) They are the reference strain for the mouse genome sequence, ensuring accurate targeting vector design. (2) C57BL/6N substrain compatibility with community knockout resources (JM8 lines) have high germline transmission efficiency. (3) The majority of tissue-specific Cre driver lines are maintained on C57BL/6 backgrounds, enabling direct crosses without mixed background effects. (4) Extensive baseline phenotypic data exists for comparison across laboratories and publications."
       },
       {
         title: "C57BL/6 Substrain Considerations",
-        content: "Two major substrains exist: C57BL/6J (Jackson Laboratory) and C57BL/6N (NIH/Taconic). C57BL/6J carries an Nnt deletion affecting glucose metabolism. C57BL/6N has intact Nnt but some colonies carry the rd8 retinal degeneration allele. C57BL/6N is the standard background for IKMC knockout resources using JM8 ES cells. Researchers should specify substrain in publications for reproducibility."
+        content: "Two major substrains exist: C57BL/6J (Jackson Laboratory) and C57BL/6N (NIH/Taconic). C57BL/6J carries an Nnt deletion affecting glucose metabolism. C57BL/6N has intact Nnt but some colonies carry the rd8 retinal degeneration allele. C57BL/6N is the standard background for IKMC knockout resources using JM8 derived resources. Researchers should specify substrain in publications for reproducibility."
       }
     ],
     faqs: [
@@ -1196,18 +1186,18 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
       },
       {
         question: "Can I use C57BL/6 for all research applications?",
-        answer: "C57BL/6 is suitable for most applications including gene targeting, neuroscience, cancer, metabolism, and immunology. However, some specialized studies may benefit from alternative backgrounds. For example, BALB/c is preferred for myeloma production, FVB/N for pronuclear injection transgenics, and 129 strains for some ES cell applications."
+        answer: "C57BL/6 is suitable for most applications including gene targeting, neuroscience, cancer, metabolism, and immunology. However, some specialized studies may benefit from alternative backgrounds. For example, BALB/c is preferred for myeloma production, FVB/N for pronuclear injection transgenics, and 129 strains for some gene targeting applications."
       },
       {
         question: "How do I maintain genetic purity on C57BL/6 background?",
-        answer: "Maintain lines through sibling crosses or backcross to C57BL/6 periodically. After ES cell targeting, backcross at least 5 generations (N5) to achieve >97% genetic purity. For critical studies, use speed backcrossing with SNP marker panels to accelerate background conversion while retaining the targeted allele."
+        answer: "Maintain lines through sibling crosses or backcross to C57BL/6 periodically. After gene targeting, backcross at least 5 generations (N5) to achieve >97% genetic purity. For critical studies, use speed backcrossing with SNP marker panels to accelerate background conversion while retaining the targeted allele."
       }
     ],
     relatedTermSlugs: ["c57bl6j-vs-c57bl6n", "colony-management-backcrossing", "blastocyst-injection-chimera", "cre-driver-line"],
     relatedServices: [
       { title: "C57BL/6 Mouse Background", href: "/c57bl6-mouse-background" },
       { title: "Backcrossing Services", href: "/backcrossing-services" },
-      { title: "Custom Mouse Models", href: "/custom-mouse-models" }
+      { title: "Mouse Model Generation", href: "/custom-mouse-models" }
     ]
   },
 

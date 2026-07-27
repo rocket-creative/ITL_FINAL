@@ -30,7 +30,7 @@ These options can be applied to your gene of interest using the F.A.S.T.™ cass
 >
 > — **Claus Fimmel, MD**, Loyola University Medical Center
 
-## Custom Knockins for your Research
+## Generated Knockins for your Research
 
 ### F.A.S.T.™
 **F**lexible **A**ccelerated **S**TOP **T**etracycline **O**perator

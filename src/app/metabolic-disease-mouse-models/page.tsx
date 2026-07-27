@@ -14,15 +14,15 @@ import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/compone
 const heroData = {
   badge: "Metabolic Research",
   title: "Metabolic Disease Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported metabolic disease researchers with custom mouse models contributing to peer reviewed publications in Diabetes, Cell Metabolism, Nature Medicine, and leading metabolism journals worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has supported metabolic disease researchers with mouse model generation contributing to peer reviewed publications in Diabetes, Cell Metabolism, Nature Medicine, and leading metabolism journals worldwide.",
   description: "Our metabolic disease mouse models have advanced understanding of glucose homeostasis, lipid metabolism, and the pathophysiology of obesity related complications."
 };
 
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 const diseaseCategories = [
@@ -224,7 +224,7 @@ export default function MetabolicDiseaseMouseModelsPage() {
           { name: 'Metabolic Disease Mouse Models', path: '/metabolic-disease-mouse-models' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Metabolic Disease Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Custom metabolic disease mouse models for diabetes, obesity, and NASH research since 1998.", "serviceType": "Metabolic Disease Mouse Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Metabolic Disease Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Generated metabolic disease mouse models for diabetes, obesity, and NASH research since 1998.", "serviceType": "Metabolic Disease Mouse Models" }) }} />
     </div>
   );
 }

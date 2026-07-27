@@ -15,16 +15,16 @@ import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } f
 const heroData = {
   badge: "Respiratory Disease Models",
   title: "Allergy Asthma Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported allergy and asthma research with custom mouse models enabling mechanistic studies of airway inflammation, allergic responses, and therapeutic interventions. Our allergy and asthma models have contributed to research on Th2 immune responses, airway remodeling, and anti inflammatory therapeutics.",
+  intro: "Since 1998, ingenious targeting laboratory has supported allergy and asthma research with mouse model generation enabling mechanistic studies of airway inflammation, allergic responses, and therapeutic interventions. Our allergy and asthma models have contributed to research on Th2 immune responses, airway remodeling, and anti inflammatory therapeutics.",
   description: "Allergy and asthma mouse models provide essential platforms for investigating the molecular pathways underlying allergic inflammation, testing hypotheses about immune cell contributions, and developing therapies for respiratory diseases affecting millions of patients worldwide."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Th2 Immune Response Features
@@ -519,7 +519,7 @@ export default function AllergyAsthmaMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom allergy and asthma mouse models for respiratory disease research. Airway inflammation, allergic responses, and therapeutic testing platforms.",
+            "description": "Generated allergy and asthma mouse models for respiratory disease research. Airway inflammation, allergic responses, and therapeutic testing platforms.",
             "serviceType": "Allergy Asthma Mouse Model Generation"
           })
         }}

@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.328Z"
 
 **Url: /heart-failure-mouse-models**
 
-**Meta Description: Custom mouse models for heart failure research. Study cardiomyopathy, cardiac remodeling, and contractile dysfunction. Gene targeting since 1998.**
+**Meta Description: Mouse model generation for heart failure research. Study cardiomyopathy, cardiac remodeling, and contractile dysfunction. Gene targeting since 1998.**
 
 **Primary Keyword: heart failure mouse model**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.328Z"
 
 # Heart Failure Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported cardiovascular research with custom knockout, knockin, and conditional mouse models for heart failure studies. Our gene targeting expertise enables investigation of the molecular mechanisms driving cardiomyopathy, cardiac remodeling, and contractile dysfunction.
+Since 1998, Ingenious Targeting Laboratory has supported cardiovascular research with generated knockout, knockin, and conditional mouse models for heart failure studies. Our gene targeting expertise enables investigation of the molecular mechanisms driving cardiomyopathy, cardiac remodeling, and contractile dysfunction.
 
 Whether you are studying inherited cardiomyopathies, modeling pressure or volume overload induced heart failure, or validating therapeutic targets, Ingenious Targeting Laboratory provides models optimized for your cardiac research goals.
 
@@ -38,7 +38,7 @@ Hypertrophic cardiomyopathy features abnormal cardiac hypertrophy, often caused 
 
 Pathological cardiac remodeling in response to hemodynamic stress involves cardiomyocyte hypertrophy, fibrosis, and changes in gene expression. Understanding the signaling pathways driving maladaptive remodeling is essential for developing therapies that prevent heart failure progression.
 
-## Custom Model Approaches
+## Model Generation Approaches
 
 ### Sarcomeric Protein Mutations
 
@@ -86,7 +86,7 @@ The TGF beta pathway plays central roles in cardiac fibrosis. Models modifying T
 
 ### Disease Mechanism Studies
 
-Custom models enable investigation of specific genes and pathways in heart failure pathogenesis, from initial insult through remodeling to overt failure.
+Model generation enable investigation of specific genes and pathways in heart failure pathogenesis, from initial insult through remodeling to overt failure.
 
 ### Therapeutic Target Validation
 
@@ -112,7 +112,7 @@ Mouse models provide platforms for testing cardiac gene therapy approaches, incl
 
 ## Selected Publications
 
-Custom models from Ingenious Targeting Laboratory have contributed to cardiovascular research published in leading journals including Circulation, Circulation Research, and Journal of Clinical Investigation.
+Model generation from Ingenious Targeting Laboratory have contributed to cardiovascular research published in leading journals including Circulation, Circulation Research, and Journal of Clinical Investigation.
 
 (/publications)
 
@@ -150,7 +150,7 @@ Cardiac function validation includes echocardiography (ejection fraction, fracti
 
 ## Start Your Project
 
-Ready to discuss custom mouse models for your heart failure research? Our scientific team provides complimentary consultation to help you design the optimal model for your cardiac research goals.
+Ready to discuss mouse model generation for your heart failure research? Our scientific team provides complimentary consultation to help you design the optimal model for your cardiac research goals.
 
 (/request-quote)
 

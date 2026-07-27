@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * NavbarSearch - Unified search (catalog + site) with debounce and dropdown
  * @version 1.0.0
  */
-
-'use client';
 
 import { useState, useCallback, useRef, useEffect } from 'react';
 import Link from 'next/link';

@@ -1,5 +1,5 @@
 /**
- * Catalog first → custom when ready SEO helpers.
+ * Catalog first → generate when ready SEO helpers.
  * Applied site wide via generateMetadata unless catalogFirst: false.
  */
 
@@ -103,7 +103,7 @@ export function applyCatalogFirstDescription(description: string, path: string):
   switch (getCatalogMetaVariant(path)) {
     case 'catalogHub':
       return trimDescription(
-        `Browse ${CATALOG_MODEL_COUNT} study ready mouse and rat models. ${description} Request a custom quote when the library does not list your allele.`,
+        `Browse ${CATALOG_MODEL_COUNT} study ready mouse and rat models. ${description} Request a quote when the library does not list your allele.`,
       );
     case 'quote':
       return trimDescription(
@@ -111,11 +111,11 @@ export function applyCatalogFirstDescription(description: string, path: string):
       );
     case 'publications':
       return trimDescription(
-        `Most programs start in the catalog. ${description} Request a custom line when your study outgrows off the shelf.`,
+        `Most programs start in the catalog. ${description} Request a generated line when your study outgrows off the shelf.`,
       );
     default:
       return trimDescription(
-        `Browse ${CATALOG_MODEL_COUNT} catalog models for a faster start, or request a custom line. ${description}`,
+        `Browse ${CATALOG_MODEL_COUNT} catalog models for a faster start, or request a generated line. ${description}`,
       );
   }
 }
@@ -135,10 +135,10 @@ export function enhanceTitleForCatalogFirst(title: string, path: string): string
   }
 
   if (variant === 'quote') {
-    return trimTitle(`${title.replace(/^Custom /, '')} | Catalog Search + Custom Quote`);
+    return trimTitle(`${title.replace(/^Generated /, '')} | Catalog Search + Quote`);
   }
 
-  const cleaned = title.replace(/^Custom /, '');
+  const cleaned = title.replace(/^Generated /, '');
 
   if (cleaned.includes('|')) {
     const parts = cleaned.split('|').map((part) => part.trim());
@@ -146,17 +146,17 @@ export function enhanceTitleForCatalogFirst(title: string, path: string): string
     const isBrandSuffix = /^(ITL|ingenious targeting laboratory)$/i.test(lastPart);
 
     if (isBrandSuffix && parts.length === 2 && !hasCatalogSignal(parts[0] ?? '')) {
-      return trimTitle(`${parts[0]} | Catalog + Custom | ${lastPart}`);
+      return trimTitle(`${parts[0]} | Catalog + Generation | ${lastPart}`);
     }
 
     if (!parts.some((part) => /catalog/i.test(part))) {
-      parts[1] = 'Catalog + Custom';
+      parts[1] = 'Catalog + Generation';
       return trimTitle(parts.slice(0, 2).join(' | '));
     }
     return title;
   }
 
-  return trimTitle(`${cleaned} | Catalog + Custom`);
+  return trimTitle(`${cleaned} | Catalog + Generation`);
 }
 
 export function applyCatalogFirstMeta(
@@ -175,12 +175,16 @@ export function applyCatalogFirstMeta(
   };
 }
 
-/** Homepage and root layout defaults */
+/**
+ * Homepage and root layout defaults (Google SERP title + description).
+ * Lead with “model generation” (JAX/Taconic scientist language) instead of “generated,”
+ * then catalog / study ready so both business paths are clear in the snippet.
+ */
 export const ROOT_CATALOG_FIRST_META = {
-  title: 'Mouse Model Catalog & Custom Models | 14,774+ Lines',
+  title: 'Mouse Model Generation & Catalog | 14,774+ Lines',
   description:
-    `Browse ${CATALOG_MODEL_COUNT} study ready catalog mouse models. When your program needs a specific allele, 2,800+ custom projects since 1998. Quote in 24 hours.`,
-  ogLine1: '14,774+ Catalog Mouse Models',
-  ogLine2: 'Catalog First | Custom When Ready',
-  ogLine3: '2,800+ Custom Projects | 800+ Publications',
+    `Generate knockout, knockin, and humanized mouse models, or browse ${CATALOG_MODEL_COUNT} study ready catalog strains. U.S. PhD oversight and germline guarantee since 1998.`,
+  ogLine1: 'Mouse Model Generation & Catalog',
+  ogLine2: 'Generate Models | Study Ready Catalog',
+  ogLine3: '2,800+ Projects | 800+ Publications',
 } as const;

@@ -1,10 +1,10 @@
+'use client';
+
 /**
  * |UXUIDC| Feature Grid - Matches Webflow Design Exactly
  * @version 4.0.0 - Removed GSAP, using CSS animations only
  * high-level container with overview-card styling
  */
-
-'use client';
 
 import Image from 'next/image';
 

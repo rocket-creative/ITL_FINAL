@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'FAQ | Mouse Model Questions',
-  description: 'Answers to common questions about custom mouse models, gene targeting, timelines, costs, and model selection. Get the info you need.',
+  description: 'Answers to common questions about mouse model generation, gene targeting, timelines, costs, and model selection. Get the info you need.',
   path: '/faq',
 });
 

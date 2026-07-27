@@ -15,16 +15,16 @@ import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } f
 const heroData = {
   badge: "Neurodegenerative Disease Models",
   title: "Parkinson Mouse Model",
-  intro: "Since 1998, ingenious targeting laboratory has supported Parkinson disease research with custom mouse models enabling mechanistic studies of dopaminergic neurodegeneration, evaluation of neuroprotective strategies, and preclinical testing of disease modifying therapeutics.",
+  intro: "Since 1998, ingenious targeting laboratory has supported Parkinson disease research with mouse model generation enabling mechanistic studies of dopaminergic neurodegeneration, evaluation of neuroprotective strategies, and preclinical testing of disease modifying therapeutics.",
   description: "Parkinson disease mouse models provide essential platforms for investigating the molecular pathways underlying neuronal loss in the substantia nigra, testing hypotheses about alpha synuclein aggregation and spread, and developing therapies targeting LRRK2, GBA, and other genetically validated targets."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Familial PD Genes
@@ -547,7 +547,7 @@ export default function ParkinsonsMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom Parkinson disease mouse models for neurodegenerative research. Study alpha synuclein, dopamine pathways, and motor dysfunction.",
+            "description": "Generated Parkinson disease mouse models for neurodegenerative research. Study alpha synuclein, dopamine pathways, and motor dysfunction.",
             "serviceType": "Parkinson Disease Mouse Model Generation"
           })
         }}

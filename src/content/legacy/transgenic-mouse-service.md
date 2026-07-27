@@ -21,7 +21,7 @@ Don't see the exact fit for your application? Contact us for personal assistance
 >
 > — **Raghu Mirmira, MD, PhD**, University of Chicago
 
-## Custom Transgenic Mice
+## Generated Transgenic Mice
 
 ### Types of Transgenic Mice Available at ingenious
 

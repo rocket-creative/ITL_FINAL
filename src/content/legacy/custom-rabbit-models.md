@@ -4,14 +4,14 @@ new_build_url: "/custom-rabbit-models/"
 url_handling: "reuse"
 link_from: ["/custom-animal-models/"]
 extracted_date: "2026-01-11"
-title: "Custom Rabbit Models for Research"
+title: "Rabbit Model Generation for Research"
 ---
 
 # Rabbit Models
 
 ## Genetically engineered rabbit models for studying human disease
 
-Advance your research by creating a custom genetically engineered rabbit model with ingenious targeting laboratory. Rabbits offer significant advantages due to their anatomical and physiological similarities to humans, making them ideal for pulmonary, cardiovascular, and metabolic studies.
+Advance your research by creating a genetically engineered rabbit model with ingenious targeting laboratory. Rabbits offer significant advantages due to their anatomical and physiological similarities to humans, making them ideal for pulmonary, cardiovascular, and metabolic studies.
 
 Our technology enables the creation of precise knockout, point mutation, and small tag knockin models. Ingenious targeting laboratory provides a streamlined process, from design to delivery, ensuring efficient and accurate rabbit model development to drive progress in drug discovery and disease research.
 
@@ -21,7 +21,7 @@ Our technology enables the creation of precise knockout, point mutation, and sma
 >
 > — **Jody Groenendyk, PhD**, University of Alberta
 
-## Custom Rabbit Model Targeting Options
+## Rabbit Model Generation Targeting Options
 
 - **Conventional KO** - Standard gene knockout
 - **Point mutation KI** - Precise base pair changes
@@ -33,7 +33,7 @@ Rabbits have a unique advantage as animal models for biomedical research. Adult 
 
 Because of the anatomical, physiological, genetic and biochemical similarities between the rabbit and the human, this species is preferentially used in pulmonary, cardiovascular and metabolic studies.
 
-Ingenious has partnered with leading researchers to develop custom rabbit models. With this, ingenious rabbit models strive to address the needs of drug discovery and drive progress in disease research.
+Ingenious has partnered with leading researchers to develop rabbit model generation. With this, ingenious rabbit models strive to address the needs of drug discovery and drive progress in disease research.
 
 ## The Power of Rabbit Disease Models: Rabbit Facts
 
@@ -61,7 +61,7 @@ To generate more useful animal models for better mimicking the human system, ing
 
 The process starts with evaluating your target gene for knockout or knockin design feasibility, and then carrying out the rabbit model production process. From project initiation to founder or germline transmission rabbits, the timeline is estimated to be about 12 months.
 
-To get started with discussing your custom rabbit model project with us, submit your quote request.
+To get started with discussing your rabbit model generation project with us, submit your quote request.
 
 ## References
 
@@ -71,6 +71,6 @@ To get started with discussing your custom rabbit model project with us, submit 
 
 ## Related Pages
 
-- Custom Animal Models
+- Animal Model Generation
 - Rat Models
 - Transgenic Animal Models

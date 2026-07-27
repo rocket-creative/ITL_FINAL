@@ -23,7 +23,7 @@ export const metadata: Metadata = buildStandalonePageMetadata({
   path: '/all-catalog-mouse-models/gene-index',
   title: 'Mouse Model Gene Index A–Z | 14,774+ Catalog',
   description:
-    'Complete alphabetical index of gene names in our mouse model catalog. Search knockout, knockin, humanized, and Cre driver models by target, or request a custom line.',
+    'Complete alphabetical index of gene names in our mouse model catalog. Search knockout, knockin, humanized, and Cre driver models by target, or request a generated line.',
 });
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -382,7 +382,7 @@ export default async function GeneIndexPage({ searchParams }: Props) {
               Can&apos;t Find What You Need?
             </h2>
             <p style={{ fontSize: '.95rem', color: 'rgba(255,255,255,0.9)', marginBottom: '24px' }}>
-              Our team can help you find the right model or create a custom solution tailored to your research.
+              Our team can help you find the right model or build a model generation solution for your research.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
               <Link href="/order-catalog-models" style={{
@@ -398,7 +398,7 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                 borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.5)',
               }}>
-                Custom Model Quote
+                Model Generation Quote
               </Link>
             </div>
           </div>

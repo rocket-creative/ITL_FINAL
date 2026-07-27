@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,22 +9,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconImage, IconChevronRight, IconCheckCircle, IconHeart } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Cardiac Disease Research",
   title: "Heart Failure Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with custom knockout, knockin, and conditional mouse models for heart failure studies. Our gene targeting expertise enables investigation of the molecular mechanisms driving cardiomyopathy, cardiac remodeling, and contractile dysfunction.",
+  intro: "Since 1998, ingenious targeting laboratory has supported cardiovascular research with generated knockout, knockin, and conditional mouse models for heart failure studies. Our gene targeting expertise enables investigation of the molecular mechanisms driving cardiomyopathy, cardiac remodeling, and contractile dysfunction.",
   description: "Whether you are studying inherited cardiomyopathies, modeling pressure or volume overload induced heart failure, or validating therapeutic targets, ingenious targeting laboratory provides models optimized for your cardiac research goals."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Pathophysiology Data
@@ -43,7 +43,7 @@ const pathophysiologyData = [
   }
 ];
 
-// Custom Model Approaches
+// Model Generation Approaches
 const customModelApproaches = [
   {
     title: "Sarcomeric Protein Mutations",
@@ -95,7 +95,7 @@ const fibrosisModels = [
 const researchApplications = [
   {
     title: "Disease Mechanism Studies",
-    description: "Custom models enable investigation of specific genes and pathways in heart failure pathogenesis, from initial insult through remodeling to overt failure."
+    description: "Model generation enable investigation of specific genes and pathways in heart failure pathogenesis, from initial insult through remodeling to overt failure."
   },
   {
     title: "Therapeutic Target Validation",
@@ -310,11 +310,11 @@ export default function HeartFailureMouseModelsPage() {
           </div>
         </section>
 
-        {/* Custom Model Approaches */}
+        {/* Model Generation Approaches */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
-              Custom Model Approaches
+              Model Generation Approaches
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -500,16 +500,6 @@ export default function HeartFailureMouseModelsPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="heart-failure-mouse-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -519,16 +509,6 @@ export default function HeartFailureMouseModelsPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Updated on Cardiovascular Research Models"
-              description="Get the latest insights on heart failure models, cardiomyopathy research, and cardiac therapeutics."
-            />
           </div>
         </section>
 
@@ -580,6 +560,11 @@ export default function HeartFailureMouseModelsPage() {
         </section>
       </main>
 
+      <StandardPageCtaStack
+        slug="heart-failure-mouse-models"
+        labSignalsTitle="Stay Updated on Cardiovascular Research Models"
+        labSignalsDescription="Get the latest insights on heart failure models, cardiomyopathy research, and cardiac therapeutics."
+      />
       <UXUIDCFooter />
 
       {/* Schema.org Structured Data */}
@@ -601,7 +586,7 @@ export default function HeartFailureMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom mouse models for heart failure research. Study cardiomyopathy, cardiac remodeling, and contractile dysfunction. Gene targeting since 1998.",
+            "description": "Mouse model generation for heart failure research. Study cardiomyopathy, cardiac remodeling, and contractile dysfunction. Gene targeting since 1998.",
             "serviceType": "Heart Failure Mouse Model Generation"
           })
         }}

@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Admin Login Page
  * @description Simple password authentication for admin dashboard
  */
-
-'use client';
 
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';

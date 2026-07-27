@@ -28,7 +28,7 @@ Mutations occur in the DNA binding domain of human exons 4-9 in the p53 gene
 ## Benefits
 
 - Cost-effective
-- Time savings – pre-made vectors in as little as 2 weeks, custom vectors and targeted ES cell lines in 8-10 weeks
+- Time savings – pre-made vectors in as little as 2 weeks, generated vectors and targeted ES cell lines in 8-10 weeks
 
 ## Resources
 

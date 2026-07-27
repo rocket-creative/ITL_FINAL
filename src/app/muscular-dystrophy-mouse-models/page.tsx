@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,20 +9,20 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 const heroData = {
   badge: "Muscle Disease Research",
   title: "Muscular Dystrophy Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported muscular dystrophy research with custom mouse models enabling mechanistic studies of muscle degeneration, testing gene therapy approaches, and developing therapeutic interventions for Duchenne muscular dystrophy and related myopathies.",
+  intro: "Since 1998, ingenious targeting laboratory has supported muscular dystrophy research with mouse model generation enabling mechanistic studies of muscle degeneration, testing gene therapy approaches, and developing therapeutic interventions for Duchenne muscular dystrophy and related myopathies.",
   description: "Muscular dystrophy mouse models provide essential platforms for investigating molecular pathways underlying muscle wasting and testing exon skipping strategies and gene replacement therapies."
 };
 
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 const dmdModels = [
@@ -68,6 +68,16 @@ export default function MuscularDystrophyMouseModelsPage() {
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />
       <main id="main-content">
+<section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h3 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related resources</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {relatedLinks.map((link, index) => (<div key={index} className="animate-in"><Link href={link.href} className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600" style={{ color: '#2384da', fontSize: '.85rem' }}><IconChevronRight size={12} color="#2384da" /><span>{link.title}</span></Link></div>))}
+            </div>
+          </div>
+        </section>
+
+
         <section className="page-hero" ref={heroRef} style={{ background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)', padding: '80px 20px 60px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div className="hero-animate" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: '20px', marginBottom: '20px' }}><IconDNA size={16} color="white" /><span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span></div>
@@ -149,32 +159,15 @@ export default function MuscularDystrophyMouseModelsPage() {
             </div>
           </div>
         </section>
-
-        <BreedingSchemeArchitectCTA />
-
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="muscular-dystrophy-mouse-models" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+<section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently asked questions</h2>
             <div className="animate-in"><UXUIDCAnimatedFAQ faqs={faqData} /></div>
           </div>
         </section>
 
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              title="Stay Updated on Muscular Dystrophy Research"
-              description="Get the latest insights on DMD models, gene therapy approaches, and muscle disease therapeutics."
-            />
-          </div>
-        </section>
 
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+<section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h3 className="animate-in" style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>Related resources</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -182,7 +175,106 @@ export default function MuscularDystrophyMouseModelsPage() {
             </div>
           </div>
         </section>
+
+
+        <section className="page-hero" ref={heroRef} style={{ background: 'linear-gradient(135deg, #0a253c 0%, #1a4a6e 50%, #008080 100%)', padding: '80px 20px 60px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <div className="hero-animate" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: 'rgba(255,255,255,0.15)', padding: '6px 16px', borderRadius: '20px', marginBottom: '20px' }}><IconDNA size={16} color="white" /><span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>{heroData.badge}</span></div>
+            <h1 className="hero-animate" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '20px' }}>{heroData.title}</h1>
+            <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1rem', fontWeight: 400, lineHeight: '1.7rem', marginBottom: '15px', maxWidth: '800px' }}>{heroData.intro}</p>
+            <p className="hero-animate" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', fontWeight: 400, lineHeight: '1.6rem', marginBottom: '25px', maxWidth: '800px' }}>{heroData.description}</p>
+            </div>
+        </section>
+
+        {/* Top dual-path CTA */}
+        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="muscular-dystrophy-mouse-models" utmMedium="page-hero" flush />
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#ffffff', padding: '30px 20px', borderBottom: '1px solid #e0e0e0' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {statsData.map((stat, index) => (<div key={index} className="text-center"><div style={{ color: '#008080', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700 }}><UXUIDCAnimatedCounter end={stat.value} suffix={stat.suffix} /></div><div style={{ color: '#666', fontSize: '.85rem' }}>{stat.label}</div></div>))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Duchenne Muscular Dystrophy Models</h2>
+            <div className="grid grid-cols-1 gap-6">
+              {dmdModels.map((model, index) => (
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: '#f8f9fa', padding: '30px', borderRadius: '8px', borderLeft: '4px solid #008080' }}>
+                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1.1rem', fontWeight: 600, marginBottom: '10px' }}>{model.model}</h3>
+                  <p style={{ color: '#555', fontSize: '.9rem', lineHeight: '1.6rem', marginBottom: '15px' }}>{model.description}</p>
+                  <ul style={{ listStyle: 'none', padding: 0 }}>
+                    {model.features.map((feature, idx) => (<li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '5px' }}><IconCheckCircle size={16} color="#008080" style={{ marginTop: '3px', flexShrink: 0 }} /><span style={{ color: '#555', fontSize: '.85rem' }}>{feature}</span></li>))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Phenotyping Muscular Dystrophy Models</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {phenotypingEndpoints.map((item, index) => (
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{ backgroundColor: 'white', padding: '25px', borderRadius: '8px', borderTop: '4px solid #008080' }}>
+                  <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>{item.category} Assessment</h3>
+                  <ul style={{ listStyle: 'none', padding: 0 }}>
+                    {item.endpoints.map((endpoint, idx) => (<li key={idx} style={{ color: '#555', fontSize: '.85rem', marginBottom: '8px', paddingLeft: '15px', position: 'relative' }}><span style={{ position: 'absolute', left: 0, color: '#008080' }}>•</span>{endpoint}</li>))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#008080', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>Therapeutic Applications</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {therapeuticApps.map((item, index) => (
+                <div key={index} className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.1)', padding: '25px', borderRadius: '8px' }}>
+                  <h3 style={{ color: 'white', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>{item.approach}</h3>
+                  <ul style={{ listStyle: 'none', padding: 0 }}>
+                    {item.applications.map((app, idx) => (<li key={idx} style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.85rem', marginBottom: '8px', paddingLeft: '15px', position: 'relative' }}><span style={{ position: 'absolute', left: 0 }}>•</span>{app}</li>))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: testimonials.length === 1 ? '900px' : '1100px', margin: '0 auto', width: '100%' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>What Researchers Say</h2>
+            <div style={{ display: testimonials.length === 1 ? 'block' : 'grid', gridTemplateColumns: testimonials.length === 2 ? 'repeat(2, 1fr)' : testimonials.length >= 3 ? 'repeat(3, 1fr)' : undefined, gap: '24px' }}>
+              {testimonials.map((testimonial, index) => (<div key={index} className="animate-in" style={{ backgroundColor: '#f8f9fa', padding: testimonials.length === 1 ? '40px 48px' : '30px', borderRadius: '8px', width: '100%', boxSizing: 'border-box', textAlign: testimonials.length === 1 ? 'center' : 'left' }}><div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(0,128,128,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: testimonials.length === 1 ? '0 auto 15px' : '0 0 15px' }}><IconQuote size={20} color="#008080" /></div><blockquote style={{ color: '#333', fontSize: testimonials.length === 1 ? '1rem' : '.9rem', lineHeight: '1.7rem', fontStyle: 'italic', marginBottom: '15px' }}>&ldquo;{testimonial.quote}&rdquo;</blockquote><p style={{ color: '#0a253c', fontWeight: 600, fontSize: '.9rem', marginBottom: '2px' }}>— {testimonial.author}</p><p style={{ color: '#666', fontSize: '.8rem' }}>{testimonial.affiliation}</p></div>))}
+            </div>
+          </div>
+        </section>
+<section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px', textAlign: 'center' }}>Frequently asked questions</h2>
+            <div className="animate-in"><UXUIDCAnimatedFAQ faqs={faqData} /></div>
+          </div>
+        </section>
+
+      <StandardPageCtaStack
+        slug="muscular-dystrophy-mouse-models"
+        showLabSignals={false}
+      />
       </main>
+      <StandardPageCtaStack
+        slug="muscular-dystrophy-mouse-models"
+        labSignalsTitle="Stay Updated on Muscular Dystrophy Research"
+        labSignalsDescription="Get the latest insights on DMD models, gene therapy approaches, and muscle disease therapeutics."
+      />
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}
@@ -193,7 +285,7 @@ export default function MuscularDystrophyMouseModelsPage() {
           { name: 'Muscular Dystrophy Mouse Models', path: '/muscular-dystrophy-mouse-models' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Muscular Dystrophy Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Custom muscular dystrophy mouse models for muscle disease research since 1998.", "serviceType": "Muscular Dystrophy Mouse Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Muscular Dystrophy Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Generated muscular dystrophy mouse models for muscle disease research since 1998.", "serviceType": "Muscular Dystrophy Mouse Models" }) }} />
     </div>
   );
 }

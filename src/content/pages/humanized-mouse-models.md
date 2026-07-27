@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.440Z"
 
 **Url: /humanized-mouse-models**
 
-**Meta Description: Custom humanized mouse models expressing human genes. Immune checkpoint humanization, drug target humanization, and complete gene replacement. Since 1998.**
+**Meta Description: Generated humanized mouse models expressing human genes. Immune checkpoint humanization, drug target humanization, and complete gene replacement. Since 1998.**
 
 **Primary Keyword: humanized mouse model**
 
@@ -256,12 +256,11 @@ Ingenious targeting laboratory has published its humanized models in many peer r
 ## Project Resources
 
 - (/es-cell-gene-targeting)
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 
 ## Start Your Humanization Project
 
-Our scientific consultants are ready to discuss your humanization requirements and recommend the optimal strategy for your therapeutic program. Initial consultation is provided at no charge and includes humanization approach recommendations, allele design options, and timeline estimates.
+Our scientific consultants are ready to discuss your humanization requirements and recommend the optimal strategy for your therapeutic program. Initial consultation is provided at no charge and includes humanization approach recommendations, allele design options.
 
 (/request-quote)
 

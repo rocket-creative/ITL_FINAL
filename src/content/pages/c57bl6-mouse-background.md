@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.197Z"
 
 # C57BL/6 Mouse Background
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 custom gene targeting projects, with the majority generated on C57BL/6 genetic backgrounds. Our experience across thousands of projects provides deep understanding of how strain background affects phenotypic outcomes, breeding performance, and experimental reproducibility.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects, with the majority generated on C57BL/6 genetic backgrounds. Our experience across thousands of projects provides deep understanding of how strain background affects phenotypic outcomes, breeding performance, and experimental reproducibility.
 
 The C57BL/6 mouse is the most widely used inbred strain for biomedical research and the reference strain for the mouse genome sequence. C57BL/6 backgrounds are preferred for most knockout, knockin, and conditional allele projects due to extensive phenotypic characterization, broad research community adoption, and compatibility with the majority of Cre driver lines.
 
@@ -44,7 +44,7 @@ C57BL/6N originated from the NIH colony and is the substrain used by the Interna
 - Intact Nnt:** Functional nicotinamide nucleotide transhydrogenase; normal mitochondrial function
 - Metabolic phenotype:** More robust glucose stimulated insulin secretion compared to C57BL/6J
 - Crb1 mutation:** Retinal degeneration allele (rd8) present in some C57BL/6N colonies; causes retinal lesions
-- IKMC compatibility:** ES cells and knockout alleles from EUCOMM/KOMP are on C57BL/6N background
+- IKMC compatibility:** Knockout alleles from EUCOMM/KOMP are on C57BL/6N background
 
 C57BL/6N is often preferred for metabolic studies due to intact Nnt, but researchers should verify rd8 status when studying retinal or visual phenotypes.
 
@@ -247,13 +247,12 @@ Zhou W, Zhang J, Chowdhury NU, Norlander AE, Toki S, Abney M, Rusznak M, Gibson-
 
 ## Project Resources
 
-- (/model-generation-timeline)
-- (/faqs)
+- - (/faqs)
 - (/technologies)
 
 ## Start Your Project on C57BL/6 Background
 
-Our scientific consultants are ready to discuss strain background selection for your research program. Initial consultation is provided at no charge and includes substrain recommendations, Nnt and rd8 considerations, and timeline estimates for your specific project.
+Our scientific consultants are ready to discuss strain background selection for your research program. Initial consultation is provided at no charge and includes substrain recommendations, Nnt and rd8 considerations for your specific project.
 
 (/request-quote)
 
@@ -269,9 +268,9 @@ C57BL/6J has a mutation in the Nnt (nicotinamide nucleotide transhydrogenase) ge
 
 C57BL/6 is well-characterized genetically, has extensive baseline phenotypic data, is compatible with most Cre driver lines, and has good breeding performance. The strain is suitable for immunological, metabolic, neurological, and oncology research, making it the standard choice for most studies.
 
-**Do I need to backcross if I use C57BL/6 ES cells?**
+**Do I need to backcross to C57BL/6?**
 
-No. Using C57BL/6N ES cells eliminates backcrossing requirements and provides pure inbred background directly from germline transmission. Models generated on 129 strains require backcrossing to C57BL/6 to achieve congenic status (10 generations or 5-7 with speed congenic).
+Models generated directly on C57BL/6N eliminate backcrossing requirements and provides pure inbred background directly from germline transmission. Models generated on 129 strains require backcrossing to C57BL/6 to achieve congenic status (10 generations or 5-7 with speed congenic).
 
 **What Cre driver lines are available on C57BL/6?**
 
@@ -300,7 +299,7 @@ Ingenious Targeting Laboratory can provide guidance on substrain selection based
 - All elements labeled
 - Primary keyword "C57BL/6 mouse" in H1 and first paragraph
 - Secondary keywords in H2/H3 headers (C57BL/6J, C57BL/6N, strain background)
-- Quantified credibility (1998, 2,800+ custom projects)
+- Quantified credibility (1998, 2,800+ models generated)
 - Zone 1: Trust &amp; Positioning (no procedural methodology)
 - Zone 2: Scientific content with strain specific depth
 - Zone 3: Navigation and CTAs

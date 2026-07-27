@@ -8,7 +8,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { UXUIDCGlossarySection, conditionalTerms } from '@/components/UXUIDC/GlossarySection';
-import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, LabSignalsSignup, getRelatedLabSignalsArticles, BreedingSchemeArchitectCTA, GlossaryTermLink, BreadcrumbSchema, SpotlightModule } from '@/components/UXUIDC';
+import { LegacyInfoLink, UXUIDCResourceLinks, conditionalKnockoutResources, getRelatedLabSignalsArticles, GlossaryTermLink, BreadcrumbSchema, SpotlightModule, StandardPageCtaStack } from '@/components/UXUIDC';
 import { IconDNA, IconSettings, IconClock, IconTarget, IconEye, IconQuote, IconChevronRight, IconAward, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 import { tier1GenerateStaticParams } from '@/data/seoKeywords';
 
@@ -23,17 +23,17 @@ const legacyContentUrl = '/legacy/conditional-knockout-mouse-models';
 const heroData = {
   badge: "Cre Lox Technology",
   title: "Conditional Knockout Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom mouse model projects, including conditional knockouts, for researchers at universities, pharmaceutical companies, and research institutions worldwide.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects, including conditional knockouts, for researchers at universities, pharmaceutical companies, and research institutions worldwide.",
   description: "Our conditional knockout mouse models have supported research published in more than 800 peer reviewed journals, including Science, Nature, and Cell.",
   secondaryText: "Conditional knockout mouse models enable controlled gene inactivation in specific tissues or at defined times. Unlike conventional knockouts where gene function is lost globally from the earliest developmental stages, conditional knockouts use the Cre lox system to restrict gene deletion to cells expressing Cre recombinase."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Advantages Data
@@ -173,7 +173,7 @@ const relatedTechnologies = [
 const projectResources = [
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
-  { title: "Request Custom Quote", href: "/request-quote" },
+  { title: "Request a Quote", href: "/request-quote" },
   { title: "FAQs", href: "/faqs" }
 ];
 
@@ -200,14 +200,6 @@ const getFaqData = () => [
     answer: (
       <>
         The critical exon must be essential for gene function. Ideal targets are exons present in all transcript variants, exons encoding functional domains, and exons whose deletion causes <GlossaryTermLink term="frameshift-mutation">frameshift</GlossaryTermLink> in downstream sequence. Our scientific team analyzes gene structure and transcript architecture to identify optimal targets for each project.
-      </>
-    )
-  },
-  {
-    question: "How long does a conditional knockout project take?",
-    answer: (
-      <>
-        Custom conditional knockout project timelines account for more complex allele designs and verification of LoxP site positioning in <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. The investment provides greater experimental flexibility through <GlossaryTermLink term="tissue-specific-knockout">tissue-specific</GlossaryTermLink> and <GlossaryTermLink term="temporal-control">temporal control</GlossaryTermLink>. Contact us for current timeline estimates tailored to your project.
       </>
     )
   }
@@ -823,7 +815,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -860,19 +852,6 @@ export default function ConditionalKnockoutMouseModelsPage() {
               description="Download our free guides and tools to help plan your conditional knockout project."
               resources={conditionalKnockoutResources}
               variant="card"
-            />
-          </div>
-        </section>
-
-        {/* Lab Signals Newsletter Section */}
-        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup 
-              variant="banner"
-              title="Get Expert Insights on Conditional Knockout"
-              description="Subscribe to Lab Signals for biweekly articles on Cre-lox design, floxed allele optimization, and conditional knockout best practices from our PhD scientists."
-              showArticles={true}
-              relatedArticles={getRelatedLabSignalsArticles('/conditional-knockout-mouse-models')}
             />
           </div>
         </section>
@@ -1007,17 +986,15 @@ export default function ConditionalKnockoutMouseModelsPage() {
 
         {/* Researcher Spotlight Module */}
         <SpotlightModule modelType="conditional_knockout" />
-
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA variant="gradient" />
       </main>
 
-      {/* Top dual-path CTA */}
-      <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
-        <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-          <CatalogCustomDualCta slug="conditional-knockout-mouse-models" utmMedium="page-closing" flush />
-        </div>
-      </section>
+      <StandardPageCtaStack
+        slug="conditional-knockout-mouse-models"
+        labSignalsTitle="Get Expert Insights on Conditional Knockout"
+        labSignalsDescription="Subscribe to Lab Signals for biweekly articles on Cre-lox design, floxed allele optimization, and conditional knockout best practices from our PhD scientists."
+        labSignalsShowArticles={true}
+        labSignalsRelatedArticles={getRelatedLabSignalsArticles('/conditional-knockout-mouse-models')}
+      />
 
       <UXUIDCFooter />
       
@@ -1025,7 +1002,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Conditional Knockout Mouse Models', path: '/conditional-knockout-mouse-models' },
         ]}
       />
@@ -1040,8 +1017,8 @@ export default function ConditionalKnockoutMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,800+ custom projects since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Generated conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,800+ models generated since 1998.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

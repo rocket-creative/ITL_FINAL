@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.217Z"
 
 **Url: /ophthalmology-mouse-models**
 
-**Meta Description: Custom ophthalmology mouse models for eye disease research. Study retinal degeneration, glaucoma, and vision disorders.**
+**Meta Description: Generated ophthalmology mouse models for eye disease research. Study retinal degeneration, glaucoma, and vision disorders.**
 
 **Primary Keyword: ophthalmology mouse models**
 
@@ -16,7 +16,7 @@ extracted: "2026-01-09T17:03:05.217Z"
 
 # Ophthalmology Mouse Models
 
-Since 1998, ingenious targeting laboratory has supported ophthalmology research with custom mouse models enabling mechanistic studies of retinal degeneration, glaucoma, macular degeneration, and other blinding conditions affecting millions worldwide.
+Since 1998, ingenious targeting laboratory has supported ophthalmology research with mouse model generation enabling mechanistic studies of retinal degeneration, glaucoma, macular degeneration, and other blinding conditions affecting millions worldwide.
 
 Ophthalmology mouse models provide essential platforms for investigating the molecular pathways underlying vision loss, testing gene therapy approaches for inherited retinal diseases, and developing neuroprotective strategies for glaucoma and other optic neuropathies.
 
@@ -377,8 +377,5 @@ C57BL/6 is standard but some substrains carry the rd8 mutation (Crb1rd8) causing
 
 Yes. Ophthalmology models are extensively used for testing AAV-mediated gene therapy approaches for inherited retinal diseases. Models enable evaluation of therapeutic transgene expression, rescue of visual function, safety assessment, and long-term persistence. Retina-specific targeting enables local delivery with systemic safety.
 
-**What is the timeline for generating an ophthalmology mouse model?**
-
-Standard custom model generation takes 26-36 weeks from project initiation to delivery of germline-transmitted founders. Conditional approaches for cell-type-specific studies follow the same timeline. Pre-germline characterization provides early validation of targeting before mouse generation.
 
 (/request-quote)

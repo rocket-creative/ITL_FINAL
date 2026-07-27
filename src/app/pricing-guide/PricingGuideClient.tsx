@@ -2,7 +2,7 @@
 
 /**
  * Pricing Guide Client Component - ingenious targeting laboratory
- * Displays detailed pricing for custom mouse, rat, and rabbit models
+ * Displays detailed pricing for model generation mouse, rat, and rabbit models
  */
 
 import { useEffect, useRef } from 'react';
@@ -20,7 +20,7 @@ import {
 // Pricing Data
 const pricingTiers = [
   {
-    category: 'Custom Mouse Models: Guaranteed Germline-Confirmed Mice',
+    category: 'Mouse Model Generation: Guaranteed Germline-Confirmed Mice',
     subtitle: 'Starting prices in C57BL/6 background',
     items: [
       {
@@ -71,12 +71,12 @@ const pricingTiers = [
     subtitle: null,
     items: [
       {
-        title: 'Custom Rat Models',
+        title: 'Generated Rat Models',
         price: '$32,500',
         description: 'Conventional KO, Point Mutation KI, cDNA/Cassette KI.',
       },
       {
-        title: 'Custom Rabbit Models',
+        title: 'Rabbit Model Generation',
         price: '$150,000',
         description: 'Conventional KO, Point Mutation KI, Small Tag KI.',
       },
@@ -159,7 +159,7 @@ export default function PricingGuideClient() {
                 marginBottom: '15px',
               }}
             >
-              Custom Mouse, Rat & Rabbit Model Pricing
+              Generated Mouse, Rat & Rabbit Model Pricing
             </h1>
             <p
               className="hero-animate"

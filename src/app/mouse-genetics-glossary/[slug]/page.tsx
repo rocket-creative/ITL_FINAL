@@ -9,6 +9,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCEducationalSalesBanner from '@/components/UXUIDC/EducationalSalesBanner';
 import CatalogStickyRail from '@/components/UXUIDC/CatalogStickyRail';
+import StandardPageCtaStack from '@/components/UXUIDC/StandardPageCtaStack';
 import { getEducationalOffer } from '@/components/UXUIDC/EducationalSalesBanner';
 import { getCatalogLookup } from '@/components/UXUIDC/catalogLookupMap';
 import { IconChevronRight, IconDNA, IconLayers, IconArrowLeft } from '@/components/UXUIDC/Icons';
@@ -24,99 +25,99 @@ import { glossaryTerms } from '@/data/glossaryTerms';
 // offer the searcher will actually click.
 const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: string }> = {
   'non-homologous-end-joining': {
-    title: 'NHEJ DNA Repair Explained + Custom Knockout Mice | ITL',
+    title: 'NHEJ DNA Repair Explained + Generated Knockout Mice | ITL',
     description:
-      'Non-homologous end joining (NHEJ) explained for researchers. Custom knockout mice with a 100% germline guarantee. Quote in 24h.',
+      'Non-homologous end joining (NHEJ) explained for researchers. Generated knockout mice with a 100% germline guarantee. Quote in 24h.',
   },
   'open-reading-frame': {
-    title: 'Open Reading Frame (ORF) + Custom Knockin Mouse Models | ITL',
+    title: 'Open Reading Frame (ORF) + Generated Knockin Mouse Models | ITL',
     description:
       'ORF defined for genetics research. Need an ORF replacement or humanization knockin mouse? Quote in 24h. 800+ publications.',
   },
   'inducible-cre-ert2': {
-    title: 'Inducible CreERT2 + Custom CreERT2 Mouse Service | ITL',
+    title: 'Inducible CreERT2 + Generated CreERT2 Mouse Service | ITL',
     description:
-      'Inducible CreERT2 explained for tissue-specific knockouts. We build custom CreERT2 + floxed alleles. 2,800+ custom projects.',
+      'Inducible CreERT2 explained for tissue-specific knockouts. We build generated CreERT2 + floxed alleles. 2,800+ models generated.',
   },
   'tamoxifen-inducible-cre': {
-    title: 'Tamoxifen Inducible Cre + Custom CreERT2 Mice | ITL',
+    title: 'Tamoxifen Inducible Cre + Generated CreERT2 Mice | ITL',
     description:
-      'Tamoxifen-inducible Cre explained. We have shipped 2,800+ custom CreERT2 projects. Custom builds + ready catalog Cre lines. Quote in 24h.',
+      'Tamoxifen-inducible Cre explained. We have shipped 2,800+ generated CreERT2 projects. Generated builds + ready catalog Cre lines. Quote in 24h.',
   },
   'c57bl6j-vs-c57bl6n': {
-    title: 'C57BL/6J vs C57BL/6N + Custom Mice on Either Background | ITL',
+    title: 'C57BL/6J vs C57BL/6N + Generated Mice on Either Background | ITL',
     description:
-      'C57BL/6J vs 6N: substrain differences. We build custom mice on the background you need. 14,774 catalog models. Quote in 24h.',
+      'C57BL/6J vs 6N: substrain differences. We build mice on the background you need. 14,774 catalog models. Quote in 24h.',
   },
   'point-mutation': {
-    title: 'Point Mutation Definition + Custom Knockin Mouse Models | ITL',
+    title: 'Point Mutation Definition + Generated Knockin Mouse Models | ITL',
     description:
-      'Point mutation defined: substitution, missense, nonsense. Custom point mutation knockin mice. Quote in 24h.',
+      'Point mutation defined: substitution, missense, nonsense. Generated point mutation knockin mice. Quote in 24h.',
   },
   'allele-genotype-phenotype': {
-    title: 'Allele, Genotype & Phenotype + Custom Mouse Design | ITL',
+    title: 'Allele, Genotype & Phenotype + Generated Mouse Design | ITL',
     description:
       'Allele, genotype, phenotype explained for mouse models. Our scientists design the right allele for your phenotype. Free consultation.',
   },
   'promoter-enhancer-regulatory-element': {
-    title: 'Promoter & Enhancer Elements + Custom Knockin Mice | ITL',
+    title: 'Promoter & Enhancer Elements + Generated Knockin Mice | ITL',
     description:
-      'Promoter vs enhancer regulatory elements. Custom knockin mice at endogenous regulatory loci. Quote in 24h.',
+      'Promoter vs enhancer regulatory elements. Generated knockin mice at endogenous regulatory loci. Quote in 24h.',
   },
   'flp-frt-system': {
-    title: 'Flp-FRT System + Custom Conditional Mouse Models | ITL',
+    title: 'Flp-FRT System + Generated Conditional Mouse Models | ITL',
     description:
-      'Flp-FRT recombination explained. Custom Flp/FRT and Cre/lox conditional mice. 800+ publications.',
+      'Flp-FRT recombination explained. Generated Flp/FRT and Cre/lox conditional mice. 800+ publications.',
   },
   'gain-of-function-vs-loss-of-function-mutation': {
-    title: 'Gain vs Loss of Function Mutation + Custom Mice | ITL',
+    title: 'Gain vs Loss of Function Mutation + Generated Mice | ITL',
     description:
-      'Gain-of-function vs loss-of-function mutations. Custom knockin and knockout mice for either model. Quote in 24h.',
+      'Gain-of-function vs loss-of-function mutations. Generated knockin and knockout mice for either model. Quote in 24h.',
   },
   'dominant-negative': {
-    title: 'Dominant Negative Mutation + Custom Knockin Mice | ITL',
+    title: 'Dominant Negative Mutation + Generated Knockin Mice | ITL',
     description:
-      'Dominant negative mutations explained. We build custom dominant-negative knockin mice. Quote in 24h.',
+      'Dominant negative mutations explained. We build dominant-negative knockin mice. Quote in 24h.',
   },
   'rosa26': {
-    title: 'Rosa26 Locus + Custom Rosa26 Knockin Mouse Service | ITL',
+    title: 'Rosa26 Locus + Generated Rosa26 Knockin Mouse Service | ITL',
     description:
-      'Rosa26 safe harbor locus explained. Custom Rosa26 knockin mice — reporters, cassettes, inducible —. Quote in 24h.',
+      'Rosa26 safe harbor locus explained. Generated Rosa26 knockin mice — reporters, cassettes, inducible —. Quote in 24h.',
   },
   'rosa26-locus': {
-    title: 'Rosa26 Locus + Custom Rosa26 Knockin Mice | ITL',
+    title: 'Rosa26 Locus + Generated Rosa26 Knockin Mice | ITL',
     description:
-      'Rosa26 locus explained. Custom Rosa26 knockin mice. Reporters, conditional cassettes, inducible expression.',
+      'Rosa26 locus explained. Generated Rosa26 knockin mice. Reporters, conditional cassettes, inducible expression.',
   },
   'safe-harbor-locus': {
-    title: 'Safe Harbor Locus + Custom Knockin Mouse Service | ITL',
+    title: 'Safe Harbor Locus + Generated Knockin Mouse Service | ITL',
     description:
-      'Safe harbor loci (Rosa26, others) explained. Custom safe-harbor knockin mice. 800+ publications.',
+      'Safe harbor loci (Rosa26, others) explained. Generated safe-harbor knockin mice. 800+ publications.',
   },
   'tissue-specific-knockout': {
-    title: 'Tissue-Specific Knockout + Custom Conditional Mice | ITL',
+    title: 'Tissue-Specific Knockout + Generated Conditional Mice | ITL',
     description:
-      'Tissue-specific knockout mice explained. Custom Cre/lox conditional knockouts. 2,800+ custom projects shipped.',
+      'Tissue-specific knockout mice explained. Generated Cre/lox conditional knockouts. 2,800+ models generated.',
   },
   'humanized-mouse-models': {
-    title: 'Humanized Mouse Models + Custom Humanization Service | ITL',
+    title: 'Humanized Mouse Models + Generated Humanization Service | ITL',
     description:
-      'Humanized mouse models defined. Custom humanization (PD1, PDL1, CTLA4, drug targets) since 1998. 800+ publications. Quote in 24h.',
+      'Humanized mouse models defined. Generated humanization (PD1, PDL1, CTLA4, drug targets) since 1998. 800+ publications. Quote in 24h.',
   },
   'cre-lox-system': {
-    title: 'Cre/lox System + Custom Cre/lox Conditional Mice | ITL',
+    title: 'Cre/lox System + Generated Cre/lox Conditional Mice | ITL',
     description:
-      'Cre/lox recombination explained. Custom Cre/lox conditional knockouts. 2,800+ custom projects, 800+ publications.',
+      'Cre/lox recombination explained. Generated Cre/lox conditional knockouts. 2,800+ models generated, 800+ publications.',
   },
   'frameshift-mutation': {
-    title: 'Frameshift Mutation + Custom Knockin Mouse Models | ITL',
+    title: 'Frameshift Mutation + Generated Knockin Mouse Models | ITL',
     description:
-      'Frameshift mutations explained with examples. Custom knockin mice for any disease variant. Quote in 24h.',
+      'Frameshift mutations explained with examples. Generated knockin mice for any disease variant. Quote in 24h.',
   },
   'missense-nonsense-mutation': {
-    title: 'Missense vs Nonsense Mutation + Custom Knockin Mice | ITL',
+    title: 'Missense vs Nonsense Mutation + Generated Knockin Mice | ITL',
     description:
-      'Missense and nonsense mutations explained. Custom point mutation knockin mice. Quote in 24h. 800+ publications.',
+      'Missense and nonsense mutations explained. Generated point mutation knockin mice. Quote in 24h. 800+ publications.',
   },
   'genotyping-pcr-qpcr': {
     title: 'Genotyping PCR/qPCR + Mouse Genotyping Service | ITL',
@@ -303,7 +304,7 @@ export default async function GlossaryTermPage({
             '@context': 'https://schema.org',
             '@type': 'Service',
             name: getEducationalOffer(slug).eyebrow,
-            serviceType: 'Custom mouse model generation',
+            serviceType: 'Mouse model generation',
             provider: {
               '@type': 'Organization',
               '@id': 'https://www.genetargeting.com/#organization',
@@ -717,61 +718,16 @@ export default async function GlossaryTermPage({
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section style={{ background: BRAND.teal, padding: '50px 20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '1.75rem',
-              fontWeight: 700,
-              color: BRAND.white,
-              marginBottom: '16px'
-            }}>
-              Need Help with Your Mouse Model Project?
-            </h2>
-            <p style={{
-              fontSize: '.95rem',
-              color: 'rgba(255,255,255,0.9)',
-              marginBottom: '24px',
-              lineHeight: 1.7
-            }}>
-              Our scientific consultants can help you understand the best approach for your research goals.
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/request-quote" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: BRAND.white,
-                color: BRAND.teal,
-                padding: '14px 28px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                Request Custom Quote
-                <IconChevronRight size={16} color={BRAND.teal} />
-              </Link>
-              <Link href="/contact" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'transparent',
-                color: BRAND.white,
-                padding: '14px 28px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                border: '2px solid rgba(255,255,255,0.3)'
-              }}>
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
+
+      {/* P0 closing commercial only — glossary terms do not need BSA or Lab Signals */}
+      <StandardPageCtaStack
+        slug={slug}
+        closingTitle="Need Help with Your Mouse Model Project?"
+        closingDescription="Our scientific consultants can help you understand the best approach for your research goals. Browse 14,774+ catalog models or request a quote."
+        showBreedingScheme={false}
+        showLabSignals={false}
+      />
       
       <UXUIDCFooter />
       {/* Floating commercial nudge — desktop only */}

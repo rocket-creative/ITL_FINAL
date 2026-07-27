@@ -7,7 +7,7 @@
  * export const breadcrumbSchema = generateBreadcrumbs({
  *   items: [
  *     { name: 'Home', path: '/' },
- *     { name: 'Custom Models', path: '/custom-mouse-models' },
+ *     { name: 'Model Generation', path: '/custom-mouse-models' },
  *     { name: 'Knockout Mouse Models', path: '/knockout-mouse-models' },
  *   ],
  * });

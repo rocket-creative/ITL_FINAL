@@ -15,16 +15,16 @@ import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } f
 const heroData = {
   badge: "SLE Research Models",
   title: "Lupus Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has supported systemic lupus erythematosus research with custom knockout, knockin, and conditional mouse models. Our gene targeting expertise enables study of the genetic and immunological mechanisms driving lupus pathogenesis, autoantibody production, and organ damage.",
+  intro: "Since 1998, ingenious targeting laboratory has supported systemic lupus erythematosus research with generated knockout, knockin, and conditional mouse models. Our gene targeting expertise enables study of the genetic and immunological mechanisms driving lupus pathogenesis, autoantibody production, and organ damage.",
   description: "Whether you are investigating novel lupus susceptibility genes, testing therapeutic interventions, or studying specific aspects of lupus immunopathology, ingenious targeting laboratory provides models optimized for your SLE research goals."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Disease Mechanisms
@@ -43,7 +43,7 @@ const diseaseMechanisms = [
   }
 ];
 
-// Custom Model Approaches
+// Model Generation Approaches
 const customModelApproaches = [
   {
     title: "Susceptibility Gene Knockouts",
@@ -87,7 +87,7 @@ const strainBackgrounds = [
 const researchApplications = [
   {
     category: "Disease Mechanism Studies",
-    description: "Custom models enable investigation of specific genes and pathways in lupus pathogenesis, from initial tolerance breakdown through autoantibody production to organ damage."
+    description: "Model generation enable investigation of specific genes and pathways in lupus pathogenesis, from initial tolerance breakdown through autoantibody production to organ damage."
   },
   {
     category: "Therapeutic Target Validation",
@@ -315,11 +315,11 @@ export default function LupusMouseModelsPage() {
           </div>
         </section>
 
-        {/* Custom Model Approaches */}
+        {/* Model Generation Approaches */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
-              Custom Model Approaches for Lupus Research
+              Model Generation Approaches for Lupus Research
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -598,7 +598,7 @@ export default function LupusMouseModelsPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom mouse models for systemic lupus erythematosus research. Study autoantibody production, immune complex disease, and lupus nephritis. Since 1998.",
+            "description": "Mouse model generation for systemic lupus erythematosus research. Study autoantibody production, immune complex disease, and lupus nephritis. Since 1998.",
             "serviceType": "Lupus Mouse Model Generation"
           })
         }}

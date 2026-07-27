@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -9,7 +9,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup , BreadcrumbSchema } from '@/components/UXUIDC';
+import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -21,10 +21,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Tumor Suppressor Categories
@@ -265,7 +265,7 @@ export default function TumorSuppressorKnockoutMicePage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link
@@ -478,16 +478,6 @@ export default function TumorSuppressorKnockoutMicePage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="tumor-suppressor-knockout-mice" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -499,12 +489,6 @@ export default function TumorSuppressorKnockoutMicePage() {
             </div>
           </div>
         </section>
-
-        {/* Lab Signals Signup */}
-        <LabSignalsSignup 
-          title="Monitor Your Tumor Suppressor Knockout Project"
-          description="Receive updates on your p53, PTEN, or other tumor suppressor knockout model development, including genotype validation and tumor phenotype characterization."
-        />
 
         {/* Related Links Section */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
@@ -552,6 +536,12 @@ export default function TumorSuppressorKnockoutMicePage() {
             </div>
           </div>
         </section>
+            <StandardPageCtaStack
+        slug="tumor-suppressor-knockout-mice"
+        labSignalsTitle="Monitor Your Tumor Suppressor Knockout Project"
+        labSignalsDescription="Receive updates on your p53, PTEN, or other tumor suppressor knockout model development, including genotype validation and tumor phenotype characterization."
+      />
+
       </main>
 
       
@@ -574,7 +564,7 @@ export default function TumorSuppressorKnockoutMicePage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom tumor suppressor knockout mouse models for cancer research. p53, Rb, PTEN, APC, and other tumor suppressor gene targeting since 1998.",
+            "description": "Generated tumor suppressor knockout mouse models for cancer research. p53, Rb, PTEN, APC, and other tumor suppressor gene targeting since 1998.",
             "serviceType": "Mouse Model Generation"
           })
         }}

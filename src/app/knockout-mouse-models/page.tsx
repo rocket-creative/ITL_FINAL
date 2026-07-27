@@ -44,24 +44,24 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 // ============================================
 
 const heroData = {
-  badge: 'Custom Mouse Models Since 1998',
+  badge: 'Mouse Model Generation Since 1998',
   title: 'Knockout Mouse Models',
-  intro: 'Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our knockout mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.',
-  description: 'Knockout mouse models enable loss of function studies by inactivating specific genes. Whether you need complete gene deletion throughout the organism or controlled inactivation in specific tissues at defined times, ingenious targeting laboratory designs and delivers knockout mice tailored to your experimental requirements. From conventional knockouts for straightforward gene deletion to sophisticated conditional systems using Cre lox and other recombinase technologies, the right knockout strategy is critical for your research success.',
+  intro: 'Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our knockout mouse models have supported research published in more than 800 peer reviewed articles, including in Science, Nature, and Cell.',
+  description: 'Knockout mouse models enable loss of function studies by inactivating specific genes. Whether you need complete gene deletion throughout the organism or controlled inactivation in specific tissues at defined times, ingenious targeting laboratory designs and delivers knockout mice for your experimental requirements. From conventional knockouts for straightforward gene deletion to sophisticated conditional systems using Cre lox and other recombinase technologies, the right knockout strategy is critical for your research success.',
 };
 
 const stats = [
-  { number: '2,800+', label: 'Custom Projects Completed' },
+  { number: '2,800+', label: 'Models Generated' },
   { number: '800+', label: 'Publications' },
-  { number: '25+', label: 'Years of Excellence' },
-  { number: '100%', label: 'Custom Solutions' },
+  { number: '26+', label: 'Years of Excellence' },
+  { number: '900+', label: 'Laboratories Served' },
 ];
 
 const approachesData = [
   {
     title: 'Conventional Knockout',
     description: 'Conventional knockout models provide global gene inactivation from the earliest stages of development. The target gene is disrupted throughout all tissues for the lifetime of the animal. This approach is appropriate when studying genes that are not essential for embryonic development and when whole organism effects are the primary research interest.',
-    benefit: 'Conventional knockouts offer a straightforward path to loss of function phenotypes with shorter project timelines and lower complexity than conditional approaches.',
+    benefit: 'Conventional knockouts offer a straightforward path to loss of function phenotypes with lower complexity than conditional approaches.',
     href: '/conventional-knockout-mouse-models',
     Icon: IconTarget,
   },
@@ -165,16 +165,7 @@ const getFaqData = () => [
         A <GlossaryTermLink term="floxed-gene-loxp-site">floxed allele</GlossaryTermLink> contains <GlossaryTermLink term="floxed-gene-loxp-site">LoxP sites</GlossaryTermLink> flanking a critical exon of your target gene. The gene functions normally until exposed to Cre recombinase, which excises the DNA between LoxP sites. This deletion removes a critical exon(s) and eliminates gene function. Floxed alleles are the foundation of <GlossaryTermLink term="conditional-knockout-mouse-models">conditional knockout</GlossaryTermLink> strategies.
       </>
     ),
-  },
-  {
-    question: 'How long does it take to generate a knockout mouse model?',
-    answer: (
-      <>
-        Project timelines vary based on model type and complexity. Conditional knockout projects require additional time due to complexity in allele design and verification. All projects include strategy design, materials generation and confirmation, injection, and breeding of F0s to obtain <GlossaryTermLink term="germline-transmission">germline transmission</GlossaryTermLink> mice. Contact us for a detailed timeline estimate for your specific project.
-      </>
-    ),
-  },
-  {
+  },  {
     question: 'What deliverables will I receive at the end of a knockout project?',
     answer: (
       <>
@@ -205,7 +196,7 @@ const relatedTech = [
 const relatedResources = [
   { label: 'Knockout Strategy Guide', href: '/knockout-strategy-guide' },
   { label: 'Conditional vs Conventional Guide', href: '/conditional-vs-conventional-guide' },
-  { label: 'Request Custom Quote', href: '/request-quote' },
+  { label: 'Request a Quote', href: '/request-quote' },
   { label: 'FAQs', href: '/faqs' },
 ];
 
@@ -830,7 +821,7 @@ export default function KnockoutMouseModelsPage() {
             <LabSignalsSignup 
               variant="banner"
               title="Learn How Knockout Mice Are Made"
-              description="Subscribe to Lab Signals for step-by-step guides, CRISPR vs ES cell targeting comparisons, and expert insights on knockout mouse generation."
+              description="Subscribe to Lab Signals for step-by-step guides, gene targeting strategy comparisons, and expert insights on knockout mouse generation."
               showArticles={true}
               relatedArticles={getRelatedLabSignalsArticles('/knockout-mouse-models')}
             />
@@ -951,7 +942,7 @@ export default function KnockoutMouseModelsPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Knockout Mouse Models', path: '/knockout-mouse-models' },
         ]}
       />
@@ -969,8 +960,8 @@ export default function KnockoutMouseModelsPage() {
               alternateName: 'iTL',
               url: 'https://www.genetargeting.com',
             },
-            description: 'Custom knockout mouse models from ingenious targeting laboratory (iTL), a U.S. based custom mouse model company with a 100% germline transmission guarantee. Conventional, conditional, tissue specific, and inducible knockouts since 1998.',
-            serviceType: 'Custom Knockout Mouse Model Generation',
+            description: 'Generated knockout mouse models from ingenious targeting laboratory (iTL), a U.S. based mouse model generation company with a 100% germline transmission guarantee. Conventional, conditional, tissue specific, and inducible knockouts since 1998.',
+            serviceType: 'Generated Knockout Mouse Model Generation',
             areaServed: 'Worldwide',
             award: '100% germline transmission guarantee',
           }),
@@ -983,7 +974,7 @@ export default function KnockoutMouseModelsPage() {
             '@context': 'https://schema.org',
             '@type': ['Article', 'TechArticle'],
             headline: 'Knockout Mouse Models: Conventional, Conditional, Tissue Specific, and Inducible',
-            description: 'Comprehensive guide to custom knockout mouse model generation from ingenious targeting laboratory, a U.S. based custom mouse model company since 1998 with a 100% germline transmission guarantee.',
+            description: 'Comprehensive guide to generated knockout mouse model generation from ingenious targeting laboratory, a U.S. based mouse model generation company since 1998 with a 100% germline transmission guarantee.',
             url: 'https://www.genetargeting.com/knockout-mouse-models/',
             mainEntityOfPage: 'https://www.genetargeting.com/knockout-mouse-models/',
             inLanguage: 'en-US',
@@ -1004,8 +995,8 @@ export default function KnockoutMouseModelsPage() {
                 url: 'https://www.genetargeting.com/images/logo.png',
               },
             },
-            about: ['Knockout mouse models', 'Conditional knockout', 'Cre/loxP', 'Gene targeting', 'Custom mouse models'],
-            keywords: 'knockout mouse models, conditional knockout, conventional knockout, tissue specific knockout, custom mouse model company, ingenious targeting laboratory, iTL',
+            about: ['Knockout mouse models', 'Conditional knockout', 'Cre/loxP', 'Gene targeting', 'Mouse model generation'],
+            keywords: 'knockout mouse models, conditional knockout, conventional knockout, tissue specific knockout, mouse model generation company, ingenious targeting laboratory, iTL',
           }),
         }}
       />

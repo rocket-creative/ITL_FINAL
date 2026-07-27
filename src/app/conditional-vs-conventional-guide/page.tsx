@@ -19,16 +19,16 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Comparison Guide",
   title: "Conditional vs Conventional Knockout",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals.",
   description: "Both conditional and conventional knockouts create loss of function alleles, but they differ fundamentally in how and when gene inactivation occurs. This guide provides a direct comparison to help you choose the right approach for your project."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Comparison Table Data
@@ -56,7 +56,7 @@ const conventionalData = {
   ],
   advantages: [
     "Simpler allele design",
-    "Shorter project timeline",
+    "Lower project complexity",
     "Lower project cost",
     "No Cre driver breeding required",
     "Complete gene inactivation guaranteed"
@@ -90,7 +90,7 @@ const conditionalData = {
     "Can generate both null and conditional alleles (derivative system)"
   ],
   considerations: [
-    "Longer project timeline",
+    "Additional breeding required",
     "Higher initial investment",
     "Requires Cre driver line for experiments",
     "Additional breeding generation to introduce Cre",
@@ -337,7 +337,7 @@ export default function ConditionalVsConventionalGuidePage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link href="/knockout-strategy-guide" style={{

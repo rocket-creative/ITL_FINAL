@@ -46,7 +46,7 @@ const LOOKUP_MAP: Record<string, CatalogLookup> = {
     eyebrow: 'Catalog Models',
     headline: 'Point mutation knockins. Check live colonies before you plan a build.',
     subline:
-      'Hundreds of disease variant knockin models are in stock. Search by gene or browse popular hits. Need a unique variant? We design custom knockins.',
+      'Hundreds of disease variant knockin models are in stock. Search by gene or browse popular hits. Need a unique variant? We design generated knockins.',
     searchHref: '/all-catalog-mouse-models/?q=point+mutation',
     searchLabel: 'Search Point Mutation Models',
     genes: [

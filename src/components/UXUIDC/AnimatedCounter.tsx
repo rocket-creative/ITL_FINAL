@@ -4,10 +4,10 @@
  * |UXUIDC| Animated Counter Component  
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  * Displays stats with CSS fade-in animation
- * Used for stats like "2,800+ Custom Projects", "800+ Publications"
+ * Used for stats like "2,800+ Models Generated", "800+ Publications"
  *
  * Supports two usage patterns:
- * 1. Array mode: <UXUIDCAnimatedCounter stats={[{ number: "2,800+", label: "Custom Projects" }]} />
+ * 1. Array mode: <UXUIDCAnimatedCounter stats={[{ number: "2,800+", label: "Model Generation Projects" }]} />
  * 2. Single value mode: <UXUIDCAnimatedCounter end={2800} suffix="+" />
  */
 

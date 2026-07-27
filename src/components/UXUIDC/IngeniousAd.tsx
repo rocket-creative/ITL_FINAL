@@ -23,7 +23,7 @@ interface IngeniousAdProps {
   relatedPage: string;
   /** Article category for contextual headline */
   category: string;
-  /** Optional custom headline override */
+  /** Optional generated headline override */
   headline?: string;
   /** Catalog browse/search URL for secondary CTA */
   catalogCtaHref?: string;
@@ -111,7 +111,7 @@ export default function IngeniousAd({
           marginBottom: '18px',
         }}
       >
-        Thousands of research ready strains ship from live colonies. Same team designs custom knockouts, knockins, and humanized models when your allele is not on the shelf.
+        Thousands of research ready strains ship from live colonies. Same team designs generated knockouts, knockins, and humanized models when your allele is not on the shelf.
       </p>
       <div
         style={{
@@ -158,7 +158,7 @@ export default function IngeniousAd({
             e.currentTarget.style.boxShadow = 'none';
           }}
         >
-          Request Custom Quote
+          Request a Quote
           <span aria-hidden>→</span>
         </Link>
       </div>
@@ -172,7 +172,7 @@ export default function IngeniousAd({
             textUnderlineOffset: '3px',
           }}
         >
-          Explore custom model services
+          Explore model generation services
         </Link>
         <span aria-hidden> →</span>
       </p>

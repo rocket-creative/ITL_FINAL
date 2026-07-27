@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * H11 Safe Harbor Locus Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -21,21 +21,21 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "H11 Safe Harbor Locus",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 custom mouse models incorporating safe harbor locus integration, with numerous projects leveraging the H11 locus specifically for applications requiring exceptional insert capacity and stable transgene expression. The H11 locus represents a specialized genomic integration site optimized for large regulatory element preservation and complex genetic constructs exceeding 100 kilobases.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse model generation incorporating safe harbor locus integration, with numerous projects leveraging the H11 locus specifically for applications requiring exceptional insert capacity and stable transgene expression. The H11 locus represents a specialized genomic integration site optimized for large regulatory element preservation and complex genetic constructs exceeding 100 kilobases.",
   description: "H11 safe harbor targeting enables insertion of large genomic fragments with minimal position effects, making it ideal for studies where complete regulatory elements, multiple transgenes, or extensive BAC inserts are essential for recapitulating endogenous expression patterns. This locus has become increasingly valuable as research emphasis shifts toward more physiologically relevant transgenic models."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
 const faqData = [
-  { question: "What is the maximum insert size practical for H11 targeting?", answer: "H11 safe harbor integration successfully accommodates BAC inserts spanning 100 to 200 kilobases. Inserts exceeding 200 kilobases face declining insertion efficiency and increasing likelihood of internal rearrangement. Custom vector engineering may permit larger inserts for specific applications, though standard protocols optimize for 50 to 150 kilobase inserts." },
+  { question: "What is the maximum insert size practical for H11 targeting?", answer: "H11 safe harbor integration successfully accommodates BAC inserts spanning 100 to 200 kilobases. Inserts exceeding 200 kilobases face declining insertion efficiency and increasing likelihood of internal rearrangement. Generated vector engineering may permit larger inserts for specific applications, though standard protocols optimize for 50 to 150 kilobase inserts." },
   { question: "How does H11 expression compare to random integration?", answer: "H11 expression demonstrates substantially lower variability between independent integration events than random insertion approaches. Most H11 lines achieve expression levels within 2 to 3 fold variation, whereas random insertion yields 10 to 100 fold expression variation. This consistency emerges from H11's location in a permissive chromatin region." },
   { question: "Can H11 safe harbor inserts be removed with Flp mediated excision?", answer: "Selection cassette removal via FRT site excision is technically feasible at H11, though logistically complex for large inserts. Flp transgenic cross typically requires multiple generations to achieve complete cassette excision. Many projects retain selection cassettes rather than pursuing removal, particularly when cassettes do not adversely affect transgene expression." },
   { question: "How does H11 compare to ROSA26 for reporter gene studies?", answer: "ROSA26 is preferred for most reporter applications due to higher baseline expression and more extensive literature precedent. H11 becomes advantageous when insert size exceeds ROSA26's practical capacity or when tissue distribution differs from ROSA26 characteristics. H11 targeting costs comparable to ROSA26 despite increased complexity." },
@@ -145,7 +145,7 @@ export default function H11SafeHarborPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 

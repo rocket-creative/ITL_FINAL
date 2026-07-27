@@ -16,8 +16,8 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   '/': {
     slug: 'homepage',
     line1: '14,774+ Catalog Mouse Models',
-    line2: 'Catalog First | Custom When Ready',
-    line3: '2,800+ Custom Projects | 800+ Publications',
+    line2: 'Catalog First | Generate When Ready',
+    line3: '2,800+ Models Generated | 800+ Publications',
     tier: 1,
   },
   '/about-itl': {
@@ -29,14 +29,14 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   },
   '/request-quote': {
     slug: 'request-quote',
-    line1: 'Start Your Custom Mouse Model Project',
+    line1: 'Start Your Mouse Model Generation Project',
     line2: 'Expert Scientific Consultation',
     line3: 'Learn More',
     tier: 1,
   },
   '/why-choose-itl': {
     slug: 'why-choose-itl',
-    line1: '100% Success Rate',
+    line1: '900+ Laboratories Served',
     line2: '800+ Publications',
     line3: 'Guaranteed Germline',
     tier: 1,
@@ -51,7 +51,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   '/contact': {
     slug: 'contact',
     line1: 'Talk to PhD Scientists',
-    line2: 'Custom Mouse Model Experts',
+    line2: 'Mouse Model Generation Experts',
     line3: 'Learn More',
     tier: 1,
   },
@@ -72,7 +72,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   '/quality-control': {
     slug: 'quality-control',
     line1: 'Rigorous QC Protocols',
-    line2: 'ES Cell Validation',
+    line2: 'Pre Germline Validation',
     line3: 'Germline Verification',
     tier: 2,
   },
@@ -105,7 +105,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
     tier: 3,
   },
   '/custom-mouse-models': {
-    slug: 'custom-mouse-models',
+    slug: 'generated-mouse-models',
     line1: 'Knockout, Knockin & Humanized Mice',
     line2: 'Expert Gene Targeting',
     line3: 'Learn More',
@@ -778,7 +778,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   },
   '/mouse-model-services': {
     slug: 'mouse-model-services',
-    line1: 'Custom Mouse Model Services',
+    line1: 'Mouse Model Generation Services',
     line2: 'Expert Generation & Support',
     line3: 'Learn More',
     tier: 2,
@@ -834,7 +834,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   },
   '/rat-models': {
     slug: 'rat-models',
-    line1: 'Custom Rat Models',
+    line1: 'Generated Rat Models',
     line2: 'Knockout, Knockin & Transgenic',
     line3: 'Learn More',
     tier: 3,
@@ -959,22 +959,22 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
     tier: 2,
   },
   '/custom-projects': {
-    slug: 'custom-projects',
-    line1: 'Custom Projects',
+    slug: 'generated-projects',
+    line1: 'Model Generation Projects',
     line2: 'Tailored Mouse Model Solutions',
     line3: 'Learn More',
     tier: 2,
   },
   '/custom-rabbit-models': {
-    slug: 'custom-rabbit-models',
-    line1: 'Custom Rabbit Models',
+    slug: 'generated-rabbit-models',
+    line1: 'Rabbit Model Generation',
     line2: 'Knockout & Knockin Rabbits',
     line3: 'Learn More',
     tier: 3,
   },
   '/custom-animal-models': {
-    slug: 'custom-animal-models',
-    line1: 'Custom Animal Models',
+    slug: 'generated-animal-models',
+    line1: 'Animal Model Generation',
     line2: 'Mice, Rats & Rabbits',
     line3: 'Learn More',
     tier: 3,
@@ -996,7 +996,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   '/start-your-project': {
     slug: 'start-your-project',
     line1: 'Start Your Project',
-    line2: 'Custom Mouse Model Quote',
+    line2: 'Mouse Model Generation Quote',
     line3: 'Learn More',
     tier: 2,
   },

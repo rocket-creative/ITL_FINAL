@@ -48,10 +48,10 @@ export const metadata: Metadata = {
     description: ROOT_CATALOG_FIRST_META.description,
     images: [
       {
-        url: "https://www.genetargeting.com/api/og?line1=14%2C774%2B%20Catalog%20Mouse%20Models&line2=Catalog%20First%20%7C%20Custom%20When%20Ready&line3=2%2C800%2B%20Custom%20Projects%20%7C%20800%2B%20Publications",
+        url: "https://www.genetargeting.com/api/og?line1=Mouse%20Model%20Generation%20%26%20Catalog&line2=Generate%20Models%20%7C%20Study%20Ready%20Catalog&line3=2%2C800%2B%20Projects%20%7C%20800%2B%20Publications",
         width: 1200,
         height: 630,
-        alt: "Catalog and Custom Mouse Models | ingenious targeting laboratory",
+        alt: "Mouse Model Generation and Catalog | ingenious targeting laboratory",
       },
     ],
   },
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${ROOT_CATALOG_FIRST_META.title} | ingenious targeting laboratory`,
     description: ROOT_CATALOG_FIRST_META.description,
-    images: ["https://www.genetargeting.com/api/og?line1=14%2C774%2B%20Catalog%20Mouse%20Models&line2=Catalog%20First%20%7C%20Custom%20When%20Ready&line3=2%2C800%2B%20Custom%20Projects%20%7C%20800%2B%20Publications"],
+    images: ["https://www.genetargeting.com/api/og?line1=Mouse%20Model%20Generation%20%26%20Catalog&line2=Generate%20Models%20%7C%20Study%20Ready%20Catalog&line3=2%2C800%2B%20Projects%20%7C%20800%2B%20Publications"],
   },
 };
 
@@ -86,6 +86,8 @@ export default function RootLayout({
                   '@id': 'https://www.genetargeting.com/#organization',
                   name: 'ingenious targeting laboratory',
                   url: 'https://www.genetargeting.com',
+                  description:
+                    'Mouse model generation and catalog provider. Genetically engineered knockout, knockin, and humanized models plus study ready catalog strains.',
                 },
                 {
                   '@type': 'WebSite',

@@ -60,8 +60,8 @@ const blogEntries: SiteIndexEntry[] = [
 ];
 
 export const siteIndex: SiteIndexEntry[] = [
-  // Custom Mouse Models
-  { title: 'Custom mouse models', description: 'Design and generate custom genetically modified mouse models tailored to your research needs.', url: '/custom-mouse-models', category: 'Services' },
+  // Mouse Model Generation
+  { title: 'Mouse model generation', description: 'Design and generate genetically modified mouse models for your research needs.', url: '/custom-mouse-models', category: 'Services' },
   { title: 'Knockout mouse models', description: 'Create knockout mice with complete gene deletion for functional studies and phenotyping.', url: '/knockout-mouse-models', category: 'Services' },
   { title: 'Conditional knockout mouse models', description: 'Tissue specific and temporally controlled gene deletion using Cre lox technology.', url: '/conditional-knockout-mouse-models', category: 'Services', keywords: ['floxed', 'Cre conditional', 'CKO', 'loxP', 'conditional KO', 'flox', 'Cre-lox'] as const },
   { title: 'Conventional knockout mouse models', description: 'Whole body gene knockout mice for studying gene function across all tissues.', url: '/conventional-knockout-mouse-models', category: 'Services', keywords: ['null allele', 'global knockout', 'whole body knockout'] as const },
@@ -82,7 +82,7 @@ export const siteIndex: SiteIndexEntry[] = [
   { title: 'Cardiovascular mouse models', description: 'Models for heart disease and vascular research.', url: '/cardiovascular-mouse-models', category: 'Therapeutic Areas' },
   { title: 'Immunology mouse models', description: 'Models for studying immune system function and autoimmune disease.', url: '/immunology-mouse-models', category: 'Therapeutic Areas' },
   { title: 'Metabolic disease mouse models', description: 'Models for diabetes, obesity, and metabolic syndrome research.', url: '/metabolic-disease-mouse-models', category: 'Therapeutic Areas' },
-  { title: 'Rare disease mouse models', description: 'Custom models for orphan and rare disease research.', url: '/rare-disease-mouse-models', category: 'Therapeutic Areas' },
+  { title: 'Rare disease mouse models', description: 'Model generation for orphan and rare disease research.', url: '/rare-disease-mouse-models', category: 'Therapeutic Areas' },
   // Catalog
   { title: 'Catalog mouse models', description: 'Ready made mouse models available for immediate order.', url: '/catalog-mouse-models', category: 'Catalog' },
   { title: 'Humanized immune checkpoint mice', description: 'Pre made humanized PD1, PDL1, CTLA4, and other checkpoint models.', url: '/humanized-immune-checkpoint-mice', category: 'Catalog' },
@@ -111,9 +111,9 @@ export const siteIndex: SiteIndexEntry[] = [
   { title: 'All FAQs', description: 'Frequently asked questions about mouse models.', url: '/faq', category: 'Resources' },
   // Company
   { title: 'About ingenious targeting laboratory', description: 'Learn about ingenious targeting laboratory and our 26+ years of experience.', url: '/about-itl', category: 'Company' },
-  { title: 'Why choose ingenious targeting laboratory', description: 'Discover why researchers trust ingenious targeting laboratory for custom mouse model generation.', url: '/why-choose-itl', category: 'Company' },
+  { title: 'Why choose ingenious targeting laboratory', description: 'Discover why researchers trust ingenious targeting laboratory for mouse model generation.', url: '/why-choose-itl', category: 'Company' },
   { title: 'Contact', description: 'Get in touch with our team for project inquiries.', url: '/contact', category: 'Company' },
-  { title: 'Request a quote', description: 'Submit a project inquiry and receive a custom quote.', url: '/request-quote', category: 'Company' },
+  { title: 'Request a quote', description: 'Submit a project inquiry and receive a quote.', url: '/request-quote', category: 'Company' },
   { title: 'Pricing overview', description: 'Information about pricing for mouse model generation services.', url: '/pricing-overview', category: 'Company' },
   { title: 'Order catalog models', description: 'Order ready made mouse models from our catalog.', url: '/order-catalog-models', category: 'Company' },
   { title: 'Schedule meeting', description: 'Schedule a call with our team.', url: '/schedule-meeting', category: 'Company' },
@@ -165,7 +165,7 @@ export const siteIndex: SiteIndexEntry[] = [
   { title: 'Ophthalmology mouse models', description: 'Mouse models for eye disease and vision research.', url: '/ophthalmology-mouse-models', category: 'Therapeutic Areas' },
   { title: 'Allergy asthma mouse models', description: 'Models for allergic disease and asthma research.', url: '/allergy-asthma-mouse-models', category: 'Therapeutic Areas' },
   { title: 'Preclinical services', description: 'Preclinical study support and CRO services.', url: '/preclinical-services', category: 'Support Services' },
-  { title: 'Mouse model services', description: 'Full range of custom mouse model generation services.', url: '/mouse-model-services', category: 'Services' },
+  { title: 'Mouse model services', description: 'Full range of mouse model generation services.', url: '/mouse-model-services', category: 'Services' },
   { title: 'BAC to BAC large scale targeting', description: 'Large scale gene targeting using BAC vectors.', url: '/bac-to-bac-large-scale-targeting', category: 'Technology' },
   { title: 'CDNA knockin', description: 'CDNA knockin for gene expression studies.', url: '/cdna-knockin', category: 'Services' },
   { title: 'Gene replacement', description: 'Gene replacement and humanization strategies.', url: '/gene-replacement', category: 'Services' },

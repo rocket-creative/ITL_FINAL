@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.355Z"
 
 **Url: /cdna-knockin**
 
-**Meta Description: Custom cDNA knockin mouse models for gene expression studies. Insert complementary DNA sequences into specific genomic loci.**
+**Meta Description: Generated cDNA knockin mouse models for gene expression studies. Insert complementary DNA sequences into specific genomic loci.**
 
 **Primary Keyword: cdna knockin**
 
@@ -254,8 +254,7 @@ Compare heterozygotes to assess whether one knockin allele provides sufficient e
 
 ## Related Resources
 
-- (/model-generation-timeline)
-- (/knockout-strategy-guide)
+- - (/knockout-strategy-guide)
 
 ## Frequently Asked Questions
 

@@ -9,7 +9,7 @@ author: "ingenious"
 
 ## Congratulations to our Clients
 
-Congratulations to our Clients Dr. Douglas Gould from UCSF School of Medicine, Dr. Ichizo Nishino from National Institute of Neuroscience, Japan, & Dr. Jian-xing Ma from University of Oklahoma Health Sciences Center. Their research and publications included the use of conditional knockout models, and point mutation knockin mouse models from ingenious. They now are among the hundreds of labs who have published their research with custom mouse models from ingenious.
+Congratulations to our Clients Dr. Douglas Gould from UCSF School of Medicine, Dr. Ichizo Nishino from National Institute of Neuroscience, Japan, & Dr. Jian-xing Ma from University of Oklahoma Health Sciences Center. Their research and publications included the use of conditional knockout models, and point mutation knockin mouse models from ingenious. They now are among the hundreds of labs who have published their research with mouse model generation from ingenious.
 
 ### Mouse Models from ingenious
 

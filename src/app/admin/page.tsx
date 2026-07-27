@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Admin Analytics Dashboard
  * @description Main dashboard showing website analytics and metrics
  */
-
-'use client';
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';

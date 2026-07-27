@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:04.848Z"
 
 **Url: /lupus-mouse-models**
 
-**Meta Description: Custom mouse models for systemic lupus erythematosus research. Study autoantibody production, immune complex disease, and lupus nephritis. Since 1998.**
+**Meta Description: Mouse model generation for systemic lupus erythematosus research. Study autoantibody production, immune complex disease, and lupus nephritis. Since 1998.**
 
 **Primary Keyword: lupus mouse model**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.848Z"
 
 # Lupus Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported systemic lupus erythematosus research with custom knockout, knockin, and conditional mouse models. Our gene targeting expertise enables study of the genetic and immunological mechanisms driving lupus pathogenesis, autoantibody production, and organ damage.
+Since 1998, Ingenious Targeting Laboratory has supported systemic lupus erythematosus research with generated knockout, knockin, and conditional mouse models. Our gene targeting expertise enables study of the genetic and immunological mechanisms driving lupus pathogenesis, autoantibody production, and organ damage.
 
 Whether you are investigating novel lupus susceptibility genes, testing therapeutic interventions, or studying specific aspects of lupus immunopathology, Ingenious Targeting Laboratory provides models optimized for your SLE research goals.
 
@@ -38,7 +38,7 @@ Autoantibodies form immune complexes that deposit in kidneys, skin, and other ti
 
 Kidney involvement is a major cause of morbidity in lupus patients. Mouse models that develop glomerulonephritis enable study of renal immunopathology and testing of nephroprotective therapeutic strategies.
 
-## Custom Model Approaches for Lupus Research
+## Model Generation Approaches for Lupus Research
 
 ### Susceptibility Gene Knockouts
 
@@ -82,7 +82,7 @@ Backcrossing onto defined genetic backgrounds ensures reproducible phenotypes an
 
 ### Disease Mechanism Studies
 
-Custom models enable investigation of specific genes and pathways in lupus pathogenesis, from initial tolerance breakdown through autoantibody production to organ damage.
+Model generation enable investigation of specific genes and pathways in lupus pathogenesis, from initial tolerance breakdown through autoantibody production to organ damage.
 
 ### Therapeutic Target Validation
 
@@ -106,7 +106,7 @@ Reporter knockins and tissue specific models support identification of biomarker
 
 ## Selected Publications
 
-Custom models from Ingenious Targeting Laboratory have contributed to immunology and autoimmune disease research published in leading journals.
+Model generation from Ingenious Targeting Laboratory have contributed to immunology and autoimmune disease research published in leading journals.
 
 (/publications)
 
@@ -144,7 +144,7 @@ Lupus phenotyping includes anti-nuclear antibody (ANA) titers, anti-dsDNA antibo
 
 ## Start Your Project
 
-Ready to discuss custom mouse models for your lupus research? Our scientific team provides complimentary consultation to help you design the optimal model for your SLE research goals.
+Ready to discuss mouse model generation for your lupus research? Our scientific team provides complimentary consultation to help you design the optimal model for your SLE research goals.
 
 (/request-quote)
 

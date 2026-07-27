@@ -6,7 +6,7 @@
  * ```ts
  * export const metadata = generateMetadata({
  *   title: 'Knockout Mouse Models',
- *   description: 'Custom knockout mouse models for research...',
+ *   description: 'Generated knockout mouse models for research...',
  *   path: '/knockout-mouse-models',
  * });
  * ```

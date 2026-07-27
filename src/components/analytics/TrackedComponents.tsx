@@ -1,11 +1,11 @@
+'use client';
+
 /**
  * Tracked Component Examples
  * @version 1.0.0
  * @description Pre-built components with analytics tracking
  * Use these as examples or directly in your pages
  */
-
-'use client';
 
 import { useCallback, ReactNode } from 'react';
 import Link from 'next/link';

@@ -30,13 +30,13 @@ const heroData = {
   badge: "Publications",
   title: "Groundbreaking Publications in Genetic Research",
   intro: "ingenious targeting laboratory generated mouse models have contributed to more than 800 peer-reviewed publications across all major therapeutic areas.",
-  description: "Our custom knockout, knockin, and humanized mouse models have supported groundbreaking research published in Nature, Cell, Science, and specialty journals worldwide."
+  description: "Our generated knockout, knockin, and humanized mouse models have supported groundbreaking research published in Nature, Cell, Science, and specialty journals worldwide."
 };
 
 // Stats Data
 const statsData = [
   { value: 800, suffix: "+", label: "Publications" },
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "USA-Based Work" }
 ];
@@ -55,7 +55,7 @@ const testimonial = {
 // CTA Data
 const ctaData = makeFooterCta(
   'Partner with iTL',
-  'ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a custom line.',
+  'ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a generated line.',
   'publications',
 );
 
@@ -223,7 +223,7 @@ export default function PublicationsPage() {
                 fontWeight: 600,
                 textDecoration: 'none'
               }}>
-                Request Custom Quote
+                Request a Quote
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
               <Link href="/catalog-mouse-models" style={{

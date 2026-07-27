@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Custom Knockout Mouse Models | Gene Deletion',
-  description: 'Design custom knockout mice with ES cell or CRISPR. 26+ years, 2,800+ custom projects, 800+ publications in Nature/Cell/Science. Free consultation.',
+  title: 'Generated Knockout Mouse Models | Gene Deletion',
+  description: 'Design generated knockout mice with gene targeting or CRISPR. 26+ years, 2,800+ models generated, 800+ publications in Nature/Cell/Science. Free consultation.',
   path: '/knockout-mouse-models',
 });
 
@@ -15,7 +15,7 @@ export const metadata = generateMetadata({
 export const breadcrumbSchema = generateBreadcrumbs({
   items: [
     { name: 'Home', path: '/' },
-    { name: 'Custom Models', path: '/custom-mouse-models' },
+    { name: 'Model Generation', path: '/custom-mouse-models' },
     { name: 'Knockout Mouse Models', path: '/knockout-mouse-models' },
   ],
 });

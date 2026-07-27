@@ -22,10 +22,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Allele Design Components
@@ -138,7 +138,7 @@ const faqData = [
   },
   {
     question: "What is involved in generating a conditional knockin model?",
-    answer: "Custom model generation timelines vary based on project complexity and specific requirements. Contact us for a detailed timeline estimate tailored to your conditional knockin project."
+    answer: "Model generation includes targeting construct design, allele verification, founder generation, and germline transmission. Contact us to discuss your conditional knockin project."
   }
 ];
 
@@ -241,7 +241,7 @@ export default function ConditionalKnockinMicePage() {
                     fontWeight: 500
                   }}
                 >
-                  <span>Request Custom Quote</span>
+                  <span>Request a Quote</span>
                   <span>→</span>
                 </Link>
                 <Link 
@@ -603,7 +603,7 @@ export default function ConditionalKnockinMicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Conditional Knockin Mice', path: '/conditional-knockin-mice' },
         ]}
       />

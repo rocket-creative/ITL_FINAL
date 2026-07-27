@@ -64,11 +64,11 @@ export default function QualityControlPage() {
             {
               icon: IconDNA,
               title: 'Targeting Vector Validation',
-              description: 'Complete sequence verification of all vector components including 5\' and 3\' homology arms (minimum 3-5kb each), selection cassettes, LoxP sites, and intervening sequences. Restriction digest mapping confirms expected fragment patterns. All vectors undergo Sanger sequencing across critical regions before ES cell targeting.',
+              description: 'Complete sequence verification of all vector components including 5\' and 3\' homology arms (minimum 3-5kb each), selection cassettes, LoxP sites, and intervening sequences. Restriction digest mapping confirms expected fragment patterns. All vectors undergo Sanger sequencing across critical regions before gene targeting.',
             },
             {
               icon: IconTarget,
-              title: 'ES Cell Screening & Verification',
+              title: 'Clone Screening & Verification',
               description: 'Southern blot analysis confirms correct integration at target locus with proper 5\' and 3\' junctions. PCR screening identifies positive clones, followed by long-range PCR across entire targeted region. Karyotype analysis ensures normal chromosome number and structure. Only clones passing all QC criteria advance to blastocyst injection.',
             },
             {

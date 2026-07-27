@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.019Z"
 
 **Url: /nash-mash-mouse-models**
 
-**Meta Description: Custom NASH and MASH mouse models for fatty liver disease research. Study non alcoholic steatohepatitis and metabolic liver disease.**
+**Meta Description: Generated NASH and MASH mouse models for fatty liver disease research. Study non alcoholic steatohepatitis and metabolic liver disease.**
 
 **Primary Keyword: NASH mouse models**
 
@@ -16,7 +16,7 @@ extracted: "2026-01-09T17:03:05.019Z"
 
 # NASH Mouse Models
 
-Since 1998, ingenious targeting laboratory has supported metabolic liver disease research with custom mouse models enabling mechanistic studies of hepatic steatosis, steatohepatitis, and fibrosis progression underlying the global epidemic of metabolic dysfunction associated fatty liver disease.
+Since 1998, ingenious targeting laboratory has supported metabolic liver disease research with mouse model generation enabling mechanistic studies of hepatic steatosis, steatohepatitis, and fibrosis progression underlying the global epidemic of metabolic dysfunction associated fatty liver disease.
 
 NASH MASH mouse models provide essential platforms for investigating the molecular pathways driving progression from simple steatosis to steatohepatitis and cirrhosis, testing hypotheses about lipotoxicity and inflammation, and developing therapies for this increasingly prevalent condition.
 
@@ -380,8 +380,5 @@ Hepatocyte-specific deletion uses Albumin-Cre for lipid metabolism studies. Macr
 
 C57BL/6 is the standard background for MASH studies due to susceptibility to diet-induced obesity and steatosis. Substrains differ: C57BL/6J carries Nnt mutation affecting glucose metabolism. C57BL/6N is commonly used and well-characterized. Both work, but consistency within a study is critical.
 
-**How long does it take to generate a MASH mouse model?**
-
-Standard custom model generation takes 26-36 weeks from project initiation to delivery of germline-transmitted founders. Conditional approaches for cell-type-specific studies follow the same timeline. Pre-germline characterization provides early validation of targeting before mouse generation.
 
 (/request-quote)

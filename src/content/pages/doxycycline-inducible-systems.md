@@ -266,7 +266,7 @@ Standard approach requires two transgenic elements:
 
 ## ITL's Tet System Services
 
-In need of a custom inducible mouse model? Contact us to discuss your specific project details.
+In need of a generated inducible mouse model? Contact us to discuss your specific project details.
 
 ## What Researchers Say
 

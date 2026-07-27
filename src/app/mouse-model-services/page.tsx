@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -10,22 +10,22 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup } from '@/components/UXUIDC';
+import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
-  badge: "Custom Gene Targeting",
-  title: "Custom Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 custom gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.",
+  badge: "Generated Gene Targeting",
+  title: "Mouse Model Generation",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.",
   description: "Whether you need a simple knockout to eliminate gene function, a conditional allele for tissue specific studies, a knockin model to introduce precise modifications, or a humanized mouse for translational research, ingenious targeting laboratory provides the scientific expertise and technical infrastructure to bring your project from concept to study ready animals."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Mouse Model Types
@@ -105,11 +105,11 @@ const additionalServices = [
   },
   {
     title: "Targeting Vector Design",
-    description: "Our scientific team designs and constructs targeting vectors tailored to your specific research requirements.",
+    description: "Our scientific team designs and constructs targeting vectors for your specific research requirements.",
     items: [
       "Plasmid based vectors for standard targeting projects",
       "BAC based vectors for large scale targeting (up to 200kb)",
-      "Custom cassette configurations for complex allele designs",
+      "Generated cassette configurations for complex allele designs",
       "Validated vector backbones with proven targeting efficiency"
     ]
   },
@@ -146,22 +146,22 @@ const relatedServices = [
 const modelSelectionGuides = [
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
-  { title: "Request Custom Quote", href: "/request-quote" }
+  { title: "Request a Quote", href: "/request-quote" }
 ];
 
 // FAQ Data
 const faqData = [
   {
     question: "Can ingenious targeting laboratory provide partial services if I already have reagents?",
-    answer: "Yes. Partial service options are available for researchers with existing targeting vectors, ES cells, or other reagents. Services include ES cell targeting only, microinjection only, or germline transmission breeding. Contact us to discuss your specific requirements and receive a customized quote."
+    answer: "Yes. Partial service options are available for researchers with existing targeting vectors, ES cells, or other reagents. Services include ES cell targeting only, microinjection only, or germline transmission breeding. Contact us to discuss your specific requirements and receive a project quote."
   },
   {
-    question: "What strain backgrounds are available for custom models?",
+    question: "What strain backgrounds are available for model generation?",
     answer: "ingenious targeting laboratory offers C57BL/6, BALB/c, and 129 strain ES cells for targeted models. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological and metabolic studies. Strain selection depends on your research requirements and downstream breeding plans."
   },
   {
-    question: "How long does it take to generate a custom mouse model?",
-    answer: "Custom model generation timelines depend on project complexity, model type, and specific requirements. With ongoing advances in gene editing technology, timelines continue to improve. Expedited options may be available for certain project types. Contact us for current timeline estimates tailored to your project."
+    question: "How long does it take to generate a generated mouse model?",
+    answer: "Model generation timelines depend on project complexity, model type, and specific requirements. With ongoing advances in gene editing technology, timelines continue to improve. Expedited options may be available for certain project types. Contact us for current timeline estimates for your project."
   },
   {
     question: "What is included in the project consultation?",
@@ -267,7 +267,7 @@ export default function MouseModelServicesPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -450,7 +450,7 @@ export default function MouseModelServicesPage() {
               Strain Background Options
             </h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '25px' }}>
-              ingenious targeting laboratory generates custom models on the genetic background most appropriate for your research goals:
+              ingenious targeting laboratory generates model generation on the genetic background most appropriate for your research goals:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -606,16 +606,6 @@ export default function MouseModelServicesPage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="mouse-model-services" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -625,13 +615,6 @@ export default function MouseModelServicesPage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="Mouse Model Service Insights" />
           </div>
         </section>
 
@@ -683,6 +666,10 @@ export default function MouseModelServicesPage() {
         </section>
       </main>
       
+      <StandardPageCtaStack
+        slug="mouse-model-services"
+        labSignalsTitle="Mouse Model Service Insights"
+      />
       <UXUIDCFooter />
             
       {/* Schema.org Structured Data */}
@@ -698,13 +685,13 @@ export default function MouseModelServicesPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Custom Mouse Models",
+            "name": "Mouse Model Generation",
             "provider": {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Custom mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,800+ custom projects since 1998.",
-            "serviceType": "Custom Mouse Model Generation"
+            "description": "Mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,800+ models generated since 1998.",
+            "serviceType": "Mouse Model Generation"
           })
         }}
       />

@@ -20,7 +20,7 @@ With the advancement of modern techniques and technologies used for genetic mani
 
 What are humanized mice? To put it simply, they are animal models used as a type of surrogate of various parts of human biology, such as the human immune system. Some humanized mice may only have human cells, while others might share many genetic and physiologic properties with humans. Because the mouse genome is close in similarity to that of humans, there are many components of mouse biology and genetics that can easily be manipulated to faithfully mimic human biological qualities.
 
-[Explore Custom Humanized Mice](/humanized-mouse-models/)
+[Explore Generated Humanized Mice](/humanized-mouse-models/)
 
 ### How Are Humanized Mice Made?
 

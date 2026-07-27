@@ -1,14 +1,14 @@
+'use client';
+
 /**
  * |UXUIDC| Trust Badges - Simplified
  * @version 3.0.0 - Removed GSAP, using CSS animations only
  */
 
-'use client';
-
 export default function UXUIDCTrustBadges() {
   const stats = [
     { value: '26+', label: 'Years', isNumber: false },
-    { value: '2,800+', label: 'Custom Projects', isNumber: false },
+    { value: '2,800+', label: 'Model Generation Projects', isNumber: false },
     { value: '800+', label: 'Publications', isNumber: false },
   ];
 

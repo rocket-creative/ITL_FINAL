@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Mouse Models by Therapeutic Area',
-  description: 'Custom mouse models for oncology, neuroscience, immunology, cardiovascular, and metabolic disease research. Disease specific expertise.',
+  description: 'Mouse model generation for oncology, neuroscience, immunology, cardiovascular, and metabolic disease research. Disease specific expertise.',
   path: '/therapeutic-areas',
 });
 

@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Trusted by Researchers Worldwide Section - from homepage.md
  * @version 2.0.0 - Removed GSAP, using CSS animations only
  */
-
-'use client';
 
 import Link from 'next/link';
 
@@ -42,7 +42,7 @@ export default function TrustedBySection() {
             marginBottom: '20px',
           }}
         >
-          Since 1998 · 2,800+ Custom Projects Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell
+          Since 1998 · 2,800+ Models Generated Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell
         </p>
         <p
           className="animate-initial animate-fade-in-up animate-delay-300"
@@ -55,7 +55,7 @@ export default function TrustedBySection() {
             marginBottom: '25px',
           }}
         >
-          ingenious targeting laboratory has generated custom mouse models for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.
+          ingenious targeting laboratory has mouse model generation for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.
         </p>
         <Link
           href="/publications"

@@ -1,9 +1,9 @@
+'use client';
+
 /**
  * Knockout First Allele Design Page
  * Built from FINAL TEXT PAGES ALL content
  */
-
-'use client';
 
 import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
@@ -20,24 +20,24 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "Knockout First Allele Design",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 custom mouse models employing diverse targeting strategies, with hundreds specifically utilizing knockout first allele designs to maximize flexibility and enable generation of multiple derivative alleles from single ES cell clone. This strategic approach reduces overall project costs while providing researchers maximal options for downstream experimental applications.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse model generation employing diverse targeting strategies, with hundreds specifically utilizing knockout first allele designs to maximize flexibility and enable generation of multiple derivative alleles from single targeted allele. This strategic approach reduces overall project costs while providing researchers maximal options for downstream experimental applications.",
   description: "Knockout first alleles represent a paradigm shift in mouse model design, where a single initial targeting event creates an allele capable of generating conditional knockout, conventional knockout, and reporter knockin variations through complementary recombination strategies. This methodology has become standard practice for most modern mouse genetics projects where experimental questions might evolve during multiyear research programs."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // FAQ Data
 const faqData = [
   { question: "What is the difference between tm1a, tm1b, tm1c, and tm1d alleles?", answer: "tm1a represents the original targeted allele with selection cassette and reporter intact. tm1b and tm1c are FLP excised derivatives with selection markers removed. tm1d represents Cre mediated exon excision creating conventional null allele. tm1a is hypomorphic/null, tm1b and tm1c are conditional ready, and tm1d is conventional null." },
-  { question: "Can knockout first alleles be converted to reporter knockins?", answer: "Standard knockout first alleles with LacZ reporters provide reporter knockin function in tm1a configuration. More complex reporter combinations or fluorescent proteins require custom vector design beyond standard knockout first approach, though knockout first framework provides foundation for these applications." },
+  { question: "Can knockout first alleles be converted to reporter knockins?", answer: "Standard knockout first alleles with LacZ reporters provide reporter knockin function in tm1a configuration. More complex reporter combinations or fluorescent proteins require generated vector design beyond standard knockout first approach, though knockout first framework provides foundation for these applications." },
   { question: "How efficiently does FLP mediated cassette removal occur?", answer: "FLP transgenic crosses typically achieve 90 to 95% conversion of tm1a to tm1c in F1 generation. Incomplete conversion reflects low background FLP mediated recombination in wild type tissues. Researchers should screen F1 pups to identify fully converted tm1c mice." },
-  { question: "Can I use knockout first strategy for large inserts or BAC targeting?", answer: "Standard knockout first design works well for typical single exon targeting (5 to 10 kilobases). Large insert applications require custom vector engineering but can incorporate knockout first principles. BAC targeting typically employs alternative approaches due to vector size constraints, though some BAC projects incorporate LoxP sites for conditional design." },
+  { question: "Can I use knockout first strategy for large inserts or BAC targeting?", answer: "Standard knockout first design works well for typical single exon targeting (5 to 10 kilobases). Large insert applications require generated vector engineering but can incorporate knockout first principles. BAC targeting typically employs alternative approaches due to vector size constraints, though some BAC projects incorporate LoxP sites for conditional design." },
   { question: "Should I pursue tm1d conventional null or tissue specific knockout first?", answer: "Initial characterization often benefits from tm1d conventional null to establish gene essential role before tissue specific studies identify where function occurs. However, if embryonic lethality is anticipated, tissue specific tm1c lines may provide earlier research progress than null approaches." }
 ];
 
@@ -144,7 +144,7 @@ export default function KnockoutFirstAllelePage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request Custom Quote</span>
+                <span>Request a Quote</span>
                 <span>→</span>
               </Link>
               <Link 
@@ -291,7 +291,7 @@ export default function KnockoutFirstAllelePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Mouse Models', path: '/custom-mouse-models' },
+          { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Knockout First Allele', path: '/knockout-first-allele' },
         ]}
       />

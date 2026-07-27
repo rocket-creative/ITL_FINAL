@@ -15,16 +15,16 @@ import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconSettings }
 const heroData = {
   badge: "Technology Platform",
   title: "Gene Targeting Technology Overview",
-  intro: "Ingenious Targeting Laboratory has refined gene targeting technologies through more than 2,800 custom projects. Our methodology combines proven strategies with sophisticated allele designs to deliver mouse models with verified genetic modifications and predictable performance.",
+  intro: "Ingenious Targeting Laboratory has refined gene targeting technologies through more than 2,800 model generation projects. Our methodology combines proven strategies with sophisticated allele designs to deliver mouse models with verified genetic modifications and predictable performance.",
   description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. This overview introduces the core technologies that enable precise genetic modification in mice."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects" },
+  { value: 2800, suffix: "+", label: "Model Generation Projects" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 
@@ -95,7 +95,7 @@ const inducibleSystems = [
 const proprietaryTechnologies = [
   {
     title: "Rapid Rosa26™ Targeting",
-    description: "Accelerates transgenic model generation through established protocols and proven vector backbones, enabling shorter timelines with reliable, high quality models.",
+    description: "Accelerates transgenic model generation through established protocols and proven vector backbones, delivering reliable, high quality models.",
     href: "/rapid-rosa26-targeting"
   },
   {
@@ -261,7 +261,7 @@ export default function TechnologyOverviewPage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request Custom Quote</span>
+                    <span>Request a Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
@@ -584,7 +584,7 @@ export default function TechnologyOverviewPage() {
               "@type": "Organization",
               "name": "ingenious targeting laboratory"
             },
-            "description": "Comprehensive gene targeting technology platform. ES cell targeting, Cre lox, FLP FRT, inducible systems, and proprietary innovations since 1998.",
+            "description": "Comprehensive gene targeting technology platform. gene targeting, Cre lox, FLP FRT, inducible systems, and proprietary innovations since 1998.",
             "serviceType": "Gene Targeting Technology"
           })
         }}

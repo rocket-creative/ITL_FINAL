@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { useRef } from 'react';
 
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { BreedingSchemeArchitectCTA, LabSignalsSignup, UXUIDCServicePricingAnchor } from '@/components/UXUIDC';
+import { UXUIDCServicePricingAnchor, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -22,10 +22,10 @@ const heroData = {
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Custom Projects Completed" },
+  { value: 2800, suffix: "+", label: "Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
-  { value: 100, suffix: "%", label: "Success Rate" }
+  { value: 900, suffix: "+", label: "Laboratories Served" }
 ];
 
 // Genotyping Methods
@@ -113,7 +113,7 @@ const analysisReporting = [
   { item: "Interpretation Guidance", description: "Help with result interpretation" }
 ];
 
-// Custom Genotyping Development
+// Generated Genotyping Development
 const assayDesign = [
   { name: "Novel Alleles", description: "New targeting projects" },
   { name: "Complex Alleles", description: "Multi component alleles" },
@@ -157,8 +157,8 @@ const faqData = [
     answer: "ingenious targeting laboratory uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements."
   },
   {
-    question: "Can ingenious targeting laboratory develop custom genotyping assays for new alleles?",
-    answer: "Yes. ingenious targeting laboratory can design custom genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Custom assay development includes protocol optimization and validation."
+    question: "Can ingenious targeting laboratory develop generated genotyping assays for new alleles?",
+    answer: "Yes. ingenious targeting laboratory can design generated genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Generated assay development includes protocol optimization and validation."
   },
   {
     question: "What information is provided with genotyping results?",
@@ -268,7 +268,7 @@ export default function MouseGenotypingServicePage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request Custom Quote</span>
+                    <span>Request a Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
@@ -340,7 +340,7 @@ export default function MouseGenotypingServicePage() {
             {
               question: 'Which genotyping methods do you support?',
               answer:
-                'PCR genotyping (gel-based and qPCR), Southern blot for copy number, Sanger sequencing, and NGS validation. We design and validate assays for any custom allele, including knockouts, knockins, transgenics, floxed alleles, Cre driver lines, and humanized models.',
+                'PCR genotyping (gel-based and qPCR), Southern blot for copy number, Sanger sequencing, and NGS validation. We design and validate assays for any study-specific allele, including knockouts, knockins, transgenics, floxed alleles, Cre driver lines, and humanized models.',
             },
           ]}
         />
@@ -494,11 +494,11 @@ export default function MouseGenotypingServicePage() {
           </div>
         </section>
 
-        {/* Custom Genotyping Development */}
+        {/* Generated Genotyping Development */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>
-              Custom Genotyping Development
+              Generated Genotyping Development
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -508,7 +508,7 @@ export default function MouseGenotypingServicePage() {
                   Assay Design
                 </h3>
                 <p style={{ color: '#555', fontSize: '.9rem', marginBottom: '15px' }}>
-                  ingenious targeting laboratory can design custom genotyping assays for:
+                  ingenious targeting laboratory can design generated genotyping assays for:
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {assayDesign.map((item, index) => (
@@ -560,16 +560,6 @@ export default function MouseGenotypingServicePage() {
           </div>
         </section>
 
-        {/* Breeding Scheme Architect CTA */}
-        <BreedingSchemeArchitectCTA />
-
-        {/* CTA Section */}
-        <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <CatalogCustomDualCta slug="mouse-genotyping-service" utmMedium="page-closing" flush />
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -579,13 +569,6 @@ export default function MouseGenotypingServicePage() {
             <div className="animate-in">
               <UXUIDCAnimatedFAQ faqs={faqData} />
             </div>
-          </div>
-        </section>
-
-        {/* Lab Signals Signup */}
-        <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <LabSignalsSignup title="Genotyping Service Insights" />
           </div>
         </section>
 
@@ -637,6 +620,10 @@ export default function MouseGenotypingServicePage() {
         </section>
       </main>
 
+      <StandardPageCtaStack
+        slug="mouse-genotyping-service"
+        labSignalsTitle="Genotyping Service Insights"
+      />
       <UXUIDCFooter />
       
       {/* Schema.org Structured Data */}

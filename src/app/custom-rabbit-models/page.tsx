@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Custom Rabbit Models Page - ingenious targeting laboratory
+ * Rabbit Model Generation Page - ingenious targeting laboratory
  */
 
 import { useEffect, useRef } from 'react';
@@ -62,7 +62,7 @@ export default function CustomRabbitModelsPage() {
               }}
             >
               <IconDNA size={16} color="white" />
-              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>Custom Animal Models</span>
+              <span style={{ color: 'white', fontSize: '.8rem', fontWeight: 500 }}>Animal Model Generation</span>
             </div>
             <h1
               className="hero-animate"
@@ -87,7 +87,7 @@ export default function CustomRabbitModelsPage() {
                 maxWidth: '800px',
               }}
             >
-              ingenious targeting laboratory offers custom genetically modified rabbit model services for research applications requiring larger animal size, specific immunological characteristics, or physiological features not available in rodent models.
+              ingenious targeting laboratory offers generated genetically modified rabbit model services for research applications requiring larger animal size, specific immunological characteristics, or physiological features not available in rodent models.
             </p>
             <div className="hero-animate flex flex-wrap gap-4 mt-6">
               <Link
@@ -111,7 +111,7 @@ export default function CustomRabbitModelsPage() {
         {/* Top dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
           <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-            <CatalogCustomDualCta slug="custom-rabbit-models" utmMedium="page-hero" flush />
+            <CatalogCustomDualCta slug="generated-rabbit-models" utmMedium="page-hero" flush />
           </div>
         </section>
 
@@ -175,7 +175,7 @@ export default function CustomRabbitModelsPage() {
                   marginBottom: '10px',
                 }}
               >
-                Custom Project Consultation
+                Model Generation Project Consultation
               </h3>
               <p
                 style={{
@@ -208,8 +208,8 @@ export default function CustomRabbitModelsPage() {
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                { label: 'Custom Animal Models', href: '/custom-animal-models' },
-                { label: 'Custom Mouse Models', href: '/custom-mouse-models' },
+                { label: 'Animal Model Generation', href: '/custom-animal-models' },
+                { label: 'Mouse Model Generation', href: '/custom-mouse-models' },
                 { label: 'Rat Models', href: '/rat-models' },
               ].map((item, i) => (
                 <Link
@@ -238,7 +238,7 @@ export default function CustomRabbitModelsPage() {
 
         <UXUIDCStartProjectCTA
           title="Discuss Your Rabbit Model Project"
-          content="Contact our scientific team to explore custom rabbit model options for your research."
+          content="Contact our scientific team to explore rabbit model generation options for your research."
         />
       </main>
 
@@ -248,7 +248,7 @@ export default function CustomRabbitModelsPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
-          { name: 'Custom Rabbit Models', path: '/custom-rabbit-models' },
+          { name: 'Rabbit Model Generation', path: '/custom-rabbit-models' },
         ]}
       />
     </div>
