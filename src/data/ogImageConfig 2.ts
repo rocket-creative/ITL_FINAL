@@ -1042,13 +1042,6 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
     line3: 'Learn More',
     tier: 3,
   },
-  '/order-inquiry-catalog-models': {
-    slug: 'order-inquiry-catalog-models',
-    line1: 'Catalog Model Inquiry',
-    line2: 'Get Pricing & Availability',
-    line3: 'Learn More',
-    tier: 3,
-  },
   '/technology-overview': {
     slug: 'technology-overview',
     line1: 'Technology Overview',

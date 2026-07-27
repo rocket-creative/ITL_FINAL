@@ -481,7 +481,7 @@
   },
   {
     "source": "/order-inquiry",
-    "destination": "/order-inquiry-catalog-models/",
+    "destination": "/order-catalog-models/",
     "permanent": true
   },
   {

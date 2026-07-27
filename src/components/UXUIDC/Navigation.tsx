@@ -76,6 +76,7 @@ const navigationItems: NavItem[] = [
           title: 'All Models',
           items: [
             { label: 'All Catalog Models', href: '/all-catalog-mouse-models' },
+            { label: 'Order Catalog Models', href: '/order-catalog-models' },
           ],
         },
         {

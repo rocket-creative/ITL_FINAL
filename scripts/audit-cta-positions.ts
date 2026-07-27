@@ -16,7 +16,6 @@ const EXCLUDED = new Set([
   'general-contact',
   'schedule-meeting',
   'order-catalog-models',
-  'order-inquiry-catalog-models',
   // Legal / system / admin / utility
   'accessibility',
   'privacy',

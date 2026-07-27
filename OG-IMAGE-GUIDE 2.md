@@ -1026,12 +1026,6 @@ These pages drive 80% of traffic and conversions:
 - Image: Shopping/order visual
 - Priority: TIER 3 ⚪
 
-**148. Order Inquiry Catalog**  
-- URL: `/order-inquiry-catalog-models`
-- OG Text: "Catalog Model Inquiry | Get Pricing & Availability"
-- Image: Inquiry form visual
-- Priority: TIER 3 ⚪
-
 **149. Technology Overview (Alt)**  
 - URL: `/technology-overview`
 - OG Text: "Technology Overview | Gene Targeting Methods"

@@ -237,7 +237,7 @@ Here is the complete rotation to hit every linkable page on your site within one
 |-----|----------|---------|----------|---------|-----------|
 | Mon | /fast-mice | /bac-to-bac-large-scale-targeting | /transgenic-mouse-service | /safe-harbor-locus | /rosa26 |
 | Wed | /rapid-rosa26-targeting | /hprt-locus-targeting | /h11-safe-harbor | /all-catalog-mouse-models | /cre-driver-catalog |
-| Fri | /reporter-mouse-catalog | /disease-model-catalog | /order-inquiry-catalog-models | /buy-transgenic-mice | /breeding-scheme-architect |
+| Fri | /reporter-mouse-catalog | /disease-model-catalog | /order-catalog-models | /buy-transgenic-mice | /breeding-scheme-architect |
 
 ### WEEK 5 — Oncology and Cancer Models
 | Day | LinkedIn | Twitter | Facebook | Threads | Instagram |

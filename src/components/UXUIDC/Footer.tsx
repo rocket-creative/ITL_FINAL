@@ -44,6 +44,7 @@ const footerSections = [
       { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
       { label: 'Rat Models', href: '/rat-models' },
       { label: 'Catalog Models', href: '/all-catalog-mouse-models' },
+      { label: 'Order Catalog Models', href: '/order-catalog-models' },
     ],
   },
   {

@@ -11,7 +11,7 @@ The ITL website has several forms that can be integrated with HubSpot:
 | Form | Page URL | API Route |
 |------|----------|-----------|
 | Custom Quote Request | `/request-quote` | `/api/send-quote` |
-| Catalog Model Inquiry | `/order-inquiry-catalog-models` | `/api/send-catalog-inquiry` |
+| Catalog Order | `/order-catalog-models` | HubSpot form `a422e900-2fd9-4bbb-95c0-fb9299852ecf` |
 | Contact Form | `/contact` | `/api/contact` (if exists) |
 | Newsletter Signup | Various pages | `/api/newsletter` (if exists) |
 
@@ -471,9 +471,8 @@ When ready to implement, these files need updates:
 
 1. **Create:** `itl-website/src/lib/hubspot.ts` - HubSpot utility functions
 2. **Update:** `itl-website/src/app/api/send-quote/route.ts` - Add HubSpot sync
-3. **Update:** `itl-website/src/app/api/send-catalog-inquiry/route.ts` - Add HubSpot sync
-4. **Update:** `itl-website/src/app/layout.tsx` - Add tracking script (optional)
-5. **Add:** Environment variables in Vercel
+3. **Update:** `itl-website/src/app/layout.tsx` - Add tracking script (optional)
+4. **Add:** Environment variables in Vercel
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "exportDate": "2026-02-13T17:12:51.858Z",
-  "totalPages": 100,
+  "totalPages": 99,
   "baseUrl": "https://www.genetargeting.com",
   "byAdGroup": {
     "Disease Models": [
@@ -722,26 +722,6 @@
         "keywords": [
           "\"order mouse model\"",
           "\"order mouse\""
-        ]
-      },
-      {
-        "title": "Model Inquiry Form",
-        "description": "Request pricing, availability, and technical details for catalog mouse models. Our team responds within one business day.",
-        "path": "/order-inquiry-catalog-models",
-        "fullUrl": "https://www.genetargeting.com/order-inquiry-catalog-models",
-        "category": "Order Inquiry Catalog Models",
-        "headline1": "Model Inquiry Form",
-        "headline2": "Request pricing, availability,",
-        "headline3": "Request a Quote",
-        "description1": "Request pricing, availability, and technical details for catalog mouse models. Our team",
-        "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
-        "sourcePath": "order-inquiry-catalog-models/metadata.ts",
-        "adGroup": "General",
-        "keywords": [
-          "\"inquiry mouse model\"",
-          "\"inquiry mouse\"",
-          "\"form mouse model\"",
-          "\"form mouse\""
         ]
       },
       {
@@ -3317,26 +3297,6 @@
       "keywords": [
         "\"order mouse model\"",
         "\"order mouse\""
-      ]
-    },
-    {
-      "title": "Model Inquiry Form",
-      "description": "Request pricing, availability, and technical details for catalog mouse models. Our team responds within one business day.",
-      "path": "/order-inquiry-catalog-models",
-      "fullUrl": "https://www.genetargeting.com/order-inquiry-catalog-models",
-      "category": "Order Inquiry Catalog Models",
-      "headline1": "Model Inquiry Form",
-      "headline2": "Request pricing, availability,",
-      "headline3": "Request a Quote",
-      "description1": "Request pricing, availability, and technical details for catalog mouse models. Our team",
-      "description2": "Custom mouse models since 1998. Expert team. Guaranteed results.",
-      "sourcePath": "order-inquiry-catalog-models/metadata.ts",
-      "adGroup": "General",
-      "keywords": [
-        "\"inquiry mouse model\"",
-        "\"inquiry mouse\"",
-        "\"form mouse model\"",
-        "\"form mouse\""
       ]
     },
     {

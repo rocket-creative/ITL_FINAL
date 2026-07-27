@@ -1091,17 +1091,6 @@
       ]
     },
     {
-      "page": "/order-inquiry-catalog-models",
-      "filePath": "src/app/order-inquiry-catalog-models/page.tsx",
-      "issues": [
-        {
-          "severity": "high",
-          "issue": "Missing metadata export",
-          "fix": "Add: export const metadata: Metadata = { ... }"
-        }
-      ]
-    },
-    {
       "page": "/parkinsons-mouse-models",
       "filePath": "src/app/parkinsons-mouse-models/page.tsx",
       "issues": [

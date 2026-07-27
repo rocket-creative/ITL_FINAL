@@ -33,7 +33,6 @@ const CATALOG_HUB_PREFIXES = [
   '/disease-model-catalog',
   '/reporter-mouse-catalog',
   '/order-catalog-models',
-  '/order-inquiry-catalog-models',
   '/featured-model',
 ];
 
