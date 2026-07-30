@@ -75,14 +75,16 @@ function typeQuoteHref(slug: string): string {
   return `/request-quote/?type=${encodeURIComponent(slug)}`;
 }
 
-function childHref(child: PiTaxonomyChild): string | null {
+function childQuoteHref(child: PiTaxonomyChild): string {
   if (child.canonicalModSlug) {
     return typeQuoteHref(child.canonicalModSlug);
   }
-  if (child.siteHref) {
-    return child.siteHref.endsWith('/') ? child.siteHref : `${child.siteHref}/`;
-  }
-  return '/request-quote/';
+  return `/request-quote/?type=${encodeURIComponent(child.id)}`;
+}
+
+function childAboutHref(child: PiTaxonomyChild): string | null {
+  if (!child.siteHref) return null;
+  return child.siteHref.endsWith('/') ? child.siteHref : `${child.siteHref}/`;
 }
 
 function orderGenesForCohort(genes: PriorityGene[], cohort: GeneCohort): PriorityGene[] {
@@ -471,8 +473,8 @@ export default function ModelGenerationPrioritySection() {
                 }}
               >
                 {group.children.map((child) => {
-                  const href = childHref(child);
-                  const isQuoteLink = Boolean(child.canonicalModSlug || !child.siteHref);
+                  const quoteHref = childQuoteHref(child);
+                  const aboutHref = childAboutHref(child);
                   return (
                     <div
                       key={child.id}
@@ -498,27 +500,6 @@ export default function ModelGenerationPrioritySection() {
                       >
                         {child.label}
                       </p>
-                      {href ? (
-                        <Link
-                          href={href}
-                          style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            minHeight: '44px',
-                            padding: '10px 16px',
-                            borderRadius: '6px',
-                            background: isQuoteLink ? '#0a253c' : '#008080',
-                            color: '#fff',
-                            fontSize: '.82rem',
-                            fontWeight: 600,
-                            textDecoration: 'none',
-                            width: 'fit-content',
-                          }}
-                        >
-                          {isQuoteLink ? 'Request a quote' : 'View related'}
-                        </Link>
-                      ) : null}
                       {child.quoteNote ? (
                         <p
                           style={{
@@ -531,6 +512,55 @@ export default function ModelGenerationPrioritySection() {
                           {child.quoteNote}
                         </p>
                       ) : null}
+                      <div
+                        style={{
+                          marginTop: 'auto',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '8px',
+                          paddingTop: '4px',
+                        }}
+                      >
+                        <Link
+                          href={quoteHref}
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: '100%',
+                            minHeight: '44px',
+                            padding: '10px 16px',
+                            borderRadius: '6px',
+                            background: '#0a253c',
+                            color: '#fff',
+                            fontSize: '.82rem',
+                            fontWeight: 600,
+                            textDecoration: 'none',
+                            boxSizing: 'border-box',
+                            textAlign: 'center',
+                          }}
+                        >
+                          Request a quote
+                        </Link>
+                        {aboutHref ? (
+                          <Link
+                            href={aboutHref}
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              minHeight: '36px',
+                              fontSize: '.78rem',
+                              fontWeight: 600,
+                              color: '#134978',
+                              textDecoration: 'none',
+                              textAlign: 'center',
+                            }}
+                          >
+                            About this service
+                          </Link>
+                        ) : null}
+                      </div>
                     </div>
                   );
                 })}

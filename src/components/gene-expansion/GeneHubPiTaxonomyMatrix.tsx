@@ -1,8 +1,9 @@
 /**
  * PI search taxonomy matrix for priority gene hubs.
+ * One primary CTA per card, bottom-aligned. Catalog → View catalog; else → Request a quote.
+ * Service hub pages (BAC, Flp, etc.) get a quote CTA plus optional About link.
  */
 
-import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { PI_TAXONOMY_GROUPS } from '@/data/priorityGenes';
 import type { PiTaxonomyChild } from '@/data/priorityGenes';
@@ -40,73 +41,42 @@ const PI_TAXONOMY_STYLES = `
     color: #0a253c;
     line-height: 1.4;
   }
-  .gene-hub-pi-taxonomy__status {
-    font-weight: 600;
-    font-size: 0.85rem;
+  .gene-hub-pi-taxonomy__note {
+    margin: 0;
+    font-size: 0.78rem;
+    color: #666;
+    line-height: 1.5;
   }
-  .gene-hub-pi-taxonomy__status--catalog {
-    color: #008080;
-  }
-  .gene-hub-pi-taxonomy__status--generate {
-    color: #134978;
-  }
-  .gene-hub-pi-taxonomy__actions {
+  .gene-hub-pi-taxonomy__footer {
+    margin-top: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 8px;
-    align-items: center;
-  }
-  .gene-hub-pi-taxonomy__text-link {
-    display: inline-block;
-    padding: 8px 0;
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    transition: color 0.15s ease, border-color 0.15s ease;
-  }
-  .gene-hub-pi-taxonomy__text-link--catalog {
-    color: #008080;
-  }
-  .gene-hub-pi-taxonomy__text-link--catalog:hover {
-    color: #006666;
-  }
-  .gene-hub-pi-taxonomy__text-link--catalog:focus-visible {
-    outline: 2px solid #008080;
-    outline-offset: 2px;
-    border-radius: 2px;
-  }
-  .gene-hub-pi-taxonomy__text-link--related {
-    color: #134978;
-  }
-  .gene-hub-pi-taxonomy__text-link--related:hover {
-    color: #0a253c;
-  }
-  .gene-hub-pi-taxonomy__text-link--related:focus-visible {
-    outline: 2px solid #134978;
-    outline-offset: 2px;
-    border-radius: 2px;
+    padding-top: 4px;
   }
   .gene-hub-pi-taxonomy__btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     min-height: 44px;
     padding: 10px 16px;
     border-radius: 6px;
     font-size: 0.82rem;
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
   }
-  .gene-hub-pi-taxonomy__btn--order {
+  .gene-hub-pi-taxonomy__btn--catalog {
     background: #008080;
     color: #fff;
   }
-  .gene-hub-pi-taxonomy__btn--order:hover {
+  .gene-hub-pi-taxonomy__btn--catalog:hover {
     background: #006666;
   }
-  .gene-hub-pi-taxonomy__btn--order:focus-visible {
+  .gene-hub-pi-taxonomy__btn--catalog:focus-visible {
     outline: 2px solid #008080;
     outline-offset: 2px;
     box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.25);
@@ -114,7 +84,6 @@ const PI_TAXONOMY_STYLES = `
   .gene-hub-pi-taxonomy__btn--quote {
     background: #0a253c;
     color: #fff;
-    width: fit-content;
   }
   .gene-hub-pi-taxonomy__btn--quote:hover {
     background: #134978;
@@ -124,11 +93,25 @@ const PI_TAXONOMY_STYLES = `
     outline-offset: 2px;
     box-shadow: 0 0 0 4px rgba(10, 37, 60, 0.25);
   }
-  .gene-hub-pi-taxonomy__note {
-    margin: 0;
+  .gene-hub-pi-taxonomy__about {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
     font-size: 0.78rem;
-    color: #666;
-    line-height: 1.5;
+    font-weight: 600;
+    color: #134978;
+    text-decoration: none;
+    text-align: center;
+  }
+  .gene-hub-pi-taxonomy__about:hover {
+    color: #0a253c;
+    text-decoration: underline;
+  }
+  .gene-hub-pi-taxonomy__about:focus-visible {
+    outline: 2px solid #134978;
+    outline-offset: 2px;
+    border-radius: 2px;
   }
   .gene-hub-pi-taxonomy__group-heading {
     font-size: 1.15rem;
@@ -145,6 +128,10 @@ function catalogCountFor(child: PiTaxonomyChild, catalogByModSlug: Record<string
   return catalogByModSlug[child.canonicalModSlug] ?? 0;
 }
 
+function quoteTypeParam(child: PiTaxonomyChild): string {
+  return child.canonicalModSlug ?? child.id;
+}
+
 function ChildCard({
   child,
   mouseSymbol,
@@ -156,38 +143,39 @@ function ChildCard({
 }) {
   const count = catalogCountFor(child, catalogByModSlug);
   const geneEnc = encodeURIComponent(mouseSymbol);
+  const inCatalog = count > 0 && Boolean(child.canonicalModSlug);
+  const aboutHref = child.siteHref
+    ? child.siteHref.endsWith('/')
+      ? child.siteHref
+      : `${child.siteHref}/`
+    : null;
 
-  let action: ReactNode;
-
-  if (count > 0 && child.canonicalModSlug) {
-    const catalogHref = `/all-catalog-mouse-models/gene/${geneEnc}/${child.canonicalModSlug}/`;
-    action = (
-      <Link href={catalogHref} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--order">
-        View catalog
-      </Link>
-    );
-  } else if (child.siteHref) {
-    const href = child.siteHref.endsWith('/') ? child.siteHref : `${child.siteHref}/`;
-    action = (
-      <Link href={href} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--quote">
-        View related
-      </Link>
-    );
-  } else {
-    const typeParam = child.canonicalModSlug ?? child.id;
-    const quoteHref = `/request-quote/?gene=${geneEnc}&type=${encodeURIComponent(typeParam)}`;
-    action = (
-      <Link href={quoteHref} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--quote">
-        Request a quote
-      </Link>
-    );
-  }
+  const catalogHref = inCatalog
+    ? `/all-catalog-mouse-models/gene/${geneEnc}/${child.canonicalModSlug}/`
+    : null;
+  const quoteHref = `/request-quote/?gene=${geneEnc}&type=${encodeURIComponent(quoteTypeParam(child))}`;
 
   return (
     <div className="gene-hub-pi-taxonomy__card">
       <p className="gene-hub-pi-taxonomy__card-title">{child.label}</p>
-      {action}
       {child.quoteNote ? <p className="gene-hub-pi-taxonomy__note">{child.quoteNote}</p> : null}
+
+      <div className="gene-hub-pi-taxonomy__footer">
+        {inCatalog && catalogHref ? (
+          <Link href={catalogHref} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--catalog">
+            View catalog
+          </Link>
+        ) : (
+          <Link href={quoteHref} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--quote">
+            Request a quote
+          </Link>
+        )}
+        {aboutHref ? (
+          <Link href={aboutHref} className="gene-hub-pi-taxonomy__about">
+            About this service
+          </Link>
+        ) : null}
+      </div>
     </div>
   );
 }
@@ -219,7 +207,7 @@ export default function GeneHubPiTaxonomyMatrix({
           </h2>
           <p style={{ color: '#555', fontSize: '.92rem', lineHeight: 1.7, marginBottom: '32px' }}>
             Map common PI search terms for {mouseSymbol} (human {humanSymbol}) to catalog alleles or a
-            custom generation quote.
+            custom generation quote. Every path below has one clear next step.
           </p>
 
           {PI_TAXONOMY_GROUPS.map((group) => (
