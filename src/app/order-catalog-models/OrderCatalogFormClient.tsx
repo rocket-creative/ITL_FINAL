@@ -9,8 +9,8 @@
 import { useState } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
-import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch, HubSpotFormWithFallback } from '@/components/UXUIDC';
-import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
+import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch } from '@/components/UXUIDC';
+import CustomHubSpotForm, { type FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 import {
   IconCheckCircle,
   IconMessageCircle,
@@ -53,9 +53,7 @@ const fallbackFields: FormField[] = [
   { name: 'email', label: 'Email', type: 'email', required: true },
   { name: 'phone', label: 'Phone', type: 'tel', required: false },
   { name: 'institution', label: 'Institution / Company', type: 'text', required: true },
-  // HubSpot internal name stays mouse_strain_name; update the Catalog Order form
-  // (a422e900-2fd9-4bbb-95c0-fb9299852ecf) field label in HubSpot to "Model Abbreviation"
-  // so the embed matches this fallback label when it loads without prefill.
+  // HubSpot internal name stays mouse_strain_name; label shown as Model Abbreviation.
   { name: 'mouse_strain_name', label: 'Model Abbreviation', type: 'text', required: true, placeholder: 'e.g., Exoc2-KO' },
   { name: 'catalog_number', label: 'Catalog Number', type: 'text', required: true, placeholder: 'e.g., KO 2109194' },
   {
@@ -366,17 +364,14 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
                       </button>
                     </div>
                   )}
-                  <HubSpotFormWithFallback
-                    formId="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
-                    formName="Catalog Order"
+                  <CustomHubSpotForm
                     portalId="3977953"
-                    region="na1"
-                    fallbackFields={fallbackFields}
+                    formGuid="a422e900-2fd9-4bbb-95c0-fb9299852ecf"
+                    fields={fallbackFields}
                     submitButtonText="Submit Order Inquiry"
                     successMessage="Thank you! We'll contact you within 1 business day with availability and pricing."
                     initialValues={initialValues}
-                    redirectAfterSubmit={ORDER_CATALOG_THANK_YOU}
-                    onFallbackSuccess={() => {
+                    onSuccess={() => {
                       window.location.assign(ORDER_CATALOG_THANK_YOU);
                     }}
                   />

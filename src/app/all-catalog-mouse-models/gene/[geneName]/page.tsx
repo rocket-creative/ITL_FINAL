@@ -441,7 +441,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                   borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
                 }}
               >
-                Request a Quote <IconChevronRight size={16} color="#fff" />
+                Order catalog model <IconChevronRight size={16} color="#fff" />
               </Link>
               <Link
                 href="/all-catalog-mouse-models"
