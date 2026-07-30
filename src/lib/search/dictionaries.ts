@@ -1,5 +1,7 @@
 /** Gene alias (lowercase phrase or token) → canonical mouse gene symbol (catalog casing). */
 
+import { PRIORITY_GENES } from '@/data/priorityGenes';
+
 export interface ModificationPattern {
   readonly match: RegExp;
   readonly canonicalModelType: string;
@@ -7,7 +9,28 @@ export interface ModificationPattern {
   readonly modifiers: readonly string[];
 }
 
-export const GENE_SYNONYMS_SEED: Record<string, string> = {
+function normalizeGeneAliasKey(alias: string): string {
+  return alias.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+/** Auto-built from priority gene registry (human symbol, aliases, mouse symbol). */
+function buildPriorityGeneSynonyms(): Record<string, string> {
+  const seed: Record<string, string> = {};
+  for (const g of PRIORITY_GENES) {
+    seed[g.humanSymbol.toLowerCase()] = g.mouseSymbol;
+    for (const a of g.aliases) {
+      seed[normalizeGeneAliasKey(a)] = g.mouseSymbol;
+    }
+    seed[g.mouseSymbol.toLowerCase()] = g.mouseSymbol;
+  }
+  return seed;
+}
+
+/**
+ * Curated aliases (hyphenated tokens, common names, morphogen shorthand).
+ * Merged after auto-build so these entries win on conflict.
+ */
+const GENE_SYNONYMS_MANUAL: Record<string, string> = {
   tp53: 'Trp53',
   p53: 'Trp53',
   pdcd1: 'Pdcd1',
@@ -26,6 +49,7 @@ export const GENE_SYNONYMS_SEED: Record<string, string> = {
   lag3: 'Lag3',
   'tim-3': 'Havcr2',
   tim3: 'Havcr2',
+  havcr2: 'Havcr2',
   'havcr-2': 'Havcr2',
   tigit: 'Tigit',
   pleiotrophin: 'Ptn',
@@ -79,6 +103,30 @@ export const GENE_SYNONYMS_SEED: Record<string, string> = {
   akt: 'Akt1',
   akt1: 'Akt1',
   pik3ca: 'Pik3ca',
+  braf: 'Braf',
+  alk: 'Alk',
+  vegfa: 'Vegfa',
+  idh1: 'Idh1',
+  idh2: 'Idh2',
+  stk11: 'Stk11',
+  lkb1: 'Stk11',
+  kmt2a: 'Kmt2a',
+  mll: 'Kmt2a',
+  ntrk1: 'Ntrk1',
+  mapt: 'Mapt',
+  snca: 'Snca',
+  prkn: 'Prkn',
+  park2: 'Prkn',
+  park7: 'Park7',
+  dj1: 'Park7',
+  'dj-1': 'Park7',
+  mrc1: 'Mrc1',
+  cd206: 'Mrc1',
+  coq8a: 'Coq8a',
+  ins: 'Ins',
+  insr: 'Insr',
+  ldlr: 'Ldlr',
+  pcsk9: 'Pcsk9',
   stat3: 'Stat3',
   foxp3: 'Foxp3',
   cd4: 'Cd4',
@@ -88,6 +136,78 @@ export const GENE_SYNONYMS_SEED: Record<string, string> = {
   cd28: 'Cd28',
   cd20: 'Ms4a1',
   trem2: 'Trem2',
+  /** Morphogen Tier A — human symbol → mouse catalog casing */
+  shh: 'Shh',
+  ihh: 'Ihh',
+  dhh: 'Dhh',
+  wnt1: 'Wnt1',
+  wnt2: 'Wnt2',
+  wnt2b: 'Wnt2b',
+  wnt3a: 'Wnt3a',
+  wnt4: 'Wnt4',
+  wnt5a: 'Wnt5a',
+  wnt6: 'Wnt6',
+  wnt7a: 'Wnt7a',
+  wnt7b: 'Wnt7b',
+  wnt8a: 'Wnt8a',
+  wnt9b: 'Wnt9b',
+  wnt10b: 'Wnt10b',
+  wnt11: 'Wnt11',
+  wnt16: 'Wnt16',
+  bmp1: 'Bmp1',
+  bmp2: 'Bmp2',
+  bmp4: 'Bmp4',
+  bmp5: 'Bmp5',
+  bmp6: 'Bmp6',
+  bmp7: 'Bmp7',
+  bmp8a: 'Bmp8a',
+  bmp15: 'Bmp15',
+  gdf1: 'Gdf1',
+  gdf2: 'Gdf2',
+  bmp9: 'Gdf2',
+  gdf3: 'Gdf3',
+  gdf5: 'Gdf5',
+  gdf9: 'Gdf9',
+  gdf11: 'Gdf11',
+  gdf15: 'Gdf15',
+  amh: 'Amh',
+  tgfb1: 'Tgfb1',
+  tgfb2: 'Tgfb2',
+  tgfb3: 'Tgfb3',
+  inha: 'Inha',
+  inhba: 'Inhba',
+  inhbb: 'Inhbb',
+  nodal: 'Nodal',
+  lefty1: 'Lefty1',
+  lefty2: 'Lefty2',
+  fgf1: 'Fgf1',
+  fgf2: 'Fgf2',
+  fgf3: 'Fgf3',
+  fgf4: 'Fgf4',
+  fgf5: 'Fgf5',
+  fgf7: 'Fgf7',
+  fgf8: 'Fgf8',
+  fgf9: 'Fgf9',
+  fgf10: 'Fgf10',
+  fgf18: 'Fgf18',
+  fgf19: 'Fgf19',
+  fgf20: 'Fgf20',
+  fgf21: 'Fgf21',
+  fgf23: 'Fgf23',
+  aldh1a1: 'Aldh1a1',
+  aldh1a2: 'Aldh1a2',
+  cyp26a1: 'Cyp26a1',
+  cyp26b1: 'Cyp26b1',
+  rara: 'Rara',
+  dll1: 'Dll1',
+  jag1: 'Jag1',
+  nog: 'Nog',
+  grem1: 'Grem1',
+};
+
+export const GENE_SYNONYMS_SEED: Record<string, string> = {
+  ...buildPriorityGeneSynonyms(),
+  ...GENE_SYNONYMS_MANUAL,
 };
 
 export function mergeCatalogIntoGeneSynonyms(
@@ -137,7 +257,7 @@ export const MODIFICATION_PATTERNS: readonly ModificationPattern[] = [
   },
   {
     match:
-      /\b(point\s*mutation|missense|snp\s*knockin|patient\s*mutation)\b/i,
+      /\b(point\s*mutation|point\s*mutant|missense|snp\s*knockin|patient\s*mutation)\b/i,
     canonicalModelType: 'Knockin',
     fallbackPage: '/point-mutation-mice',
     modifiers: ['point-mutation'],
@@ -149,31 +269,34 @@ export const MODIFICATION_PATTERNS: readonly ModificationPattern[] = [
     modifiers: ['reporter'],
   },
   {
-    match: /\b(tag\s*knockin|epitope\s*tag|flag\s*tag|ha\s*tag|myc\s*tag|3xflag)\b/i,
+    match: /\b(tag\s*knockin|epitope\s*tag|flag\s*tag|ha\s*tag|myc\s*tag|v5\s*tag|3xflag)\b/i,
     canonicalModelType: 'Knockin',
     fallbackPage: '/tag-knockin-mice',
     modifiers: ['tag'],
   },
   {
-    match: /\b(humanized|gene\s*replacement|hu[\s-]?(pd1|pdl1|ctla4|lag3|tim3))\b/i,
+    match:
+      /\b(humanized|gene\s*replacement|domain[\s-]?humanized|partial[\s-]?humanized|full[\s-]?humanization|hu[\s-]?(pd1|pdl1|ctla4|lag3|tim3))\b/i,
     canonicalModelType: 'Humanized',
     fallbackPage: '/humanized-mouse-models',
     modifiers: ['humanized'],
   },
   {
-    match: /\b(transgenic|bac\s*transgenic|random\s*integration|overexpression)\b/i,
+    match:
+      /\b(transgenic|bac\s*transgenic|random\s*integration|overexpression|\bhprt\b|\bh11\b|\bcol1a1\b)\b/i,
     canonicalModelType: 'Transgenic',
     fallbackPage: '/transgenic-mouse-service',
     modifiers: ['transgenic'],
   },
   {
-    match: /\b(rosa26|safe\s*harbor)\b/i,
+    match: /\b(rosa26|safe[\s-]?harbor)\b/i,
     canonicalModelType: 'Knockin',
     fallbackPage: '/rosa26',
     modifiers: ['rosa26'],
   },
   {
-    match: /\b(inducible|tamoxifen|cre[\s-]?ert2?|doxycycline|\btet\b|tet[\s-]?(on|off))\b/i,
+    match:
+      /\b(inducible|inducible[\s-]?cko|tamoxifen|cre[\s-]?ert2?|doxycycline|\btet\b|tet[\s-]?(on|off))\b/i,
     canonicalModelType: 'Conditional Knockout',
     fallbackPage: '/inducible-conditional-knockout',
     modifiers: ['inducible'],

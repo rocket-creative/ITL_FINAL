@@ -6,14 +6,23 @@
 
 import type { Metadata } from 'next';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import GeneHubTrustBand from '@/components/gene-expansion/GeneHubTrustBand';
+import GeneHubAiAnswerBlock from '@/components/gene-expansion/GeneHubAiAnswerBlock';
+import GeneHubPiTaxonomyMatrix from '@/components/gene-expansion/GeneHubPiTaxonomyMatrix';
 
 import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes, indexableTier4ParamsForModels } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
+import {
+  getPriorityGeneByMouseSymbol,
+  getMorphogenFamilyLabel,
+  isPriorityGene,
+} from '@/data/priorityGenes';
 
 import {
   getTopCreDriversForTissue,
@@ -22,9 +31,15 @@ import {
 import { getCachedCatalogGeneNames } from '@/lib/search/catalogGeneCache';
 import { parseQuery } from '@/lib/search/parseQuery';
 import { buildSeoUrl } from '@/lib/seo/searchUrl';
+import { getCuratedIntro } from '@/lib/seo/curatedIntros';
+import {
+  buildPriorityGeneTitle,
+  buildPriorityGeneDescription,
+  buildGeneHubAlternateNames,
+} from '@/lib/seo/geneHubSerp';
 import { modCanonicalToSlug, modSlugToCanonical, resolveTissueOrDriverSlug } from '@/lib/seo/slugs';
 import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
-import { getIndexableBuildInquiryLinksForGene } from '@/lib/gene-expansion/db';
+import { getIndexableBuildInquiryLinksForGene, CANONICAL_MOD_SLUGS } from '@/lib/gene-expansion/db';
 import { slugToCatalogDisplay } from '@/lib/gene-expansion/catalogTypeMap';
 import { resolveCanonicalModSlug } from '@/lib/gene-expansion/synonymRedirects';
 
@@ -136,9 +151,16 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     return { title: `${geneName} Mouse Models | ${SITE_NAME}` };
   }
 
+  const priority = getPriorityGeneByMouseSymbol(geneName);
+  const types = [...new Set(models.map(m => m.modelType))].filter(Boolean) as string[];
+
   if (models.length === 0) {
-    const title = `${geneName} Mouse Models | ${SITE_NAME}`;
-    const description = `Explore ${geneName} mouse model types available to build from ${SITE_NAME}. ${buildInquiryLinks.length} modification types with scientific rationale and quote ready project intake.`;
+    const title = priority
+      ? buildPriorityGeneTitle(geneName, priority.humanSymbol, 0)
+      : `${geneName} Mouse Models | ${SITE_NAME}`;
+    const description = priority
+      ? buildPriorityGeneDescription(geneName, priority.humanSymbol, 0, [])
+      : `Explore ${geneName} mouse model types available to build from ${SITE_NAME}. ${buildInquiryLinks.length} modification types with scientific rationale and quote ready project intake.`;
     const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
     return {
       title,
@@ -156,18 +178,25 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     };
   }
 
-  const title =
-    focusType !== undefined && focusType.length > 0
-      ? `${geneName} ${focusType} Mouse Models | ITL`
-      : buildTitle(geneName, models);
+  const usePriorityMeta = Boolean(priority) || isPriorityGene(geneName);
 
-  let description = buildMetaDescription(geneName, models);
-  if (focusType) {
+  const title =
+    usePriorityMeta && priority && !(focusType !== undefined && focusType.length > 0)
+      ? buildPriorityGeneTitle(geneName, priority.humanSymbol, models.length)
+      : focusType !== undefined && focusType.length > 0
+        ? `${geneName} ${focusType} Mouse Models | ITL`
+        : buildTitle(geneName, models);
+
+  let description =
+    usePriorityMeta && priority
+      ? buildPriorityGeneDescription(geneName, priority.humanSymbol, models.length, types)
+      : buildMetaDescription(geneName, models);
+  if (focusType && !(usePriorityMeta && priority)) {
     description =
       `${geneName} ${focusType.toLowerCase()} catalog models from ${SITE_NAME}. ` +
       description;
   }
-  if (tissueKey) {
+  if (tissueKey && !(usePriorityMeta && priority)) {
     description += ` Interested in ${getDisplayLabelForTissueKey(tissueKey)} specific deletion cohorts paired with Cre drivers? Submit a consultation.`;
   }
   const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
@@ -234,6 +263,37 @@ export default async function GenePage({ params, searchParams }: Props) {
   const types = [...new Set(models.map(m => m.modelType))].filter(Boolean);
   const typeStr = types.length > 0 ? types.slice(0, 3).join(', ') : 'genetically engineered';
   const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
+
+  const priority = getPriorityGeneByMouseSymbol(geneName);
+  const curatedIntro = getCuratedIntro(geneName);
+  const genePubs = getGeneMatchedPublications(
+    [geneName, priority?.humanSymbol, ...(priority?.aliases ?? [])].filter(Boolean) as string[],
+  );
+
+  const knownModSlugs = new Set<string>(CANONICAL_MOD_SLUGS);
+  const catalogByModSlug: Record<string, number> = {};
+  for (const m of models) {
+    const t = (m.modelType || '').toLowerCase();
+    let slug = '';
+    if (t.includes('conditional')) slug = 'conditional-knockout';
+    else if (t.includes('inducible')) slug = 'inducible-knockout';
+    else if (t.includes('humanized')) slug = 'humanized';
+    else if (t.includes('knockout') || t.includes('ko')) slug = 'knockout';
+    else if (t.includes('point')) slug = 'point-mutation';
+    else if (t.includes('tag')) slug = 'tag-knockin';
+    else if (t.includes('reporter') || t.includes('gfp')) slug = 'reporter';
+    else if (t.includes('knockin') || t.includes('knock-in')) slug = 'knockin';
+    else if (t.includes('transgenic') || t.includes('overexpression')) slug = 'overexpression';
+    else if (t.includes('cre')) slug = 'cre-driver';
+    else {
+      const fromCanon = resolveCanonicalModSlug(modCanonicalToSlug(m.modelType || ''));
+      if (knownModSlugs.has(fromCanon)) slug = fromCanon;
+    }
+    if (slug && knownModSlugs.has(slug)) {
+      catalogByModSlug[slug] = (catalogByModSlug[slug] || 0) + 1;
+    }
+  }
+  const modTypesPresent = [...new Set(models.map((m) => m.modelType).filter(Boolean))] as string[];
 
   // Only emit modification links that resolve to a live (non-404) page. Catalog
   // type links are canonicalized (e.g. transgenic -> overexpression) and gated
@@ -458,6 +518,54 @@ export default async function GenePage({ params, searchParams }: Props) {
           </div>
         </section>
 
+        {priority ? (
+          <>
+            <GeneHubTrustBand />
+
+            {curatedIntro ? (
+              <section style={{ background: '#fff', padding: '48px 20px' }}>
+                <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+                  <h2
+                    style={{
+                      fontFamily: 'Poppins, sans-serif',
+                      fontSize: '1.5rem',
+                      fontWeight: 700,
+                      color: '#0a253c',
+                      marginBottom: '16px',
+                    }}
+                  >
+                    Why model {geneName}
+                  </h2>
+                  <p
+                    style={{
+                      color: '#444',
+                      lineHeight: 1.8,
+                      fontSize: '.95rem',
+                      margin: 0,
+                    }}
+                  >
+                    {curatedIntro}
+                  </p>
+                </div>
+              </section>
+            ) : null}
+
+            <GeneHubAiAnswerBlock
+              mouseSymbol={geneName}
+              humanSymbol={priority.humanSymbol}
+              catalogCount={models.length}
+              modTypesPresent={modTypesPresent}
+              familyLabel={priority.family ? getMorphogenFamilyLabel(priority.family) : undefined}
+            />
+
+            <GeneHubPiTaxonomyMatrix
+              mouseSymbol={geneName}
+              humanSymbol={priority.humanSymbol}
+              catalogByModSlug={catalogByModSlug}
+            />
+          </>
+        ) : null}
+
         {/* Top dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
           <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
@@ -551,6 +659,92 @@ export default async function GenePage({ params, searchParams }: Props) {
           </div>
         </section>
         )}
+
+        {priority && genePubs.length > 0 ? (
+          <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+              <h2
+                style={{
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '1.5rem',
+                  fontWeight: 700,
+                  color: '#0a253c',
+                  marginBottom: '8px',
+                }}
+              >
+                Selected publications from ingenious targeting laboratory
+              </h2>
+              <p style={{ color: '#666', fontSize: '.9rem', marginBottom: '24px', lineHeight: 1.6 }}>
+                Peer reviewed work involving {geneName}
+                {priority.humanSymbol !== geneName ? ` (${priority.humanSymbol})` : ''} from ITL supported projects.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {genePubs.map((pub) => (
+                  <li
+                    key={`${pub.year}-${pub.title}`}
+                    style={{
+                      background: '#fff',
+                      border: '1px solid #e0e0e0',
+                      borderRadius: '6px',
+                      padding: '16px 20px',
+                    }}
+                  >
+                    {pub.link ? (
+                      <a
+                        href={pub.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          color: '#134978',
+                          fontWeight: 600,
+                          fontSize: '.95rem',
+                          textDecoration: 'none',
+                          lineHeight: 1.5,
+                          display: 'block',
+                          marginBottom: '6px',
+                        }}
+                      >
+                        {pub.title}
+                      </a>
+                    ) : (
+                      <span
+                        style={{
+                          color: '#0a253c',
+                          fontWeight: 600,
+                          fontSize: '.95rem',
+                          lineHeight: 1.5,
+                          display: 'block',
+                          marginBottom: '6px',
+                        }}
+                      >
+                        {pub.title}
+                      </span>
+                    )}
+                    <span style={{ color: '#666', fontSize: '.85rem', lineHeight: 1.5 }}>
+                      {pub.authors} ({pub.year})
+                      {pub.journal ? `. ${pub.journal}` : ''}
+                      {pub.volume ? ` ${pub.volume}` : ''}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p style={{ marginTop: '24px', marginBottom: 0 }}>
+                <Link
+                  href="/publications/"
+                  style={{
+                    color: '#008080',
+                    fontWeight: 600,
+                    fontSize: '.9rem',
+                    textDecoration: 'none',
+                    borderBottom: '1px solid #008080',
+                  }}
+                >
+                  View all ITL publications
+                </Link>
+              </p>
+            </div>
+          </section>
+        ) : null}
 
         {/* Sales / About section */}
         <section style={{ background: '#f8f9fa', padding: '60px 20px' }}>
@@ -808,6 +1002,17 @@ export default async function GenePage({ params, searchParams }: Props) {
                   { '@type': 'ListItem', position: 4, name: geneName, item: canonical },
                 ],
               },
+              ...(priority
+                ? [
+                    {
+                      '@type': 'WebPage',
+                      '@id': `${canonical}#webpage`,
+                      name: `${geneName} (${priority.humanSymbol}) Mouse Models`,
+                      url: canonical,
+                      alternateName: buildGeneHubAlternateNames(),
+                    },
+                  ]
+                : []),
               ...productSchemas,
             ],
           }),

@@ -21,7 +21,12 @@ interface AllCatalogContentProps {
   preloadedModels?: CatalogModel[];
 }
 
-export default function AllCatalogContent({ initialQuery, preloadedModels = [] }: AllCatalogContentProps) {
+const EMPTY_MODELS: CatalogModel[] = [];
+
+export default function AllCatalogContent({
+  initialQuery,
+  preloadedModels = EMPTY_MODELS,
+}: AllCatalogContentProps) {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
       <UXUIDCNavigation />

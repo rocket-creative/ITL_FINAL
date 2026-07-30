@@ -15,6 +15,7 @@ import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { LabSignalsSignup, BreedingSchemeArchitectCTA, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
+import ModelGenerationPrioritySection from '@/components/gene-expansion/ModelGenerationPrioritySection';
 
 // Hero Data
 const heroData = {
@@ -56,6 +57,21 @@ const knockoutData = {
       title: "Inducible Knockout",
       description: "Inducible systems such as tamoxifen activated CreERT2 allow temporal control over gene deletion. This enables study of gene function in adult animals and avoids developmental compensation that can mask phenotypes in constitutive models.",
       href: "/inducible-conditional-knockout"
+    },
+    {
+      title: "Knockout First / Convertible Allele",
+      description: "Knockout first designs (tm1a / IKMC style) deliver a convertible pathway from a reporter tagged null allele to a conditional floxed allele, supporting flexible study designs from a single targeting event.",
+      href: "/request-quote/?type=knockout"
+    },
+    {
+      title: "Compound / Double Knockout",
+      description: "Multi allele and compound knockout projects combine two or more targeted loci for pathway redundancy, synthetic lethality, and complex disease modeling on defined backgrounds.",
+      href: "/request-quote/"
+    },
+    {
+      title: "Large Scale BAC Deletion",
+      description: "BAC scale deletion and large fragment targeting remove extended genomic regions when conventional exon deletion is not sufficient for your research question.",
+      href: "/bac-to-bac-large-scale-targeting"
     }
   ]
 };
@@ -84,6 +100,16 @@ const knockinData = {
       title: "cDNA Knockin",
       description: "cDNA knockin replaces a gene with a coding sequence, often to express modified proteins, isoform variants, or humanized sequences. The targeted approach ensures expression under endogenous regulatory control.",
       href: "/cdna-knockin"
+    },
+    {
+      title: "Conditional Knockin",
+      description: "Conditional knockin designs such as Rosa26 LSL enable inducible or tissue restricted expression of inserted sequences while preserving baseline physiology until recombination.",
+      href: "/request-quote/?type=knockin"
+    },
+    {
+      title: "Gene Replacement Knockin",
+      description: "Gene replacement knockin substitutes mouse coding sequence with a human or engineered ortholog at the endogenous locus for preclinical target fidelity.",
+      href: "/gene-replacement"
     }
   ]
 };
@@ -112,6 +138,44 @@ const humanizedData = {
       title: "BAC Transgenesis",
       description: "Bacterial artificial chromosome (BAC) targeting enables integration of large genomic segments including complete genes with native regulatory elements. This approach is valuable when physiological expression patterns are essential.",
       href: "/transgenic-mouse-service"
+    },
+    {
+      title: "Partial / Domain Humanization",
+      description: "Partial or domain humanization replaces selected exons or functional domains when full gene replacement is unnecessary, reducing project scope while preserving key human epitopes or binding sites.",
+      href: "/request-quote/?type=humanized"
+    },
+    {
+      title: "Double / Multi Humanized",
+      description: "Double and multi humanized projects combine two or more humanized loci for combination IO, receptor pairs, or multi target therapeutic programs on a single defined background.",
+      href: "/request-quote/?type=humanized"
+    }
+  ]
+};
+
+// Transgenic and Cre driver coverage (PI taxonomy)
+const transgenicCreData = {
+  title: "Transgenic and Cre Driver Models",
+  intro: "Random and safe harbor transgenesis, overexpression alleles, BAC inserts, and Cre driver lines complete the PI search taxonomy for model generation beyond targeted knockout and knockin.",
+  models: [
+    {
+      title: "Transgenic Mouse Service",
+      description: "Random integration and overexpression transgenic models for rapid gain of function studies, with project design guidance on copy number and founder screening.",
+      href: "/transgenic-mouse-service"
+    },
+    {
+      title: "Safe Harbor Rosa26 / H11",
+      description: "Targeted insertion at Rosa26, H11, and related safe harbor loci for predictable expression without disrupting essential genes.",
+      href: "/rosa26"
+    },
+    {
+      title: "Cre Recombinase Drivers",
+      description: "Constitutive and inducible Cre driver lines for tissue specific or temporal control of floxed alleles across conditional knockout and knockin programs.",
+      href: "/cre-recombinase-mice"
+    },
+    {
+      title: "Custom Transgenic Quote",
+      description: "Request a quote for BAC transgenic, overexpression, or dual recombinase breeding schemes tailored to your allele plan.",
+      href: "/request-quote/?type=overexpression"
     }
   ]
 };
@@ -400,6 +464,8 @@ export default function CustomMouseModelsPage() {
           </div>
         </section>
 
+        <ModelGenerationPrioritySection />
+
         {/* Knockout Models Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -591,6 +657,80 @@ export default function CustomMouseModelsPage() {
                     marginBottom: '16px'
                   }}>
                     <IconShield size={24} color="#008080" />
+                  </div>
+                  <h3 style={{
+                    fontFamily: 'Poppins, sans-serif',
+                    fontSize: '1.1rem',
+                    fontWeight: 600,
+                    color: '#333',
+                    marginBottom: '12px'
+                  }}>
+                    {model.title}
+                  </h3>
+                  <p style={{ fontSize: '.9rem', color: '#666', marginBottom: '16px', lineHeight: 1.6 }}>
+                    {model.description}
+                  </p>
+                  <Link href={model.href} style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    color: '#008080',
+                    fontSize: '.85rem',
+                    fontWeight: 600,
+                    textDecoration: 'none'
+                  }}>
+                    Learn More
+                    <IconChevronRight size={14} color="#008080" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Transgenic and Cre Driver Section */}
+        <section style={{ background: '#ffffff', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 className="animate-in" style={{
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: '2rem',
+              fontWeight: 700,
+              color: '#2384da',
+              marginBottom: '16px',
+              textAlign: 'center'
+            }}>
+              {transgenicCreData.title}
+            </h2>
+            <p className="animate-in" style={{
+              fontSize: '.9rem',
+              color: '#666',
+              textAlign: 'center',
+              marginBottom: '40px',
+              lineHeight: 1.7,
+              maxWidth: '800px',
+              margin: '0 auto 40px'
+            }}>
+              {transgenicCreData.intro}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {transgenicCreData.models.map((model, index) => (
+                <div key={index} className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{
+                  background: '#f7f7f7',
+                  borderRadius: '8px',
+                  padding: '24px',
+                  borderLeft: '4px solid #008080'
+                }}>
+                  <div style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '50%',
+                    background: 'rgba(0,128,128,0.1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '16px'
+                  }}>
+                    <IconFlask size={24} color="#008080" />
                   </div>
                   <h3 style={{
                     fontFamily: 'Poppins, sans-serif',

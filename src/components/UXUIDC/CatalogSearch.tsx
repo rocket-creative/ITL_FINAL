@@ -42,17 +42,20 @@ interface CatalogSearchProps {
   preloadedModels?: CatalogModel[];
 }
 
+/** Stable default — inline `= []` allocates a new array every render and loops the search effect. */
+const EMPTY_MODELS: CatalogModel[] = [];
+
 export function CatalogSearch({
   compact = false,
   maxResults = 25,
   showTitle = true,
   className = '',
   initialQuery,
-  preloadedModels = [],
+  preloadedModels = EMPTY_MODELS,
 }: CatalogSearchProps) {
   const [searchTerm, setSearchTerm]         = useState(initialQuery ?? '');
   const [results, setResults]               = useState<CatalogModel[]>(
-    preloadedModels.length > 0 && initialQuery ? preloadedModels : []
+    preloadedModels.length > 0 && initialQuery ? preloadedModels : EMPTY_MODELS
   );
   const [stats, setStats]                   = useState<CatalogStats | null>(null);
   const [isSearching, setIsSearching]       = useState(false);
@@ -87,9 +90,9 @@ export function CatalogSearch({
   const runSearch = useCallback(async (term: string) => {
     const q = term.trim();
     if (!q) {
-      setResults([]);
-      setHasSearched(false);
-      setError(null);
+      setResults((prev) => (prev.length === 0 ? prev : EMPTY_MODELS));
+      setHasSearched((prev) => (prev ? false : prev));
+      setError((prev) => (prev == null ? prev : null));
       return;
     }
 
@@ -117,8 +120,8 @@ export function CatalogSearch({
     if (debounceRef.current) clearTimeout(debounceRef.current);
 
     if (!searchTerm.trim()) {
-      setResults([]);
-      setHasSearched(false);
+      setResults((prev) => (prev.length === 0 ? prev : EMPTY_MODELS));
+      setHasSearched((prev) => (prev ? false : prev));
       return;
     }
 
@@ -135,7 +138,7 @@ export function CatalogSearch({
   const handleSearch  = (e: React.FormEvent) => { e.preventDefault(); runSearch(searchTerm); };
   const clearSearch   = () => {
     setSearchTerm('');
-    setResults([]);
+    setResults(EMPTY_MODELS);
     setHasSearched(false);
     setError(null);
     searchInputRef.current?.focus();
