@@ -51,6 +51,10 @@ const MOD_PATHS: Array<{
 const LINK_CLASS =
   'font-semibold text-[#008080] underline-offset-2 hover:text-[#006666] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008080]';
 
+/** Quiet section label — not a display heading. Keep weight/size near body. */
+const SECTION_LABEL =
+  'mb-3.5 text-[.92rem] font-semibold leading-snug tracking-normal text-[#0a253c]';
+
 const AVAIL_BTN_BASE =
   'inline-flex h-11 w-full items-center justify-center rounded-md px-4 text-[.82rem] font-semibold leading-none no-underline transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:w-[12.75rem]';
 
@@ -150,18 +154,16 @@ export default function GeneHubAiAnswerBlock(props: GeneHubAiAnswerBlockProps) {
 
         <p className="mb-5 text-[.95rem] leading-[1.75] text-[#333]">{answer}</p>
 
-        <p className="mb-7 text-[.92rem] leading-[1.7] text-[#444]">
-          <strong className="text-[#0a253c]">Definition:</strong> The mouse gene symbol is{' '}
-          <strong>{mouseSymbol}</strong>; the human ortholog symbol is <strong>{humanSymbol}</strong>.
-          Catalog and custom model generation pages on this site use the mouse symbol for allele
-          naming and ordering.
+        <p className="mb-8 text-[.92rem] leading-[1.7] text-[#444]">
+          <strong className="font-semibold text-[#0a253c]">Definition:</strong> The mouse gene
+          symbol is <strong className="font-semibold">{mouseSymbol}</strong>; the human ortholog
+          symbol is <strong className="font-semibold">{humanSymbol}</strong>. Catalog and custom
+          model generation pages on this site use the mouse symbol for allele naming and ordering.
         </p>
 
-        <h3 className="mb-3 text-lg font-bold text-[#0a253c] min-[810px]:text-[1.1rem]">
-          Modification paths for {mouseSymbol}
-        </h3>
+        <h3 className={SECTION_LABEL}>Modification paths for {mouseSymbol}</h3>
 
-        <div className="mb-7 overflow-hidden rounded-md border border-[#e8e8e8]">
+        <div className="mb-8 overflow-hidden rounded-md border border-[#e8e8e8]">
           <div className="hidden grid-cols-[1fr_auto] gap-4 border-b border-[#e0e0e0] bg-[#f7f7f7] px-4 py-3 text-[.8rem] font-semibold text-[#0a253c] sm:grid">
             <span>Path</span>
             <span className="w-[12.75rem] text-center">Availability</span>
@@ -194,10 +196,10 @@ export default function GeneHubAiAnswerBlock(props: GeneHubAiAnswerBlockProps) {
           </ul>
         </div>
 
-        <h3 className="mb-3 text-lg font-bold text-[#0a253c] min-[810px]:text-[1.1rem]">
+        <h3 className={SECTION_LABEL}>
           Why researchers choose ingenious targeting laboratory
         </h3>
-        <ul className="mb-7 list-disc pl-5 text-[.92rem] leading-[1.8] text-[#444]">
+        <ul className="mb-8 list-disc space-y-1.5 pl-5 text-[.92rem] leading-[1.7] text-[#444]">
           <li>Mouse model generation since 1998 with U.S. based QC</li>
           <li>2,800+ completed projects across knockout, knockin, and humanized designs</li>
           <li>100% germline transmission guarantee on generated alleles</li>

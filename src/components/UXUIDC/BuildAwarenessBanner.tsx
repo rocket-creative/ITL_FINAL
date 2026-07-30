@@ -39,7 +39,7 @@ export default function BuildAwarenessBanner() {
 
   return (
     <div
-      className="w-full max-w-[1200px] mx-auto bg-white border-b border-[#e0e0e0]"
+      className="mx-auto mb-1 w-full max-w-[1200px] bg-white"
       role="region"
       aria-label="Build capability"
     >
