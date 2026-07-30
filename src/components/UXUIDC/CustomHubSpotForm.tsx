@@ -14,7 +14,7 @@
  * - Accessible & mobile-responsive
  */
 
-import { useState, FormEvent, ChangeEvent } from 'react';
+import { useState, useRef, useEffect, FormEvent, ChangeEvent } from 'react';
 import { submitToHubSpot, isValidEmail, isValidPhone } from '@/lib/hubspot';
 
 export interface FormField {
@@ -57,6 +57,23 @@ export default function CustomHubSpotForm({
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const errorBannerRef = useRef<HTMLDivElement>(null);
+  const fieldRefs = useRef<Record<string, HTMLElement | null>>({});
+
+  useEffect(() => {
+    if (submitStatus !== 'error') return;
+    errorBannerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, [submitStatus]);
+
+  const scrollToFirstError = (errorMap: Record<string, string>) => {
+    const firstErrorField = fields.find((field) => errorMap[field.name]);
+    if (!firstErrorField) return;
+    const el = fieldRefs.current[firstErrorField.name] ?? document.getElementById(firstErrorField.name);
+    el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (el && 'focus' in el && typeof el.focus === 'function') {
+      el.focus({ preventScroll: true });
+    }
+  };
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -107,9 +124,9 @@ export default function CustomHubSpotForm({
         newErrors[field.name] = 'Please enter a valid email address';
       }
 
-      // Phone validation
+      // Phone validation: optional field, but if filled must be 10 to 15 digits
       if (field.type === 'tel' && typeof value === 'string' && !isValidPhone(value)) {
-        newErrors[field.name] = 'Please enter a valid phone number';
+        newErrors[field.name] = 'Enter a 10 to 15 digit phone number, or leave blank';
       }
 
       // Generated validation
@@ -122,7 +139,12 @@ export default function CustomHubSpotForm({
     });
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    const valid = Object.keys(newErrors).length === 0;
+    if (!valid) {
+      // Defer until error DOM is painted
+      requestAnimationFrame(() => scrollToFirstError(newErrors));
+    }
+    return valid;
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -133,8 +155,20 @@ export default function CustomHubSpotForm({
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    // Omit empty optional values so HubSpot does not reject blank phone/selects
+    const payload: Record<string, string | string[]> = {};
+    Object.entries(formData).forEach(([key, value]) => {
+      if (Array.isArray(value)) {
+        if (value.length > 0) payload[key] = value;
+        return;
+      }
+      if (typeof value === 'string' && value.trim() !== '') {
+        payload[key] = value.trim();
+      }
+    });
+
     try {
-      const result = await submitToHubSpot(portalId, formGuid, formData);
+      const result = await submitToHubSpot(portalId, formGuid, payload);
 
       if (result.success) {
         onSuccess?.();
@@ -206,6 +240,9 @@ export default function CustomHubSpotForm({
       {/* Error banner */}
       {submitStatus === 'error' && (
         <div
+          ref={errorBannerRef}
+          role="alert"
+          tabIndex={-1}
           style={{
             padding: '16px',
             marginBottom: '24px',
@@ -251,6 +288,9 @@ export default function CustomHubSpotForm({
             <textarea
               id={field.name}
               name={field.name}
+              ref={(el) => {
+                fieldRefs.current[field.name] = el;
+              }}
               value={(formData[field.name] as string) || ''}
               onChange={handleChange}
               placeholder={field.placeholder}
@@ -279,6 +319,9 @@ export default function CustomHubSpotForm({
             <select
               id={field.name}
               name={field.name}
+              ref={(el) => {
+                fieldRefs.current[field.name] = el;
+              }}
               value={(formData[field.name] as string) || ''}
               onChange={handleChange}
               style={{
@@ -312,6 +355,9 @@ export default function CustomHubSpotForm({
               id={field.name}
               name={field.name}
               type={field.type}
+              ref={(el) => {
+                fieldRefs.current[field.name] = el;
+              }}
               value={(formData[field.name] as string) || ''}
               onChange={handleChange}
               placeholder={field.placeholder}

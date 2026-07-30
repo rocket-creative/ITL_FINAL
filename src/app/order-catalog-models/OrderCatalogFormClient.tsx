@@ -26,39 +26,65 @@ import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verified
 
 const ORDER_CATALOG_THANK_YOU = '/order-catalog-models/thank-you/';
 
-// ========== FORM FIELD OPTIONS ==========
-const modelCategoryOptions = [
-  'Humanized Checkpoint Model',
+// ========== FORM FIELD OPTIONS (must match HubSpot form 33db5512) ==========
+// Live definition: https://share.hsforms.com/1M9tVEueNSTy-W-vE6Cz8UQ2d9ep
+const modelTypeOptions = [
+  'Humanized',
+  'Knockout',
+  'Knockin',
+  'Conditional Knockout',
+  'Point Mutation',
+  'Reporter',
   'Disease Model',
-  'Reporter Model',
-  'Cre Driver Line',
-  'Knockout Model',
-  'Knockin Model',
-  'Double Checkpoint Model',
-  'Other / Not Sure',
+  'Transgenic',
+  'Not sure',
 ];
 
 const quantityOptions = [
-  'Breeding pair (1 male + 1-2 females)',
-  'Small cohort (5-10 mice)',
-  'Medium cohort (10-25 mice)',
+  'Breeding pair (1 male + 1 to 2 females)',
+  'Small cohort (5 to 10 mice)',
+  'Medium cohort (10 to 25 mice)',
   'Large cohort (25+ mice)',
-  'Cryopreserved (embryos/sperm)',
-  'Generated quantity',
+  'Cryopreserved (embryos or sperm)',
+  'Custom quantity',
 ];
 
 const fallbackFields: FormField[] = [
   { name: 'firstname', label: 'First Name', type: 'text', required: true },
   { name: 'lastname', label: 'Last Name', type: 'text', required: true },
   { name: 'email', label: 'Email', type: 'email', required: true },
-  { name: 'phone', label: 'Phone', type: 'tel', required: false },
-  { name: 'institution', label: 'Institution / Company', type: 'text', required: true },
-  // HubSpot internal name stays mouse_strain_name; label shown as Model Abbreviation.
-  { name: 'mouse_strain_name', label: 'Model Abbreviation', type: 'text', required: true, placeholder: 'e.g., Exoc2-KO' },
-  { name: 'catalog_number', label: 'Catalog Number', type: 'text', required: true, placeholder: 'e.g., KO 2109194' },
   {
-    name: 'how_did_you_hear_about_ingenious_',
-    label: 'How did you hear about ingenious?',
+    name: 'phone',
+    label: 'Phone number',
+    type: 'tel',
+    required: false,
+    placeholder: 'e.g. (555) 555 0100',
+  },
+  { name: 'institution', label: 'Institution / Company', type: 'text', required: false },
+  {
+    name: 'strain_name',
+    label: 'Strain Name',
+    type: 'text',
+    required: true,
+    placeholder: 'e.g., Exoc2-KO',
+  },
+  {
+    name: 'catalog_number',
+    label: 'Catalog Number',
+    type: 'text',
+    required: true,
+    placeholder: 'e.g., KO 2109194',
+  },
+  {
+    name: 'model_type',
+    label: 'Model Type',
+    type: 'select',
+    required: true,
+    options: modelTypeOptions.map((opt) => ({ value: opt, label: opt })),
+  },
+  {
+    name: 'how_did_you_hear_about_us',
+    label: 'How did you hear about us',
     type: 'select',
     required: true,
     options: [
@@ -76,9 +102,16 @@ const fallbackFields: FormField[] = [
     label: 'Quantity Needed',
     type: 'select',
     required: false,
-    options: quantityOptions.map(opt => ({ value: opt, label: opt })),
+    options: quantityOptions.map((opt) => ({ value: opt, label: opt })),
   },
-  { name: 'message', label: 'Additional Information', type: 'textarea', required: false, rows: 4, placeholder: 'Any special requirements or questions...' },
+  {
+    name: 'message',
+    label: 'Additional Information',
+    type: 'textarea',
+    required: false,
+    rows: 4,
+    placeholder: 'Any special requirements or questions...',
+  },
 ];
 
 const faqData = [
@@ -142,7 +175,7 @@ interface OrderCatalogFormClientProps {
 export default function OrderCatalogFormClient({ initialModel, initialCatalog }: OrderCatalogFormClientProps) {
   const [showCatalogSearch, setShowCatalogSearch] = useState(false);
   const initialValues = (initialModel || initialCatalog)
-    ? { mouse_strain_name: initialModel ?? '', catalog_number: initialCatalog ?? '' }
+    ? { strain_name: initialModel ?? '', catalog_number: initialCatalog ?? '' }
     : undefined;
 
   return (
