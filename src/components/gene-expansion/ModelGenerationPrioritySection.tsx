@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useId, useState, type CSSProperties, type KeyboardEvent } from 'react';
 import Link from 'next/link';
-import GeneHubTrustBand from '@/components/gene-expansion/GeneHubTrustBand';
 import {
   PRIORITY_GENES,
   getPriorityGenesByCohort,
@@ -39,7 +38,30 @@ const GENERATION_MOD_TYPES: Array<{ label: string; slug: string }> = [
   { label: 'Transgenic / overexpression', slug: 'overexpression' },
 ];
 
-const GENE_PREVIEW_LIMIT = 40;
+const GENE_PREVIEW_LIMIT = 24;
+
+const SECTION_PADDING = '60px 20px';
+
+const H2_BASE: CSSProperties = {
+  fontFamily: 'Poppins, sans-serif',
+  fontWeight: 700,
+  color: '#2384da',
+  textAlign: 'center',
+  marginBottom: '16px',
+  lineHeight: 1.25,
+};
+
+const INTRO_PARAGRAPH: CSSProperties = {
+  fontSize: '.9rem',
+  color: '#666',
+  textAlign: 'center',
+  lineHeight: 1.7,
+  maxWidth: '800px',
+  margin: '0 auto 32px',
+};
+
+const FOCUS_RING =
+  'outline: none; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #008080;';
 
 function geneHubHref(mouseSymbol: string): string {
   return `/all-catalog-mouse-models/gene/${encodeURIComponent(mouseSymbol)}/`;
@@ -85,20 +107,126 @@ function matchesSearch(gene: PriorityGene, query: string): boolean {
   return gene.aliases.some((alias) => alias.toLowerCase().includes(q));
 }
 
+function ModTypesTable() {
+  return (
+    <>
+      <div className="model-gen-mod-stack" style={{ marginBottom: '28px' }}>
+        {GENERATION_MOD_TYPES.map((row) => (
+          <div
+            key={row.slug}
+            style={{
+              background: '#fff',
+              border: '1px solid #e8e8e8',
+              borderRadius: '6px',
+              padding: '14px 16px',
+              marginBottom: '10px',
+            }}
+          >
+            <p
+              style={{
+                margin: '0 0 8px',
+                fontWeight: 600,
+                color: '#0a253c',
+                fontSize: '.9rem',
+              }}
+            >
+              {row.label}
+            </p>
+            <Link
+              href={typeQuoteHref(row.slug)}
+              style={{ color: '#008080', fontWeight: 600, textDecoration: 'none', fontSize: '.88rem' }}
+            >
+              Request a quote
+            </Link>
+          </div>
+        ))}
+      </div>
+
+      <div className="model-gen-mod-table-wrap" style={{ overflowX: 'auto', marginBottom: '28px' }}>
+        <table
+          className="model-gen-mod-table"
+          style={{
+            width: '100%',
+            borderCollapse: 'collapse',
+            fontSize: '.9rem',
+          }}
+        >
+          <thead>
+            <tr style={{ background: '#f7f7f7' }}>
+              <th
+                scope="col"
+                style={{
+                  padding: '12px 16px',
+                  textAlign: 'left',
+                  fontWeight: 600,
+                  color: '#0a253c',
+                  borderBottom: '2px solid #e0e0e0',
+                }}
+              >
+                Model type
+              </th>
+              <th
+                scope="col"
+                style={{
+                  padding: '12px 16px',
+                  textAlign: 'left',
+                  fontWeight: 600,
+                  color: '#0a253c',
+                  borderBottom: '2px solid #e0e0e0',
+                }}
+              >
+                Availability
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {GENERATION_MOD_TYPES.map((row, index) => (
+              <tr
+                key={row.slug}
+                style={{
+                  background: index % 2 === 0 ? '#fff' : '#fafafa',
+                  borderBottom: '1px solid #f0f0f0',
+                }}
+              >
+                <td style={{ padding: '12px 16px', color: '#333', fontWeight: 500 }}>
+                  {row.label}
+                </td>
+                <td style={{ padding: '12px 16px' }}>
+                  <Link
+                    href={typeQuoteHref(row.slug)}
+                    style={{ color: '#008080', fontWeight: 600, textDecoration: 'none' }}
+                  >
+                    Request a quote
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+}
+
 function GeneChip({ gene }: { gene: PriorityGene }) {
   return (
     <span
+      className="model-gen-gene-chip"
       style={{
         display: 'inline-flex',
         alignItems: 'center',
         flexWrap: 'wrap',
-        gap: '6px',
-        padding: '6px 10px',
+        gap: '8px',
+        padding: '8px 12px',
+        minHeight: '44px',
         border: '1px solid #d0e8e8',
+        borderRadius: '6px',
         background: '#fff',
         fontFamily: 'Poppins, sans-serif',
         fontSize: '.82rem',
         lineHeight: 1.4,
+        contentVisibility: 'auto',
+        containIntrinsicSize: 'auto 40px',
       }}
     >
       <Link
@@ -110,7 +238,18 @@ function GeneChip({ gene }: { gene: PriorityGene }) {
       </Link>
       <Link
         href={quoteHref(gene.mouseSymbol)}
-        style={{ color: '#008080', fontSize: '.75rem', fontWeight: 600, textDecoration: 'none' }}
+        aria-label={`Request a quote for ${gene.mouseSymbol}`}
+        style={{
+          color: '#008080',
+          fontSize: '.78rem',
+          fontWeight: 600,
+          textDecoration: 'none',
+          padding: '6px 10px',
+          minHeight: '44px',
+          display: 'inline-flex',
+          alignItems: 'center',
+          borderRadius: '6px',
+        }}
       >
         Quote
       </Link>
@@ -122,6 +261,7 @@ export default function ModelGenerationPrioritySection() {
   const [cohort, setCohort] = useState<GeneCohort>('signaling');
   const [showAll, setShowAll] = useState(false);
   const [search, setSearch] = useState('');
+  const tabPanelId = useId();
 
   const cohortGenes = orderGenesForCohort(getPriorityGenesByCohort(cohort), cohort);
   const visibleGenes = showAll ? cohortGenes : cohortGenes.slice(0, GENE_PREVIEW_LIMIT);
@@ -132,42 +272,85 @@ export default function ModelGenerationPrioritySection() {
       ? PRIORITY_GENES.filter((g) => matchesSearch(g, search)).slice(0, 24)
       : [];
 
+  const selectCohort = useCallback((next: GeneCohort) => {
+    setCohort(next);
+    setShowAll(false);
+  }, []);
+
+  const handleTabKeyDown = useCallback(
+    (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const direction = event.key === 'ArrowRight' ? 1 : -1;
+      const nextIndex = (index + direction + COHORTS.length) % COHORTS.length;
+      selectCohort(COHORTS[nextIndex]);
+      const tabList = event.currentTarget.parentElement;
+      const nextTab = tabList?.querySelectorAll<HTMLButtonElement>('[role="tab"]')[nextIndex];
+      nextTab?.focus();
+    },
+    [selectCohort],
+  );
+
   return (
     <div style={{ fontFamily: 'Poppins, sans-serif' }}>
-      <GeneHubTrustBand />
+      <style>{`
+        .model-gen-h2 {
+          font-size: 1.5rem;
+        }
+        @media (min-width: 768px) {
+          .model-gen-h2 {
+            font-size: 2rem;
+          }
+        }
+        .model-gen-mod-stack {
+          display: block;
+        }
+        .model-gen-mod-table-wrap {
+          display: none;
+        }
+        @media (min-width: 768px) {
+          .model-gen-mod-stack {
+            display: none;
+          }
+          .model-gen-mod-table-wrap {
+            display: block;
+          }
+        }
+        .model-gen-search-input:focus-visible {
+          ${FOCUS_RING}
+        }
+        .model-gen-cohort-tab:focus-visible {
+          ${FOCUS_RING}
+        }
+        .model-gen-show-all-btn:focus-visible {
+          ${FOCUS_RING}
+        }
+      `}</style>
 
       {/* AI Answer Block */}
       <section
         aria-labelledby="model-gen-ai-answer-heading"
-        style={{ background: '#fff', padding: '56px 20px', borderBottom: '1px solid #eee' }}
+        style={{ background: '#fff', padding: SECTION_PADDING, borderBottom: '1px solid #eee' }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <p
             style={{
-              display: 'inline-block',
+              display: 'block',
               fontSize: '.75rem',
               fontWeight: 600,
               letterSpacing: '0.06em',
               textTransform: 'uppercase',
               color: '#008080',
               marginBottom: '10px',
+              textAlign: 'center',
             }}
           >
             AI Answer
           </p>
-          <h2
-            id="model-gen-ai-answer-heading"
-            style={{
-              fontSize: '1.45rem',
-              fontWeight: 700,
-              color: '#0a253c',
-              marginBottom: '16px',
-              lineHeight: 1.3,
-            }}
-          >
+          <h2 id="model-gen-ai-answer-heading" className="model-gen-h2" style={H2_BASE}>
             Mouse model generation for high priority research genes
           </h2>
-          <p style={{ color: '#333', fontSize: '.95rem', lineHeight: 1.75, marginBottom: '28px' }}>
+          <p style={{ ...INTRO_PARAGRAPH, fontSize: '.95rem', marginBottom: '28px' }}>
             ingenious targeting laboratory designs knockout, conditional knockout, knockin,
             humanized, and transgenic models for 700+ priority genes across signaling, immune,
             cancer, neuroscience, metabolism, and morphogen pathways. Quote in 24 hours. 100%
@@ -180,74 +363,22 @@ export default function ModelGenerationPrioritySection() {
               fontWeight: 700,
               color: '#0a253c',
               marginBottom: '12px',
+              textAlign: 'center',
             }}
           >
-            Modification types available to generate
+            Model modification types
           </h3>
-          <div style={{ overflowX: 'auto', marginBottom: '28px' }}>
-            <table
-              style={{
-                width: '100%',
-                borderCollapse: 'collapse',
-                fontSize: '.9rem',
-                minWidth: '480px',
-              }}
-            >
-              <thead>
-                <tr style={{ background: '#f7f7f7' }}>
-                  <th
-                    scope="col"
-                    style={{
-                      padding: '12px 16px',
-                      textAlign: 'left',
-                      fontWeight: 600,
-                      color: '#0a253c',
-                      borderBottom: '2px solid #e0e0e0',
-                    }}
-                  >
-                    Model type
-                  </th>
-                  <th
-                    scope="col"
-                    style={{
-                      padding: '12px 16px',
-                      textAlign: 'left',
-                      fontWeight: 600,
-                      color: '#0a253c',
-                      borderBottom: '2px solid #e0e0e0',
-                    }}
-                  >
-                    Availability
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {GENERATION_MOD_TYPES.map((row, index) => (
-                  <tr
-                    key={row.slug}
-                    style={{
-                      background: index % 2 === 0 ? '#fff' : '#fafafa',
-                      borderBottom: '1px solid #f0f0f0',
-                    }}
-                  >
-                    <td style={{ padding: '12px 16px', color: '#333', fontWeight: 500 }}>
-                      {row.label}
-                    </td>
-                    <td style={{ padding: '12px 16px' }}>
-                      <Link
-                        href={typeQuoteHref(row.slug)}
-                        style={{ color: '#008080', fontWeight: 600, textDecoration: 'none' }}
-                      >
-                        Available to generate
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <ModTypesTable />
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '12px',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
             <Link
               href="/request-quote/"
               style={{
@@ -255,11 +386,10 @@ export default function ModelGenerationPrioritySection() {
                 background: '#008080',
                 color: '#fff',
                 padding: '12px 22px',
-                fontSize: '.85rem',
+                fontSize: '.9rem',
                 fontWeight: 600,
                 textDecoration: 'none',
-                letterSpacing: '0.04em',
-                textTransform: 'uppercase',
+                borderRadius: '6px',
               }}
             >
               Request a Quote
@@ -283,21 +413,13 @@ export default function ModelGenerationPrioritySection() {
       {/* PI taxonomy for generation */}
       <section
         aria-labelledby="model-gen-pi-taxonomy-heading"
-        style={{ background: '#f5f5f4', padding: '56px 20px' }}
+        style={{ background: '#f5f5f4', padding: SECTION_PADDING }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h2
-            id="model-gen-pi-taxonomy-heading"
-            style={{
-              fontSize: '1.45rem',
-              fontWeight: 700,
-              color: '#0a253c',
-              marginBottom: '8px',
-            }}
-          >
+          <h2 id="model-gen-pi-taxonomy-heading" className="model-gen-h2" style={H2_BASE}>
             PI taxonomy for model generation
           </h2>
-          <p style={{ color: '#555', fontSize: '.92rem', lineHeight: 1.7, marginBottom: '32px' }}>
+          <p style={INTRO_PARAGRAPH}>
             Associate your project with the full PI search taxonomy, from knockout through
             backgrounds.
           </p>
@@ -318,28 +440,32 @@ export default function ModelGenerationPrioritySection() {
               </h3>
               <div
                 style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '10px 14px',
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                  gap: '14px',
                 }}
               >
                 {group.children.map((child) => {
                   const href = childHref(child);
+                  const isQuoteLink = Boolean(child.canonicalModSlug || !child.siteHref);
                   return (
                     <div
                       key={child.id}
                       style={{
-                        flex: '1 1 220px',
-                        maxWidth: '320px',
-                        padding: '12px 14px',
+                        padding: '16px 18px',
                         background: '#fff',
                         border: '1px solid #e8e8e8',
+                        borderRadius: '6px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '10px',
+                        minHeight: '100%',
                       }}
                     >
                       <p
                         style={{
-                          margin: '0 0 8px',
-                          fontSize: '.88rem',
+                          margin: 0,
+                          fontSize: '.9rem',
                           fontWeight: 600,
                           color: '#0a253c',
                           lineHeight: 1.4,
@@ -356,15 +482,16 @@ export default function ModelGenerationPrioritySection() {
                             fontWeight: 600,
                             textDecoration: 'none',
                             borderBottom: '1px solid #008080',
+                            width: 'fit-content',
                           }}
                         >
-                          {child.canonicalModSlug || !child.siteHref ? 'Generate' : 'Open hub'}
+                          {isQuoteLink ? 'Request a quote' : 'View related'}
                         </Link>
                       ) : null}
                       {child.quoteNote ? (
                         <p
                           style={{
-                            margin: '8px 0 0',
+                            margin: 0,
                             fontSize: '.75rem',
                             color: '#666',
                             lineHeight: 1.5,
@@ -385,50 +512,53 @@ export default function ModelGenerationPrioritySection() {
       {/* Browse by research cohort */}
       <section
         aria-labelledby="model-gen-cohort-heading"
-        style={{ background: '#fff', padding: '56px 20px', borderBottom: '1px solid #eee' }}
+        style={{ background: '#fff', padding: SECTION_PADDING, borderBottom: '1px solid #eee' }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h2
-            id="model-gen-cohort-heading"
-            style={{
-              fontSize: '1.45rem',
-              fontWeight: 700,
-              color: '#0a253c',
-              marginBottom: '8px',
-            }}
-          >
+          <h2 id="model-gen-cohort-heading" className="model-gen-h2" style={H2_BASE}>
             Browse by research cohort
           </h2>
-          <p style={{ color: '#555', fontSize: '.92rem', lineHeight: 1.7, marginBottom: '24px' }}>
-            Open a gene hub for catalog and generate CTAs, or start a quote for that mouse symbol.
+          <p style={INTRO_PARAGRAPH}>
+            Open a gene hub for catalog paths, or request a quote for that mouse symbol.
           </p>
 
           <div
             role="tablist"
             aria-label="Research cohorts"
-            style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '8px',
+              marginBottom: '24px',
+              justifyContent: 'center',
+            }}
           >
-            {COHORTS.map((c) => {
+            {COHORTS.map((c, index) => {
               const selected = c === cohort;
+              const tabId = `model-gen-cohort-tab-${c}`;
               return (
                 <button
                   key={c}
+                  id={tabId}
                   type="button"
                   role="tab"
+                  className="model-gen-cohort-tab"
                   aria-selected={selected}
-                  onClick={() => {
-                    setCohort(c);
-                    setShowAll(false);
-                  }}
+                  aria-controls={tabPanelId}
+                  tabIndex={selected ? 0 : -1}
+                  onClick={() => selectCohort(c)}
+                  onKeyDown={(event) => handleTabKeyDown(event, index)}
                   style={{
                     fontFamily: 'Poppins, sans-serif',
                     fontSize: '.8rem',
                     fontWeight: 600,
-                    padding: '8px 14px',
+                    padding: '10px 14px',
+                    minHeight: '44px',
                     border: selected ? '1px solid #008080' : '1px solid #d0d0d0',
                     background: selected ? '#008080' : '#fff',
                     color: selected ? '#fff' : '#0a253c',
                     cursor: 'pointer',
+                    borderRadius: '6px',
                   }}
                 >
                   {getCohortLabel(c)}
@@ -442,15 +572,22 @@ export default function ModelGenerationPrioritySection() {
               fontSize: '.85rem',
               color: '#666',
               marginBottom: '16px',
+              textAlign: 'center',
             }}
           >
             {cohortGenes.length} genes in {getCohortLabel(cohort)}
           </p>
 
           <div
+            id={tabPanelId}
             role="tabpanel"
-            aria-label={getCohortLabel(cohort)}
-            style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}
+            aria-labelledby={`model-gen-cohort-tab-${cohort}`}
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '8px',
+              justifyContent: 'center',
+            }}
           >
             {visibleGenes.map((gene) => (
               <GeneChip key={`${gene.cohort}-${gene.humanSymbol}`} gene={gene} />
@@ -458,23 +595,27 @@ export default function ModelGenerationPrioritySection() {
           </div>
 
           {hasMore ? (
-            <button
-              type="button"
-              onClick={() => setShowAll((v) => !v)}
-              style={{
-                marginTop: '20px',
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '.85rem',
-                fontWeight: 600,
-                color: '#008080',
-                background: 'transparent',
-                border: '1px solid #008080',
-                padding: '10px 18px',
-                cursor: 'pointer',
-              }}
-            >
-              {showAll ? 'Show fewer' : `Show all ${cohortGenes.length} genes`}
-            </button>
+            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+              <button
+                type="button"
+                className="model-gen-show-all-btn"
+                onClick={() => setShowAll((v) => !v)}
+                style={{
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '.85rem',
+                  fontWeight: 600,
+                  color: '#008080',
+                  background: 'transparent',
+                  border: '1px solid #008080',
+                  padding: '10px 18px',
+                  minHeight: '44px',
+                  cursor: 'pointer',
+                  borderRadius: '6px',
+                }}
+              >
+                {showAll ? 'Show fewer' : `Show all ${cohortGenes.length} genes`}
+              </button>
+            </div>
           ) : null}
         </div>
       </section>
@@ -482,30 +623,17 @@ export default function ModelGenerationPrioritySection() {
       {/* Search box */}
       <section
         aria-labelledby="model-gen-search-heading"
-        style={{ background: '#f0f9f9', padding: '48px 20px' }}
+        style={{ background: '#f0f9f9', padding: SECTION_PADDING }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h2
-            id="model-gen-search-heading"
-            style={{
-              fontSize: '1.25rem',
-              fontWeight: 700,
-              color: '#0a253c',
-              marginBottom: '12px',
-            }}
-          >
+          <h2 id="model-gen-search-heading" className="model-gen-h2" style={H2_BASE}>
             Search priority genes
           </h2>
-          <label
-            htmlFor="model-gen-gene-search"
-            style={{
-              display: 'block',
-              fontSize: '.85rem',
-              color: '#555',
-              marginBottom: '8px',
-            }}
-          >
+          <p style={{ ...INTRO_PARAGRAPH, marginBottom: '20px' }}>
             Filter by human symbol, mouse symbol, or alias
+          </p>
+          <label htmlFor="model-gen-gene-search" className="sr-only">
+            Search priority genes by symbol or alias
           </label>
           <input
             id="model-gen-gene-search"
@@ -514,32 +642,40 @@ export default function ModelGenerationPrioritySection() {
             onChange={(e) => setSearch(e.target.value)}
             placeholder="e.g. Trp53, EGFR, PD1"
             autoComplete="off"
+            className="model-gen-search-input"
             style={{
+              display: 'block',
               width: '100%',
               maxWidth: '420px',
+              margin: '0 auto',
               padding: '12px 14px',
+              minHeight: '44px',
               fontFamily: 'Poppins, sans-serif',
               fontSize: '.9rem',
               border: '1px solid #c0d8d8',
+              borderRadius: '6px',
               background: '#fff',
               color: '#0a253c',
-              outline: 'none',
             }}
           />
           {search.trim() ? (
             <ul
               style={{
                 listStyle: 'none',
-                margin: '16px 0 0',
+                margin: '16px auto 0',
                 padding: 0,
                 display: 'flex',
                 flexWrap: 'wrap',
                 gap: '8px',
+                justifyContent: 'center',
+                maxWidth: '1000px',
               }}
               aria-label="Gene search results"
             >
               {searchResults.length === 0 ? (
-                <li style={{ fontSize: '.88rem', color: '#666' }}>No matching priority genes.</li>
+                <li style={{ fontSize: '.88rem', color: '#666', width: '100%', textAlign: 'center' }}>
+                  No matching priority genes.
+                </li>
               ) : (
                 searchResults.map((gene) => (
                   <li key={`search-${gene.humanSymbol}`}>

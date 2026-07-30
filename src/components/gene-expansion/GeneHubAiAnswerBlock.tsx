@@ -42,11 +42,22 @@ const MOD_PATHS: Array<{
   },
 ];
 
+const LINK_CLASS =
+  'font-semibold text-[#008080] underline-offset-2 hover:text-[#006666] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008080]';
+
 function isCatalogPath(
   matches: (modLower: string) => boolean,
   modTypesPresent: string[],
 ): boolean {
   return modTypesPresent.some((t) => matches(t.toLowerCase()));
+}
+
+function availabilityLabel(inCatalog: boolean): string {
+  return inCatalog ? 'In catalog' : 'Request a quote';
+}
+
+function availabilityClassName(inCatalog: boolean): string {
+  return inCatalog ? 'font-semibold text-[#008080]' : 'font-semibold text-[#134978]';
 }
 
 function buildDirectAnswer(props: GeneHubAiAnswerBlockProps): string {
@@ -74,6 +85,27 @@ function buildDirectAnswer(props: GeneHubAiAnswerBlockProps): string {
   );
 }
 
+function ModPathRows({ modTypesPresent }: { modTypesPresent: string[] }) {
+  return (
+    <>
+      {MOD_PATHS.map((row, index) => {
+        const inCatalog = isCatalogPath(row.matches, modTypesPresent);
+        const availability = availabilityLabel(inCatalog);
+        const rowBg = index % 2 === 0 ? 'bg-white' : 'bg-[#fafafa]';
+
+        return (
+          <tr key={row.label} className={`${rowBg} border-b border-[#f0f0f0]`}>
+            <td className="px-4 py-3 font-medium text-[#333]">{row.label}</td>
+            <td className="px-4 py-3">
+              <span className={availabilityClassName(inCatalog)}>{availability}</span>
+            </td>
+          </tr>
+        );
+      })}
+    </>
+  );
+}
+
 export default function GeneHubAiAnswerBlock(props: GeneHubAiAnswerBlockProps) {
   const { mouseSymbol, humanSymbol, catalogCount, modTypesPresent } = props;
   const answer = buildDirectAnswer(props);
@@ -83,142 +115,89 @@ export default function GeneHubAiAnswerBlock(props: GeneHubAiAnswerBlockProps) {
   return (
     <section
       aria-labelledby="gene-hub-ai-answer-heading"
-      style={{ background: '#fff', padding: '56px 20px', borderBottom: '1px solid #eee' }}
+      className="border-b border-[#eee] bg-white px-5 py-14"
+      style={{ fontFamily: 'Poppins, sans-serif' }}
     >
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-        <p
-          style={{
-            display: 'inline-block',
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: '.75rem',
-            fontWeight: 600,
-            letterSpacing: '0.06em',
-            textTransform: 'uppercase',
-            color: '#008080',
-            marginBottom: '10px',
-          }}
-        >
+      <div className="mx-auto max-w-[1000px]">
+        <p className="mb-2.5 inline-block text-xs font-semibold uppercase tracking-[0.06em] text-[#008080]">
           AI Answer
         </p>
 
         <h2
           id="gene-hub-ai-answer-heading"
-          style={{
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: '1.45rem',
-            fontWeight: 700,
-            color: '#0a253c',
-            marginBottom: '16px',
-            lineHeight: 1.3,
-          }}
+          className="mb-4 text-xl font-bold leading-snug text-[#0a253c] min-[810px]:text-[1.45rem]"
         >
           {mouseSymbol} mouse models: what ingenious targeting laboratory offers
         </h2>
 
-        <p style={{ color: '#333', fontSize: '.95rem', lineHeight: 1.75, marginBottom: '20px' }}>
-          {answer}
-        </p>
+        <p className="mb-5 text-[.95rem] leading-[1.75] text-[#333]">{answer}</p>
 
-        <p style={{ color: '#444', fontSize: '.92rem', lineHeight: 1.7, marginBottom: '28px' }}>
-          <strong style={{ color: '#0a253c' }}>Definition:</strong>{' '}
+        <p className="mb-7 text-[.92rem] leading-[1.7] text-[#444]">
+          <strong className="text-[#0a253c]">Definition:</strong>{' '}
           The mouse gene symbol is <strong>{mouseSymbol}</strong>; the human ortholog symbol is{' '}
           <strong>{humanSymbol}</strong>. Catalog and custom model generation pages on this site use the
           mouse symbol for allele naming and ordering.
         </p>
 
-        <h3
-          style={{
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: '1.1rem',
-            fontWeight: 700,
-            color: '#0a253c',
-            marginBottom: '12px',
-          }}
-        >
+        <h3 className="mb-3 text-lg font-bold text-[#0a253c] min-[810px]:text-[1.1rem]">
           Modification paths for {mouseSymbol}
         </h3>
 
-        <div style={{ overflowX: 'auto', marginBottom: '28px' }}>
-          <table
-            style={{
-              width: '100%',
-              borderCollapse: 'collapse',
-              fontSize: '.9rem',
-              minWidth: '480px',
-            }}
-          >
+        {/* Mobile: stacked path + availability rows */}
+        <div className="mb-7 min-[810px]:hidden">
+          <ul className="divide-y divide-[#f0f0f0] border border-[#f0f0f0]">
+            {MOD_PATHS.map((row, index) => {
+              const inCatalog = isCatalogPath(row.matches, modTypesPresent);
+              const availability = availabilityLabel(inCatalog);
+              const rowBg = index % 2 === 0 ? 'bg-white' : 'bg-[#fafafa]';
+
+              return (
+                <li key={row.label} className={rowBg}>
+                  <div className="px-4 py-3">
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[#0a253c]">
+                      Path
+                    </p>
+                    <p className="mb-3 text-[.9rem] font-medium text-[#333]">{row.label}</p>
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[#0a253c]">
+                      Availability
+                    </p>
+                    <p className={`text-[.9rem] ${availabilityClassName(inCatalog)}`}>{availability}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        {/* md+: table layout */}
+        <div className="mb-7 hidden min-[810px]:block">
+          <table className="w-full border-collapse text-[.9rem]">
             <thead>
-              <tr style={{ background: '#f7f7f7' }}>
+              <tr className="bg-[#f7f7f7]">
                 <th
-                  style={{
-                    padding: '12px 16px',
-                    textAlign: 'left',
-                    fontWeight: 600,
-                    color: '#0a253c',
-                    borderBottom: '2px solid #e0e0e0',
-                  }}
+                  scope="col"
+                  className="border-b-2 border-[#e0e0e0] px-4 py-3 text-left font-semibold text-[#0a253c]"
                 >
                   Path
                 </th>
                 <th
-                  style={{
-                    padding: '12px 16px',
-                    textAlign: 'left',
-                    fontWeight: 600,
-                    color: '#0a253c',
-                    borderBottom: '2px solid #e0e0e0',
-                  }}
+                  scope="col"
+                  className="border-b-2 border-[#e0e0e0] px-4 py-3 text-left font-semibold text-[#0a253c]"
                 >
                   Availability
                 </th>
               </tr>
             </thead>
             <tbody>
-              {MOD_PATHS.map((row, index) => {
-                const inCatalog = isCatalogPath(row.matches, modTypesPresent);
-                return (
-                  <tr
-                    key={row.label}
-                    style={{
-                      background: index % 2 === 0 ? '#fff' : '#fafafa',
-                      borderBottom: '1px solid #f0f0f0',
-                    }}
-                  >
-                    <td style={{ padding: '12px 16px', color: '#333', fontWeight: 500 }}>
-                      {row.label}
-                    </td>
-                    <td style={{ padding: '12px 16px' }}>
-                      <span style={{ color: inCatalog ? '#008080' : '#134978', fontWeight: 600 }}>
-                        {inCatalog ? 'Catalog' : 'Custom generation'}
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
+              <ModPathRows modTypesPresent={modTypesPresent} />
             </tbody>
           </table>
         </div>
 
-        <h3
-          style={{
-            fontFamily: 'Poppins, sans-serif',
-            fontSize: '1.1rem',
-            fontWeight: 700,
-            color: '#0a253c',
-            marginBottom: '12px',
-          }}
-        >
+        <h3 className="mb-3 text-lg font-bold text-[#0a253c] min-[810px]:text-[1.1rem]">
           Why researchers choose ingenious targeting laboratory
         </h3>
-        <ul
-          style={{
-            margin: '0 0 28px',
-            paddingLeft: '1.25rem',
-            color: '#444',
-            fontSize: '.92rem',
-            lineHeight: 1.8,
-          }}
-        >
+        <ul className="mb-7 list-disc pl-5 text-[.92rem] leading-[1.8] text-[#444]">
           <li>Mouse model generation since 1998 with U.S. based QC</li>
           <li>2,800+ completed projects across knockout, knockin, and humanized designs</li>
           <li>100% germline transmission guarantee on generated alleles</li>
@@ -235,28 +214,28 @@ export default function GeneHubAiAnswerBlock(props: GeneHubAiAnswerBlockProps) {
           )}
         </ul>
 
-        <p style={{ color: '#333', fontSize: '.95rem', lineHeight: 1.75, margin: 0 }}>
+        <p className="m-0 text-[.95rem] leading-[1.75] text-[#333]">
           {catalogCount > 0 ? (
             <>
               To order a listed {mouseSymbol} line, visit{' '}
-              <Link href={orderHref} style={{ color: '#008080', fontWeight: 600 }}>
-                Order catalog models
+              <Link href={orderHref} className={LINK_CLASS}>
+                Order
               </Link>
               . For a generated knockout, knockin, humanized, or transgenic allele,{' '}
-              <Link href={quoteHref} style={{ color: '#008080', fontWeight: 600 }}>
-                request a quote
+              <Link href={quoteHref} className={LINK_CLASS}>
+                Request a quote
               </Link>
               .
             </>
           ) : (
             <>
-              Start a {mouseSymbol} project by{' '}
-              <Link href={quoteHref} style={{ color: '#008080', fontWeight: 600 }}>
-                requesting a quote
+              Start a {mouseSymbol} project with{' '}
+              <Link href={quoteHref} className={LINK_CLASS}>
+                Request a quote
               </Link>
               , or browse related catalog inventory at{' '}
-              <Link href={orderHref} style={{ color: '#008080', fontWeight: 600 }}>
-                Order catalog models
+              <Link href={orderHref} className={LINK_CLASS}>
+                Order
               </Link>
               .
             </>

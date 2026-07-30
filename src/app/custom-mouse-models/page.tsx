@@ -464,6 +464,7 @@ export default function CustomMouseModelsPage() {
           </div>
         </section>
 
+        {/* Trust band omitted: stats section above already covers germline guarantee and experience */}
         <ModelGenerationPrioritySection />
 
         {/* Knockout Models Section */}

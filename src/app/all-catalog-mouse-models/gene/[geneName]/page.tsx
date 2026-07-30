@@ -495,6 +495,7 @@ export default async function GenePage({ params, searchParams }: Props) {
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link
                 href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}`}
+                className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#134978]"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
                   background: '#008080', color: '#fff', padding: '12px 24px',
@@ -505,6 +506,7 @@ export default async function GenePage({ params, searchParams }: Props) {
               </Link>
               <Link
                 href="/all-catalog-mouse-models"
+                className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00d4d4] focus-visible:ring-offset-2 focus-visible:ring-offset-[#134978]"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
                   background: 'transparent', color: '#fff', padding: '12px 24px',
@@ -519,33 +521,19 @@ export default async function GenePage({ params, searchParams }: Props) {
         </section>
 
         {priority ? (
-          <>
+          <div className="gene-hub-priority">
             <GeneHubTrustBand />
 
             {curatedIntro ? (
-              <section style={{ background: '#fff', padding: '48px 20px' }}>
-                <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-                  <h2
-                    style={{
-                      fontFamily: 'Poppins, sans-serif',
-                      fontSize: '1.5rem',
-                      fontWeight: 700,
-                      color: '#0a253c',
-                      marginBottom: '16px',
-                    }}
-                  >
+              <section
+                className="border-b border-[#eee] bg-white px-5 py-10 md:py-12"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                <div className="mx-auto max-w-[1000px]">
+                  <h2 className="mb-4 text-xl font-bold leading-snug text-[#0a253c] md:text-[1.45rem]">
                     Why model {geneName}
                   </h2>
-                  <p
-                    style={{
-                      color: '#444',
-                      lineHeight: 1.8,
-                      fontSize: '.95rem',
-                      margin: 0,
-                    }}
-                  >
-                    {curatedIntro}
-                  </p>
+                  <p className="m-0 text-[.95rem] leading-[1.8] text-[#444]">{curatedIntro}</p>
                 </div>
               </section>
             ) : null}
@@ -563,11 +551,14 @@ export default async function GenePage({ params, searchParams }: Props) {
               humanSymbol={priority.humanSymbol}
               catalogByModSlug={catalogByModSlug}
             />
-          </>
+          </div>
         ) : null}
 
         {/* Top dual-path CTA */}
-        <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <section
+          className={`px-5 ${priority ? 'pt-8 pb-10' : 'py-10'}`}
+          style={{ backgroundColor: '#f5f5f4' }}
+        >
           <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
             <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-hero" flush />
           </div>
@@ -588,8 +579,61 @@ export default async function GenePage({ params, searchParams }: Props) {
               All {geneName} mouse models include full quality control documentation and technical support. {types.includes('Conditional Knockout') ? `${geneName} floxed mice feature loxP flanked alleles for Cre dependent tissue specific knockout.` : ''} {types.includes('Humanized') ? `${geneName} humanized mouse models carry the human gene sequence for translational research.` : ''}
             </p>
 
-            <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'fixed', minWidth: '700px' }}>
+            {/* Mobile: stacked model cards */}
+            <ul className="m-0 flex list-none flex-col gap-3 p-0 md:hidden">
+              {models.map((model) => (
+                <li
+                  key={model.id}
+                  className="rounded-md border border-[#e8e8e8] bg-white p-4"
+                  style={{ fontFamily: 'Poppins, sans-serif' }}
+                >
+                  <p className="mb-3 font-mono text-[.9rem] font-semibold text-[#333]">
+                    {model.modelAbbrev}
+                  </p>
+                  <dl className="m-0 grid grid-cols-[minmax(0,7rem)_1fr] gap-x-3 gap-y-2 text-[.85rem]">
+                    <dt className="font-semibold text-[#0a253c]">Type</dt>
+                    <dd className="m-0">
+                      {model.modelType ? (
+                        <span className="inline-block rounded bg-[#134978] px-2.5 py-0.5 text-[.78rem] font-medium text-white">
+                          {model.modelType}
+                        </span>
+                      ) : (
+                        'N/A'
+                      )}
+                    </dd>
+                    <dt className="font-semibold text-[#0a253c]">Category</dt>
+                    <dd className="m-0 text-[#666]">{model.category || 'N/A'}</dd>
+                    <dt className="font-semibold text-[#0a253c]">Availability</dt>
+                    <dd className="m-0">
+                      <span
+                        className="inline-flex items-center gap-1.5"
+                        style={{ color: availabilityColor(model.availability) }}
+                      >
+                        <span
+                          className="h-[7px] w-[7px] shrink-0 rounded-full"
+                          style={{ background: availabilityColor(model.availability) }}
+                        />
+                        {availabilityLabel(model.availability)}
+                      </span>
+                    </dd>
+                    <dt className="font-semibold text-[#0a253c]">Catalog #</dt>
+                    <dd className="m-0 font-mono text-[.82rem] font-semibold text-[#134978]">
+                      {model.catalogNumber}
+                    </dd>
+                  </dl>
+                  <Link
+                    href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`}
+                    className="mt-4 inline-flex items-center gap-1 rounded bg-[#008080] px-3.5 py-2 text-[.78rem] font-semibold text-white no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#008080] focus-visible:ring-offset-2"
+                  >
+                    Inquire <IconChevronRight size={12} color="#fff" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* md+: table layout */}
+            <div className="hidden overflow-x-auto md:block">
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'fixed' }}>
                 <thead>
                   <tr style={{ background: '#f7f7f7' }}>
                     {['Model Abbreviation', 'Model Type', 'Category', 'Availability', 'ITL Catalog #', ''].map((h) => (
@@ -640,6 +684,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                       <td style={{ padding: '14px 16px', textAlign: 'center' }}>
                         <Link
                           href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`}
+                          className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#008080] focus-visible:ring-offset-2"
                           style={{
                             display: 'inline-flex', alignItems: 'center', gap: '4px',
                             background: '#008080', color: '#fff',

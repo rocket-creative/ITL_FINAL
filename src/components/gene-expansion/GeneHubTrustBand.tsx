@@ -17,45 +17,15 @@ const ITEMS = [
 export default function GeneHubTrustBand({ className }: Props) {
   return (
     <aside
-      className={className}
+      className={`border-y border-[#d0e8e8] bg-[#f0f9f9] px-5 py-3.5 sm:py-4 ${className ?? ''}`}
       aria-label="Company trust facts"
-      style={{
-        background: '#f0f9f9',
-        borderTop: '1px solid #d0e8e8',
-        borderBottom: '1px solid #d0e8e8',
-        padding: '14px 20px',
-      }}
+      style={{ fontFamily: 'Poppins, sans-serif' }}
     >
-      <div
-        style={{
-          maxWidth: '1000px',
-          margin: '0 auto',
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '6px 0',
-          fontFamily: 'Poppins, sans-serif',
-          fontSize: '.82rem',
-          fontWeight: 500,
-          color: '#0a253c',
-          lineHeight: 1.5,
-        }}
-      >
-        {ITEMS.map((item, i) => (
-          <span key={item} style={{ display: 'inline-flex', alignItems: 'center' }}>
-            {i > 0 ? (
-              <span
-                aria-hidden="true"
-                style={{ margin: '0 10px', color: '#008080', fontWeight: 400 }}
-              >
-                ·
-              </span>
-            ) : null}
-            <span>{item}</span>
-          </span>
+      <ul className="mx-auto flex max-w-[1000px] flex-wrap items-center justify-center gap-x-4 gap-y-2.5 text-[0.82rem] font-medium leading-normal text-[#0a253c] sm:gap-x-6">
+        {ITEMS.map((item) => (
+          <li key={item}>{item}</li>
         ))}
-      </div>
+      </ul>
     </aside>
   );
 }
