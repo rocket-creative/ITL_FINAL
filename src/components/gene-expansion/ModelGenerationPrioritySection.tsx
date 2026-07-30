@@ -6,11 +6,10 @@ import {
   PRIORITY_GENES,
   getPriorityGenesByCohort,
   getCohortLabel,
-  PI_TAXONOMY_GROUPS,
   type GeneCohort,
   type PriorityGene,
-  type PiTaxonomyChild,
 } from '@/data/priorityGenes';
+import PiTaxonomyEqualCardGrid from '@/components/gene-expansion/PiTaxonomyEqualCardGrid';
 
 const COHORTS: GeneCohort[] = [
   'signaling',
@@ -72,18 +71,6 @@ function quoteHref(mouseSymbol: string): string {
 
 function typeQuoteHref(slug: string): string {
   return `/request-quote/?type=${encodeURIComponent(slug)}`;
-}
-
-function childQuoteHref(child: PiTaxonomyChild): string {
-  if (child.canonicalModSlug) {
-    return typeQuoteHref(child.canonicalModSlug);
-  }
-  return `/request-quote/?type=${encodeURIComponent(child.id)}`;
-}
-
-function childAboutHref(child: PiTaxonomyChild): string | null {
-  if (!child.siteHref) return null;
-  return child.siteHref.endsWith('/') ? child.siteHref : `${child.siteHref}/`;
 }
 
 function orderGenesForCohort(genes: PriorityGene[], cohort: GeneCohort): PriorityGene[] {
@@ -427,122 +414,7 @@ export default function ModelGenerationPrioritySection() {
             backgrounds.
           </p>
 
-          {PI_TAXONOMY_GROUPS.map((group) => (
-            <div key={group.id} style={{ marginBottom: '36px' }}>
-              <h3
-                style={{
-                  fontSize: '1.15rem',
-                  fontWeight: 700,
-                  color: '#0a253c',
-                  marginBottom: '14px',
-                  paddingBottom: '8px',
-                  borderBottom: '2px solid #008080',
-                }}
-              >
-                {group.label}
-              </h3>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 260px), 1fr))',
-                  gap: '14px',
-                }}
-              >
-                {group.children.map((child) => {
-                  const quoteHref = childQuoteHref(child);
-                  const aboutHref = childAboutHref(child);
-                  return (
-                    <div
-                      key={child.id}
-                      style={{
-                        padding: '16px 18px',
-                        background: '#fff',
-                        border: '1px solid #e8e8e8',
-                        borderRadius: '6px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '10px',
-                        minHeight: '100%',
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          fontSize: '.9rem',
-                          fontWeight: 600,
-                          color: '#0a253c',
-                          lineHeight: 1.4,
-                        }}
-                      >
-                        {child.label}
-                      </p>
-                      {child.quoteNote ? (
-                        <p
-                          style={{
-                            margin: 0,
-                            fontSize: '.75rem',
-                            color: '#666',
-                            lineHeight: 1.5,
-                          }}
-                        >
-                          {child.quoteNote}
-                        </p>
-                      ) : null}
-                      <div
-                        style={{
-                          marginTop: 'auto',
-                          display: 'flex',
-                          flexDirection: 'column',
-                          gap: '8px',
-                          paddingTop: '4px',
-                        }}
-                      >
-                        <Link
-                          href={quoteHref}
-                          style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            width: '100%',
-                            minHeight: '44px',
-                            padding: '10px 16px',
-                            borderRadius: '6px',
-                            background: '#0a253c',
-                            color: '#fff',
-                            fontSize: '.82rem',
-                            fontWeight: 600,
-                            textDecoration: 'none',
-                            boxSizing: 'border-box',
-                            textAlign: 'center',
-                          }}
-                        >
-                          Request a quote
-                        </Link>
-                        {aboutHref ? (
-                          <Link
-                            href={aboutHref}
-                            style={{
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              minHeight: '36px',
-                              fontSize: '.78rem',
-                              fontWeight: 600,
-                              color: '#134978',
-                              textDecoration: 'none',
-                              textAlign: 'center',
-                            }}
-                          >
-                            About this service
-                          </Link>
-                        ) : null}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+          <PiTaxonomyEqualCardGrid mode="generation" />
         </div>
       </section>
 
