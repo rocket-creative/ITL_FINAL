@@ -367,9 +367,8 @@ export default async function GenePage({ params, searchParams }: Props) {
       <main id="main-content">
 
         {/* Hero */}
-        <section className="page-hero" style={{
+        <section className="page-hero px-5 pb-12 pt-14 md:pb-[60px] md:pt-20" style={{
           background: 'linear-gradient(135deg, #0a253c 0%, #134978 100%)',
-          padding: '80px 20px 60px',
         }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
 
@@ -475,8 +474,11 @@ export default async function GenePage({ params, searchParams }: Props) {
 
             {/* Keyword rich H1: matches "Brca1 knockout mouse", "Tp53 conditional knockout mouse" searches */}
             <h1 style={{
-              fontFamily: 'Poppins, sans-serif', fontSize: '2.8rem', fontWeight: 700,
+              fontFamily: 'Poppins, sans-serif',
+              fontSize: 'clamp(1.65rem, 5vw, 2.8rem)',
+              fontWeight: 700,
               color: '#fff', marginBottom: '16px', lineHeight: 1.2,
+              overflowWrap: 'anywhere',
             }}>
               {isBuildInquiryOnly
                 ? `${geneName} mouse models`
@@ -497,10 +499,10 @@ export default async function GenePage({ params, searchParams }: Props) {
                   : `Browse ${models.length} ${geneName} mouse model${models.length !== 1 ? 's' : ''} including ${typeStr.toLowerCase()} variants from ${SITE_NAME}. ${types.length > 1 ? `Available as ${types.map(t => `${geneName} ${t.toLowerCase()} mouse`).join(', ')}.` : ''} Contact us for availability and fast turnaround.`}
             </p>
 
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
                 href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}`}
-                className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#134978]"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md bg-[#008080] px-6 py-3 text-[.9rem] font-semibold text-white no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#134978] sm:w-auto"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
                   background: '#008080', color: '#fff', padding: '12px 24px',
@@ -511,7 +513,7 @@ export default async function GenePage({ params, searchParams }: Props) {
               </Link>
               <Link
                 href="/all-catalog-mouse-models"
-                className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00d4d4] focus-visible:ring-offset-2 focus-visible:ring-offset-[#134978]"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md border-2 border-white/30 px-6 py-3 text-[.9rem] font-semibold text-white no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00d4d4] focus-visible:ring-offset-2 focus-visible:ring-offset-[#134978] sm:w-auto"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
                   background: 'transparent', color: '#fff', padding: '12px 24px',

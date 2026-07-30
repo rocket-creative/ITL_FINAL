@@ -38,9 +38,8 @@ const GENERATION_MOD_TYPES: Array<{ label: string; slug: string }> = [
   { label: 'Transgenic / overexpression', slug: 'overexpression' },
 ];
 
-const GENE_PREVIEW_LIMIT = 24;
+const GENE_PREVIEW_LIMIT = 12;
 
-const SECTION_PADDING = '60px 20px';
 
 const H2_BASE: CSSProperties = {
   fontFamily: 'Poppins, sans-serif',
@@ -218,6 +217,8 @@ function GeneChip({ gene }: { gene: PriorityGene }) {
         flexWrap: 'wrap',
         gap: '8px',
         padding: '8px 12px',
+        maxWidth: '100%',
+        boxSizing: 'border-box',
         minHeight: '44px',
         border: '1px solid #d0e8e8',
         borderRadius: '6px',
@@ -295,43 +296,56 @@ export default function ModelGenerationPrioritySection() {
   return (
     <div style={{ fontFamily: 'Poppins, sans-serif' }}>
       <style>{`
-        .model-gen-h2 {
-          font-size: 1.5rem;
-        }
+        .model-gen-h2 { font-size: 1.35rem; }
         @media (min-width: 768px) {
-          .model-gen-h2 {
-            font-size: 2rem;
-          }
+          .model-gen-h2 { font-size: 2rem; }
         }
-        .model-gen-mod-stack {
-          display: block;
-        }
-        .model-gen-mod-table-wrap {
-          display: none;
-        }
+        .model-gen-section { padding: 40px 16px; }
         @media (min-width: 768px) {
-          .model-gen-mod-stack {
-            display: none;
-          }
-          .model-gen-mod-table-wrap {
-            display: block;
-          }
+          .model-gen-section { padding: 60px 20px; }
         }
-        .model-gen-search-input:focus-visible {
-          ${FOCUS_RING}
+        .model-gen-cohort-scroller {
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 8px;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scroll-snap-type: x proximity;
+          padding-bottom: 4px;
+          margin-bottom: 20px;
         }
-        .model-gen-cohort-tab:focus-visible {
-          ${FOCUS_RING}
+        .model-gen-cohort-scroller::-webkit-scrollbar { height: 4px; }
+        .model-gen-cohort-tab { scroll-snap-align: start; flex: 0 0 auto; }
+        @media (min-width: 768px) {
+          .model-gen-cohort-scroller { flex-wrap: wrap; overflow: visible; }
         }
-        .model-gen-show-all-btn:focus-visible {
-          ${FOCUS_RING}
+        .model-gen-primary-cta {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          min-height: 44px;
+          background: #008080;
+          color: #fff;
+          padding: 12px 22px;
+          font-size: .9rem;
+          font-weight: 600;
+          text-decoration: none;
+          border-radius: 6px;
+          box-sizing: border-box;
         }
+        @media (min-width: 640px) {
+          .model-gen-primary-cta { width: auto; }
+        }
+        .model-gen-search-input:focus-visible { ${FOCUS_RING} }
+        .model-gen-cohort-tab:focus-visible { ${FOCUS_RING} }
+        .model-gen-show-all-btn:focus-visible { ${FOCUS_RING} }
       `}</style>
 
       {/* AI Answer Block */}
       <section
         aria-labelledby="model-gen-ai-answer-heading"
-        style={{ background: '#fff', padding: SECTION_PADDING, borderBottom: '1px solid #eee' }}
+        className="model-gen-section" style={{ background: '#fff', borderBottom: '1px solid #eee' }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <p
@@ -380,19 +394,7 @@ export default function ModelGenerationPrioritySection() {
               justifyContent: 'center',
             }}
           >
-            <Link
-              href="/request-quote/"
-              style={{
-                display: 'inline-block',
-                background: '#008080',
-                color: '#fff',
-                padding: '12px 22px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                borderRadius: '6px',
-              }}
-            >
+            <Link href="/request-quote/" className="model-gen-primary-cta">
               Request a Quote
             </Link>
             <Link
@@ -414,7 +416,7 @@ export default function ModelGenerationPrioritySection() {
       {/* PI taxonomy for generation */}
       <section
         aria-labelledby="model-gen-pi-taxonomy-heading"
-        style={{ background: '#f5f5f4', padding: SECTION_PADDING }}
+        className="model-gen-section" style={{ background: '#f5f5f4' }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 id="model-gen-pi-taxonomy-heading" className="model-gen-h2" style={H2_BASE}>
@@ -442,7 +444,7 @@ export default function ModelGenerationPrioritySection() {
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 260px), 1fr))',
                   gap: '14px',
                 }}
               >
@@ -547,7 +549,7 @@ export default function ModelGenerationPrioritySection() {
       {/* Browse by research cohort */}
       <section
         aria-labelledby="model-gen-cohort-heading"
-        style={{ background: '#fff', padding: SECTION_PADDING, borderBottom: '1px solid #eee' }}
+        className="model-gen-section" style={{ background: '#fff', borderBottom: '1px solid #eee' }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 id="model-gen-cohort-heading" className="model-gen-h2" style={H2_BASE}>
@@ -560,13 +562,7 @@ export default function ModelGenerationPrioritySection() {
           <div
             role="tablist"
             aria-label="Research cohorts"
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '8px',
-              marginBottom: '24px',
-              justifyContent: 'center',
-            }}
+            className="model-gen-cohort-scroller"
           >
             {COHORTS.map((c, index) => {
               const selected = c === cohort;
@@ -644,6 +640,8 @@ export default function ModelGenerationPrioritySection() {
                   border: '1px solid #008080',
                   padding: '10px 18px',
                   minHeight: '44px',
+                  width: '100%',
+                  maxWidth: '420px',
                   cursor: 'pointer',
                   borderRadius: '6px',
                 }}
@@ -658,7 +656,7 @@ export default function ModelGenerationPrioritySection() {
       {/* Search box */}
       <section
         aria-labelledby="model-gen-search-heading"
-        style={{ background: '#f0f9f9', padding: SECTION_PADDING }}
+        className="model-gen-section" style={{ background: '#f0f9f9' }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 id="model-gen-search-heading" className="model-gen-h2" style={H2_BASE}>

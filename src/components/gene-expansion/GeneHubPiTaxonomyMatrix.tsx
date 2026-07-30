@@ -189,19 +189,15 @@ export default function GeneHubPiTaxonomyMatrix({
     <>
       <style>{PI_TAXONOMY_STYLES}</style>
       <section
-        className="gene-hub-pi-taxonomy"
+        className="gene-hub-pi-taxonomy px-4 py-10 md:px-5 md:py-14"
         aria-labelledby="gene-hub-pi-taxonomy-heading"
-        style={{ background: '#f5f5f4', padding: '56px 20px' }}
+        style={{ background: '#f5f5f4' }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2
             id="gene-hub-pi-taxonomy-heading"
-            style={{
-              fontSize: '1.45rem',
-              fontWeight: 700,
-              color: '#0a253c',
-              marginBottom: '8px',
-            }}
+            className="mb-2 text-xl font-bold text-[#0a253c] md:text-[1.45rem]"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             {mouseSymbol} model types researchers search for
           </h2>

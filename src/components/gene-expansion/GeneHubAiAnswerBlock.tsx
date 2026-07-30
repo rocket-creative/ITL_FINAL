@@ -133,7 +133,7 @@ export default function GeneHubAiAnswerBlock(props: GeneHubAiAnswerBlockProps) {
   return (
     <section
       aria-labelledby="gene-hub-ai-answer-heading"
-      className="border-b border-[#eee] bg-white px-5 py-14"
+      className="border-b border-[#eee] bg-white px-4 py-10 sm:px-5 md:py-14"
       style={{ fontFamily: 'Poppins, sans-serif' }}
     >
       <div className="mx-auto max-w-[1000px]">
