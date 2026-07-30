@@ -157,57 +157,36 @@ function ChildCard({
   const count = catalogCountFor(child, catalogByModSlug);
   const geneEnc = encodeURIComponent(mouseSymbol);
 
-  let statusNode: ReactNode;
+  let action: ReactNode;
 
   if (count > 0 && child.canonicalModSlug) {
     const catalogHref = `/all-catalog-mouse-models/gene/${geneEnc}/${child.canonicalModSlug}/`;
-    const orderHref = `/order-catalog-models?gene=${geneEnc}`;
-    statusNode = (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-        <span className="gene-hub-pi-taxonomy__status gene-hub-pi-taxonomy__status--catalog">
-          In catalog
-        </span>
-        <div className="gene-hub-pi-taxonomy__actions">
-          <Link
-            href={catalogHref}
-            className="gene-hub-pi-taxonomy__text-link gene-hub-pi-taxonomy__text-link--catalog"
-          >
-            View {mouseSymbol} {child.canonicalModSlug.replace(/-/g, ' ')}
-          </Link>
-          <Link href={orderHref} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--order">
-            Order
-          </Link>
-        </div>
-      </div>
+    action = (
+      <Link href={catalogHref} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--order">
+        View catalog
+      </Link>
     );
   } else if (child.siteHref) {
-    statusNode = (
-      <Link
-        href={child.siteHref.endsWith('/') ? child.siteHref : `${child.siteHref}/`}
-        className="gene-hub-pi-taxonomy__text-link gene-hub-pi-taxonomy__text-link--related"
-      >
+    const href = child.siteHref.endsWith('/') ? child.siteHref : `${child.siteHref}/`;
+    action = (
+      <Link href={href} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--quote">
         View related
       </Link>
     );
   } else {
     const typeParam = child.canonicalModSlug ?? child.id;
     const quoteHref = `/request-quote/?gene=${geneEnc}&type=${encodeURIComponent(typeParam)}`;
-    statusNode = (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-        <span className="gene-hub-pi-taxonomy__status gene-hub-pi-taxonomy__status--generate">
-          Available to generate
-        </span>
-        <Link href={quoteHref} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--quote">
-          Request a quote
-        </Link>
-      </div>
+    action = (
+      <Link href={quoteHref} className="gene-hub-pi-taxonomy__btn gene-hub-pi-taxonomy__btn--quote">
+        Request a quote
+      </Link>
     );
   }
 
   return (
     <div className="gene-hub-pi-taxonomy__card">
       <p className="gene-hub-pi-taxonomy__card-title">{child.label}</p>
-      {statusNode}
+      {action}
       {child.quoteNote ? <p className="gene-hub-pi-taxonomy__note">{child.quoteNote}</p> : null}
     </div>
   );

@@ -134,7 +134,19 @@ function ModTypesTable() {
             </p>
             <Link
               href={typeQuoteHref(row.slug)}
-              style={{ color: '#008080', fontWeight: 600, textDecoration: 'none', fontSize: '.88rem' }}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '44px',
+                padding: '10px 16px',
+                borderRadius: '6px',
+                background: '#0a253c',
+                color: '#fff',
+                fontWeight: 600,
+                fontSize: '.82rem',
+                textDecoration: 'none',
+              }}
             >
               Request a quote
             </Link>
@@ -194,7 +206,19 @@ function ModTypesTable() {
                 <td style={{ padding: '12px 16px' }}>
                   <Link
                     href={typeQuoteHref(row.slug)}
-                    style={{ color: '#008080', fontWeight: 600, textDecoration: 'none' }}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      minHeight: '44px',
+                      padding: '10px 16px',
+                      borderRadius: '6px',
+                      background: '#0a253c',
+                      color: '#fff',
+                      fontWeight: 600,
+                      fontSize: '.82rem',
+                      textDecoration: 'none',
+                    }}
                   >
                     Request a quote
                   </Link>
@@ -240,11 +264,12 @@ function GeneChip({ gene }: { gene: PriorityGene }) {
         href={quoteHref(gene.mouseSymbol)}
         aria-label={`Request a quote for ${gene.mouseSymbol}`}
         style={{
-          color: '#008080',
+          color: '#fff',
+          background: '#008080',
           fontSize: '.78rem',
           fontWeight: 600,
           textDecoration: 'none',
-          padding: '6px 10px',
+          padding: '6px 12px',
           minHeight: '44px',
           display: 'inline-flex',
           alignItems: 'center',
@@ -477,11 +502,17 @@ export default function ModelGenerationPrioritySection() {
                         <Link
                           href={href}
                           style={{
-                            color: '#008080',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            minHeight: '44px',
+                            padding: '10px 16px',
+                            borderRadius: '6px',
+                            background: isQuoteLink ? '#0a253c' : '#008080',
+                            color: '#fff',
                             fontSize: '.82rem',
                             fontWeight: 600,
                             textDecoration: 'none',
-                            borderBottom: '1px solid #008080',
                             width: 'fit-content',
                           }}
                         >
