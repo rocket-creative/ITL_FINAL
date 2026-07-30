@@ -39,7 +39,11 @@ export default function BuildAwarenessBanner() {
 
   return (
     <div
-      className="mx-auto w-full max-w-[1200px] bg-[#0a253c]"
+      className="mx-auto w-full max-w-[1200px]"
+      style={{
+        background:
+          'linear-gradient(115deg, #0a4f52 0%, #0d6b6e 28%, #008080 58%, #1a8f8a 82%, #2a9d8f 100%)',
+      }}
       role="region"
       aria-label="Build capability"
     >
@@ -48,7 +52,7 @@ export default function BuildAwarenessBanner() {
         <button
           type="button"
           onClick={handleDismiss}
-          className="absolute top-2.5 right-5 md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] text-white/70 hover:text-white hover:bg-white/10 rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+          className="absolute top-2.5 right-5 md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] text-white/80 hover:text-white hover:bg-white/10 rounded-sm focus:outline-none focus:ring-2 focus:ring-white"
           aria-label="Dismiss banner"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -65,7 +69,7 @@ export default function BuildAwarenessBanner() {
               We build the exact model your study needs.
             </p>
             <p
-              className="m-0 mt-1 text-xs md:text-sm font-semibold leading-relaxed text-white/90"
+              className="m-0 mt-1 text-xs md:text-sm font-semibold leading-relaxed text-white"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               Designed and delivered by ingenious targeting laboratory. Quote in 24 hours.
@@ -75,7 +79,7 @@ export default function BuildAwarenessBanner() {
           <div className="flex items-center gap-3 md:gap-4 flex-shrink-0 w-full md:w-auto">
             <Link
               href="/request-quote/"
-              className="group flex flex-1 md:flex-none items-center justify-center gap-1.5 min-h-[44px] bg-[#008080] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-sm hover:opacity-90 no-underline whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-[#0a253c]"
+              className="group flex flex-1 md:flex-none items-center justify-center gap-1.5 min-h-[44px] bg-[#0a253c] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-sm hover:bg-[#134978] no-underline whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#008080]"
             >
               Get a Quote
               <span
@@ -88,7 +92,7 @@ export default function BuildAwarenessBanner() {
             <button
               type="button"
               onClick={handleDismiss}
-              className="hidden md:flex items-center justify-center min-h-[44px] min-w-[44px] text-white/70 hover:text-white hover:bg-white/10 rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+              className="hidden md:flex items-center justify-center min-h-[44px] min-w-[44px] text-white/80 hover:text-white hover:bg-white/10 rounded-sm focus:outline-none focus:ring-2 focus:ring-white"
               aria-label="Dismiss banner"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
