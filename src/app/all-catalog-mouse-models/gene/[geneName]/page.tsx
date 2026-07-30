@@ -63,11 +63,16 @@ function stripSmoc(s: string | undefined | null): string {
   return s.replace(/smoc/gi, 'ITL').replace(/shanghai model organisms?( center)?/gi, 'ITL').trim();
 }
 
+function fixCatalogTypos(s: string): string {
+  // Common vendor typos in abbreviation / type strings
+  return s.replace(/\bFrox\b/gi, (m) => (m[0] === 'F' ? 'Flox' : 'flox'));
+}
+
 function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
   return {
     ...m,
-    modelAbbrev: stripSmoc(m.modelAbbrev),
-    modelType:   stripSmoc(m.modelType),
+    modelAbbrev: fixCatalogTypos(stripSmoc(m.modelAbbrev)),
+    modelType:   fixCatalogTypos(stripSmoc(m.modelType)),
     category:    stripSmoc(m.category),
     availability: stripSmoc(m.availability),
     catalogNumber: stripSmoc(m.catalogNumber),
@@ -564,143 +569,76 @@ export default async function GenePage({ params, searchParams }: Props) {
           </div>
         </section>
 
-        {/* Models Table */}
+        {/* Models inventory */}
         {models.length > 0 && (
         <section style={{ background: '#fff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            {/* H2 includes gene+type for SEO: "Available Brca1 Knockout & Conditional KO Models" */}
             <h2 style={{
               fontFamily: 'Poppins, sans-serif', fontSize: '1.6rem', fontWeight: 700,
               color: '#0a253c', marginBottom: '8px',
             }}>
-              Available {geneName} {typeStr} Model{models.length !== 1 ? 's' : ''}
+              Available {geneName} catalog models
             </h2>
-            <p style={{ color: '#666', fontSize: '.9rem', marginBottom: '24px' }}>
-              All {geneName} mouse models include full quality control documentation and technical support. {types.includes('Conditional Knockout') ? `${geneName} floxed mice feature loxP flanked alleles for Cre dependent tissue specific knockout.` : ''} {types.includes('Humanized') ? `${geneName} humanized mouse models carry the human gene sequence for translational research.` : ''}
+            <p style={{ color: '#666', fontSize: '.9rem', marginBottom: '28px', lineHeight: 1.7 }}>
+              {models.length} {geneName} line{models.length !== 1 ? 's' : ''} with QC documentation and technical support.
+              {types.includes('Conditional Knockout') ? ` ${geneName} floxed mice use loxP flanked alleles for Cre dependent tissue specific knockout.` : ''}
+              {types.includes('Humanized') ? ` ${geneName} humanized models carry the human gene sequence for translational research.` : ''}
             </p>
 
-            {/* Mobile: stacked model cards */}
-            <ul className="m-0 flex list-none flex-col gap-3 p-0 md:hidden">
-              {models.map((model) => (
-                <li
-                  key={model.id}
-                  className="rounded-md border border-[#e8e8e8] bg-white p-4"
-                  style={{ fontFamily: 'Poppins, sans-serif' }}
-                >
-                  <p className="mb-3 font-mono text-[.9rem] font-semibold text-[#333]">
-                    {model.modelAbbrev}
-                  </p>
-                  <dl className="m-0 grid grid-cols-[minmax(0,7rem)_1fr] gap-x-3 gap-y-2 text-[.85rem]">
-                    <dt className="font-semibold text-[#0a253c]">Type</dt>
-                    <dd className="m-0">
-                      {model.modelType ? (
-                        <span className="inline-block rounded bg-[#134978] px-2.5 py-0.5 text-[.78rem] font-medium text-white">
-                          {model.modelType}
-                        </span>
-                      ) : (
-                        'N/A'
-                      )}
-                    </dd>
-                    <dt className="font-semibold text-[#0a253c]">Category</dt>
-                    <dd className="m-0 text-[#666]">{model.category || 'N/A'}</dd>
-                    <dt className="font-semibold text-[#0a253c]">Availability</dt>
-                    <dd className="m-0">
-                      <span
-                        className="inline-flex items-center gap-1.5"
-                        style={{ color: availabilityColor(model.availability) }}
-                      >
-                        <span
-                          className="h-[7px] w-[7px] shrink-0 rounded-full"
-                          style={{ background: availabilityColor(model.availability) }}
-                        />
-                        {availabilityLabel(model.availability)}
-                      </span>
-                    </dd>
-                    <dt className="font-semibold text-[#0a253c]">Catalog #</dt>
-                    <dd className="m-0 font-mono text-[.82rem] font-semibold text-[#134978]">
-                      {model.catalogNumber}
-                    </dd>
-                  </dl>
-                  <Link
-                    href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`}
-                    className="mt-4 inline-flex items-center gap-1 rounded bg-[#008080] px-3.5 py-2 text-[.78rem] font-semibold text-white no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#008080] focus-visible:ring-offset-2"
+            <ul className="m-0 flex list-none flex-col gap-3 p-0">
+              {models.map((model) => {
+                const orderHref = `/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`;
+                return (
+                  <li
+                    key={model.id}
+                    className="flex flex-col gap-4 rounded-md border border-[#e8e8e8] bg-[#fafafa] p-4 md:flex-row md:items-center md:justify-between md:gap-6 md:bg-white md:px-5 md:py-4"
+                    style={{ fontFamily: 'Poppins, sans-serif' }}
                   >
-                    Inquire <IconChevronRight size={12} color="#fff" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* md+: table layout */}
-            <div className="hidden overflow-x-auto md:block">
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'fixed' }}>
-                <thead>
-                  <tr style={{ background: '#f7f7f7' }}>
-                    {['Model Abbreviation', 'Model Type', 'Category', 'Availability', 'ITL Catalog #', ''].map((h) => (
-                      <th key={h} style={{
-                        padding: '12px 16px',
-                        textAlign: h === '' ? 'center' : 'left',
-                        fontWeight: 600, color: '#333',
-                        borderBottom: '2px solid #e0e0e0',
-                        whiteSpace: 'nowrap', fontSize: '.8rem',
-                      }}>
-                        {h}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {models.map((model, index) => (
-                    <tr
-                      key={model.id}
-                      style={{ background: index % 2 === 0 ? '#fff' : '#fafafa', borderBottom: '1px solid #f0f0f0' }}
-                    >
-                      <td style={{ padding: '14px 16px', color: '#333', fontFamily: 'monospace', fontSize: '.85rem', fontWeight: 600 }}>
-                        {model.modelAbbrev}
-                      </td>
-                      <td style={{ padding: '14px 16px' }}>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <p className="m-0 font-mono text-[.95rem] font-semibold text-[#0a253c]">
+                          {model.modelAbbrev || geneName}
+                        </p>
                         {model.modelType ? (
-                          <span style={{
-                            display: 'inline-block', padding: '3px 10px',
-                            background: '#134978', color: '#fff',
-                            borderRadius: '4px', fontSize: '.78rem', fontWeight: 500,
-                          }}>
+                          <span className="inline-flex max-w-full items-center rounded px-2.5 py-1 text-[.75rem] font-semibold leading-snug text-white bg-[#134978]">
                             {model.modelType}
                           </span>
-                        ) : 'N/A'}
-                      </td>
-                      <td style={{ padding: '14px 16px', color: '#666', fontSize: '.85rem', maxWidth: '180px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={model.category || ''}>
-                        {model.category || 'N/A'}
-                      </td>
-                      <td style={{ padding: '14px 16px', whiteSpace: 'nowrap' }}>
-                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '.85rem', color: availabilityColor(model.availability) }}>
-                          <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: availabilityColor(model.availability), flexShrink: 0 }} />
+                        ) : null}
+                      </div>
+                      {model.category ? (
+                        <p className="mt-1.5 mb-0 text-[.82rem] leading-snug text-[#666] break-words">
+                          {model.category}
+                        </p>
+                      ) : null}
+                      <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-[.82rem]">
+                        <span
+                          className="inline-flex items-center gap-1.5 font-medium"
+                          style={{ color: availabilityColor(model.availability) }}
+                        >
+                          <span
+                            className="h-2 w-2 shrink-0 rounded-full"
+                            style={{ background: availabilityColor(model.availability) }}
+                            aria-hidden="true"
+                          />
                           {availabilityLabel(model.availability)}
                         </span>
-                      </td>
-                      <td style={{ padding: '14px 16px', color: '#134978', fontFamily: 'monospace', fontSize: '.82rem', fontWeight: 600, whiteSpace: 'nowrap' }}>
-                        {model.catalogNumber}
-                      </td>
-                      <td style={{ padding: '14px 16px', textAlign: 'center' }}>
-                        <Link
-                          href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`}
-                          className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#008080] focus-visible:ring-offset-2"
-                          style={{
-                            display: 'inline-flex', alignItems: 'center', gap: '4px',
-                            background: '#008080', color: '#fff',
-                            padding: '7px 14px', borderRadius: '4px',
-                            fontSize: '.78rem', fontWeight: 600, textDecoration: 'none',
-                            whiteSpace: 'nowrap',
-                          }}
-                        >
-                          Inquire <IconChevronRight size={12} color="#fff" />
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                        {model.catalogNumber ? (
+                          <span className="font-mono font-semibold text-[#134978]">
+                            {model.catalogNumber}
+                          </span>
+                        ) : null}
+                      </div>
+                    </div>
+                    <Link
+                      href={orderHref}
+                      className="inline-flex min-h-11 w-full shrink-0 items-center justify-center gap-1 rounded-md bg-[#008080] px-5 py-2.5 text-[.85rem] font-semibold text-white no-underline hover:bg-[#006666] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#008080] focus-visible:ring-offset-2 md:w-auto"
+                    >
+                      Order <IconChevronRight size={14} color="#fff" />
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </section>
         )}
@@ -817,7 +755,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                   borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
                 }}
               >
-                Inquire Now — Fast Turnaround Guaranteed <IconChevronRight size={16} color="#fff" />
+                Order catalog model <IconChevronRight size={16} color="#fff" />
               </Link>
             </div>
             <div style={{ flex: '0 0 auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
