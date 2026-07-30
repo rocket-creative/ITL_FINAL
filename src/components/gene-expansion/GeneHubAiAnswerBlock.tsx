@@ -52,7 +52,7 @@ const LINK_CLASS =
   'font-semibold text-[#008080] underline-offset-2 hover:text-[#006666] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008080]';
 
 const AVAIL_BTN_BASE =
-  'inline-flex min-h-11 items-center justify-center rounded-md px-3.5 py-2 text-[.82rem] font-semibold no-underline transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2';
+  'inline-flex h-11 w-full items-center justify-center rounded-md px-4 text-[.82rem] font-semibold leading-none no-underline transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:w-[12.75rem]';
 
 function isCatalogPath(
   matches: (modLower: string) => boolean,
@@ -161,70 +161,37 @@ export default function GeneHubAiAnswerBlock(props: GeneHubAiAnswerBlockProps) {
           Modification paths for {mouseSymbol}
         </h3>
 
-        <div className="mb-7 min-[810px]:hidden">
-          <ul className="divide-y divide-[#f0f0f0] border border-[#f0f0f0]">
+        <div className="mb-7 overflow-hidden rounded-md border border-[#e8e8e8]">
+          <div className="hidden grid-cols-[1fr_auto] gap-4 border-b border-[#e0e0e0] bg-[#f7f7f7] px-4 py-3 text-[.8rem] font-semibold text-[#0a253c] sm:grid">
+            <span>Path</span>
+            <span className="w-[12.75rem] text-center">Availability</span>
+          </div>
+          <ul className="m-0 list-none p-0">
             {MOD_PATHS.map((row, index) => {
               const inCatalog = isCatalogPath(row.matches, modTypesPresent);
               const rowBg = index % 2 === 0 ? 'bg-white' : 'bg-[#fafafa]';
 
               return (
-                <li key={row.label} className={rowBg}>
-                  <div className="flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
-                    <div>
-                      <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[#0a253c]">
-                        Path
-                      </p>
-                      <p className="text-[.9rem] font-medium text-[#333]">{row.label}</p>
-                    </div>
-                    <AvailabilityCta
-                      inCatalog={inCatalog}
-                      mouseSymbol={mouseSymbol}
-                      slug={row.slug}
-                    />
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className="mb-7 hidden min-[810px]:block">
-          <table className="w-full border-collapse text-[.9rem]">
-            <thead>
-              <tr className="bg-[#f7f7f7]">
-                <th
-                  scope="col"
-                  className="border-b-2 border-[#e0e0e0] px-4 py-3 text-left font-semibold text-[#0a253c]"
+                <li
+                  key={row.label}
+                  className={`${rowBg} border-b border-[#f0f0f0] last:border-b-0`}
                 >
-                  Path
-                </th>
-                <th
-                  scope="col"
-                  className="border-b-2 border-[#e0e0e0] px-4 py-3 text-left font-semibold text-[#0a253c]"
-                >
-                  Availability
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {MOD_PATHS.map((row, index) => {
-                const inCatalog = isCatalogPath(row.matches, modTypesPresent);
-                const rowBg = index % 2 === 0 ? 'bg-white' : 'bg-[#fafafa]';
-                return (
-                  <tr key={row.label} className={`${rowBg} border-b border-[#f0f0f0]`}>
-                    <td className="px-4 py-3 font-medium text-[#333]">{row.label}</td>
-                    <td className="px-4 py-3">
+                  <div className="flex flex-col gap-3 px-4 py-3.5 sm:grid sm:grid-cols-[1fr_auto] sm:items-center sm:gap-4">
+                    <p className="m-0 text-[.9rem] font-medium leading-snug text-[#333]">
+                      {row.label}
+                    </p>
+                    <div className="w-full sm:w-[12.75rem] sm:justify-self-end">
                       <AvailabilityCta
                         inCatalog={inCatalog}
                         mouseSymbol={mouseSymbol}
                         slug={row.slug}
                       />
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
         </div>
 
         <h3 className="mb-3 text-lg font-bold text-[#0a253c] min-[810px]:text-[1.1rem]">

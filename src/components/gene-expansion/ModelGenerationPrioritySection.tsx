@@ -111,126 +111,100 @@ function matchesSearch(gene: PriorityGene, query: string): boolean {
 
 function ModTypesTable() {
   return (
-    <>
-      <div className="model-gen-mod-stack" style={{ marginBottom: '28px' }}>
-        {GENERATION_MOD_TYPES.map((row) => (
-          <div
+    <div
+      style={{
+        marginBottom: '28px',
+        overflow: 'hidden',
+        borderRadius: '6px',
+        border: '1px solid #e8e8e8',
+      }}
+    >
+      <div
+        className="model-gen-mod-head"
+        style={{
+          display: 'none',
+          gridTemplateColumns: '1fr auto',
+          gap: '16px',
+          padding: '12px 16px',
+          background: '#f7f7f7',
+          borderBottom: '1px solid #e0e0e0',
+          fontSize: '.8rem',
+          fontWeight: 600,
+          color: '#0a253c',
+        }}
+      >
+        <span>Model type</span>
+        <span style={{ width: '12.75rem', textAlign: 'center' }}>Availability</span>
+      </div>
+      <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+        {GENERATION_MOD_TYPES.map((row, index) => (
+          <li
             key={row.slug}
             style={{
-              background: '#fff',
-              border: '1px solid #e8e8e8',
-              borderRadius: '6px',
-              padding: '14px 16px',
-              marginBottom: '10px',
+              background: index % 2 === 0 ? '#fff' : '#fafafa',
+              borderBottom: index === GENERATION_MOD_TYPES.length - 1 ? 'none' : '1px solid #f0f0f0',
             }}
           >
-            <p
+            <div
+              className="model-gen-mod-row"
               style={{
-                margin: '0 0 8px',
-                fontWeight: 600,
-                color: '#0a253c',
-                fontSize: '.9rem',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+                padding: '14px 16px',
               }}
             >
-              {row.label}
-            </p>
-            <Link
-              href={typeQuoteHref(row.slug)}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '44px',
-                padding: '10px 16px',
-                borderRadius: '6px',
-                background: '#0a253c',
-                color: '#fff',
-                fontWeight: 600,
-                fontSize: '.82rem',
-                textDecoration: 'none',
-              }}
-            >
-              Request a quote
-            </Link>
-          </div>
+              <p
+                style={{
+                  margin: 0,
+                  fontWeight: 600,
+                  color: '#333',
+                  fontSize: '.9rem',
+                  lineHeight: 1.35,
+                }}
+              >
+                {row.label}
+              </p>
+              <div className="model-gen-mod-cta" style={{ width: '100%' }}>
+                <Link
+                  href={typeQuoteHref(row.slug)}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '100%',
+                    height: '44px',
+                    padding: '0 16px',
+                    borderRadius: '6px',
+                    background: '#0a253c',
+                    color: '#fff',
+                    fontWeight: 600,
+                    fontSize: '.82rem',
+                    textDecoration: 'none',
+                    lineHeight: 1,
+                    boxSizing: 'border-box',
+                  }}
+                >
+                  Request a quote
+                </Link>
+              </div>
+            </div>
+          </li>
         ))}
-      </div>
-
-      <div className="model-gen-mod-table-wrap" style={{ overflowX: 'auto', marginBottom: '28px' }}>
-        <table
-          className="model-gen-mod-table"
-          style={{
-            width: '100%',
-            borderCollapse: 'collapse',
-            fontSize: '.9rem',
-          }}
-        >
-          <thead>
-            <tr style={{ background: '#f7f7f7' }}>
-              <th
-                scope="col"
-                style={{
-                  padding: '12px 16px',
-                  textAlign: 'left',
-                  fontWeight: 600,
-                  color: '#0a253c',
-                  borderBottom: '2px solid #e0e0e0',
-                }}
-              >
-                Model type
-              </th>
-              <th
-                scope="col"
-                style={{
-                  padding: '12px 16px',
-                  textAlign: 'left',
-                  fontWeight: 600,
-                  color: '#0a253c',
-                  borderBottom: '2px solid #e0e0e0',
-                }}
-              >
-                Availability
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {GENERATION_MOD_TYPES.map((row, index) => (
-              <tr
-                key={row.slug}
-                style={{
-                  background: index % 2 === 0 ? '#fff' : '#fafafa',
-                  borderBottom: '1px solid #f0f0f0',
-                }}
-              >
-                <td style={{ padding: '12px 16px', color: '#333', fontWeight: 500 }}>
-                  {row.label}
-                </td>
-                <td style={{ padding: '12px 16px' }}>
-                  <Link
-                    href={typeQuoteHref(row.slug)}
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      minHeight: '44px',
-                      padding: '10px 16px',
-                      borderRadius: '6px',
-                      background: '#0a253c',
-                      color: '#fff',
-                      fontWeight: 600,
-                      fontSize: '.82rem',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    Request a quote
-                  </Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </>
+      </ul>
+      <style>{`
+        @media (min-width: 640px) {
+          .model-gen-mod-head { display: grid !important; }
+          .model-gen-mod-row {
+            display: grid !important;
+            grid-template-columns: 1fr auto !important;
+            align-items: center !important;
+            gap: 16px !important;
+          }
+          .model-gen-mod-cta { width: 12.75rem !important; }
+        }
+      `}</style>
+    </div>
   );
 }
 
