@@ -63,14 +63,14 @@ export default function BuildAwarenessBanner() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-6 lg:gap-8 pr-10 md:pr-0">
           <div className="min-w-0 text-left md:flex-1 md:pr-4">
             <p
-              className="m-0 text-sm md:text-base font-bold leading-snug text-white"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
+              className="m-0 text-sm md:text-base font-bold leading-snug"
+              style={{ color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}
             >
               We build the exact model your study needs.
             </p>
             <p
-              className="m-0 mt-1 text-xs md:text-sm font-semibold leading-relaxed text-white"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
+              className="m-0 mt-1 text-xs md:text-sm font-semibold leading-relaxed"
+              style={{ color: '#ffffff', fontFamily: 'Poppins, sans-serif' }}
             >
               Designed and delivered by ingenious targeting laboratory. Quote in 24 hours.
             </p>
