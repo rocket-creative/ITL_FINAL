@@ -24,8 +24,6 @@ Disallow: /admin/
 Disallow: /og-preview/
 Disallow: /pricing-guide
 Disallow: /pricing-guide/
-Disallow: /test-contact
-Disallow: /test-contact/
 
 # Sitemaps
 Sitemap: https://www.genetargeting.com/sitemap.xml

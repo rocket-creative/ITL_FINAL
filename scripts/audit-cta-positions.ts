@@ -22,7 +22,6 @@ const EXCLUDED = new Set([
   'terms',
   'admin',
   'og-preview',
-  'test-contact',
   'search',
   'current-openings',
   'lab-signals-welcome',
