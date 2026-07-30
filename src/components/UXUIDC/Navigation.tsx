@@ -330,9 +330,9 @@ export function UXUIDCNavigation() {
         <div className="container px-4 sm:px-6 lg:px-8">
         {/* Row 1: Logo, Search, Input, CTAs */}
         <div>
-            <div className="flex items-center justify-end h-auto sm:h-14 gap-0 py-2 sm:py-3">
+            <div className="flex items-center justify-end gap-0 pt-3.5 pb-2 sm:pt-4 sm:pb-3">
               {/* Logo - auto, pushed left */}
-              <Link href="/" className="mr-auto shrink-0" aria-label="Home">
+              <Link href="/" className="mr-auto shrink-0 pt-0.5" aria-label="Home">
                 <Image
                   src="/images/logo.png"
                   alt="ingenious targeting laboratory"

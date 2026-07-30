@@ -25,24 +25,18 @@ export default function UXUIDCHeroSection({
 }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden bg-white lg:min-h-[600px]">
-      <Image
-        src="/images/mouse-hero-glove.jpg"
-        alt=""
-        fill
-        priority
-        sizes="(max-width: 1023px) 0px, 50vw"
-        className="hidden lg:block object-cover object-[65%_center]"
-        quality={75}
-      />
-
-      <div
-        className="hidden lg:block absolute inset-0 z-[1] pointer-events-none"
-        style={{
-          background:
-            'linear-gradient(to right, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 45%, rgba(255,255,255,0.35) 70%, transparent 100%)',
-        }}
-        aria-hidden="true"
-      />
+      {/* Desktop: image sits on the right half only — no white wash overlay */}
+      <div className="hidden lg:block absolute inset-y-0 right-0 w-1/2">
+        <Image
+          src="/images/mouse-hero-glove.jpg"
+          alt=""
+          fill
+          priority
+          sizes="50vw"
+          className="object-cover object-[65%_center]"
+          quality={75}
+        />
+      </div>
 
       {/* Mobile */}
       <div className="lg:hidden px-5 pt-5 pb-6">

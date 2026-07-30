@@ -39,16 +39,16 @@ export default function BuildAwarenessBanner() {
 
   return (
     <div
-      className="mx-auto mb-1 w-full max-w-[1200px] bg-white"
+      className="mx-auto w-full max-w-[1200px] bg-[#0a253c]"
       role="region"
       aria-label="Build capability"
     >
-      <div className="container relative py-3 md:py-4">
+      <div className="container relative py-3 md:py-3.5">
         {/* Dismiss — top corner on phone; inline on iPad+ */}
         <button
           type="button"
           onClick={handleDismiss}
-          className="absolute top-3 right-5 md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] text-[#666] hover:text-[#0a253c] hover:bg-[#f7f7f7] rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-600"
+          className="absolute top-2.5 right-5 md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] text-white/70 hover:text-white hover:bg-white/10 rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
           aria-label="Dismiss banner"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -59,14 +59,14 @@ export default function BuildAwarenessBanner() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-6 lg:gap-8 pr-10 md:pr-0">
           <div className="min-w-0 text-left md:flex-1 md:pr-4">
             <p
-              className="m-0 text-sm md:text-[0.9375rem] font-semibold leading-snug"
-              style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif' }}
+              className="m-0 text-sm md:text-base font-bold leading-snug text-white"
+              style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               We build the exact model your study needs.
             </p>
             <p
-              className="m-0 mt-1 text-xs md:text-sm leading-relaxed"
-              style={{ color: '#666', fontFamily: 'system-ui, sans-serif' }}
+              className="m-0 mt-1 text-xs md:text-sm font-semibold leading-relaxed text-white/90"
+              style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               Designed and delivered by ingenious targeting laboratory. Quote in 24 hours.
             </p>
@@ -75,7 +75,7 @@ export default function BuildAwarenessBanner() {
           <div className="flex items-center gap-3 md:gap-4 flex-shrink-0 w-full md:w-auto">
             <Link
               href="/request-quote/"
-              className="group flex flex-1 md:flex-none items-center justify-center gap-1.5 min-h-[44px] bg-[#008080] text-white text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-sm hover:opacity-90 no-underline whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2"
+              className="group flex flex-1 md:flex-none items-center justify-center gap-1.5 min-h-[44px] bg-[#008080] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-sm hover:opacity-90 no-underline whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-[#0a253c]"
             >
               Get a Quote
               <span
@@ -88,7 +88,7 @@ export default function BuildAwarenessBanner() {
             <button
               type="button"
               onClick={handleDismiss}
-              className="hidden md:flex items-center justify-center min-h-[44px] min-w-[44px] text-[#666] hover:text-[#0a253c] hover:bg-[#f7f7f7] rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-600"
+              className="hidden md:flex items-center justify-center min-h-[44px] min-w-[44px] text-white/70 hover:text-white hover:bg-white/10 rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
               aria-label="Dismiss banner"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
