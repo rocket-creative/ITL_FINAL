@@ -27,11 +27,12 @@ export default function GeneHubPiTaxonomyMatrix({
           className="mb-2 text-xl font-bold text-[#0a253c] md:text-[1.45rem]"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
-          {mouseSymbol} model types researchers search for
+          {mouseSymbol} allele types
         </h2>
         <p style={{ color: '#555', fontSize: '.92rem', lineHeight: 1.7, marginBottom: '32px' }}>
-          Map common PI search terms for {mouseSymbol} (human {humanSymbol}) to catalog alleles or a
-          custom generation quote. Every path below has one clear next step.
+          Knockout, conditional, knockin, humanized, and related paths for {mouseSymbol} (human{' '}
+          {humanSymbol}). Catalog lines ship when inventory exists. Everything else is a generation
+          quote.
         </p>
         <PiTaxonomyEqualCardGrid
           mode="gene-hub"

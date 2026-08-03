@@ -287,10 +287,6 @@ export default function GeneHubAiAnswerBlock(props: GeneHubAiAnswerBlockProps) {
       style={{ fontFamily: 'Poppins, sans-serif' }}
     >
       <div className="mx-auto max-w-[1000px]">
-        <p className="mb-2.5 inline-block text-xs font-semibold uppercase tracking-[0.06em] text-[#008080]">
-          AI Answer
-        </p>
-
         <h2
           id="gene-hub-ai-answer-heading"
           className="mb-4 text-xl font-bold leading-snug text-[#0a253c] min-[810px]:text-[1.45rem]"

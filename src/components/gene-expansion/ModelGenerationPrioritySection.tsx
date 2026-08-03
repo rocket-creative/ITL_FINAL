@@ -329,26 +329,11 @@ export default function ModelGenerationPrioritySection() {
         .model-gen-show-all-btn:focus-visible { ${FOCUS_RING} }
       `}</style>
 
-      {/* AI Answer Block */}
       <section
         aria-labelledby="model-gen-ai-answer-heading"
         className="model-gen-section" style={{ background: '#fff', borderBottom: '1px solid #eee' }}
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <p
-            style={{
-              display: 'block',
-              fontSize: '.75rem',
-              fontWeight: 600,
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-              color: '#008080',
-              marginBottom: '10px',
-              textAlign: 'center',
-            }}
-          >
-            AI Answer
-          </p>
           <h2 id="model-gen-ai-answer-heading" className="model-gen-h2" style={H2_BASE}>
             Mouse model generation for high priority research genes
           </h2>
@@ -407,11 +392,11 @@ export default function ModelGenerationPrioritySection() {
       >
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <h2 id="model-gen-pi-taxonomy-heading" className="model-gen-h2" style={H2_BASE}>
-            PI taxonomy for model generation
+            Allele types we generate
           </h2>
           <p style={INTRO_PARAGRAPH}>
-            Associate your project with the full PI search taxonomy, from knockout through
-            backgrounds.
+            Knockout, conditional, knockin, humanized, transgenic, and related paths. Pick the allele
+            class that matches the experiment, then request a quote.
           </p>
 
           <PiTaxonomyEqualCardGrid mode="generation" />

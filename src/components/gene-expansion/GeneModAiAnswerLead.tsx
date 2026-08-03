@@ -60,19 +60,6 @@ export default function GeneModAiAnswerLead(props: GeneModAiAnswerLeadProps) {
       style={{ background: '#fff', padding: '48px 20px 8px', fontFamily: 'Poppins, sans-serif' }}
     >
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-        <p
-          style={{
-            display: 'inline-block',
-            fontSize: '.75rem',
-            fontWeight: 600,
-            letterSpacing: '0.06em',
-            textTransform: 'uppercase',
-            color: '#008080',
-            marginBottom: '10px',
-          }}
-        >
-          AI Answer
-        </p>
         <h2
           id="gene-mod-ai-answer-heading"
           style={{
