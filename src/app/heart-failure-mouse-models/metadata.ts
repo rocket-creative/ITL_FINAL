@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Heart Failure Mouse Models | ITL',
+  title: 'Heart Failure Mouse Models',
   description: 'Heart failure mouse models for studying cardiac remodeling, contractile dysfunction, and myocardial stress responses. Therapeutic testing platforms.',
   path: '/heart-failure-mouse-models',
 });

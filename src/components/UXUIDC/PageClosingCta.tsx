@@ -1,5 +1,5 @@
 /**
- * |UXUIDC| Standard page closing CTA — full dual-path widget.
+ * |UXUIDC| Standard page closing CTA, full dual-path widget.
  */
 
 import CatalogCustomDualCta from './CatalogCustomDualCta';

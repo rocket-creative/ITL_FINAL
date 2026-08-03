@@ -86,7 +86,7 @@ export default function PricingUnlockForm({
   // narrow to fit input + button on one line, the button wraps to a new line
   // (because we set flex-wrap on the form). 200px is small enough that on a
   // 393px iPhone the form fits comfortably inside a hero and wraps cleanly
-  // inside narrower 280–320px ServicePricingAnchor cards.
+  // inside narrower 280 to 320px ServicePricingAnchor cards.
   const inputStyle: React.CSSProperties = {
     flex: '1 1 200px',
     minWidth: '200px',

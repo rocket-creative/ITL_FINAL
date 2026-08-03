@@ -28,13 +28,13 @@ const pricingMeta = applyCatalogFirstMeta(
 );
 
 export const metadata: Metadata = {
-  title: `${pricingMeta.title} | ingenious targeting laboratory`,
+  title: pricingMeta.title,
   description: pricingMeta.description,
   alternates: {
     canonical: 'https://www.genetargeting.com/custom-mouse-model-pricing/',
   },
   openGraph: {
-    title: `${pricingMeta.title} | ITL`,
+    title: pricingMeta.title,
     description: pricingMeta.description,
     url: 'https://www.genetargeting.com/custom-mouse-model-pricing/',
     siteName: 'ingenious targeting laboratory',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${pricingMeta.title} | ITL`,
+    title: pricingMeta.title,
     description: pricingMeta.description,
   },
 };

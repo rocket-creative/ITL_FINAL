@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { data } = parseFrontmatter(fileContent);
     const pageTitle = String(data.title || slug);
     const meta = applyCatalogFirstMeta(
-      `${pageTitle} | Catalog + Generation | Legacy | ITL`,
+      `${pageTitle} | Catalog + Generation | Legacy`,
       `Archived guide on ${pageTitle}. Browse 14,774+ catalog strains or request a generated mouse model build from ingenious targeting laboratory.`,
       `/legacy/${slug}`,
     );
@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   } catch {
     const meta = applyCatalogFirstMeta(
-      'Legacy Mouse Model Content | Catalog + Generation | ITL',
+      'Legacy Mouse Model Content | Catalog + Generation',
       'Archived content from genetargeting.com. Browse catalog models or request a generated line for your current study.',
       '/legacy',
     );

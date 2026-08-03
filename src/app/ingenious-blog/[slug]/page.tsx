@@ -295,107 +295,107 @@ export async function generateStaticParams() {
 // surfaces our differentiators (price, publications, projects).
 const COMMERCIAL_META: Record<string, { title: string; description: string }> = {
   'what-is-a-point-mutation': {
-    title: 'Point Mutation: Types, Examples & Generated Knockin Mice | ITL',
+    title: 'Point Mutation: Types, Examples & Generated Knockin Mice',
     description:
       'Point mutation explained: substitution, missense, nonsense. Search catalog strains or request a generated knockin. 800+ publications. Quote in 24h.',
   },
   'types-of-point-mutations': {
-    title: 'Types of Point Mutations + Generated Knockin Mouse Models | ITL',
+    title: 'Types of Point Mutations + Generated Knockin Mouse Models',
     description:
       'Substitution, insertion, deletion mutations. Browse catalog disease variants or request a generated knockin. 26+ years experience. Quote in 24h.',
   },
   'point-mutation-diseases': {
-    title: 'Point Mutation Diseases + Generated Disease-Variant Mice | ITL',
+    title: 'Point Mutation Diseases + Generated Disease-Variant Mice',
     description:
       'Point mutation diseases: sickle cell, cystic fibrosis, cancer. Browse catalog knockins or we build your variant. Quote in 24h.',
   },
   'difference-between-knock-in-and-knockout': {
-    title: 'Knock-in vs Knockout Mice + Generated & Catalog Models | ITL',
+    title: 'Knock-in vs Knockout Mice + Generated & Catalog Models',
     description:
       'Knock-in vs knockout explained. Search 14,774+ catalog models or order a generated build. 100% germline guarantee. 800+ publications.',
   },
   'conventional-vs-conditional-knockout': {
-    title: 'Conventional vs Conditional Knockout + Generated Mice | ITL',
+    title: 'Conventional vs Conditional Knockout + Generated Mice',
     description:
       'Conventional vs conditional knockout compared. Catalog floxed and Cre lines plus generated Cre/lox projects. 2,800+ models generated.',
   },
   'how-a-knockout-mouse-is-made': {
-    title: 'How a Knockout Mouse Is Made + Generated Knockout Service | ITL',
+    title: 'How a Knockout Mouse Is Made + Generated Knockout Service',
     description:
       'How knockout mice are made. Many genes are already in our catalog. Generated knockouts when you need a new allele. Quote in 24h.',
   },
   'humanized-mice': {
-    title: 'Humanized Mice: Services, Pricing & Model Generation | ITL',
+    title: 'Humanized Mice: Services, Pricing & Model Generation',
     description:
       'Humanized mice: catalog checkpoint and reporter lines plus TruHumanization model generation services. Drug-target and immune models. Quote in 24h.',
   },
   'why-make-a-humanized-mouse': {
-    title: 'Why Use Humanized Mice + Generated Humanization Services | ITL',
+    title: 'Why Use Humanized Mice + Generated Humanization Services',
     description:
       'Why humanized mice matter. Browse catalog humanized strains or design a generated humanization. 800+ publications. Quote in 24h.',
   },
   'history-of-creating-genetically-humanized-mice': {
-    title: 'Humanized Mice: History + Generated Humanization Service | ITL',
+    title: 'Humanized Mice: History + Generated Humanization Service',
     description:
       'History of humanized mice. Today: broad catalog plus generated humanization since 1998. Immune checkpoint and drug-target. Quote in 24h.',
   },
   'what-is-a-transgene': {
-    title: 'Transgene Explained + Generated Transgenic Mouse Service | ITL',
+    title: 'Transgene Explained + Generated Transgenic Mouse Service',
     description:
       'Transgene defined with examples. Catalog reporters and model generation BAC or targeted transgenics. 800+ publications. Quote in 24h.',
   },
   'transgenic-mice': {
-    title: 'Transgenic Mice + Generated Transgenic Mouse Service | ITL',
+    title: 'Transgenic Mice + Generated Transgenic Mouse Service',
     description:
       'Transgenic mice explained. Ready strains in catalog plus generated BAC, pronuclear, or targeted work. 800+ publications.',
   },
   'how-to-make-a-transgenic-mouse': {
-    title: 'How to Make a Transgenic Mouse + Generated Service | ITL',
+    title: 'How to Make a Transgenic Mouse + Generated Service',
     description:
       'Transgenic mouse protocols explained. Compare DIY timelines to catalog strains or a full generated build. Quote in 24h.',
   },
   'rosa26-mice': {
-    title: 'Rosa26 Mice + Generated Rosa26 Knockin Service | ITL',
+    title: 'Rosa26 Mice + Generated Rosa26 Knockin Service',
     description:
       'Rosa26 safe harbor explained. Many Rosa26 alleles in catalog. Generated reporters and cassettes when you need them. Quote in 24h.',
   },
   'floxing': {
-    title: 'Floxing Explained + Generated Floxed Allele Service | ITL',
+    title: 'Floxing Explained + Generated Floxed Allele Service',
     description:
       'Floxing for conditional knockouts. Search catalog floxed lines or request generated critical exon design. Germline guarantee.',
   },
   'floxed-cre-lox-flox': {
-    title: 'Floxed, Cre, lox: Explained + Generated Floxed Mice | ITL',
+    title: 'Floxed, Cre, lox: Explained + Generated Floxed Mice',
     description:
       'Floxed alleles, Cre, loxP explained. Catalog Cre drivers and floxed strains plus model generation projects. Quote in 24h.',
   },
   'flox-sequence': {
-    title: 'Flox Sequence Design + Generated Floxed Allele Service | ITL',
+    title: 'Flox Sequence Design + Generated Floxed Allele Service',
     description:
       'Flox sequence design tips. Browse conditional catalog alleles or partner with us on generated floxed mice. Quote in 24h.',
   },
   'conditional-mutation': {
-    title: 'Conditional Mutation Explained + Generated Conditional Mice | ITL',
+    title: 'Conditional Mutation Explained + Generated Conditional Mice',
     description:
       'Conditional mutations explained. Catalog conditional lines and full generated knockout or knockin services. Quote in 24h.',
   },
   'cre-flox': {
-    title: 'Cre/flox Conditional Knockout + Generated Service | ITL',
+    title: 'Cre/flox Conditional Knockout + Generated Service',
     description:
       'Cre/flox conditional knockout explained. Catalog Cre and floxed mice plus study-specific allele pairing. 800+ publications.',
   },
   'what-is-a-stem-cell-line': {
-    title: 'Stem Cell Lines + Generated Mouse Targeting | ITL',
+    title: 'Stem Cell Lines + Generated Mouse Targeting',
     description:
       'Stem cell lines for mouse targeting. Validated C57BL/6 ES platform for model generation mice. Browse catalog while you plan. Germline guarantee.',
   },
   'gene-knockout': {
-    title: 'Gene Knockout: Methods + Generated Knockout Mice | ITL',
+    title: 'Gene Knockout: Methods + Generated Knockout Mice',
     description:
       'Gene knockout methods: homologous recombination and CRISPR. Search catalog knockouts first, then request a study-specific allele. Quote in 24h.',
   },
   'crispr-knockout': {
-    title: 'CRISPR Knockout + Generated CRISPR Knockout Mice | ITL',
+    title: 'CRISPR Knockout + Generated CRISPR Knockout Mice',
     description:
       'CRISPR knockout overview. Off-the-shelf catalog strains or generated CRISPR projects with germline guarantee.',
   },
@@ -426,7 +426,7 @@ export async function generateMetadata({
     const enhanced = applyCatalogFirstMeta(rawTitle, rawDescription, blogPath);
     const finalTitle = commercial?.title
       ? enhanced.title
-      : `${enhanced.title} | ingenious targeting laboratory`;
+      : enhanced.title;
     const finalDescription = enhanced.description;
     const canonicalUrl = `https://www.genetargeting.com/ingenious-blog/${slug}/`;
 
@@ -452,7 +452,7 @@ export async function generateMetadata({
   } catch {
     const blogPath = `/ingenious-blog/${slug}`;
     const enhanced = applyCatalogFirstMeta(
-      commercial?.title ?? 'Mouse Model Generation Insights | Catalog + Generation | ITL',
+      commercial?.title ?? 'Mouse Model Generation Insights | Catalog + Generation',
       commercial?.description ??
         'Mouse model insights from ingenious targeting laboratory. Browse 14,774+ catalog strains or generated knockout, knockin, and humanized mice.',
       blogPath,

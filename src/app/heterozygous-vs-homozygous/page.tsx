@@ -15,7 +15,7 @@ import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta,
 
 export const metadata: Metadata = buildStandalonePageMetadata({
   path: '/heterozygous-vs-homozygous',
-  title: 'Heterozygous vs Homozygous in Mice | Catalog + Generation | ITL',
+  title: 'Heterozygous vs Homozygous in Mice | Catalog + Generation',
   description:
     'Heterozygous vs homozygous explained for mouse research. Browse catalog strains or request a generated line with a breeding scheme designed for your study. Quote in 24 hours.',
 });

@@ -23,7 +23,7 @@ export function isFounderOnly(a?: string | null): boolean {
   return v.includes('live') && /\bf[01]\b/.test(v);
 }
 
-/** Live = available now. Established "live" only — founder-only is excluded. */
+/** Live = available now. Established "live" only, founder-only is excluded. */
 export function isLive(a?: string | null): boolean {
   return (a || '').toLowerCase().includes('live') && !isFounderOnly(a);
 }

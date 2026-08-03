@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * |UXUIDC| Start Project CTA — sitewide dual-path widget.
+ * |UXUIDC| Start Project CTA, sitewide dual-path widget.
  */
 
 import CatalogCustomDualCta from './CatalogCustomDualCta';

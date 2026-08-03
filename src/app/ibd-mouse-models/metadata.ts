@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'IBD Mouse Models | ITL',
+  title: 'IBD Mouse Models',
   description: 'IBD mouse models for studying inflammatory bowel disease, colitis, and gut barrier function. Crohn disease and ulcerative colitis platforms.',
   path: '/ibd-mouse-models',
 });

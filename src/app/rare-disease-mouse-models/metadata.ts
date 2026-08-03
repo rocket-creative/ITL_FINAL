@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Rare Disease Mouse Models | ITL',
+  title: 'Rare Disease Mouse Models',
   description: 'Rare disease mouse models for studying orphan diseases and genetic disorders. Patient mutation knockins for gene therapy and drug development testing.',
   path: '/rare-disease-mouse-models',
 });

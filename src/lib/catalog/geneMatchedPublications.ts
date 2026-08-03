@@ -11,7 +11,7 @@ const MAX_MATCHES = 5;
 
 /**
  * Return up to 5 ITL publications whose title or authors mention any of the given gene symbols
- * (case insensitive). Only searches the site publications list — never external sources.
+ * (case insensitive). Only searches the site publications list, never external sources.
  */
 export function getGeneMatchedPublications(geneSymbols: string[]): Publication[] {
   const needles = geneSymbols

@@ -19,7 +19,7 @@ import {
 } from '@/data/verifiedTestimonials';
 
 export const metadata = {
-  title: 'Client Testimonials | What Researchers Say | ingenious targeting laboratory',
+  title: 'Client Testimonials | What Researchers Say',
   description: 'Read testimonials from researchers at leading institutions worldwide who have partnered with ingenious targeting laboratory for mouse model generation.',
 };
 

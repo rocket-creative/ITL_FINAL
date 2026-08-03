@@ -25,7 +25,7 @@ export default function UXUIDCHeroSection({
 }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden bg-white lg:min-h-[600px]">
-      {/* Desktop: image sits on the right half only — no white wash overlay */}
+      {/* Desktop: image sits on the right half only, no white wash overlay */}
       <div className="hidden lg:block absolute inset-y-0 right-0 w-1/2">
         <Image
           src="/images/mouse-hero-glove.jpg"

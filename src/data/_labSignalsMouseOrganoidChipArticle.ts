@@ -10,12 +10,12 @@ export const mouseOrganoidChipArticleBody = `<p>There is no dispute that organoi
 <p>Before diving into the literature, here is a snapshot of what each platform can and cannot do today:</p>
 
 <table><thead><tr><th>Preclinical need</th><th>Mouse models</th><th>Organoids</th><th>Organ on chip</th></tr></thead><tbody>
-<tr><td>Whole body PK/PD and ADME</td><td>Yes – full organism</td><td>No</td><td>Partial (1 to 2 organs)</td></tr>
-<tr><td>Multi organ toxicity</td><td>Yes – systemic</td><td>No</td><td>Very limited</td></tr>
+<tr><td>Whole body PK/PD and ADME</td><td>Yes, full organism</td><td>No</td><td>Partial (1 to 2 organs)</td></tr>
+<tr><td>Multi organ toxicity</td><td>Yes, systemic</td><td>No</td><td>Very limited</td></tr>
 <tr><td>Human specific cell biology</td><td>Indirect (humanized)</td><td>Yes</td><td>Yes</td></tr>
 <tr><td>Chronic disease (months to years)</td><td>Yes</td><td>Limited (weeks)</td><td>Limited (days to weeks)</td></tr>
 <tr><td>Throughput / screening</td><td>Low</td><td>Medium to high</td><td>Low to medium</td></tr>
-<tr><td>Integrated immune response</td><td>Yes – full system</td><td>Partial (co culture)</td><td>Partial (circulating cells)</td></tr>
+<tr><td>Integrated immune response</td><td>Yes, full system</td><td>Partial (co culture)</td><td>Partial (circulating cells)</td></tr>
 </tbody></table>
 
 <h3>Organoids: powerful organ level models, not whole body systems</h3>
@@ -84,21 +84,21 @@ export const mouseOrganoidChipArticleBody = `<p>There is no dispute that organoi
 <li>Smabers LP, et al. Patient derived organoids predict treatment response in metastatic colorectal cancer. <em>Clin Cancer Res.</em> 2025;31:5015.</li>
 <li>Peng T, et al. Individualized patient tumor organoids faithfully preserve human brain tumor ecosystems and predict patient response to therapy. <em>Cell Stem Cell.</em> 2025;32.</li>
 <li>Hu JW, et al. Applications and challenges of patient derived organoids in hepatobiliary and pancreatic cancers. <em>World J Gastroenterol.</em> 2025;31:106747.</li>
-<li>Yip S, Wang N, Sugimura R. Give them vasculature and immune cells: how to fill the gap of organoids. <em>Cells Tissues Organs.</em> 2023;212:369–382.</li>
-<li>Zhang S, Wan Z, Kamm RD. Vascularized organoids on a chip: strategies for engineering organoids with functional vasculature. <em>Lab Chip.</em> 2021;21:473–488.</li>
+<li>Yip S, Wang N, Sugimura R. Give them vasculature and immune cells: how to fill the gap of organoids. <em>Cells Tissues Organs.</em> 2023;212:369 to 382.</li>
+<li>Zhang S, Wan Z, Kamm RD. Vascularized organoids on a chip: strategies for engineering organoids with functional vasculature. <em>Lab Chip.</em> 2021;21:473 to 488.</li>
 <li>Zushin PH, Mukherjee S, Wu JC. FDA Modernization Act 2.0: transitioning beyond animal models with human cells, organoids, and AI/ML based approaches. <em>J Clin Invest.</em> 2023;133:e175824.</li>
 <li>Ewart L, et al. Performance assessment and economic analysis of a human Liver Chip for predictive toxicology. <em>Commun Med.</em> 2022;2:154.</li>
 <li>U.S. Food and Drug Administration. ISTAND Pilot Program accepts submission of first organ on a chip technology designed to predict human drug induced liver injury. <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fdas-istand-pilot-program-accepts-submission-first-organ-chip-technology-designed-predict-human-drug" target="_blank" rel="noopener noreferrer">FDA.gov</a> (2024).</li>
-<li>Si L, et al. A human airway on chip for the rapid identification of candidate antiviral therapeutics and prophylactics. <em>Nat Biomed Eng.</em> 2021;5:815–829.</li>
-<li>Meyer SR, et al. A high throughput microphysiological liver chip system to model drug induced liver injury using human liver organoids. <em>Gastro Hep Adv.</em> 2024;3:1045–1053.</li>
+<li>Si L, et al. A human airway on chip for the rapid identification of candidate antiviral therapeutics and prophylactics. <em>Nat Biomed Eng.</em> 2021;5:815 to 829.</li>
+<li>Meyer SR, et al. A high throughput microphysiological liver chip system to model drug induced liver injury using human liver organoids. <em>Gastro Hep Adv.</em> 2024;3:1045 to 1053.</li>
 <li>Ingber DE, et al. Roadblocks confronting widespread dissemination and deployment of organs on chips. <em>Nat Commun.</em> 2024;15:5118.</li>
 <li>Wang ZJ, et al. Semaglutide ameliorates cognition and glucose metabolism dysfunction in the 3xTg mouse model of Alzheimer’s disease via the GLP 1R/SIRT1/GLUT4 pathway. <em>Neuropharmacology.</em> 2023;240:109716.</li>
-<li>Wang ZJ, et al. Semaglutide promotes the transition of microglia from M1 to M2 type to reduce brain inflammation in APP/PS1/tau mice. <em>Neuroscience.</em> 2024;563:222–234.</li>
+<li>Wang ZJ, et al. Semaglutide promotes the transition of microglia from M1 to M2 type to reduce brain inflammation in APP/PS1/tau mice. <em>Neuroscience.</em> 2024;563:222 to 234.</li>
 <li>Forny Germano L, et al. The GLP 1 medicines semaglutide and tirzepatide do not alter disease related pathology, behaviour or cognitive function in 5XFAD and APP/PS1 mice. <em>Mol Metab.</em> 2024;89:102019.</li>
 <li>Novo Nordisk. Evoke phase 3 trials did not demonstrate a statistically significant reduction in Alzheimer’s disease progression. GlobeNewsWire (24 November 2025). <a href="https://www.globenewswire.com/news-release/2025/11/24/3193328/0/en/Novo-Nordisk-A-S-Evoke-phase-3-trials-did-not-demonstrate-a-statistically-significant-reduction-in-Alzheimer-s-disease-progression.html" target="_blank" rel="noopener noreferrer">Press release</a></li>
-<li>Chuprin J, et al. Humanized mouse models for immuno oncology research. <em>Nat Rev Clin Oncol.</em> 2023;20:192–206.</li>
+<li>Chuprin J, et al. Humanized mouse models for immuno oncology research. <em>Nat Rev Clin Oncol.</em> 2023;20:192 to 206.</li>
 <li>Katano I, et al. Development of a novel humanized mouse model for improved evaluation of <em>in vivo</em> anti cancer effects of anti PD 1 antibody. <em>Sci Rep.</em> 2021;11:21087.</li>
 <li>Mukherjee P, et al. Role of animal models in biomedical research: a review. <em>Lab Anim Res.</em> 2022;38:18.</li>
-<li>Bolleddula J, et al. Absorption, distribution, metabolism, and excretion of therapeutic proteins: current industry practices and future perspectives. <em>Drug Metab Dispos.</em> 2022;50:838–845.</li>
-<li>Chang MCJ, Grieder FB. The continued importance of animals in biomedical research. <em>Lab Anim (N Y).</em> 2024;53:295–297.</li>
+<li>Bolleddula J, et al. Absorption, distribution, metabolism, and excretion of therapeutic proteins: current industry practices and future perspectives. <em>Drug Metab Dispos.</em> 2022;50:838 to 845.</li>
+<li>Chang MCJ, Grieder FB. The continued importance of animals in biomedical research. <em>Lab Anim (N Y).</em> 2024;53:295 to 297.</li>
 </ol></div>`;

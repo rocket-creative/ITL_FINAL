@@ -33,6 +33,7 @@ scripts/gene-expansion/.cache/
 # Scratch workspace for gene paragraph generation
 .tmp-paragraphs/
 .tmp-*.mjs
+.tmp-*
 .tmp-*.json
 
 # Next 16: use src/proxy.ts only; a middleware.ts re-export conflicts with proxy.

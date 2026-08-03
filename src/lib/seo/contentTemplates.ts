@@ -1,5 +1,5 @@
 /**
- * Deterministic template rotation for Tier 1–4 body copy (avoids duplicate clusters).
+ * Deterministic template rotation for Tier 1 to 4 body copy (avoids duplicate clusters).
  */
 
 function hashInput(parts: string[]): number {

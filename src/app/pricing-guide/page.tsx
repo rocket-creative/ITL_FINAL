@@ -14,7 +14,7 @@ import type { Metadata } from 'next';
 import PricingGuideClient from './PricingGuideClient';
 
 export const metadata: Metadata = {
-  title: 'Mouse Model Generation Pricing Guide | ingenious targeting laboratory',
+  title: 'Mouse Model Generation Pricing Guide',
   description:
     'Detailed pricing reference for model generation mouse, rat, and rabbit models. Available after submitting your work email. Guaranteed germline-confirmed delivery with flexible funding options.',
   alternates: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     googleBot: { index: false, follow: false },
   },
   openGraph: {
-    title: 'Mouse Model Generation Pricing Guide | ingenious targeting laboratory',
+    title: 'Mouse Model Generation Pricing Guide',
     description:
       'Detailed pricing reference for model generation mouse, rat, and rabbit models. Available after submitting your work email.',
     url: 'https://www.genetargeting.com/pricing-guide/',
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
         url: 'https://www.genetargeting.com/api/og?line1=Generated%20Mouse%20Model%20Pricing%20Guide&line2=Knockout%2C%20Knockin%20%26%20Humanized%20Models&line3=Add%20your%20work%20email%20to%20view',
         width: 1200,
         height: 630,
-        alt: 'Mouse Model Generation Pricing Guide | ingenious targeting laboratory',
+        alt: 'Mouse Model Generation Pricing Guide',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mouse Model Generation Pricing Guide | ingenious targeting laboratory',
+    title: 'Mouse Model Generation Pricing Guide',
     description:
       'Detailed pricing reference for model generation mouse, rat, and rabbit models. Available after submitting your work email.',
     images: [

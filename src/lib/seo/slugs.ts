@@ -1,5 +1,5 @@
 /**
- * SEO path slugs — round-trip safe with search dictionaries and CRE_DRIVERS.
+ * SEO path slugs, round-trip safe with search dictionaries and CRE_DRIVERS.
  */
 
 import { CRE_DRIVERS } from '../search/creDrivers';

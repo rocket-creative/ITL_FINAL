@@ -53,7 +53,7 @@ const FAQSection = dynamic(
 // META - from homepage.md lines 1-6
 // ============================================
 export const metadata: Metadata = {
-  title: `${ROOT_CATALOG_FIRST_META.title} | ingenious targeting laboratory`,
+  title: ROOT_CATALOG_FIRST_META.title,
   description: ROOT_CATALOG_FIRST_META.description,
 };
 

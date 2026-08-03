@@ -39,12 +39,13 @@ export function generateMetadata(options: PageMetadataOptions): Metadata {
   const fullUrl = `${BASE_URL}${normalizedPath}${normalizedPath !== '/' ? '/' : ''}`;
 
   const commercial = applyCatalogFirstMeta(title, description, normalizedPath, catalogFirst);
-  
-  // Format title with site name
-  const fullTitle = `${commercial.title} | ${SITE_NAME}`;
+
+  // Bare title only. Root layout template appends "| ingenious targeting laboratory".
+  const pageTitle = commercial.title.replace(/\s*\|\s*(ITL|iTL|ingenious targeting laboratory)\s*$/i, '').trim();
+  const brandedTitle = `${pageTitle} | ${SITE_NAME}`;
 
   return {
-    title: { absolute: fullTitle },
+    title: pageTitle,
     description: commercial.description,
     alternates: {
       canonical: fullUrl,
@@ -55,7 +56,7 @@ export function generateMetadata(options: PageMetadataOptions): Metadata {
       follow,
     },
     openGraph: {
-      title: fullTitle,
+      title: brandedTitle,
       description: commercial.description,
       url: fullUrl,
       siteName: SITE_NAME,
@@ -67,14 +68,14 @@ export function generateMetadata(options: PageMetadataOptions): Metadata {
             url: ogImage,
             width: 1200,
             height: 630,
-            alt: commercial.title,
+            alt: pageTitle,
           },
         ],
       }),
     },
     twitter: {
       card: 'summary_large_image',
-      title: fullTitle,
+      title: brandedTitle,
       description: commercial.description,
       ...(twitterImage && {
         images: [twitterImage],

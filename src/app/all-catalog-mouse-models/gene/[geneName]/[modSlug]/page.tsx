@@ -19,6 +19,11 @@ import { buildGeneModRedirectPath } from '@/lib/gene-expansion/synonymRedirects'
 import { filterCatalogForSlug, slugToCatalogDisplay } from '@/lib/gene-expansion/catalogTypeMap';
 import type { CanonicalModSlug } from '@/lib/gene-expansion/db';
 import { buildBuildInquiryMetadata } from '@/lib/gene-expansion/metadata';
+import {
+  buildCatalogModTitle,
+  buildCatalogModDescription,
+  getCatalogSerpOverride,
+} from '@/lib/seo/catalogSerp';
 import GeneModCatalogPage from '@/components/gene-expansion/GeneModCatalogPage';
 import BuildInquiryGeneModPage from '@/components/gene-expansion/BuildInquiryGeneModPage';
 
@@ -68,16 +73,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (modCanon && rawModels.length > 0) {
     const models = rawModels.filter((m) => m.modelType === modCanon);
     if (models.length >= 1) {
-      const title = `${geneName} ${modCanon} mouse models | ${SITE_NAME}`;
-      const description = `Browse ${geneName} ${modCanon.toLowerCase()} lines from ${SITE_NAME}. Catalog numbers, live availability, and quotes in about twenty four hours.`;
+      const hubOverride = getCatalogSerpOverride(geneName);
+      const title =
+        /humanized/i.test(modCanon) && hubOverride?.title
+          ? hubOverride.title
+          : buildCatalogModTitle(geneName, modCanon);
+      const description =
+        /humanized/i.test(modCanon) && hubOverride?.description
+          ? hubOverride.description
+          : buildCatalogModDescription(geneName, modCanon, models.length);
       const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}/`;
+      const branded = `${title} | ${SITE_NAME}`;
+      const ogParams = new URLSearchParams({
+        line1: title,
+        line2: modCanon,
+        line3: `${models.length} catalog line${models.length === 1 ? '' : 's'}`,
+      });
+      const ogImage = `${BASE_URL}/api/og?${ogParams.toString()}`;
       return {
         title,
         description,
         alternates: { canonical },
         robots: { index: true, follow: true },
-        openGraph: { title, description, url: canonical, siteName: SITE_NAME, locale: 'en_US', type: 'website' },
-        twitter: { card: 'summary_large_image', title, description },
+        openGraph: {
+          title: branded,
+          description,
+          url: canonical,
+          siteName: SITE_NAME,
+          locale: 'en_US',
+          type: 'website',
+          images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+        },
+        twitter: { card: 'summary_large_image', title: branded, description, images: [ogImage] },
       };
     }
   }
@@ -88,7 +115,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return buildBuildInquiryMetadata(ctx.gene, ctx.modelType, ctx.page.is_indexable);
   }
 
-  return { title: `${geneName} models | ${SITE_NAME}`, robots: { index: false, follow: true } };
+  return { title: `${geneName} models`, robots: { index: false, follow: true } };
 }
 
 export default async function GeneModTierPage({ params }: Props) {

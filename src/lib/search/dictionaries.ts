@@ -136,7 +136,7 @@ const GENE_SYNONYMS_MANUAL: Record<string, string> = {
   cd28: 'Cd28',
   cd20: 'Ms4a1',
   trem2: 'Trem2',
-  /** Morphogen Tier A — human symbol → mouse catalog casing */
+  /** Morphogen Tier A, human symbol → mouse catalog casing */
   shh: 'Shh',
   ihh: 'Ihh',
   dhh: 'Dhh',

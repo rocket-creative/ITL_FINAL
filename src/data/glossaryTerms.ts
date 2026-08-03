@@ -116,7 +116,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Conditional Knockout (cKO) Mouse Models",
     slug: "conditional-knockout-mouse-models",
-    definition: "A genetically engineered mouse in which a specific gene can be selectively inactivated in chosen tissues, cell types, or developmental stages—enabling precise studies of gene function while avoiding embryonic lethality or systemic effects.",
+    definition: "A genetically engineered mouse in which a specific gene can be selectively inactivated in chosen tissues, cell types, or developmental stages, enabling precise studies of gene function while avoiding embryonic lethality or systemic effects.",
     category: "Mouse Model Strategies & Allele Types",
   },
   {
@@ -128,7 +128,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Knockin (KI) Mouse Models",
     slug: "knockin-mouse-models",
-    definition: "A genetically engineered mouse in which a specific DNA sequence—such as a gene, cDNA, mutation, reporter, or human ortholog—is inserted into a defined genomic locus to add or modify gene function.",
+    definition: "A genetically engineered mouse in which a specific DNA sequence, such as a gene, cDNA, mutation, reporter, or human ortholog, is inserted into a defined genomic locus to add or modify gene function.",
     category: "Mouse Model Strategies & Allele Types",
   },
   {
@@ -140,7 +140,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Reporter Gene / Reporter Allele",
     slug: "reporter-gene-reporter-allele",
-    definition: "A reporter gene is an easily detectable genetic marker—such as GFP, LacZ, or luciferase—inserted into a mouse genome to visualize gene expression, monitor cellular activity, or trace lineage in vivo.",
+    definition: "A reporter gene is an easily detectable genetic marker, such as GFP, LacZ, or luciferase, inserted into a mouse genome to visualize gene expression, monitor cellular activity, or trace lineage in vivo.",
     category: "Mouse Model Strategies & Allele Types",
   },
   {
@@ -246,7 +246,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Tamoxifen Inducible Cre",
     slug: "tamoxifen-inducible-cre",
-    definition: "A temporal gene deletion system using CreERT2 fusion protein—Cre recombinase fused to a mutant estrogen receptor ligand-binding domain (ERT2). Without tamoxifen, CreERT2 is sequestered in the cytoplasm by HSP90 chaperones. Tamoxifen administration triggers nuclear translocation and LoxP recombination, enabling gene deletion at defined timepoints in adult animals.",
+    definition: "A temporal gene deletion system using CreERT2 fusion protein, Cre recombinase fused to a mutant estrogen receptor ligand-binding domain (ERT2). Without tamoxifen, CreERT2 is sequestered in the cytoplasm by HSP90 chaperones. Tamoxifen administration triggers nuclear translocation and LoxP recombination, enabling gene deletion at defined timepoints in adult animals.",
     category: "Recombination Systems & Tools",
   },
   {
@@ -280,7 +280,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Blastocyst Injection / Chimera Production",
     slug: "blastocyst-injection-chimera",
-    definition: "The process of introducing genetically modified cells into a developing mouse blastocyst to create a chimera—an organism composed of cells from both the host embryo and the engineered cells.",
+    definition: "The process of introducing genetically modified cells into a developing mouse blastocyst to create a chimera, an organism composed of cells from both the host embryo and the engineered cells.",
     category: "Vectors & Delivery",
   },
   {
@@ -298,7 +298,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Large-Fragment / BAC Targeting",
     slug: "large-fragment-bac-targeting",
-    definition: "Introducing extended genomic DNA segments—often spanning 100–300 kilobases—into the mouse genome using bacterial artificial chromosomes (BACs) to preserve native gene context and regulatory elements.",
+    definition: "Introducing extended genomic DNA segments, often spanning 100 to 300 kilobases, into the mouse genome using bacterial artificial chromosomes (BACs) to preserve native gene context and regulatory elements.",
     category: "Vectors & Delivery",
   },
   {
@@ -344,7 +344,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Breeding Scheme (Hetero × Hetero, etc.)",
     slug: "breeding-scheme",
-    definition: "Planned mating strategies used to generate offspring of specific genotypes—such as heterozygous, homozygous, or compound mutant combinations—from established genetically modified lines.",
+    definition: "Planned mating strategies used to generate offspring of specific genotypes, such as heterozygous, homozygous, or compound mutant combinations, from established genetically modified lines.",
     category: "Validation, QC & Genotyping",
   },
   {
@@ -366,13 +366,13 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Humanized Immune Checkpoint (PD-1 / PD-L1 / CTLA-4)",
     slug: "humanized-immune-checkpoint",
-    definition: "Genetically engineered mice with key inhibitory immune receptors—such as PD-1, PD-L1, and CTLA-4—replaced with their human equivalents. Essential for evaluating antibody and biologic therapies targeting immune checkpoint pathways.",
+    definition: "Genetically engineered mice with key inhibitory immune receptors, such as PD-1, PD-L1, and CTLA-4, replaced with their human equivalents. Essential for evaluating antibody and biologic therapies targeting immune checkpoint pathways.",
     category: "Immunology & Humanization",
   },
   {
     term: "Cytokine / Receptor Humanization",
     slug: "cytokine-receptor-humanization",
-    definition: "The genetic replacement of mouse cytokines, receptors, or ligand–receptor pairs with their human equivalents. These models recreate critical components of the human immune network for accurate evaluation of human biologics.",
+    definition: "The genetic replacement of mouse cytokines, receptors, or ligand, receptor pairs with their human equivalents. These models recreate critical components of the human immune network for accurate evaluation of human biologics.",
     category: "Immunology & Humanization",
   },
   {
@@ -418,7 +418,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Reporter Readouts (GFP, LacZ, Luc)",
     slug: "reporter-readouts",
-    definition: "Measurable signals—typically fluorescent, enzymatic, or luminescent—produced by genetically encoded reporter genes such as GFP, LacZ, and luciferase. These are integrated into mouse models to visualize gene expression and track cell lineages.",
+    definition: "Measurable signals, typically fluorescent, enzymatic, or luminescent, produced by genetically encoded reporter genes such as GFP, LacZ, and luciferase. These are integrated into mouse models to visualize gene expression and track cell lineages.",
     category: "Study Design & Applications",
   },
   {

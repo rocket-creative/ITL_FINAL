@@ -392,7 +392,7 @@ export default function LabSignalsSignup({
     );
   }
 
-  // Default banner variant — softer than P0 commercial CTAs (P2 nurture)
+  // Default banner variant, softer than P0 commercial CTAs (P2 nurture)
   return (
     <div
       style={{

@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Muscular Dystrophy Mouse Models | ITL',
+  title: 'Muscular Dystrophy Mouse Models',
   description: 'Muscular dystrophy mouse models for studying muscle degeneration and dystrophin pathology. DMD, LGMD, and myopathy models for therapy development.',
   path: '/muscular-dystrophy-mouse-models',
 });

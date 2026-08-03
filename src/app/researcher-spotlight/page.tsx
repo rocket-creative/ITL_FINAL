@@ -6,7 +6,7 @@ import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 const CANONICAL = 'https://www.genetargeting.com/researcher-spotlight/';
 
 export const metadata: Metadata = {
-  title: 'Researcher Spotlight | ingenious targeting laboratory',
+  title: 'Researcher Spotlight',
   description:
     'Featured scientists whose published work used ITL mouse model generation. Each spotlight documents the research question, the model strategy, and what the work reveals.',
   alternates: { canonical: CANONICAL },
@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     type: 'website',
     url: CANONICAL,
     siteName: 'ingenious targeting laboratory',
-    title: 'Researcher Spotlight | ingenious targeting laboratory',
+    title: 'Researcher Spotlight',
     description:
       'Featured scientists whose published work used ITL mouse model generation.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Researcher Spotlight | ingenious targeting laboratory',
+    title: 'Researcher Spotlight',
     description:
       'Featured scientists whose published work used ITL mouse model generation.',
   },

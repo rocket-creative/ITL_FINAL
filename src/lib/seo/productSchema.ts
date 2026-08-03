@@ -1,5 +1,5 @@
 /**
- * Product JSON-LD helpers — tier-based AggregateOffer pricing for GSC compliance.
+ * Product JSON-LD helpers, tier-based AggregateOffer pricing for GSC compliance.
  */
 
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';

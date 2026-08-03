@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { getModelsByGene, getRelatedGenesWithModelType } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
-import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import { tier4GenerateStaticParams } from '@/data/seoKeywords';
 import {
@@ -24,8 +24,9 @@ import { getGeneModNote } from '@/lib/seo/geneModNotes';
 import { buildTemplateIntro } from '@/lib/seo/contentTemplates';
 import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
-import { getPublicationsForPage } from '@/data/pagePublications';
+import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
 import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
+import { getPriorityGeneByMouseSymbol } from '@/data/priorityGenes';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -62,25 +63,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const geneName = decodeURIComponent(rawG);
   const modCanon = modSlugToCanonical(modSlug);
   const resolved = resolveTissueOrDriverSlug(tissueOrDriverSlug);
-  if (!modCanon || !resolved) return { title: `${geneName} models | ${SITE_NAME}` };
+  if (!modCanon || !resolved) return { title: `${geneName} models` };
   const labelThird =
     resolved.kind === 'tissue'
       ? getDisplayLabelForTissueKey(resolved.canonical)
       : resolved.canonical;
-  const title = `${geneName} ${modCanon} mouse ${labelThird} | ITL`;
-  const description = `${geneName} ${modCanon.toLowerCase()} models with ${String(labelThird).toLowerCase()} context. Catalog availability and quotes from ${SITE_NAME}.`;
+  const title = `${geneName} ${modCanon} ${String(labelThird).toLowerCase()}`.slice(0, 60);
+  const description =
+    `${geneName} ${modCanon.toLowerCase()} models with ${String(labelThird).toLowerCase()} context. Catalog availability and quotes in about twenty four hours.`.slice(
+      0,
+      160,
+    );
   const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}/${tissueOrDriverSlug}/`;
   const models = (await getModelsByGene(geneName))
     .map(cleanModel)
     .filter((m) => m.modelType === modCanon);
   const indexable = models.length >= 1;
+  const branded = `${title} | ${SITE_NAME}`;
   return {
     title,
     description,
     alternates: { canonical },
     robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
-    openGraph: { title, description, url: canonical, siteName: SITE_NAME, locale: 'en_US', type: 'website' },
-    twitter: { card: 'summary_large_image', title, description },
+    openGraph: { title: branded, description, url: canonical, siteName: SITE_NAME, locale: 'en_US', type: 'website' },
+    twitter: { card: 'summary_large_image', title: branded, description },
   };
 }
 
@@ -137,7 +143,10 @@ export default async function GeneModContextTierPage({ params }: Props) {
     }),
   );
 
-  const pubs = getPublicationsForPage('/tissue-specific-knockout');
+  const priority = getPriorityGeneByMouseSymbol(geneName);
+  const pubs = getGeneMatchedPublications(
+    [geneName, priority?.humanSymbol, ...(priority?.aliases ?? [])].filter(Boolean) as string[],
+  );
   const h1Third =
     resolved.kind === 'tissue' ? `${tissueLabel} specific context` : `${resolved.canonical} pairing`;
 
@@ -327,16 +336,6 @@ export default async function GeneModContextTierPage({ params }: Props) {
         </section>
       </main>
       <UXUIDCFooter />
-
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', path: '/' },
-          { name: 'Catalog', path: '/all-catalog-mouse-models' },
-          { name: geneName, path: `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}` },
-          { name: modCanon, path: `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}` },
-          { name: h1Third, path: `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}/${tissueOrDriverSlug}` },
-        ]}
-      />
 
       <script
         type="application/ld+json"

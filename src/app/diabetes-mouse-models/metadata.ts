@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Diabetes Mouse Models | ITL',
+  title: 'Diabetes Mouse Models',
   description: 'Diabetes mouse models for studying insulin signaling, beta cell function, and glucose metabolism. Type 1 and Type 2 disease mechanisms.',
   path: '/diabetes-mouse-models',
 });

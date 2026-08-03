@@ -1,5 +1,5 @@
 /**
- * Supabase client — catalog database
+ * Supabase client, catalog database
  * Server-side only (used in API routes and Server Components).
  * Never import this in 'use client' files.
  */
@@ -10,7 +10,7 @@ const supabaseUrl  = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
-  // Non-fatal at module load — API routes will return empty gracefully
+  // Non-fatal at module load, API routes will return empty gracefully
   console.warn('[catalog] NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY not set.');
 }
 

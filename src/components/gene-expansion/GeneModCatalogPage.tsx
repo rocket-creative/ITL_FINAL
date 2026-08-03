@@ -1,11 +1,11 @@
 /**
- * Extracted catalog tier-1 page — unchanged output from original [modSlug]/page.tsx.
+ * Extracted catalog tier-1 page, unchanged output from original [modSlug]/page.tsx.
  */
 
 import Link from 'next/link';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
-import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import GeneModAiAnswerLead from '@/components/gene-expansion/GeneModAiAnswerLead';
 import { getCuratedIntro } from '@/lib/seo/curatedIntros';
@@ -13,7 +13,7 @@ import { getGeneModNote } from '@/lib/seo/geneModNotes';
 import { buildTemplateIntro } from '@/lib/seo/contentTemplates';
 import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
-import { getPublicationsForPage } from '@/data/pagePublications';
+import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
 import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
 import { getPriorityGeneByMouseSymbol } from '@/data/priorityGenes';
 
@@ -75,7 +75,9 @@ export default function GeneModCatalogPage({
     }),
   );
 
-  const pubs = getPublicationsForPage('/conditional-knockout-mouse-models');
+  const pubs = getGeneMatchedPublications(
+    [geneName, priority?.humanSymbol, ...(priority?.aliases ?? [])].filter(Boolean) as string[],
+  );
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -245,15 +247,6 @@ export default function GeneModCatalogPage({
         </section>
       </main>
       <UXUIDCFooter />
-
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', path: '/' },
-          { name: 'All Catalog Models', path: '/all-catalog-mouse-models' },
-          { name: geneName, path: `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}` },
-          { name: modCanon, path: `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}` },
-        ]}
-      />
 
       <script
         type="application/ld+json"

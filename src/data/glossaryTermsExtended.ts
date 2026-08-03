@@ -34,7 +34,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "point-mutation": {
     metaTitle: "Point Mutation | Definition, Mechanism, and Role in Mouse Model Research",
     metaDescription: "Point mutation definition and mechanism. See how researchers use point mutation mouse models for disease research. Get a quote.",
-    introduction: "Despite their small scale, point mutations are among the most powerful tools in genetics and biomedical research. They occur when one nucleotide—adenine (A), cytosine (C), guanine (G), or thymine (T)—is substituted, inserted, or deleted within a DNA sequence. Such changes can have minimal impact (as in silent mutations) or severe consequences, such as loss of gene function, altered protein structure, or disease initiation.",
+    introduction: "Despite their small scale, point mutations are among the most powerful tools in genetics and biomedical research. They occur when one nucleotide, adenine (A), cytosine (C), guanine (G), or thymine (T) is substituted, inserted, or deleted within a DNA sequence. Such changes can have minimal impact (as in silent mutations) or severe consequences, such as loss of gene function, altered protein structure, or disease initiation.",
     sections: [
       {
         title: "Types of Point Mutations",
@@ -70,10 +70,10 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "missense-nonsense-mutation": {
     metaTitle: "Missense and Nonsense Mutations | Mechanisms, Examples, and Research Applications",
     metaDescription: "Explore how missense and nonsense mutations alter gene function, drive disease, and power preclinical research. Learn their molecular consequences and applications in engineered mouse models.",
-    introduction: "Not all point mutations are created equal. Even a single base substitution can profoundly alter how a protein is built—changing its structure, activity, stability, or localization. Missense mutations lead to a single amino acid change, while nonsense mutations create a premature stop codon, truncating translation and often destroying protein activity altogether.",
+    introduction: "Not all point mutations are created equal. Even a single base substitution can profoundly alter how a protein is built, changing its structure, activity, stability, or localization. Missense mutations lead to a single amino acid change, while nonsense mutations create a premature stop codon, truncating translation and often destroying protein activity altogether.",
     faqs: [
       {
-        question: "Which is more severe—a missense or a nonsense mutation?",
+        question: "Which is more severe, a missense or a nonsense mutation?",
         answer: "It depends on context. Nonsense mutations usually result in truncated, nonfunctional proteins, but a single missense mutation in a crucial domain can be equally damaging or even more pathogenic."
       },
       {
@@ -91,7 +91,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "frameshift-mutation": {
     metaTitle: "Frameshift Mutation | Mechanism, Disease Impact, and Mouse Model Applications",
     metaDescription: "Learn how frameshift mutations disrupt protein coding, contribute to human disease, and power functional genomics in engineered mouse models.",
-    introduction: "The genetic code is read in triplets—groups of three nucleotides called codons—each specifying a single amino acid. The reading frame is therefore essential for translating a gene into a functional protein. When insertions or deletions occur in multiples not divisible by three, the reading frame shifts, altering every downstream codon.",
+    introduction: "The genetic code is read in triplets, groups of three nucleotides called codons, each specifying a single amino acid. The reading frame is therefore essential for translating a gene into a functional protein. When insertions or deletions occur in multiples not divisible by three, the reading frame shifts, altering every downstream codon.",
     faqs: [
       {
         question: "Are frameshift mutations always harmful?",
@@ -112,11 +112,11 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "gain-of-function-vs-loss-of-function-mutation": {
     metaTitle: "Gain-of-Function vs. Loss-of-Function Mutations | Mechanisms, Examples, and Research Insights",
     metaDescription: "Understand how gain-of-function and loss-of-function mutations in mice shape gene activity, drive disease, and guide therapeutic development.",
-    introduction: "Genetic mutations can influence how a protein behaves in a cell—not just whether it is present, but how much of it is produced, how active it is, or what it does. Gain-of-function mutations enhance normal activity or create new functions, while loss-of-function mutations reduce or eliminate normal gene product function.",
+    introduction: "Genetic mutations can influence how a protein behaves in a cell, not just whether it is present, but how much of it is produced, how active it is, or what it does. Gain-of-function mutations enhance normal activity or create new functions, while loss-of-function mutations reduce or eliminate normal gene product function.",
     faqs: [
       {
         question: "Can the same mutation be both gain- and loss-of-function?",
-        answer: "Not the same mutation, but different mutations in the same gene can have opposite effects—one increasing protein activity, another eliminating it."
+        answer: "Not the same mutation, but different mutations in the same gene can have opposite effects, one increasing protein activity, another eliminating it."
       },
       {
         question: "How do researchers determine if a mutation is gain-of-function or loss-of-function?",
@@ -132,8 +132,8 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
 
   "allele-genotype-phenotype": {
     metaTitle: "Allele, Genotype, and Phenotype | Clear Definitions for Mouse Model Research",
-    metaDescription: "Explore the relationship between allele, genotype, and phenotype—and how these core genetic concepts guide mouse model design, breeding strategies, and experimental interpretation.",
-    introduction: "At the heart of every genetic experiment—from basic Mendelian crosses to advanced preclinical mouse modeling—lie three foundational concepts: allele, genotype, and phenotype. These terms describe different layers of biological information: the sequence variants that define genes (alleles), the combinations of those variants in an organism (genotype), and the observable traits that result (phenotype).",
+    metaDescription: "Explore the relationship between allele, genotype, and phenotype, and how these core genetic concepts guide mouse model design, breeding strategies, and experimental interpretation.",
+    introduction: "At the heart of every genetic experiment, from basic Mendelian crosses to advanced preclinical mouse modeling, lie three foundational concepts: allele, genotype, and phenotype. These terms describe different layers of biological information: the sequence variants that define genes (alleles), the combinations of those variants in an organism (genotype), and the observable traits that result (phenotype).",
     faqs: [
       {
         question: "Does genotype always predict phenotype?",
@@ -254,8 +254,8 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
 
   "germline-transmission": {
     metaTitle: "Germline Transmission | Heritable Genetic Modification in Mouse Models",
-    metaDescription: "Understand germline transmission in genetically engineered mice—the process confirming heritable genome integration and establishing stable, reproducible mouse model lines.",
-    introduction: "Germline transmission is the process by which a genetic modification introduced into an organism—such as a mouse—is passed on to its offspring through reproductive (germ) cells. It confirms that the engineered change is stably integrated into the genome and can be inherited by future generations.",
+    metaDescription: "Understand germline transmission in genetically engineered mice, the process confirming heritable genome integration and establishing stable, reproducible mouse model lines.",
+    introduction: "Germline transmission is the process by which a genetic modification introduced into an organism, such as a mouse, is passed on to its offspring through reproductive (germ) cells. It confirms that the engineered change is stably integrated into the genome and can be inherited by future generations.",
     faqs: [
       {
         question: "How is germline transmission confirmed?",
@@ -334,7 +334,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "conventional-knockout-mouse-models": {
     metaTitle: "Conventional Knockout Mouse Models | Global Gene Deletion Strategies",
     metaDescription: "Discover how conventional knockout mouse models are engineered to permanently inactivate genes across all tissues, enabling fundamental insights into gene function and disease mechanisms.",
-    introduction: "Before conditional and inducible systems were developed, the conventional knockout was the primary strategy for studying gene function—and it remains one of the most powerful tools in modern genetics. By completely inactivating a specific gene across all tissues, researchers can observe the full range of biological consequences.",
+    introduction: "Before conditional and inducible systems were developed, the conventional knockout was the primary strategy for studying gene function, and it remains one of the most powerful tools in modern genetics. By completely inactivating a specific gene across all tissues, researchers can observe the full range of biological consequences.",
     faqs: [
       {
         question: "When is a conventional knockout better than a conditional knockout?",
@@ -378,7 +378,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "humanized-mouse-models": {
     metaTitle: "Humanized Mouse Models | Human Gene Replacement & Immune System Engineering",
     metaDescription: "Discover how humanized mouse models enable translational research by integrating human genes, cells, or immune components.",
-    introduction: "Traditional mouse models provide powerful insights into gene function and disease mechanisms—but their biology can differ significantly from humans. Humanized mouse models solve this challenge by integrating human genetic material or biological components directly into the mouse genome or immune system.",
+    introduction: "Traditional mouse models provide powerful insights into gene function and disease mechanisms, but their biology can differ significantly from humans. Humanized mouse models solve this challenge by integrating human genetic material or biological components directly into the mouse genome or immune system.",
     sections: [
       {
         title: "Types of Humanized Models",
@@ -406,7 +406,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "reporter-gene-reporter-allele": {
     metaTitle: "Reporter Gene & Reporter Allele Mouse Models | In Vivo Tracking & Gene Expression Analysis",
     metaDescription: "Learn how reporter genes enable visualization of gene activity, lineage tracing, and in vivo expression studies.",
-    introduction: "Understanding when, where, and how a gene is expressed is a cornerstone of functional genomics. Reporter mouse models solve this problem by linking gene activity to a visible signal—such as fluorescence, enzymatic activity, or luminescence—enabling researchers to study gene expression dynamically in living organisms.",
+    introduction: "Understanding when, where, and how a gene is expressed is a cornerstone of functional genomics. Reporter mouse models solve this problem by linking gene activity to a visible signal, such as fluorescence, enzymatic activity, or luminescence, enabling researchers to study gene expression dynamically in living organisms.",
     faqs: [
       {
         question: "What's the difference between a reporter gene and a reporter allele?",
@@ -428,11 +428,11 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "inducible-allele-cre-er": {
     metaTitle: "Inducible Alleles & Cre-ER Mouse Models | Temporal Gene Control in Vivo",
     metaDescription: "Explore how inducible alleles and Cre-ER systems enable precise temporal control of gene expression in mouse models.",
-    introduction: "Traditional knockout or knockin models provide powerful insights into gene function—but their effects are fixed from conception. Inducible alleles solve these problems by putting researchers in control. By triggering genetic modification when they choose, scientists can study gene function in adult tissues, dissect disease progression over time, and model therapeutic interventions.",
+    introduction: "Traditional knockout or knockin models provide powerful insights into gene function, but their effects are fixed from conception. Inducible alleles solve these problems by putting researchers in control. By triggering genetic modification when they choose, scientists can study gene function in adult tissues, dissect disease progression over time, and model therapeutic interventions.",
     faqs: [
       {
         question: "How precise is temporal control with Cre-ER?",
-        answer: "Temporal control with Cre-ER is highly precise. Recombination typically occurs within 24–72 hours after tamoxifen administration, and timing can be adjusted by dosage and delivery method."
+        answer: "Temporal control with Cre-ER is highly precise. Recombination typically occurs within 24 to 72 hours after tamoxifen administration, and timing can be adjusted by dosage and delivery method."
       },
       {
         question: "Can inducible alleles be combined with tissue-specific promoters?",
@@ -521,7 +521,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     faqs: [
       {
         question: "Why is Rosa26 the most commonly used safe harbor?",
-        answer: "Rosa26 offers open chromatin structure, ubiquitous expression across tissues, and genomic neutrality—making it ideal for reporter constructs, Cre-inducible alleles, and human gene integrations."
+        answer: "Rosa26 offers open chromatin structure, ubiquitous expression across tissues, and genomic neutrality, making it ideal for reporter constructs, Cre-inducible alleles, and human gene integrations."
       }
     ],
     relatedTermSlugs: ["safe-harbor-locus", "reporter-gene-reporter-allele", "safe-harbor-targeted-transgenesis"],
@@ -685,7 +685,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     faqs: [
       {
         question: "How fast does recombination occur after tamoxifen?",
-        answer: "Significant recombination typically appears within 24–72 hours, depending on tissue and dosage."
+        answer: "Significant recombination typically appears within 24 to 72 hours, depending on tissue and dosage."
       },
       {
         question: "How do I reduce leakiness?",
@@ -749,7 +749,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     faqs: [
       {
         question: "How long should homology arms be?",
-        answer: "Homology arms typically range from 1–10 kilobases for gene targeting. Longer arms generally increase recombination efficiency."
+        answer: "Homology arms typically range from 1 to 10 kilobases for gene targeting. Longer arms generally increase recombination efficiency."
       }
     ],
     relatedTermSlugs: ["homologous-recombination", "homology-directed-repair", "es-cell-targeting", "selection-markers"],
@@ -777,7 +777,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "blastocyst-injection-chimera": {
     metaTitle: "Blastocyst Injection and Chimera Production | Germline Transmission in Mouse Models",
     metaDescription: "Understand how blastocyst injection transfers targeted genetic modifications into the germline.",
-    introduction: "Blastocyst injection is the process of introducing genetically modified cells into a developing mouse blastocyst to create a chimera—an organism composed of cells derived from both the host embryo and the engineered cells. This step is essential for transferring targeted genetic modifications into the germline.",
+    introduction: "Blastocyst injection is the process of introducing genetically modified cells into a developing mouse blastocyst to create a chimera, an organism composed of cells derived from both the host embryo and the engineered cells. This step is essential for transferring targeted genetic modifications into the germline.",
     faqs: [
       {
         question: "How do you identify high-contribution chimeras?",
@@ -813,7 +813,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     faqs: [
       {
         question: "How is single-copy integration achieved?",
-        answer: "Through targeted genome editing—most commonly homologous recombination, HDR, or recombinase-mediated cassette exchange (RMCE)—to insert one construct into a defined locus."
+        answer: "Through targeted genome editing, most commonly homologous recombination, HDR, or recombinase-mediated cassette exchange (RMCE) to insert one construct into a defined locus."
       }
     ],
     relatedTermSlugs: ["safe-harbor-locus", "rosa26-locus", "safe-harbor-targeted-transgenesis"],
@@ -826,7 +826,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "large-fragment-bac-targeting": {
     metaTitle: "Large-Fragment / BAC Targeting | Full Locus Gene Integration",
     metaDescription: "Learn how BAC targeting enables insertion of large genomic fragments with native regulatory elements.",
-    introduction: "Large-fragment or BAC (bacterial artificial chromosome) targeting involves introducing extended genomic DNA segments—often spanning 100–300 kilobases—into the mouse genome to preserve native gene context and regulatory elements.",
+    introduction: "Large-fragment or BAC (bacterial artificial chromosome) targeting involves introducing extended genomic DNA segments, often spanning 100 to 300 kilobases, into the mouse genome to preserve native gene context and regulatory elements.",
     faqs: [
       {
         question: "When should BAC targeting be used?",
@@ -842,7 +842,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "safe-harbor-targeted-transgenesis": {
     metaTitle: "Safe-Harbor Targeted Transgenesis | Precise, Reproducible Gene Integration",
     metaDescription: "Discover how safe-harbor targeted transgenesis inserts transgenes into neutral genomic loci.",
-    introduction: "Safe-harbor targeted transgenesis is a precise genome engineering strategy in which a transgene is inserted into a well-characterized, transcriptionally active, and non-disruptive genomic locus—a 'safe harbor'—to ensure predictable and stable expression.",
+    introduction: "Safe-harbor targeted transgenesis is a precise genome engineering strategy in which a transgene is inserted into a well-characterized, transcriptionally active, and non-disruptive genomic locus, a 'safe harbor' to ensure predictable and stable expression.",
     faqs: [
       {
         question: "What are the most common safe harbor loci?",
@@ -931,7 +931,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     faqs: [
       {
         question: "How does coat color indicate targeted clone contribution?",
-        answer: "After blastocyst injection, ES-cell–derived mice exhibit mixed coat colors based on parental strain background (e.g., agouti × albino), helping identify high-contribution chimeras."
+        answer: "After blastocyst injection, ES-cell, derived mice exhibit mixed coat colors based on parental strain background (e.g., agouti × albino), helping identify high-contribution chimeras."
       }
     ],
     relatedTermSlugs: ["germline-transmission", "blastocyst-injection-chimera", "breeding-scheme"],
@@ -943,7 +943,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "breeding-scheme": {
     metaTitle: "Breeding Scheme | Designing Crosses for Controlled Genotypes",
     metaDescription: "Learn how defined breeding schemes manage genotype ratios and ensure efficient generation of desired genotypes.",
-    introduction: "Breeding schemes describe the planned mating strategies used to generate offspring of specific genotypes—such as heterozygous, homozygous, or compound mutant combinations—from established genetically modified lines.",
+    introduction: "Breeding schemes describe the planned mating strategies used to generate offspring of specific genotypes, such as heterozygous, homozygous, or compound mutant combinations, from established genetically modified lines.",
     faqs: [
       {
         question: "What genotype ratios does a heterozygous × heterozygous cross produce?",
@@ -996,7 +996,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "humanized-immune-checkpoint": {
     metaTitle: "Humanized Immune Checkpoint (PD-1 / PD-L1 / CTLA-4) | Translational Immuno-Oncology Models",
     metaDescription: "Discover how humanized immune-checkpoint mouse models enable precise evaluation of immunotherapies.",
-    introduction: "Humanized immune-checkpoint mouse models are genetically engineered to replace key inhibitory immune receptors—such as PD-1, PD-L1, and CTLA-4—with their human equivalents. These models faithfully replicate human immune-regulatory pathways and are essential for evaluating antibody and biologic therapies.",
+    introduction: "Humanized immune-checkpoint mouse models are genetically engineered to replace key inhibitory immune receptors, such as PD-1, PD-L1, and CTLA-4, with their human equivalents. These models faithfully replicate human immune-regulatory pathways and are essential for evaluating antibody and biologic therapies.",
     faqs: [
       {
         question: "Why humanize immune checkpoints?",
@@ -1014,7 +1014,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "cytokine-receptor-humanization": {
     metaTitle: "Cytokine / Receptor Humanization | Functional Human Immune Signaling",
     metaDescription: "Learn how cytokine and receptor humanization enables cross-reactive immune signaling.",
-    introduction: "Cytokine and receptor humanization refers to the genetic replacement of mouse cytokines, receptors, or ligand–receptor pairs with their human equivalents. These models recreate critical components of the human immune network for accurate evaluation of human biologics.",
+    introduction: "Cytokine and receptor humanization refers to the genetic replacement of mouse cytokines, receptors, or ligand, receptor pairs with their human equivalents. These models recreate critical components of the human immune network for accurate evaluation of human biologics.",
     faqs: [
       {
         question: "Why are cytokine humanizations important?",
@@ -1051,7 +1051,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
     faqs: [
       {
         question: "When is double humanization necessary?",
-        answer: "Double humanization is needed when both molecules are species-specific and cross-reactivity between mouse and human versions is poor, providing a fully functional ligand–receptor axis."
+        answer: "Double humanization is needed when both molecules are species-specific and cross-reactivity between mouse and human versions is poor, providing a fully functional ligand, receptor axis."
       }
     ],
     relatedTermSlugs: ["humanized-immune-checkpoint", "humanized-mouse-models", "double-checkpoint-mice"],
@@ -1132,7 +1132,7 @@ export const glossaryTermsExtended: Record<string, Partial<GlossaryTermExtended>
   "reporter-readouts": {
     metaTitle: "Reporter Readouts (GFP, LacZ, Luc) | Visualizing Gene Expression in Mouse Models",
     metaDescription: "Learn how reporter genes enable visualization and quantification of gene activity.",
-    introduction: "Reporter readouts are measurable signals—typically fluorescent, enzymatic, or luminescent—produced by genetically encoded reporter genes such as GFP, LacZ, and luciferase. These are integrated into mouse models to visualize gene expression, track cell lineages, or monitor biological processes in real time.",
+    introduction: "Reporter readouts are measurable signals, typically fluorescent, enzymatic, or luminescent, produced by genetically encoded reporter genes such as GFP, LacZ, and luciferase. These are integrated into mouse models to visualize gene expression, track cell lineages, or monitor biological processes in real time.",
     faqs: [
       {
         question: "What are the advantages of each reporter type?",

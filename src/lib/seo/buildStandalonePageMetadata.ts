@@ -25,15 +25,17 @@ export function buildStandalonePageMetadata(options: {
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   const fullUrl = `${BASE_URL}${normalizedPath}${normalizedPath !== '/' ? '/' : ''}`;
   const commercial = applyCatalogFirstMeta(title, description, normalizedPath, catalogFirst);
-  const fullTitle = `${commercial.title} | ${SITE_NAME}`;
+  // Bare title only. Root layout template appends the brand once.
+  const pageTitle = commercial.title.replace(/\s*\|\s*(ITL|iTL|ingenious targeting laboratory)\s*$/i, '').trim();
+  const brandedTitle = `${pageTitle} | ${SITE_NAME}`;
 
   return {
-    title: fullTitle,
+    title: pageTitle,
     description: commercial.description,
     alternates: { canonical: fullUrl },
     robots: { index, follow },
     openGraph: {
-      title: fullTitle,
+      title: brandedTitle,
       description: commercial.description,
       url: fullUrl,
       siteName: SITE_NAME,
@@ -42,7 +44,7 @@ export function buildStandalonePageMetadata(options: {
     },
     twitter: {
       card: 'summary_large_image',
-      title: fullTitle,
+      title: brandedTitle,
       description: commercial.description,
     },
   };

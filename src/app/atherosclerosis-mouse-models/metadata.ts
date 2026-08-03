@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Atherosclerosis Mouse Models | ITL',
+  title: 'Atherosclerosis Mouse Models',
   description: 'Atherosclerosis mouse models for studying plaque formation, lipid metabolism, and vascular inflammation. ApoE and LDLR knockout backgrounds available.',
   path: '/atherosclerosis-mouse-models',
 });

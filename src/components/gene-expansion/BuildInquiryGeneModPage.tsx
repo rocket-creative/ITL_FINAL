@@ -1,12 +1,13 @@
 /**
- * build_inquiry gene × modification page — spec §6.
+ * build_inquiry gene × modification page, spec §6.
  */
 
 import Link from 'next/link';
 import { getRelatedGenes, getModelsByGene } from '@/lib/catalog/serverCatalog';
-import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import SuppressBuildBannerEffect from '@/components/UXUIDC/SuppressBuildBannerEffect';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
+import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
 import { modCanonicalToSlug } from '@/lib/seo/slugs';
 import type { BuildInquiryPageContext } from '@/lib/gene-expansion/db';
 import { getSiblingBuildInquiryPages } from '@/lib/gene-expansion/db';
@@ -14,8 +15,6 @@ import { buildPageCopy } from '@/lib/gene-expansion/content';
 import GeneModAiAnswerLead from '@/components/gene-expansion/GeneModAiAnswerLead';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { buildBuildInquirySchemaGraph } from '@/lib/gene-expansion/schema';
-import { getPublicationsForPage } from '@/data/pagePublications';
-
 const TESTIMONIALS = [
   {
     quote: 'ingenious targeting laboratory delivered exactly the floxed allele we designed, with clear milestones and germline confirmed founders.',
@@ -47,7 +46,9 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
   const siblings = await getSiblingBuildInquiryPages(gene.symbol, modSlug);
   const catalogModels = await getModelsByGene(gene.symbol);
   const catalogTypes = [...new Set(catalogModels.map((m) => m.modelType).filter(Boolean))];
-  const pubs = getPublicationsForPage('/knockout-mouse-models');
+  const pubs = getGeneMatchedPublications(
+    [gene.symbol, gene.human_ortholog_symbol].filter(Boolean) as string[],
+  );
   const quoteHref = `/request-quote/?gene=${encodeURIComponent(gene.symbol)}&type=${encodeURIComponent(modSlug)}`;
 
   return (
@@ -55,7 +56,7 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
       <SuppressBuildBannerEffect />
       <UXUIDCNavigation />
       <main id="main-content">
-        {/* Zone 1 — Trust and positioning */}
+        {/* Zone 1, Trust and positioning */}
         <section className="page-hero" style={{ background: '#0a253c', padding: '80px 20px 60px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <nav aria-label="Breadcrumb" style={{ marginBottom: '16px' }}>
@@ -106,7 +107,7 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
           }
         />
 
-        {/* Zone 2 — Scientific design block */}
+        {/* Zone 2, Scientific design block */}
         <section style={{ background: '#fff', padding: '56px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.45rem', fontWeight: 700, color: '#0a253c', marginBottom: '16px' }}>
@@ -176,7 +177,7 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
           </div>
         </section>
 
-        {/* Zone 3 — Navigation and CTA */}
+        {/* Zone 3, Navigation and CTA */}
         <section style={{ background: '#fff', padding: '48px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>Related modifications</h2>
@@ -222,15 +223,6 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
         </section>
       </main>
       <UXUIDCFooter />
-
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', path: '/' },
-          { name: 'All Catalog Models', path: '/all-catalog-mouse-models' },
-          { name: gene.symbol, path: `/all-catalog-mouse-models/gene/${encodeURIComponent(gene.symbol)}` },
-          { name: modelType.display_name, path: `/all-catalog-mouse-models/gene/${encodeURIComponent(gene.symbol)}/${modSlug}` },
-        ]}
-      />
 
       <script
         type="application/ld+json"

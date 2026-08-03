@@ -26,7 +26,7 @@ export async function generateMetadata(
 
   if (!spotlight || spotlight.status !== 'published') {
     return {
-      title: 'Spotlight Not Found | ingenious targeting laboratory',
+      title: 'Spotlight Not Found',
       description: 'The requested researcher spotlight could not be found.',
       robots: { index: false, follow: false },
     };

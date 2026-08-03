@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Tumor Suppressor Knockout Mice | ITL',
+  title: 'Tumor Suppressor Knockout Mice',
   description: 'Tumor suppressor knockout mice for cancer mechanism studies. P53, Rb, PTEN, and other cancer gene models for tumorigenesis and drug development.',
   path: '/tumor-suppressor-knockout-mice',
 });

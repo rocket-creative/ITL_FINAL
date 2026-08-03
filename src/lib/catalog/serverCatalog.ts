@@ -1,7 +1,7 @@
 /**
  * Server-side catalog utilities
  * Used by Server Components (page.tsx, gene-index/page.tsx).
- * Queries Supabase directly — never expose in 'use client' files.
+ * Queries Supabase directly, never expose in 'use client' files.
  */
 
 import { supabase, type CatalogRow } from './supabaseClient';
@@ -43,7 +43,7 @@ function toModel(row: CatalogRow): ServerCatalogModel {
 }
 
 /**
- * Server-side search — used by page.tsx SSR preload.
+ * Server-side search, used by page.tsx SSR preload.
  * Tiered strategy: gene prefix → full-text → contains.
  * Returns up to `limit` results.
  */
@@ -102,7 +102,7 @@ export async function serverSearch(
 }
 
 /**
- * All unique gene names sorted A–Z (for gene-index page).
+ * All unique gene names sorted A, Z (for gene-index page).
  * Paginates in 1 000-row pages to work around Supabase's default row cap.
  */
 export async function getAllGeneNames(): Promise<string[]> {
@@ -133,7 +133,7 @@ export async function getAllGeneNames(): Promise<string[]> {
 }
 
 /**
- * All catalog models with full data (including catalog numbers), sorted A–Z by gene name.
+ * All catalog models with full data (including catalog numbers), sorted A, Z by gene name.
  * Paginates in 1 000-row pages to work around Supabase's default row cap.
  * Used by gene-index page to display catalog numbers alongside gene names.
  */

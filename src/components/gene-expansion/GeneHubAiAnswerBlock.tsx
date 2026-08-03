@@ -54,7 +54,7 @@ const MOD_PATHS: Array<{
 const LINK_CLASS =
   'font-semibold text-[#008080] underline-offset-2 hover:text-[#006666] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#008080]';
 
-/** Quiet section label — not a display heading. Keep weight/size near body. */
+/** Quiet section label, not a display heading. Keep weight/size near body. */
 const SECTION_LABEL =
   'mb-3.5 text-[.92rem] font-semibold leading-snug tracking-normal text-[#0a253c]';
 

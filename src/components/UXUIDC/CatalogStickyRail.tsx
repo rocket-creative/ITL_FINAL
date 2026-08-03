@@ -2,7 +2,7 @@
  * |UXUIDC| Catalog Sticky Rail
  *
  * Persistent floating links on educational pages: catalog browse + quote.
- * Desktop only — hidden below 1024px to avoid mobile CLS and avoid covering content.
+ * Desktop only, hidden below 1024px to avoid mobile CLS and avoid covering content.
  */
 
 import Link from 'next/link';

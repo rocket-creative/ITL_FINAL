@@ -5,24 +5,24 @@
  * CTA priority (sitewide). Place higher priorities first; Lab Signals last.
  *
  * Canonical page stack:
- *   1. Near ATF — CatalogCustomDualCta (utmMedium="page-hero")
+ *   1. Near ATF, CatalogCustomDualCta (utmMedium="page-hero")
  *   2. Content / proof
- *   3. Close — CatalogCustomDualCta / StartProjectCTA / PageClosingCta (P0)
+ *   3. Close, CatalogCustomDualCta / StartProjectCTA / PageClosingCta (P0)
  *   4. BreedingSchemeArchitectCTA (P1)
  *   5. LabSignalsSignup (P2, always last content CTA)
  */
 
 /** Ranked CTA families for placement and visual hierarchy. */
 export const CTA_PRIORITY = {
-  /** Catalog browse + model generation quote — above the fold and again at page close */
+  /** Catalog browse + model generation quote, above the fold and again at page close */
   P0_COMMERCIAL: 0,
   /** Global nav / BuildAwarenessBanner quote nudge */
   P0_GLOBAL: 0,
-  /** Breeding Scheme Architect tool promo — only after P0 close */
+  /** Breeding Scheme Architect tool promo, only after P0 close */
   P1_TOOL: 1,
-  /** Lab Signals newsletter nurture — always last among content CTAs */
+  /** Lab Signals newsletter nurture, always last among content CTAs */
   P2_NURTURE: 2,
-  /** Contact, order catalog, schedule meeting — footer / utility */
+  /** Contact, order catalog, schedule meeting, footer / utility */
   P3_UTILITY: 3,
 } as const;
 
@@ -74,7 +74,7 @@ export const CATALOG_OR_CUSTOM_WIDGET_INTRO = {
   eyebrow: 'Mouse Models',
   headline: 'Two paths. One scientific team.',
   subline:
-    'Search 14,774+ study ready strains—or commission the exact knockout, knockin, or humanized model your program requires.',
+    'Search 14,774+ study ready strains, or commission the exact knockout, knockin, or humanized model your program requires.',
 } as const;
 
 /** Equal weight dual path: catalog + model generation quote (sitewide standard). */

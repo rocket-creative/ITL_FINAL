@@ -1,5 +1,5 @@
 /**
- * |UXUIDC| Sitewide dual-path CTA — equal catalog + generation columns.
+ * |UXUIDC| Sitewide dual-path CTA, equal catalog + generation columns.
  * Use everywhere a commercial CTA appears (closing sections, heroes, banners).
  */
 

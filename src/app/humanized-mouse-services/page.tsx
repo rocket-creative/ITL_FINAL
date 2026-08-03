@@ -27,13 +27,13 @@ const servicesMeta = applyCatalogFirstMeta(
 );
 
 export const metadata: Metadata = {
-  title: `${servicesMeta.title} | ingenious targeting laboratory`,
+  title: servicesMeta.title,
   description: servicesMeta.description,
   alternates: {
     canonical: 'https://www.genetargeting.com/humanized-mouse-services/',
   },
   openGraph: {
-    title: `${servicesMeta.title} | ITL`,
+    title: servicesMeta.title,
     description: servicesMeta.description,
     url: 'https://www.genetargeting.com/humanized-mouse-services/',
     siteName: 'ingenious targeting laboratory',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${servicesMeta.title} | ITL`,
+    title: servicesMeta.title,
     description: servicesMeta.description,
   },
 };

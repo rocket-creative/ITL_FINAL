@@ -3,7 +3,7 @@
  *
  * Server Component:
  * - generateMetadata produces gene-specific <title> and <meta description>
- *   when ?q= is present, so Google indexes e.g. "Flt4 Mouse Models | ITL"
+ *   when ?q= is present, so Google indexes e.g. "Flt4 Mouse Models"
  * - Pre-fetches matching models server-side and passes as preloadedModels
  *   so the initial HTML contains real results (not just a JS spinner)
  */
@@ -25,7 +25,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const query  = q?.trim();
 
   if (query) {
-    const title       = `${query} Mouse Models | ${SITE_NAME}`;
+    const title       = `${query} Mouse Models`;
     const description = `Find ${query} genetically engineered mouse models from our catalog of 14,774+ knockout, knockin, humanized, and Cre driver strains. Request a model or get a quote.`;
     const canonical   = `${BASE_URL}/all-catalog-mouse-models/`;
 
@@ -41,16 +41,17 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 
   // Default metadata — targets buyer-intent queries: "lab mice for sale",
   // "knock out mice model market", "knock in mice", "transgenic mouse models".
-  const title       = `Lab Mice for Sale | 14,774 Ready Knockout, Knockin & Humanized Mouse Models | ${SITE_NAME}`;
-  const description = '14,774 genetically engineered mouse models ready to ship — knockout, knockin, humanized, Cre driver, transgenic & reporter strains. Live colonies. Request a quote when the library does not list your allele.';
+  const title       = `Lab mice for sale: 14,774 knockout, knockin & humanized`;
+  const description = '14,774 genetically engineered mouse models ready to ship: knockout, knockin, humanized, Cre driver, transgenic and reporter strains. Live colonies. Request a quote when your allele is not listed.';
   const canonical   = `${BASE_URL}/all-catalog-mouse-models/`;
+  const branded = `${title} | ${SITE_NAME}`;
 
   return {
     title,
     description,
     alternates: { canonical },
-    openGraph:  { title, description, url: canonical, siteName: SITE_NAME, locale: 'en_US', type: 'website' },
-    twitter:    { card: 'summary_large_image', title, description },
+    openGraph:  { title: branded, description, url: canonical, siteName: SITE_NAME, locale: 'en_US', type: 'website' },
+    twitter:    { card: 'summary_large_image', title: branded, description },
   };
 }
 

@@ -1,5 +1,5 @@
 /**
- * Copy lint for build_inquiry pages — spec §8.
+ * Copy lint for build_inquiry pages, spec §8.
  */
 
 export interface CopyLintInput {
@@ -49,7 +49,7 @@ function checkProhibited(text: string, field: string, errors: string[]) {
   }
 }
 
-/** Prose hyphens: allow URLs, slugs in paths, gene symbols with hyphens rare — flag word-word patterns. */
+/** Prose hyphens: allow URLs, slugs in paths, gene symbols with hyphens rare, flag word-word patterns. */
 function checkProseHyphens(text: string, field: string, errors: string[]) {
   if (text.includes('http') || text.includes('/all-catalog')) return;
   const matches = text.match(/\b[a-z]+-[a-z]+\b/gi);
