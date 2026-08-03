@@ -191,7 +191,7 @@ export function buildDirectAnswer(props: GeneHubAiAnswerBlockProps): string {
     return (
       `ingenious targeting laboratory offers ${catalogCount} distinct ${entityLabel} catalog mouse ` +
       `model${catalogCount === 1 ? '' : 's'}${familyBit}, featuring ${featuring}. ` +
-      `Researchers can order pre developed catalog lines or request allele modifications, including ` +
+      `Researchers can order pre-developed catalog lines or request a custom mouse model, including ` +
       `humanized, knockin, and transgenic variations with verified germline transmission.`
     );
   }
@@ -298,7 +298,7 @@ export default function GeneHubAiAnswerBlock(props: GeneHubAiAnswerBlockProps) {
 
         <FactTable catalogCount={catalogCount} modTypesPresent={modTypesPresent} />
 
-        <h3 className={SECTION_LABEL}>Modification paths for {mouseSymbol}</h3>
+        <h3 className={SECTION_LABEL}>{mouseSymbol} model types</h3>
 
         <div className="mb-8 overflow-hidden rounded-md border border-[#e8e8e8]">
           <div className="hidden grid-cols-[1fr_auto] gap-4 border-b border-[#e0e0e0] bg-[#f7f7f7] px-4 py-3 text-[.8rem] font-semibold text-[#0a253c] sm:grid">

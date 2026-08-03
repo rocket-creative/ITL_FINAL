@@ -30,5 +30,10 @@ tsconfig.tsbuildinfo
 # Gene expansion ingest caches
 scripts/gene-expansion/.cache/
 
+# Scratch workspace for gene paragraph generation
+.tmp-paragraphs/
+.tmp-*.mjs
+.tmp-*.json
+
 # Next 16: use src/proxy.ts only; a middleware.ts re-export conflicts with proxy.
 /src/middleware.ts

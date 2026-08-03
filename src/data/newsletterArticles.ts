@@ -13,6 +13,7 @@ import { humanizedAutoimmuneArticleBody } from './_labSignalsHumanizedAutoimmune
 import { dnaSequencesAreDataArticleBody } from './_labSignalsDnaSequencesAreDataArticle';
 import { senescentCellClearanceArticleBody } from './_labSignalsSenescentCellClearanceArticle';
 import { hivVaccineArticleBody } from './_labSignalsHivVaccineArticle';
+import { rareDiseaseMouseModelInnovationArticleBody } from './_labSignalsRareDiseaseMouseModelInnovationArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1138,6 +1139,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/humanized-mouse-models",
     body: hivVaccineArticleBody,
     publishedAt: "2026-07-21",
+  },
+  {
+    id: "rare-disease-research-drive-innovation-mouse-model-development",
+    slug: "rare-disease-research-drive-innovation-mouse-model-development",
+    title: "Why Rare Disease Research Continues to Drive Innovation in Mouse Model Development",
+    subtitle: "How genetically defined rare diseases accelerate precision GEMMs and therapeutic models",
+    description:
+      "Rare disease research drives mouse model innovation. How GEMMs, humanized knock-ins, and patient-variant models advance gene therapy and RNA therapeutics.",
+    category: "Industry Insights",
+    relatedPage: "/humanized-mouse-models",
+    body: rareDiseaseMouseModelInnovationArticleBody,
+    publishedAt: "2026-08-04",
   },
 ];
 

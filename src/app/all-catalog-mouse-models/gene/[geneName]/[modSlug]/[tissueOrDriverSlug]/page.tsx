@@ -20,6 +20,7 @@ import {
 } from '@/lib/seo/slugs';
 import { CRE_DRIVERS, getDisplayLabelForTissueKey } from '@/lib/search/creDrivers';
 import { getCuratedIntro } from '@/lib/seo/curatedIntros';
+import { getGeneModNote } from '@/lib/seo/geneModNotes';
 import { buildTemplateIntro } from '@/lib/seo/contentTemplates';
 import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
@@ -110,7 +111,7 @@ export default async function GeneModContextTierPage({ params }: Props) {
     tissueLabel: resolved.kind === 'tissue' ? tissueLabel : driverRow ? getDisplayLabelForTissueKey(driverRow.tissue) : undefined,
   });
   const rationale = rationaleForModTissue(modCanon, tissueKey);
-  const rationale2 = rationaleForModTissue(modCanon, 'neuron');
+  const modNote = getGeneModNote(geneName, modSlug);
   const faqs = buildTierGeneModFaqs({
     gene: geneName,
     modLabel: modCanon,
@@ -240,12 +241,16 @@ export default async function GeneModContextTierPage({ params }: Props) {
           </div>
         </section>
 
-        <section style={{ background: '#f8f9fa', padding: '40px 20px' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0a253c' }}>Why this approach</h2>
-            <p style={{ color: '#444', lineHeight: 1.85, marginTop: '12px' }}>{rationale2}</p>
-          </div>
-        </section>
+        {modNote ? (
+          <section style={{ background: '#f8f9fa', padding: '40px 20px' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0a253c' }}>
+                Designing a {geneName} {modCanon} allele
+              </h2>
+              <p style={{ color: '#444', lineHeight: 1.85, marginTop: '12px' }}>{modNote}</p>
+            </div>
+          </section>
+        ) : null}
 
         <section style={{ background: '#fff', padding: '40px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>

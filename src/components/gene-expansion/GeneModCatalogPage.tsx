@@ -9,6 +9,7 @@ import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta 
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import GeneModAiAnswerLead from '@/components/gene-expansion/GeneModAiAnswerLead';
 import { getCuratedIntro } from '@/lib/seo/curatedIntros';
+import { getGeneModNote } from '@/lib/seo/geneModNotes';
 import { buildTemplateIntro } from '@/lib/seo/contentTemplates';
 import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
@@ -57,7 +58,7 @@ export default function GeneModCatalogPage({
   const curated = getCuratedIntro(geneName);
   const template = buildTemplateIntro({ gene: geneName, modCanonical: modCanon });
   const rationale = rationaleForModTissue(modCanon, undefined);
-  const rationale2 = rationaleForModTissue(modCanon, 'liver');
+  const modNote = getGeneModNote(geneName, modSlug);
   const faqs = buildTierGeneModFaqs({ gene: geneName, modLabel: modCanon });
   const priority = getPriorityGeneByMouseSymbol(geneName);
   const commonName = priority?.aliases?.find(
@@ -128,8 +129,6 @@ export default function GeneModCatalogPage({
             <h2 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '1.45rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>
               Catalog table
             </h2>
-            <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '20px' }}>{rationale}</p>
-            <p style={{ color: '#555', lineHeight: 1.8, marginBottom: '24px' }}>{rationale2}</p>
             {models.length === 0 ? null : (
               <div style={{ overflowX: 'auto' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', minWidth: '700px' }}>
@@ -164,9 +163,11 @@ export default function GeneModCatalogPage({
 
         <section style={{ background: '#f8f9fa', padding: '48px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>Why this approach</h2>
+            <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>
+              {modNote ? `Designing a ${geneName} ${modCanon} allele` : 'Why this approach'}
+            </h2>
+            {modNote ? <p style={{ color: '#444', lineHeight: 1.85, marginBottom: '12px' }}>{modNote}</p> : null}
             <p style={{ color: '#444', lineHeight: 1.85 }}>{rationale}</p>
-            <p style={{ color: '#444', lineHeight: 1.85, marginTop: '12px' }}>{rationale2}</p>
           </div>
         </section>
 

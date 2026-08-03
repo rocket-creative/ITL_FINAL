@@ -32,8 +32,8 @@ export function buildGeneModDirectAnswer(props: GeneModAiAnswerLeadProps): strin
   if (!isBuildInquiry && catalogCount > 0) {
     return (
       `ingenious targeting laboratory offers ${catalogCount} distinct ${entity} ${modLower} catalog mouse ` +
-      `model${catalogCount === 1 ? '' : 's'}. Researchers can order pre developed catalog lines or request ` +
-      `allele modifications, including humanized, knockin, and transgenic variations with verified ` +
+      `model${catalogCount === 1 ? '' : 's'}. Researchers can order pre-developed catalog lines or request ` +
+      `a custom mouse model, including humanized, knockin, and transgenic variations with verified ` +
       `germline transmission.`
     );
   }
