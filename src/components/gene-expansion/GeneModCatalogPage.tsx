@@ -7,12 +7,14 @@ import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
+import GeneModAiAnswerLead from '@/components/gene-expansion/GeneModAiAnswerLead';
 import { getCuratedIntro } from '@/lib/seo/curatedIntros';
 import { buildTemplateIntro } from '@/lib/seo/contentTemplates';
 import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { getPublicationsForPage } from '@/data/pagePublications';
 import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
+import { getPriorityGeneByMouseSymbol } from '@/data/priorityGenes';
 
 const BASE_URL = 'https://www.genetargeting.com';
 
@@ -57,6 +59,10 @@ export default function GeneModCatalogPage({
   const rationale = rationaleForModTissue(modCanon, undefined);
   const rationale2 = rationaleForModTissue(modCanon, 'liver');
   const faqs = buildTierGeneModFaqs({ gene: geneName, modLabel: modCanon });
+  const priority = getPriorityGeneByMouseSymbol(geneName);
+  const commonName = priority?.aliases?.find(
+    (a) => a.trim() && a.toLowerCase() !== geneName.toLowerCase() && a.toLowerCase() !== (priority.humanSymbol || '').toLowerCase(),
+  );
   const catalogQuoteNote = `The ${geneName} ${modCanon} lines listed above are catalog models. Send us the catalog number and our team confirms current availability, pricing, and whether the line ships cryopreserved or live.`;
   const generationQuoteNote = `If your study needs a ${geneName} allele configuration that is not listed above, our scientific team designs and generates it. Model generation quotes return in about twenty four hours with project milestones and pricing.`;
 
@@ -108,6 +114,14 @@ export default function GeneModCatalogPage({
             <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
+
+        <GeneModAiAnswerLead
+          geneSymbol={geneName}
+          modLabel={modCanon}
+          catalogCount={models.length}
+          humanSymbol={priority?.humanSymbol}
+          commonName={commonName}
+        />
 
         <section style={{ background: '#fff', padding: '56px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>

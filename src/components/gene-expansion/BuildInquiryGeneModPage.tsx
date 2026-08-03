@@ -11,6 +11,7 @@ import { modCanonicalToSlug } from '@/lib/seo/slugs';
 import type { BuildInquiryPageContext } from '@/lib/gene-expansion/db';
 import { getSiblingBuildInquiryPages } from '@/lib/gene-expansion/db';
 import { buildPageCopy } from '@/lib/gene-expansion/content';
+import GeneModAiAnswerLead from '@/components/gene-expansion/GeneModAiAnswerLead';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { buildBuildInquirySchemaGraph } from '@/lib/gene-expansion/schema';
 import { getPublicationsForPage } from '@/data/pagePublications';
@@ -92,6 +93,18 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
             <CatalogCustomDualCta slug="all-catalog-mouse-models" utmMedium="page-hero" flush />
           </div>
         </section>
+
+        <GeneModAiAnswerLead
+          geneSymbol={gene.symbol}
+          modLabel={modelType.display_name}
+          catalogCount={0}
+          isBuildInquiry
+          humanSymbol={gene.human_ortholog_symbol || undefined}
+          commonName={
+            gene.synonyms.find((s) => s.trim().length > 0 && s.trim().length <= 40) ||
+            (gene.name && gene.name.length <= 40 ? gene.name : undefined)
+          }
+        />
 
         {/* Zone 2 — Scientific design block */}
         <section style={{ background: '#fff', padding: '56px 20px' }}>

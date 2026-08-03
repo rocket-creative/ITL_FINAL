@@ -550,6 +550,7 @@ export default async function GenePage({ params, searchParams }: Props) {
               humanSymbol={priority.humanSymbol}
               catalogCount={models.length}
               modTypesPresent={modTypesPresent}
+              aliases={priority.aliases}
               familyLabel={priority.family ? getMorphogenFamilyLabel(priority.family) : undefined}
             />
 

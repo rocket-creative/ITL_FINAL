@@ -16,20 +16,24 @@ export function buildTierGeneModFaqs(params: {
   const ctx = tissueOrDriver ? `${tissueOrDriver.replace(/-/g, ' ')} focused ` : '';
   return [
     {
+      question: `What ${gene} ${modLabel} mouse models are available?`,
+      answer: `When ${gene} ${modLabel} lines are in catalog, we ship from inventory. If your configuration is not listed, we design the allele to order. Common paths include conditional knockout, constitutive knockout, humanized, knockin, and transgenic options, with documented germline transmission and United States QC.`,
+    },
+    {
       question: `Is ${gene} knockout embryonic lethal in mice?`,
-      answer: `Lethality depends on genetic background and exact allele design. Some ${gene} germline knockouts are viable, others require conditional alleles or mixed backgrounds. We review publications and our own experience, then recommend floxed versus null approaches before you commit.`,
+      answer: `It depends on background and allele design. Some ${gene} germline knockouts are viable. Others need conditional alleles or mixed backgrounds. We review publications and our own experience, then recommend floxed versus null before you commit.`,
     },
     {
       question: `Which Cre driver is best for ${ctx}experiments?`,
-      answer: `Driver choice depends on onset timing, recombination efficiency, and known leak patterns. We map your organ and cell type to a short list of proven Cre lines, then discuss reporter crosses and controls. ${tissueOrDriver ? `Your query highlights ${tissueOrDriver.replace(/-/g, ' ')} as a primary axis, which we treat as the starting point for driver selection.` : 'We prioritize drivers with strong community validation for your tissue.'}`,
+      answer: `Driver choice depends on onset timing, recombination efficiency, and known leak. We map your organ and cell type to a short list of proven Cre lines, then talk through reporter crosses and controls. ${tissueOrDriver ? `Your note points to ${tissueOrDriver.replace(/-/g, ' ')}, so we start driver selection there.` : 'We favor drivers with strong community validation for your tissue.'}`,
     },
     {
       question: `Do you ship live ${gene} animals?`,
-      answer: `When catalog lines are live, we ship with health certificates and QC documentation. If your exact combo is not listed, we quote a model generation project with cryo or live dispatch options depending on cohort timing and geography.`,
+      answer: `When catalog lines are live, we ship with health certificates and QC documentation. If your exact combo is not listed, we quote a generation project with cryo or live dispatch depending on cohort timing and geography.`,
     },
     {
       question: `How do I request a quote for ${gene}?`,
-      answer: `Use the catalog inquire buttons or the request quote form with your allele goal, Cre plan if any, strain background, and cohort size. A PhD led team responds with pricing, milestones, and the fastest path to experimental animals.`,
+      answer: `Use the catalog inquire buttons or the request quote form. Include your allele goal, Cre plan if any, strain background, and cohort size. A PhD led team responds with pricing, milestones, and the fastest path to experimental animals.`,
     },
   ];
 }

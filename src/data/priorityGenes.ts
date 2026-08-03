@@ -216,7 +216,7 @@ const SIGNALING_GENE_SPECS: ReadonlyArray<{ human: string; aliases?: readonly st
   { human: "MSH6" },
   { human: "PMS2" },
   { human: "APC" },
-  { human: "CTNNB1" },
+  { human: "CTNNB1", aliases: ["beta catenin"] },
   { human: "AXIN1" },
   { human: "AXIN2" },
   { human: "GSK3B" },
