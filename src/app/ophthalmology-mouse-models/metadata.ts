@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Ophthalmology Mouse Models | ITL',
+  title: 'Ophthalmology Mouse Models',
   description: 'Ophthalmology mouse models for studying retinal degeneration, glaucoma, and vision disorders. Gene therapy testing for inherited eye diseases.',
   path: '/ophthalmology-mouse-models',
 });

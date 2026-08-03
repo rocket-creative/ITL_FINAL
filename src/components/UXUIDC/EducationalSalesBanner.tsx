@@ -45,7 +45,7 @@ const DEFAULT_OFFER: EducationalSalesOffer = {
  * the blog and glossary, both will use the same offer.
  */
 const OFFER_MAP: Record<string, EducationalSalesOffer> = {
-  // POINT MUTATION cluster — biggest top-of-funnel asset on the site
+  // POINT MUTATION cluster, biggest top-of-funnel asset on the site
   'what-is-a-point-mutation': {
     eyebrow: 'Point Mutation Knockin Mice',
     headline: 'Need a point mutation knockin mouse?',
@@ -90,7 +90,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
   },
   'conventional-vs-conditional-knockout': {
     eyebrow: 'Conditional & Conventional Knockouts',
-    headline: 'Conditional or constitutive knockout — we build both.',
+    headline: 'Conditional or constitutive knockout, we build both.',
     subline:
       'Cre/lox conditional or full knockout. Tissue-specific, inducible, or global. 2,800+ models generated.',
     primaryCta: { label: 'Get a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=conventional-vs-conditional-banner' },
@@ -105,7 +105,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     secondaryCta: { label: 'Browse Knockout Catalog', href: '/all-catalog-mouse-models/?q=knockout' },
   },
 
-  // CRE / CreERT2 / TAMOXIFEN cluster — ~20K imp/month
+  // CRE / CreERT2 / TAMOXIFEN cluster, ~20K imp/month
   'tamoxifen-inducible-cre': {
     eyebrow: 'Tamoxifen Inducible CreERT2',
     headline: "We've completed 2,800+ CreERT2 model generation projects.",
@@ -166,7 +166,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
   },
   'c57bl6j-vs-c57bl6n': {
     eyebrow: 'C57BL/6J & C57BL/6N Backgrounds',
-    headline: 'We build on C57BL/6J and C57BL/6N — your choice.',
+    headline: 'We build on C57BL/6J and C57BL/6N, your choice.',
     subline:
       'Mouse model generation on the background you need. 14,774 ready catalog models on multiple strains. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=c57bl6-banner' },
@@ -194,7 +194,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Humanized Mouse Services',
     headline: 'Need a humanized mouse for drug development?',
     subline:
-      'Humanized mice — drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3). 800+ publications. Quote in 24 hours.',
+      'Humanized mice, drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3). 800+ publications. Quote in 24 hours.',
     primaryCta: { label: 'Get a Humanized Mouse Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=humanized-mice-banner' },
     secondaryCta: { label: 'See Humanized Models', href: '/humanized-mouse-models/' },
   },
@@ -220,13 +220,13 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Transgenic Mouse Service',
     headline: 'Need a transgenic mouse built?',
     subline:
-      'Transgenic mice — BAC, random insertion, or targeted transgenesis. Quote in 24 hours. 800+ publications.',
+      'Transgenic mice, BAC, random insertion, or targeted transgenesis. Quote in 24 hours. 800+ publications.',
     primaryCta: { label: 'Get a Transgenic Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=transgene-banner' },
     secondaryCta: { label: 'See Transgenic Mouse Service', href: '/transgenic-mouse-service/' },
   },
   'transgenic-mice': {
     eyebrow: 'Transgenic Mouse Service',
-    headline: 'Transgenic mice — BAC, random, or targeted.',
+    headline: 'Transgenic mice, BAC, random, or targeted.',
     subline:
       '800+ publications. gene targeting, CRISPR, and pronuclear injection. Quote in 24 hours.',
     primaryCta: { label: 'Get a Transgenic Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=transgenic-mice-banner' },
@@ -234,7 +234,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
   },
   'how-to-make-a-transgenic-mouse': {
     eyebrow: 'Transgenic Mouse Service',
-    headline: 'Skip the protocol — we build transgenic mice for you.',
+    headline: 'Skip the protocol, we build transgenic mice for you.',
     subline:
       'Pronuclear injection, BAC transgenics, and targeted transgenesis. Quote in 24 hours. 100% germline guarantee.',
     primaryCta: { label: 'Get a Transgenic Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=how-to-transgenic-banner' },
@@ -246,7 +246,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Rosa26 Targeted Knockin',
     headline: 'Targeting Rosa26? We do it all the time.',
     subline:
-      'Rosa26 knockin mice — reporters, conditional cassettes, inducible expression. Quote in 24 hours.',
+      'Rosa26 knockin mice, reporters, conditional cassettes, inducible expression. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=rosa26-banner' },
     secondaryCta: { label: 'Browse Rosa26 Catalog', href: '/all-catalog-mouse-models/?q=rosa26' },
   },
@@ -254,7 +254,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'Rosa26 Targeted Knockin',
     headline: 'Targeting Rosa26? We do it all the time.',
     subline:
-      'Rosa26 knockin mice — reporters, conditional cassettes, inducible expression. Quote in 24 hours.',
+      'Rosa26 knockin mice, reporters, conditional cassettes, inducible expression. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=rosa26-mice-banner' },
     secondaryCta: { label: 'Browse Rosa26 Catalog', href: '/all-catalog-mouse-models/?q=rosa26' },
   },
@@ -286,7 +286,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
   },
   'conditional-mutation': {
     eyebrow: 'Conditional Knockouts',
-    headline: 'Conditional mutation modeling — done right.',
+    headline: 'Conditional mutation modeling, done right.',
     subline:
       'Conditional knockout and knockin mice. Tissue-specific or inducible. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=blog&utm_campaign=conditional-mutation-banner' },
@@ -307,7 +307,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
   // covered above and below by slug overlap
   'c57bl6-mouse-background': {
     eyebrow: 'C57BL/6 Mouse Background',
-    headline: 'Mice on C57BL/6J or C57BL/6N — your choice.',
+    headline: 'Mice on C57BL/6J or C57BL/6N, your choice.',
     subline:
       'We build on the background you need. 14,774 ready catalog models. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote?utm_source=organic&utm_medium=glossary&utm_campaign=c57bl6-bg-banner' },

@@ -29,13 +29,13 @@ const BRAND = {
 };
 
 export const metadata: Metadata = {
-  title: 'Accessibility Statement | ingenious targeting laboratory',
+  title: 'Accessibility Statement',
   description: 'Our commitment to digital accessibility. Learn about WCAG 2.1 AA compliance, assistive technology support, and how to request accommodations at iTL.',
   alternates: {
     canonical: 'https://www.genetargeting.com/accessibility/',
   },
   openGraph: {
-    title: 'Accessibility Statement | ingenious targeting laboratory',
+    title: 'Accessibility Statement',
     description: 'Our commitment to digital accessibility and WCAG 2.1 AA compliance.',
     url: 'https://www.genetargeting.com/accessibility/',
     siteName: 'ingenious targeting laboratory',

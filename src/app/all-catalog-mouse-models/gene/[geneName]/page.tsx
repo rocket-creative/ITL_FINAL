@@ -16,7 +16,7 @@ import { getModelsByGene, getRelatedGenes, indexableTier4ParamsForModels } from 
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
-import { UXUIDCNavigation, UXUIDCFooter, BreadcrumbSchema } from '@/components/UXUIDC';
+import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import {
   getPriorityGeneByMouseSymbol,
@@ -37,6 +37,12 @@ import {
   buildPriorityGeneDescription,
   buildGeneHubAlternateNames,
 } from '@/lib/seo/geneHubSerp';
+import {
+  buildCatalogGeneTitle,
+  buildCatalogGeneDescription,
+  getCatalogSerpOverride,
+} from '@/lib/seo/catalogSerp';
+import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { modCanonicalToSlug, modSlugToCanonical, resolveTissueOrDriverSlug } from '@/lib/seo/slugs';
 import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
 import { getIndexableBuildInquiryLinksForGene, CANONICAL_MOD_SLUGS } from '@/lib/gene-expansion/db';
@@ -88,56 +94,14 @@ function sortModelsForType(models: ServerCatalogModel[], focusType?: string): Se
   return [...hit, ...rest];
 }
 
-/**
- * Build a keyword rich title like:
- *   "Brca1 Knockout & Conditional KO Mouse Models | ITL"
- *   "Tp53 Knockout, Knockin & Humanized Mouse Models | ITL"
- * This targets the way researchers actually search:
- *   "brca1 knockout mouse", "tp53 humanized mouse", etc.
- */
-function buildTitle(geneName: string, models: ServerCatalogModel[]): string {
-  const types = [...new Set(models.map(m => m.modelType))].filter(Boolean);
-  // Shorten common names for title length
-  const SHORT: Record<string, string> = {
-    'Knockout': 'Knockout',
-    'Conditional Knockout': 'Conditional KO',
-    'Knockin': 'Knockin',
-    'Humanized': 'Humanized',
-    'Transgenic': 'Transgenic',
-    'Xenograft-Applicable': 'Xenograft',
-    'Immunodeficient': 'Immunodeficient',
-  };
-  const shortTypes = types.map(t => SHORT[t] || t).slice(0, 3);
-  const typeStr = shortTypes.length > 0
-    ? shortTypes.join(shortTypes.length === 2 ? ' & ' : ', ')
-    : 'Genetically Engineered';
-  const base = `${geneName} ${typeStr} Mouse Models`;
-  // Keep under ~60 chars for SERP display
-  if (base.length > 50) return `${base} | ITL`;
-  return `${base} | ${SITE_NAME}`;
-}
-
-function buildMetaDescription(geneName: string, models: ServerCatalogModel[]): string {
-  const modelCount = models.length;
-  const types = [...new Set(models.map(m => m.modelType))].filter(Boolean);
-  const typeStr = types.length > 0 ? types.slice(0, 3).join(', ') : 'genetically engineered';
-  const readyModels = models.filter(m => {
-    const a = (m.availability || '').toLowerCase();
-    return a.includes('live') || a.includes('available') || a.includes('ready');
+function buildGeneOgImage(geneName: string, modelCount: number, types: string[]): string {
+  const typeBit = types.slice(0, 2).join(' · ') || 'Mouse models';
+  const params = new URLSearchParams({
+    line1: `${geneName} mouse models`,
+    line2: typeBit,
+    line3: modelCount > 0 ? `${modelCount} catalog line${modelCount === 1 ? '' : 's'}` : 'Custom generation',
   });
-  const hasReady = readyModels.length > 0;
-
-  // Include gene + model type combos for long tail matching
-  // e.g. "Brca1 knockout mouse model, Brca1 conditional knockout..."
-  const combos = types.slice(0, 3).map(t => `${geneName} ${t.toLowerCase()}`).join(', ');
-
-  const parts: string[] = [];
-  parts.push(`${modelCount} ${geneName} ${typeStr} mouse model${modelCount > 1 ? 's' : ''}`);
-  if (hasReady) parts.push('ready to ship');
-  parts.push(`from ${SITE_NAME}`);
-  if (combos) parts.push(`Browse ${combos} models`);
-  parts.push('Request a quote or inquire about model generation');
-  return parts.join('. ') + '.';
+  return `${BASE_URL}/api/og?${params.toString()}`;
 }
 
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
@@ -151,74 +115,93 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     getIndexableBuildInquiryLinksForGene(geneName),
   ]);
   const models = rawModels.map(cleanModel);
+  const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
+  const override = !(focusType || tissueKey) ? getCatalogSerpOverride(geneName) : undefined;
 
   if (models.length === 0 && buildInquiryLinks.length === 0) {
-    return { title: `${geneName} Mouse Models | ${SITE_NAME}` };
+    const title = override?.title ?? `${geneName} mouse models`;
+    return { title, alternates: { canonical } };
   }
 
   const priority = getPriorityGeneByMouseSymbol(geneName);
-  const types = [...new Set(models.map(m => m.modelType))].filter(Boolean) as string[];
+  const types = [...new Set(models.map((m) => m.modelType))].filter(Boolean) as string[];
+  const hasReady = models.some((m) => {
+    const a = (m.availability || '').toLowerCase();
+    return a.includes('live') || a.includes('available') || a.includes('ready');
+  });
+  const ogImage = buildGeneOgImage(geneName, models.length, types);
+  const branded = (t: string) => `${t} | ${SITE_NAME}`;
 
   if (models.length === 0) {
-    const title = priority
-      ? buildPriorityGeneTitle(geneName, priority.humanSymbol, 0)
-      : `${geneName} Mouse Models | ${SITE_NAME}`;
-    const description = priority
-      ? buildPriorityGeneDescription(geneName, priority.humanSymbol, 0, [])
-      : `Explore ${geneName} mouse model types available to build from ${SITE_NAME}. ${buildInquiryLinks.length} modification types with scientific rationale and quote ready project intake.`;
-    const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
+    const title =
+      override?.title ??
+      (priority
+        ? buildPriorityGeneTitle(geneName, priority.humanSymbol, 0)
+        : `${geneName} mouse models`);
+    const description =
+      override?.description ??
+      (priority
+        ? buildPriorityGeneDescription(geneName, priority.humanSymbol, 0, [])
+        : `Explore ${geneName} mouse model types available to build. ${buildInquiryLinks.length} modification types with scientific rationale and quote ready project intake.`);
     return {
       title,
       description,
       alternates: { canonical },
       openGraph: {
-        title,
+        title: branded(title),
         description,
         url: canonical,
         siteName: SITE_NAME,
         locale: 'en_US',
         type: 'website',
+        images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
       },
-      twitter: { card: 'summary_large_image', title, description },
+      twitter: { card: 'summary_large_image', title: branded(title), description, images: [ogImage] },
     };
   }
 
   const usePriorityMeta = Boolean(priority) || isPriorityGene(geneName);
 
-  const title =
-    usePriorityMeta && priority && !(focusType !== undefined && focusType.length > 0)
+  let title =
+    override?.title ??
+    (usePriorityMeta && priority && !(focusType !== undefined && focusType.length > 0)
       ? buildPriorityGeneTitle(geneName, priority.humanSymbol, models.length)
-      : focusType !== undefined && focusType.length > 0
-        ? `${geneName} ${focusType} Mouse Models | ITL`
-        : buildTitle(geneName, models);
+      : buildCatalogGeneTitle(geneName, types, {
+          focusType,
+          humanSymbol: priority?.humanSymbol,
+        }));
 
   let description =
-    usePriorityMeta && priority
+    override?.description ??
+    (usePriorityMeta && priority
       ? buildPriorityGeneDescription(geneName, priority.humanSymbol, models.length, types)
-      : buildMetaDescription(geneName, models);
-  if (focusType && !(usePriorityMeta && priority)) {
-    description =
-      `${geneName} ${focusType.toLowerCase()} catalog models from ${SITE_NAME}. ` +
-      description;
+      : buildCatalogGeneDescription(geneName, models.length, types, {
+          hasReady,
+          humanSymbol: priority?.humanSymbol,
+        }));
+
+  if (focusType && !override && !(usePriorityMeta && priority)) {
+    description = buildCatalogGeneDescription(geneName, models.length, [focusType], { hasReady });
   }
-  if (tissueKey && !(usePriorityMeta && priority)) {
-    description += ` Interested in ${getDisplayLabelForTissueKey(tissueKey)} specific deletion cohorts paired with Cre drivers? Submit a consultation.`;
+  if (tissueKey && !override && !(usePriorityMeta && priority)) {
+    const tissueLabel = getDisplayLabelForTissueKey(tissueKey);
+    description = `${description.slice(0, 120)} ${tissueLabel} specific options available.`.slice(0, 160);
   }
-  const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
 
   return {
     title,
     description,
     alternates: { canonical },
     openGraph: {
-      title,
+      title: branded(title),
       description,
       url: canonical,
       siteName: SITE_NAME,
       locale: 'en_US',
       type: 'website',
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
-    twitter: { card: 'summary_large_image', title, description },
+    twitter: { card: 'summary_large_image', title: branded(title), description, images: [ogImage] },
   };
 }
 
@@ -966,13 +949,6 @@ export default async function GenePage({ params, searchParams }: Props) {
 
       <UXUIDCFooter />
 
-      <BreadcrumbSchema items={[
-        { name: 'Home', path: '/' },
-        { name: 'All Catalog Models', path: '/all-catalog-mouse-models' },
-        { name: 'Gene Index', path: '/all-catalog-mouse-models/gene-index' },
-        { name: geneName, path: `/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}` },
-      ]} />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -988,12 +964,23 @@ export default async function GenePage({ params, searchParams }: Props) {
                   { '@type': 'ListItem', position: 4, name: geneName, item: canonical },
                 ],
               },
+              {
+                '@type': 'FAQPage',
+                mainEntity: buildTierGeneModFaqs({
+                  gene: geneName,
+                  modLabel: types[0] || 'mouse model',
+                }).map((f) => ({
+                  '@type': 'Question',
+                  name: f.question,
+                  acceptedAnswer: { '@type': 'Answer', text: f.answer },
+                })),
+              },
               ...(priority
                 ? [
                     {
                       '@type': 'WebPage',
                       '@id': `${canonical}#webpage`,
-                      name: `${geneName} (${priority.humanSymbol}) Mouse Models`,
+                      name: `${geneName} (${priority.humanSymbol}) mouse models`,
                       url: canonical,
                       alternateName: buildGeneHubAlternateNames(),
                     },

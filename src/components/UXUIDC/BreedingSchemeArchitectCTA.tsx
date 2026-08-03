@@ -112,7 +112,7 @@ export function BreedingSchemeArchitectCTA({ variant = 'gradient' }: BreedingSch
               }}
             >
               Plan your single allele breeding strategy, calculate expected genotype ratios,
-              and estimate time to experimental cohorts—all before starting your project.
+              and estimate time to experimental cohorts, all before starting your project.
             </p>
 
             {/* Feature bullets */}

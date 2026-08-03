@@ -38,10 +38,10 @@ type Props = { params: Promise<{ tissueSlug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { tissueSlug } = await params;
   const canon = tissueSlugToCanonical(tissueSlug);
-  if (!canon) return { title: `Cre lines | ${SITE_NAME}` };
+  if (!canon) return { title: 'Cre lines' };
   const label = getDisplayLabelForTissueKey(canon);
   const meta = applyCatalogFirstMeta(
-    `${label} Cre Mouse Lines | Catalog + Generation | ITL`,
+    `${label} Cre Mouse Lines | Catalog + Generation`,
     `Browse ${label} biased Cre and CreERT2 drivers in the catalog. Request a generated conditional knockout when you need a paired floxed allele. Quote in twenty four hours.`,
     `/cre-lines/${tissueSlug}`,
   );

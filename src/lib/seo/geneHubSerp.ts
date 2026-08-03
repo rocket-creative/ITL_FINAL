@@ -7,7 +7,6 @@ import { PI_TAXONOMY_GROUPS } from '@/data/priorityGenes';
 const TITLE_MAX = 60;
 const DESC_MIN = 150;
 const DESC_MAX = 160;
-const SITE_SHORT = 'ITL';
 const TRUST_CHIP = 'Since 1998, 100% germline';
 
 function trimToMax(text: string, max: number): string {
@@ -24,7 +23,7 @@ function padDescription(text: string): string {
   if (out.length > DESC_MAX) return trimToMax(out, DESC_MAX);
   if (out.length >= DESC_MIN) return out;
 
-  // Only append complete phrases that fit — never mid-sentence cuts.
+  // Only append complete phrases that fit, never mid-sentence cuts.
   const fillers = [
     ' U.S. QC included.',
     ' Quote in 24 hours.',
@@ -50,29 +49,30 @@ export function buildPriorityGeneTitle(
   human: string,
   catalogCount: number,
 ): string {
+  // Brand is applied by the root layout title template only.
   const candidates =
     catalogCount > 0
       ? [
-          `${mouse} (${human}) Mouse Models | ${SITE_SHORT}`,
-          `${mouse} Knockout & Knockin Mice | ${SITE_SHORT}`,
-          `${mouse} Mouse Models | ${SITE_SHORT}`,
-          `${mouse} Models | ${SITE_SHORT}`,
+          `${mouse} (${human}) mouse models`,
+          `${mouse} knockout & knockin mice`,
+          `${mouse} mouse models`,
+          `${mouse} models`,
         ]
       : [
-          `${mouse} (${human}) Model Generation | ${SITE_SHORT}`,
-          `${mouse} Mouse Model Generation | ${SITE_SHORT}`,
-          `${mouse} Mouse Models | ${SITE_SHORT}`,
-          `${mouse} Models | ${SITE_SHORT}`,
+          `${mouse} (${human}) model generation`,
+          `${mouse} mouse model generation`,
+          `${mouse} mouse models`,
+          `${mouse} models`,
         ];
 
   for (const c of candidates) {
     if (c.length <= TITLE_MAX) return c;
   }
-  return trimToMax(`${mouse} Mouse Models | ${SITE_SHORT}`, TITLE_MAX);
+  return trimToMax(`${mouse} mouse models`, TITLE_MAX);
 }
 
 /**
- * Build a SERP description 150–160 characters mentioning KO/KI/humanized, trust, and CTA.
+ * Build a SERP description 150 to 160 characters mentioning KO/KI/humanized, trust, and CTA.
  */
 export function buildPriorityGeneDescription(
   mouse: string,

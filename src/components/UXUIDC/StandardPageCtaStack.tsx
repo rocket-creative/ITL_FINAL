@@ -57,7 +57,7 @@ export default function StandardPageCtaStack({
 
   return (
     <div className={className}>
-      {/* P0 — primary commercial close */}
+      {/* P0, primary commercial close */}
       <section
         className="px-5"
         style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}
@@ -73,12 +73,12 @@ export default function StandardPageCtaStack({
         </div>
       </section>
 
-      {/* P1 — tool CTA after commercial close */}
+      {/* P1, tool CTA after commercial close */}
       {showBreedingScheme ? (
         <BreedingSchemeArchitectCTA variant={breedingSchemeVariant} />
       ) : null}
 
-      {/* P2 — Lab Signals last among content CTAs */}
+      {/* P2, Lab Signals last among content CTAs */}
       {showLabSignals ? (
         <section style={{ backgroundColor: '#ffffff', padding: '48px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>

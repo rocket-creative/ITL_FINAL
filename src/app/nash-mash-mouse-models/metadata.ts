@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'NASH and MASH Mouse Models | ITL',
+  title: 'NASH and MASH Mouse Models',
   description: 'NASH and MASH mouse models for studying liver steatosis, fibrosis, and hepatic inflammation. Drug testing platforms for fatty liver disease research.',
   path: '/nash-mash-mouse-models',
 });

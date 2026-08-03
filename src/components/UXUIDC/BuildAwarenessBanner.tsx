@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Sitewide build awareness banner — spec §6b.
+ * Sitewide build awareness banner, spec §6b.
  * Mobile-first: stacks on phone, row layout from md (iPad) up.
  */
 
@@ -48,7 +48,7 @@ export default function BuildAwarenessBanner() {
       aria-label="Build capability"
     >
       <div className="container relative py-3 md:py-3.5">
-        {/* Dismiss — top corner on phone; inline on iPad+ */}
+        {/* Dismiss, top corner on phone; inline on iPad+ */}
         <button
           type="button"
           onClick={handleDismiss}

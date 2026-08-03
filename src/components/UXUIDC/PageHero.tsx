@@ -1,5 +1,5 @@
 /**
- * Sitewide page hero — mobile-first, solid gradient background, clear typography.
+ * Sitewide page hero, mobile-first, solid gradient background, clear typography.
  * Use on every marketing page for consistent above-the-fold layout.
  */
 

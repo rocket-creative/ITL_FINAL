@@ -16,9 +16,11 @@ export function buildBuildInquiryMetadata(
   dbIndexable: boolean,
 ): Metadata {
   const copy = buildPageCopy(gene, modelType);
-  const title = `${gene.symbol} ${modelType.display_name} mouse | ${BRAND}`;
+  // Bare title; root layout template appends the brand.
+  const title = `${gene.symbol} ${modelType.display_name} mouse`;
   const description = `${gene.symbol} ${modelType.display_name.toLowerCase()} mice designed and delivered by ${BRAND}. Quote in 24 hours. Since 1998, 2,800+ projects and 800+ publications.`;
   const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(gene.symbol)}/${modelType.slug}/`;
+  const brandedTitle = `${title} | ${BRAND}`;
 
   const lint = lintBuildInquiryCopy({
     title,
@@ -35,14 +37,14 @@ export function buildBuildInquiryMetadata(
     alternates: { canonical },
     robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: {
-      title,
+      title: brandedTitle,
       description,
       url: canonical,
       siteName: BRAND,
       locale: 'en_US',
       type: 'website',
     },
-    twitter: { card: 'summary_large_image', title, description },
+    twitter: { card: 'summary_large_image', title: brandedTitle, description },
   };
 }
 
@@ -52,7 +54,7 @@ export function effectiveIndexable(
   dbIndexable: boolean,
 ): boolean {
   const copy = buildPageCopy(gene, modelType);
-  const title = `${gene.symbol} ${modelType.display_name} mouse | ${BRAND}`;
+  const title = `${gene.symbol} ${modelType.display_name} mouse`;
   const lint = lintBuildInquiryCopy({
     title,
     h1: copy.h1,

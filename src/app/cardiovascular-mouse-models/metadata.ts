@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Cardiovascular Mouse Models | ITL',
+  title: 'Cardiovascular Mouse Models',
   description: 'Cardiovascular mouse models for studying heart disease, vascular biology, and cardiac function. Atherosclerosis, cardiomyopathy, and arrhythmia platforms.',
   path: '/cardiovascular-mouse-models',
 });

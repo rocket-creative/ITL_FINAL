@@ -25,102 +25,102 @@ import { glossaryTerms } from '@/data/glossaryTerms';
 // offer the searcher will actually click.
 const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: string }> = {
   'non-homologous-end-joining': {
-    title: 'NHEJ DNA Repair Explained + Generated Knockout Mice | ITL',
+    title: 'NHEJ DNA Repair Explained + Generated Knockout Mice',
     description:
       'Non-homologous end joining (NHEJ) explained for researchers. Generated knockout mice with a 100% germline guarantee. Quote in 24h.',
   },
   'open-reading-frame': {
-    title: 'Open Reading Frame (ORF) + Generated Knockin Mouse Models | ITL',
+    title: 'Open Reading Frame (ORF) + Generated Knockin Mouse Models',
     description:
       'ORF defined for genetics research. Need an ORF replacement or humanization knockin mouse? Quote in 24h. 800+ publications.',
   },
   'inducible-cre-ert2': {
-    title: 'Inducible CreERT2 + Generated CreERT2 Mouse Service | ITL',
+    title: 'Inducible CreERT2 + Generated CreERT2 Mouse Service',
     description:
       'Inducible CreERT2 explained for tissue-specific knockouts. We build generated CreERT2 + floxed alleles. 2,800+ models generated.',
   },
   'tamoxifen-inducible-cre': {
-    title: 'Tamoxifen Inducible Cre + Generated CreERT2 Mice | ITL',
+    title: 'Tamoxifen Inducible Cre + Generated CreERT2 Mice',
     description:
       'Tamoxifen-inducible Cre explained. We have shipped 2,800+ generated CreERT2 projects. Generated builds + ready catalog Cre lines. Quote in 24h.',
   },
   'c57bl6j-vs-c57bl6n': {
-    title: 'C57BL/6J vs C57BL/6N + Generated Mice on Either Background | ITL',
+    title: 'C57BL/6J vs C57BL/6N + Generated Mice on Either Background',
     description:
       'C57BL/6J vs 6N: substrain differences. We build mice on the background you need. 14,774 catalog models. Quote in 24h.',
   },
   'point-mutation': {
-    title: 'Point Mutation Definition + Generated Knockin Mouse Models | ITL',
+    title: 'Point Mutation Definition + Generated Knockin Mouse Models',
     description:
       'Point mutation defined: substitution, missense, nonsense. Generated point mutation knockin mice. Quote in 24h.',
   },
   'allele-genotype-phenotype': {
-    title: 'Allele, Genotype & Phenotype + Generated Mouse Design | ITL',
+    title: 'Allele, Genotype & Phenotype + Generated Mouse Design',
     description:
       'Allele, genotype, phenotype explained for mouse models. Our scientists design the right allele for your phenotype. Free consultation.',
   },
   'promoter-enhancer-regulatory-element': {
-    title: 'Promoter & Enhancer Elements + Generated Knockin Mice | ITL',
+    title: 'Promoter & Enhancer Elements + Generated Knockin Mice',
     description:
       'Promoter vs enhancer regulatory elements. Generated knockin mice at endogenous regulatory loci. Quote in 24h.',
   },
   'flp-frt-system': {
-    title: 'Flp-FRT System + Generated Conditional Mouse Models | ITL',
+    title: 'Flp-FRT System + Generated Conditional Mouse Models',
     description:
       'Flp-FRT recombination explained. Generated Flp/FRT and Cre/lox conditional mice. 800+ publications.',
   },
   'gain-of-function-vs-loss-of-function-mutation': {
-    title: 'Gain vs Loss of Function Mutation + Generated Mice | ITL',
+    title: 'Gain vs Loss of Function Mutation + Generated Mice',
     description:
       'Gain-of-function vs loss-of-function mutations. Generated knockin and knockout mice for either model. Quote in 24h.',
   },
   'dominant-negative': {
-    title: 'Dominant Negative Mutation + Generated Knockin Mice | ITL',
+    title: 'Dominant Negative Mutation + Generated Knockin Mice',
     description:
       'Dominant negative mutations explained. We build dominant-negative knockin mice. Quote in 24h.',
   },
   'rosa26': {
-    title: 'Rosa26 Locus + Generated Rosa26 Knockin Mouse Service | ITL',
+    title: 'Rosa26 Locus + Generated Rosa26 Knockin Mouse Service',
     description:
       'Rosa26 safe harbor locus explained. Generated Rosa26 knockin mice — reporters, cassettes, inducible —. Quote in 24h.',
   },
   'rosa26-locus': {
-    title: 'Rosa26 Locus + Generated Rosa26 Knockin Mice | ITL',
+    title: 'Rosa26 Locus + Generated Rosa26 Knockin Mice',
     description:
       'Rosa26 locus explained. Generated Rosa26 knockin mice. Reporters, conditional cassettes, inducible expression.',
   },
   'safe-harbor-locus': {
-    title: 'Safe Harbor Locus + Generated Knockin Mouse Service | ITL',
+    title: 'Safe Harbor Locus + Generated Knockin Mouse Service',
     description:
       'Safe harbor loci (Rosa26, others) explained. Generated safe-harbor knockin mice. 800+ publications.',
   },
   'tissue-specific-knockout': {
-    title: 'Tissue-Specific Knockout + Generated Conditional Mice | ITL',
+    title: 'Tissue-Specific Knockout + Generated Conditional Mice',
     description:
       'Tissue-specific knockout mice explained. Generated Cre/lox conditional knockouts. 2,800+ models generated.',
   },
   'humanized-mouse-models': {
-    title: 'Humanized Mouse Models + Generated Humanization Service | ITL',
+    title: 'Humanized Mouse Models + Generated Humanization Service',
     description:
       'Humanized mouse models defined. Generated humanization (PD1, PDL1, CTLA4, drug targets) since 1998. 800+ publications. Quote in 24h.',
   },
   'cre-lox-system': {
-    title: 'Cre/lox System + Generated Cre/lox Conditional Mice | ITL',
+    title: 'Cre/lox System + Generated Cre/lox Conditional Mice',
     description:
       'Cre/lox recombination explained. Generated Cre/lox conditional knockouts. 2,800+ models generated, 800+ publications.',
   },
   'frameshift-mutation': {
-    title: 'Frameshift Mutation + Generated Knockin Mouse Models | ITL',
+    title: 'Frameshift Mutation + Generated Knockin Mouse Models',
     description:
       'Frameshift mutations explained with examples. Generated knockin mice for any disease variant. Quote in 24h.',
   },
   'missense-nonsense-mutation': {
-    title: 'Missense vs Nonsense Mutation + Generated Knockin Mice | ITL',
+    title: 'Missense vs Nonsense Mutation + Generated Knockin Mice',
     description:
       'Missense and nonsense mutations explained. Generated point mutation knockin mice. Quote in 24h. 800+ publications.',
   },
   'genotyping-pcr-qpcr': {
-    title: 'Genotyping PCR/qPCR + Mouse Genotyping Service | ITL',
+    title: 'Genotyping PCR/qPCR + Mouse Genotyping Service',
     description:
       'PCR and qPCR genotyping explained. Outsource your genotyping — we offer mouse genotyping service with rapid turnaround.',
   },

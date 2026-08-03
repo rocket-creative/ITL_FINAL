@@ -25,7 +25,7 @@ const CG = [
   'Nestin',
 ] as const;
 
-describe('parseQuery — core prompts', () => {
+describe('parseQuery, core prompts', () => {
   it('p53 conditional knockout', () => {
     const q = parseQuery('p53 conditional knockout', [...CG]);
     expect(q.geneCandidates[0]).toBe('Trp53');
@@ -78,7 +78,7 @@ describe('parseQuery — core prompts', () => {
   });
 });
 
-describe('parseQuery — Cre / tissue extension', () => {
+describe('parseQuery, Cre / tissue extension', () => {
   it('liver specific Cre mouse', () => {
     const q = parseQuery('liver specific Cre mouse', []);
     expect(q.tissueCellCandidates).toContain('liver');
@@ -109,7 +109,7 @@ describe('parseQuery — Cre / tissue extension', () => {
     expect(q.tissueCellCandidates).toContain('t-cell');
   });
 
-  it('B cell knockout CD19 Cre — Cd19 promoter not organism gene', () => {
+  it('B cell knockout CD19 Cre, Cd19 promoter not organism gene', () => {
     const q = parseQuery('B cell knockout CD19 Cre', [...CG]);
     expect(q.geneCandidates.includes('Cd19')).toBe(false);
     expect(q.creDriverCandidates.some((d) => d.includes('CD19'))).toBe(true);

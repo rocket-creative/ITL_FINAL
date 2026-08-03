@@ -1,5 +1,5 @@
 /**
- * Biology driven copy for build_inquiry pages — spec §6.
+ * Biology driven copy for build_inquiry pages, spec §6.
  */
 
 import type { GeneRow, ModelTypeRow } from './db';

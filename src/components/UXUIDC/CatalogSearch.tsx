@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * |UXUIDC| Catalog Search Component — Supabase Edition
+ * |UXUIDC| Catalog Search Component, Supabase Edition
  * @version 3.0.0
  *
  * Server-side search: each query hits /api/catalog?q=... (Supabase).
@@ -42,7 +42,7 @@ interface CatalogSearchProps {
   preloadedModels?: CatalogModel[];
 }
 
-/** Stable default — inline `= []` allocates a new array every render and loops the search effect. */
+/** Stable default, inline `= []` allocates a new array every render and loops the search effect. */
 const EMPTY_MODELS: CatalogModel[] = [];
 
 export function CatalogSearch({

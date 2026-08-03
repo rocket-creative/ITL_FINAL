@@ -2,7 +2,7 @@
  * Pricing unlock cookie helpers
  *
  * Used by the /api/unlock-pricing route (sign) and src/proxy.ts middleware
- * (verify) so the cookie format stays in one place. Web Crypto only — works
+ * (verify) so the cookie format stays in one place. Web Crypto only, works
  * in both the Edge runtime (middleware) and Node runtime (API route).
  *
  * Cookie value format: base64url(HMAC-SHA256(payload, secret)) + "." + base64url(payload)

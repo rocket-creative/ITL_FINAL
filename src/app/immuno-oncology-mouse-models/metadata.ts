@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Immuno Oncology Mouse Models | ITL',
+  title: 'Immuno Oncology Mouse Models',
   description: 'Immuno oncology mouse models for studying tumor immunity and checkpoint inhibitors. Humanized immune checkpoint mice for cancer immunotherapy research.',
   path: '/immuno-oncology-mouse-models',
 });

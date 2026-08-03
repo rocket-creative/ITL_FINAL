@@ -6,7 +6,7 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Neuroscience Mouse Models | ITL',
+  title: 'Neuroscience Mouse Models',
   description: 'Mouse models for neurodegeneration, synaptic function, and CNS disorders. Study disease mechanisms in Alzheimer, Parkinson, ALS, and more.',
   path: '/neuroscience-mouse-models',
 });

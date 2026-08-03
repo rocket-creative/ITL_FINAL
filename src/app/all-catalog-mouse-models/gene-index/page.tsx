@@ -300,7 +300,7 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                           >
                             <td style={{ padding: '10px 14px', color: '#0a253c', fontWeight: 600 }}>
                               <Link
-                                href={`/all-catalog-mouse-models/gene/${encodeURIComponent(model.geneName)}`}
+                                href={`/all-catalog-mouse-models/gene/${encodeURIComponent(model.geneName)}/`}
                                 style={{ color: '#008080', textDecoration: 'none', fontWeight: 600 }}
                               >
                                 {model.geneName}

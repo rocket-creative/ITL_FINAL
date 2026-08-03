@@ -1,5 +1,5 @@
 /**
- * JSON-LD schema for build_inquiry pages — spec §7.
+ * JSON-LD schema for build_inquiry pages, spec §7.
  */
 
 import type { GeneRow, ModelTypeRow } from './db';

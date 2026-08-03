@@ -5,7 +5,7 @@ export const benchToBedsideCarTArticleBody = `<p>The last decade has proven that
 
 <h3>The translational gap in CAR-T development</h3>
 
-<p>Despite spectacular outcomes in certain hematologic malignancies, CAR-T development continues to be limited by antigen escape, poor persistence, on-target/off-tumor toxicity, and the persistent challenge of solid tumors.<sup>[1,5]</sup> Many of these issues only emerge from the full system-level interplay of tumor, immune compartment, and host tissues—phenomena that cannot be captured in vitro, and only partially in oversimplified xenograft models.<sup>[3,4]</sup></p>
+<p>Despite spectacular outcomes in certain hematologic malignancies, CAR-T development continues to be limited by antigen escape, poor persistence, on-target/off-tumor toxicity, and the persistent challenge of solid tumors.<sup>[1,5]</sup> Many of these issues only emerge from the full system-level interplay of tumor, immune compartment, and host tissues, phenomena that cannot be captured in vitro, and only partially in oversimplified xenograft models.<sup>[3,4]</sup></p>
 
 <p>A recent systematic analysis of preclinical CAR-T studies underscored this point: xenografts in severely immunodeficient mice were excellent at demonstrating potency but poor at recapitulating toxicity and long-term persistence, while more advanced immunocompetent and humanized models were more informative for dose, schedule, and safety questions that later surfaced in trials.<sup>[3]</sup> This divergence is precisely the translational gap a modern mouse model strategy must close.<sup>[3,2]</sup></p>
 
@@ -15,7 +15,7 @@ export const benchToBedsideCarTArticleBody = `<p>The last decade has proven that
 
 <p>Genetically engineered mouse models (GEMMs) and syngeneic tumor systems in fully immunocompetent hosts provide a controlled but complex setting in which to study CAR-T behavior in the presence of an intact immune system.<sup>[3,4]</sup> Unlike classic xenografts, these models can reveal how endogenous T cells, myeloid populations, and stromal elements shape CAR-T expansion, exhaustion, and memory formation over time.<sup>[4,5]</sup></p>
 
-<p>For example, recent preclinical work examining armored and costimulatory-optimized CAR-T cells in syngeneic models has shown that constructs designed to resist exhaustion or remodel the tumor microenvironment produce qualitatively different response patterns—deeper remissions, delayed relapse, and altered cytokine profiles—compared with first-generation CARs.<sup>[4,5]</sup> This is important because it links specific engineering choices to measurable in vivo phenotypes, including persistence, cytokine milieu, and immune infiltration, that are known correlates of durable responses in patients, making these models useful not only for ranking constructs, but for understanding why one design is more likely to succeed clinically.<sup>[1,4]</sup></p>
+<p>For example, recent preclinical work examining armored and costimulatory-optimized CAR-T cells in syngeneic models has shown that constructs designed to resist exhaustion or remodel the tumor microenvironment produce qualitatively different response patterns, deeper remissions, delayed relapse, and altered cytokine profiles, compared with first-generation CARs.<sup>[4,5]</sup> This is important because it links specific engineering choices to measurable in vivo phenotypes, including persistence, cytokine milieu, and immune infiltration, that are known correlates of durable responses in patients, making these models useful not only for ranking constructs, but for understanding why one design is more likely to succeed clinically.<sup>[1,4]</sup></p>
 
 <h4>Next-generation preclinical readouts</h4>
 
@@ -33,7 +33,7 @@ export const benchToBedsideCarTArticleBody = `<p>The last decade has proven that
 
 <h4>Why humanized systems matter</h4>
 
-<p>Humanized mouse models—immunodeficient strains reconstituted with human hematopoietic cells, often combined with patient-derived xenografts (PDX)—have become indispensable for CAR-T and other adoptive cell therapies because they allow human effector cells, human tumors, and human-specific toxicities to be studied in the same in vivo context.<sup>[6,2]</sup> This is particularly critical as the field pushes into solid tumors, where antigen heterogeneity, immunosuppression, and on-target/off-tumor expression on normal tissues are major barriers.<sup>[7,5]</sup></p>
+<p>Humanized mouse models, immunodeficient strains reconstituted with human hematopoietic cells, often combined with patient-derived xenografts (PDX) have become indispensable for CAR-T and other adoptive cell therapies because they allow human effector cells, human tumors, and human-specific toxicities to be studied in the same in vivo context.<sup>[6,2]</sup> This is particularly critical as the field pushes into solid tumors, where antigen heterogeneity, immunosuppression, and on-target/off-tumor expression on normal tissues are major barriers.<sup>[7,5]</sup></p>
 
 <p>Recent work evaluating CAR-T products across different humanized platforms has shown that tumor clearance kinetics differ markedly between models with simple PBMC reconstitution and those with stem cell-derived multilineage human immunity, reflecting differences in accessory cell support for CAR-T function.<sup>[6,2]</sup> Cytokine release and neurotoxicity-like signatures also emerge only in models with more complete human immune reconstitution, capturing safety signals that were missed in purely murine or severely immunodeficient systems.<sup>[6,4]</sup></p>
 
@@ -65,7 +65,7 @@ export const benchToBedsideCarTArticleBody = `<p>The last decade has proven that
 <li>Longitudinal designs that measure persistence of edited T cells and potential for insertional mutagenesis or unexpected lineage transduction.<sup>[8,9,2]</sup></li>
 </ul>
 
-<p>These models allow researchers to explore failure modes that would be ethically unacceptable to probe for the first time in humans—such as off-target gene transfer to hematopoietic stem cells or hepatocytes—while also optimizing vector dose and formulation.<sup>[8,2]</sup> Without these data, first-in-human in vivo CAR-T trials would proceed with far less visibility into high-consequence risks.<sup>[8,2]</sup></p>
+<p>These models allow researchers to explore failure modes that would be ethically unacceptable to probe for the first time in humans, such as off-target gene transfer to hematopoietic stem cells or hepatocytes, while also optimizing vector dose and formulation.<sup>[8,2]</sup> Without these data, first-in-human in vivo CAR-T trials would proceed with far less visibility into high-consequence risks.<sup>[8,2]</sup></p>
 
 <h3>Matching model to question: toward a rational CAR-T model cascade</h3>
 
