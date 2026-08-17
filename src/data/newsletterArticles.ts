@@ -14,6 +14,7 @@ import { dnaSequencesAreDataArticleBody } from './_labSignalsDnaSequencesAreData
 import { senescentCellClearanceArticleBody } from './_labSignalsSenescentCellClearanceArticle';
 import { hivVaccineArticleBody } from './_labSignalsHivVaccineArticle';
 import { rareDiseaseMouseModelInnovationArticleBody } from './_labSignalsRareDiseaseMouseModelInnovationArticle';
+import { beyondReplacementNamsArticleBody } from './_labSignalsBeyondReplacementNamsArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1151,6 +1152,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/humanized-mouse-models",
     body: rareDiseaseMouseModelInnovationArticleBody,
     publishedAt: "2026-08-04",
+  },
+  {
+    id: "beyond-replacement-nams-continuing-role-mouse-models",
+    slug: "beyond-replacement-nams-continuing-role-mouse-models",
+    title: "Beyond Replacement: An Update on NAMs and the Continuing Role of Mouse Models",
+    subtitle: "Complementary evidence, 2026 FDA guidance, and fit-for-purpose model selection",
+    description:
+      "NAMs and 2026 FDA guidance expand complementary preclinical evidence. Why selected mouse models still address whole-body physiology and longitudinal outcomes.",
+    category: "Industry Insights",
+    relatedPage: "/humanized-mouse-models",
+    body: beyondReplacementNamsArticleBody,
+    publishedAt: "2026-08-18",
   },
 ];
 
