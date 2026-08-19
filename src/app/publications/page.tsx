@@ -520,7 +520,28 @@ export default function PublicationsPage() {
                         border: '1px solid #e0e0e0',
                         borderTop: 'none'
                       }}>
-                        {filteredPublications[year].map((pub, index) => (
+                        {filteredPublications[year].map((pub, index) => {
+                          const afterTitle = pub.afterTitle ?? (pub.title.endsWith('.') ? ' ' : '. ');
+                          const volume = pub.volume || '';
+                          const volumeGlue = !volume || volume.startsWith('.') || volume.startsWith(' ') ? '' : ' ';
+                          const titleLink = pub.link ? (
+                            <a
+                              href={pub.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                color: '#008080',
+                                fontWeight: 500,
+                                textDecoration: 'none'
+                              }}
+                              onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+                              onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+                            >
+                              {pub.title}
+                            </a>
+                          ) : pub.title;
+
+                          return (
                           <div
                             key={index}
                             style={{
@@ -528,54 +549,74 @@ export default function PublicationsPage() {
                               borderBottom: index < filteredPublications[year].length - 1 ? '1px solid #f0f0f0' : 'none'
                             }}
                           >
-                            <p style={{
-                              fontSize: '.85rem',
-                              color: '#666',
-                              marginBottom: '8px',
-                              lineHeight: 1.6
-                            }}>
-                              {pub.authors}{' '}{pub.year}.
-                            </p>
-                            {pub.link ? (
-                              <a
-                                href={pub.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                  display: 'block',
-                                  fontSize: '.95rem',
-                                  color: '#008080',
-                                  fontWeight: 500,
-                                  marginBottom: '8px',
-                                  lineHeight: 1.5,
-                                  textDecoration: 'none'
-                                }}
-                                onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
-                                onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
-                              >
-                                {pub.title}
-                              </a>
-                            ) : (
+                            {year === '2026' ? (
                               <p style={{
                                 fontSize: '.95rem',
                                 color: '#333',
-                                fontWeight: 500,
-                                marginBottom: '8px',
-                                lineHeight: 1.5
+                                lineHeight: 1.6,
+                                margin: 0
                               }}>
-                                {pub.title}
+                                {pub.authors}{' '}{pub.year}.{' '}
+                                {titleLink}
+                                {afterTitle}
+                                <em>{pub.journal}</em>
+                                {volume ? (
+                                  <span style={{ fontStyle: 'normal' }}>{volumeGlue}{volume}</span>
+                                ) : null}
                               </p>
+                            ) : (
+                              <>
+                                <p style={{
+                                  fontSize: '.85rem',
+                                  color: '#666',
+                                  marginBottom: '8px',
+                                  lineHeight: 1.6
+                                }}>
+                                  {pub.authors}{' '}{pub.year}.
+                                </p>
+                                {pub.link ? (
+                                  <a
+                                    href={pub.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{
+                                      display: 'block',
+                                      fontSize: '.95rem',
+                                      color: '#008080',
+                                      fontWeight: 500,
+                                      marginBottom: '8px',
+                                      lineHeight: 1.5,
+                                      textDecoration: 'none'
+                                    }}
+                                    onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+                                    onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+                                  >
+                                    {pub.title}
+                                  </a>
+                                ) : (
+                                  <p style={{
+                                    fontSize: '.95rem',
+                                    color: '#333',
+                                    fontWeight: 500,
+                                    marginBottom: '8px',
+                                    lineHeight: 1.5
+                                  }}>
+                                    {pub.title}
+                                  </p>
+                                )}
+                                <p style={{
+                                  fontSize: '.85rem',
+                                  color: '#666',
+                                  fontStyle: 'italic'
+                                }}>
+                                  <em>{pub.journal}</em>
+                                  {pub.volume && <span style={{ fontStyle: 'normal' }}>{' '}{pub.volume}</span>}
+                                </p>
+                              </>
                             )}
-                            <p style={{
-                              fontSize: '.85rem',
-                              color: '#666',
-                              fontStyle: 'italic'
-                            }}>
-                              <em>{pub.journal}</em>
-                              {pub.volume && <span style={{ fontStyle: 'normal' }}>{' '}{pub.volume}</span>}
-                            </p>
                           </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     )}
                   </div>

@@ -21,8 +21,8 @@
  *   link: "https://pubmed.ncbi.nlm.nih.gov/xxxxx/"
  * }
  * 
- * Last updated: 2026-05-07
- * Source: 2025 Publications.md, 2026 Publications.docx (ITL team)
+ * Last updated: 2026-08-19
+ * Source: 2026 Publications.docx (ITL team, Ready to be Updated: 8/3/26)
  */
 
 export interface Publication {
@@ -32,6 +32,7 @@ export interface Publication {
   journal: string;
   volume: string;
   link?: string; // PubMed or other article URL
+  afterTitle?: string; // punctuation after the title link; default ". "
 }
 
 export interface PublicationsByYear {
@@ -41,6 +42,46 @@ export interface PublicationsByYear {
 export const publicationsByYear: PublicationsByYear = {
   "2026": [
     {
+      authors: "Wang Y, Noë A, Truong-Ong L, Hekimi S.",
+      year: 2026,
+      title: "Clarifying the molecular mechanisms underlying the lethal in vitro cellular effects and mild organismal phenotype of SOD1 loss",
+      journal: "Sci Rep.",
+      volume: "Online ahead of print",
+      link: "https://pubmed.ncbi.nlm.nih.gov/42374077/"
+    },
+    {
+      authors: "Mao Z, Hirdler JB, Gicobi JK, Ding L, Maynes MA, Hsu MA, Dellacecca ER, Zhang W, Teske JJ, Li Y, Liew AY, Zhao G, Ting AT, Shapiro VM, Lucien-Matteoni F, Borges da Silva H, Billadeau DD, Dong H.",
+      year: 2026,
+      title: "PD-1 regulates latent effector differentiation of thymic cytotoxic CD8+ T cells",
+      journal: "Nat Commun.",
+      volume: "Online ahead of print",
+      link: "https://pubmed.ncbi.nlm.nih.gov/42177167/"
+    },
+    {
+      authors: "Schindler JC, Seth P, Hausladen A, Chan ER, Yang J, Qin J, Qian Z, Seth D, Lundberg K, Luna JM, Premont RT, Stamler JS.",
+      year: 2026,
+      title: "Nitric oxide drives proteomic diversity through alternative splicing",
+      journal: "Mol Cell.",
+      volume: "12 (86): P2345-2340.E9",
+      link: "https://pubmed.ncbi.nlm.nih.gov/42167237/"
+    },
+    {
+      authors: "Chakrabarty RP, Van Vranken JG, Aoi Y, Poor TA, McElroy GS, Vasan K, Soliman SHA, Iwanaszko M, Grant RA, Howard BC, Reczek CR, Chandel AD, Kahl M, Xu Z, Helmin KA, Jin Q, Wang D, Gao P, Blum JLE, Sebo ZL, Yue F, Ma YC, Davidson SM, Gygi SP, Weinberg SE, Singer BD, Han S, Shilatifard A, Chandel NS.",
+      year: 2026,
+      title: "Mitochondrial L-2-hydroxyglutarate is a physiological signalling metabolite",
+      journal: "Nature",
+      volume: ". Online ahead of print.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/42162436/"
+    },
+    {
+      authors: "Ito S, Chen JZ, Howatt DA, Moorleghen JJ, Lu HS, Daugherty A, Sawada H.",
+      year: 2026,
+      title: "S100A4-lineage cells contribute modestly to angiotensin II-mediated thoracic aortic aneurysms through angiotensin II type 1a receptor in mice",
+      journal: "PLoS One",
+      volume: "5(21): e0348111.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/42118772/"
+    },
+    {
       authors: "Wetterwald L, Köck A, Wyss T, Arroz-Madeira S, Prat-Luri B, Jaquet M, Petit B, Vozenin MC, Ylä-Herttuala S, Dutoit V, Migliorini D, Schaeuble K, Brisken C, Delorenzi M, Sabine A, Petrova TV.",
       year: 2026,
       title: "MYCT1-IFITM2/3 interaction links endothelial endolysosomal trafficking to white adipose tissue expansion",
@@ -49,11 +90,20 @@ export const publicationsByYear: PublicationsByYear = {
       link: "https://pubmed.ncbi.nlm.nih.gov/41880193/"
     },
     {
+      authors: "Guichard S, di Lorenzo E, Schneiter D, Essers M, Arullampalam P, Rougier JS, Abriel H.",
+      year: 2026,
+      title: "Glycosylation of the murine cardiac channel TRPM4 is altered by the pathogenic p.I376T variant",
+      journal: "Exp Physiol.",
+      volume: "Online ahead of print.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/42052727/",
+      afterTitle: " "
+    },
+    {
       authors: "MacDowell Kaswan ZA, Hurtado M, Chen EY, McCusker RH.",
       year: 2026,
       title: "Ido1 and Ido2 deficiencies attenuate kainic acid-induced ictogenesis",
-      journal: "Brain Res.",
-      volume: "(1877-1878): 150204",
+      journal: "Brain Res",
+      volume: ". (1877-1878): 150204.",
       link: "https://pubmed.ncbi.nlm.nih.gov/41698631/"
     },
     {
@@ -108,8 +158,8 @@ export const publicationsByYear: PublicationsByYear = {
       authors: "Xi Y, Liu L, Kim JW, Zhang M, Wang X, Abdirassil A, Xu M, Ren S, Wang Q, Yang D, Xu P, Xie W.",
       year: 2026,
       title: "Targeting ADAR1-mediated RNA editing inhibits hepatic stellate cell activation and liver fibrosis by enhancing HSC-intrinsic innate immunity",
-      journal: "Gut.",
-      volume: "Online ahead of print.",
+      journal: "Gut",
+      volume: ". Online ahead of print.",
       link: "https://pubmed.ncbi.nlm.nih.gov/41554631/"
     },
     {
@@ -118,7 +168,8 @@ export const publicationsByYear: PublicationsByYear = {
       title: "A transposase-derived gene required for human brain development",
       journal: "Sci Adv.",
       volume: "3(12): eadv7530.",
-      link: "https://pubmed.ncbi.nlm.nih.gov/41533792/"
+      link: "https://pubmed.ncbi.nlm.nih.gov/41533792/",
+      afterTitle: " "
     },
     {
       authors: "Tebbe L, Ikelle L, Makia MS, Kakakhel M, Al-Ubaidi MR, Naash MI.",
