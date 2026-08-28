@@ -15,6 +15,7 @@ import { senescentCellClearanceArticleBody } from './_labSignalsSenescentCellCle
 import { hivVaccineArticleBody } from './_labSignalsHivVaccineArticle';
 import { rareDiseaseMouseModelInnovationArticleBody } from './_labSignalsRareDiseaseMouseModelInnovationArticle';
 import { beyondReplacementNamsArticleBody } from './_labSignalsBeyondReplacementNamsArticle';
+import { geneTherapyMatchModelMechanismArticleBody } from './_labSignalsGeneTherapyMatchModelMechanismArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1164,6 +1165,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/humanized-mouse-models",
     body: beyondReplacementNamsArticleBody,
     publishedAt: "2026-08-18",
+  },
+  {
+    id: "designing-mouse-models-gene-therapy-research-match-model-to-mechanism",
+    slug: "designing-mouse-models-gene-therapy-research-match-model-to-mechanism",
+    title: "Designing Mouse Models for Gene Therapy Research: Match the Model to the Mechanism",
+    subtitle: "Match the Model to the Mechanism",
+    description:
+      "Match gene therapy mouse models to the therapeutic mechanism. Mutation knock-ins, humanized alleles, conditional systems, reporters, and Rosa26 platforms.",
+    category: "Technical Guide",
+    relatedPage: "/gene-therapy-mouse-models",
+    body: geneTherapyMatchModelMechanismArticleBody,
+    publishedAt: "2026-09-01",
   },
 ];
 
