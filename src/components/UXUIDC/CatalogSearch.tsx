@@ -295,7 +295,7 @@ export function CatalogSearch({
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'auto', minWidth: '750px' }}>
                 <thead>
                   <tr style={{ background: '#f7f7f7' }}>
-                    {['Gene Name', 'Model Abbreviation', 'Model Type', 'Category', 'Availability', 'ITL Catalog #', ''].map((h) => (
+                    {['Gene Name', 'Model Abbreviation', 'Model Type', 'Category', 'Availability', 'iTL Catalog #', ''].map((h) => (
                       <th key={h} style={{ padding: '12px 16px', textAlign: h === '' ? 'center' : 'left', fontWeight: 600, color: '#333', borderBottom: '2px solid #e0e0e0', whiteSpace: 'nowrap' }}>
                         {h}
                       </th>

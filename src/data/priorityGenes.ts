@@ -1090,13 +1090,8 @@ export const PI_TAXONOMY_GROUPS: PiTaxonomyGroup[] = [
   },
   {
     id: 'transgenic',
-    label: 'Transgenic',
+    label: 'Targeted Transgenic',
     children: [
-      {
-        id: 'random-integration-tg',
-        label: 'Random integration transgenic',
-        canonicalModSlug: 'overexpression',
-      },
       {
         id: 'safe-harbor',
         label: 'Safe harbor (ROSA26, HPRT, H11, Col1a1)',

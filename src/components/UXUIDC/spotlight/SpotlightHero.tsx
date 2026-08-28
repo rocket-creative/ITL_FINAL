@@ -62,7 +62,7 @@ export function SpotlightHero({ spotlight }: SpotlightHeroProps) {
                 />
               </div>
               <div className="spotlight-hero-aside-item">
-                <div className="spotlight-hero-aside-label">ITL Contribution</div>
+                <div className="spotlight-hero-aside-label">ingenious Contribution</div>
                 <div className="spotlight-hero-aside-value">{spotlight.modelTypeDisplay}</div>
               </div>
             </aside>

@@ -36,7 +36,7 @@ function padDescription(text: string): string {
   }
 
   if (out.length < DESC_MIN) {
-    out = trimToMax(`${out} Contact ITL for allele design.`, DESC_MAX);
+    out = trimToMax(`${out} Contact ingenious targeting laboratory for allele design.`, DESC_MAX);
   }
   return out.length > DESC_MAX ? trimToMax(out, DESC_MAX) : out;
 }

@@ -21,13 +21,13 @@ import ModelGenerationPrioritySection from '@/components/gene-expansion/ModelGen
 const heroData = {
   badge: "Mouse Model Generation Services",
   title: "Mouse Model Generation",
-  intro: "ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
-  description: "Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgene integration, iTL provides the PhD level scientific consultation and U.S. based technical execution to deliver models optimized for your specific research goals."
+  intro: "ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+  description: "Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgenic models, ingenious provides the PhD level scientific consultation and U.S. based technical execution to deliver models optimized for your specific research goals."
 };
 
 // Stats Data
 const statsData = [
-  { value: 2800, suffix: "+", label: "Models Generated" },
+  { value: 2800, suffix: "+", label: "Custom Models Generated" },
   { value: 800, suffix: "+", label: "Publications" },
   { value: 26, suffix: "+", label: "Years Experience" },
   { value: 100, suffix: "%", label: "Germline Transmission Guarantee" }
@@ -154,12 +154,12 @@ const humanizedData = {
 
 // Transgenic and Cre driver coverage (PI taxonomy)
 const transgenicCreData = {
-  title: "Transgenic and Cre Driver Models",
-  intro: "Random and safe harbor transgenesis, overexpression alleles, BAC inserts, and Cre driver lines complete the PI search taxonomy for model generation beyond targeted knockout and knockin.",
+  title: "Targeted Transgenic and Cre Driver Models",
+  intro: "Safe harbor transgenesis, overexpression alleles, BAC models, and Cre driver lines comprise our advanced portfolio of genetic strategies for model generation beyond targeted knockout and knockin.",
   models: [
     {
-      title: "Transgenic Mouse Service",
-      description: "Random integration and overexpression transgenic models for rapid gain of function studies, with project design guidance on copy number and founder screening.",
+      title: "Targeted Transgenic Mouse Service",
+      description: "Targeted transgenic and overexpression models for rapid gain of function studies, with project design guidance on copy number and founder screening.",
       href: "/transgenic-mouse-service"
     },
     {
@@ -225,14 +225,6 @@ const faqData = [
     answer: "Yes. Partial service options are available for researchers with existing reagents. Services include gene targeting only, microinjection only, or germline transmission breeding. Contact us to discuss your specific requirements and receive a project quote."
   },
   {
-    question: "How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?",
-    answer: "Jackson Laboratory offers generated CRISPR, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects."
-  },
-  {
-    question: "How does iTL compare to Charles River, Cyagen, and other mouse model generation companies?",
-    answer: "Charles River is a global CRO bundling model creation with breeding and distribution. Cyagen is a cost forward CRISPR provider with a money back guarantee on genotype. ingenious targeting laboratory differs by focusing exclusively on model generation with gene targeting and CRISPR workflows chosen per project, U.S. based QC at every stage, and long term inheritance stability tracking for complex alleles."
-  },
-  {
     question: "What does the 100% germline transmission guarantee mean?",
     answer: "ingenious targeting laboratory guarantees that every mouse model generation project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to all generated models."
   }
@@ -244,7 +236,7 @@ const relatedLinksData = {
     { href: "/knockout-mouse-models", label: "Knockout Mouse Models" },
     { href: "/knockin-mouse-models", label: "Knockin Mouse Models" },
     { href: "/humanized-mouse-models", label: "Humanized Mouse Models" },
-    { href: "/transgenic-mouse-service", label: "Transgenic Mouse Service" },
+    { href: "/transgenic-mouse-service", label: "Targeted Transgenic Mouse Service" },
     { href: "/conditional-knockout-mouse-models", label: "Conditional Knockout Models" }
   ],
   selectionGuides: [
@@ -277,7 +269,7 @@ export default function CustomMouseModelsPage() {
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Mouse Model Generation",
-            "description": "ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+            "description": "ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",

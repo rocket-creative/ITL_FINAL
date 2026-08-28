@@ -93,7 +93,7 @@ const planningGuidesData: {
     {
       href: "/technology-overview",
       title: "Technology Overview",
-      description: "gene targeting and CRISPR workflows, allele design options, and how ITL validates germline transmission before delivery."
+      description: "gene targeting and CRISPR workflows, allele design options, and how ingenious targeting laboratory validates germline transmission before delivery."
     },
     {
       href: "/custom-mouse-models",

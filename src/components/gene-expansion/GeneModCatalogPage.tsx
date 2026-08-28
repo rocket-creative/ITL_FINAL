@@ -21,7 +21,7 @@ const BASE_URL = 'https://www.genetargeting.com';
 
 function stripSmoc(s: string | undefined | null): string {
   if (!s) return '';
-  return s.replace(/smoc/gi, 'ITL').replace(/shanghai model organisms?( center)?/gi, 'ITL').trim();
+  return s.replace(/smoc/gi, 'iTL').replace(/shanghai model organisms?( center)?/gi, 'iTL').trim();
 }
 
 function cleanModel(m: ServerCatalogModel): ServerCatalogModel {

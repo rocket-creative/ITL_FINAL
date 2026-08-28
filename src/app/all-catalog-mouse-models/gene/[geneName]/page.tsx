@@ -66,7 +66,7 @@ type Props = {
 // Strip any SMOC references from data fields before rendering
 function stripSmoc(s: string | undefined | null): string {
   if (!s) return '';
-  return s.replace(/smoc/gi, 'ITL').replace(/shanghai model organisms?( center)?/gi, 'ITL').trim();
+  return s.replace(/smoc/gi, 'iTL').replace(/shanghai model organisms?( center)?/gi, 'iTL').trim();
 }
 
 function fixCatalogTypos(s: string): string {
@@ -645,7 +645,7 @@ export default async function GenePage({ params, searchParams }: Props) {
               </h2>
               <p style={{ color: '#666', fontSize: '.9rem', marginBottom: '24px', lineHeight: 1.6 }}>
                 Peer reviewed work involving {geneName}
-                {priority.humanSymbol !== geneName ? ` (${priority.humanSymbol})` : ''} from ITL supported projects.
+                {priority.humanSymbol !== geneName ? ` (${priority.humanSymbol})` : ''} from ingenious supported projects.
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {genePubs.map((pub) => (
@@ -708,7 +708,7 @@ export default async function GenePage({ params, searchParams }: Props) {
                     borderBottom: '1px solid #008080',
                   }}
                 >
-                  View all ITL publications
+                  View all ingenious publications
                 </Link>
               </p>
             </div>

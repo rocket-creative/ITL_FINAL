@@ -60,11 +60,13 @@ export const CUSTOM_MODEL_PANEL = {
   eyebrow: 'Model generation',
   headline: 'Need a knockout, knockin, or humanized line?',
   subline:
-    'The same U.S. scientific team designs and delivers your allele when it is not on the shelf. 100% germline transmission guarantee.',
+    'The same U.S. scientific team designs and delivers your allele when it is not on the shelf. 2,800+ custom models generated since 1998. 100% germline transmission guarantee.',
   bullets: [
-    'Conventional and conditional knockouts',
-    'Point mutation and humanized knockins',
-    '2,800+ models generated since 1998',
+    'Specialized conventional and conditional knockouts',
+    'Knockins including point mutations, cDNA insertions, and epitope tags',
+    'Humanized models, including partial and full gene replacements',
+    'Targeted transgenesis in safe harbor loci',
+    'Inducible/reversible alleles using advanced recombinase techniques',
   ],
   quoteLabel: 'Request a Quote',
   servicesLabel: 'Explore model generation services',

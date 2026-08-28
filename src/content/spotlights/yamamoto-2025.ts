@@ -77,5 +77,5 @@ Then the study expanded. The same Alfy elevation protected against phospho-α-sy
   metaTitle:
     'Researcher Spotlight: Ai Yamamoto, Columbia University | ingenious targeting laboratory',
   metaDescription:
-    "How the Yamamoto lab at Columbia used an ITL point mutation knockin and Rosa26 knockin to uncover a shared therapeutic target across Huntington's, Parkinson's, and tauopathies.",
+    "How the Yamamoto lab at Columbia used an ingenious targeting laboratory point mutation knockin and Rosa26 knockin to uncover a shared therapeutic target across Huntington's, Parkinson's, and tauopathies.",
 };

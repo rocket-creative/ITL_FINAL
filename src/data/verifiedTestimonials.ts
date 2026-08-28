@@ -145,7 +145,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'marmigere-inserm',
-    quote: "I worked with ITL on the generation of a conditional knockout mouse strain for a complex gene. I have been very impressed by their flexibility and their efficiency in completing each steps with no delays. I'm glad to share this experience and highly recommend ITL's services.",
+    quote: "I worked with ingenious targeting laboratory on the generation of a conditional knockout mouse strain for a complex gene. I have been very impressed by their flexibility and their efficiency in completing each steps with no delays. I'm glad to share this experience and highly recommend ingenious targeting laboratory's services.",
     author: 'Frédéric Marmigère',
     credentials: 'PhD',
     affiliation: 'INSERM',

@@ -114,7 +114,7 @@ export default async function GeneIndexPage({ searchParams }: Props) {
               marginBottom: '30px', lineHeight: 1.7, maxWidth: '800px',
             }}>
               {isFiltered
-                ? `Showing ${grouped[filterLetter!]?.length ?? 0} models with gene names starting with "${filterLetter}". Each row includes the ITL catalog number for precise identification.`
+                ? `Showing ${grouped[filterLetter!]?.length ?? 0} models with gene names starting with "${filterLetter}". Each row includes the iTL catalog number for precise identification.`
                 : `Browse all ${uniqueGeneCount.toLocaleString()} unique gene targets across our catalog of ${allModels.length.toLocaleString()}+ genetically engineered mouse models. Click any gene to see every available model.`}
             </p>
 
@@ -276,7 +276,7 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                     <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.875rem' }}>
                       <thead>
                         <tr style={{ background: '#f7f7f7' }}>
-                          {['Gene Name', 'Model Abbreviation', 'Model Type', 'Availability', 'ITL Catalog #', ''].map((h) => (
+                          {['Gene Name', 'Model Abbreviation', 'Model Type', 'Availability', 'iTL Catalog #', ''].map((h) => (
                             <th
                               key={h}
                               style={{

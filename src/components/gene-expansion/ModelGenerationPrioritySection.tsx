@@ -34,7 +34,7 @@ const GENERATION_MOD_TYPES: Array<{ label: string; slug: string }> = [
   { label: 'Conditional knockout', slug: 'conditional-knockout' },
   { label: 'Knockin', slug: 'knockin' },
   { label: 'Humanized', slug: 'humanized' },
-  { label: 'Transgenic / overexpression', slug: 'overexpression' },
+  { label: 'Targeted transgenic / overexpression', slug: 'overexpression' },
 ];
 
 const GENE_PREVIEW_LIMIT = 12;
@@ -339,9 +339,9 @@ export default function ModelGenerationPrioritySection() {
           </h2>
           <p style={{ ...INTRO_PARAGRAPH, fontSize: '.95rem', marginBottom: '28px' }}>
             ingenious targeting laboratory designs knockout, conditional knockout, knockin,
-            humanized, and transgenic models for 700+ priority genes across signaling, immune,
-            cancer, neuroscience, metabolism, and morphogen pathways. Quote in 24 hours. 100%
-            germline transmission guarantee.
+            humanized, and targeted transgenic models for your gene of interest across oncology,
+            immunology, neuroscience, metabolic disease, cardiovascular disease, infectious
+            disease, and rare diseases. Quote in 24 hours. 100% germline transmission guarantee.
           </p>
 
           <h3
@@ -395,7 +395,7 @@ export default function ModelGenerationPrioritySection() {
             Allele types we generate
           </h2>
           <p style={INTRO_PARAGRAPH}>
-            Knockout, conditional, knockin, humanized, transgenic, and related paths. Pick the allele
+            Knockout, conditional, knockin, humanized, targeted transgenic, and related paths. Pick the allele
             class that matches the experiment, then request a quote.
           </p>
 
