@@ -158,11 +158,6 @@ const transgenicCreData = {
   intro: "Safe harbor transgenesis, overexpression alleles, BAC models, and Cre driver lines comprise our advanced portfolio of genetic strategies for model generation beyond targeted knockout and knockin.",
   models: [
     {
-      title: "Targeted Transgenic Mouse Service",
-      description: "Targeted transgenic and overexpression models for rapid gain of function studies, with project design guidance on copy number and founder screening.",
-      href: "/transgenic-mouse-service"
-    },
-    {
       title: "Safe Harbor Rosa26 / H11",
       description: "Targeted insertion at Rosa26, H11, and related safe harbor loci for predictable expression without disrupting essential genes.",
       href: "/rosa26"

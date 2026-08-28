@@ -223,7 +223,6 @@ export default function CatalogCustomDualCta({
         >
           <div style={{ ...panelEyebrow, color: '#0a253c' }}>{CUSTOM_MODEL_PANEL.eyebrow}</div>
           <h4 style={panelTitle}>{CUSTOM_MODEL_PANEL.headline}</h4>
-          <p style={panelBody}>{CUSTOM_MODEL_PANEL.subline}</p>
 
           <ul
             style={{
@@ -242,6 +241,8 @@ export default function CatalogCustomDualCta({
               </li>
             ))}
           </ul>
+
+          <p style={panelBody}>{CUSTOM_MODEL_PANEL.subline}</p>
 
           <Link
             href={quoteUrl}

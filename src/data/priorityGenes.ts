@@ -1011,18 +1011,11 @@ export const PI_TAXONOMY_GROUPS: PiTaxonomyGroup[] = [
     children: [
       { id: 'conventional-ko', label: 'Conventional / global / constitutive KO', canonicalModSlug: 'knockout' },
       { id: 'conditional-ko', label: 'Conditional KO (floxed / loxP)', canonicalModSlug: 'conditional-knockout' },
-      { id: 'inducible-cko', label: 'Inducible conditional KO (CreER / tet)', canonicalModSlug: 'inducible-knockout' },
       {
         id: 'tissue-specific-ko',
         label: 'Tissue specific KO',
         canonicalModSlug: 'conditional-knockout',
         quoteNote: 'Specify tissue or Cre driver on quote',
-      },
-      {
-        id: 'knockout-first',
-        label: 'Knockout first (tm1a / IKMC)',
-        canonicalModSlug: 'knockout',
-        quoteNote: 'Convertible floxed allele pathway',
       },
       {
         id: 'compound-ko',
@@ -1115,12 +1108,6 @@ export const PI_TAXONOMY_GROUPS: PiTaxonomyGroup[] = [
         label: 'Constitutive Cre driver',
         canonicalModSlug: 'cre-driver',
         siteHref: '/cre-driver-catalog',
-      },
-      {
-        id: 'inducible-cre',
-        label: 'Inducible Cre (CreER / tet)',
-        canonicalModSlug: 'cre-driver',
-        quoteNote: 'Tamoxifen or dox inducible Cre',
       },
       {
         id: 'dual-recombinase',
