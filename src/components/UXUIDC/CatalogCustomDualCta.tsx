@@ -227,7 +227,9 @@ export default function CatalogCustomDualCta({
           <ul
             style={{
               margin: '0 0 16px 0',
-              paddingLeft: '18px',
+              paddingLeft: '20px',
+              listStyleType: 'disc',
+              listStylePosition: 'outside',
               color: '#444',
               fontFamily: 'Lato, -apple-system, sans-serif',
               fontSize: '0.88rem',
