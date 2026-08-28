@@ -55,6 +55,7 @@ const selectionConsiderations = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 const testimonials = [
   { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
@@ -218,7 +219,13 @@ export default function TissueSpecificCreLinesPage() {
           { name: 'Tissue Specific Cre Lines', path: '/tissue-specific-cre-lines' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tissue Specific Cre Lines", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Tissue specific Cre driver lines for conditional gene targeting since 1998.", "serviceType": "Tissue Specific Cre Lines" }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/tissue-specific-cre-lines', faqData)),
+        }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tissue Specific Cre Lines", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Tissue specific Cre driver lines for conditional gene targeting since 1998.", "serviceType": "Tissue Specific Cre Lines" }) }} />
     </div>
   );
 }

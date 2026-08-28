@@ -140,6 +140,7 @@ const publications = getPublicationsForPage('/tim3-humanized-mice');
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const bassonTestimonial = getTestimonialById('basson-kings')!;
 
@@ -856,12 +857,19 @@ export default function TIM3HumanizedMicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/tim3-humanized-mice', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "TIM3 Humanized Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "TIM3 humanized mouse models for immune checkpoint research. Study TIM3 targeting therapeutics and combination immunotherapy. Since 1998.",

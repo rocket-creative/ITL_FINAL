@@ -13,6 +13,7 @@ import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -322,6 +323,12 @@ export default function CustomAnimalModelsPage() {
           { name: 'Home', path: '/' },
           { name: 'Animal Model Generation', path: '/custom-animal-models' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/custom-animal-models', faqData)),
+        }}
       />
     </div>
   );

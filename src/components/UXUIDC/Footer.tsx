@@ -50,7 +50,12 @@ const footerSections = [
   {
     title: 'Services',
     links: [
+      { label: 'Contract Breeding', href: '/mouse-breeding-services' },
+      { label: 'Cohort Development', href: '/mouse-cohort-development' },
+      { label: 'Conditional KO Breeding', href: '/conditional-knockout-cohort-breeding' },
       { label: 'Colony Management', href: '/colony-management-services' },
+      { label: 'Backcrossing', href: '/backcrossing-services' },
+      { label: 'Rederivation', href: '/rederivation-services' },
       { label: 'Cryopreservation', href: '/cryopreservation-services' },
       { label: 'Genotyping', href: '/mouse-genotyping-service' },
       { label: 'Preclinical Services', href: '/preclinical-services' },
@@ -87,6 +92,7 @@ const footerSections = [
       { label: 'Researcher Spotlight', href: '/researcher-spotlight' },
       { label: 'Publications', href: '/publications' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
+      { label: 'In House vs Outsourced Breeding', href: '/in-house-vs-outsourced-mouse-breeding' },
       { label: 'Video Library', href: '/video-library' },
       { label: 'All Resources', href: '/resources' },
     ],

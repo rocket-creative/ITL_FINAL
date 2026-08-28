@@ -680,23 +680,7 @@ export default function FAQPage() {
           { name: 'FAQ', path: '/faq' },
         ]}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: allFAQs.map(faq => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: typeof faq.answer === 'string' ? faq.answer : faq.question,
-              },
-            })),
-          }),
-        }}
-      />
+      <FAQPageSchema faqs={allFAQs} path="/faq" />
     </div>
   );
 }

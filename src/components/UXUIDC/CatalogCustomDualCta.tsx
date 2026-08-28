@@ -26,6 +26,11 @@ export interface CatalogCustomDualCtaProps {
   className?: string;
   /** Remove outer margin when nested inside a padded section */
   flush?: boolean;
+  /**
+   * Heading level for the widget title. Use 2 when the widget is the first
+   * section after the page h1, otherwise it skips a level.
+   */
+  headingLevel?: 2 | 3;
 }
 
 const panelEyebrow: CSSProperties = {
@@ -81,7 +86,11 @@ export default function CatalogCustomDualCta({
   utmSource = 'organic',
   className = '',
   flush = false,
+  headingLevel = 3,
 }: CatalogCustomDualCtaProps) {
+  const Heading = `h${headingLevel}` as 'h2' | 'h3';
+  // Panel titles sit one level under the widget title.
+  const PanelHeading = `h${headingLevel + 1}` as 'h3' | 'h4';
   const lookup = mergeLookup(slug, catalogOverrides);
   const catalogSearchUrl = commercialUtmHref(lookup.searchHref, {
     source: utmSource,
@@ -108,7 +117,7 @@ export default function CatalogCustomDualCta({
     >
       <div style={{ marginBottom: '20px', textAlign: 'center' }}>
         <div style={{ ...panelEyebrow, color: '#0a253c' }}>{CATALOG_OR_CUSTOM_WIDGET_INTRO.eyebrow}</div>
-        <h3
+        <Heading
           style={{
             ...panelTitle,
             fontSize: '1.35rem',
@@ -116,7 +125,7 @@ export default function CatalogCustomDualCta({
           }}
         >
           {CATALOG_OR_CUSTOM_WIDGET_INTRO.headline}
-        </h3>
+        </Heading>
         <p style={{ ...panelBody, marginBottom: 0, maxWidth: '640px', margin: '0 auto' }}>
           {CATALOG_OR_CUSTOM_WIDGET_INTRO.subline}
         </p>
@@ -143,7 +152,7 @@ export default function CatalogCustomDualCta({
           }}
         >
           <div style={{ ...panelEyebrow, color: '#008080' }}>{lookup.eyebrow}</div>
-          <h4 style={panelTitle}>{lookup.headline}</h4>
+          <PanelHeading style={panelTitle}>{lookup.headline}</PanelHeading>
           <p style={panelBody}>{lookup.subline}</p>
 
           <div
@@ -222,7 +231,7 @@ export default function CatalogCustomDualCta({
           }}
         >
           <div style={{ ...panelEyebrow, color: '#0a253c' }}>{CUSTOM_MODEL_PANEL.eyebrow}</div>
-          <h4 style={panelTitle}>{CUSTOM_MODEL_PANEL.headline}</h4>
+          <PanelHeading style={panelTitle}>{CUSTOM_MODEL_PANEL.headline}</PanelHeading>
 
           <ul
             style={{

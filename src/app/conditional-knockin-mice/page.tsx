@@ -97,6 +97,7 @@ const expressionTiming = [
 // Testimonial Data
 // Verified testimonial from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const rothTestimonial = getTestimonialById('roth-upenn')!;
 
@@ -610,12 +611,19 @@ export default function ConditionalKnockinMicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/conditional-knockin-mice', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Conditional Knockin Mice",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Conditional knockin mouse models with inducible gene expression. Cre lox controlled knockin alleles for temporal and spatial gene control.",

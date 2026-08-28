@@ -62,6 +62,7 @@ const driverLines = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { SINGLE_DUNAIEF, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const testimonials = [
   {
@@ -297,7 +298,8 @@ export default function FlpFrtSystemPage() {
           { name: 'FLP FRT System', path: '/flp-frt-system' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "FLP FRT System", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "FLP FRT recombination system for conditional gene targeting and selection cassette removal since 1998.", "serviceType": "FLP FRT System" }) }} />
+      <FAQPageSchema faqs={getFaqData()} path="/flp-frt-system" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "FLP FRT System", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "FLP FRT recombination system for conditional gene targeting and selection cassette removal since 1998.", "serviceType": "FLP FRT System" }) }} />
     </div>
   );
 }

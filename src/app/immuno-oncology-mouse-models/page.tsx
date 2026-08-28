@@ -126,6 +126,7 @@ const publicationsData = getPublicationsForPage('/immuno-oncology-mouse-models')
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const maxsonTestimonial = getTestimonialById('maxson-ohsu')!;
 
@@ -799,6 +800,7 @@ export default function ImmunoOncologyMouseModelsPage() {
           { name: 'Immuno Oncology Mouse Models', path: '/immuno-oncology-mouse-models' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/immuno-oncology-mouse-models" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -808,6 +810,7 @@ export default function ImmunoOncologyMouseModelsPage() {
             "name": "Immuno-Oncology Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated immuno-oncology mouse models for cancer immunotherapy research. Humanized PD1, PDL1, CTLA4, and checkpoint combination models.",

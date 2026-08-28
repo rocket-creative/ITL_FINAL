@@ -116,6 +116,7 @@ const publicationsData = getPublicationsForPage('/cre-recombinase-mice');
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const testimonials = [
@@ -724,12 +725,19 @@ export default function CreRecombinaseMicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/cre-recombinase-mice', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Cre Recombinase Mice",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Cre recombinase mouse models for conditional gene targeting. Tissue specific and inducible gene control systems since 1998.",

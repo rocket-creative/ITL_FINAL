@@ -176,6 +176,7 @@ export default function DiseaseModelCatalogPage() {
             "description": "Catalog of disease model mouse lines available for research. Oncology, neuroscience, metabolic, cardiovascular, and immunology disease models.",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },

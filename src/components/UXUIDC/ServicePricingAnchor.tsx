@@ -33,6 +33,12 @@ interface Props {
   secondaryLabel?: string;
   /** FAQs to render + emit as schema */
   faqs?: ServicePricingFaq[];
+  /**
+   * Emit a FAQPage node for `faqs`. Set false when the host page already emits
+   * its own FAQPage: two FAQPage nodes on one URL is invalid and Google may
+   * discard both.
+   */
+  emitSchema?: boolean;
   /** Anchor id for in-page jump links */
   id?: string;
   /**
@@ -50,6 +56,7 @@ export default function UXUIDCServicePricingAnchor({
   secondaryHref,
   secondaryLabel,
   faqs = [],
+  emitSchema = true,
   id = 'pricing',
   unlockInterest,
 }: Props) {
@@ -223,23 +230,25 @@ export default function UXUIDCServicePricingAnchor({
                 </details>
               ))}
             </div>
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  '@context': 'https://schema.org',
-                  '@type': 'FAQPage',
-                  mainEntity: faqs.map((faq) => ({
-                    '@type': 'Question',
-                    name: faq.question,
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: faq.answer,
-                    },
-                  })),
-                }),
-              }}
-            />
+            {emitSchema ? (
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: faqs.map((faq) => ({
+                      '@type': 'Question',
+                      name: faq.question,
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: faq.answer,
+                      },
+                    })),
+                  }),
+                }}
+              />
+            ) : null}
           </>
         )}
       </div>

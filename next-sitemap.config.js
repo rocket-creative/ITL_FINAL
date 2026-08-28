@@ -11,6 +11,7 @@ module.exports = {
     '/pricing-guide',
     '/pricing-guide/*',
     '/server-sitemap.xml', // Exclude if using dynamic sitemap
+    '/*/thank-you', // noindex confirmation pages
   ],
   changefreq: 'weekly',
   priority: 0.7,
@@ -28,6 +29,19 @@ module.exports = {
     else if (path.match(/^\/(mouse-model-services|knockout-mouse-models|knockin-mouse-models|humanized-mouse-models|request-quote|contact)$/)) {
       priority = 0.9;
       changefreq = 'weekly';
+    }
+    // Breeding and cohort cluster
+    else if (path.match(/^\/(mouse-breeding-services|mouse-cohort-development)$/)) {
+      priority = 0.9;
+      changefreq = 'weekly';
+    }
+    else if (path.match(/^\/(conditional-knockout-cohort-breeding|in-house-vs-outsourced-mouse-breeding)$/)) {
+      priority = 0.8;
+      changefreq = 'monthly';
+    }
+    else if (path === '/cohort-consultation') {
+      priority = 0.7;
+      changefreq = 'monthly';
     }
     // Catalog and models (high value)
     else if (path.match(/^\/(catalog-mouse-models|all-catalog-mouse-models|.*-mouse-models)$/)) {

@@ -93,6 +93,7 @@ const relatedApplications = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const meansTestimonial = getTestimonialById('means-sanofi')!;
 
@@ -397,12 +398,19 @@ export default function CTLA4HumanizedMicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/ctla4-humanized-mice', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "CTLA4 Humanized Mice",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "CTLA4 humanized mouse models for anti CTLA4 antibody testing. Ipilimumab and checkpoint inhibitor preclinical evaluation in immunocompetent mice.",

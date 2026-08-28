@@ -197,6 +197,7 @@ const publicationsData = getPublicationsForPage('/oncology-mouse-models');
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const maxsonTestimonial = getTestimonialById('maxson-ohsu')!;
 
@@ -985,12 +986,19 @@ export default function OncologyMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/oncology-mouse-models', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Oncology Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated oncology mouse models for cancer research. Tumor suppressor knockouts, oncogene knockins, and genetically engineered cancer models. Since 1998.",

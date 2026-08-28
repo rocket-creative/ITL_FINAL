@@ -105,6 +105,7 @@ const applicationsData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { HUMANIZED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonialsData = HUMANIZED_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -171,6 +172,7 @@ export default function DoubleCheckpointMicePage() {
             "description": "Double checkpoint humanized mouse models for combination immunotherapy testing. PD1+CTLA4, PD1+PDL1, and other dual checkpoint combinations.",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
@@ -643,6 +645,12 @@ export default function DoubleCheckpointMicePage() {
           { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Double Checkpoint Mice', path: '/double-checkpoint-mice' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/double-checkpoint-mice', faqData)),
+        }}
       />
     </div>
   );

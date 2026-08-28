@@ -132,6 +132,7 @@ const publicationsData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
@@ -192,6 +193,7 @@ export default function BACTargetingPage() {
             "description": "BAC to BAC large scale targeting for complex genomic modifications. Handle large DNA fragments and complex targeting projects.",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
@@ -725,6 +727,12 @@ export default function BACTargetingPage() {
           { name: 'Technologies', path: '/technologies' },
           { name: 'BAC to BAC Large Scale Targeting', path: '/bac-to-bac-large-scale-targeting' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/bac-to-bac-large-scale-targeting', faqData)),
+        }}
       />
     </div>
   );

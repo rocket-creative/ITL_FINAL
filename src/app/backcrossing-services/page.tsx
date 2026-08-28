@@ -15,6 +15,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
+import { buildFAQSchema, buildServiceSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
 const heroData = {
@@ -241,41 +242,44 @@ export default function BackcrossingServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.genetargeting.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Backcrossing Services",
-                "item": "https://www.genetargeting.com/backcrossing-services"
-              }
-            ]
-          })
+          __html: JSON.stringify(
+            buildServiceSchema({
+              name: 'Backcrossing Services',
+              path: '/backcrossing-services',
+              serviceType: 'Mouse line backcrossing and background conversion',
+              description:
+                'Backcross genetically engineered mouse lines onto a defined background using marker assisted selection, with genotyping and documentation at every generation.',
+              alternateName: [
+                'Speed congenic services',
+                'Congenic mouse line development',
+                'Genetic background conversion',
+              ],
+              keywords:
+                'backcrossing, speed congenic, marker assisted selection, congenic mouse line, genetic background conversion',
+              audienceType: 'Research Scientists',
+              offerCatalogName: 'Backcrossing options',
+              offerCatalog: [
+                { name: 'Marker assisted speed congenic backcrossing' },
+                { name: 'Traditional generation by generation backcrossing' },
+                {
+                  name: 'Cohort development on the converted background',
+                  path: '/mouse-cohort-development',
+                },
+                {
+                  name: 'Colony maintenance after conversion',
+                  path: '/colony-management-services',
+                },
+              ],
+            })
+          ),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
+          __html: JSON.stringify(
+            buildFAQSchema('/backcrossing-services', faqData)
+          ),
         }}
       />
       </main>
@@ -290,6 +294,7 @@ export default function BackcrossingServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Backcrossing Services', path: '/backcrossing-services' },
         ]}

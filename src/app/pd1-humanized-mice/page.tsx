@@ -203,6 +203,7 @@ const publicationsData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const bassonTestimonial = getTestimonialById('basson-kings')!;
 
@@ -273,6 +274,7 @@ export default function PD1HumanizedMicePage() {
             "description": "Generated PD1 humanized mouse models for anti PD1 antibody testing. Human PDCD1 extracellular domain knockin for immuno oncology research.",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
@@ -937,6 +939,12 @@ export default function PD1HumanizedMicePage() {
           { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'PD1 Humanized Mice', path: '/pd1-humanized-mice' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/pd1-humanized-mice', faqData)),
+        }}
       />
     </div>
   );

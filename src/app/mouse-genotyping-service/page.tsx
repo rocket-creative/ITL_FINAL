@@ -131,6 +131,7 @@ const protocolOptimization = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const francoTestimonial = getTestimonialById('franco-colorado')!;
 
@@ -319,6 +320,7 @@ export default function MouseGenotypingServicePage() {
 
         {/* Pricing anchor — captures "mouse genotyping service" buyer queries */}
         <UXUIDCServicePricingAnchor
+          emitSchema={false}
           serviceLabel="Mouse Genotyping"
           headline="Outsource your genotyping. 48-hour turnaround."
           unlockInterest="Mouse Genotyping Service"
@@ -630,9 +632,16 @@ export default function MouseGenotypingServicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Mouse Genotyping Service', path: '/mouse-genotyping-service' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/mouse-genotyping-service', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -643,6 +652,7 @@ export default function MouseGenotypingServicePage() {
             "name": "Mouse Genotyping Services",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Comprehensive mouse genotyping services including PCR, Southern blot, and sequencing analysis. Reliable genotyping for breeding decisions since 1998.",

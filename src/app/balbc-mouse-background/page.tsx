@@ -158,6 +158,7 @@ const comparisonData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { FEATURED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonialsData = FEATURED_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -815,6 +816,12 @@ export default function BALBcMouseBackgroundPage() {
           { name: 'Mouse Strain Backgrounds', path: '/mouse-strain-backgrounds' },
           { name: 'BALB/c Mouse Background', path: '/balbc-mouse-background' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/balbc-mouse-background', faqData)),
+        }}
       />
     </div>
   );

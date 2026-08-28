@@ -54,6 +54,7 @@ const commonPitfalls = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 const testimonials = [{ quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation }];
 
@@ -206,7 +207,13 @@ export default function LoxPSiteDesignPage() {
           { name: 'LoxP Site Design', path: '/loxp-site-design' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "LoxP Site Design", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "LoxP site design for conditional knockout alleles since 1998.", "serviceType": "LoxP Site Design" }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/loxp-site-design', faqData)),
+        }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "LoxP Site Design", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "LoxP site design for conditional knockout alleles since 1998.", "serviceType": "LoxP Site Design" }) }} />
     </div>
   );
 }

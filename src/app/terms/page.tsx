@@ -44,26 +44,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Breadcrumb schema
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://www.genetargeting.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Terms of Service',
-      item: 'https://www.genetargeting.com/terms/',
-    },
-  ],
-};
-
 // WebPage schema
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -117,10 +97,6 @@ const listStyle = {
 export default function TermsPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}

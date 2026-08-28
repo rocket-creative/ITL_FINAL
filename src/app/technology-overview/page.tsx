@@ -151,6 +151,7 @@ const safeHarborLinks = [
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 const testimonials = [
@@ -576,12 +577,19 @@ export default function TechnologyOverviewPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/technology-overview', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Gene Targeting Technology Overview",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Comprehensive gene targeting technology platform. gene targeting, Cre lox, FLP FRT, inducible systems, and proprietary innovations since 1998.",

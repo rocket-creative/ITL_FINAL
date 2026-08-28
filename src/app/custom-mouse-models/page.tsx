@@ -203,6 +203,7 @@ const testimonialsData = [
 ];
 
 import { getPublicationsForPage } from '@/data/pagePublications';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const publicationsData = getPublicationsForPage('/custom-mouse-models');
 
 // FAQ Data
@@ -237,6 +238,8 @@ const relatedLinksData = {
   selectionGuides: [
     { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },
     { href: "/conditional-vs-conventional-guide", label: "Conditional vs Conventional Guide" },
+    { href: "/mouse-cohort-development/", label: "Mouse Cohort Development" },
+    { href: "/mouse-breeding-services/", label: "Contract Mouse Breeding Services" },
     { href: "/request-quote", label: "Request a Quote" },
     { href: "/pricing-guide", label: "Pricing Overview" }
   ]
@@ -263,6 +266,7 @@ export default function CustomMouseModelsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://www.genetargeting.com/custom-mouse-models/#service",
             "name": "Mouse Model Generation",
             "description": "ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
             "provider": {
@@ -306,18 +310,7 @@ export default function CustomMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
+          __html: JSON.stringify(buildFAQSchema('/custom-mouse-models', faqData))
         }}
       />
       <UXUIDCNavigation />
@@ -798,6 +791,15 @@ export default function CustomMouseModelsPage() {
                 </div>
               ))}
             </div>
+            <p className="animate-in" style={{
+              fontSize: '.9rem',
+              color: '#666',
+              lineHeight: 1.7,
+              marginTop: '24px',
+              maxWidth: '800px'
+            }}>
+              After germline transmission is confirmed and your F1 heterozygous mice are delivered, ingenious can scale those founders into a study ready cohort through <Link href="/mouse-cohort-development/" style={{ color: '#008080', fontWeight: 600, textDecoration: 'none' }}>mouse cohort development</Link>, or continue running the colony for you with <Link href="/mouse-breeding-services/" style={{ color: '#008080', fontWeight: 600, textDecoration: 'none' }}>contract mouse breeding services</Link>.
+            </p>
           </div>
         </section>
 

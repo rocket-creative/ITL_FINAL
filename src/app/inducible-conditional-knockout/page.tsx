@@ -184,6 +184,7 @@ const publicationsData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const rothTestimonial = getTestimonialById('roth-upenn')!;
 
@@ -253,6 +254,7 @@ export default function InducibleConditionalKnockoutPage() {
             "description": "Generated inducible conditional knockout mouse models. Tamoxifen inducible CreERT2 and doxycycline regulated systems for temporal gene control since 1998.",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
@@ -1101,6 +1103,12 @@ export default function InducibleConditionalKnockoutPage() {
           { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Inducible Conditional Knockout', path: '/inducible-conditional-knockout' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/inducible-conditional-knockout', faqData)),
+        }}
       />
     </div>
   );

@@ -53,6 +53,7 @@ const phenotypingEndpoints = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [{ quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation }];
 
@@ -196,7 +197,13 @@ export default function ObesityMouseModelsPage() {
           { name: 'Obesity Mouse Models', path: '/obesity-mouse-models' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Obesity Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Generated obesity mouse models for metabolic research since 1998.", "serviceType": "Obesity Mouse Models" }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/obesity-mouse-models', faqData)),
+        }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Obesity Mouse Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Generated obesity mouse models for metabolic research since 1998.", "serviceType": "Obesity Mouse Models" }) }} />
     </div>
   );
 }

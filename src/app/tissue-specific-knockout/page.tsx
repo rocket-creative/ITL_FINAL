@@ -124,6 +124,7 @@ const publications = getPublicationsForPage('/tissue-specific-knockout');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
@@ -770,12 +771,19 @@ export default function TissueSpecificKnockoutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/tissue-specific-knockout', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Tissue Specific Knockout Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated tissue specific knockout mouse models. Cell type specific gene deletion using Cre lox technology. Comprehensive Cre driver guidance since 1998.",

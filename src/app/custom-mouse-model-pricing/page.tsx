@@ -54,7 +54,7 @@ const tiers = [
     description:
       'CRISPR or gene targeting knockout. Constitutive (full-body) loss-of-function with germline-confirmed founders.',
     bestFor: ['Loss-of-function studies', 'Recessive disease models', 'Pathway analysis'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=knockout-tier',
+    quoteHref: '/request-quote/?utm_source=organic&utm_medium=pricing&utm_campaign=knockout-tier',
     learnMoreHref: '/knockout-mouse-models/',
   },
   {
@@ -63,7 +63,7 @@ const tiers = [
     description:
       'Floxed allele for Cre-mediated conditional deletion. Tissue-specific, inducible, or temporally controlled with CreERT2.',
     bestFor: ['Tissue-specific knockouts', 'Embryonic-lethal genes', 'Adult-onset modeling'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=conditional-tier',
+    quoteHref: '/request-quote/?utm_source=organic&utm_medium=pricing&utm_campaign=conditional-tier',
     learnMoreHref: '/conditional-knockout-mouse-models/',
   },
   {
@@ -72,7 +72,7 @@ const tiers = [
     description:
       'Point mutation, reporter, tag, or ORF replacement at the endogenous locus. Precise, single-copy integration.',
     bestFor: ['Disease variant modeling', 'Reporter lines', 'Protein tagging'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=knockin-tier',
+    quoteHref: '/request-quote/?utm_source=organic&utm_medium=pricing&utm_campaign=knockin-tier',
     learnMoreHref: '/knockin-mouse-models/',
   },
   {
@@ -82,7 +82,7 @@ const tiers = [
       'Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), or complete gene replacement.',
     
     bestFor: ['Drug development', 'Immuno-oncology', 'Therapeutic antibody testing'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=humanized-tier',
+    quoteHref: '/request-quote/?utm_source=organic&utm_medium=pricing&utm_campaign=humanized-tier',
     learnMoreHref: '/humanized-mouse-models/',
   },
   {
@@ -91,7 +91,7 @@ const tiers = [
     description:
       'BAC, pronuclear, or targeted transgenesis at safe harbor loci (Rosa26, H11). Reporter, Cre driver, or overexpression lines.',
     bestFor: ['Cre driver lines', 'Reporter lines', 'Overexpression studies'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=transgenic-tier',
+    quoteHref: '/request-quote/?utm_source=organic&utm_medium=pricing&utm_campaign=transgenic-tier',
     learnMoreHref: '/transgenic-mouse-service/',
   },
   {
@@ -257,7 +257,7 @@ export default function PricingPage() {
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link
-                href="/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=hero"
+                href="/request-quote/?utm_source=organic&utm_medium=pricing&utm_campaign=hero"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',

@@ -115,6 +115,9 @@ const serviceComparison = [
 
 // Related Services
 const relatedServices = [
+  { title: "Contract Mouse Breeding Services", href: "/mouse-breeding-services/" },
+  { title: "Mouse Cohort Development Services", href: "/mouse-cohort-development/" },
+  { title: "Conditional Knockout Cohort Breeding", href: "/conditional-knockout-cohort-breeding/" },
   { title: "Colony Management Services", href: "/colony-management-services" },
   { title: "Cryopreservation Services", href: "/cryopreservation-services" },
   { title: "Rederivation Services", href: "/rederivation-services" },
@@ -131,6 +134,7 @@ const relatedModels = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const saidTestimonial = getTestimonialById('said-uci')!;
 
@@ -586,8 +590,15 @@ export default function SupportServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/support-services', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -595,9 +606,11 @@ export default function SupportServicesPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://www.genetargeting.com/support-services/#service",
             "name": "Mouse Model Support Services",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Mouse colony management, cryopreservation, rederivation, and breeding services. Comprehensive support for your mouse model projects since 1998.",

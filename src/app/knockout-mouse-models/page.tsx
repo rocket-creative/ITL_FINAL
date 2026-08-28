@@ -103,6 +103,7 @@ const publicationsData = {
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { KNOCKOUT_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const testimonialsData = KNOCKOUT_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -946,6 +947,7 @@ export default function KnockoutMouseModelsPage() {
           { name: 'Knockout Mouse Models', path: '/knockout-mouse-models' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/knockout-mouse-models" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

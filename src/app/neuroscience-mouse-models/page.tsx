@@ -217,6 +217,7 @@ const publicationsData = getPublicationsForPage('/neuroscience-mouse-models');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
@@ -959,6 +960,7 @@ export default function NeuroscienceMouseModelsPage() {
           { name: 'Neuroscience Mouse Models', path: '/neuroscience-mouse-models' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/neuroscience-mouse-models" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -968,6 +970,7 @@ export default function NeuroscienceMouseModelsPage() {
             "name": "Neuroscience Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated neuroscience mouse models for brain and behavior research. Neuronal knockouts, circuit dissection, and neurodegenerative disease models. Since 1998.",

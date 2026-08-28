@@ -93,6 +93,11 @@ export const siteIndex: SiteIndexEntry[] = [
   { title: 'TIM3 humanized mice', description: 'Humanized TIM3 mice for immune checkpoint research.', url: '/tim3-humanized-mice', category: 'Catalog' },
   { title: 'Single checkpoint mice', description: 'Single humanized immune checkpoint models including PD1, PDL1, CTLA4, LAG3, TIM3, and more.', url: '/single-checkpoint-mice', category: 'Catalog' },
   { title: 'Double checkpoint mice', description: 'Dual humanized checkpoint mice for combination therapy studies.', url: '/double-checkpoint-mice', category: 'Catalog' },
+  // Breeding and Cohorts
+  { title: 'Contract mouse breeding services', description: 'Outsourced breeding, colony management, and cohort delivery for genetically engineered mouse lines.', url: '/mouse-breeding-services', category: 'Support Services', keywords: ['contract breeding', 'outsourced breeding', 'breeding services', 'colony breeding'] as const },
+  { title: 'Mouse cohort development', description: 'Study ready cohorts matched for genotype, sex, and age with structured breeding schemes.', url: '/mouse-cohort-development', category: 'Support Services', keywords: ['cohort', 'age matched', 'sex matched', 'study ready cohort', 'cohort planning'] as const },
+  { title: 'Conditional knockout cohort breeding', description: 'Cre lox breeding schemes that deliver experimental and control cohorts from floxed and Cre driver lines.', url: '/conditional-knockout-cohort-breeding', category: 'Support Services', keywords: ['CKO breeding', 'Cre lox breeding', 'floxed cohort', 'conditional cohort'] as const },
+  { title: 'Backcrossing services', description: 'Backcross mouse lines onto a defined congenic background with marker assisted selection.', url: '/backcrossing-services', category: 'Support Services', keywords: ['congenic', 'speed congenic', 'backcross', 'background conversion'] as const },
   // Support Services
   { title: 'Colony management services', description: 'Professional breeding and colony maintenance for your mouse lines.', url: '/colony-management-services', category: 'Support Services' },
   { title: 'Cryopreservation services', description: 'Preserve your valuable mouse lines through sperm or embryo freezing.', url: '/cryopreservation-services', category: 'Support Services' },
@@ -108,12 +113,14 @@ export const siteIndex: SiteIndexEntry[] = [
   { title: 'Ingenious Blog', description: 'Blog articles on mouse model research and technology.', url: '/ingenious-blog', category: 'Resources' },
   { title: 'Lab Signals Newsletter', description: 'Biweekly newsletter with research insights.', url: '/lab-signals', category: 'Resources' },
   { title: 'Breeding Scheme Architect', description: 'Free interactive tool for planning single allele breeding schemes.', url: '/breeding-scheme-architect', category: 'Resources' },
+  { title: 'In house vs outsourced mouse breeding', description: 'Compare in house colony breeding against outsourced contract breeding on cost, capacity, timeline, and risk.', url: '/in-house-vs-outsourced-mouse-breeding', category: 'Resources', keywords: ['in house breeding', 'outsource breeding', 'per diem', 'cage cost', 'breeding cost'] as const },
   { title: 'All FAQs', description: 'Frequently asked questions about mouse models.', url: '/faq', category: 'Resources' },
   // Company
   { title: 'About ingenious targeting laboratory', description: 'Learn about ingenious targeting laboratory and our 26+ years of experience.', url: '/about-itl', category: 'Company' },
   { title: 'Why choose ingenious targeting laboratory', description: 'Discover why researchers trust ingenious targeting laboratory for mouse model generation.', url: '/why-choose-itl', category: 'Company' },
   { title: 'Contact', description: 'Get in touch with our team for project inquiries.', url: '/contact', category: 'Company' },
   { title: 'Request a quote', description: 'Submit a project inquiry and receive a quote.', url: '/request-quote', category: 'Company' },
+  { title: 'Cohort consultation', description: 'Talk through a breeding or cohort plan with our scientific team.', url: '/cohort-consultation', category: 'Company', keywords: ['breeding consultation', 'cohort consultation', 'talk to a scientist'] as const },
   { title: 'Pricing overview', description: 'Information about pricing for mouse model generation services.', url: '/pricing-overview', category: 'Company' },
   { title: 'Order catalog models', description: 'Order ready made mouse models from our catalog.', url: '/order-catalog-models', category: 'Company' },
   { title: 'Schedule meeting', description: 'Schedule a call with our team.', url: '/schedule-meeting', category: 'Company' },

@@ -11,12 +11,13 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import { StandardPageCtaStack } from '@/components/UXUIDC';
+import { buildFAQSchema, buildServiceSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
 const heroData = {
   badge: "Rapid Cohort Generation",
   title: "Speed Expansion Breeding",
-  intro: "ingenious targeting laboratory's speed expansion breeding services generate experimental cohorts rapidly through optimized breeding strategies and large scale production capabilities. Since 1998, we have supported researchers with rapid cohort generation for time sensitive studies and large scale experiments.",
+  intro: "ingenious targeting laboratory's speed expansion breeding services generate experimental cohorts rapidly through optimized breeding strategies and large scale production capabilities. Since 1998, we have supported researchers with rapid cohort expansion for time sensitive studies and large scale experiments.",
   description: "Speed expansion breeding uses strategic breeding pair management, parallel breeding schemes, and optimized husbandry to accelerate cohort generation while maintaining genetic integrity and health status. This service is ideal when experimental timelines require rapid animal production."
 };
 
@@ -96,6 +97,8 @@ const testimonials = [
 
 // Related Links
 const relatedServices = [
+  { title: "Contract Mouse Breeding Services", href: "/mouse-breeding-services/" },
+  { title: "Mouse Cohort Development Services", href: "/mouse-cohort-development/" },
   { title: "Colony Management Services", href: "/colony-management-services" },
   { title: "Mouse Model Services", href: "/mouse-model-services" }
 ];
@@ -206,7 +209,15 @@ export default function SpeedExpansionBreedingPage() {
                     marginBottom: '25px'
                   }}
                 >
-                  {heroData.description}
+                  {heroData.description} Speed expansion is one option within our broader{' '}
+                  <Link
+                    href="/mouse-breeding-services/"
+                    className="underline underline-offset-4 transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a253c]"
+                    style={{ color: 'rgba(255,255,255,0.95)' }}
+                  >
+                    contract mouse breeding services
+                  </Link>
+                  , the service group to review if you are deciding how your breeding should be handled overall.
                 </p>
 
                 <div className="hero-animate flex flex-wrap gap-4">
@@ -501,6 +512,7 @@ export default function SpeedExpansionBreedingPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Speed Expansion Breeding', path: '/speed-expansion-breeding' },
         ]}
@@ -508,17 +520,38 @@ export default function SpeedExpansionBreedingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Speed Expansion Breeding",
-            "provider": {
-              "@type": "Organization",
-              "name": "ingenious targeting laboratory"
-            },
-            "description": "Speed expansion breeding services for rapid generation of experimental cohorts. Optimized breeding strategies for large scale studies.",
-            "serviceType": "Breeding Services"
-          })
+          __html: JSON.stringify(
+            buildServiceSchema({
+              name: 'Speed Expansion Breeding',
+              path: '/speed-expansion-breeding',
+              serviceType: 'Breeding Services',
+              description:
+                'Accelerated colony expansion that increases the number of breeding pairs and productive matings so a line reaches the scale a study needs sooner.',
+              keywords:
+                'speed expansion breeding, rapid colony expansion, breeding pair expansion, colony scale up',
+              audienceType: 'Research Scientists',
+              offerCatalogName: 'Speed expansion options',
+              offerCatalog: [
+                { name: 'Parallel breeding pair expansion' },
+                {
+                  name: 'Contract breeding programs',
+                  path: '/mouse-breeding-services',
+                },
+                {
+                  name: 'Study ready cohort development',
+                  path: '/mouse-cohort-development',
+                },
+              ],
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildFAQSchema('/speed-expansion-breeding', faqData)
+          ),
         }}
       />
     </div>

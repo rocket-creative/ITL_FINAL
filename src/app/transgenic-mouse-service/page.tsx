@@ -92,6 +92,7 @@ const publicationsData = getPublicationsForPage('/transgenic-mouse-service');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const bosmansTestimonial = getTestimonialById('bosmans-ghent')!;
 
@@ -308,6 +309,7 @@ export default function TransgenicMouseServicePage() {
 
         {/* Pricing anchor — captures "transgenic mouse" buyer queries */}
         <UXUIDCServicePricingAnchor
+          emitSchema={false}
           serviceLabel="Transgenic Mouse"
           headline="Generated transgenic mice — fixed-fee quote in 24 hours."
           unlockInterest="Transgenic Mouse"
@@ -753,6 +755,7 @@ export default function TransgenicMouseServicePage() {
           { name: 'Transgenic Mouse Service', path: '/transgenic-mouse-service' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/transgenic-mouse-service" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

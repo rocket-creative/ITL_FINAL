@@ -112,6 +112,7 @@ const qualityCompliance = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const dunaieTestimonial = getTestimonialById('dunaief-upenn')!;
 
@@ -610,9 +611,16 @@ export default function PreclinicalServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Preclinical Services', path: '/preclinical-services' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/preclinical-services', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -623,6 +631,7 @@ export default function PreclinicalServicesPage() {
             "name": "Preclinical Mouse Model Services",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Preclinical mouse model services for drug development including efficacy testing, phenotyping, and pharmacology studies. Since 1998.",

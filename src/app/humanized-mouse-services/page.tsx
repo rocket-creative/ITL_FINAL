@@ -12,6 +12,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { applyCatalogFirstMeta } from '@/lib/seo';
 import { buildServiceOffer } from '@/lib/seo/productSchema';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -77,6 +78,29 @@ const services = [
   },
 ];
 
+const pricingFaqs = [
+  {
+    question: 'How much do humanized mice cost?',
+    answer:
+      'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint humanization, complete gene replacement), allele complexity, and delivery timeline. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours after a free scientific consultation. We deliver germline-confirmed founders.',
+  },
+  {
+    question: 'What humanization strategies do you offer?',
+    answer:
+      'Three strategies: (1) drug-target humanization — replace the gene encoding your therapeutic target so mouse models become predictive of human pharmacology, (2) immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3) — for checkpoint inhibitor efficacy testing, and (3) complete gene replacement — replace the entire mouse gene with the human ortholog for human-specific biology studies.',
+  },
+  {
+    question: 'Do you have ready-to-ship humanized mice?',
+    answer:
+      'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, PD1 humanized, and PDL1 humanized. Search the catalog by gene to see live-colony availability before commissioning a generated build.',
+  },
+  {
+    question: 'Do you guarantee germline transmission?',
+    answer:
+      'Yes. Every model generation humanized mouse project from ingenious targeting laboratory carries a 100% germline transmission guarantee. We deliver germline-confirmed founders or we keep working until we do.',
+  },
+];
+
 export default function HumanizedMouseServicesPage() {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -88,6 +112,15 @@ export default function HumanizedMouseServicesPage() {
           { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Humanized Mouse Services', path: '/humanized-mouse-services' },
         ]}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildFAQSchema('/humanized-mouse-services', pricingFaqs)
+          ),
+        }}
       />
 
       <script
@@ -212,6 +245,7 @@ export default function HumanizedMouseServicesPage() {
         </section>
 
         <UXUIDCServicePricingAnchor
+          emitSchema={false}
           serviceLabel="Humanized Mouse"
           headline="Generated humanized mice — fixed-fee quote in 24 hours."
           unlockInterest="Humanized Mouse"
@@ -219,27 +253,7 @@ export default function HumanizedMouseServicesPage() {
           quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-services-pricing"
           secondaryHref="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-services-catalog-pricing"
           secondaryLabel="See Off-the-Shelf Lines"
-          faqs={[
-            {
-              question: 'How much do humanized mice cost?',
-              answer:
-                'Pricing scales with humanization strategy (drug-target replacement, immune checkpoint humanization, complete gene replacement), allele complexity, and delivery timeline. Add your work email above to get current pricing or request a fixed-fee quote in 24 hours after a free scientific consultation. We deliver germline-confirmed founders.',
-            },            {
-              question: 'What humanization strategies do you offer?',
-              answer:
-                'Three strategies: (1) drug-target humanization — replace the gene encoding your therapeutic target so mouse models become predictive of human pharmacology, (2) immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3) — for checkpoint inhibitor efficacy testing, and (3) complete gene replacement — replace the entire mouse gene with the human ortholog for human-specific biology studies.',
-            },
-            {
-              question: 'Do you have ready-to-ship humanized mice?',
-              answer:
-                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, PD1 humanized, and PDL1 humanized. Search the catalog by gene to see live-colony availability before commissioning a generated build.',
-            },
-            {
-              question: 'Do you guarantee germline transmission?',
-              answer:
-                'Yes. Every model generation humanized mouse project from ingenious targeting laboratory carries a 100% germline transmission guarantee. We deliver germline-confirmed founders or we keep working until we do.',
-            },
-          ]}
+          faqs={pricingFaqs}
         />
 
         <section style={{ backgroundColor: '#ffffff', padding: '50px 20px' }}>

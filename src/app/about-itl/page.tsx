@@ -15,6 +15,8 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { BreadcrumbSchema } from '@/components/UXUIDC';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { NAP, ORG_ID, postalAddressNode } from '@/lib/seo/organization';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
 const heroData = {
@@ -489,110 +491,38 @@ export default function AboutItlPage() {
           { name: 'About ingenious targeting laboratory', path: '/about-itl' },
         ]}
       />
+      {/*
+        The full Organization node is emitted sitewide from src/app/layout.tsx.
+        This page carries the LocalBusiness node, which adds the geo coordinates
+        and opening hours, and references the same @id so the two merge.
+      */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://www.genetargeting.com/#organization",
-            "name": "ingenious targeting laboratory",
-            "alternateName": ["iTL", "ingenious targeting lab", "ITL"],
-            "url": "https://www.genetargeting.com",
-            "logo": "https://www.genetargeting.com/images/logo.png",
-            "description": "ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
-            "slogan": "Mouse model generation, U.S. scientific oversight, 100% germline transmission guarantee.",
-            "foundingDate": "1998",
-            "foundingLocation": "Holbrook, NY, United States",
-            "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 50, "maxValue": 200 },
-            "award": [
-              "100% germline transmission guarantee on every model generation project",
-              "800+ peer reviewed publications citing iTL generated models"
-            ],
-            "knowsAbout": [
-              "Mouse model generation",
-              "Knockout mouse models",
-              "Conditional knockout mouse models",
-              "Knockin mouse models",
-              "Humanized mouse models",
-              "Transgenic mouse models",
-              "CRISPR/Cas9 genome editing",
-              "Gene targeting",
-              "Cre/loxP system",
-              "Flp/FRT recombination",
-              "BAC transgenics",
-              "Rosa26 safe harbor targeting",
-              "C57BL/6 strain backgrounds",
-              "Sequence informed allele design",
-              "Germline transmission",
-              "Colony management",
-              "Cryopreservation"
-            ],
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "761-80 Coates Avenue",
-              "addressLocality": "Holbrook",
-              "addressRegion": "NY",
-              "postalCode": "11741",
-              "addressCountry": "US"
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            '@id': ORG_ID,
+            name: NAP.name,
+            url: NAP.url,
+            image: 'https://www.genetargeting.com/images/mouse-hero-blue.jpg',
+            address: postalAddressNode,
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 40.8117,
+              longitude: -73.0779,
             },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-631-468-8530",
-              "contactType": "customer service",
-              "email": "inquiry@genetargeting.com",
-              "areaServed": "Worldwide",
-              "availableLanguage": "English"
-            },
-            "sameAs": [
-              "https://www.linkedin.com/company/ingenious-targeting-laboratory",
-              "https://www.youtube.com/@ingeniouslab"
-            ]
-          })
+            telephone: NAP.telephone,
+            email: NAP.email,
+            openingHours: 'Mo-Fr 09:00-17:00',
+            priceRange: '$$$$',
+          }),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "ingenious targeting laboratory",
-            "image": "https://www.genetargeting.com/images/mouse-hero-blue.jpg",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "761-80 Coates Avenue",
-              "addressLocality": "Holbrook",
-              "addressRegion": "NY",
-              "postalCode": "11741",
-              "addressCountry": "US"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 40.8117,
-              "longitude": -73.0779
-            },
-            "telephone": "+1-631-468-8530",
-            "openingHours": "Mo-Fr 09:00-17:00",
-            "priceRange": "$$$$"
-          })
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
+          __html: JSON.stringify(buildFAQSchema('/about-itl', faqData)),
         }}
       />
       </main>

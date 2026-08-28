@@ -123,6 +123,7 @@ const publicationsData = getPublicationsForPage('/alzheimers-mouse-models');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
@@ -788,12 +789,19 @@ export default function AlzheimersMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/alzheimers-mouse-models', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Alzheimer Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated Alzheimer disease mouse models for AD research. APP knockin, tau models, and amyloid pathology. Expert model design since 1998.",

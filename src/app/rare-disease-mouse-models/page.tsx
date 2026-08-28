@@ -94,6 +94,7 @@ const publicationsData = getPublicationsForPage('/rare-disease-mouse-models');
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
@@ -652,12 +653,19 @@ export default function RareDiseaseMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/rare-disease-mouse-models', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Rare Disease Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated rare disease mouse models for orphan disease research. Patient mutation knockins, gene therapy testing, and therapeutic development support since 1998.",

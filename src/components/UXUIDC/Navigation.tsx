@@ -202,6 +202,15 @@ const navigationItems: NavItem[] = [
     categorizedChildren: {
       categories: [
         {
+          title: 'Breeding and Cohorts',
+          items: [
+            { label: 'Contract Breeding Services', href: '/mouse-breeding-services' },
+            { label: 'Cohort Development', href: '/mouse-cohort-development' },
+            { label: 'Conditional KO Breeding', href: '/conditional-knockout-cohort-breeding' },
+            { label: 'Backcrossing', href: '/backcrossing-services' },
+          ],
+        },
+        {
           title: 'Model Creation',
           items: [
             { label: 'Model Generation Projects', href: '/custom-projects' },
@@ -238,6 +247,7 @@ const navigationItems: NavItem[] = [
       { label: 'Researcher Spotlight', href: '/researcher-spotlight' },
       { label: 'Lab Signals Newsletter', href: '/lab-signals' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
+      { label: 'In House vs Outsourced Breeding', href: '/in-house-vs-outsourced-mouse-breeding' },
       { label: 'Glossary', href: '/glossary' },
       { label: 'All FAQs', href: '/faq' },
     ],

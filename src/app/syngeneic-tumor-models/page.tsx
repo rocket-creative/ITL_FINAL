@@ -57,6 +57,7 @@ const humanizedCheckpoints = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [{ quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation }];
 
@@ -187,7 +188,13 @@ export default function SyngeneicTumorModelsPage() {
           { name: 'Syngeneic Tumor Models', path: '/syngeneic-tumor-models' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Syngeneic Tumor Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Syngeneic tumor mouse models for immuno oncology research since 1998.", "serviceType": "Syngeneic Tumor Models" }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/syngeneic-tumor-models', faqData)),
+        }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Syngeneic Tumor Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Syngeneic tumor mouse models for immuno oncology research since 1998.", "serviceType": "Syngeneic Tumor Models" }) }} />
     </div>
   );
 }

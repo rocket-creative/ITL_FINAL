@@ -149,6 +149,7 @@ const publicationsData = getPublicationsForPage('/conditional-knockout-mouse-mod
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
@@ -171,6 +172,7 @@ const relatedTechnologies = [
 ];
 
 const projectResources = [
+  { title: "Conditional Knockout Cohort Breeding", href: "/conditional-knockout-cohort-breeding/" },
   { title: "Knockout Strategy Guide", href: "/knockout-strategy-guide" },
   { title: "Conditional vs Conventional Guide", href: "/conditional-vs-conventional-guide" },
   { title: "Request a Quote", href: "/request-quote" },
@@ -401,6 +403,9 @@ export default function ConditionalKnockoutMouseModelsPage() {
               </p>
               <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', maxWidth: '800px' }}>
                 {creLoxData.mechanism}
+              </p>
+              <p style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginTop: '20px', maxWidth: '800px' }}>
+                Once your floxed line is delivered, ingenious can carry out the Cre driver crosses and produce the experimental and control genotypes your study requires through <Link href="/conditional-knockout-cohort-breeding/" style={{ color: '#008080', fontWeight: 500 }}>conditional knockout cohort breeding</Link>.
               </p>
               <Link 
                 href="/cre-lox-system"
@@ -1006,15 +1011,18 @@ export default function ConditionalKnockoutMouseModelsPage() {
           { name: 'Conditional Knockout Mouse Models', path: '/conditional-knockout-mouse-models' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/conditional-knockout-mouse-models" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://www.genetargeting.com/conditional-knockout-mouse-models/#service",
             "name": "Conditional Knockout Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,800+ models generated since 1998.",

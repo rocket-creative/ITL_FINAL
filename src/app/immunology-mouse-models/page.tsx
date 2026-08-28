@@ -175,6 +175,7 @@ const publicationsData = getPublicationsForPage('/immunology-mouse-models');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const rothlinTestimonial = getTestimonialById('rothlin-yale')!;
 
@@ -1089,12 +1090,19 @@ export default function ImmunologyMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/immunology-mouse-models', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Immunology Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated immunology mouse models for immune system research. Study immune function, disease mechanisms, and therapeutics. Autoimmune and inflammatory disease models since 1998.",

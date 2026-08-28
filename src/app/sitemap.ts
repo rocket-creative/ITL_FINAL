@@ -139,6 +139,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/mouse-model-services',
     '/custom-projects',
     '/support-services',
+    '/mouse-breeding-services',
+    '/mouse-cohort-development',
+    '/conditional-knockout-cohort-breeding',
+    '/in-house-vs-outsourced-mouse-breeding',
+    '/cohort-consultation',
     '/colony-management-services',
     '/cryopreservation-services',
     '/rederivation-services',
@@ -210,7 +215,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // trying to capture (humanized services/price, transgenic, knockin,
   // catalog gene queries, etc.).
   const REVENUE_PILLARS = new Set<string>(REVENUE_PILLAR_PATHS);
-  const highPriorityPaths = new Set(['/custom-mouse-model-companies']);
+  const highPriorityPaths = new Set([
+    '/custom-mouse-model-companies',
+    // Entry points for the breeding and cohort cluster.
+    '/mouse-breeding-services',
+    '/mouse-cohort-development',
+  ]);
+  // Conversion pages we want indexed but not competing with the content that
+  // feeds them.
+  const lowPriorityPaths = new Set(['/cohort-consultation']);
 
   for (const route of staticPages) {
     const pathStr = route || '/';
@@ -220,6 +233,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (route === '') priority = 1;
     else if (isRevenuePillar) priority = 1.0;
     else if (isHighPriorityPillar) priority = 0.9;
+    else if (lowPriorityPaths.has(route)) priority = 0.7;
     else if (route.includes('catalog') || route.includes('request-quote')) priority = 0.9;
     entries.push({
       url: url(pathStr === '/' ? '' : route),

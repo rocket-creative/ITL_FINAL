@@ -18,6 +18,7 @@ import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Import verified testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const dunaief = getTestimonialById('dunaief-upenn');
 const basson = getTestimonialById('roth-upenn');
@@ -528,18 +529,7 @@ export default function WhyChooseItlPage() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": faqData.map(faq => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": faq.answer
-                }
-              }))
-            })
+            __html: JSON.stringify(buildFAQSchema('/why-choose-itl', faqData))
           }}
         />
       </main>

@@ -10,13 +10,14 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
 import { UXUIDCResourceLinks, breedingResources, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
+import { buildFAQSchema, buildServiceSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
 const heroData = {
   badge: "Post-Project Services",
   title: "Mouse Colony Management Services",
-  intro: "Since 1998, ingenious targeting laboratory has supported researchers with comprehensive colony management services, maintaining and expanding genetically engineered mouse lines for institutions worldwide. Our colony management expertise ensures your valuable mouse models are maintained with consistent genotyping, optimized breeding strategies, and professional animal husbandry.",
-  description: "Colony management services enable research programs to focus on experimental work while experts handle the logistics of maintaining breeding colonies, tracking genotypes, and expanding lines for experimental cohorts."
+  intro: "Since 1998, ingenious targeting laboratory has supported researchers with ongoing colony maintenance, keeping genetically engineered mouse lines healthy and productive for institutions worldwide. Our colony management expertise ensures your valuable mouse models are maintained with consistent genotyping, optimized breeding strategies, and professional animal husbandry.",
+  description: "Colony management services enable research programs to focus on experimental work while experts handle the day to day logistics of maintaining breeding colonies, tracking genotypes, and keeping lines productive between studies."
 };
 
 // Stats Data
@@ -38,7 +39,7 @@ const maintenanceFeatures = [
 
 // Breeding Expansion Features
 const expansionFeatures = [
-  { name: "Cohort development", description: "Breed to specific genotypes and numbers for experiments" },
+  { name: "Genotype targeted breeding", description: "Breed to specific genotypes and numbers for experiments" },
   { name: "Age matched cohorts", description: "Coordinate breeding for age synchronized animals" },
   { name: "Sex balanced groups", description: "Generate appropriate male and female numbers" },
   { name: "Schedule optimization", description: "Strategic breeding to meet experimental deadlines" },
@@ -123,6 +124,8 @@ const testimonials = [
 
 // Related Links
 const relatedServices = [
+  { title: "Contract Mouse Breeding Services", href: "/mouse-breeding-services/" },
+  { title: "Mouse Cohort Development Services", href: "/mouse-cohort-development/" },
   { title: "Cryopreservation Services", href: "/cryopreservation-services" },
   { title: "Rederivation Services", href: "/rederivation-services" },
   { title: "Speed Expansion Breeding", href: "/speed-expansion-breeding" },
@@ -137,11 +140,15 @@ const relatedModels = [
   { title: "Humanized Mouse Models", href: "/humanized-mouse-models" }
 ];
 
+const relatedResources = [
+  { title: "In House vs Outsourced Mouse Breeding", href: "/in-house-vs-outsourced-mouse-breeding/" }
+];
+
 // FAQ Data
 const faqData = [
   {
     question: "What is included in colony management services?",
-    answer: "Colony management includes breeding to maintain your mouse lines, genotyping to identify animals with desired alleles, health monitoring, cohort production for experiments, and reporting on colony status. Services can be scoped based on your needs, from simple maintenance breeding to complex multi-allele cohort production."
+    answer: "Colony management includes breeding to maintain your mouse lines, genotyping to identify animals with desired alleles, health monitoring, and reporting on colony status. Services can be scoped based on your needs, from simple maintenance breeding to complex multi-allele schemes. Producing study ready groups at a defined genotype, age, and sex ratio is covered separately under mouse cohort development."
   },
   {
     question: "How do you maintain SPF (specific pathogen free) health status?",
@@ -226,7 +233,15 @@ export default function ColonyManagementServicesPage() {
                     marginBottom: '15px'
                   }}
                 >
-                  {heroData.intro}
+                  {heroData.intro} Ongoing colony maintenance is{' '}
+                  <Link href="/mouse-breeding-services/" style={{ color: 'white', textDecoration: 'underline' }}>
+                    part of our contract breeding services
+                  </Link>
+                  ; if you need study ready animals bred to a defined genotype, age, and sex distribution, see{' '}
+                  <Link href="/mouse-cohort-development/" style={{ color: 'white', textDecoration: 'underline' }}>
+                    mouse cohort development
+                  </Link>
+                  .
                 </p>
 
                 <p
@@ -336,7 +351,7 @@ export default function ColonyManagementServicesPage() {
                   Breeding Expansion
                 </h3>
                 <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '15px' }}>
-                  Rapid expansion services generate experimental cohorts efficiently:
+                  Expansion breeding scales an existing colony toward experimental group sizes:
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {expansionFeatures.map((feature, index) => (
@@ -346,6 +361,14 @@ export default function ColonyManagementServicesPage() {
                     </li>
                   ))}
                 </ul>
+                <Link
+                  href="/mouse-cohort-development/"
+                  className="inline-flex items-center gap-2 transition-colors duration-300 mt-2"
+                  style={{ color: '#2384da', fontSize: '.85rem', fontWeight: 500 }}
+                >
+                  <span>Explore Mouse Cohort Development</span>
+                  <IconChevronRight size={14} color="#2384da" />
+                </Link>
               </div>
 
               {/* Complex Breeding */}
@@ -354,7 +377,11 @@ export default function ColonyManagementServicesPage() {
                   Complex Breeding Schemes
                 </h3>
                 <p style={{ color: '#555', fontSize: '.85rem', marginBottom: '15px' }}>
-                  Multi allele breeding requires careful genetic management:
+                  Multi allele breeding requires careful genetic management, including{' '}
+                  <Link href="/conditional-knockout-cohort-breeding/" style={{ color: '#008080', fontWeight: 500 }}>
+                    conditional knockout cohort breeding
+                  </Link>
+                  :
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                   {complexBreedingSchemes.map((scheme, index) => (
@@ -468,6 +495,14 @@ export default function ColonyManagementServicesPage() {
                     </tbody>
                   </table>
                 </div>
+                <Link
+                  href="/conditional-knockout-cohort-breeding/"
+                  className="inline-flex items-center gap-2 transition-colors duration-300 mt-4"
+                  style={{ color: '#008080', fontSize: '.85rem', fontWeight: 500 }}
+                >
+                  <span>Learn about Conditional Knockout Cohort Breeding</span>
+                  <IconChevronRight size={14} color="#008080" />
+                </Link>
               </div>
 
               {/* Backcrossing Programs */}
@@ -721,6 +756,26 @@ export default function ColonyManagementServicesPage() {
                   ))}
                 </ul>
               </div>
+
+              <div className="animate-in">
+                <h3 style={{ color: '#0a253c', fontFamily: 'Poppins, sans-serif', fontSize: '1rem', fontWeight: 600, marginBottom: '15px' }}>
+                  Related Resources
+                </h3>
+                <ul style={{ listStyle: 'none', padding: 0 }}>
+                  {relatedResources.map((link, index) => (
+                    <li key={index} style={{ marginBottom: '10px' }}>
+                      <Link
+                        href={link.href}
+                        className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600"
+                        style={{ color: '#2384da', fontSize: '.85rem' }}
+                      >
+                        <IconChevronRight size={12} color="#2384da" />
+                        <span>{link.title}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -739,6 +794,7 @@ export default function ColonyManagementServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Colony Management Services', path: '/colony-management-services' },
         ]}
@@ -746,17 +802,39 @@ export default function ColonyManagementServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Mouse Colony Management Services",
-            "provider": {
-              "@type": "Organization",
-              "name": "ingenious targeting laboratory"
-            },
-            "description": "Professional mouse colony management services. Expert breeding, genotyping, and colony maintenance for genetically engineered mouse models. Since 1998.",
-            "serviceType": "Colony Management Services"
-          })
+          __html: JSON.stringify(
+            buildServiceSchema({
+              name: 'Mouse Colony Management Services',
+              path: '/colony-management-services',
+              serviceType: 'Colony Management Services',
+              description:
+                'Ongoing maintenance of genetically engineered mouse colonies, including maintenance breeding, genotyping, health monitoring, and colony records.',
+              keywords:
+                'mouse colony management, colony maintenance, maintenance breeding, mouse genotyping, colony records',
+              audienceType: 'Research Scientists',
+              offerCatalogName: 'Colony management options',
+              offerCatalog: [
+                { name: 'Maintenance breeding and line preservation' },
+                { name: 'Genotyping and colony records' },
+                {
+                  name: 'Study ready cohort development',
+                  path: '/mouse-cohort-development',
+                },
+                {
+                  name: 'Contract breeding programs',
+                  path: '/mouse-breeding-services',
+                },
+              ],
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildFAQSchema('/colony-management-services', faqData)
+          ),
         }}
       />
     </div>

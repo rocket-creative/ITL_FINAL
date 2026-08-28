@@ -70,6 +70,7 @@ const publicationsData = getPublicationsForPage('/autoimmune-disease-mice');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 
@@ -589,12 +590,19 @@ export default function AutoimmuneDiseaseMicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/autoimmune-disease-mice', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Autoimmune Disease Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated autoimmune disease mouse models for immune system research. Study lupus, rheumatoid arthritis, and other autoimmune conditions.",

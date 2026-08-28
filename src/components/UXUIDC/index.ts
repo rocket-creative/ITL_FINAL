@@ -28,6 +28,8 @@ export type { PublicationData } from './PublicationCard';
 // Reusable Animated Components
 export { default as UXUIDCAnimatedCounter } from './AnimatedCounter';
 export { default as UXUIDCAnimatedFAQ } from './AnimatedFAQ';
+export { default as UXUIDCDataTable } from './DataTable';
+export type { DataTableProps, DataTableColumn, DataTableRow } from './DataTable';
 export { default as UXUIDCStartProjectCTA } from './StartProjectCTA';
 export { default as CatalogCustomCtaButtons } from './CatalogCustomCtaButtons';
 export { default as CatalogCustomDualCta } from './CatalogCustomDualCta';

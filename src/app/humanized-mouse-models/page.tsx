@@ -216,6 +216,7 @@ const checkpointTableData = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { HUMANIZED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const testimonialsData = HUMANIZED_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -396,6 +397,7 @@ export default function HumanizedMouseModelsPage() {
 
         {/* Pricing anchor — captures "humanized mice price" buyer queries */}
         <UXUIDCServicePricingAnchor
+          emitSchema={false}
           serviceLabel="Humanized Mouse"
           headline="Generated humanized mice — get a quote in 24 hours."
           unlockInterest="Humanized Mouse"
@@ -931,6 +933,7 @@ export default function HumanizedMouseModelsPage() {
           { name: 'Humanized Mouse Models', path: '/humanized-mouse-models' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/humanized-mouse-models" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

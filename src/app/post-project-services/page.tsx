@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Post Project Services / Cohort Development Page - ingenious targeting laboratory
+ * Post Project Services Page - ingenious targeting laboratory
  */
 
 import { useEffect, useRef } from 'react';
@@ -25,7 +25,7 @@ import {
 const services = [
   {
     title: 'Cohort Expansion',
-    description: 'Speed expansion breeding to generate experimental cohorts from your genetically modified mice. We provide coordinated breeding programs to deliver animals on your research timeline.',
+    description: 'Speed expansion breeding to grow your delivered line toward experimental group sizes, with coordinated breeding programs that deliver animals on your research timeline.',
     Icon: IconTarget,
   },
   {
@@ -101,7 +101,7 @@ export default function PostProjectServicesPage() {
                 marginBottom: '20px',
               }}
             >
-              Post-Project Services & Cohort Development
+              Post-Project Support for Delivered Mouse Models
             </h1>
             <p
               className="hero-animate"
@@ -113,7 +113,15 @@ export default function PostProjectServicesPage() {
                 maxWidth: '800px',
               }}
             >
-              After your mouse model generation is generated, ingenious targeting laboratory offers comprehensive support services to help you move from model generation to experimental studies. From cohort expansion to cryopreservation, we support your research at every stage.
+              Once your mouse model has been delivered, ingenious targeting laboratory offers support services that help you move from a founder line to experimental studies. This page covers post-delivery support such as colony maintenance, cryopreservation, and rederivation. Breeding programs are described across our{' '}
+              <Link href="/mouse-breeding-services/" style={{ color: 'white', textDecoration: 'underline' }}>
+                contract mouse breeding services
+              </Link>
+              , and study ready groups are planned through{' '}
+              <Link href="/mouse-cohort-development/" style={{ color: 'white', textDecoration: 'underline' }}>
+                mouse cohort development
+              </Link>
+              .
             </p>
             <div className="hero-animate flex flex-wrap gap-4 mt-6">
               <Link
@@ -241,6 +249,8 @@ export default function PostProjectServicesPage() {
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
               {[
+                { label: 'Contract Mouse Breeding Services', href: '/mouse-breeding-services/' },
+                { label: 'Mouse Cohort Development', href: '/mouse-cohort-development/' },
                 { label: 'Colony Management', href: '/colony-management-services' },
                 { label: 'Cryopreservation', href: '/cryopreservation-services' },
                 { label: 'Speed Expansion Breeding', href: '/speed-expansion-breeding' },
@@ -272,7 +282,7 @@ export default function PostProjectServicesPage() {
 
         <UXUIDCStartProjectCTA
           title="Need Support Services?"
-          content="Contact our team to discuss cohort development, colony management, or other post-project support services."
+          content="Contact our team to discuss colony management, cryopreservation, or other post-project support services."
         />
       </main>
 
@@ -282,6 +292,7 @@ export default function PostProjectServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Post Project Services', path: '/post-project-services' },
         ]}

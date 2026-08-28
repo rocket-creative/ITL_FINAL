@@ -16,6 +16,7 @@ export const breadcrumbSchema = generateBreadcrumbs({
   items: [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/mouse-model-services' },
+    { name: 'Support Services', path: '/support-services' },
     { name: 'Backcrossing Services', path: '/backcrossing-services' },
   ],
 });

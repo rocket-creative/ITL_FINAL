@@ -84,6 +84,7 @@ const creERT2Lines = [
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const coetzeeTestimonial = getTestimonialById('coetzee-nyu')!;
 const testimonials = [
@@ -566,12 +567,19 @@ export default function InducibleGeneExpressionPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/inducible-gene-expression', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Inducible Gene Expression Systems",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Inducible gene expression systems for temporal gene control. Tamoxifen, doxycycline, and F.A.S.T. technology for precise research applications since 1998.",

@@ -125,11 +125,24 @@ export function buildFeaturedProductOffer(orderUrl: string, modelTypeLabel = 'Hu
   };
 }
 
+/**
+ * The site is served with trailingSlash: true. Callers that derive this URL from
+ * a CTA href strip the query string and lose the slash, which makes the Offer
+ * point at a redirect.
+ */
+function withTrailingSlash(url: string): string {
+  const cut = url.search(/[?#]/);
+  const base = cut === -1 ? url : url.slice(0, cut);
+  const suffix = cut === -1 ? '' : url.slice(cut);
+  if (base.endsWith('/') || /\.[a-z0-9]{2,5}$/i.test(base)) return url;
+  return `${base}/${suffix}`;
+}
+
 export function buildServiceOffer(url: string, modelTypeLabel = 'Mouse model generation') {
   const lowPrice = getTierLowPrice(modelTypeLabel);
   return {
     '@type': 'Offer' as const,
-    url,
+    url: withTrailingSlash(url),
     priceCurrency: 'USD',
     price: String(lowPrice),
     availability: 'https://schema.org/InStock',

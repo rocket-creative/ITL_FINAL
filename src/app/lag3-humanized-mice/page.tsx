@@ -237,6 +237,7 @@ const publicationsData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const bassonTestimonial = getTestimonialById('basson-kings')!;
 
@@ -309,6 +310,7 @@ export default function LAG3HumanizedMicePage() {
             "description": "Generated LAG3 humanized mouse models for anti LAG3 antibody testing. Human LAG3 knockin for immuno oncology checkpoint research and combination therapy evaluation.",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
@@ -1004,6 +1006,12 @@ export default function LAG3HumanizedMicePage() {
           { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'LAG3 Humanized Mice', path: '/lag3-humanized-mice' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/lag3-humanized-mice', faqData)),
+        }}
       />
     </div>
   );

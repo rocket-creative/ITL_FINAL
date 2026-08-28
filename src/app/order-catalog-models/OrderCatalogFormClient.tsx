@@ -10,6 +10,7 @@ import { useState } from 'react';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import { UXUIDCNavigation, UXUIDCFooter, UXUIDCAnimatedFAQ, CatalogSearch } from '@/components/UXUIDC';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 import CustomHubSpotForm, { type FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 import {
   IconCheckCircle,
@@ -677,6 +678,14 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
           { name: 'Resources', path: '/resources' },
           { name: 'Order Catalog Models', path: '/order-catalog-models' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildFAQSchema('/order-catalog-models', faqData)
+          ),
+        }}
       />
     </div>
   );

@@ -6,12 +6,16 @@
  * @version 3.0.0 - Using Intersection Observer for scroll animations
  */
 
+import Link from 'next/link';
+
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface WorkflowStep {
   number: number;
   title: string;
   description: string;
+  /** Steps that have a detail page render as links; the rest render as plain text. */
+  href?: string;
 }
 
 interface WorkflowData {
@@ -85,7 +89,7 @@ export default function WorkflowSection({ data }: { data: WorkflowData }) {
             <div
               key={step.number}
               ref={stepRefs[index]}
-              className={`animate-initial animate-fade-in-up animate-delay-${Math.min(100 + index * 100, 800)} group cursor-pointer text-center`}
+              className={`animate-initial animate-fade-in-up animate-delay-${Math.min(100 + index * 100, 800)} group text-center`}
             >
               {/* Step Number */}
               <div
@@ -114,7 +118,17 @@ export default function WorkflowSection({ data }: { data: WorkflowData }) {
                   marginBottom: '8px',
                 }}
               >
-                {step.title}
+                {step.href ? (
+                  <Link
+                    href={step.href}
+                    className="underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-teal-600"
+                    style={{ color: 'inherit', textDecoration: 'none' }}
+                  >
+                    {step.title}
+                  </Link>
+                ) : (
+                  step.title
+                )}
               </h3>
 
               {/* Step Description - MASTER TEXT */}

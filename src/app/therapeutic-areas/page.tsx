@@ -126,6 +126,7 @@ const relatedModelTypes = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
@@ -445,12 +446,19 @@ export default function TherapeuticAreasPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/therapeutic-areas', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Therapeutic Area Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Mouse model generation for oncology, neuroscience, metabolic disease, immunology, cardiovascular, and rare disease research. 2,800+ model generation since 1998.",

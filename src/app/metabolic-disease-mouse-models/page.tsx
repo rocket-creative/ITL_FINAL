@@ -61,6 +61,7 @@ const publicationsData = getPublicationsForPage('/metabolic-disease-mouse-models
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 const testimonials = [{ quote: dunaiefTestimonial.quote, author: formatAuthorWithCredentials(dunaiefTestimonial), affiliation: dunaiefTestimonial.affiliation }];
 
@@ -224,7 +225,13 @@ export default function MetabolicDiseaseMouseModelsPage() {
           { name: 'Metabolic Disease Mouse Models', path: '/metabolic-disease-mouse-models' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Metabolic Disease Mouse Models", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Generated metabolic disease mouse models for diabetes, obesity, and NASH research since 1998.", "serviceType": "Metabolic Disease Mouse Models" }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/metabolic-disease-mouse-models', faqData)),
+        }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Metabolic Disease Mouse Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Generated metabolic disease mouse models for diabetes, obesity, and NASH research since 1998.", "serviceType": "Metabolic Disease Mouse Models" }) }} />
     </div>
   );
 }

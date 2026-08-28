@@ -8,6 +8,7 @@ import { CommercialCTATracker } from "@/components/UXUIDC";
 import BuildAwarenessBanner from "@/components/UXUIDC/BuildAwarenessBanner";
 import { BannerVisibilityProvider } from "@/components/UXUIDC/BannerVisibilityContext";
 import { ROOT_CATALOG_FIRST_META } from "@/lib/seo";
+import { organizationNode, webSiteNode } from "@/lib/seo/organization";
 
 // Only load Vercel Analytics on Vercel (avoids 404 and MIME errors on localhost)
 const isVercel = Boolean(process.env.NEXT_PUBLIC_VERCEL_ENV);
@@ -75,35 +76,17 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://js.hsforms.net" />
         <link rel="dns-prefetch" href="https://js.hs-scripts.com" />
+        {/*
+          Sitewide identity graph. This is the only place the full Organization
+          and WebSite nodes are emitted; pages reference them by @id through
+          organizationRef / organizationProviderNode.
+        */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@graph': [
-                {
-                  '@type': 'Organization',
-                  '@id': 'https://www.genetargeting.com/#organization',
-                  name: 'ingenious targeting laboratory',
-                  url: 'https://www.genetargeting.com',
-                  description:
-                    'Mouse model generation and catalog provider. Genetically engineered knockout, knockin, and humanized models plus study ready catalog strains.',
-                },
-                {
-                  '@type': 'WebSite',
-                  name: 'ingenious targeting laboratory',
-                  url: 'https://www.genetargeting.com',
-                  publisher: { '@id': 'https://www.genetargeting.com/#organization' },
-                  potentialAction: {
-                    '@type': 'SearchAction',
-                    target: {
-                      '@type': 'EntryPoint',
-                      urlTemplate: 'https://www.genetargeting.com/search?q={search_term_string}',
-                    },
-                    'query-input': 'required name=search_term_string',
-                  },
-                },
-              ],
+              '@graph': [organizationNode, webSiteNode],
             }),
           }}
         />

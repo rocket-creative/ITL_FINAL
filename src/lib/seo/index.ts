@@ -23,6 +23,35 @@ export {
 } from './generateBreadcrumbs';
 
 export {
+  ORG_ID,
+  WEBSITE_ID,
+  NAP,
+  postalAddressNode,
+  contactPointNode,
+  organizationRef,
+  organizationProviderNode,
+  organizationNode,
+  webSiteNode,
+} from './organization';
+
+export {
+  absoluteUrl,
+  buildServiceSchema,
+  buildFAQSchema,
+  buildArticleSchema,
+  buildTechArticleSchema,
+  buildContactPageSchema,
+  type FaqItem,
+  type OfferCatalogItem,
+  type ServiceSchemaOptions,
+  type ArticleAuthor,
+  type ArticleSchemaOptions,
+  type TechArticleSchemaOptions,
+  type ContactPointSpec,
+  type ContactPageSchemaOptions,
+} from './schemaBlocks';
+
+export {
   BASE_URL,
   SITE_NAME,
   DEFAULT_METADATA,

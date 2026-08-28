@@ -133,6 +133,7 @@ const studyDesignElements = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const saidTestimonial = getTestimonialById('said-uci')!;
 
@@ -669,9 +670,16 @@ export default function PhenotypingServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Phenotyping Services', path: '/phenotyping-services' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/phenotyping-services', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -682,6 +690,7 @@ export default function PhenotypingServicesPage() {
             "name": "Mouse Phenotyping Services",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Comprehensive mouse phenotyping services including histopathology, clinical chemistry, behavioral testing, and disease specific phenotyping. Since 1998.",

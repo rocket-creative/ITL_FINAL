@@ -199,6 +199,7 @@ const resourcesData = [
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { CRE_LOX_TESTIMONIALS, SINGLE_DUNAIEF, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonialsData = [
   ...CRE_LOX_TESTIMONIALS.map(t => ({
@@ -891,6 +892,12 @@ export default function CreLineSelectionGuidePage() {
           { name: 'Resources', path: '/resources' },
           { name: 'Cre Line Selection Guide', path: '/cre-line-selection-guide' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/cre-line-selection-guide', faqData)),
+        }}
       />
     </div>
   );

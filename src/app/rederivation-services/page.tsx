@@ -88,6 +88,7 @@ const postRederivationSteps = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const francoTestimonial = getTestimonialById('franco-colorado')!;
 
@@ -548,9 +549,16 @@ export default function RederivationServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Rederivation Services', path: '/rederivation-services' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/rederivation-services', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -561,6 +569,7 @@ export default function RederivationServicesPage() {
             "name": "Rederivation Services",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Mouse rederivation services to reestablish SPF health status. Embryo transfer and cesarean section rederivation for pathogen free colonies.",

@@ -20,13 +20,75 @@ import { submitToHubSpot, isValidEmail, isValidPhone } from '@/lib/hubspot';
 export interface FormField {
   name: string;
   label: string;
-  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio' | 'number' | 'date';
   required?: boolean;
   placeholder?: string;
   options?: Array<{ value: string; label: string }>;
   rows?: number;
   validation?: (value: string) => string | null; // Returns error message or null
+  /** Persistent help text, wired to the control with aria-describedby */
+  helpText?: string;
+  /** WCAG 2.1 Identify Input Purpose (1.3.5) */
+  autoComplete?: string;
+  /**
+   * Rich label for a single checkbox, e.g. consent copy containing a link.
+   * Falls back to `label` when omitted.
+   */
+  labelNode?: React.ReactNode;
+  /** Replaces the generic "<label> is required" error */
+  requiredMessage?: string;
+  min?: number | string;
+  max?: number | string;
+  maxLength?: number;
 }
+
+const labelStyle: React.CSSProperties = {
+  display: 'block',
+  fontFamily: 'Poppins, sans-serif',
+  fontSize: '.9rem',
+  fontWeight: 500,
+  color: '#0a253c',
+  marginBottom: '8px',
+};
+
+const helpTextStyle: React.CSSProperties = {
+  fontFamily: 'var(--system-ui)',
+  fontSize: '.8rem',
+  color: '#5a5a5a',
+  margin: '0 0 8px',
+  lineHeight: 1.5,
+};
+
+/** Error text pairs an icon with the message so color is never the only cue. */
+const fieldErrorStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'flex-start',
+  gap: '6px',
+  fontFamily: 'var(--system-ui)',
+  fontSize: '.85rem',
+  color: '#b91c1c',
+  marginTop: '6px',
+  marginBottom: 0,
+};
+
+/** 44px minimum touch target for checkbox and radio rows. */
+const checkboxRowStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'flex-start',
+  gap: '10px',
+  minHeight: '44px',
+  padding: '10px 0',
+  cursor: 'pointer',
+};
+
+const checkboxInputStyle: React.CSSProperties = {
+  width: '20px',
+  height: '20px',
+  marginTop: '1px',
+  flexShrink: 0,
+  accentColor: '#008080',
+  cursor: 'pointer',
+};
 
 interface CustomHubSpotFormProps {
   portalId: string;
@@ -104,6 +166,21 @@ export default function CustomHubSpotForm({
     }
   };
 
+  /**
+   * Single (non-grouped) checkbox stores 'true' / '' rather than an array so a
+   * consent box maps to a HubSpot boolean property.
+   */
+  const handleSingleCheckbox = (name: string, checked: boolean) => {
+    setFormData((prev) => ({ ...prev, [name]: checked ? 'true' : '' }));
+    if (errors[name]) {
+      setErrors((prev) => {
+        const next = { ...prev };
+        delete next[name];
+        return next;
+      });
+    }
+  };
+
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {};
 
@@ -112,7 +189,7 @@ export default function CustomHubSpotForm({
 
       // Check required fields
       if (field.required && (!value || (Array.isArray(value) && value.length === 0))) {
-        newErrors[field.name] = `${field.label} is required`;
+        newErrors[field.name] = field.requiredMessage ?? `${field.label} is required`;
         return;
       }
 
@@ -265,24 +342,123 @@ export default function CustomHubSpotForm({
       )}
 
       {/* Form fields */}
-      {fields.map(field => (
+      {fields.map(field => {
+        const helpId = `${field.name}-help`;
+        const errorId = `${field.name}-error`;
+        const describedBy =
+          [field.helpText ? helpId : null, errors[field.name] ? errorId : null]
+            .filter(Boolean)
+            .join(' ') || undefined;
+        const isSingleCheckbox = field.type === 'checkbox' && !field.options;
+        const isGroup = field.type === 'radio' || (field.type === 'checkbox' && !!field.options);
+
+        const helpNode = field.helpText ? (
+          <p id={helpId} style={helpTextStyle}>
+            {field.helpText}
+          </p>
+        ) : null;
+
+        const errorNode = errors[field.name] ? (
+          <p id={errorId} style={fieldErrorStyle}>
+            <span aria-hidden="true">&#9888;</span>
+            <span>{errors[field.name]}</span>
+          </p>
+        ) : null;
+
+        if (isSingleCheckbox) {
+          const checked = formData[field.name] === 'true';
+          return (
+            <div key={field.name} style={{ marginBottom: '20px' }}>
+              <label htmlFor={field.name} style={checkboxRowStyle}>
+                <input
+                  id={field.name}
+                  name={field.name}
+                  type="checkbox"
+                  ref={(el) => {
+                    fieldRefs.current[field.name] = el;
+                  }}
+                  checked={checked}
+                  onChange={(e) => handleSingleCheckbox(field.name, e.target.checked)}
+                  aria-invalid={errors[field.name] ? true : undefined}
+                  aria-describedby={describedBy}
+                  style={checkboxInputStyle}
+                />
+                <span style={{ fontSize: '.875rem', lineHeight: 1.5, color: '#333' }}>
+                  {field.labelNode ?? field.label}
+                  {field.required && (
+                    <span style={{ color: '#dc2626', marginLeft: '4px' }}>*</span>
+                  )}
+                </span>
+              </label>
+              {helpNode}
+              {errorNode}
+            </div>
+          );
+        }
+
+        if (isGroup) {
+          const selected = formData[field.name];
+          return (
+            <fieldset
+              key={field.name}
+              style={{ marginBottom: '20px', border: 0, padding: 0, margin: '0 0 20px' }}
+              aria-describedby={describedBy}
+            >
+              <legend style={{ ...labelStyle, padding: 0 }}>
+                {field.label}
+                {field.required && (
+                  <span style={{ color: '#dc2626', marginLeft: '4px' }}>*</span>
+                )}
+              </legend>
+              {helpNode}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                {field.options?.map((option, optionIndex) => {
+                  const optionId = `${field.name}-${option.value}`;
+                  const isChecked =
+                    field.type === 'radio'
+                      ? selected === option.value
+                      : Array.isArray(selected) && selected.includes(option.value);
+                  return (
+                    <label key={option.value} htmlFor={optionId} style={checkboxRowStyle}>
+                      <input
+                        id={optionId}
+                        name={field.name}
+                        type={field.type}
+                        value={option.value}
+                        checked={isChecked}
+                        onChange={handleChange}
+                        ref={
+                          optionIndex === 0
+                            ? (el) => {
+                                fieldRefs.current[field.name] = el;
+                              }
+                            : undefined
+                        }
+                        aria-invalid={errors[field.name] ? true : undefined}
+                        style={checkboxInputStyle}
+                      />
+                      <span style={{ fontSize: '.875rem', lineHeight: 1.5, color: '#333' }}>
+                        {option.label}
+                      </span>
+                    </label>
+                  );
+                })}
+              </div>
+              {errorNode}
+            </fieldset>
+          );
+        }
+
+        return (
         <div key={field.name} style={{ marginBottom: '20px' }}>
-          <label
-            htmlFor={field.name}
-            style={{
-              display: 'block',
-              fontFamily: 'Poppins, sans-serif',
-              fontSize: '.9rem',
-              fontWeight: 500,
-              color: '#0a253c',
-              marginBottom: '8px',
-            }}
-          >
+          <label htmlFor={field.name} style={labelStyle}>
             {field.label}
             {field.required && (
               <span style={{ color: '#dc2626', marginLeft: '4px' }}>*</span>
             )}
           </label>
+
+          {helpNode}
 
           {field.type === 'textarea' ? (
             <textarea
@@ -295,6 +471,10 @@ export default function CustomHubSpotForm({
               onChange={handleChange}
               placeholder={field.placeholder}
               rows={field.rows || 4}
+              required={field.required}
+              maxLength={field.maxLength}
+              aria-invalid={errors[field.name] ? true : undefined}
+              aria-describedby={describedBy}
               style={{
                 width: '100%',
                 padding: '12px 16px',
@@ -324,6 +504,10 @@ export default function CustomHubSpotForm({
               }}
               value={(formData[field.name] as string) || ''}
               onChange={handleChange}
+              required={field.required}
+              autoComplete={field.autoComplete}
+              aria-invalid={errors[field.name] ? true : undefined}
+              aria-describedby={describedBy}
               style={{
                 width: '100%',
                 padding: '12px 16px',
@@ -361,6 +545,13 @@ export default function CustomHubSpotForm({
               value={(formData[field.name] as string) || ''}
               onChange={handleChange}
               placeholder={field.placeholder}
+              required={field.required}
+              autoComplete={field.autoComplete}
+              min={field.min}
+              max={field.max}
+              maxLength={field.maxLength}
+              aria-invalid={errors[field.name] ? true : undefined}
+              aria-describedby={describedBy}
               style={{
                 width: '100%',
                 padding: '12px 16px',
@@ -382,22 +573,10 @@ export default function CustomHubSpotForm({
             />
           )}
 
-          {/* Error message */}
-          {errors[field.name] && (
-            <p
-              style={{
-                fontFamily: 'var(--system-ui)',
-                fontSize: '.85rem',
-                color: '#dc2626',
-                marginTop: '6px',
-                marginBottom: 0,
-              }}
-            >
-              {errors[field.name]}
-            </p>
-          )}
+          {errorNode}
         </div>
-      ))}
+        );
+      })}
 
       {/* Submit button */}
       <button

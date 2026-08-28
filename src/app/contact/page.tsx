@@ -24,6 +24,8 @@ import {
 } from '@/components/UXUIDC';
 import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
 import { trackContactSubmission } from '@/components/analytics/GoogleAnalytics';
+import { NAP } from '@/lib/seo/organization';
+import { buildContactPageSchema } from '@/lib/seo/schemaBlocks';
 
 // Contact information
 const contactInfo = {
@@ -647,26 +649,22 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ContactPage',
-            name: 'Contact ingenious targeting laboratory',
-            description: 'Contact ingenious targeting laboratory for mouse model generation projects.',
-            mainEntity: {
-              '@type': 'Organization',
-              name: 'ingenious targeting laboratory',
-              telephone: '+1-631-468-8534',
-              email: 'inquiry@genetargeting.com',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '761-80 Coates Avenue',
-                addressLocality: 'Holbrook',
-                addressRegion: 'NY',
-                postalCode: '11741',
-                addressCountry: 'US',
-              },
-            },
-          }),
+          __html: JSON.stringify(
+            buildContactPageSchema({
+              name: 'Contact ingenious targeting laboratory',
+              path: '/contact',
+              description:
+                'Contact ingenious targeting laboratory for mouse model generation projects.',
+              contactPoints: [
+                {
+                  contactType: 'customer service',
+                  telephone: NAP.telephone,
+                  email: NAP.email,
+                  areaServed: 'Worldwide',
+                },
+              ],
+            })
+          ),
         }}
       />
     </div>

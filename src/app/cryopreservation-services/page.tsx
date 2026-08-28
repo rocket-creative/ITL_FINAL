@@ -127,6 +127,7 @@ const methodSelectionGuide = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const saidTestimonial = getTestimonialById('said-uci')!;
 
@@ -849,9 +850,16 @@ export default function CryopreservationServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Cryopreservation Services', path: '/cryopreservation-services' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/cryopreservation-services', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -862,6 +870,7 @@ export default function CryopreservationServicesPage() {
             "name": "Mouse Cryopreservation Services",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Mouse cryopreservation services for long term line preservation. Sperm and embryo freezing with validated recovery. Protect your mouse models since 1998.",

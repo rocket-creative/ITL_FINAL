@@ -39,6 +39,7 @@ import TargetGenotypePanel from './components/TargetGenotypePanel';
 import BreedingPathVisualizer from './components/BreedingPathVisualizer';
 import StatisticsPanel from './components/StatisticsPanel';
 import { AIAccessProvider, AIAssistantPanel, ConsultationModal } from './components/ai';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 // ========== FAQ DATA ==========
 const faqs = [
@@ -126,6 +127,25 @@ const benefits = [
     description:
       'Use the breeding scheme architect before ordering model generation to understand post delivery breeding requirements and timeline to study ready cohorts.',
     icon: IconCalendar,
+  },
+];
+
+// ========== NEXT STEPS AFTER RESULTS ==========
+const nextSteps = [
+  {
+    title: 'Have ingenious produce this cohort for you',
+    link: '/mouse-cohort-development/',
+    description: 'Mouse cohort development services that turn a breeding plan into delivered study cohorts',
+  },
+  {
+    title: 'Breed a conditional knockout or Cre lox cohort',
+    link: '/conditional-knockout-cohort-breeding/',
+    description: 'Conditional knockout cohort breeding for floxed alleles crossed to Cre driver lines',
+  },
+  {
+    title: 'Have a scientist review this scheme',
+    link: '/cohort-consultation/?ref=architect',
+    description: 'Request a cohort consultation to review your crosses and target genotypes',
   },
 ];
 
@@ -560,6 +580,104 @@ function BreedingSchemeArchitectContent() {
                 Request Project Consultation
               </Link>
             </div>
+
+            {/* Next Steps */}
+            <div
+              style={{
+                backgroundColor: 'white',
+                border: '.5px solid #e0e0e0',
+                borderTop: '4px solid #134978',
+                padding: '25px',
+                marginTop: '30px',
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  color: '#333',
+                  marginBottom: '10px',
+                }}
+              >
+                Next Steps
+              </h3>
+              <p
+                style={{
+                  fontFamily: 'var(--system-ui)',
+                  fontSize: '.9rem',
+                  fontWeight: 400,
+                  color: '#4a4a4a',
+                  lineHeight: '1.6rem',
+                  marginBottom: '20px',
+                }}
+              >
+                Take this plan further with our scientific team
+              </p>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                  gap: '24px',
+                }}
+              >
+                {nextSteps.map((step, index) => (
+                  <Link
+                    key={index}
+                    href={step.link}
+                    className="hover:-translate-y-1 hover:shadow-md transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-teal-600"
+                    style={{
+                      backgroundColor: '#f7f7f7',
+                      border: '.5px solid #e0e0e0',
+                      borderTop: '4px solid #008080',
+                      padding: '20px',
+                      textDecoration: 'none',
+                      display: 'flex',
+                      flexDirection: 'column',
+                    }}
+                  >
+                    <h4
+                      style={{
+                        fontFamily: 'Poppins, sans-serif',
+                        fontSize: '1rem',
+                        fontWeight: 600,
+                        color: '#333',
+                        marginBottom: '10px',
+                      }}
+                    >
+                      {step.title}
+                    </h4>
+                    <p
+                      style={{
+                        fontFamily: 'var(--system-ui)',
+                        fontSize: '.85rem',
+                        fontWeight: 400,
+                        color: '#4a4a4a',
+                        lineHeight: '1.5rem',
+                        flex: 1,
+                      }}
+                    >
+                      {step.description}
+                    </p>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        color: '#008080',
+                        fontFamily: 'var(--system-ui)',
+                        fontSize: '.85rem',
+                        fontWeight: 500,
+                        marginTop: '15px',
+                      }}
+                    >
+                      Learn More
+                      <IconArrowRight size={14} color="#008080" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       )}
@@ -903,6 +1021,12 @@ function BreedingSchemeArchitectContent() {
           { name: 'Home', path: '/' },
           { name: 'Breeding Scheme Architect', path: '/breeding-scheme-architect' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/breeding-scheme-architect', faqs)),
+        }}
       />
 
       {/* AI Assistant Panel */}

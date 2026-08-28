@@ -81,6 +81,7 @@ const relatedModelTypes = [
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { TECHNOLOGY_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonials = TECHNOLOGY_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -473,12 +474,19 @@ export default function TechnologiesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/technologies', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Gene Targeting Technologies",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "gene targeting, Cre lox conditional systems, and derivative allele design. Pre germline characterization for verified mouse models since 1998.",

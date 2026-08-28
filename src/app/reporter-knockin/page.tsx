@@ -204,6 +204,7 @@ const publicationsData = getPublicationsForPage('/reporter-knockin');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const bosmansTestimonial = getTestimonialById('bosmans-ghent')!;
 
@@ -868,12 +869,19 @@ export default function ReporterKnockinPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/reporter-knockin', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Reporter Knockin Mouse Models",
             "provider": {
               "@type": "Organization",
+              "@id": "https://www.genetargeting.com/#organization",
               "name": "ingenious targeting laboratory"
             },
             "description": "Generated reporter knockin mouse models for gene expression analysis. LacZ, fluorescent protein, and luciferase reporters at endogenous loci. Since 1998.",
