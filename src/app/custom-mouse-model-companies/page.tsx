@@ -112,7 +112,7 @@ const faqs = [
   {
     question: 'How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?',
     answer:
-      'Jackson Laboratory offers generated CRISPR, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects.',
+      'Jackson Laboratory offers CRISPR, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects.',
   },
   {
     question: 'How does iTL compare to Charles River Laboratories?',
@@ -419,7 +419,7 @@ export default function CustomMouseModelCompaniesPage() {
               How to choose a mouse model generation company
             </h2>
             <p style={{ color: '#333', fontSize: '1rem', lineHeight: 1.75, marginBottom: '20px' }}>
-              Researchers selecting a generated mouse model partner typically evaluate the following
+              Researchers selecting a mouse model generation partner typically evaluate the following
               criteria before committing to a project:
             </p>
             <ol style={{ paddingLeft: '20px', color: '#333' }}>

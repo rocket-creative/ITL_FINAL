@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:02.893Z"
 
 # About Ingenious Targeting Laboratory
 
-Since 1998, Ingenious Targeting Laboratory has been generating mouse model generation for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,800 generated gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.
+Since 1998, Ingenious Targeting Laboratory has been generating mouse models for researchers worldwide. From our facilities in Ronkonkoma, New York, we have completed more than 2,800 mouse model generation projects contributing to over 800 peer reviewed publications across every major therapeutic area.
 
 ## Our Mission
 
@@ -135,7 +135,7 @@ ingenious targeting laboratory provides genetically engineered mouse and rat mod
 
 **How long has ingenious targeting laboratory been in business?**
 
-ingenious targeting laboratory has been generating mouse model generation since 1998, with over 25 years of experience and 2,800+ successful models generated. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact.
+ingenious targeting laboratory has been generating mouse models since 1998, with over 25 years of experience and 2,800+ successful models generated. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact.
 
 **How do I get started with a mouse model generation project?**
 

@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.996Z"
 
 # Mouse Model Generation
 
-Since 1998, Ingenious Targeting Laboratory has generated over 2,800 mouse model generation for researchers worldwide. Our gene targeting expertise spans knockout, knockin, humanized, and transgenic approaches.
+Since 1998, Ingenious Targeting Laboratory has generated over 2,800 mouse models for researchers worldwide. Our gene targeting expertise spans knockout, knockin, humanized, and transgenic approaches.
 
 Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgene integration, Ingenious Targeting Laboratory provides the scientific consultation and technical execution to deliver models optimized for your specific research goals.
 

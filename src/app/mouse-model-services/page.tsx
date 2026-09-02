@@ -14,9 +14,9 @@ import { StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
-  badge: "Generated Gene Targeting",
+  badge: "Gene Targeting",
   title: "Mouse Model Generation",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.",
   description: "Whether you need a simple knockout to eliminate gene function, a conditional allele for tissue specific studies, a knockin model to introduce precise modifications, or a humanized mouse for translational research, ingenious targeting laboratory provides the scientific expertise and technical infrastructure to bring your project from concept to study ready animals."
 };
 
@@ -109,7 +109,7 @@ const additionalServices = [
     items: [
       "Plasmid based vectors for standard targeting projects",
       "BAC based vectors for large scale targeting (up to 200kb)",
-      "Generated cassette configurations for complex allele designs",
+      "Cassette configurations for complex allele designs",
       "Validated vector backbones with proven targeting efficiency"
     ]
   },
@@ -160,7 +160,7 @@ const faqData = [
     answer: "ingenious targeting laboratory offers C57BL/6, BALB/c, and 129 strain ES cells for targeted models. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological and metabolic studies. Strain selection depends on your research requirements and downstream breeding plans."
   },
   {
-    question: "How long does it take to generate a generated mouse model?",
+    question: "How long does it take to generate a mouse model?",
     answer: "Model generation timelines depend on project complexity, model type, and specific requirements. With ongoing advances in gene editing technology, timelines continue to improve. Expedited options may be available for certain project types. Contact us for current timeline estimates for your project."
   },
   {
@@ -450,7 +450,7 @@ export default function MouseModelServicesPage() {
               Strain Background Options
             </h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '25px' }}>
-              ingenious targeting laboratory generates model generation on the genetic background most appropriate for your research goals:
+              ingenious targeting laboratory generates models on the genetic background most appropriate for your research goals:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.197Z"
 
 # C57BL/6 Mouse Background
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects, with the majority generated on C57BL/6 genetic backgrounds. Our experience across thousands of projects provides deep understanding of how strain background affects phenotypic outcomes, breeding performance, and experimental reproducibility.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 mouse model generation projects, with the majority generated on C57BL/6 genetic backgrounds. Our experience across thousands of projects provides deep understanding of how strain background affects phenotypic outcomes, breeding performance, and experimental reproducibility.
 
 The C57BL/6 mouse is the most widely used inbred strain for biomedical research and the reference strain for the mouse genome sequence. C57BL/6 backgrounds are preferred for most knockout, knockin, and conditional allele projects due to extensive phenotypic characterization, broad research community adoption, and compatibility with the majority of Cre driver lines.
 

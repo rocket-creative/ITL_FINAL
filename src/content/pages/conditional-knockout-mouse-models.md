@@ -122,7 +122,7 @@ Milanick W, Li J, Thomas CI, Al-Yaari M, Guerrero-Given D, Kamasawa N, Young SM 
 
 ## What Researchers Say
 
-*“ingenious Targeting Laboratory is highly recommended for generating animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.”*
+*“ingenious Targeting Laboratory is highly recommended for custom animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.”*
 
 *— **Hyekyung Plumley, PhD**, Warren Center for Neuroscience Drug Discovery*
 

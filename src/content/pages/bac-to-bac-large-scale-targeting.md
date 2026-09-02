@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.079Z"
 
 # BAC Targeting
 
-Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases. This specialized approach enables researchers to study gene regulation in physiologically relevant contexts impossible to replicate with smaller insert designs.
+Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases. This specialized approach enables researchers to study gene regulation in physiologically relevant contexts impossible to replicate with smaller insert designs.
 
 BAC targeting converts large genomic fragments into functional targeting vectors while maintaining complete regulatory architecture spanning 5 prime promoters, enhancer elements, coding sequences, and 3 prime regulatory regions. This methodology has become increasingly valuable as research emphasis shifts toward understanding complex gene regulation rather than simplified knockout or knockin modifications.
 

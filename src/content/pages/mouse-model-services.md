@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.960Z"
 
 # Mouse Model Generation
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 mouse model generation projects for academic institutions, pharmaceutical companies, and biotech organizations worldwide. Our mouse model generation services have contributed to more than 800 peer reviewed publications across every major therapeutic area.
 
 Whether you need a simple knockout to eliminate gene function, a conditional allele for tissue specific studies, a knockin model to introduce precise modifications, or a humanized mouse for translational research, Ingenious Targeting Laboratory provides the scientific expertise and technical infrastructure to bring your project from concept to study ready animals.
 
@@ -84,7 +84,7 @@ This flexibility maximizes research value while minimizing project timelines and
 
 ## Strain Background Options
 
-Ingenious Targeting Laboratory generates model generation on the genetic background most appropriate for your research goals:
+Ingenious Targeting Laboratory generates models on the genetic background most appropriate for your research goals:
 
 **C57BL/6** remains the most widely used inbred strain, with extensive phenotypic data and compatibility with most disease models.
 
@@ -140,7 +140,7 @@ Our scientific team designs and constructs targeting vectors tailored to your sp
 
 - Plasmid based vectors for standard targeting projects
 - BAC based vectors for large scale targeting (up to 200kb)
-- Generated cassette configurations for complex allele designs
+- Cassette configurations for complex allele designs
 - Validated vector backbones with proven targeting efficiency
 
 Vector design incorporates optimal LoxP and FRT site positioning, selection cassette configuration, and homology arm lengths to maximize targeting success.

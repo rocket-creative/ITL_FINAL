@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.643Z"
 
 # Inducible Conditional Knockout
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects, including conditional alleles compatible with inducible Cre systems. Our knockout models have supported research published in more than 800 peer reviewed articles, including in  Science, Nature and Cell. 
+Since 1998, Ingenious Targeting Laboratory has completed over 2,800 mouse model generation projects, including conditional alleles compatible with inducible Cre systems. Our knockout models have supported research published in more than 800 peer reviewed articles, including in  Science, Nature and Cell. 
 
 Inducible conditional knockout combines the tissue specificity of conditional gene targeting with temporal control over when deletion occurs. By using tamoxifen inducible CreERT2 or doxycycline regulated systems, researchers can trigger gene deletion at any point in development or adult life, enabling study of gene function independent of developmental requirements and modeling acute versus chronic loss of function phenotypes.
 

@@ -20,7 +20,7 @@ import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 const heroData = {
   badge: "Our Services",
   title: "About ingenious targeting laboratory",
-  intro: "Since 1998, ingenious targeting laboratory has been generating mouse, rat, and rabbit models for researchers worldwide. From our facilities in Holbrook, New York, we have completed more than 2,800 generated gene targeting projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
+  intro: "Since 1998, ingenious targeting laboratory has been generating mouse, rat, and rabbit models for researchers worldwide. From our facilities in Holbrook, New York, we have completed more than 2,800 mouse model generation projects contributing to over 800 peer reviewed publications across every major therapeutic area.",
   description: ""
 };
 
@@ -63,8 +63,8 @@ const differentiatorsData = {
 // FAQ Data
 const faqData = [
   { question: "What services does ingenious targeting laboratory provide?", answer: "We provide genetically engineered mouse, rat, and rabbit model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services." },
-  { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating mouse model generation since 1998, with over 27 years of experience and 2,800+ successful models generated. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
-  { question: "How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?", answer: "Jackson Laboratory offers generated CRISPR, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects." },
+  { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating mouse models since 1998, with over 27 years of experience and 2,800+ successful models generated. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
+  { question: "How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?", answer: "Jackson Laboratory offers CRISPR, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects." },
   { question: "How does iTL compare to Charles River, Cyagen, and other mouse model generation companies?", answer: "Charles River is a global CRO bundling model creation with breeding and distribution. Cyagen is a cost forward CRISPR provider with a money back guarantee on genotype. ingenious targeting laboratory differs by focusing exclusively on model generation with gene targeting and CRISPR workflows chosen per project, U.S. based QC at every stage, and long term inheritance stability tracking for complex alleles." },
   { question: "What does the 100% germline transmission guarantee mean?", answer: "ingenious targeting laboratory guarantees that every mouse model generation project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to all generated models and is one of the strongest commitments in the mouse model generation industry." },
   { question: "How do I get started with a mouse model generation project?", answer: "Contact us through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs." }
@@ -197,13 +197,13 @@ export default function AboutItlPage() {
             </h2>
             <div className="animate-in" style={{ color: '#333', fontSize: '1rem', lineHeight: '1.8rem', marginBottom: '25px' }}>
               <p style={{ marginBottom: '20px' }}>
-                ingenious targeting laboratory's story began in the early 1990s. The founders worked as researchers in the same lab at Rockefeller University. During their time at Rockefeller, they developed generated atherosclerotic knockout mouse models for studying heart disease. In 1998, they founded ingenious targeting laboratory and still continue to work directly in the lab, oversee mouse model production, and also handle the operation and business side of things.
+                ingenious targeting laboratory's story began in the early 1990s. The founders worked as researchers in the same lab at Rockefeller University. During their time at Rockefeller, they developed atherosclerotic knockout mouse models for studying heart disease. In 1998, they founded ingenious targeting laboratory and still continue to work directly in the lab, oversee mouse model production, and also handle the operation and business side of things.
               </p>
               <p style={{ marginBottom: '20px' }}>
                 As ingenious targeting laboratory, we first settled in at the Long Island High Technology Incubator (LIHTI) at Stony Brook University, discussing and sharing ideas with other researchers and companies in that space. A little over 10 years later, we expanded and moved to a larger facility on Long Island with 20,000 square feet. We still work closely with Stony Brook's Division of Laboratory Animal Resources (DLAR) to house many of our mice.
               </p>
               <p>
-                From our small beginnings as one of the very first mouse gene targeting companies in the world, we've grown and streamlined our model generation process. Today ingenious uses both traditional and cutting edge technologies to design generated mouse lines for our clients globally.
+                From our small beginnings as one of the very first mouse gene targeting companies in the world, we've grown and streamlined our model generation process. Today ingenious uses both traditional and cutting edge technologies to design mouse lines for our clients globally.
               </p>
             </div>
           </div>

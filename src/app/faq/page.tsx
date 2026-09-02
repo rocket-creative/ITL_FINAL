@@ -56,7 +56,7 @@ const allFAQs: FAQ[] = [
   },
   {
     category: 'Getting Started',
-    question: 'What is the cost of generating a generated mouse model?',
+    question: 'What is the cost of generating a mouse model?',
     answer: 'Project cost varies based on model complexity, allele design, and additional services required. Conditional knockouts with LoxP sites and humanization projects price higher than conventional knockouts. Submit your work email through our pricing guide or request a quote and we will return a fixed-fee quote within 24 hours, tailored to your specific project requirements.'
   },
   {

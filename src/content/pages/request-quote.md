@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:05.747Z"
 
 **Url: /request-quote**
 
-**Meta Description: Request a generated mouse model quote. Include project details for knockout, knockin, humanized, or conditional models. Free consultation included.**
+**Meta Description: Request a mouse model generation quote. Include project details for knockout, knockin, humanized, or conditional models. Free consultation included.**
 
 **Primary Keyword: mouse model quote request**
 

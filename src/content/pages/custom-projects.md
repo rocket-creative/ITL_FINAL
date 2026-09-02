@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.058Z"
 
 # Mouse Model Generation Projects
 
-Every research question is unique. Ingenious Targeting Laboratory specializes in designing and generating mouse model generation precisely matched to your experimental requirements. Since 1998, we have completed more than 2,800 model generation projects, developing expertise across every model type and therapeutic area.
+Every research question is unique. Ingenious Targeting Laboratory specializes in designing and generating mouse models precisely matched to your experimental requirements. Since 1998, we have completed more than 2,800 model generation projects, developing expertise across every model type and therapeutic area.
 
 Whether you need a straightforward knockout, a sophisticated conditional allele, a precise point mutation, or a complex humanization, Ingenious Targeting Laboratory's scientific team provides the design expertise and technical capability to deliver study ready animals.
 

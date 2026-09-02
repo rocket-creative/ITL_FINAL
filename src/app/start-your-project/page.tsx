@@ -404,7 +404,7 @@ export default function StartYourProjectPage() {
             >
               <strong>Trusted by 900+ universities, biotech startups, and global research institutions for over 26 years.</strong>
               <br />
-              More than <strong>2,800 mouse model generation delivered</strong>.
+              More than <strong>2,800 mouse models generated</strong>.
             </p>
           </div>
         </section>
@@ -767,7 +767,7 @@ export default function StartYourProjectPage() {
             >
               {[
                 'Over 26 years of experience in genetic model development',
-                '2800+ mouse model generation delivered',
+                '2,800+ mouse models generated',
                 'Trusted by NIH-funded labs and global biotech teams',
                 'Clear communication, fixed prices and ongoing project support',
                 'No obligation — speak to one of our scientists about your goals today',

@@ -21,7 +21,7 @@ import { StandardPageCtaStack } from '@/components/UXUIDC';
 const heroData = {
   badge: "Our Services",
   title: "Knockout Rat Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects across multiple species, including rat, enabling loss of function studies in larger rodents offering superior behavioral characterization and physiological readout capacity.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects across multiple species, including rat, enabling loss of function studies in larger rodents offering superior behavioral characterization and physiological readout capacity.",
   description: "Knockout rat models provide distinct advantages for studies examining behavioral responses, cardiovascular physiology, renal function, and complex neurobiological phenomena where rodent size or documented behavioral capacity offers superior scientific value compared to mouse models. The trade off between increased project timeline and cost against superior phenotypic readouts makes knockout rats optimal for specific research questions despite greater complexity."
 };
 
