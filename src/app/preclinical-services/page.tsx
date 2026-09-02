@@ -85,7 +85,7 @@ const pharmacologyStudies = [
 const integratedPrograms = [
   {
     name: "Model to Data",
-    description: "ingenious targeting laboratory's integrated capabilities enable seamless progression from model generation through breeding, cohort development, and preclinical studies. This eliminates the complexity and delays associated with transferring animals between service providers."
+    description: "Ingenious targeting laboratory's integrated capabilities enable seamless progression from model generation through breeding, cohort development, and preclinical studies. This eliminates the complexity and delays associated with transferring animals between service providers."
   },
   {
     name: "Study Coordination",
@@ -101,7 +101,7 @@ const integratedPrograms = [
 const qualityCompliance = [
   {
     name: "AAALAC Accreditation",
-    description: "ingenious targeting laboratory operates AAALAC accredited facilities meeting the highest standards for animal care and welfare."
+    description: "Ingenious targeting laboratory operates AAALAC accredited facilities meeting the highest standards for animal care and welfare."
   },
   {
     name: "Regulatory Alignment",
@@ -308,7 +308,7 @@ export default function PreclinicalServicesPage() {
               In Vivo Efficacy Studies
             </h2>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '30px' }}>
-              Efficacy studies evaluate therapeutic candidates in disease relevant mouse models. ingenious targeting laboratory designs and executes studies using your model generation or established disease models appropriate for your therapeutic target.
+              Efficacy studies evaluate therapeutic candidates in disease relevant mouse models. Ingenious targeting laboratory designs and executes studies using your model generation or established disease models appropriate for your therapeutic target.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -632,7 +632,7 @@ export default function PreclinicalServicesPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Preclinical mouse model services for drug development including efficacy testing, phenotyping, and pharmacology studies. Since 1998.",
             "serviceType": "Preclinical Services"

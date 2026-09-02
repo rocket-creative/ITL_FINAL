@@ -580,7 +580,7 @@ export default function InducibleGeneExpressionPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Inducible gene expression systems for temporal gene control. Tamoxifen, doxycycline, and F.A.S.T. technology for precise research applications since 1998.",
             "serviceType": "Inducible Gene Expression"

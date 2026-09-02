@@ -144,7 +144,7 @@ const nextSteps = [
   },
   {
     title: 'Have a scientist review this scheme',
-    link: '/cohort-consultation/?ref=architect',
+    link: '/cohort-consultation/?ref=architect#request-form',
     description: 'Request a cohort consultation to review your crosses and target genotypes',
   },
 ];

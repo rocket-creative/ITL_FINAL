@@ -40,7 +40,7 @@ Gene targeted miceMany human diseases are known to be caused in part by specific
 
 One example of how mouse models can be used to study human disease is in a recent publication by Ann-Louise Vikberg, et. al., from the University of Umeå, Sweden. A human mutation in the Kif23 gene is known to cause a rare form of congenital anemia and a prevalence for blood cancers. The group created a mouse model through ingenious targeting laboratory where the human mutation was inserted into the analogous mouse gene. The humanized mouse model was used to study the mutant Kif23 gene in different tissue types including bone marrow, a difficult tissue to study in humans. The ability to use the humanized mouse model as a means of studying the mutant gene in this difficult tissue type allowed the researchers to gain insights that they would not have been able to gain easily from human patients, concluding that tissue-specific expression of KIF23 variants can influence the anemia phenotype.
 
-These reasons, and more, put humanized mouse models at the top of the list as the animal model of choice for studying human disease. Interested in using a generated mouse model in your next research project? Get a quote from ingenious today.
+These reasons, and more, put humanized mouse models at the top of the list as the animal model of choice for studying human disease. Interested in using a mouse model in your next research project? Get a quote from ingenious today.
 
 #### References:
 

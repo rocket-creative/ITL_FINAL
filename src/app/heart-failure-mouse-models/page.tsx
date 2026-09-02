@@ -592,7 +592,7 @@ export default function HeartFailureMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse model generation for heart failure research. Study cardiomyopathy, cardiac remodeling, and contractile dysfunction. Gene targeting since 1998.",
             "serviceType": "Heart Failure Mouse Model Generation"

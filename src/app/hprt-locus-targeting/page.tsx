@@ -22,7 +22,7 @@ import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const heroData = {
   badge: "Our Services",
   title: "HPRT Locus Targeting",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, with hundreds utilizing safe harbor locus integration to achieve stable and predictable transgene expression. The HPRT locus represents one of the most versatile genomic sites for insertion of exogenous DNA, enabling researchers to generate consistent models without the variability associated with random integration approaches.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects, with hundreds utilizing safe harbor locus integration to achieve stable and predictable transgene expression. The HPRT locus represents one of the most versatile genomic sites for insertion of exogenous DNA, enabling researchers to generate consistent models without the variability associated with random integration approaches.",
   description: "HPRT locus targeting allows researchers to insert reporter genes, selection markers, or therapeutic transgenes at a well-characterized genomic location that supports robust expression across diverse tissue types. This approach is particularly valuable when studying genes where single-copy integration and consistent expression levels are essential for research outcomes."
 };
 

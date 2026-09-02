@@ -18,7 +18,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   return buildPageMetadata({
     title: 'Mouse Model Quote Request',
     description:
-      'Request a generated mouse model quote for knockout, knockin, humanized, or conditional models. Free consultation included.',
+      'Request a mouse model generation quote for knockout, knockin, humanized, or conditional models. Free consultation included.',
     path: '/request-quote',
     index: !hasQueryParams,
     follow: true,

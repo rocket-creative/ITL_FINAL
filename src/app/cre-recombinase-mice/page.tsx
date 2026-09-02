@@ -738,7 +738,7 @@ export default function CreRecombinaseMicePage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Cre recombinase mouse models for conditional gene targeting. Tissue specific and inducible gene control systems since 1998.",
             "serviceType": "Cre Recombinase Mice"

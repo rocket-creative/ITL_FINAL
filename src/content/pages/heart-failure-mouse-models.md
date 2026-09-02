@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:04.328Z"
 
 # Heart Failure Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported cardiovascular research with generated knockout, knockin, and conditional mouse models for heart failure studies. Our gene targeting expertise enables investigation of the molecular mechanisms driving cardiomyopathy, cardiac remodeling, and contractile dysfunction.
+Since 1998, ingenious targeting laboratory has supported cardiovascular research with generated knockout, knockin, and conditional mouse models for heart failure studies. Our gene targeting expertise enables investigation of the molecular mechanisms driving cardiomyopathy, cardiac remodeling, and contractile dysfunction.
 
-Whether you are studying inherited cardiomyopathies, modeling pressure or volume overload induced heart failure, or validating therapeutic targets, Ingenious Targeting Laboratory provides models optimized for your cardiac research goals.
+Whether you are studying inherited cardiomyopathies, modeling pressure or volume overload induced heart failure, or validating therapeutic targets, ingenious targeting laboratory provides models optimized for your cardiac research goals.
 
 ## Heart Failure Pathophysiology
 
@@ -112,7 +112,7 @@ Mouse models provide platforms for testing cardiac gene therapy approaches, incl
 
 ## Selected Publications
 
-Model generation from Ingenious Targeting Laboratory have contributed to cardiovascular research published in leading journals including Circulation, Circulation Research, and Journal of Clinical Investigation.
+Model generation from ingenious targeting laboratory have contributed to cardiovascular research published in leading journals including Circulation, Circulation Research, and Journal of Clinical Investigation.
 
 (/publications)
 

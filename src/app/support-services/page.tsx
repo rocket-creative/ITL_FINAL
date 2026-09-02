@@ -35,7 +35,7 @@ const colonyManagementServices = [
   },
   {
     name: "Genotyping Services",
-    description: "PCR based assays to identify carriers, homozygotes, and compound mutants. ingenious targeting laboratory develops generated genotyping protocols for each targeted allele."
+    description: "PCR based assays to identify carriers, homozygotes, and compound mutants. Ingenious targeting laboratory develops generated genotyping protocols for each targeted allele."
   },
   {
     name: "Cohort Development",
@@ -146,7 +146,7 @@ const testimonials = [
 const faqData = [
   {
     question: "What support services does ingenious targeting laboratory provide beyond model generation?",
-    answer: "ingenious targeting laboratory provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, and targeted clone archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation)."
+    answer: "Ingenious targeting laboratory provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, and targeted clone archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation)."
   },
   {
     question: "How do colony management services help maintain mouse lines?",
@@ -611,7 +611,7 @@ export default function SupportServicesPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse colony management, cryopreservation, rederivation, and breeding services. Comprehensive support for your mouse model projects since 1998.",
             "serviceType": "Mouse Model Support Services"

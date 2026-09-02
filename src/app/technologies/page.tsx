@@ -16,7 +16,7 @@ const heroData = {
   badge: "Gene Targeting Technologies",
   title: "Gene Targeting Technologies",
   intro: "Since 1998, ingenious targeting laboratory has refined gene targeting technologies through more than 2,800 model generation projects. Our methodology combines proven gene targeting with sophisticated allele design strategies to deliver mouse models with verified genetic modifications and predictable performance.",
-  description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. ingenious targeting laboratory's scientific consultants guide project design from initial concept through final allele verification."
+  description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. Ingenious targeting laboratory's scientific consultants guide project design from initial concept through final allele verification."
 };
 
 // Stats Data
@@ -487,7 +487,7 @@ export default function TechnologiesPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "gene targeting, Cre lox conditional systems, and derivative allele design. Pre germline characterization for verified mouse models since 1998.",
             "serviceType": "Gene Targeting Technologies"

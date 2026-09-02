@@ -999,7 +999,7 @@ export default function OncologyMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated oncology mouse models for cancer research. Tumor suppressor knockouts, oncogene knockins, and genetically engineered cancer models. Since 1998.",
             "serviceType": "Mouse Model Generation"

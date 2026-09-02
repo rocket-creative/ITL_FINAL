@@ -22,7 +22,7 @@ import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const heroData = {
   badge: "Our Services",
   title: "H11 Safe Harbor Locus",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse model generation incorporating safe harbor locus integration, with numerous projects leveraging the H11 locus specifically for applications requiring exceptional insert capacity and stable transgene expression. The H11 locus represents a specialized genomic integration site optimized for large regulatory element preservation and complex genetic constructs exceeding 100 kilobases.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse models incorporating safe harbor locus integration, with numerous projects leveraging the H11 locus specifically for applications requiring exceptional insert capacity and stable transgene expression. The H11 locus represents a specialized genomic integration site optimized for large regulatory element preservation and complex genetic constructs exceeding 100 kilobases.",
   description: "H11 safe harbor targeting enables insertion of large genomic fragments with minimal position effects, making it ideal for studies where complete regulatory elements, multiple transgenes, or extensive BAC inserts are essential for recapitulating endogenous expression patterns. This locus has become increasingly valuable as research emphasis shifts toward more physiologically relevant transgenic models."
 };
 

@@ -624,7 +624,7 @@ export default function ConditionalKnockinMicePage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Conditional knockin mouse models with inducible gene expression. Cre lox controlled knockin alleles for temporal and spatial gene control.",
             "serviceType": "Conditional Knockin Mouse Model Generation"

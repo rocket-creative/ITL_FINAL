@@ -30,7 +30,7 @@ const statsData = [
 // Intro Data
 const introData = {
   text: "Neuroscience mouse models enable researchers to investigate the molecular and cellular mechanisms underlying brain function and dysfunction. From cell type specific knockouts that dissect neural circuit function to disease mutation knockins that model neurological conditions, the right model design is critical for understanding the nervous system and developing treatments for neurological disorders.",
-  highlight: "Conditional approaches are particularly important in neuroscience, where the same gene often has distinct functions in different neuronal populations, glial cells, and developmental stages. ingenious targeting laboratory designs and generates neuroscience models for your specific research questions."
+  highlight: "Conditional approaches are particularly important in neuroscience, where the same gene often has distinct functions in different neuronal populations, glial cells, and developmental stages. Ingenious targeting laboratory designs and generates neuroscience models for your specific research questions."
 };
 
 // Neuronal Cre Drivers Table
@@ -971,7 +971,7 @@ export default function NeuroscienceMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated neuroscience mouse models for brain and behavior research. Neuronal knockouts, circuit dissection, and neurodegenerative disease models. Since 1998.",
             "serviceType": "Mouse Model Generation"

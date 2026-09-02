@@ -553,7 +553,7 @@ export default function ParkinsonsMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated Parkinson disease mouse models for neurodegenerative research. Study alpha synuclein, dopamine pathways, and motor dysfunction.",
             "serviceType": "Parkinson Disease Mouse Model Generation"

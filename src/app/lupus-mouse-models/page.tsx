@@ -79,7 +79,7 @@ const strainBackgrounds = [
   },
   {
     title: "Mixed Background Considerations",
-    description: "Backcrossing onto defined genetic backgrounds ensures reproducible phenotypes and enables comparison across studies. ingenious targeting laboratory provides backcrossing services to establish your model on the optimal strain background."
+    description: "Backcrossing onto defined genetic backgrounds ensures reproducible phenotypes and enables comparison across studies. Ingenious targeting laboratory provides backcrossing services to establish your model on the optimal strain background."
   }
 ];
 
@@ -604,7 +604,7 @@ export default function LupusMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse model generation for systemic lupus erythematosus research. Study autoantibody production, immune complex disease, and lupus nephritis. Since 1998.",
             "serviceType": "Lupus Mouse Model Generation"

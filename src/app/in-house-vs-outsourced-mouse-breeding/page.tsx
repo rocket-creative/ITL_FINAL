@@ -570,7 +570,7 @@ export default function InHouseVsOutsourcedMouseBreedingPage() {
             </div>
 
             <p className="animate-in" style={{ ...bodyStyle, marginTop: '25px' }}>
-              The line that surprises most programs is the last one. In a{' '}
+              The line that surprises most programs is the one about animals bred and not used. In a{' '}
               <Link
                 href="/conditional-knockout-cohort-breeding/"
                 className={inlineLinkClass}
@@ -919,7 +919,7 @@ export default function InHouseVsOutsourcedMouseBreedingPage() {
             </p>
             <div className="animate-in" style={{ marginTop: '28px' }}>
               <Link
-                href="/cohort-consultation/?ref=compare-mid"
+                href="/cohort-consultation/?ref=compare-mid#request-form"
                 className={ctaButtonClass}
                 style={ctaButtonStyle}
               >
@@ -958,7 +958,7 @@ export default function InHouseVsOutsourcedMouseBreedingPage() {
             </p>
             <div className="animate-in" style={{ marginTop: '28px' }}>
               <Link
-                href="/cohort-consultation/?ref=compare-foot"
+                href="/cohort-consultation/?ref=compare-foot#request-form"
                 className={ctaButtonClass}
                 style={ctaButtonStyle}
               >

@@ -834,7 +834,7 @@ export default function NashMashMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated NASH and MASH mouse models for fatty liver disease research. Study non alcoholic steatohepatitis and metabolic liver disease.",
             "serviceType": "NASH Mouse Model Generation"

@@ -31,7 +31,7 @@ const statsData = [
 const therapeuticAreas = [
   {
     title: "Oncology Mouse Models",
-    description: "Cancer research requires models that accurately recapitulate tumor biology, immune interactions, and therapeutic responses. ingenious targeting laboratory supports oncology programs with tumor suppressor knockouts, oncogene models, and humanized immune checkpoint mice for immuno oncology studies.",
+    description: "Cancer research requires models that accurately recapitulate tumor biology, immune interactions, and therapeutic responses. Ingenious targeting laboratory supports oncology programs with tumor suppressor knockouts, oncogene models, and humanized immune checkpoint mice for immuno oncology studies.",
     applications: [
       "Tumor suppressor knockout models enable study of cancer initiation and progression",
       "Conditional approaches allow tissue specific or temporal control over tumor development",
@@ -43,7 +43,7 @@ const therapeuticAreas = [
   },
   {
     title: "Neuroscience Mouse Models",
-    description: "Neurological and neurodegenerative disease research demands models that reproduce disease pathology while enabling mechanistic studies. ingenious targeting laboratory has generated models for Alzheimer disease, Parkinson disease, ALS, Huntington disease, epilepsy, autism spectrum disorders, and other neurological conditions.",
+    description: "Neurological and neurodegenerative disease research demands models that reproduce disease pathology while enabling mechanistic studies. Ingenious targeting laboratory has generated models for Alzheimer disease, Parkinson disease, ALS, Huntington disease, epilepsy, autism spectrum disorders, and other neurological conditions.",
     applications: [
       "Alzheimer disease models incorporate mutations in APP, presenilin genes, or tau",
       "Movement disorder research uses alpha synuclein models for Parkinson disease",
@@ -55,7 +55,7 @@ const therapeuticAreas = [
   },
   {
     title: "Metabolic Disease Mouse Models",
-    description: "Metabolic research spans diabetes, obesity, fatty liver disease, and lipid metabolism disorders. ingenious targeting laboratory provides models for studying metabolic pathways, testing therapeutic interventions, and understanding disease progression.",
+    description: "Metabolic research spans diabetes, obesity, fatty liver disease, and lipid metabolism disorders. Ingenious targeting laboratory provides models for studying metabolic pathways, testing therapeutic interventions, and understanding disease progression.",
     applications: [
       "Diabetes models address type 1 autoimmune mechanisms and type 2 insulin resistance",
       "Tissue specific knockouts in liver, adipose, muscle, or pancreas reveal organ contributions",
@@ -67,7 +67,7 @@ const therapeuticAreas = [
   },
   {
     title: "Immunology Mouse Models",
-    description: "Immune system research requires models that accurately reflect human immunology while enabling mechanistic studies. ingenious targeting laboratory supports autoimmune disease research, inflammatory conditions, and basic immunology with knockout, knockin, and humanized models.",
+    description: "Immune system research requires models that accurately reflect human immunology while enabling mechanistic studies. Ingenious targeting laboratory supports autoimmune disease research, inflammatory conditions, and basic immunology with knockout, knockin, and humanized models.",
     applications: [
       "Autoimmune disease models for rheumatoid arthritis, lupus, and multiple sclerosis",
       "Inflammatory bowel disease and other inflammatory conditions",
@@ -79,7 +79,7 @@ const therapeuticAreas = [
   },
   {
     title: "Cardiovascular Mouse Models",
-    description: "Cardiovascular research encompasses atherosclerosis, heart failure, hypertension, cardiac fibrosis, and vascular disease. ingenious targeting laboratory provides models for studying cardiovascular pathophysiology and testing therapeutic approaches.",
+    description: "Cardiovascular research encompasses atherosclerosis, heart failure, hypertension, cardiac fibrosis, and vascular disease. Ingenious targeting laboratory provides models for studying cardiovascular pathophysiology and testing therapeutic approaches.",
     applications: [
       "Atherosclerosis models combine lipid metabolism gene modifications with ApoE or LDLR deficiency",
       "Conditional knockouts enable tissue specific studies in endothelium or smooth muscle",
@@ -91,7 +91,7 @@ const therapeuticAreas = [
   },
   {
     title: "Rare Disease Mouse Models",
-    description: "Rare and orphan diseases affect small patient populations but often have high unmet need for effective therapies. ingenious targeting laboratory supports rare disease research with models for muscular dystrophies, lysosomal storage disorders, cystic fibrosis, and other inherited conditions.",
+    description: "Rare and orphan diseases affect small patient populations but often have high unmet need for effective therapies. Ingenious targeting laboratory supports rare disease research with models for muscular dystrophies, lysosomal storage disorders, cystic fibrosis, and other inherited conditions.",
     applications: [
       "Muscular dystrophy models carry mutations in dystrophin, dysferlin, or other muscle proteins",
       "Enable study of disease mechanisms and testing of gene therapy approaches",
@@ -103,7 +103,7 @@ const therapeuticAreas = [
   },
   {
     title: "Ophthalmology Mouse Models",
-    description: "Vision research addresses retinal degenerations, glaucoma, macular degeneration, and other ocular conditions. ingenious targeting laboratory provides models for studying photoreceptor biology, retinal pigment epithelium function, and visual pathway development.",
+    description: "Vision research addresses retinal degenerations, glaucoma, macular degeneration, and other ocular conditions. Ingenious targeting laboratory provides models for studying photoreceptor biology, retinal pigment epithelium function, and visual pathway development.",
     applications: [
       "Retinal degeneration models carry mutations in rhodopsin, peripherin, or other photoreceptor genes",
       "Conditional approaches enable temporal control over degeneration onset",
@@ -459,7 +459,7 @@ export default function TherapeuticAreasPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse model generation for oncology, neuroscience, metabolic disease, immunology, cardiovascular, and rare disease research. 2,800+ model generation since 1998.",
             "serviceType": "Therapeutic Area Mouse Models"

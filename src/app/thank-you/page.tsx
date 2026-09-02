@@ -232,7 +232,7 @@ export default function ThankYouPage() {
               color: '#1a1a1a',
               marginBottom: '0.5rem',
             }}>
-              Thank you for choosing Ingenious Targeting Laboratory
+              Thank you for choosing ingenious targeting laboratory
             </p>
             <p style={{
               fontSize: '1rem',

@@ -832,7 +832,7 @@ export default function PointMutationMicePage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated point mutation mouse models for disease variant modeling. Precise SNP knockin at endogenous loci with pre germline verification. Since 1998.",
             "serviceType": "Mouse Model Generation"

@@ -272,7 +272,7 @@ export default function CreLineSelectionGuidePage() {
             "description": "Expert guidance for selecting Cre driver lines for conditional knockout experiments. Covers tissue specificity, timing, efficiency, and common selection mistakes.",
             "publisher": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "articleSection": "Research Guides"

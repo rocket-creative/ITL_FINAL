@@ -17,7 +17,7 @@ Whether you require a single point mutation, reporter or other cassette insertio
 
 ## What Researchers Say
 
-> "I have been always very satisfied by the work done by ingenious targeting laboratory for my generated mouse projects."
+> "I have been always very satisfied by the work done by ingenious targeting laboratory for my custom mouse projects."
 >
 > — **Cem Gabay, MD**, University Hospitals of Geneva
 

@@ -107,7 +107,7 @@ const tiers = [
 
 const faqs = [
   {
-    question: 'How much does a generated mouse model cost?',
+    question: 'How much does a mouse model generation project cost?',
     answer:
       'Mouse model generation pricing depends on the model type and complexity. Conditional knockouts and knockins price higher than constitutive knockouts; humanized mice are the most complex tier. Every project includes a free scientific consultation, fixed-fee quote in 24 hours, and a 100% germline transmission guarantee. Add your work email above to receive current starting prices.',
   },

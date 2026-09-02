@@ -411,7 +411,7 @@ export default function CTLA4HumanizedMicePage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "CTLA4 humanized mouse models for anti CTLA4 antibody testing. Ipilimumab and checkpoint inhibitor preclinical evaluation in immunocompetent mice.",
             "serviceType": "CTLA4 Humanized Mouse Model Generation"

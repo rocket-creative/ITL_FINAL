@@ -345,7 +345,7 @@ export function UXUIDCNavigation() {
               <Link href="/" className="mr-auto shrink-0 pt-0.5" aria-label="Home">
                 <Image
                   src="/images/logo.png"
-                  alt="ingenious targeting laboratory"
+                  alt="Ingenious targeting laboratory"
                   width={224}
                   height={54}
                   className="h-auto w-[148px] sm:w-[180px] lg:w-[224px]"

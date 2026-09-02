@@ -524,7 +524,7 @@ export default async function IngeniousBlogPost({
           {
             question: 'How do I get a generated point mutation mouse model?',
             answer:
-              'ingenious targeting laboratory generates point mutation knockin mice at endogenous loci. Request a quote to discuss your project requirements, timeline, and pricing.',
+              'Ingenious targeting laboratory generates point mutation knockin mice at endogenous loci. Request a quote to discuss your project requirements, timeline, and pricing.',
           },
           {
             question: 'What types of point mutations can be modeled?',
@@ -537,7 +537,7 @@ export default async function IngeniousBlogPost({
             {
               question: 'Can you model substitution, deletion, or insertion mutations?',
               answer:
-                'Yes. ingenious targeting laboratory generates point mutation knockin mice for all mutation types. Request a quote to discuss your specific variant and allele design.',
+                'Yes. Ingenious targeting laboratory generates point mutation knockin mice for all mutation types. Request a quote to discuss your specific variant and allele design.',
             },
             {
               question: 'How do I choose which point mutation type to model?',
@@ -550,7 +550,7 @@ export default async function IngeniousBlogPost({
               {
                 question: 'Can you model disease-associated point mutations in mice?',
                 answer:
-                  'Yes. ingenious targeting laboratory generates point mutation knockin mice for sickle cell, cystic fibrosis, cancer, and other disease variants. Request a quote to discuss your project.',
+                  'Yes. Ingenious targeting laboratory generates point mutation knockin mice for sickle cell, cystic fibrosis, cancer, and other disease variants. Request a quote to discuss your project.',
               },
               {
                 question: 'How do mouse models help study point mutation diseases?',

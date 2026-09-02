@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   description: ROOT_CATALOG_FIRST_META.description,
   keywords: undefined, // Explicitly not using keywords per instructions
-  authors: [{ name: "ingenious targeting laboratory" }],
-  creator: "ingenious targeting laboratory",
-  publisher: "ingenious targeting laboratory",
+  authors: [{ name: "Ingenious targeting laboratory" }],
+  creator: "Ingenious targeting laboratory",
+  publisher: "Ingenious targeting laboratory",
   robots: {
     index: true,
     follow: true,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.genetargeting.com",
-    siteName: "ingenious targeting laboratory",
+    siteName: "Ingenious targeting laboratory",
     title: `${ROOT_CATALOG_FIRST_META.title} | ingenious targeting laboratory`,
     description: ROOT_CATALOG_FIRST_META.description,
     images: [

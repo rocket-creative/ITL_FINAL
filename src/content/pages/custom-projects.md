@@ -4,7 +4,7 @@ slug: "generated-projects"
 extracted: "2026-01-09T17:03:04.058Z"
 ---
 
-# Mouse Model Generation Projects | Knockout, Knockin, Humanized | Ingenious Targeting Laboratory
+# Mouse Model Generation Projects | Knockout, Knockin, Humanized | ingenious targeting laboratory
 
 **Url: /custom-projects**
 
@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:04.058Z"
 
 # Mouse Model Generation Projects
 
-Every research question is unique. Ingenious Targeting Laboratory specializes in designing and generating mouse model generation precisely matched to your experimental requirements. Since 1998, we have completed more than 2,800 model generation projects, developing expertise across every model type and therapeutic area.
+Every research question is unique. Ingenious targeting laboratory specializes in designing and generating mouse models precisely matched to your experimental requirements. Since 1998, we have completed more than 2,800 model generation projects, developing expertise across every model type and therapeutic area.
 
-Whether you need a straightforward knockout, a sophisticated conditional allele, a precise point mutation, or a complex humanization, Ingenious Targeting Laboratory's scientific team provides the design expertise and technical capability to deliver study ready animals.
+Whether you need a straightforward knockout, a sophisticated conditional allele, a precise point mutation, or a complex humanization, ingenious targeting laboratory's scientific team provides the design expertise and technical capability to deliver study ready animals.
 
 ## Our Generated Approach
 
@@ -88,7 +88,7 @@ Replacement of mouse sequences with human:
 
 ### Complex and Multi Component Projects
 
-Ingenious Targeting Laboratory excels in sophisticated designs including:
+Ingenious targeting laboratory excels in sophisticated designs including:
 
 - Dual recombinase systems (Cre lox plus Flp FRT, Dre Rox, etc)
 - Inducible expression systems (CreERT2, Tet systems)
@@ -168,7 +168,7 @@ Ingenious Targeting Laboratory excels in sophisticated designs including:
 
 ## Selected Publications
 
-Ingenious Targeting Laboratory’s model generation projects have contributed to more than 800 peer reviewed publications including:
+Ingenious targeting laboratory’s model generation projects have contributed to more than 800 peer reviewed publications including:
 
 - Landmark discoveries in cancer biology
 - Breakthrough findings in neurodegeneration

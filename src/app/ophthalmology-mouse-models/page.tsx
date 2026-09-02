@@ -819,7 +819,7 @@ export default function OphthalmologyMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated ophthalmology mouse models for eye disease research. Study retinal degeneration, glaucoma, and vision disorders.",
             "serviceType": "Ophthalmology Mouse Model Generation"

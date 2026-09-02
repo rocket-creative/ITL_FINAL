@@ -8,7 +8,7 @@ extracted: "2026-01-09T17:03:03.996Z"
 
 **Url: /custom-mouse-models**
 
-**Meta Description: Ingenious Targeting Laboratory generates generated knockout, knockin, and humanized mouse models. 2,800+ models generated since 1998 with pre germline characterization.**
+**Meta Description: ingenious targeting laboratory generates generated knockout, knockin, and humanized mouse models. 2,800+ models generated since 1998 with pre germline characterization.**
 
 **Primary Keyword: mouse model generation**
 
@@ -18,13 +18,13 @@ extracted: "2026-01-09T17:03:03.996Z"
 
 # Mouse Model Generation
 
-Since 1998, Ingenious Targeting Laboratory has generated over 2,800 mouse model generation for researchers worldwide. Our gene targeting expertise spans knockout, knockin, humanized, and transgenic approaches.
+Since 1998, ingenious targeting laboratory has generated over 2,800 mouse models for researchers worldwide. Our gene targeting expertise spans knockout, knockin, humanized, and transgenic approaches.
 
-Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgene integration, Ingenious Targeting Laboratory provides the scientific consultation and technical execution to deliver models optimized for your specific research goals.
+Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgene integration, ingenious targeting laboratory provides the scientific consultation and technical execution to deliver models optimized for your specific research goals.
 
 ## Knockout Mouse Models
 
-Knockout mice carry targeted deletions that eliminate gene function, enabling loss of function studies across every therapeutic area. Ingenious Targeting Laboratory offers multiple knockout strategies for your experimental requirements.
+Knockout mice carry targeted deletions that eliminate gene function, enabling loss of function studies across every therapeutic area. Ingenious targeting laboratory offers multiple knockout strategies for your experimental requirements.
 
 ### Conventional Knockout
 
@@ -106,7 +106,7 @@ Bacterial artificial chromosome BAC targeting enables integration of large genom
 
 (/transgenic-mouse-service)
 
-## The Ingenious Targeting Laboratory Approach
+## The ingenious targeting laboratory Approach
 
 ### Scientific Consultation
 
@@ -126,7 +126,7 @@ Every project includes detailed documentation of targeting design, germline tran
 
 ## Selected Publications
 
-Mouse model generation from Ingenious Targeting Laboratory have contributed to over 800 peer reviewed publications across all major journals including Nature, Cell, Science, and specialty journals in every therapeutic area.
+Mouse model generation from ingenious targeting laboratory have contributed to over 800 peer reviewed publications across all major journals including Nature, Cell, Science, and specialty journals in every therapeutic area.
 
 (/publications)
 
@@ -149,13 +149,13 @@ Mouse model generation from Ingenious Targeting Laboratory have contributed to o
 
 **What strain backgrounds are available for model generation?**
 
-Ingenious Targeting Laboratory offers C57BL/6, BALB/c, and HYBRID 129 x C57BL/6 strains. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological studies. Strain selection depends on your research requirements and downstream breeding plans.
+Ingenious targeting laboratory offers C57BL/6, BALB/c, and HYBRID 129 x C57BL/6 strains. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological studies. Strain selection depends on your research requirements and downstream breeding plans.
 
 **What is included in a complete mouse model generation project?**
 
 Projects include scientific consultation, targeting design, injection, founder generation, breeding to germline transmission, genotyping protocols, and delivery of F1 heterozygous mice. 
 
-**Can Ingenious Targeting Laboratory help if I already have a targeting vector or other reagents?**
+**Can ingenious targeting laboratory help if I already have a targeting vector or other reagents?**
 
 Yes. Partial service options are available for researchers with existing reagents. Services include gene targeting only, microinjection only, or germline transmission breeding. Contact us to discuss your specific requirements and receive a project quote.
 

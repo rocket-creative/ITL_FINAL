@@ -140,7 +140,7 @@ const technicalResourcesData = {
 // Publications Data
 const publicationsData = {
   title: "Publications",
-  description: "ingenious targeting laboratory generated mouse models have contributed to more than 800 peer reviewed publications across all major therapeutic areas and journals including Nature, Cell, Science, and specialty publications.",
+  description: "Ingenious targeting laboratory generated mouse models have contributed to more than 800 peer reviewed publications across all major therapeutic areas and journals including Nature, Cell, Science, and specialty publications.",
   features: [
     "Searchable archive by therapeutic area",
     "Publications organized by model type",
@@ -1245,7 +1245,7 @@ export default function ResourcesPage() {
             "publisher": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })

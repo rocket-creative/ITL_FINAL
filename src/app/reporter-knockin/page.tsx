@@ -882,7 +882,7 @@ export default function ReporterKnockinPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated reporter knockin mouse models for gene expression analysis. LacZ, fluorescent protein, and luciferase reporters at endogenous loci. Since 1998.",
             "serviceType": "Mouse Model Generation"

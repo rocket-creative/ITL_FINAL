@@ -15,7 +15,7 @@ import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/compone
 const heroData = {
   badge: "Knockout Design",
   title: "Critical Exon Selection",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including Science, Nature, and Cell.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including Science, Nature, and Cell.",
   description: "Selecting which exon to delete for knockout or flanking for conditional control is arguably the most important decision in targeting design. A well chosen exon maximizes loss of function. A poorly chosen exon may leave residual protein activity."
 };
 
@@ -629,7 +629,7 @@ export default function CriticalExonSelectionPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Expert guidance on critical exon selection for knockout mouse design. Choose optimal exons for effective gene inactivation since 1998.",
             "serviceType": "Critical Exon Selection"

@@ -191,7 +191,7 @@ export default function TermsPage() {
               <div style={sectionStyle}>
                 <h2 style={headingStyle}>2. Description of services</h2>
                 <p style={paragraphStyle}>
-                  ingenious targeting laboratory provides generated gene targeting services for the 
+                  ingenious targeting laboratory provides mouse model generation services for the 
                   generation of genetically modified mouse models. Our services include but are 
                   not limited to:
                 </p>

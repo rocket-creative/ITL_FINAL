@@ -376,7 +376,7 @@ export default function PricingGuideClient() {
                 textAlign: 'center',
               }}
             >
-              Why Choose Ingenious Targeting Laboratory?
+              Why Choose ingenious targeting laboratory?
             </h2>
 
             <ul

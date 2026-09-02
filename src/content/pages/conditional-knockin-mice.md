@@ -4,7 +4,7 @@ slug: "conditional-knockin-mice"
 extracted: "2026-01-09T17:03:03.472Z"
 ---
 
-# Conditional Knockin Mice | Inducible Gene Expression | Ingenious Targeting Laboratory
+# Conditional Knockin Mice | Inducible Gene Expression | ingenious targeting laboratory
 
 **Url: /conditional-knockin-mice**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.472Z"
 
 # Conditional Knockin Mice
 
-Conditional knockin mouse models enable controlled gene expression through Cre lox mediated recombination. Since 1998, Ingenious Targeting Laboratory has generated conditional knockin models for inducible reporter expression, tissue specific gene activation, and temporal control of gene function.
+Conditional knockin mouse models enable controlled gene expression through Cre lox mediated recombination. Since 1998, ingenious targeting laboratory has generated conditional knockin models for inducible reporter expression, tissue specific gene activation, and temporal control of gene function.
 
 Conditional knockin alleles are designed with LoxP sites flanking a STOP cassette that prevents expression until Cre mediated recombination removes the STOP sequence. This approach enables spatial and temporal control over gene expression, essential for studying genes with developmental effects or when expression timing is critical.
 

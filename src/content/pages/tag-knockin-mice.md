@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:05.959Z"
 
 # Tag Knockin Mice
 
-Since 1998, Ingenious Targeting Laboratory has generated epitope tag knockin models that enable detection, purification, and study of endogenous proteins. Tag knockin mice express epitope tagged proteins from the endogenous locus, providing physiological expression levels without requiring gene specific antibodies.
+Since 1998, ingenious targeting laboratory has generated epitope tag knockin models that enable detection, purification, and study of endogenous proteins. Tag knockin mice express epitope tagged proteins from the endogenous locus, providing physiological expression levels without requiring gene specific antibodies.
 
-Whether you need FLAG, HA, V5, Myc, or other epitope tags, Ingenious Targeting Laboratory designs and generates tag knockin alleles optimized for your specific protein detection and purification goals.
+Whether you need FLAG, HA, V5, Myc, or other epitope tags, ingenious targeting laboratory designs and generates tag knockin alleles optimized for your specific protein detection and purification goals.
 
 ## Why Use Tag Knockin Models
 
@@ -130,7 +130,7 @@ Tagged protein expression is validated by immunoblotting and immunofluorescence 
 
 ## Selected Publications
 
-Tag knockin models from Ingenious Targeting Laboratory have enabled protein studies published in leading journals across research areas.
+Tag knockin models from ingenious targeting laboratory have enabled protein studies published in leading journals across research areas.
 
 Tebbe L, Mwoyosvi ML, Crane R, Makia MS, Kakakhel M, Cosgrove D, Al-Ubaidi MR, Naash MI. 2023. [The usherin mutation c.2299delG leads to its mislocalization and disrupts interactions with whirlin and VLGR1.](https://pubmed.ncbi.nlm.nih.gov/36810733/)*Nat Commun ***14**(1): 972.
 

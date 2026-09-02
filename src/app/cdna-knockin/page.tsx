@@ -731,7 +731,7 @@ export default function CDNAKnockinPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated cDNA knockin mouse models for gene expression studies. Insert complementary DNA sequences into specific genomic loci. Since 1998.",
             "serviceType": "Mouse Model Generation"

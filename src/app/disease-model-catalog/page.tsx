@@ -17,7 +17,7 @@ import { CatalogCustomDualCta, StandardPageCtaStack } from '@/components/UXUIDC'
 const heroData = {
   badge: "Catalog Models",
   title: "Disease Model Catalog",
-  intro: "ingenious targeting laboratory maintains a catalog of disease model mouse lines available for research applications. These models represent disease relevant genotypes available for immediate use in your studies.",
+  intro: "Ingenious targeting laboratory maintains a catalog of disease model mouse lines available for research applications. These models represent disease relevant genotypes available for immediate use in your studies.",
   description: "Our disease model catalog includes models across all major therapeutic areas, from oncology and neuroscience to metabolic disease and immunology. All catalog models include genotyping protocols, strain background information, and health documentation."
 };
 
@@ -177,7 +177,7 @@ export default function DiseaseModelCatalogPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Disease Model Mouse Lines"

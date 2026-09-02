@@ -213,7 +213,7 @@ export default function LoxPSiteDesignPage() {
           __html: JSON.stringify(buildFAQSchema('/loxp-site-design', faqData)),
         }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "LoxP Site Design", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "LoxP site design for conditional knockout alleles since 1998.", "serviceType": "LoxP Site Design" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "LoxP Site Design", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "LoxP site design for conditional knockout alleles since 1998.", "serviceType": "LoxP Site Design" }) }} />
     </div>
   );
 }

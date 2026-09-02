@@ -231,7 +231,7 @@ export default function MetabolicDiseaseMouseModelsPage() {
           __html: JSON.stringify(buildFAQSchema('/metabolic-disease-mouse-models', faqData)),
         }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Metabolic Disease Mouse Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Generated metabolic disease mouse models for diabetes, obesity, and NASH research since 1998.", "serviceType": "Metabolic Disease Mouse Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Metabolic Disease Mouse Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "Generated metabolic disease mouse models for diabetes, obesity, and NASH research since 1998.", "serviceType": "Metabolic Disease Mouse Models" }) }} />
     </div>
   );
 }

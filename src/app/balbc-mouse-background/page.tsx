@@ -178,7 +178,7 @@ const faqData = [
   },
   {
     question: "Can I backcross my existing model to BALB/c background?",
-    answer: "Yes. ingenious targeting laboratory provides backcrossing services to transfer models to BALB/c or other backgrounds. Contact us for more information."
+    answer: "Yes. Ingenious targeting laboratory provides backcrossing services to transfer models to BALB/c or other backgrounds. Contact us for more information."
   },
   {
     question: "How do strain backgrounds affect model phenotypes?",
@@ -227,7 +227,7 @@ export default function BALBcMouseBackgroundPage() {
             "description": "BALB/c mouse strain characteristics, immunological applications, and gene targeting considerations. Mouse model generation on BALB/c background since 1998.",
             "publisher": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })

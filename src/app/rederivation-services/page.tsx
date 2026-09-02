@@ -16,7 +16,7 @@ import { StandardPageCtaStack } from '@/components/UXUIDC';
 const heroData = {
   badge: "Health Reestablishment",
   title: "Rederivation Services",
-  intro: "ingenious targeting laboratory provides mouse rederivation services to reestablish specific pathogen free (SPF) health status for valuable mouse lines. Since 1998, we have successfully rederived hundreds of mouse lines, enabling transfer to SPF facilities and restoration of colony health.",
+  intro: "Ingenious targeting laboratory provides mouse rederivation services to reestablish specific pathogen free (SPF) health status for valuable mouse lines. Since 1998, we have successfully rederived hundreds of mouse lines, enabling transfer to SPF facilities and restoration of colony health.",
   description: "Rederivation eliminates pathogens through embryo transfer or cesarean section, producing offspring free of maternal pathogens. This process is essential when mouse lines have been exposed to pathogens or when transferring lines to SPF facilities requiring specific health status."
 };
 
@@ -570,7 +570,7 @@ export default function RederivationServicesPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse rederivation services to reestablish SPF health status. Embryo transfer and cesarean section rederivation for pathogen free colonies.",
             "serviceType": "Rederivation Services"

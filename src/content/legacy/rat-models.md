@@ -17,7 +17,7 @@ Available in various rat strains like Sprague Dawley, Long Evans, Wistar, and Le
 
 ## What Researchers Say
 
-> "We have worked with inGenious Targeting Laboratory, Inc. on a variety of conventional, conditional and knockin projects, and we are very impressed with how flexible their service was to our needs and expectations. We look forward to our continued success in generating different mouse models with iTL."
+> "We have worked with ingenious targeting laboratory, Inc. on a variety of conventional, conditional and knockin projects, and we are very impressed with how flexible their service was to our needs and expectations. We look forward to our continued success in generating different mouse models with iTL."
 >
 > — **Iannis Aifantis, PhD**, NYU School of Medicine
 

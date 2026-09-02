@@ -22,7 +22,7 @@ const REQUEST_QUOTE_THANK_YOU = '/request-quote/thank-you/';
 const heroData = {
   badge: "Our Services",
   title: "Mouse Model Quote Request",
-  intro: "Submit your mouse model project details to receive a project quote including timeline, deliverables, and pricing. ingenious targeting laboratory\'s scientific consultants will review your request and provide strategic recommendations along with project pricing.",
+  intro: "Submit your mouse model project details to receive a project quote including timeline, deliverables, and pricing. Ingenious targeting laboratory\'s scientific consultants will review your request and provide strategic recommendations along with project pricing.",
   description: ""
 };
 

@@ -437,7 +437,7 @@ export default function TamoxifenInducibleCrePage() {
           __html: JSON.stringify(buildFAQSchema('/tamoxifen-inducible-cre', faqData)),
         }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tamoxifen Inducible Cre", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Tamoxifen inducible Cre systems for temporal gene control. CreERT2 for time controlled gene activation since 1998.", "serviceType": "Tamoxifen Inducible Cre" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tamoxifen Inducible Cre", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "Tamoxifen inducible Cre systems for temporal gene control. CreERT2 for time controlled gene activation since 1998.", "serviceType": "Tamoxifen Inducible Cre" }) }} />
     </div>
   );
 }

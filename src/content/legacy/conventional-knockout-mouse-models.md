@@ -19,7 +19,7 @@ With our streamlined process and advanced technologies, we are able to create yo
 
 ## What Researchers Say
 
-> "ingenious Targeting Laboratory is highly recommended for generating animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress."
+> "Ingenious targeting laboratory is highly recommended for custom animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress."
 >
 > — **Hyekyung Plumley, PhD**, Warren Center for Neuroscience Drug Discovery
 
@@ -81,7 +81,7 @@ Our proprietary F.A.S.T.™ system can be used to produce a global knockout-firs
 
 Selection cassettes such as Neomycin, Hygromycin, and Puromycin are commonly used to generate mouse knockout and knockin models. The cassette serves important purposes during the mouse model production process, but it may cause issues in later stages of mouse development and affect the phenotype [1], [2]. It is recommended to remove the cassette before studying the model.
 
-ingenious targeting laboratory has developed several proprietary FLP ES cell lines which aid to remove the selection cassette without any additional labor. This significantly speeds up the process of mouse model generation.
+Ingenious targeting laboratory has developed several proprietary FLP ES cell lines which aid to remove the selection cassette without any additional labor. This significantly speeds up the process of mouse model generation.
 
 ### Selection Cassette Purposes
 

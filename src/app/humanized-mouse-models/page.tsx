@@ -127,7 +127,7 @@ const strategiesData = {
 // TruHumanization Data
 const truHumanizationData = {
   title: "TruHumanization™ Technology",
-  description: "ingenious targeting laboratory's proprietary TruHumanization™ technology optimizes humanization strategies for maximum therapeutic relevance and physiological compatibility with complete gene replacement.",
+  description: "Ingenious targeting laboratory's proprietary TruHumanization™ technology optimizes humanization strategies for maximum therapeutic relevance and physiological compatibility with complete gene replacement.",
   note: "Quality Assurance: All TruHumanization™ projects include pre-germline analysis to verify correct human sequence integration before mouse generation."
 };
 
@@ -944,7 +944,7 @@ export default function HumanizedMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "alternateName": "iTL",
               "url": "https://www.genetargeting.com"
             },
@@ -971,13 +971,13 @@ export default function HumanizedMouseModelsPage() {
             "author": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "publisher": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
             },
             "about": ["Humanized mouse models", "Immune checkpoint humanization", "PD1", "PDL1", "CTLA4", "Gene replacement", "Mouse model generation"],

@@ -93,7 +93,7 @@ Biomedical research institutions that maintain core facilities and shared resour
 
 ‍
 
-## About Ingenious Targeting Laboratory, Inc.
+## About ingenious targeting laboratory, Inc.
 
 Since 1998, ingenious targeting laboratory has been a leading provider of model generation genetically modified mouse models. As one of the pioneering mouse gene targeting companies, we tailor each model to meet the exact needs of our clients in fields such as immunology, neuroscience, cancer research, and more. Utilizing classic and cutting-edge technologies, including CRISPR and ES cells, we produce advanced animal models that enhance the reproducibility and reliability of research. Our trusted models are highly validated and featured in hundreds of high-impact journals. We have recently expanded our service offerings to include catalog mouse models and preclinical solutions. By choosing ingenious targeting laboratory, our academic and industry clients benefit from our extensive expertise, ensuring their mouse models are relevant to human health, addressing key criticisms in the field, and safeguard their research investments.
 

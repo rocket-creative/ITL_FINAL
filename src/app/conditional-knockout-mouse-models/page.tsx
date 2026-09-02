@@ -134,7 +134,7 @@ const alleleDesignData = {
 // TruView Data
 const truViewData = {
   title: "TruView Conditional Knockout™",
-  description: "ingenious targeting laboratory's proprietary TruView technology provides strong reporter expression after knockout and can be used with genes of almost any size.",
+  description: "Ingenious targeting laboratory's proprietary TruView technology provides strong reporter expression after knockout and can be used with genes of almost any size.",
   benefits: [
     "Visualization of recombined cells regardless of target gene expression levels",
     "All from one target gene locus",
@@ -1023,7 +1023,7 @@ export default function ConditionalKnockoutMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated conditional knockout mouse models using Cre lox technology. Floxed alleles for tissue specific and inducible gene deletion. 2,800+ models generated since 1998.",
             "serviceType": "Mouse Model Generation"

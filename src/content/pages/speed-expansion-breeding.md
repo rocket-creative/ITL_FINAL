@@ -4,7 +4,7 @@ slug: "speed-expansion-breeding"
 extracted: "2026-01-09T17:03:05.852Z"
 ---
 
-# Speed Expansion Breeding | Rapid Cohort Generation | Ingenious Targeting Laboratory
+# Speed Expansion Breeding | Rapid Cohort Generation | ingenious targeting laboratory
 
 **Url: /speed-expansion-breeding**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.852Z"
 
 # Speed Expansion Breeding
 
-Ingenious Targeting Laboratory's speed expansion breeding services generate experimental cohorts rapidly through optimized breeding strategies and large scale production capabilities. Since 1998, we have supported researchers with rapid cohort generation for time sensitive studies and large scale experiments.
+Ingenious targeting laboratory's speed expansion breeding services generate experimental cohorts rapidly through optimized breeding strategies and large scale production capabilities. Since 1998, we have supported researchers with rapid cohort generation for time sensitive studies and large scale experiments.
 
 Speed expansion breeding uses strategic breeding pair management, parallel breeding schemes, and optimized husbandry to accelerate cohort generation while maintaining genetic integrity and health status. This service is ideal when experimental timelines require rapid animal production.
 

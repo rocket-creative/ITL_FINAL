@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:03.129Z"
 
 # BALB/c Mouse Background
 
-Since 1998, Ingenious Targeting Laboratory has mouse model generation on multiple strain backgrounds including BALB/c. Understanding strain specific characteristics is essential for selecting the optimal genetic background for your research. BALB/c mice are particularly valuable for immunological studies, syngeneic tumor models, and research where the strain's unique characteristics provide experimental advantages.
+Since 1998, ingenious targeting laboratory has mouse model generation on multiple strain backgrounds including BALB/c. Understanding strain specific characteristics is essential for selecting the optimal genetic background for your research. BALB/c mice are particularly valuable for immunological studies, syngeneic tumor models, and research where the strain's unique characteristics provide experimental advantages.
 
-Whether you are generating new knockout or knockin models on BALB/c background or backcrossing existing models onto this strain, Ingenious Targeting Laboratory provides the expertise to deliver well characterized models suited to your research needs.
+Whether you are generating new knockout or knockin models on BALB/c background or backcrossing existing models onto this strain, ingenious targeting laboratory provides the expertise to deliver well characterized models suited to your research needs.
 
 ## BALB/c Strain Characteristics
 
@@ -126,7 +126,7 @@ C57BL/6 is more susceptible to diet induced obesity and metabolic dysfunction. B
 
 ## Selected Publications
 
-Mouse models from Ingenious Targeting Laboratory have been successfully established on multiple strain backgrounds for research published in leading journals.
+Mouse models from ingenious targeting laboratory have been successfully established on multiple strain backgrounds for research published in leading journals.
 
 (/publications)
 

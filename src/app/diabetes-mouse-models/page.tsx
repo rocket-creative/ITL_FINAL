@@ -612,7 +612,7 @@ export default function DiabetesMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated diabetes mouse models for type 1 and type 2 diabetes research. Beta cell knockouts, insulin signaling models, and metabolic phenotyping.",
             "serviceType": "Diabetes Mouse Model Generation"

@@ -376,7 +376,7 @@ export default function ConditionalKnockoutCohortBreedingPage() {
 
             <div className="hero-animate flex flex-wrap gap-4">
               <Link
-                href="/cohort-consultation/?ref=ckob-hero"
+                href="/cohort-consultation/?ref=ckob-hero#request-form"
                 className={`inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${focusRing}`}
                 style={{
                   backgroundColor: 'white',
@@ -560,7 +560,7 @@ export default function ConditionalKnockoutCohortBreedingPage() {
               expected yields.
             </p>
             <Link
-              href="/cohort-consultation/?ref=ckob-yields"
+              href="/cohort-consultation/?ref=ckob-yields#request-form"
               className={`inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${focusRing}`}
               style={{
                 backgroundColor: 'white',
@@ -849,7 +849,7 @@ export default function ConditionalKnockoutCohortBreedingPage() {
               scientist will return a cross path with expected yields, a pair count, and a schedule.
             </p>
             <Link
-              href="/cohort-consultation/?ref=ckob-foot"
+              href="/cohort-consultation/?ref=ckob-foot#request-form"
               className={`inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${focusRing}`}
               style={{
                 backgroundColor: 'white',

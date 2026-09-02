@@ -4,7 +4,7 @@ slug: "cdna-knockin"
 extracted: "2026-01-09T17:03:03.355Z"
 ---
 
-# cDNA Knockin Mouse Models | Complementary DNA Insertion | Ingenious Targeting Laboratory
+# cDNA Knockin Mouse Models | Complementary DNA Insertion | ingenious targeting laboratory
 
 **Url: /cdna-knockin**
 

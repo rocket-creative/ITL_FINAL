@@ -449,7 +449,7 @@ export default function HIL4HIL4RPage() {
     sku: 'HU 2000106',
     brand: {
       '@type': 'Organization',
-      name: 'Ingenious Targeting Laboratory',
+      name: 'ingenious targeting laboratory',
       url: 'https://genetargeting.com',
       foundingDate: '1998',
     },

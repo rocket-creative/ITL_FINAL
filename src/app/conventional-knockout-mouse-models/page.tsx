@@ -15,7 +15,7 @@ import { BreedingSchemeArchitectCTA, LabSignalsSignup, BreadcrumbSchema } from '
 const heroData = {
   badge: "Global Gene Deletion",
   title: "Conventional Knockout Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse model generation, including conventional knockouts - providing researchers with definitive loss of function tools for understanding gene function across every major therapeutic area.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse models, including conventional knockouts — providing researchers with definitive loss of function tools for understanding gene function across every major therapeutic area.",
   description: "Conventional knockout mice, also known as global or constitutive knockouts, carry complete gene inactivation in all tissues throughout development and adult life. These models establish the fundamental phenotypic consequences of gene loss and serve as the foundation for understanding target biology."
 };
 
@@ -815,7 +815,7 @@ export default function ConventionalKnockoutMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Conventional knockout mouse models for global gene deletion studies. Complete gene inactivation throughout the organism.",
             "serviceType": "Mouse Model Generation"

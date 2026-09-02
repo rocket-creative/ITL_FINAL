@@ -16,7 +16,7 @@ import { StandardPageCtaStack } from '@/components/UXUIDC';
 const heroData = {
   badge: "Model Characterization",
   title: "Mouse Phenotyping Services",
-  intro: "ingenious targeting laboratory provides comprehensive phenotyping services to characterize your mouse model generation across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.",
+  intro: "Ingenious targeting laboratory provides comprehensive phenotyping services to characterize your mouse model generation across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.",
   description: "From basic clinical observations through specialized disease specific endpoints, our phenotyping capabilities help you understand your model's biology and validate its utility for your research program."
 };
 
@@ -691,7 +691,7 @@ export default function PhenotypingServicesPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Comprehensive mouse phenotyping services including histopathology, clinical chemistry, behavioral testing, and disease specific phenotyping. Since 1998.",
             "serviceType": "Phenotyping Services"

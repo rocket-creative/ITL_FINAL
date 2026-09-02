@@ -20,7 +20,7 @@ import { UXUIDCResourceLinks, conditionalReversibleResources, BreedingSchemeArch
 const heroData = {
   badge: "Inducible Gene Targeting",
   title: "Inducible Conditional Knockout",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, including conditional alleles compatible with inducible Cre systems. Our knockout models have supported research published in more than 800 peer reviewed articles, including in Science, Nature and Cell.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects, including conditional alleles compatible with inducible Cre systems. Our knockout models have supported research published in more than 800 peer reviewed articles, including in Science, Nature and Cell.",
   description: "Inducible conditional knockout combines the tissue specificity of conditional gene targeting with temporal control over when deletion occurs. By using tamoxifen inducible CreERT2 or doxycycline regulated systems, researchers can trigger gene deletion at any point in development or adult life, enabling study of gene function independent of developmental requirements and modeling acute versus chronic loss of function phenotypes."
 };
 
@@ -40,7 +40,7 @@ const twoComponentData = {
   components: [
     {
       title: "Floxed (Conditional) Allele",
-      description: "The target gene contains LoxP sites flanking critical exons. The floxed allele functions normally until exposed to Cre recombinase. ingenious targeting laboratory can generate these conditional alleles specific to your research."
+      description: "The target gene contains LoxP sites flanking critical exons. The floxed allele functions normally until exposed to Cre recombinase. Ingenious targeting laboratory can generate these conditional alleles specific to your research."
     },
     {
       title: "Inducible Cre Driver",
@@ -255,7 +255,7 @@ export default function InducibleConditionalKnockoutPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Mouse Model Generation",

@@ -15,7 +15,7 @@ import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconSettings }
 const heroData = {
   badge: "Technology Platform",
   title: "Gene Targeting Technology Overview",
-  intro: "Ingenious Targeting Laboratory has refined gene targeting technologies through more than 2,800 model generation projects. Our methodology combines proven strategies with sophisticated allele designs to deliver mouse models with verified genetic modifications and predictable performance.",
+  intro: "Ingenious targeting laboratory has refined gene targeting technologies through more than 2,800 model generation projects. Our methodology combines proven strategies with sophisticated allele designs to deliver mouse models with verified genetic modifications and predictable performance.",
   description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. This overview introduces the core technologies that enable precise genetic modification in mice."
 };
 
@@ -590,7 +590,7 @@ export default function TechnologyOverviewPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Comprehensive gene targeting technology platform. gene targeting, Cre lox, FLP FRT, inducible systems, and proprietary innovations since 1998.",
             "serviceType": "Gene Targeting Technology"

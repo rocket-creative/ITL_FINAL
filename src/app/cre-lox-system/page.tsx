@@ -993,7 +993,7 @@ export default function CreLoxSystemPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Cre lox system for conditional gene targeting in mice. LoxP site design, Cre recombinase drivers, and floxed allele generation. 2,800+ models generated since 1998.",
             "serviceType": "Conditional Gene Targeting Technology"

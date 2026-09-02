@@ -225,7 +225,7 @@ export default function TissueSpecificCreLinesPage() {
           __html: JSON.stringify(buildFAQSchema('/tissue-specific-cre-lines', faqData)),
         }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tissue Specific Cre Lines", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Tissue specific Cre driver lines for conditional gene targeting since 1998.", "serviceType": "Tissue Specific Cre Lines" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tissue Specific Cre Lines", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "Tissue specific Cre driver lines for conditional gene targeting since 1998.", "serviceType": "Tissue Specific Cre Lines" }) }} />
     </div>
   );
 }

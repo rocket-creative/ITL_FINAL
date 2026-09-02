@@ -17,7 +17,7 @@ import { buildFAQSchema, buildServiceSchema } from '@/lib/seo/schemaBlocks';
 const heroData = {
   badge: "Rapid Cohort Generation",
   title: "Speed Expansion Breeding",
-  intro: "ingenious targeting laboratory's speed expansion breeding services generate experimental cohorts rapidly through optimized breeding strategies and large scale production capabilities. Since 1998, we have supported researchers with rapid cohort expansion for time sensitive studies and large scale experiments.",
+  intro: "Ingenious targeting laboratory's speed expansion breeding services generate experimental cohorts rapidly through optimized breeding strategies and large scale production capabilities. Since 1998, we have supported researchers with rapid cohort expansion for time sensitive studies and large scale experiments.",
   description: "Speed expansion breeding uses strategic breeding pair management, parallel breeding schemes, and optimized husbandry to accelerate cohort generation while maintaining genetic integrity and health status. This service is ideal when experimental timelines require rapid animal production."
 };
 

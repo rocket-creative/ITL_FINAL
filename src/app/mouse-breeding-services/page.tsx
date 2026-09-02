@@ -34,7 +34,7 @@ const heroData = {
   badge: 'Breeding and Cohorts',
   title: 'Contract Mouse Breeding Services',
   snippet:
-    'ingenious Targeting Laboratory maintains your genetically engineered lines, executes breeding schemes, genotypes animals, and delivers study-ready cohorts from a U.S.-based barrier facility. Services include colony maintenance, cohort production, and complex multi-allelic breeding schemes.',
+    'Ingenious targeting laboratory maintains your genetically engineered lines, executes breeding schemes, genotypes animals, and delivers study-ready cohorts from a U.S.-based barrier facility. Services include colony maintenance, cohort production, and complex multi-allelic breeding schemes.',
   body: 'We have served 900+ laboratories since 1998 and generated 2,800+ custom genetically engineered models. Lines we did not create are welcome. Send us your strain and we will run the colony.',
 };
 
@@ -349,7 +349,7 @@ export default function MouseBreedingServicesPage() {
 
             <div className="hero-animate flex flex-wrap gap-4">
               <Link
-                href="/cohort-consultation/?ref=breeding-hero"
+                href="/cohort-consultation/?ref=breeding-hero#request-form"
                 className={`inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${focusRing}`}
                 style={{
                   backgroundColor: 'white',
@@ -484,7 +484,7 @@ export default function MouseBreedingServicesPage() {
                 Tell us the line, the genotype you need, how many animals, and when.
               </p>
               <Link
-                href="/cohort-consultation/?ref=breeding-scopes"
+                href="/cohort-consultation/?ref=breeding-scopes#request-form"
                 className={`inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${focusRing}`}
                 style={{
                   backgroundColor: '#008080',
@@ -626,7 +626,7 @@ export default function MouseBreedingServicesPage() {
               of regenerating the line.
             </p>
             <Link
-              href="/cohort-consultation/?ref=breeding-cryo"
+              href="/cohort-consultation/?ref=breeding-cryo#request-form"
               className={`inline-flex items-center gap-2 transition-colors duration-300 hover:text-white ${focusRing}`}
               style={{
                 color: 'white',
@@ -918,7 +918,7 @@ export default function MouseBreedingServicesPage() {
             </p>
             <div className="animate-in flex flex-wrap gap-4">
               <Link
-                href="/cohort-consultation/?ref=breeding-foot"
+                href="/cohort-consultation/?ref=breeding-foot#request-form"
                 className={`inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${focusRing}`}
                 style={{
                   backgroundColor: '#008080',

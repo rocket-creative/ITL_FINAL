@@ -49,7 +49,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'plumley-warren',
-    quote: 'ingenious Targeting Laboratory is highly recommended for generating animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.',
+    quote: 'Ingenious targeting laboratory is highly recommended for custom animal model generation. Past 2 years, we have made 2 conditional knockout mouse lines. All processes of each project were scientifically and professionally handled. Their scientific consulting to initiate the project was superb compared to other companies, and transparency of the project progress reported by project managers was excellent. Their excellency and dedication to meet our needs in a timely manner are invaluable to continuation of our research progress.',
     author: 'Hyekyung Plumley',
     credentials: 'PhD',
     affiliation: 'Warren Center for Neuroscience Drug Discovery',
@@ -89,7 +89,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'gabay-geneva',
-    quote: 'I have been always very satisfied by the work done by ingenious targeting laboratory for my generated mouse projects.',
+    quote: 'I have been always very satisfied by the work done by ingenious targeting laboratory for my custom mouse projects.',
     author: 'Cem Gabay',
     credentials: 'MD',
     affiliation: 'University Hospitals of Geneva',
@@ -217,7 +217,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'aifantis-nyu',
-    quote: 'We have worked with inGenious Targeting Laboratory, Inc. on a variety of conventional, conditional and knockin projects, and we are very impressed with how flexible their service was to our needs and expectations. We look forward to our continued success in generating different mouse models with iTL.',
+    quote: 'We have worked with ingenious targeting laboratory, Inc. on a variety of conventional, conditional and knockin projects, and we are very impressed with how flexible their service was to our needs and expectations. We look forward to our continued success in generating different mouse models with iTL.',
     author: 'Iannis Aifantis',
     credentials: 'PhD',
     affiliation: 'NYU School of Medicine',
@@ -225,7 +225,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'groenendyk-alberta',
-    quote: 'We recently generated a conditional knockout mouse model using iTL (inGenious Targeting Laboratory). We chose iTL based on time, cost, recommendation and location. We were pleased with the technical help we received in identifying the scope of the project. As well, information and services provided by the project manager were timely and extremely helpful and we were very impressed with the customer service. We were promptly updated throughout the project and upon completion, information was provided to help with genotyping and continuation of the project. We are very happy with the prompt services provided by iTL and would happily recommend them to our colleagues.',
+    quote: 'We recently generated a conditional knockout mouse model using iTL (ingenious targeting laboratory). We chose iTL based on time, cost, recommendation and location. We were pleased with the technical help we received in identifying the scope of the project. As well, information and services provided by the project manager were timely and extremely helpful and we were very impressed with the customer service. We were promptly updated throughout the project and upon completion, information was provided to help with genotyping and continuation of the project. We are very happy with the prompt services provided by iTL and would happily recommend them to our colleagues.',
     author: 'Jody Groenendyk',
     credentials: 'PhD',
     affiliation: 'University of Alberta',

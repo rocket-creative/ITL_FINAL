@@ -870,7 +870,7 @@ export default function TIM3HumanizedMicePage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "TIM3 humanized mouse models for immune checkpoint research. Study TIM3 targeting therapeutics and combination immunotherapy. Since 1998.",
             "serviceType": "Humanized Mouse Model Generation"

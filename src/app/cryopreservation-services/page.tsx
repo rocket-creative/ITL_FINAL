@@ -871,7 +871,7 @@ export default function CryopreservationServicesPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse cryopreservation services for long term line preservation. Sperm and embryo freezing with validated recovery. Protect your mouse models since 1998.",
             "serviceType": "Cryopreservation Services"

@@ -22,7 +22,7 @@ import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const heroData = {
   badge: "Our Services",
   title: "Rapid ROSA26 Targeting",
-  intro: "ingenious targeting laboratory\'s Rapid Rosa26™ technology accelerates transgenic model generation through established protocols and proven vector backbones. This proprietary approach enables shorter timelines while maintaining reliable, high quality models with predictable expression patterns.",
+  intro: "Ingenious targeting laboratory\'s Rapid Rosa26™ technology accelerates transgenic model generation through established protocols and proven vector backbones. This proprietary approach enables shorter timelines while maintaining reliable, high quality models with predictable expression patterns.",
   description: "Rosa26 remains the most widely used safe harbor locus for targeted transgenics due to its strong ubiquitous expression, well characterized regulatory elements, and minimal positional effects. Rapid Rosa26™ targeting leverages decades of experience with Rosa26 to streamline project execution."
 };
 

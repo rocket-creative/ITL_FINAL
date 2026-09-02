@@ -22,7 +22,7 @@ import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const heroData = {
   badge: "Our Services",
   title: "Pathway Analysis Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation enabling pathway level investigation of gene function, with hundreds of pathway analysis projects investigating how multiple genes interact within signaling cascades to regulate cellular and organismal phenotypes. Pathway analysis mouse models reveal functional dependencies, redundancy, and regulatory relationships invisible in single gene studies.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse models enabling pathway level investigation of gene function, with hundreds of pathway analysis projects investigating how multiple genes interact within signaling cascades to regulate cellular and organismal phenotypes. Pathway analysis mouse models reveal functional dependencies, redundancy, and regulatory relationships invisible in single gene studies.",
   description: "Pathway analysis requires systematic genetic manipulation of pathway components in coordinated ways enabling investigation of how gene interactions shape biological outputs. Multi gene approaches combined with temporal and spatial control of gene expression reveal mechanistic pathways governing normal biology and disease."
 };
 

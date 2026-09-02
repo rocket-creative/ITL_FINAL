@@ -21,7 +21,7 @@ import ModelGenerationPrioritySection from '@/components/gene-expansion/ModelGen
 const heroData = {
   badge: "Mouse Model Generation Services",
   title: "Mouse Model Generation",
-  intro: "ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+  intro: "Ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
   description: "Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgenic models, ingenious provides the PhD level scientific consultation and U.S. based technical execution to deliver models optimized for your specific research goals."
 };
 
@@ -36,7 +36,7 @@ const statsData = [
 // Knockout Models Data
 const knockoutData = {
   title: "Knockout Mouse Models",
-  intro: "Knockout mice carry targeted deletions that eliminate gene function, enabling loss of function studies across every therapeutic area. ingenious targeting laboratory offers multiple knockout strategies for your experimental requirements.",
+  intro: "Knockout mice carry targeted deletions that eliminate gene function, enabling loss of function studies across every therapeutic area. Ingenious targeting laboratory offers multiple knockout strategies for your experimental requirements.",
   models: [
     {
       title: "Conventional Knockout",
@@ -210,7 +210,7 @@ const publicationsData = getPublicationsForPage('/custom-mouse-models');
 const faqData = [
   {
     question: "What strain backgrounds are available for model generation?",
-    answer: "ingenious targeting laboratory offers C57BL/6, BALB/c, and HYBRID 129 x C57BL/6 strains. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological studies. Strain selection depends on your research requirements and downstream breeding plans."
+    answer: "Ingenious targeting laboratory offers C57BL/6, BALB/c, and HYBRID 129 x C57BL/6 strains. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological studies. Strain selection depends on your research requirements and downstream breeding plans."
   },
   {
     question: "What is included in a complete mouse model generation project?",
@@ -222,7 +222,7 @@ const faqData = [
   },
   {
     question: "What does the 100% germline transmission guarantee mean?",
-    answer: "ingenious targeting laboratory guarantees that every mouse model generation project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to all generated models."
+    answer: "Ingenious targeting laboratory guarantees that every mouse model generation project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to all generated models."
   }
 ];
 
@@ -268,11 +268,11 @@ export default function CustomMouseModelsPage() {
             "@type": "Service",
             "@id": "https://www.genetargeting.com/custom-mouse-models/#service",
             "name": "Mouse Model Generation",
-            "description": "ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+            "description": "Ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "alternateName": "iTL",
               "url": "https://www.genetargeting.com",
               "description": "U.S. based mouse model generation company since 1998 with a 100% germline transmission guarantee."

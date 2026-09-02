@@ -140,7 +140,7 @@ export const footerCta: Record<'default' | 'catalog' | 'publications' | 'disease
   publications: {
     title: 'Partner with iTL',
     description:
-      'ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a generated line.',
+      'Ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a generated line.',
     primaryButton: EQUAL_WEIGHT_BUTTONS[0],
     secondaryButton: EQUAL_WEIGHT_BUTTONS[1],
   },

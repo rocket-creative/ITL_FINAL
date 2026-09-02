@@ -1103,7 +1103,7 @@ export default function ImmunologyMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated immunology mouse models for immune system research. Study immune function, disease mechanisms, and therapeutics. Autoimmune and inflammatory disease models since 1998.",
             "serviceType": "Mouse Model Generation"

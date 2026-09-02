@@ -4,7 +4,7 @@ slug: "cre-line-selection-guide"
 extracted: "2026-01-09T17:03:03.762Z"
 ---
 
-# Cre Line Selection Guide | Tissue Specific Cre Drivers | Ingenious Targeting Laboratory
+# Cre Line Selection Guide | Tissue Specific Cre Drivers | ingenious targeting laboratory
 
 **Url: /cre-line-selection-guide**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.762Z"
 
 # Cre Line Selection Guide
 
-Selecting the appropriate Cre driver line is critical for successful conditional knockout experiments. Since 1998, Ingenious Targeting Laboratory has created over 2,800 model generation, including Cre driver lines, specific to your research projects. 
+Selecting the appropriate Cre driver line is critical for successful conditional knockout experiments. Since 1998, ingenious targeting laboratory has created over 2,800 model generation, including Cre driver lines, specific to your research projects. 
 
 This guide helps researchers navigate Cre line selection by tissue specificity, expression timing, recombination efficiency, and experimental requirements. Proper Cre selection ensures gene deletion occurs in the intended cell population with appropriate temporal control.
 
@@ -265,7 +265,7 @@ Several catalog available Cre lines:
 
 ### Generated Cre Line Generation
 
-If standard Cre lines don't meet requirements, Ingenious Targeting Laboratory can generate generated Cre specific to your experimental goals.
+If standard Cre lines don't meet requirements, ingenious targeting laboratory can generate generated Cre specific to your experimental goals.
 
 (/request-quote)
 

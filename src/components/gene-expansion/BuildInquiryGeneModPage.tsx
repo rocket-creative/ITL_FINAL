@@ -17,7 +17,7 @@ import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { buildBuildInquirySchemaGraph } from '@/lib/gene-expansion/schema';
 const TESTIMONIALS = [
   {
-    quote: 'ingenious targeting laboratory delivered exactly the floxed allele we designed, with clear milestones and germline confirmed founders.',
+    quote: 'Ingenious targeting laboratory delivered exactly the floxed allele we designed, with clear milestones and germline confirmed founders.',
     name: 'Dr. Sarah Plumley',
     institution: 'Academic research laboratory',
   },

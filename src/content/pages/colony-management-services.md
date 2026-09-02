@@ -4,7 +4,7 @@ slug: "colony-management-services"
 extracted: "2026-01-09T17:03:03.418Z"
 ---
 
-# Colony Management Services | Mouse Breeding &amp; Maintenance | Ingenious Targeting Laboratory
+# Colony Management Services | Mouse Breeding &amp; Maintenance | ingenious targeting laboratory
 
 **Url: /colony-management-services**
 
@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:03.418Z"
 
 # Mouse Colony Management Services
 
-Since 1998, Ingenious Targeting Laboratory has supported researchers with comprehensive colony management services, maintaining and expanding genetically engineered mouse lines for institutions worldwide. Our colony management expertise ensures your valuable mouse models are maintained with consistent genotyping, optimized breeding strategies, and professional animal husbandry.
+Since 1998, ingenious targeting laboratory has supported researchers with comprehensive colony management services, maintaining and expanding genetically engineered mouse lines for institutions worldwide. Our colony management expertise ensures your valuable mouse models are maintained with consistent genotyping, optimized breeding strategies, and professional animal husbandry.
 
-Colony management services enable research programs to focus on experimental work while experts handle the logistics of maintaining breeding colonies, tracking genotypes, and expanding lines for experimental cohorts. Whether you need ongoing colony maintenance, rapid expansion for a large study, or professional management of complex multi allele breeding schemes, Ingenious Targeting Laboratory provides the infrastructure and expertise to support your research program.
+Colony management services enable research programs to focus on experimental work while experts handle the logistics of maintaining breeding colonies, tracking genotypes, and expanding lines for experimental cohorts. Whether you need ongoing colony maintenance, rapid expansion for a large study, or professional management of complex multi allele breeding schemes, ingenious targeting laboratory provides the infrastructure and expertise to support your research program.
 
 Our facility maintains SPF (specific pathogen free) health status, enabling direct transfer of animals to most research institutions without quarantine. Combined with our experience managing thousands of genetically engineered lines, colony management services provide a reliable foundation for your research.
 

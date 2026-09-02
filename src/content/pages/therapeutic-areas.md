@@ -18,13 +18,13 @@ extracted: "2026-01-09T17:03:06.008Z"
 
 # Therapeutic Area Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has mouse model generation supporting research across every major therapeutic area. Our 2,800+ completed model generation projects span oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare disease, and ophthalmology, contributing to over 800 peer reviewed publications.
+Since 1998, ingenious targeting laboratory has mouse model generation supporting research across every major therapeutic area. Our 2,800+ completed model generation projects span oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare disease, and ophthalmology, contributing to over 800 peer reviewed publications.
 
-Whether you are studying disease mechanisms, validating therapeutic targets, or testing drug candidates, Ingenious Targeting Laboratory provides the generated knockout, knockin, and humanized models optimized for your specific disease research needs.
+Whether you are studying disease mechanisms, validating therapeutic targets, or testing drug candidates, ingenious targeting laboratory provides the generated knockout, knockin, and humanized models optimized for your specific disease research needs.
 
 ## Oncology Mouse Models
 
-Cancer research requires models that accurately recapitulate tumor biology, immune interactions, and therapeutic responses. Ingenious Targeting Laboratory supports oncology programs with tumor suppressor knockouts, oncogene models, and humanized immune checkpoint mice for immuno oncology studies.
+Cancer research requires models that accurately recapitulate tumor biology, immune interactions, and therapeutic responses. Ingenious targeting laboratory supports oncology programs with tumor suppressor knockouts, oncogene models, and humanized immune checkpoint mice for immuno oncology studies.
 
 ### Key Applications
 
@@ -36,7 +36,7 @@ Immuno oncology research benefits from humanized checkpoint models including PD1
 
 ## Neuroscience Mouse Models
 
-Neurological and neurodegenerative disease research demands models that reproduce disease pathology while enabling mechanistic studies. Ingenious Targeting Laboratory has generated models for Alzheimer disease, Parkinson disease, ALS, Huntington disease, epilepsy, autism spectrum disorders, and other neurological conditions.
+Neurological and neurodegenerative disease research demands models that reproduce disease pathology while enabling mechanistic studies. Ingenious targeting laboratory has generated models for Alzheimer disease, Parkinson disease, ALS, Huntington disease, epilepsy, autism spectrum disorders, and other neurological conditions.
 
 ### Key Applications
 
@@ -48,7 +48,7 @@ Movement disorder research uses alpha synuclein models for Parkinson disease, SO
 
 ## Metabolic Disease Mouse Models
 
-Metabolic research spans diabetes, obesity, fatty liver disease, and lipid metabolism disorders. Ingenious Targeting Laboratory provides models for studying metabolic pathways, testing therapeutic interventions, and understanding disease progression.
+Metabolic research spans diabetes, obesity, fatty liver disease, and lipid metabolism disorders. Ingenious targeting laboratory provides models for studying metabolic pathways, testing therapeutic interventions, and understanding disease progression.
 
 ### Key Applications
 
@@ -60,7 +60,7 @@ NASH and obesity research benefits from models that develop hepatic steatosis, i
 
 ## Immunology Mouse Models
 
-Immune system research requires models that accurately reflect human immunology while enabling mechanistic studies. Ingenious Targeting Laboratory supports autoimmune disease research, inflammatory conditions, and basic immunology with knockout, knockin, and humanized models.
+Immune system research requires models that accurately reflect human immunology while enabling mechanistic studies. Ingenious targeting laboratory supports autoimmune disease research, inflammatory conditions, and basic immunology with knockout, knockin, and humanized models.
 
 ### Key Applications
 
@@ -72,7 +72,7 @@ Humanized immune models express human cytokines, receptors, or immune checkpoint
 
 ## Cardiovascular Mouse Models
 
-Cardiovascular research encompasses atherosclerosis, heart failure, hypertension, cardiac fibrosis, and vascular disease. Ingenious Targeting Laboratory provides models for studying cardiovascular pathophysiology and testing therapeutic approaches.
+Cardiovascular research encompasses atherosclerosis, heart failure, hypertension, cardiac fibrosis, and vascular disease. Ingenious targeting laboratory provides models for studying cardiovascular pathophysiology and testing therapeutic approaches.
 
 ### Key Applications
 
@@ -84,7 +84,7 @@ Cardiac disease models address heart failure, arrhythmia, and fibrosis through m
 
 ## Rare Disease Mouse Models
 
-Rare and orphan diseases affect small patient populations but often have high unmet need for effective therapies. Ingenious Targeting Laboratory supports rare disease research with models for muscular dystrophies, lysosomal storage disorders, cystic fibrosis, and other inherited conditions.
+Rare and orphan diseases affect small patient populations but often have high unmet need for effective therapies. Ingenious targeting laboratory supports rare disease research with models for muscular dystrophies, lysosomal storage disorders, cystic fibrosis, and other inherited conditions.
 
 ### Key Applications
 
@@ -96,7 +96,7 @@ Lysosomal storage disorder models reproduce enzyme deficiencies that cause subst
 
 ## Ophthalmology Mouse Models
 
-Vision research addresses retinal degenerations, glaucoma, macular degeneration, and other ocular conditions. Ingenious Targeting Laboratory provides models for studying photoreceptor biology, retinal pigment epithelium function, and visual pathway development.
+Vision research addresses retinal degenerations, glaucoma, macular degeneration, and other ocular conditions. Ingenious targeting laboratory provides models for studying photoreceptor biology, retinal pigment epithelium function, and visual pathway development.
 
 ### Key Applications
 
@@ -116,7 +116,7 @@ Reporter knockins enable visualization of specific retinal cell populations and 
 
 ## Selected Publications
 
-Mouse models from Ingenious Targeting Laboratory appear in publications across all therapeutic areas, including specialty journals for oncology, neuroscience, metabolism, immunology, and cardiovascular research.
+Mouse models from ingenious targeting laboratory appear in publications across all therapeutic areas, including specialty journals for oncology, neuroscience, metabolism, immunology, and cardiovascular research.
 
 (/publications)
 

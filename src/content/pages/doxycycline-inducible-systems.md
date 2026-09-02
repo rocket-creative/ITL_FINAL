@@ -4,7 +4,7 @@ slug: "doxycycline-inducible-systems"
 extracted: "2026-01-09T17:03:04.233Z"
 ---
 
-# Doxycycline Inducible Systems | Tet On Tet Off Control | Ingenious Targeting Laboratory
+# Doxycycline Inducible Systems | Tet On Tet Off Control | ingenious targeting laboratory
 
 **Url: /doxycycline-inducible-systems**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.233Z"
 
 # Doxycycline Inducible Systems
 
-Since 1998, Ingenious Targeting Laboratory has implemented doxycycline inducible systems in mouse models requiring reversible, tunable gene expression control for transgene regulation, disease modeling, and therapeutic target validation.
+Since 1998, ingenious targeting laboratory has implemented doxycycline inducible systems in mouse models requiring reversible, tunable gene expression control for transgene regulation, disease modeling, and therapeutic target validation.
 
 Doxycycline inducible systems use tetracycline responsive elements to control transgene expression. Unlike permanent Cre mediated recombination, Tet systems provide reversible control, allowing genes to be turned on and off repeatedly by administering or withdrawing doxycycline.
 

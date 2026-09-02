@@ -4,7 +4,7 @@ slug: "conditional-vs-conventional-guide"
 extracted: "2026-01-09T17:03:03.587Z"
 ---
 
-# Conditional vs Conventional Knockout | Comparison Guide | Ingenious Targeting Laboratory
+# Conditional vs Conventional Knockout | Comparison Guide | ingenious targeting laboratory
 
 **Url: /conditional-vs-conventional-guide**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.587Z"
 
 # Conditional vs Conventional Knockout
 
-Since 1998, Ingenious Targeting Laboratory has completed over 2,800 generated gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals. Understanding the differences between conditional and conventional knockout strategies is essential for designing a model that answers your scientific questions.
+Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects, helping researchers select the optimal knockout approach for their specific research goals. Understanding the differences between conditional and conventional knockout strategies is essential for designing a model that answers your scientific questions.
 
 Both conditional and conventional knockouts create loss of function alleles, but they differ fundamentally in how and when gene inactivation occurs. This guide provides a direct comparison to help you choose the right approach for your project.
 

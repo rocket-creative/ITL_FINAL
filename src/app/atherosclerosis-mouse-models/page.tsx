@@ -121,7 +121,7 @@ const faqData = [
   },
   {
     question: "Can you combine multiple gene modifications for atherosclerosis research?",
-    answer: "Yes. ingenious targeting laboratory can combine conditional gene modifications with hyperlipidemic backgrounds and additional genetic modifications. For example, macrophage specific knockout on ApoE null background enables study of how specific genes affect plaque formation and inflammation in atherogenic context."
+    answer: "Yes. Ingenious targeting laboratory can combine conditional gene modifications with hyperlipidemic backgrounds and additional genetic modifications. For example, macrophage specific knockout on ApoE null background enables study of how specific genes affect plaque formation and inflammation in atherogenic context."
   }
 ];
 
@@ -590,7 +590,7 @@ export default function AtherosclerosisMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated atherosclerosis mouse models for cardiovascular research. Study plaque formation, lipid metabolism, and vascular disease mechanisms.",
             "serviceType": "Atherosclerosis Mouse Model Generation"

@@ -649,7 +649,7 @@ export default function ALSMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated ALS mouse models for amyotrophic lateral sclerosis research. SOD1, TDP43, FUS, and C9orf72 models for motor neuron disease studies.",
             "serviceType": "ALS Mouse Model Generation"

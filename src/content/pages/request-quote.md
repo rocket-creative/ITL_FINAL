@@ -4,11 +4,11 @@ slug: "request-quote"
 extracted: "2026-01-09T17:03:05.747Z"
 ---
 
-# Request a Project Quote | Mouse Model Generation Pricing | Ingenious Targeting Laboratory
+# Request a Project Quote | Mouse Model Generation Pricing | ingenious targeting laboratory
 
 **Url: /request-quote**
 
-**Meta Description: Request a generated mouse model quote. Include project details for knockout, knockin, humanized, or conditional models. Free consultation included.**
+**Meta Description: Request a mouse model generation quote. Include project details for knockout, knockin, humanized, or conditional models. Free consultation included.**
 
 **Primary Keyword: mouse model quote request**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.747Z"
 
 # Mouse Model Quote Request
 
-Submit your mouse model project details to receive a project quote including timeline, deliverables, and pricing. Ingenious Targeting Laboratory's scientific consultants will review your request and provide strategic recommendations along with project pricing.
+Submit your mouse model project details to receive a project quote including timeline, deliverables, and pricing. Ingenious targeting laboratory's scientific consultants will review your request and provide strategic recommendations along with project pricing.
 
 ## Project Information Needed
 
@@ -107,9 +107,9 @@ To provide an accurate quote, please include the following information in your r
 - Phone
 - Virtual meeting
 
-## Why Request a Quote from Ingenious Targeting Laboratory
+## Why Request a Quote from ingenious targeting laboratory
 
-With over 2,800 mouse model generation projects completed since 1998, Ingenious Targeting Laboratory brings extensive experience to every project. Our scientific consultants review each quote request carefully to provide accurate pricing and strategic recommendations.
+With over 2,800 mouse model generation projects completed since 1998, ingenious targeting laboratory brings extensive experience to every project. Our scientific consultants review each quote request carefully to provide accurate pricing and strategic recommendations.
 
 We understand that project budgets are important, and we work to provide cost effective solutions that meet your research requirements. Our quotes include detailed breakdowns of project phases, timeline expectations, and deliverables to help you make informed decisions.
 
@@ -165,7 +165,7 @@ If you prefer to discuss your project before requesting a formal quote:
 
 ### General Inquiries
 
-For questions about Ingenious Targeting Laboratory services or capabilities:
+For questions about ingenious targeting laboratory services or capabilities:
 
 (/general-contact)
 
@@ -183,7 +183,7 @@ Quotes are typically valid for 90 days from issue date. Quotes may be updated if
 
 **Is there a fee for project consultation?**
 
-No, Ingenious Targeting Laboratory provides complimentary scientific consultation for project design and strategy development.
+No, ingenious targeting laboratory provides complimentary scientific consultation for project design and strategy development.
 
 **What if my project changes after receiving a quote?**
 
@@ -191,11 +191,11 @@ Contact your project coordinator to discuss modifications. Updated quotes can be
 
 **Can you quote projects for species other than mice?**
 
-Yes, Ingenious Targeting Laboratory also provides services for rat, rabbit, and other species. Include species information in your request.
+Yes, ingenious targeting laboratory also provides services for rat, rabbit, and other species. Include species information in your request.
 
 **What about international shipping?**
 
-Ingenious Targeting Laboratory ships mice internationally. Shipping and import requirements are addressed during project planning.
+Ingenious targeting laboratory ships mice internationally. Shipping and import requirements are addressed during project planning.
 
 ## Resources
 

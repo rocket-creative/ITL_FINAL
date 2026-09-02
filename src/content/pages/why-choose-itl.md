@@ -4,27 +4,27 @@ slug: "why-choose-itl"
 extracted: "2026-01-09T17:03:06.286Z"
 ---
 
-# Why Choose Ingenious Targeting Laboratory | 28 Years of Mouse Model Expertise
+# Why Choose ingenious targeting laboratory | 28 Years of Mouse Model Expertise
 
 **Url: /why-choose-itl**
 
-**Meta Description: Why researchers choose Ingenious Targeting Laboratory for mouse model generation. 2,800+ models generated, 800+ publications, pre germline characterization since 1998.**
+**Meta Description: Why researchers choose ingenious targeting laboratory for mouse model generation. 2,800+ models generated, 800+ publications, pre germline characterization since 1998.**
 
-**Primary Keyword: why choose Ingenious Targeting Laboratory**
+**Primary Keyword: why choose ingenious targeting laboratory**
 
 **Secondary Keywords: mouse model expertise, gene targeting experience, gene targeting advantages, trusted mouse model provider**
 
 **Word Count: 1600**
 
-# Why Choose Ingenious Targeting Laboratory
+# Why Choose ingenious targeting laboratory
 
-Selecting a mouse model provider is a consequential decision that affects research timelines, budgets, and scientific outcomes. Ingenious Targeting Laboratory has earned the trust of researchers worldwide through 28 years of consistent performance, scientific expertise, and commitment to project success.
+Selecting a mouse model provider is a consequential decision that affects research timelines, budgets, and scientific outcomes. Ingenious targeting laboratory has earned the trust of researchers worldwide through 28 years of consistent performance, scientific expertise, and commitment to project success.
 
 ## Proven Track Record
 
 ### 28 Years of Experience
 
-Since 1998, Ingenious Targeting Laboratory has focused exclusively on mouse model generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
+Since 1998, ingenious targeting laboratory has focused exclusively on mouse model generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
 
 **2,800+ Models Generated Completed**
 
@@ -32,17 +32,17 @@ Spanning every model type and therapeutic area, this volume of experience means 
 
 **800+ Peer Reviewed Publications**
 
-Ingenious Targeting Laboratory generated models have contributed to research published in Nature, Cell, Science, and specialty journals across all fields. Our models advance science and careers.
+Ingenious targeting laboratory generated models have contributed to research published in Nature, Cell, Science, and specialty journals across all fields. Our models advance science and careers.
 
 **Clients Worldwide**
 
-Academic institutions, pharmaceutical companies, and biotechnology organizations on every continent trust Ingenious Targeting Laboratory for their mouse model needs.
+Academic institutions, pharmaceutical companies, and biotechnology organizations on every continent trust ingenious targeting laboratory for their mouse model needs.
 
 ## Scientific Expertise
 
 ### Specialized Consultation
 
-Ingenious Targeting Laboratory's scientific team includes specialists in molecular biology, mouse genetics, and biomedical research. When you work with Ingenious Targeting Laboratory, you benefit from:
+Ingenious targeting laboratory's scientific team includes specialists in molecular biology, mouse genetics, and biomedical research. When you work with ingenious targeting laboratory, you benefit from:
 
 - Deep experience across all model types
 - Expertise spanning all therapeutic areas
@@ -62,7 +62,7 @@ We don't simply execute specifications. We actively optimize:
 
 ### End to End Capability
 
-Ingenious Targeting Laboratory provides complete project management from initial consultation through delivery of study ready animals:
+Ingenious targeting laboratory provides complete project management from initial consultation through delivery of study ready animals:
 
 - Scientific consultation and design optimization
 - Targeting vector construction
@@ -73,7 +73,7 @@ Ingenious Targeting Laboratory provides complete project management from initial
 
 ### Flexible Engagement
 
-Not every project requires full service. Ingenious Targeting Laboratory offers:
+Not every project requires full service. Ingenious targeting laboratory offers:
 
 - Partial services from various starting points
 - Colony management and expansion
@@ -84,7 +84,7 @@ Not every project requires full service. Ingenious Targeting Laboratory offers:
 
 ### Regular Updates
 
-Throughout your project, Ingenious Targeting Laboratory provides:
+Throughout your project, ingenious targeting laboratory provides:
 
 - Milestone notifications at key project phases
 - Proactive communication about challenges
@@ -104,7 +104,7 @@ Our project coordinators and scientific consultants are available to discuss:
 
 ### AAALAC Accreditation
 
-Ingenious Targeting Laboratory's animal facilities meet the highest standards for animal care and welfare, ensuring ethical treatment and quality animal husbandry throughout your project.
+Ingenious targeting laboratory's animal facilities meet the highest standards for animal care and welfare, ensuring ethical treatment and quality animal husbandry throughout your project.
 
 ### Documented Processes
 
@@ -168,9 +168,9 @@ Track Record
 
 Publications demonstrate model utility in real research
 
-## Publications Featuring Ingenious Targeting Laboratory Models
+## Publications Featuring ingenious targeting laboratory Models
 
-Ingenious Targeting Laboratory generated models have enabled discoveries published across leading journals:
+Ingenious targeting laboratory generated models have enabled discoveries published across leading journals:
 
 **High Impact Journals**
 
@@ -188,7 +188,7 @@ Detailed methods papers documenting allele design strategies
 
 ## Start Your Project
 
-Experience the Ingenious Targeting Laboratory difference on your next mouse model project.
+Experience the ingenious targeting laboratory difference on your next mouse model project.
 
 (/request-quote)
 
@@ -196,17 +196,17 @@ Experience the Ingenious Targeting Laboratory difference on your next mouse mode
 
 ## Frequently Asked Questions
 
-**What makes Ingenious Targeting Laboratory different from other mouse model providers?**
+**What makes ingenious targeting laboratory different from other mouse model providers?**
 
-ingenious targeting laboratory has 28 years of exclusive focus on mouse model generation, 2,800+ completed model generation projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
+Ingenious targeting laboratory has 28 years of exclusive focus on mouse model generation, 2,800+ completed model generation projects, 800+ peer-reviewed publications, and pre-germline characterization that validates allele structure before mouse generation. This sustained focus has built institutional knowledge and refined processes that translate directly to project success.
 
 **How does ingenious targeting laboratory's experience benefit my project?**
 
-ingenious targeting laboratory's 2,800+ models generated across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application.
+Ingenious targeting laboratory's 2,800+ models generated across every model type and therapeutic area mean we have likely encountered challenges similar to yours and developed effective solutions. Our scientific team includes specialists in molecular biology, mouse genetics, and biomedical research who actively optimize allele design, exon selection, and cassette configuration for your specific research application.
 
 **What support does ingenious targeting laboratory provide after model delivery?**
 
-ingenious targeting laboratory provides ongoing support including colony management services, cryopreservation for line archival, rederivation for health status upgrade, and technical consultation. We work with you throughout your research program to ensure model performance and address any questions that arise.
+Ingenious targeting laboratory provides ongoing support including colony management services, cryopreservation for line archival, rederivation for health status upgrade, and technical consultation. We work with you throughout your research program to ensure model performance and address any questions that arise.
 
 **How do I get started with a mouse model generation project?**
 

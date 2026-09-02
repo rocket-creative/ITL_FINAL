@@ -99,7 +99,7 @@ const targetingData = {
     {
       title: "Allele Design Considerations",
       description: "Gene replacement allele design must account for sequence differences between mouse and human genes, including gene length, exon number, regulatory element locations, and protein domains.",
-      note: "ingenious targeting laboratory's scientific team evaluates each project to determine replacement boundaries and targeting strategy based on your specific research goals."
+      note: "Ingenious targeting laboratory's scientific team evaluates each project to determine replacement boundaries and targeting strategy based on your specific research goals."
     },
     {
       title: "Large Fragment Targeting",
@@ -199,7 +199,7 @@ export default function GeneReplacementPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Mouse Model Generation",

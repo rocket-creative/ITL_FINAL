@@ -17,7 +17,7 @@ const heroData = {
   badge: "Reliable Analysis",
   title: "Mouse Genotyping Services",
   intro: "Since 1998, ingenious targeting laboratory has provided comprehensive genotyping services supporting thousands of mouse model projects. Our genotyping capabilities ensure accurate breeding decisions and experimental design throughout your research program.",
-  description: "Reliable genotyping is essential for maintaining mouse colonies, verifying genetic modifications, and ensuring experimental reproducibility. ingenious targeting laboratory offers multiple genotyping methods tailored to your specific allele design and verification requirements."
+  description: "Reliable genotyping is essential for maintaining mouse colonies, verifying genetic modifications, and ensuring experimental reproducibility. Ingenious targeting laboratory offers multiple genotyping methods tailored to your specific allele design and verification requirements."
 };
 
 // Stats Data
@@ -155,11 +155,11 @@ const relatedResources = [
 const faqData = [
   {
     question: "What genotyping methods does ingenious targeting laboratory use?",
-    answer: "ingenious targeting laboratory uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements."
+    answer: "Ingenious targeting laboratory uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements."
   },
   {
     question: "Can ingenious targeting laboratory develop generated genotyping assays for new alleles?",
-    answer: "Yes. ingenious targeting laboratory can design generated genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Generated assay development includes protocol optimization and validation."
+    answer: "Yes. Ingenious targeting laboratory can design generated genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Generated assay development includes protocol optimization and validation."
   },
   {
     question: "What information is provided with genotyping results?",
@@ -167,7 +167,7 @@ const faqData = [
   },
   {
     question: "Do you provide high-throughput genotyping for large colonies?",
-    answer: "Yes. ingenious targeting laboratory provides high-throughput genotyping services optimized for rapid screening of large colonies. Optimized protocols reduce reagent costs while maintaining reliability and specificity. We work with you to determine the most efficient approach for your colony size and genotyping frequency needs."
+    answer: "Yes. Ingenious targeting laboratory provides high-throughput genotyping services optimized for rapid screening of large colonies. Optimized protocols reduce reagent costs while maintaining reliability and specificity. We work with you to determine the most efficient approach for your colony size and genotyping frequency needs."
   }
 ];
 
@@ -653,7 +653,7 @@ export default function MouseGenotypingServicePage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Comprehensive mouse genotyping services including PCR, Southern blot, and sequencing analysis. Reliable genotyping for breeding decisions since 1998.",
             "serviceType": "Genotyping Services"

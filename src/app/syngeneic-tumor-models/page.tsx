@@ -194,7 +194,7 @@ export default function SyngeneicTumorModelsPage() {
           __html: JSON.stringify(buildFAQSchema('/syngeneic-tumor-models', faqData)),
         }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Syngeneic Tumor Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Syngeneic tumor mouse models for immuno oncology research since 1998.", "serviceType": "Syngeneic Tumor Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Syngeneic Tumor Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "Syngeneic tumor mouse models for immuno oncology research since 1998.", "serviceType": "Syngeneic Tumor Models" }) }} />
     </div>
   );
 }

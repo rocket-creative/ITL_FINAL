@@ -292,7 +292,7 @@ export default function MuscularDystrophyMouseModelsPage() {
           __html: JSON.stringify(buildFAQSchema('/muscular-dystrophy-mouse-models', faqData)),
         }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Muscular Dystrophy Mouse Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Generated muscular dystrophy mouse models for muscle disease research since 1998.", "serviceType": "Muscular Dystrophy Mouse Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Muscular Dystrophy Mouse Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "Generated muscular dystrophy mouse models for muscle disease research since 1998.", "serviceType": "Muscular Dystrophy Mouse Models" }) }} />
     </div>
   );
 }

@@ -525,7 +525,7 @@ export default function AllergyAsthmaMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated allergy and asthma mouse models for respiratory disease research. Airway inflammation, allergic responses, and therapeutic testing platforms.",
             "serviceType": "Allergy Asthma Mouse Model Generation"

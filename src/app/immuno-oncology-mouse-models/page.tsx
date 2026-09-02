@@ -811,7 +811,7 @@ export default function ImmunoOncologyMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated immuno-oncology mouse models for cancer immunotherapy research. Humanized PD1, PDL1, CTLA4, and checkpoint combination models.",
             "serviceType": "Immuno-Oncology Mouse Model Generation"

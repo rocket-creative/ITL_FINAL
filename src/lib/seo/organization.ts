@@ -130,7 +130,7 @@ export const organizationNode = {
   url: NAP.url,
   logo: `${BASE_URL}/images/logo.png`,
   description:
-    'ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
+    'Ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
   slogan:
     'Mouse model generation, U.S. scientific oversight, 100% germline transmission guarantee.',
   foundingDate: NAP.foundingDate,

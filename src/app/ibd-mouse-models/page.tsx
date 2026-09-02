@@ -208,7 +208,7 @@ export default function IBDMouseModelsPage() {
           __html: JSON.stringify(buildFAQSchema('/ibd-mouse-models', faqData)),
         }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "IBD Mouse Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "Generated inflammatory bowel disease mouse models for gastrointestinal research since 1998.", "serviceType": "IBD Mouse Models" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "IBD Mouse Models", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "Generated inflammatory bowel disease mouse models for gastrointestinal research since 1998.", "serviceType": "IBD Mouse Models" }) }} />
     </div>
   );
 }

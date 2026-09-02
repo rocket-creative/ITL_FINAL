@@ -4,7 +4,7 @@ slug: "pricing-overview"
 extracted: "2026-01-09T17:03:05.574Z"
 ---
 
-# Pricing Overview | Mouse Model Generation Costs | Ingenious Targeting Laboratory
+# Pricing Overview | Mouse Model Generation Costs | ingenious targeting laboratory
 
 **Url: /pricing-overview**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.574Z"
 
 # Mouse Model Pricing Overview
 
-Mouse model generation pricing depends on project complexity, model type, and scope of services. Ingenious Targeting Laboratory provides project quotes based on your specific research requirements. This overview explains the factors that influence project pricing and helps you understand what to expect.
+Mouse model generation pricing depends on project complexity, model type, and scope of services. Ingenious targeting laboratory provides project quotes based on your specific research requirements. This overview explains the factors that influence project pricing and helps you understand what to expect.
 
 ## Pricing Factors
 
@@ -163,7 +163,7 @@ Quotes are typically valid for 90 days. Quotes may be updated if significant tim
 
 ## Catalog Models
 
-For certain applications, Ingenious Targeting Laboratory offers catalog models at fixed pricing:
+For certain applications, ingenious targeting laboratory offers catalog models at fixed pricing:
 
 **Humanized Immune Checkpoint Mice**
 
@@ -182,7 +182,7 @@ Catalog models provide defined genetics at predictable pricing with shorter lead
 
 **Are there discounts for academic institutions?**
 
-Contact Ingenious Targeting Laboratory directly to discuss institutional pricing arrangements.
+Contact ingenious targeting laboratory directly to discuss institutional pricing arrangements.
 
 **What about grant budget constraints?**
 

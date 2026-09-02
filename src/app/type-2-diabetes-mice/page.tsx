@@ -21,7 +21,7 @@ import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const heroData = {
   badge: "Our Services",
   title: "Type 2 Diabetes Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse model generation supporting metabolic disease research, with hundreds of type 2 diabetes models enabling investigation of glucose homeostasis, insulin resistance, and beta cell dysfunction mechanisms. Type 2 diabetes mouse models provide essential platform for identifying therapeutic targets and evaluating interventions addressing pathogenic mechanisms driving progressive metabolic disease.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse models supporting metabolic disease research, with hundreds of type 2 diabetes models enabling investigation of glucose homeostasis, insulin resistance, and beta cell dysfunction mechanisms. Type 2 diabetes mouse models provide essential platform for identifying therapeutic targets and evaluating interventions addressing pathogenic mechanisms driving progressive metabolic disease.",
   description: "Type 2 diabetes mouse models enable investigation of multifactorial disease mechanisms underlying impaired glucose tolerance, insulin resistance, and eventual beta cell failure characteristic of human type 2 diabetes. Mouse models permit mechanistic investigation of genetic and environmental contributors to diabetes development with control unavailable in human studies."
 };
 

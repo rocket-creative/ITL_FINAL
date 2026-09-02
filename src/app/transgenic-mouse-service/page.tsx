@@ -17,7 +17,7 @@ import { GlossaryTermLink, BreedingSchemeArchitectCTA, UXUIDCServicePricingAncho
 const heroData = {
   badge: "BAC Transgenics & ROSA26",
   title: "Transgenic Mouse Models",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including in Science, Nature, and Cell.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects for researchers at universities, pharmaceutical companies, and research institutions worldwide. Our mouse models have supported research published in more than 800 peer reviewed articles including in Science, Nature, and Cell.",
   description: "Transgenic mouse models introduce exogenous DNA sequences into the mouse genome for overexpression studies, tissue specific Cre driver generation, reporter line creation, and other applications requiring expression of non native sequences. Unlike knockin models that modify endogenous loci, transgenic approaches add new genetic elements either through random integration or targeted insertion at safe harbor loci."
 };
 
@@ -766,7 +766,7 @@ export default function TransgenicMouseServicePage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "alternateName": "iTL",
               "url": "https://www.genetargeting.com"
             },
@@ -793,13 +793,13 @@ export default function TransgenicMouseServicePage() {
             "author": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "publisher": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
             },
             "about": ["Transgenic mouse models", "BAC transgenics", "Rosa26", "H11 safe harbor", "Cre drivers", "Reporter mice", "Mouse model generation"],

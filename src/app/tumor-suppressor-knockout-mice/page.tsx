@@ -570,7 +570,7 @@ export default function TumorSuppressorKnockoutMicePage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated tumor suppressor knockout mouse models for cancer research. p53, Rb, PTEN, APC, and other tumor suppressor gene targeting since 1998.",
             "serviceType": "Mouse Model Generation"

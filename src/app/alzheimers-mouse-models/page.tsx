@@ -802,7 +802,7 @@ export default function AlzheimersMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated Alzheimer disease mouse models for AD research. APP knockin, tau models, and amyloid pathology. Expert model design since 1998.",
             "serviceType": "Alzheimer Disease Mouse Model Generation"

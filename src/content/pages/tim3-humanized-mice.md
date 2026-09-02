@@ -4,7 +4,7 @@ slug: "tim3-humanized-mice"
 extracted: "2026-01-09T17:03:06.064Z"
 ---
 
-# TIM3 Humanized Mice | Immune Checkpoint Models | Ingenious Targeting Laboratory
+# TIM3 Humanized Mice | Immune Checkpoint Models | ingenious targeting laboratory
 
 **Url: /tim3-humanized-mice**
 

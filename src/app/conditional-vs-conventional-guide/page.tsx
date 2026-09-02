@@ -19,7 +19,7 @@ import TestimonialsSection from '@/app/components/TestimonialsSection';
 const heroData = {
   badge: "Comparison Guide",
   title: "Conditional vs Conventional Knockout",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, helping researchers select the optimal knockout approach for their specific research goals.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects, helping researchers select the optimal knockout approach for their specific research goals.",
   description: "Both conditional and conventional knockouts create loss of function alleles, but they differ fundamentally in how and when gene inactivation occurs. This guide provides a direct comparison to help you choose the right approach for your project."
 };
 
@@ -247,7 +247,7 @@ export default function ConditionalVsConventionalGuidePage() {
             "description": "Compare conditional and conventional knockout strategies. Side by side analysis of timeline, cost, flexibility, and applications. Expert guidance since 1998.",
             "publisher": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "articleSection": "Research Guides"

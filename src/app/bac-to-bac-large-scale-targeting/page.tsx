@@ -20,7 +20,7 @@ import { getPublicationsForPageAsCitations } from '@/data/pagePublications';
 const heroData = {
   badge: "Large Scale Targeting",
   title: "BAC Targeting",
-  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 generated gene targeting projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases.",
+  intro: "Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model generation projects, including those using BAC recombineering, to preserve extensive regulatory elements and large genomic fragments exceeding 100 kilobases.",
   description: "BAC targeting converts large genomic fragments into functional targeting vectors while maintaining complete regulatory architecture spanning 5 prime promoters, enhancer elements, coding sequences, and 3 prime regulatory regions."
 };
 
@@ -194,7 +194,7 @@ export default function BACTargetingPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Mouse Model Generation",

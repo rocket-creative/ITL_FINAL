@@ -4,7 +4,7 @@ slug: "conventional-knockout-mouse-models"
 extracted: "2026-01-09T17:03:03.703Z"
 ---
 
-# Conventional Knockout Mouse Models | Global Gene Deletion | Ingenious Targeting Laboratory
+# Conventional Knockout Mouse Models | Global Gene Deletion | ingenious targeting laboratory
 
 **Url: /conventional-knockout-mouse-models**
 
@@ -16,7 +16,7 @@ extracted: "2026-01-09T17:03:03.703Z"
 
 # Conventional Knockout Mouse Models
 
-Since 1998, ingenious targeting laboratory has generated over 2,800 mouse model generation, including conventional knockouts - providing researchers with definitive loss of function tools for understanding gene function across every major therapeutic area.
+Since 1998, ingenious targeting laboratory has generated over 2,800 mouse models, including conventional knockouts - providing researchers with definitive loss of function tools for understanding gene function across every major therapeutic area.
 
 Conventional knockout mice, also known as global or constitutive knockouts, carry complete gene inactivation in all tissues throughout development and adult life. These models establish the fundamental phenotypic consequences of gene loss and serve as the foundation for understanding target biology.
 

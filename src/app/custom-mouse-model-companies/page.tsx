@@ -112,32 +112,32 @@ const faqs = [
   {
     question: 'How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?',
     answer:
-      'Jackson Laboratory offers generated CRISPR, transgenic, and conditional knockout services alongside its large model repository. ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects.',
+      'Jackson Laboratory offers CRISPR, transgenic, and conditional knockout services alongside its large model repository. Ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects.',
   },
   {
     question: 'How does iTL compare to Charles River Laboratories?',
     answer:
-      'Charles River is a global CRO bundling model creation with breeding, colony management, and worldwide distribution. ingenious targeting laboratory differs by focusing exclusively on model generation rather than bundled CRO services, with sequence informed allele design, U.S. based QC at every stage, and complex allele specialization.',
+      'Charles River is a global CRO bundling model creation with breeding, colony management, and worldwide distribution. Ingenious targeting laboratory differs by focusing exclusively on model generation rather than bundled CRO services, with sequence informed allele design, U.S. based QC at every stage, and complex allele specialization.',
   },
   {
     question: 'How does iTL compare to Cyagen?',
     answer:
-      'Cyagen is a cost forward CRISPR transgenic services provider with a money back guarantee on correct genotype. ingenious targeting laboratory differs by combining gene targeting and CRISPR workflows (chosen per project rather than one size fits all), U.S. based scientific oversight, and long term inheritance stability tracking for complex alleles.',
+      'Cyagen is a cost forward CRISPR transgenic services provider with a money back guarantee on correct genotype. Ingenious targeting laboratory differs by combining gene targeting and CRISPR workflows (chosen per project rather than one size fits all), U.S. based scientific oversight, and long term inheritance stability tracking for complex alleles.',
   },
   {
     question: 'Who makes generated humanized mouse models?',
     answer:
-      'ingenious targeting laboratory builds humanized immune checkpoint models (PD1, PDL1, CTLA4, LAG3, TIM3), receptor humanizations for therapeutic antibody testing, gene replacement humanizations, and BAC transgenic humanizations that preserve native regulatory elements. JAX, Charles River, Taconic, and GemPharmatech also offer humanization services.',
+      'Ingenious targeting laboratory builds humanized immune checkpoint models (PD1, PDL1, CTLA4, LAG3, TIM3), receptor humanizations for therapeutic antibody testing, gene replacement humanizations, and BAC transgenic humanizations that preserve native regulatory elements. JAX, Charles River, Taconic, and GemPharmatech also offer humanization services.',
   },
   {
     question: 'What is a germline transmission guarantee?',
     answer:
-      'A germline transmission guarantee means the provider commits to delivering a model that transmits the engineered allele through the germline to offspring. ingenious targeting laboratory guarantees 100% germline transmission on every model generation project. If a project does not transmit through the germline, the researcher is not charged for it.',
+      'A germline transmission guarantee means the provider commits to delivering a model that transmits the engineered allele through the germline to offspring. Ingenious targeting laboratory guarantees 100% germline transmission on every model generation project. If a project does not transmit through the germline, the researcher is not charged for it.',
   },
   {
     question: 'Where is ingenious targeting laboratory based?',
     answer:
-      'ingenious targeting laboratory is headquartered in Holbrook, New York, United States, at 761-80 Coates Avenue, Holbrook, NY 11741. All scientific design, QC, and project oversight is performed in the United States.',
+      'Ingenious targeting laboratory is headquartered in Holbrook, New York, United States, at 761-80 Coates Avenue, Holbrook, NY 11741. All scientific design, QC, and project oversight is performed in the United States.',
   },
 ];
 
@@ -419,7 +419,7 @@ export default function CustomMouseModelCompaniesPage() {
               How to choose a mouse model generation company
             </h2>
             <p style={{ color: '#333', fontSize: '1rem', lineHeight: 1.75, marginBottom: '20px' }}>
-              Researchers selecting a generated mouse model partner typically evaluate the following
+              Researchers selecting a mouse model generation partner typically evaluate the following
               criteria before committing to a project:
             </p>
             <ol style={{ paddingLeft: '20px', color: '#333' }}>

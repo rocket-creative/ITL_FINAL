@@ -132,7 +132,7 @@ export function UXUIDCFooter() {
             <Link href="/" className="inline-block mb-4">
               <Image
                 src="/images/logo.png"
-                alt="ingenious targeting laboratory"
+                alt="Ingenious targeting laboratory"
                 width={150}
                 height={36}
                 className="brightness-0 invert"

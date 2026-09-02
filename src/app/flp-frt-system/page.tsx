@@ -299,7 +299,7 @@ export default function FlpFrtSystemPage() {
         ]}
       />
       <FAQPageSchema faqs={getFaqData()} path="/flp-frt-system" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "FLP FRT System", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "ingenious targeting laboratory" }, "description": "FLP FRT recombination system for conditional gene targeting and selection cassette removal since 1998.", "serviceType": "FLP FRT System" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "FLP FRT System", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "FLP FRT recombination system for conditional gene targeting and selection cassette removal since 1998.", "serviceType": "FLP FRT System" }) }} />
     </div>
   );
 }

@@ -1112,7 +1112,7 @@ export default function CardiovascularMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory"
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated cardiovascular mouse models for heart disease research. Study cardiac function, vascular disease, and cardiovascular therapeutics.",
             "serviceType": "Mouse Model Generation"

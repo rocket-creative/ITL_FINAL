@@ -21,7 +21,7 @@ import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const heroData = {
   badge: "Our Services",
   title: "Knockout First Allele Design",
-  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse model generation employing diverse targeting strategies, with hundreds specifically utilizing knockout first allele designs to maximize flexibility and enable generation of multiple derivative alleles from single targeted allele. This strategic approach reduces overall project costs while providing researchers maximal options for downstream experimental applications.",
+  intro: "Since 1998, ingenious targeting laboratory has generated over 2,800 mouse models employing diverse targeting strategies, with hundreds specifically utilizing knockout first allele designs to maximize flexibility and enable generation of multiple derivative alleles from single targeted allele. This strategic approach reduces overall project costs while providing researchers maximal options for downstream experimental applications.",
   description: "Knockout first alleles represent a paradigm shift in mouse model design, where a single initial targeting event creates an allele capable of generating conditional knockout, conventional knockout, and reporter knockin variations through complementary recombination strategies. This methodology has become standard practice for most modern mouse genetics projects where experimental questions might evolve during multiyear research programs."
 };
 

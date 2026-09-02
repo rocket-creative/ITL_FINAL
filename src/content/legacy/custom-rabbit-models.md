@@ -17,7 +17,7 @@ Our technology enables the creation of precise knockout, point mutation, and sma
 
 ## What Researchers Say
 
-> "We recently generated a conditional knockout mouse model using iTL (inGenious Targeting Laboratory). We chose iTL based on time, cost, recommendation and location. We were pleased with the technical help we received in identifying the scope of the project. As well, information and services provided by the project manager were timely and extremely helpful and we were very impressed with the customer service. We were promptly updated throughout the project and upon completion, information was provided to help with genotyping and continuation of the project. We are very happy with the prompt services provided by iTL and would happily recommend them to our colleagues."
+> "We recently generated a conditional knockout mouse model using iTL (ingenious targeting laboratory). We chose iTL based on time, cost, recommendation and location. We were pleased with the technical help we received in identifying the scope of the project. As well, information and services provided by the project manager were timely and extremely helpful and we were very impressed with the customer service. We were promptly updated throughout the project and upon completion, information was provided to help with genotyping and continuation of the project. We are very happy with the prompt services provided by iTL and would happily recommend them to our colleagues."
 >
 > — **Jody Groenendyk, PhD**, University of Alberta
 

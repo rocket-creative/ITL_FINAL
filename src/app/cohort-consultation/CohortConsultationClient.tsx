@@ -10,7 +10,7 @@
  * form itself becoming a conversion killer.
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
@@ -217,7 +217,7 @@ const cohortConsultationFields: FormField[] = [
   {
     // Unchecked by default and kept separate from the required consent above.
     name: 'marketing_optin',
-    label: 'Send me Lab Signals, biweekly research insights from ITL scientists.',
+    label: 'Send me Lab Signals, biweekly research insights from ingenious scientists.',
     type: 'checkbox',
     required: false,
   },
@@ -284,6 +284,13 @@ export default function CohortConsultationClient() {
   // Lazy initializer so the values exist on the client's first render, before
   // CustomHubSpotForm seeds its state from `initialValues`.
   const [submissionContext] = useState<Record<string, string>>(collectSubmissionContext);
+
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash !== 'request-form' && hash !== 'schedule') return;
+    const el = document.getElementById(hash);
+    el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, []);
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -379,7 +386,7 @@ export default function CohortConsultationClient() {
                   fontWeight: 500,
                 }}
               >
-                <span>Request a Consultation</span>
+                <span>Get a Breeding Quote</span>
                 <span aria-hidden>→</span>
               </a>
               <Link
@@ -489,7 +496,7 @@ export default function CohortConsultationClient() {
         >
           <div style={{ maxWidth: '760px', margin: '0 auto' }}>
             <h2 className="animate-in" style={headingStyle}>
-              Request a consultation
+              Get a Breeding Quote
             </h2>
             <p className="animate-in" style={{ ...bodyStyle, marginBottom: '28px' }}>
               Fields marked with an asterisk are required. Everything else is optional, and a short
@@ -516,7 +523,7 @@ export default function CohortConsultationClient() {
                 region="na1"
                 fallbackFields={cohortConsultationFields}
                 initialValues={submissionContext}
-                submitButtonText="Request a Consultation"
+                submitButtonText="Get a Breeding Quote"
                 successMessage="Thanks. Your request is in. A PhD scientist will review your scheme and reply to the email address you provided."
                 redirectAfterSubmit={THANK_YOU_PATH}
                 onFallbackSuccess={() => {

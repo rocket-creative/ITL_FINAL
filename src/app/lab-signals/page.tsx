@@ -375,7 +375,7 @@ export default function LabSignalsPage() {
               lineHeight: 1.8,
               marginBottom: '25px',
             }}>
-              As part of Ingenious Targeting Laboratory's ongoing commitment to supporting the scientific community, we're excited to offer our new Genome Editing resource  —  Lab Signals.
+              As part of ingenious targeting laboratory's ongoing commitment to supporting the scientific community, we're excited to offer our new Genome Editing resource  —  Lab Signals.
             </p>
             <p style={{
               color: BRAND.darkGray,
