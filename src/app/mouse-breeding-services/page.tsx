@@ -195,7 +195,7 @@ const relatedResources = [
   { title: 'In House vs Outsourced Mouse Breeding', href: '/in-house-vs-outsourced-mouse-breeding/' },
   { title: 'View all 800+ publications featuring ITL models', href: '/publications/' },
   { title: 'Read more researcher testimonials', href: '/testimonials/' },
-  { title: 'Book a cohort consultation', href: '/cohort-consultation/' },
+  { title: 'Get a Breeding Quote', href: '/cohort-consultation/' },
 ];
 
 const serviceSchema = buildServiceSchema({
@@ -902,7 +902,7 @@ export default function MouseBreedingServicesPage() {
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ ...sectionHeadingStyle, color: 'white' }}>
-              Get a breeding quote
+              Get a Breeding Quote
             </h2>
             <p
               className="animate-in"

@@ -39,7 +39,7 @@ const faqData = [
   { question: "How many generations are needed to achieve a congenic background?", answer: "Congenic status (>99.9% recipient background) requires N10 using traditional backcrossing. Speed congenic approaches can achieve equivalent purity in N5-N7 generations through marker-assisted selection of optimal breeders." },
   { question: "What background strains can I backcross to?", answer: "Common target backgrounds include C57BL/6J, C57BL/6N, BALB/c, and other inbred strains. C57BL/6 is most frequently requested due to extensive phenotypic characterization and compatibility with many experimental paradigms." },
   { question: "Can I backcross a line with multiple transgenes or alleles?", answer: "Yes, but complexity increases with each additional allele. Each allele must be genotyped at every generation. For lines with multiple alleles, we recommend backcrossing alleles separately when possible, then intercrossing congenic lines." },
-  { question: "Why is defined genetic background important for my research?", answer: "Genetic background influences phenotype. Modifier loci can enhance or suppress phenotypes, causing variability between labs using different backgrounds. Congenic mice enable reproducible experiments and valid comparisons with published data on the same background. (/request-quote)" }
+  { question: "Why is defined genetic background important for my research?", answer: "Genetic background influences phenotype. Modifier loci can enhance or suppress phenotypes, causing variability between labs using different backgrounds. Congenic mice enable reproducible experiments and valid comparisons with published data on the same background." }
 ];
 
 // Related Links
@@ -142,7 +142,7 @@ export default function BackcrossingServicesPage() {
             
             <div className="hero-animate flex flex-wrap gap-4">
               <Link 
-                href="/request-quote"
+                href="/cohort-consultation/?ref=backcrossing-hero#request-form"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
                   backgroundColor: 'white',
@@ -153,11 +153,11 @@ export default function BackcrossingServicesPage() {
                   fontWeight: 500
                 }}
               >
-                <span>Request a Quote</span>
+                <span>Get a Breeding Quote</span>
                 <span>→</span>
               </Link>
               <Link 
-                href="/contact"
+                href="/cohort-consultation/#schedule"
                 className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{
                   backgroundColor: 'transparent',

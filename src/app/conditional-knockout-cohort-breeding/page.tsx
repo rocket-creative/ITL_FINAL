@@ -187,7 +187,7 @@ const relatedServices = [
   { title: 'Mouse Breeding Services', href: '/mouse-breeding-services/' },
   { title: 'Mouse Cohort Development', href: '/mouse-cohort-development/' },
   { title: 'Mouse Genotyping Service', href: '/mouse-genotyping-service/' },
-  { title: 'Cohort Consultation', href: '/cohort-consultation/' },
+  { title: 'Get a Breeding Quote', href: '/cohort-consultation/' },
 ];
 
 const relatedResources = [
@@ -387,7 +387,7 @@ export default function ConditionalKnockoutCohortBreedingPage() {
                   fontWeight: 500,
                 }}
               >
-                <span>Request a Breeding Scheme</span>
+                <span>Get a Breeding Quote</span>
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
@@ -570,7 +570,7 @@ export default function ConditionalKnockoutCohortBreedingPage() {
                 fontWeight: 600,
               }}
             >
-              <span>Request a Breeding Scheme</span>
+              <span>Get a Breeding Quote</span>
               <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -827,14 +827,14 @@ export default function ConditionalKnockoutCohortBreedingPage() {
           </div>
         </section>
 
-        {/* Request a breeding scheme */}
+        {/* Get a breeding quote */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2
               className="animate-in"
               style={{ ...sectionHeading, color: 'white', marginBottom: '15px' }}
             >
-              Request a breeding scheme
+              Get a Breeding Quote
             </h2>
             <p
               className="animate-in"
@@ -859,7 +859,7 @@ export default function ConditionalKnockoutCohortBreedingPage() {
                 fontWeight: 600,
               }}
             >
-              <span>Request a Breeding Scheme</span>
+              <span>Get a Breeding Quote</span>
               <span aria-hidden="true">→</span>
             </Link>
           </div>

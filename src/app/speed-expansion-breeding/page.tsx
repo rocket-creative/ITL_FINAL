@@ -222,7 +222,7 @@ export default function SpeedExpansionBreedingPage() {
 
                 <div className="hero-animate flex flex-wrap gap-4">
                   <Link
-                    href="/request-quote"
+                    href="/cohort-consultation/?ref=speed-expansion-hero#request-form"
                     className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{
                       backgroundColor: 'white',
@@ -233,11 +233,11 @@ export default function SpeedExpansionBreedingPage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request a Quote</span>
+                    <span>Get a Breeding Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/cohort-consultation/#schedule"
                     className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',

@@ -26,7 +26,7 @@ export default function CohortConsultationThankYouPage() {
       // the quote-request conversion until a distinct Google Ads label and GA4
       // key event are configured for breeding and cohort leads.
       trackQuoteRequestAllPlatforms({
-        contentName: 'Cohort Consultation Request',
+        contentName: 'Breeding Quote Request',
         contentCategory: 'Mouse Breeding and Cohorts',
         serviceType: 'cohort-consultation',
       });

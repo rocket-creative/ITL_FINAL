@@ -4,24 +4,28 @@
  * Never import this in 'use client' files.
  */
 
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
-const supabaseUrl  = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-if (!supabaseUrl || !supabaseKey) {
-  // Non-fatal at module load, API routes will return empty gracefully
-  console.warn('[catalog] NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY not set.');
-}
+function createCatalogSupabaseClient(): SupabaseClient {
+  if (!supabaseUrl || !supabaseKey) {
+    // Non-fatal at module load; API routes return empty results when catalog is unavailable.
+    console.warn('[catalog] NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY not set.');
+    return createClient('https://placeholder.supabase.co', 'placeholder-anon-key', {
+      auth: { persistSession: false },
+      global: { headers: { 'x-application-name': 'itl-catalog' } },
+    });
+  }
 
-export const supabase = createClient(
-  supabaseUrl  ?? '',
-  supabaseKey  ?? '',
-  {
+  return createClient(supabaseUrl, supabaseKey, {
     auth: { persistSession: false },
     global: { headers: { 'x-application-name': 'itl-catalog' } },
-  }
-);
+  });
+}
+
+export const supabase = createCatalogSupabaseClient();
 
 export interface CatalogRow {
   id: number;

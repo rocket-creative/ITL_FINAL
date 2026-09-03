@@ -143,9 +143,9 @@ const nextSteps = [
     description: 'Conditional knockout cohort breeding for floxed alleles crossed to Cre driver lines',
   },
   {
-    title: 'Have a scientist review this scheme',
+    title: 'Get a Breeding Quote',
     link: '/cohort-consultation/?ref=architect#request-form',
-    description: 'Request a cohort consultation to review your crosses and target genotypes',
+    description: 'Request a breeding quote with a PhD scientist review of your crosses and target genotypes',
   },
 ];
 

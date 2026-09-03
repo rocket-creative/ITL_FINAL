@@ -215,7 +215,7 @@ const relatedResources = [
   { title: 'Backcrossing Services', href: '/backcrossing-services/' },
   { title: 'Mouse Genotyping Service', href: '/mouse-genotyping-service/' },
   { title: 'Breeding Scheme Architect', href: '/breeding-scheme-architect/' },
-  { title: 'Cohort Consultation', href: '/cohort-consultation/' },
+  { title: 'Get a Breeding Quote', href: '/cohort-consultation/' },
 ];
 
 // FAQ. Visible copy and FAQPage schema are generated from the same array so the
@@ -923,7 +923,7 @@ export default function InHouseVsOutsourcedMouseBreedingPage() {
                 className={ctaButtonClass}
                 style={ctaButtonStyle}
               >
-                <span>Get a Scheme Review</span>
+                <span>Get a Breeding Quote</span>
                 <IconChevronRight size={16} color="white" />
               </Link>
             </div>
@@ -962,7 +962,7 @@ export default function InHouseVsOutsourcedMouseBreedingPage() {
                 className={ctaButtonClass}
                 style={ctaButtonStyle}
               >
-                <span>Get a Scheme Review</span>
+                <span>Get a Breeding Quote</span>
                 <IconChevronRight size={16} color="white" />
               </Link>
             </div>

@@ -260,10 +260,10 @@ function collectSubmissionContext(): Record<string, string> {
 }
 
 const contactPageSchema = buildContactPageSchema({
-  name: 'Request a Mouse Breeding and Cohort Consultation',
+  name: 'Get a Breeding Quote',
   path: '/cohort-consultation',
   description:
-    'Request a breeding scheme review and quote for mouse cohort production, colony maintenance, or conditional knockout breeding from ingenious targeting laboratory.',
+    'Request a breeding quote for mouse cohort production, colony maintenance, or conditional knockout breeding from ingenious targeting laboratory.',
   contactPoints: [
     {
       contactType: 'sales',
@@ -343,7 +343,7 @@ export default function CohortConsultationClient() {
                 marginBottom: '20px',
               }}
             >
-              Request a Mouse Breeding and Cohort Consultation
+              Get a Breeding Quote
             </h1>
 
             <p
@@ -684,7 +684,7 @@ export default function CohortConsultationClient() {
         items={[
           { name: 'Home', path: '/' },
           { name: 'Services', path: '/mouse-model-services' },
-          { name: 'Cohort Consultation', path: '/cohort-consultation' },
+          { name: 'Breeding Quote', path: '/cohort-consultation' },
         ]}
       />
       <script

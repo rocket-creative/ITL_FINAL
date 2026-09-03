@@ -347,7 +347,7 @@ export default function MouseCohortDevelopmentPage() {
                   fontWeight: 500,
                 }}
               >
-                <span>Request a Cohort Plan</span>
+                <span>Get a Breeding Quote</span>
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
@@ -535,7 +535,7 @@ export default function MouseCohortDevelopmentPage() {
                 fontWeight: 600,
               }}
             >
-              <span>Request a Cohort Plan</span>
+              <span>Get a Breeding Quote</span>
               <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -875,7 +875,7 @@ export default function MouseCohortDevelopmentPage() {
           </div>
         </section>
 
-        {/* Start your cohort plan */}
+        {/* Get a breeding quote */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2
@@ -888,7 +888,7 @@ export default function MouseCohortDevelopmentPage() {
                 marginBottom: '15px',
               }}
             >
-              Start your cohort plan
+              Get a Breeding Quote
             </h2>
             <p
               className="animate-in"
@@ -913,7 +913,7 @@ export default function MouseCohortDevelopmentPage() {
                 fontWeight: 600,
               }}
             >
-              <span>Request a Cohort Plan</span>
+              <span>Get a Breeding Quote</span>
               <span aria-hidden="true">→</span>
             </Link>
           </div>

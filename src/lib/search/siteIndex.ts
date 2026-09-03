@@ -120,7 +120,7 @@ export const siteIndex: SiteIndexEntry[] = [
   { title: 'Why choose ingenious targeting laboratory', description: 'Discover why researchers trust ingenious targeting laboratory for mouse model generation.', url: '/why-choose-itl', category: 'Company' },
   { title: 'Contact', description: 'Get in touch with our team for project inquiries.', url: '/contact', category: 'Company' },
   { title: 'Request a quote', description: 'Submit a project inquiry and receive a quote.', url: '/request-quote', category: 'Company' },
-  { title: 'Cohort consultation', description: 'Talk through a breeding or cohort plan with our scientific team.', url: '/cohort-consultation', category: 'Company', keywords: ['breeding consultation', 'cohort consultation', 'talk to a scientist'] as const },
+  { title: 'Get a Breeding Quote', description: 'Request a breeding quote and have a PhD scientist review your line, target genotype, and study timeline.', url: '/cohort-consultation', category: 'Company', keywords: ['breeding quote', 'breeding consultation', 'cohort consultation', 'talk to a scientist'] as const },
   { title: 'Pricing overview', description: 'Information about pricing for mouse model generation services.', url: '/pricing-overview', category: 'Company' },
   { title: 'Order catalog models', description: 'Order ready made mouse models from our catalog.', url: '/order-catalog-models', category: 'Company' },
   { title: 'Schedule meeting', description: 'Schedule a call with our team.', url: '/schedule-meeting', category: 'Company' },
