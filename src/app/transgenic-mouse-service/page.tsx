@@ -314,8 +314,8 @@ export default function TransgenicMouseServicePage() {
           headline="Generated transgenic mice — fixed-fee quote in 24 hours."
           unlockInterest="Transgenic Mouse"
           subline="Pronuclear injection, BAC transgenics, and targeted transgenesis at safe harbor loci. Pricing scales with construct size and integration strategy. Free scientific consultation included."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=transgenic-pricing-anchor"
-          secondaryHref="/all-catalog-mouse-models/?q=transgenic&utm_source=organic&utm_medium=service&utm_campaign=transgenic-catalog"
+          quoteHref="/request-quote/"
+          secondaryHref="/all-catalog-mouse-models/?q=transgenic"
           secondaryLabel="Browse Transgenic Catalog"
           faqs={[
             {

@@ -142,8 +142,8 @@ export default function TamoxifenInducibleCrePage() {
           headline="Generated CreERT2 mice — fixed-fee quote in 24 hours."
           unlockInterest="Tamoxifen Inducible Cre"
           subline="Generated CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,800+ models generated. Free scientific consultation."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-pricing-anchor"
-          secondaryHref="/all-catalog-mouse-models/?q=cre&utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-catalog"
+          quoteHref="/request-quote/"
+          secondaryHref="/all-catalog-mouse-models/?q=cre"
           secondaryLabel="Browse Cre Driver Catalog"
           faqs={[
             {
@@ -297,8 +297,8 @@ export default function TamoxifenInducibleCrePage() {
           headline="Generated CreERT2 mice — fixed-fee quote in 24 hours."
           unlockInterest="Tamoxifen Inducible Cre"
           subline="Generated CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,800+ models generated. Free scientific consultation."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-pricing-anchor"
-          secondaryHref="/all-catalog-mouse-models/?q=cre&utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-catalog"
+          quoteHref="/request-quote/"
+          secondaryHref="/all-catalog-mouse-models/?q=cre"
           secondaryLabel="Browse Cre Driver Catalog"
           faqs={[
             {

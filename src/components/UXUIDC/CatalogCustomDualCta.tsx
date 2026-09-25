@@ -17,12 +17,15 @@ export type { CatalogGene, CatalogLookup } from './catalogLookupMap';
 export { getCatalogLookup, hasEducationalCatalogMap } from './catalogLookupMap';
 
 export interface CatalogCustomDualCtaProps {
-  /** Page slug for lookup data and UTM campaign */
+  /** Page slug for lookup data and click attribution */
   slug?: string;
   /** Override catalog column fields (e.g. page-specific closing copy) */
   catalogOverrides?: Partial<CatalogLookup>;
+  /** Former utm_medium. Sent as cta_location on click, not written onto the URL. */
   utmMedium?: string;
   utmSource?: string;
+  /** Gene symbol on catalog gene pages. Sent as gene_symbol on click. */
+  geneSymbol?: string;
   className?: string;
   /** Remove outer margin when nested inside a padded section */
   flush?: boolean;
@@ -84,6 +87,7 @@ export default function CatalogCustomDualCta({
   catalogOverrides,
   utmMedium = 'site-cta',
   utmSource = 'organic',
+  geneSymbol,
   className = '',
   flush = false,
   headingLevel = 3,
@@ -174,6 +178,7 @@ export default function CatalogCustomDualCta({
                 })}
                 data-cta="catalog-gene-chip"
                 data-cta-slug={slug}
+                data-cta-location={utmMedium}
                 data-cta-gene={gene.symbol}
                 style={{
                   display: 'flex',
@@ -206,6 +211,8 @@ export default function CatalogCustomDualCta({
             href={catalogSearchUrl}
             data-cta="catalog-search"
             data-cta-slug={slug}
+            data-cta-location={utmMedium}
+            data-cta-gene={geneSymbol}
             style={{
               ...panelBtn,
               backgroundColor: '#008080',
@@ -259,6 +266,8 @@ export default function CatalogCustomDualCta({
             href={quoteUrl}
             data-cta="catalog-widget-request-quote"
             data-cta-slug={slug}
+            data-cta-location={utmMedium}
+            data-cta-gene={geneSymbol}
             style={{
               ...panelBtn,
               backgroundColor: '#0a253c',
@@ -270,9 +279,11 @@ export default function CatalogCustomDualCta({
             <span aria-hidden="true">→</span>
           </Link>
           <Link
-            href={COMMERCIAL_LINKS.customHub}
+            href={commercialUtmHref(COMMERCIAL_LINKS.customHub)}
             data-cta="catalog-widget-generated-services"
             data-cta-slug={slug}
+            data-cta-location={utmMedium}
+            data-cta-gene={geneSymbol}
             style={{
               ...panelBtn,
               backgroundColor: 'transparent',

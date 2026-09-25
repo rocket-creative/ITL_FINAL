@@ -197,7 +197,9 @@ export default function HumanizedMouseServicesPage() {
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link
-                href="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-services-hero"
+                href="/request-quote/"
+                data-cta="service-hero-quote"
+                data-cta-location="service"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -215,7 +217,9 @@ export default function HumanizedMouseServicesPage() {
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
-                href="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-services-catalog"
+                href="/all-catalog-mouse-models/?q=humanized"
+                data-cta="service-hero-catalog"
+                data-cta-location="service"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -250,8 +254,8 @@ export default function HumanizedMouseServicesPage() {
           headline="Generated humanized mice — fixed-fee quote in 24 hours."
           unlockInterest="Humanized Mouse"
           subline="Pricing scales with humanization strategy (drug-target replacement, immune checkpoint, complete gene replacement) and allele complexity. Free scientific consultation included."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-services-pricing"
-          secondaryHref="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-services-catalog-pricing"
+          quoteHref="/request-quote/"
+          secondaryHref="/all-catalog-mouse-models/?q=humanized"
           secondaryLabel="See Off-the-Shelf Lines"
           faqs={pricingFaqs}
         />
@@ -280,7 +284,9 @@ export default function HumanizedMouseServicesPage() {
               {services.map((svc) => (
                 <Link
                   key={svc.href}
-                  href={`${svc.href}${svc.href.includes('?') ? '&' : '?'}utm_source=organic&utm_medium=service&utm_campaign=humanized-services-card`}
+                  href={svc.href}
+                  data-cta="service-card"
+                  data-cta-location="service"
                   style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -378,7 +384,9 @@ export default function HumanizedMouseServicesPage() {
               comparisons, validation methods, and case studies.
             </p>
             <Link
-              href="/humanized-mouse-models/?utm_source=organic&utm_medium=service&utm_campaign=humanized-services-deep-link"
+              href="/humanized-mouse-models/"
+              data-cta="service-deep-link"
+              data-cta-location="service"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',

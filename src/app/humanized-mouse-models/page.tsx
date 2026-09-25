@@ -402,8 +402,8 @@ export default function HumanizedMouseModelsPage() {
           headline="Generated humanized mice — get a quote in 24 hours."
           unlockInterest="Humanized Mouse"
           subline="Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), and complete gene replacement. Pricing scales with strategy and allele complexity."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-pricing-anchor"
-          secondaryHref="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-catalog"
+          quoteHref="/request-quote/"
+          secondaryHref="/all-catalog-mouse-models/?q=humanized"
           secondaryLabel="Browse Humanized Catalog"
           faqs={[
             {

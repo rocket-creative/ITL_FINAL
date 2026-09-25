@@ -1,5 +1,5 @@
 import fs from 'fs';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { stripInternalUtms } from '@/data/commercialCtas';
 
 import path from 'path';
 import { applyCatalogFirstMeta } from '@/lib/seo';
@@ -501,9 +501,7 @@ export default async function IngeniousBlogPost({
       : `https://www.genetargeting.com/ingenious-blog/${slug}`;
 
   const catalogLookup = getCatalogLookup(slug);
-  const catalogRelatedHref = `${catalogLookup.searchHref}${
-    catalogLookup.searchHref.includes('?') ? '&' : '?'
-  }utm_source=organic&utm_medium=blog&utm_campaign=related-resources-${encodeURIComponent(slug)}`;
+  const catalogRelatedHref = stripInternalUtms(catalogLookup.searchHref);
 
   const getCategoryColor = (cat: string) => {
     const colors: Record<string, string> = {
@@ -936,8 +934,8 @@ export default async function IngeniousBlogPost({
               {[
                 ...(contentExists
                   ? [
-                      { label: 'Browse 14,774+ Catalog Models', href: catalogRelatedHref },
-                      { label: 'Request a Quote', href: '/request-quote' },
+                      { label: 'Browse 14,774+ Catalog Models', href: catalogRelatedHref, ctaLocation: 'blog' },
+                      { label: 'Request a Quote', href: '/request-quote/', ctaLocation: 'blog' },
                     ]
                   : [
                       { label: 'Browse 14,774+ Catalog Models', href: '/all-catalog-mouse-models/' },
@@ -970,6 +968,8 @@ export default async function IngeniousBlogPost({
                 <Link
                   key={`${link.href}-${idx}`}
                   href={link.href}
+                  data-cta={'ctaLocation' in link ? 'related-resource' : undefined}
+                  data-cta-location={'ctaLocation' in link ? link.ctaLocation : undefined}
                   style={{
                     padding: '8px 16px',
                     backgroundColor: '#f7f7f7',

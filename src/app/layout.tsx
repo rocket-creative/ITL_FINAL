@@ -139,7 +139,7 @@ export default function RootLayout({
         {/* Additional Tracking Pixels: HubSpot, etc */}
         <AllPixels />
         {isVercel ? <Analytics /> : null}
-        {/* Funnel attribution: tracks every commercial CTA click via gtag */}
+        {/* Funnel attribution: cta_click via the existing gtag.js tag */}
         <CommercialCTATracker />
 
         {/* Skip to main content link for accessibility */}

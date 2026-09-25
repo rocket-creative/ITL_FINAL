@@ -4,25 +4,35 @@
  * |UXUIDC| Commercial CTA Tracker
  *
  * Mounts once at the root and listens for clicks on any element with a
- * `data-cta` attribute. Sends a `commercial_cta_click` event to gtag
- * (GA4) so we can attribute quote requests + catalog visits back to the
- * specific high-traffic page that drove them.
+ * `data-cta` attribute. Sends one `cta_click` event through the existing
+ * gtag.js GA4 tag. Internal links no longer carry utm_* parameters, which
+ * were starting a new session and overwriting the visitor's real source.
  *
- * Why event delegation: the banner / catalog widgets are server
- * components and we do not want to hydrate every CTA. One global listener
- * covers all of them with zero per-link overhead.
+ * `data-cta-location` is the former utm_medium (gene-page-closing,
+ * educational-banner, page-closing, and the other placement labels).
  *
  * Schema:
- *   gtag('event', 'commercial_cta_click', {
- *     cta_type: 'commercial-banner-primary' | 'catalog-gene-chip' | ...
- *     page_slug: '<slug>' | 'unknown',
- *     gene: 'Trp53' | undefined,
- *     destination: '/request-quote?...',
- *     page_path: window.location.pathname,
+ *   gtag('event', 'cta_click', {
+ *     cta_location,
+ *     cta_text,
+ *     link_url,
+ *     page_path,
+ *     gene_symbol, // gene pages and gene chips only
  *   })
  */
 
 import { useEffect } from 'react';
+import { trackInternalCtaClick } from '@/lib/analytics/ctaClick';
+
+function linkPath(href: string): string {
+  try {
+    const url = new URL(href, window.location.origin);
+    if (url.origin !== window.location.origin) return href;
+    return `${url.pathname}${url.search}`;
+  } catch {
+    return href;
+  }
+}
 
 export default function CommercialCTATracker() {
   useEffect(() => {
@@ -33,19 +43,21 @@ export default function CommercialCTATracker() {
       if (!cta) return;
 
       const ctaType = cta.getAttribute('data-cta') ?? 'unknown';
-      const slug = cta.getAttribute('data-cta-slug') ?? 'unknown';
+      const location = cta.getAttribute('data-cta-location') || ctaType;
       const gene = cta.getAttribute('data-cta-gene') ?? undefined;
       const destination = cta.getAttribute('href') ?? '';
+      const ctaText = (cta.innerText || cta.textContent || '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .slice(0, 120);
 
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'commercial_cta_click', {
-          cta_type: ctaType,
-          page_slug: slug,
-          gene,
-          destination,
-          page_path: window.location.pathname,
-        });
-      }
+      trackInternalCtaClick({
+        ctaLocation: location,
+        ctaText,
+        linkUrl: linkPath(destination),
+        pagePath: window.location.pathname,
+        geneSymbol: gene || undefined,
+      });
     };
 
     document.addEventListener('click', handler, { capture: true });

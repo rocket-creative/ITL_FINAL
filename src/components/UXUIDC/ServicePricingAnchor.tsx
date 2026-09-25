@@ -10,7 +10,7 @@
  */
 
 import Link from 'next/link';
-import { COMMERCIAL_LINKS } from '@/data/commercialCtas';
+import { COMMERCIAL_LINKS, stripInternalUtms, utmMediumFromHref } from '@/data/commercialCtas';
 import PricingUnlockForm from './PricingUnlockForm';
 
 export interface ServicePricingFaq {
@@ -25,7 +25,7 @@ interface Props {
   headline: string;
   /** Subline under price block */
   subline: string;
-  /** Quote CTA href + UTM params */
+  /** Quote CTA href. Campaign parameters are stripped before render. */
   quoteHref: string;
   /** Optional secondary CTA (catalog) */
   secondaryHref?: string;
@@ -60,6 +60,11 @@ export default function UXUIDCServicePricingAnchor({
   id = 'pricing',
   unlockInterest,
 }: Props) {
+  const cleanQuoteHref = stripInternalUtms(quoteHref);
+  const cleanSecondaryHref = stripInternalUtms(secondaryHref ?? COMMERCIAL_LINKS.catalogAll);
+  const quoteLocation = utmMediumFromHref(quoteHref) ?? 'service';
+  const secondaryLocation = (secondaryHref && utmMediumFromHref(secondaryHref)) || quoteLocation;
+
   return (
     <section
       id={id}
@@ -148,8 +153,9 @@ export default function UXUIDCServicePricingAnchor({
             </div>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <Link
-                href={secondaryHref ?? COMMERCIAL_LINKS.catalogAll}
+                href={cleanSecondaryHref}
                 data-cta="service-pricing-catalog"
+                data-cta-location={secondaryLocation}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -168,8 +174,9 @@ export default function UXUIDCServicePricingAnchor({
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
-                href={quoteHref}
+                href={cleanQuoteHref}
                 data-cta="service-pricing-generated-quote"
+                data-cta-location={quoteLocation}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
