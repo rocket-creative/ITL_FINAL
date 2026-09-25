@@ -10,7 +10,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { UXUIDCServicePricingAnchor, StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, UXUIDCServicePricingAnchor, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -325,8 +325,8 @@ export default function MouseGenotypingServicePage() {
           headline="Outsource your genotyping. 48-hour turnaround."
           unlockInterest="Mouse Genotyping Service"
           subline="PCR and qPCR genotyping for knockouts, knockins, transgenics, floxed alleles, and Cre lines. Validated assays. Pricing scales with sample volume and assay complexity."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=genotyping-pricing-anchor"
-          secondaryHref="/contact?utm_source=organic&utm_medium=service&utm_campaign=genotyping-contact"
+          quoteHref="/request-quote/"
+          secondaryHref="/contact/"
           secondaryLabel="Talk to a Scientist"
           faqs={[
             {
@@ -620,6 +620,7 @@ export default function MouseGenotypingServicePage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       <StandardPageCtaStack

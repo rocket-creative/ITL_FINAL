@@ -16,7 +16,7 @@ import { getModelsByGene, getRelatedGenes, indexableTier4ParamsForModels } from 
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
 import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
-import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import {
   getPriorityGeneByMouseSymbol,
@@ -912,12 +912,15 @@ export default async function GenePage({ params, searchParams }: Props) {
           </section>
         )}
 
+        <BreedThisLineWithItl lineName={geneName} />
+
         {/* CTA */}
         <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <CatalogCustomDualCta
               slug={geneName}
               utmMedium="gene-page-closing"
+              geneSymbol={geneName}
               flush
               catalogOverrides={{
                 eyebrow: hasLiveModels ? 'Live colonies' : 'Catalog Models',

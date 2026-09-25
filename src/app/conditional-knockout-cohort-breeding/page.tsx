@@ -8,7 +8,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCDataTable from '@/components/UXUIDC/DataTable';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
-import { StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, StandardPageCtaStack } from '@/components/UXUIDC';
 import {
   IconDNA,
   IconQuote,
@@ -915,6 +915,7 @@ export default function ConditionalKnockoutCohortBreedingPage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       <StandardPageCtaStack

@@ -12,7 +12,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { LabSignalsSignup, BreedingSchemeArchitectCTA, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, LabSignalsSignup, BreedingSchemeArchitectCTA, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 import ModelGenerationPrioritySection from '@/components/gene-expansion/ModelGenerationPrioritySection';
@@ -992,6 +992,7 @@ export default function CustomMouseModelsPage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
       <UXUIDCFooter />
           

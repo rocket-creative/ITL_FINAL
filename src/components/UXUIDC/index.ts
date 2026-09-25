@@ -37,6 +37,7 @@ export type { CatalogCustomDualCtaProps } from './CatalogCustomDualCta';
 export { default as PageClosingCta } from './PageClosingCta';
 export { default as StandardPageCtaStack } from './StandardPageCtaStack';
 export type { StandardPageCtaStackProps } from './StandardPageCtaStack';
+export { default as BreedThisLineWithItl } from './BreedThisLineWithItl';
 export { default as UXUIDCEducationalSalesBanner, getEducationalOffer } from './EducationalSalesBanner';
 export type { EducationalSalesOffer } from './EducationalSalesBanner';
 export { default as CatalogGeneLookup, getCatalogLookup, hasEducationalCatalogMap } from './CatalogGeneLookup';

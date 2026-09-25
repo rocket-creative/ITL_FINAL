@@ -10,7 +10,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, StandardPageCtaStack } from '@/components/UXUIDC';
 import { buildFAQSchema, buildServiceSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
@@ -500,6 +500,7 @@ export default function SpeedExpansionBreedingPage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       <StandardPageCtaStack

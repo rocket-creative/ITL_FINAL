@@ -9,7 +9,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, breedingResources, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, UXUIDCResourceLinks, breedingResources, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 import { buildFAQSchema, buildServiceSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
@@ -780,6 +780,7 @@ export default function ColonyManagementServicesPage() {
           </div>
         </section>
 
+        <BreedThisLineWithItl />
       </main>
 
       <StandardPageCtaStack

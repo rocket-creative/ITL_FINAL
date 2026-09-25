@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import Link from 'next/link';
 import {
+  BreedThisLineWithItl,
   CatalogCustomDualCta,
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -1013,6 +1014,7 @@ function BreedingSchemeArchitectContent() {
         </div>
       </section>
 
+      <BreedThisLineWithItl />
       <UXUIDCFooter />
 
       {/* Schema.org Structured Data */}

@@ -11,6 +11,7 @@ import { CATALOG_CUSTOM_BUTTONS } from '@/data/commercialCtas';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import {
+  BreedThisLineWithItl,
   UXUIDCNavigation,
   UXUIDCFooter,
   UXUIDCStartProjectCTA,
@@ -284,6 +285,7 @@ export default function PostProjectServicesPage() {
           title="Need Support Services?"
           content="Contact our team to discuss colony management, cryopreservation, or other post-project support services."
         />
+        <BreedThisLineWithItl />
       </main>
 
       <UXUIDCFooter />

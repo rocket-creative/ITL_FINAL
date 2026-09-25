@@ -204,7 +204,7 @@ const navigationItems: NavItem[] = [
         {
           title: 'Breeding and Cohorts',
           items: [
-            { label: 'Contract Breeding Services', href: '/mouse-breeding-services' },
+            { label: 'Mouse Breeding Services', href: '/mouse-breeding-services' },
             { label: 'Cohort Development', href: '/mouse-cohort-development' },
             { label: 'Conditional KO Breeding', href: '/conditional-knockout-cohort-breeding' },
             { label: 'Backcrossing', href: '/backcrossing-services' },

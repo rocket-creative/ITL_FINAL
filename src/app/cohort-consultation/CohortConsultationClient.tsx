@@ -11,10 +11,12 @@
  */
 
 import { useEffect, useState } from 'react';
+import { readStoredCtaLocation } from '@/lib/analytics/ctaClick';
 import Link from 'next/link';
 
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import BreedThisLineWithItl from '@/components/UXUIDC/BreedThisLineWithItl';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import HubSpotFormWithFallback from '@/components/UXUIDC/HubSpotFormWithFallback';
 import type { FormField } from '@/components/UXUIDC/CustomHubSpotForm';
@@ -254,6 +256,13 @@ function collectSubmissionContext(): Record<string, string> {
   for (const key of ['ref', 'utm_source', 'utm_medium', 'utm_campaign']) {
     const value = params.get(key);
     if (value) context[key] = value;
+  }
+
+  // Internal CTAs no longer put utm_medium on the URL. A click stores the
+  // same HubSpot field name in sessionStorage.
+  if (!context.utm_medium) {
+    const stored = readStoredCtaLocation();
+    if (stored) context.utm_medium = stored;
   }
 
   return context;
@@ -676,6 +685,7 @@ export default function CohortConsultationClient() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       <UXUIDCFooter />

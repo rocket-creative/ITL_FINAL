@@ -21,18 +21,16 @@ import {
   IconShield,
   IconBarChart,
 } from '@/components/UXUIDC/Icons';
-import { buildServiceSchema, buildFAQSchema } from '@/lib/seo/schemaBlocks';
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { breedingFaqData } from './structuredData';
 
 // TODO(byline): named ITL PhD scientist + reviewer date. The build doc asks for a
 // byline with credential and bio link plus a "Scientifically reviewed by" line;
 // both are held until Ops assigns the scientist.
 
-const PAGE_PATH = '/mouse-breeding-services';
-
 const heroData = {
   badge: 'Breeding and Cohorts',
-  title: 'Contract Mouse Breeding Services',
+  title: 'Mouse Breeding Services',
   snippet:
     'Ingenious targeting laboratory maintains your genetically engineered lines, executes breeding schemes, genotypes animals, and delivers study-ready cohorts from a U.S.-based barrier facility. Services include colony maintenance, cohort production, and complex multi-allelic breeding schemes.',
   body: 'We have served 900+ laboratories since 1998 and generated 2,800+ custom genetically engineered models. Lines we did not create are welcome. Send us your strain and we will run the colony.',
@@ -137,48 +135,7 @@ const productivityCitation = {
 // Verified testimonial from master data - https://www.genetargeting.com/testimonials
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
-const faqData = [
-  {
-    question: 'Can I outsource my mouse breeding to ingenious targeting laboratory?',
-    answer:
-      'Yes. We provide contract mouse breeding for genetically engineered lines, including colony maintenance, cohort production, complex multi allele schemes, and rapid expansion, from a U.S. barrier facility with in house PCR genotyping.',
-  },
-  {
-    question: 'Do you breed lines you did not create?',
-    answer:
-      'Yes. Most contract breeding clients send us lines generated elsewhere or obtained from a repository. We review the allele and the genotyping assay on intake.',
-  },
-  {
-    question: 'How do I transfer my mouse line to your facility?',
-    answer:
-      'Lines can be shipped as live animals with health certification or as cryopreserved embryos or sperm. All incoming animals are quarantined and health tested before entering the main colony. We coordinate logistics with your institutional vivarium.',
-  },
-  {
-    question: 'Who owns the line and the data?',
-    answer:
-      'You do. We breed and maintain the colony under contract. Animals, pedigree, and genotype records belong to you and are returned or shipped on request.',
-  },
-  {
-    question: 'What does contract mouse breeding cost?',
-    answer:
-      'Pricing depends on colony size, genotype complexity, genotyping volume, and whether you need maintenance only or scaled cohort production. We quote per project after a scheme review. There is no charge for the initial consultation.',
-  },
-  {
-    question: 'Can you manage conditional knockout breeding with Cre drivers?',
-    answer:
-      'Yes. We design the cross path, check for linkage between the floxed allele and the Cre transgene, and produce experimental animals with matched littermate controls.',
-  },
-  {
-    question: 'How is my colony reported?',
-    answer:
-      'Monthly, covering census by genotype and sex, litters born and weaned, genotype distribution against expected ratios, pair productivity, and projected availability against your target date.',
-  },
-  {
-    question: 'What happens if my line stops breeding?',
-    answer:
-      'We review pair productivity continuously and flag decline early. Options include pair rotation, increasing pair count, and rederivation. Discuss known fertility problems with us during scoping so the scheme accounts for them.',
-  },
-];
+const faqData = breedingFaqData;
 
 const relatedBreedingServices = [
   { title: 'Mouse Cohort Development', href: '/mouse-cohort-development/' },
@@ -197,33 +154,6 @@ const relatedResources = [
   { title: 'Read more researcher testimonials', href: '/testimonials/' },
   { title: 'Get a Breeding Quote', href: '/cohort-consultation/' },
 ];
-
-const serviceSchema = buildServiceSchema({
-  name: 'Contract Mouse Breeding Services',
-  path: PAGE_PATH,
-  serviceType: 'Contract mouse breeding',
-  description:
-    'Contract breeding of genetically engineered mouse lines from a U.S. barrier facility, including colony maintenance, cohort production, multi allele breeding schemes, PCR genotyping, health monitoring, and monthly colony reporting.',
-  alternateName: [
-    'Mouse breeding services',
-    'Outsourced mouse colony management',
-    'GEM colony management',
-  ],
-  keywords:
-    'mouse breeding services, contract mouse breeding, outsource mouse breeding, mouse colony management, GEM colony management, mouse colony husbandry, genetically engineered mouse breeding, PCR genotyping service',
-  audienceType: 'Academic laboratories, biotechnology companies, preclinical drug discovery teams',
-  offerCatalogName: 'Contract breeding scopes',
-  offerCatalog: [
-    { name: 'Colony maintenance', path: '/colony-management-services/' },
-    { name: 'Cohort production', path: '/mouse-cohort-development/' },
-    { name: 'Speed expansion breeding', path: '/speed-expansion-breeding/' },
-    { name: 'Backcrossing to defined background', path: '/backcrossing-services/' },
-    { name: 'Rederivation', path: '/rederivation-services/' },
-    { name: 'Cryopreservation', path: '/cryopreservation-services/' },
-  ],
-});
-
-const faqSchema = buildFAQSchema(PAGE_PATH, faqData);
 
 const sectionHeadingStyle = {
   color: '#2384da',
@@ -962,16 +892,8 @@ export default function MouseBreedingServicesPage() {
         items={[
           { name: 'Home', path: '/' },
           { name: 'Services', path: '/mouse-model-services' },
-          { name: 'Contract Mouse Breeding Services', path: '/mouse-breeding-services' },
+          { name: 'Mouse Breeding Services', path: '/mouse-breeding-services' },
         ]}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </div>
   );

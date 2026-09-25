@@ -7,7 +7,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCDataTable from '@/components/UXUIDC/DataTable';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
-import { StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, StandardPageCtaStack } from '@/components/UXUIDC';
 import {
   IconBookOpen,
   IconCheckCircle,
@@ -1037,6 +1037,7 @@ export default function InHouseVsOutsourcedMouseBreedingPage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       {/* Sitewide closing furniture. Breeding Scheme Architect CTA suppressed to

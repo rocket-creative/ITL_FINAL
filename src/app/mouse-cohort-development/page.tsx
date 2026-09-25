@@ -8,7 +8,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCDataTable from '@/components/UXUIDC/DataTable';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
-import { StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, StandardPageCtaStack } from '@/components/UXUIDC';
 import {
   IconUsers,
   IconCheckCircle,
@@ -981,6 +981,7 @@ export default function MouseCohortDevelopmentPage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       <StandardPageCtaStack

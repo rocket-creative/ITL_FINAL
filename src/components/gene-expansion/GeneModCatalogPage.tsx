@@ -5,7 +5,7 @@
 import Link from 'next/link';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
-import { UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import GeneModAiAnswerLead from '@/components/gene-expansion/GeneModAiAnswerLead';
 import { getCuratedIntro } from '@/lib/seo/curatedIntros';
@@ -238,6 +238,8 @@ export default function GeneModCatalogPage({
             </div>
           </section>
         ) : null}
+
+        <BreedThisLineWithItl lineName={`${geneName} ${modCanon}`} />
 
         {/* Bottom dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>

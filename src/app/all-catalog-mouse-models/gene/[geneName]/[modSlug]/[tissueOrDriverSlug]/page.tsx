@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { getModelsByGene, getRelatedGenesWithModelType } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
-import { UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import { tier4GenerateStaticParams } from '@/data/seoKeywords';
 import {
@@ -327,6 +327,8 @@ export default async function GeneModContextTierPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        <BreedThisLineWithItl lineName={`${geneName} ${modCanon}`} />
 
         {/* Bottom dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>

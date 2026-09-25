@@ -14,7 +14,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
-import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 import { buildFAQSchema, buildServiceSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
@@ -282,8 +282,9 @@ export default function BackcrossingServicesPage() {
           ),
         }}
       />
+        <BreedThisLineWithItl />
       </main>
-      
+
       <StandardPageCtaStack
         slug="backcrossing-services"
         labSignalsTitle="Backcrossing Service Insights"

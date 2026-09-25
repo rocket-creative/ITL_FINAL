@@ -50,7 +50,7 @@ const footerSections = [
   {
     title: 'Services',
     links: [
-      { label: 'Contract Breeding', href: '/mouse-breeding-services' },
+      { label: 'Mouse Breeding Services', href: '/mouse-breeding-services' },
       { label: 'Cohort Development', href: '/mouse-cohort-development' },
       { label: 'Conditional KO Breeding', href: '/conditional-knockout-cohort-breeding' },
       { label: 'Colony Management', href: '/colony-management-services' },
