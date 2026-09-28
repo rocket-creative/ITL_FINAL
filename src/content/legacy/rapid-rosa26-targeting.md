@@ -19,7 +19,7 @@ This approach offers predictable targeting, increased accuracy, and stable gene 
 
 ## What Researchers Say
 
-> "I am very happy with iTL's mouse knockout services. It was pleasant to collaborate with my project manager. She was very thorough and communicative, an excellent combination. I will certainly use iTL again when needed, and I'm happy to share my positive experience with colleagues."
+> "I am very happy with ingenious targeting laboratory's mouse knockout services. It was pleasant to collaborate with my project manager. She was very thorough and communicative, an excellent combination. I will certainly use ingenious targeting laboratory again when needed, and I'm happy to share my positive experience with colleagues."
 >
 > — **John Creemers, PhD**, University of Leuven, Belgium
 

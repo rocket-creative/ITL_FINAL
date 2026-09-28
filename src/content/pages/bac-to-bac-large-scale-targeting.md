@@ -107,7 +107,7 @@ Complex transgenic studies combining multiple functional elements (promoters, ge
 
 ## What Researchers Say
 
-*“The project was very well managed…in fact, using iTL validated my decision to not try and do this in my own lab. It would have been a catastrophe… (My project manager) was very helpful, always getting back to us in time and explaining every step of the project. I would be glad to serve as a reference for iTL and its staff.”*
+*“The project was very well managed…in fact, using ingenious targeting laboratory validated my decision to not try and do this in my own lab. It would have been a catastrophe… (My project manager) was very helpful, always getting back to us in time and explaining every step of the project. I would be glad to serve as a reference for ingenious targeting laboratory and its staff.”*
 
 *— **Claus Fimmel, MD**, Loyola University Medical Center*
 

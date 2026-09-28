@@ -820,7 +820,7 @@ export default function HIL4HIL4RPage() {
             </div>
           </section>
 
-          {/* About ITL */}
+          {/* About ingenious targeting laboratory */}
           <section style={{ background: '#f7f7f7', padding: '56px 20px 72px' }}>
             <div style={{ maxWidth: '920px', margin: '0 auto' }}>
               <h2

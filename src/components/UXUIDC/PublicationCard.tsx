@@ -6,7 +6,7 @@
  * Displays a publication entry with optional PubMed link.
  * Used across disease pages, technology pages, and the main publications page.
  * 
- * IMPORTANT: All publications listed should be verified as using ITL mouse models.
+ * IMPORTANT: All publications listed should be verified as using ingenious targeting laboratory mouse models.
  * PubMed links should be verified before adding.
  */
 

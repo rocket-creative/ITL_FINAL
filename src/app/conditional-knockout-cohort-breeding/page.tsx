@@ -25,17 +25,17 @@ import {
 const PAGE_PATH = '/conditional-knockout-cohort-breeding';
 const PUBLISH_DATE = '2026-08-28';
 
-// TODO(byline): named ITL PhD scientist + reviewer date. The E-E-A-T spec calls for a
+// TODO(byline): named ingenious targeting laboratory PhD scientist + reviewer date. The E-E-A-T spec calls for a
 // bylined author with a credential and bio link, plus a "Scientifically reviewed by" line.
 // Schema attributes to the organization until Ops assigns a named scientist.
 
-// TODO(ops): confirm whether ITL stocks common Cre driver lines or whether clients must
+// TODO(ops): confirm whether ingenious targeting laboratory stocks common Cre driver lines or whether clients must
 // supply them. This changes the Generation 1 copy materially, so no stocking claim is made.
 
 // TODO(ops): supply preferred primary references for the maternal Cre effect and for
 // germline Cre activity. Published without citations rather than with "studies show".
 
-// TODO(ops): pull three to five real ITL publications involving conditional models from
+// TODO(ops): pull three to five real ingenious targeting laboratory publications involving conditional models from
 // /publications/ for the credibility block. No citations invented here.
 
 const heroData = {
@@ -805,7 +805,7 @@ export default function ConditionalKnockoutCohortBreedingPage() {
                 className={`inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-600 ${focusRing}`}
                 style={{ color: '#008080', fontSize: '.9rem', fontWeight: 500 }}
               >
-                <span>View all 800+ publications featuring ITL models</span>
+                <span>View all 800+ publications featuring ingenious targeting laboratory models</span>
                 <IconChevronRight size={14} color="#008080" />
               </Link>
             </div>

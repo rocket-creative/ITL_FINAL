@@ -948,10 +948,9 @@ export default function HumanizedMouseModelsPage() {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
               "name": "Ingenious targeting laboratory",
-              "alternateName": "iTL",
               "url": "https://www.genetargeting.com"
             },
-            "description": "Generated humanized mouse models from ingenious targeting laboratory (iTL), a U.S. based mouse model generation company with a 100% germline transmission guarantee. Immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), drug target humanization, and complete gene replacement since 1998.",
+            "description": "Generated humanized mouse models from ingenious targeting laboratory, a U.S. based mouse model generation company with a 100% germline transmission guarantee. Immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), drug target humanization, and complete gene replacement since 1998.",
             "serviceType": "Generated Humanized Mouse Model Generation",
             "areaServed": "Worldwide",
             "award": "100% germline transmission guarantee"
@@ -984,7 +983,7 @@ export default function HumanizedMouseModelsPage() {
               "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
             },
             "about": ["Humanized mouse models", "Immune checkpoint humanization", "PD1", "PDL1", "CTLA4", "Gene replacement", "Mouse model generation"],
-            "keywords": "humanized mouse models, immune checkpoint mice, PD1 humanized, PDL1 humanized, CTLA4 humanized, gene replacement, mouse model generation company, ingenious targeting laboratory, iTL"
+            "keywords": "humanized mouse models, immune checkpoint mice, PD1 humanized, PDL1 humanized, CTLA4 humanized, gene replacement, mouse model generation company, ingenious targeting laboratory"
           })
         }}
       />

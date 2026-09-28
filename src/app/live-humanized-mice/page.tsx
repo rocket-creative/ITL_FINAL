@@ -45,7 +45,7 @@ function faqsFor(count: number) {
     {
       question: 'How do I order a live humanized mouse?',
       answer:
-        'Each row has an iTL catalog number and an Order link. The order form opens with that model and catalog number filled in. A quote is returned within 24 hours.',
+        'Each row has an ingenious targeting laboratory catalog number and an Order link. The order form opens with that model and catalog number filled in. A quote is returned within 24 hours.',
     },
     {
       question: 'Can you generate a humanized mouse that is not on this list?',

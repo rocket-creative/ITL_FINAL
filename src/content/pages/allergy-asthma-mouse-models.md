@@ -114,7 +114,7 @@ Common asthma models include OVA-induced allergic airway inflammation, house dus
 
 **Can you create models for specific asthma phenotypes?**
 
-Yes. ITL can design conditional knockout or knockin models targeting genes involved in airway hyperresponsiveness, mucus production, airway remodeling, or Th2 inflammation. Models can be combined with allergen challenge protocols to study specific asthma phenotypes.
+Yes. ingenious targeting laboratory can design conditional knockout or knockin models targeting genes involved in airway hyperresponsiveness, mucus production, airway remodeling, or Th2 inflammation. Models can be combined with allergen challenge protocols to study specific asthma phenotypes.
 
 **What Cre drivers are appropriate for lung-specific studies?**
 

@@ -187,7 +187,7 @@ export const footerCta: Record<'default' | 'catalog' | 'publications' | 'disease
     secondaryButton: EQUAL_WEIGHT_BUTTONS[1],
   },
   publications: {
-    title: 'Partner with iTL',
+    title: 'Partner with ingenious targeting laboratory',
     description:
       'Ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a generated line.',
     primaryButton: EQUAL_WEIGHT_BUTTONS[0],

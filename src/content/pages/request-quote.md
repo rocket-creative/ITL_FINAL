@@ -149,11 +149,11 @@ Quotes include recommended targeting strategy, allele design overview, Project p
 
 **Can I get a quote for partial services?**
 
-Yes. ITL provides quotes for partial services including targeting vector only, gene targeting only, microinjection only, or other partial services. Pricing is based on the specific scope of work requested. Contact ITL to discuss your partial service needs.
+Yes. ingenious targeting laboratory provides quotes for partial services including targeting vector only, gene targeting only, microinjection only, or other partial services. Pricing is based on the specific scope of work requested. Contact ingenious targeting laboratory to discuss your partial service needs.
 
 **What happens after I receive my quote?**
 
-After receiving your quote, ITL's team is available to discuss any questions or concerns. We can adjust project scope, explore alternative approaches, or provide additional detail about any aspect of the proposed work. Our goal is to ensure you have all the information needed to make informed decisions.
+After receiving your quote, ingenious targeting laboratory's team is available to discuss any questions or concerns. We can adjust project scope, explore alternative approaches, or provide additional detail about any aspect of the proposed work. Our goal is to ensure you have all the information needed to make informed decisions.
 
 ## Alternative Contact Options
 

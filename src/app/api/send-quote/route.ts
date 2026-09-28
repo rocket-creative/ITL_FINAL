@@ -90,7 +90,7 @@ export async function POST(request: NextRequest) {
     </div>
     
     <div class="footer">
-      <p>This quote request was submitted via the ITL website.</p>
+      <p>This quote request was submitted via the ingenious targeting laboratory website.</p>
       <p>Submitted on ${new Date().toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'full', timeStyle: 'short' })} ET</p>
     </div>
   </div>

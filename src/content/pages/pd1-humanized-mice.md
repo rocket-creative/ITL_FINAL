@@ -235,7 +235,7 @@ Clausen BE et al. 1999. Conditional gene targeting in macrophages and granulocyt
 
 # What Researchers Say
 
-*“iTL produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the need comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves.”*
+*“ingenious targeting laboratory produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the need comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves.”*
 
 – **William A. Coetzee, DSc NYU School of Medicine
 
@@ -303,7 +303,7 @@ Yes. PD1 humanized mice on C57BL/6 background are compatible with syngeneic tumo
 - 12+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Humanization strategies explained (ECD vs complete)
 - Tumor model compatibility table
 - Dual checkpoint combination table

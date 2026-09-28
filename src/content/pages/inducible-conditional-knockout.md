@@ -353,7 +353,7 @@ Our scientific consultants are ready to discuss your research requirements and o
 - 12+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Ubiquitous CreERT2 driver table
 - Tissue specific CreERT2 driver table
 - Tamoxifen dosing table

@@ -152,16 +152,16 @@ Ready to discuss your research goals? Our scientific consultants provide complim
 
 ## Frequently Asked Questions
 
-**What resources does ITL provide for mouse model projects?**
+**What resources does ingenious targeting laboratory provide for mouse model projects?**
 
-ITL provides comprehensive resources including selection guides (knockout strategy, conditional vs conventional, humanization strategy, reporter selection, Cre line selection), planning guides (model generation timeline, budgeting guide), technical resources, and FAQs addressing common project questions.
+ingenious targeting laboratory provides comprehensive resources including selection guides (knockout strategy, conditional vs conventional, humanization strategy, reporter selection, Cre line selection), planning guides (model generation timeline, budgeting guide), technical resources, and FAQs addressing common project questions.
 
 **How do I choose the right knockout or knockin strategy?**
 
-Use the knockout or knockin strategy guide to compare global knockout, conditional knockout, and knockout-first approaches. Selection depends on whether the gene is essential (conditional avoids lethality), whether tissue-specific studies are needed (conditional enables spatial control), and whether temporal control is required (inducible conditional). ITL's scientific consultants provide complimentary consultation to help select optimal strategies.
+Use the knockout or knockin strategy guide to compare global knockout, conditional knockout, and knockout-first approaches. Selection depends on whether the gene is essential (conditional avoids lethality), whether tissue-specific studies are needed (conditional enables spatial control), and whether temporal control is required (inducible conditional). ingenious targeting laboratory's scientific consultants provide complimentary consultation to help select optimal strategies.
 
-**How do I access ITL's technical resources?**
+**How do I access ingenious targeting laboratory's technical resources?**
 
-Technical resources including selection guides, planning guides, and FAQs are available in the resources section. ITL's scientific consultants also provide complimentary project design consultations to help plan optimal mouse model strategies. Contact ITL through the request quote form or schedule a consultation.
+Technical resources including selection guides, planning guides, and FAQs are available in the resources section. ingenious targeting laboratory's scientific consultants also provide complimentary project design consultations to help plan optimal mouse model strategies. Contact ingenious targeting laboratory through the request quote form or schedule a consultation.
 
 (/request-quote)

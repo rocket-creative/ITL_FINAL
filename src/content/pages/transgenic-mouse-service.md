@@ -22,7 +22,7 @@ Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model 
 
 Transgenic mouse models introduce exogenous DNA sequences into the mouse genome for overexpression studies, tissue specific Cre driver generation, reporter line creation, and other applications requiring expression of non native sequences. Unlike knockin models that modify endogenous loci, transgenic approaches add new genetic elements either through random integration or targeted insertion at safe harbor loci.
 
-ITL offers targeted transgenic approaches using ROSA26 and other safe harbor loci, providing options matched to your experimental requirements.
+ingenious targeting laboratory offers targeted transgenic approaches using ROSA26 and other safe harbor loci, providing options matched to your experimental requirements.
 
 ## Transgenic Approaches
 

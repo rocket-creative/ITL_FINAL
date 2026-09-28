@@ -1,7 +1,7 @@
 /**
  * Publications Data for ingenious targeting laboratory
  * 
- * CONTENT RULE (from ITL publications Google Doc / 2026 Publications.docx):
+ * CONTENT RULE (from ingenious targeting laboratory publications Google Doc / 2026 Publications.docx):
  * List entries in date order with the most recent on top. Use the approved citation
  * format exactly as it should appear on https://www.genetargeting.com/publications
  * (authors, title wording, journal abbreviation, volume/issue/pages, punctuation).
@@ -22,7 +22,7 @@
  * }
  * 
  * Last updated: 2026-08-19
- * Source: 2026 Publications.docx (ITL team, Ready to be Updated: 8/3/26)
+ * Source: 2026 Publications.docx (ingenious targeting laboratory team, Ready to be Updated: 8/3/26)
  */
 
 export interface Publication {

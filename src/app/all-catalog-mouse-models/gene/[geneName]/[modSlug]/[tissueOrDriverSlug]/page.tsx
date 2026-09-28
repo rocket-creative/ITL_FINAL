@@ -47,7 +47,7 @@ type Props = {
 
 function stripSmoc(s: string | undefined | null): string {
   if (!s) return '';
-  return s.replace(/\bsmoc\b/gi, 'iTL').replace(/shanghai model organisms?(?:\s+center)?/gi, 'iTL').trim();
+  return s.replace(/\bsmoc\b/gi, 'ingenious targeting laboratory').replace(/shanghai model organisms?(?:\s+center)?/gi, 'ingenious targeting laboratory').trim();
 }
 
 function cleanModel(m: ServerCatalogModel): ServerCatalogModel {

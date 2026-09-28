@@ -4,7 +4,7 @@ slug: "heart-failure-mouse-models"
 extracted: "2026-01-09T17:03:04.328Z"
 ---
 
-# Heart Failure Mouse Models | Cardiac Disease Research | ITL
+# Heart Failure Mouse Models | Cardiac Disease Research | ingenious targeting laboratory
 
 **Url: /heart-failure-mouse-models**
 

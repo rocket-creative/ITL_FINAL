@@ -73,7 +73,7 @@ Study combination checkpoint biology:
 
 ## What Researchers Say
 
-*“My experience with iTL has been great. This is a very professional and efficient team. Everything went smoothly throughout the process and we got our mouse model in a very timely manner. I would highly recommend iTL to my colleagues.”*
+*“My experience with ingenious targeting laboratory has been great. This is a very professional and efficient team. Everything went smoothly throughout the process and we got our mouse model in a very timely manner. I would highly recommend ingenious targeting laboratory to my colleagues.”*
 
 *— **Emily Wu, PhD**, University of California, Los Angeles*
 

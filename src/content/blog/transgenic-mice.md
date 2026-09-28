@@ -51,7 +51,7 @@ In addition, the simultaneous injection of Cas9 mRNA and sgRNA into the cytoplas
 
 The different methods for making mouse lines can be confusing when trying to understand “what are transgenic mice made for.” Generally, transgenic mice are created through random insertion of a gene, while knockin mice involve introducing the gene at a specific locus within the mouse genome. Creating mouse models with the knockin strategy is more complex but removes the unpredictable element that comes with random transgenic insertion. Carefully evaluating the options along with your research plans is crucial to the long-term success of your lab’s research.
 
-“I’ve been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!”
+“I’ve been working with ingenious targeting laboratory over the past 5 years in the production of 3 different genetically altered mice. Not only did ingenious targeting laboratory help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!”
 
 ![](https://uploads-ssl.webflow.com/665dc660af52559c0ed6ec8b/667b95ce209e7b9369983251_1.jpeg)
 Raghu Mirmira, MD, PhDIndiana University

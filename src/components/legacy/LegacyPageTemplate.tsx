@@ -3,7 +3,7 @@
 /**
  * Legacy Page Template Component
  * 
- * This component renders legacy content with the new ITL design system.
+ * This component renders legacy content with the new ingenious targeting laboratory design system.
  * Content is preserved verbatim from the legacy site.
  */
 

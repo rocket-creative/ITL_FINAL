@@ -15,7 +15,7 @@ We're the only mouse model company to perform all service steps in the USA.
 
 ## What Researchers Say
 
-> "iTL has generated a conditional knockout mouse as well as a knockin mouse for my laboratory. As a repeat customer I am obviously happy with their gene targeting services. iTL has consistently proven to be very flexible and easy to work with. This was especially apparent when we phenotyped mice at iTL's animal facilities as their personnel helped us with lab work until 4 am in the morning. Highly recommended!"
+> "ingenious targeting laboratory has generated a conditional knockout mouse as well as a knockin mouse for my laboratory. As a repeat customer I am obviously happy with their gene targeting services. ingenious targeting laboratory has consistently proven to be very flexible and easy to work with. This was especially apparent when we phenotyped mice at ingenious targeting laboratory's animal facilities as their personnel helped us with lab work until 4 am in the morning. Highly recommended!"
 >
 > — **John Andersson, PhD**, CarryGenes Therapeutics
 

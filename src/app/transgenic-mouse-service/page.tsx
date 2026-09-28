@@ -335,7 +335,7 @@ export default function TransgenicMouseServicePage() {
           ]}
         />
 
-        {/* ITL Offers */}
+        {/* ingenious targeting laboratory Offers */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <p className="animate-in" style={{ color: '#555', fontSize: '.95rem', lineHeight: '1.7rem', marginBottom: '20px' }}>
@@ -767,10 +767,9 @@ export default function TransgenicMouseServicePage() {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
               "name": "Ingenious targeting laboratory",
-              "alternateName": "iTL",
               "url": "https://www.genetargeting.com"
             },
-            "description": "Generated transgenic mouse models from ingenious targeting laboratory (iTL), a U.S. based mouse model generation company with a 100% germline transmission guarantee. BAC transgenics, Rosa26 and H11 safe harbor targeting, Cre drivers, and reporter lines. 2,800+ models generated since 1998.",
+            "description": "Generated transgenic mouse models from ingenious targeting laboratory, a U.S. based mouse model generation company with a 100% germline transmission guarantee. BAC transgenics, Rosa26 and H11 safe harbor targeting, Cre drivers, and reporter lines. 2,800+ models generated since 1998.",
             "serviceType": "Generated Transgenic Mouse Model Generation",
             "areaServed": "Worldwide",
             "award": "100% germline transmission guarantee"
@@ -803,7 +802,7 @@ export default function TransgenicMouseServicePage() {
               "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
             },
             "about": ["Transgenic mouse models", "BAC transgenics", "Rosa26", "H11 safe harbor", "Cre drivers", "Reporter mice", "Mouse model generation"],
-            "keywords": "transgenic mouse models, BAC transgenics, Rosa26, H11, Cre drivers, reporter mice, mouse model generation company, ingenious targeting laboratory, iTL"
+            "keywords": "transgenic mouse models, BAC transgenics, Rosa26, H11, Cre drivers, reporter mice, mouse model generation company, ingenious targeting laboratory"
           })
         }}
       />

@@ -1,5 +1,5 @@
 /**
- * Match ITL publications to gene symbols by title/author text.
+ * Match ingenious targeting laboratory publications to gene symbols by title/author text.
  */
 
 import {
@@ -10,7 +10,7 @@ import {
 const MAX_MATCHES = 5;
 
 /**
- * Return up to 5 ITL publications whose title or authors mention any of the given gene symbols
+ * Return up to 5 ingenious targeting laboratory publications whose title or authors mention any of the given gene symbols
  * (case insensitive). Only searches the site publications list, never external sources.
  */
 export function getGeneMatchedPublications(geneSymbols: string[]): Publication[] {

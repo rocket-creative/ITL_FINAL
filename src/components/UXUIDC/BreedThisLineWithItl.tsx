@@ -30,7 +30,7 @@ export default function BreedThisLineWithItl({ lineName }: { lineName?: string }
             margin: '0 0 12px',
           }}
         >
-          Breed this line with ITL
+          Breed this line with ingenious targeting laboratory
         </h2>
         <p
           style={{

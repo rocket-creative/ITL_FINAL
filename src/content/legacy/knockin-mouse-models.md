@@ -104,7 +104,7 @@ Rosen SM, Joshi M, Hitt T, Beggs AH, Agrawal PB. 2020. Knockin mouse model of th
 
 ### The Temporal Dynamics of Arc Expression Regulate Cognitive Flexibility
 
-ingenious generated an Arc knockin mouse for a client, to study the relationship between arc expression and cognitive flexibility. To create this mouse, two point mutations were performed in iTL IC1 (C57BL/6) ES cells, located at the Arc gene's Exon 1. The goal of this was to substitute Lysine in place of Arginine in positions 268 and 269.
+ingenious generated an Arc knockin mouse for a client, to study the relationship between arc expression and cognitive flexibility. To create this mouse, two point mutations were performed in ingenious targeting laboratory IC1 (C57BL/6) ES cells, located at the Arc gene's Exon 1. The goal of this was to substitute Lysine in place of Arginine in positions 268 and 269.
 
 After screening and microinjecting positive clones, chimeras were mated to C57BL/6 FLP mice as well as backcrossed five times to C57/BL6 mice, resulting in Arc KR/KR (ArcKR) mice.
 

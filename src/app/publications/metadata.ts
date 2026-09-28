@@ -7,7 +7,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Scientific Publications',
-  description: 'Scientific publications featuring iTL mouse models. Over 800 peer reviewed papers across neuroscience, oncology, immunology, and more.',
+  description: 'Scientific publications featuring ingenious targeting laboratory mouse models. Over 800 peer reviewed papers across neuroscience, oncology, immunology, and more.',
   path: '/publications',
 });
 

@@ -19,7 +19,7 @@ This approach offers predictable targeting, increased accuracy, and stable gene 
 
 ## What Researchers Say
 
-> "We found iTL's service to be exceptionally efficient and very well managed. We generated several mouse lines with iTL, and every step for each project was performed quickly and precisely, without any delays or problems."
+> "We found ingenious targeting laboratory's service to be exceptionally efficient and very well managed. We generated several mouse lines with ingenious targeting laboratory, and every step for each project was performed quickly and precisely, without any delays or problems."
 >
 > — **Santos Franco, PhD**, University of Colorado Anschutz Medical Campus
 

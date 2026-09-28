@@ -959,10 +959,9 @@ export default function KnockoutMouseModelsPage() {
               '@type': 'Organization',
               '@id': 'https://www.genetargeting.com/#organization',
               name: 'ingenious targeting laboratory',
-              alternateName: 'iTL',
               url: 'https://www.genetargeting.com',
             },
-            description: 'Generated knockout mouse models from ingenious targeting laboratory (iTL), a U.S. based mouse model generation company with a 100% germline transmission guarantee. Conventional, conditional, tissue specific, and inducible knockouts since 1998.',
+            description: 'Generated knockout mouse models from ingenious targeting laboratory, a U.S. based mouse model generation company with a 100% germline transmission guarantee. Conventional, conditional, tissue specific, and inducible knockouts since 1998.',
             serviceType: 'Generated Knockout Mouse Model Generation',
             areaServed: 'Worldwide',
             award: '100% germline transmission guarantee',
@@ -998,7 +997,7 @@ export default function KnockoutMouseModelsPage() {
               },
             },
             about: ['Knockout mouse models', 'Conditional knockout', 'Cre/loxP', 'Gene targeting', 'Mouse model generation'],
-            keywords: 'knockout mouse models, conditional knockout, conventional knockout, tissue specific knockout, mouse model generation company, ingenious targeting laboratory, iTL',
+            keywords: 'knockout mouse models, conditional knockout, conventional knockout, tissue specific knockout, mouse model generation company, ingenious targeting laboratory',
           }),
         }}
       />

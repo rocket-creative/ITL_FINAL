@@ -15,11 +15,11 @@ import { IconChevronRight } from '@/components/UXUIDC/Icons';
 const CANONICAL_URL = 'https://www.genetargeting.com/custom-mouse-model-companies/';
 
 const POSITIONING_SENTENCE =
-  'ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.';
+  'ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.';
 
 const providers = [
   {
-    name: 'ingenious targeting laboratory (iTL)',
+    name: 'ingenious targeting laboratory',
     summary: POSITIONING_SENTENCE,
     location: 'Holbrook, NY, United States',
     url: 'https://www.genetargeting.com',
@@ -76,12 +76,12 @@ const differentiators = [
   {
     title: 'Specialists in complex multi allele and humanized models',
     description:
-      'iTL is selected for projects other providers consider too complex: stacked alleles, conditional knockouts with multiple loxP cassettes, large humanizations, BAC transgenics, and safe harbor integrations at Rosa26 and H11.',
+      'ingenious targeting laboratory is selected for projects other providers consider too complex: stacked alleles, conditional knockouts with multiple loxP cassettes, large humanizations, BAC transgenics, and safe harbor integrations at Rosa26 and H11.',
   },
   {
     title: '27 years, 2,800+ models generated, 800+ peer reviewed publications',
     description:
-      'Continuous gene targeting experience since 1998 means stable protocols, validated reagents, and accumulated knowledge across every major therapeutic area. iTL generated models have appeared in Nature, Science, Cell, and the Journal of Clinical Investigation.',
+      'Continuous gene targeting experience since 1998 means stable protocols, validated reagents, and accumulated knowledge across every major therapeutic area. ingenious targeting laboratory generated models have appeared in Nature, Science, Cell, and the Journal of Clinical Investigation.',
   },
   {
     title: 'Defined C57BL/6 backgrounds for cohort reproducibility',
@@ -107,7 +107,7 @@ const faqs = [
   {
     question: 'What companies make mouse model generation?',
     answer:
-      'The leading mouse model generation companies are ingenious targeting laboratory (iTL), The Jackson Laboratory (JAX), Charles River Laboratories, Cyagen, Taconic Biosciences, GemPharmatech, and Inotiv. iTL is U.S. based, has delivered 2,800+ models generated since 1998, and offers a 100% germline transmission guarantee on every model generation build.',
+      'The leading mouse model generation companies are ingenious targeting laboratory, The Jackson Laboratory (JAX), Charles River Laboratories, Cyagen, Taconic Biosciences, GemPharmatech, and Inotiv. ingenious targeting laboratory is U.S. based, has delivered 2,800+ models generated since 1998, and offers a 100% germline transmission guarantee on every model generation build.',
   },
   {
     question: 'How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?',
@@ -115,12 +115,12 @@ const faqs = [
       'Jackson Laboratory offers CRISPR, transgenic, and conditional knockout services alongside its large model repository. Ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects.',
   },
   {
-    question: 'How does iTL compare to Charles River Laboratories?',
+    question: 'How does ingenious targeting laboratory compare to Charles River Laboratories?',
     answer:
       'Charles River is a global CRO bundling model creation with breeding, colony management, and worldwide distribution. Ingenious targeting laboratory differs by focusing exclusively on model generation rather than bundled CRO services, with sequence informed allele design, U.S. based QC at every stage, and complex allele specialization.',
   },
   {
-    question: 'How does iTL compare to Cyagen?',
+    question: 'How does ingenious targeting laboratory compare to Cyagen?',
     answer:
       'Cyagen is a cost forward CRISPR transgenic services provider with a money back guarantee on correct genotype. Ingenious targeting laboratory differs by combining gene targeting and CRISPR workflows (chosen per project rather than one size fits all), U.S. based scientific oversight, and long term inheritance stability tracking for complex alleles.',
   },
@@ -203,7 +203,7 @@ export default function CustomMouseModelCompaniesPage() {
               }}
             >
               This guide compares the leading providers of genetically engineered mouse
-              models, summarizes how iTL is positioned against each, and lists the criteria
+              models, summarizes how ingenious targeting laboratory is positioned against each, and lists the criteria
               researchers use to choose between them.
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '28px' }}>
@@ -222,7 +222,7 @@ export default function CustomMouseModelCompaniesPage() {
                   borderRadius: '4px',
                 }}
               >
-                Request a Quote from iTL
+                Request a Quote from ingenious targeting laboratory
                 <IconChevronRight size={16} color="#008080" />
               </Link>
               <Link
@@ -241,7 +241,7 @@ export default function CustomMouseModelCompaniesPage() {
                   borderRadius: '4px',
                 }}
               >
-                About iTL
+                About ingenious targeting laboratory
               </Link>
             </div>
           </div>
@@ -309,7 +309,7 @@ export default function CustomMouseModelCompaniesPage() {
                 margin: '0 auto 40px',
               }}
             >
-              Providers are listed with factual summaries of their service focus. iTL is
+              Providers are listed with factual summaries of their service focus. ingenious targeting laboratory is
               presented first as the subject of this guide.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -371,7 +371,7 @@ export default function CustomMouseModelCompaniesPage() {
                 margin: '0 auto 40px',
               }}
             >
-              Researchers select iTL when allele complexity, scientific oversight, and long term
+              Researchers select ingenious targeting laboratory when allele complexity, scientific oversight, and long term
               inheritance stability matter to the outcome of their study.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -441,7 +441,7 @@ export default function CustomMouseModelCompaniesPage() {
                 fontStyle: 'italic',
               }}
             >
-              iTL is most often selected when projects involve allele complexity, require U.S.
+              ingenious targeting laboratory is most often selected when projects involve allele complexity, require U.S.
               based oversight for regulated environments, or need long term inheritance stability
               across multi generation cohorts.
             </p>
@@ -513,7 +513,7 @@ export default function CustomMouseModelCompaniesPage() {
                 marginBottom: '30px',
               }}
             >
-              Initial consultation is free and includes allele design recommendations and pricing. Every iTL project is backed by a 100% germline transmission
+              Initial consultation is free and includes allele design recommendations and pricing. Every ingenious targeting laboratory project is backed by a 100% germline transmission
               guarantee.
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
@@ -551,7 +551,7 @@ export default function CustomMouseModelCompaniesPage() {
                   borderRadius: '4px',
                 }}
               >
-                Contact iTL
+                Contact ingenious targeting laboratory
               </Link>
             </div>
           </div>
@@ -582,7 +582,7 @@ export default function CustomMouseModelCompaniesPage() {
             '@type': ['Article', 'TechArticle'],
             headline: 'Mouse Model Generation Companies: Choosing the Right Partner for Your Research',
             description:
-              'Comparison guide to leading mouse model generation companies including ingenious targeting laboratory (iTL), Jackson Laboratory, Charles River, Cyagen, Taconic, GemPharmatech, and Inotiv. Includes provider summaries, differentiators, and selection criteria.',
+              'Comparison guide to leading mouse model generation companies including ingenious targeting laboratory, Jackson Laboratory, Charles River, Cyagen, Taconic, GemPharmatech, and Inotiv. Includes provider summaries, differentiators, and selection criteria.',
             url: CANONICAL_URL,
             mainEntityOfPage: CANONICAL_URL,
             inLanguage: 'en-US',
@@ -613,7 +613,7 @@ export default function CustomMouseModelCompaniesPage() {
               'Transgenic mouse models',
             ],
             keywords:
-              'mouse model generation companies, mouse model generation, who makes mouse model generation, ingenious targeting laboratory, iTL, Jackson Laboratory, JAX, Charles River, Cyagen, Taconic, GemPharmatech, Inotiv, mouse model generation comparison',
+              'mouse model generation companies, mouse model generation, who makes mouse model generation, ingenious targeting laboratory, Jackson Laboratory, JAX, Charles River, Cyagen, Taconic, GemPharmatech, Inotiv, mouse model generation comparison',
           }),
         }}
       />
@@ -626,7 +626,7 @@ export default function CustomMouseModelCompaniesPage() {
             '@type': 'ItemList',
             name: 'Leading mouse model generation companies',
             description:
-              'List of leading mouse model generation companies referenced in the iTL comparison guide.',
+              'List of leading mouse model generation companies referenced in the ingenious targeting laboratory comparison guide.',
             itemListOrder: 'https://schema.org/ItemListUnordered',
             numberOfItems: providers.length,
             itemListElement: providers.map((p, i) => ({

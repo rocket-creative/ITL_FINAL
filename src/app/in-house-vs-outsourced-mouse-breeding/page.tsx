@@ -416,7 +416,7 @@ export default function InHouseVsOutsourcedMouseBreedingPage() {
           }}
         >
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            {/* TODO(byline): named ITL PhD scientist with credentials + bio link, and reviewer name + review date */}
+            {/* TODO(byline): named ingenious targeting laboratory PhD scientist with credentials + bio link, and reviewer name + review date */}
             <div
               style={{
                 display: 'flex',
@@ -891,7 +891,7 @@ export default function InHouseVsOutsourcedMouseBreedingPage() {
           </div>
         </section>
 
-        {/* How ITL fits, plus the first of two CTAs */}
+        {/* How ingenious targeting laboratory fits, plus the first of two CTAs */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={sectionHeadingStyle}>

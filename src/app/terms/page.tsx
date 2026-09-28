@@ -167,7 +167,7 @@ export default function TermsPage() {
                 <p style={paragraphStyle}>
                   Welcome to genetargeting.com. These Terms of Service (&quot;Terms&quot;) govern your access 
                   to and use of the website and services provided by ingenious targeting laboratory 
-                  (&quot;iTL,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By accessing or using our website, you agree to 
+                  (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By accessing or using our website, you agree to 
                   be bound by these Terms.
                 </p>
               </div>
@@ -252,7 +252,7 @@ export default function TermsPage() {
                 <p style={paragraphStyle}>
                   Intellectual property rights related to model generation projects are governed by the 
                   specific service agreement for each project. Generally, clients retain ownership 
-                  of project designs and resulting mouse models, while iTL retains rights to its 
+                  of project designs and resulting mouse models, while ingenious targeting laboratory retains rights to its 
                   proprietary technologies and methods.
                 </p>
               </div>

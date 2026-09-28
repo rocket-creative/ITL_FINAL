@@ -17,7 +17,7 @@ These time-saving ready-made models offer the opportunity to gain new insights i
 
 ## What Researchers Say
 
-> "iTL generated a conventional knockout mouse for my lab. The entire process was smooth and the quality of service provided by the iTL team and our project manager was exceptional. Several other researchers in my Center are creating mice with iTL and all of us have been extremely satisfied. I strongly recommend iTL for generation of your next mouse model!!!"
+> "ingenious targeting laboratory generated a conventional knockout mouse for my lab. The entire process was smooth and the quality of service provided by the ingenious targeting laboratory team and our project manager was exceptional. Several other researchers in my Center are creating mice with ingenious targeting laboratory and all of us have been extremely satisfied. I strongly recommend ingenious targeting laboratory for generation of your next mouse model!!!"
 >
 > — **Terry K. Means, PhD**, Sanofi
 

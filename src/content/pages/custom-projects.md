@@ -160,7 +160,7 @@ Ingenious targeting laboratory excels in sophisticated designs including:
 
 *— **Frank Y. Chen, MD, PhD**, Houston Behavioral Healthcare Hospital, Houston Adult Psychiatry*
 
-*“iTL has done a tremendous job assisting us with our projects. Not only have they provided successful mouse lines, but their project management has always been on top of things. Communication was excellent, and at all times I felt I could trust the scientists at iTL with my work.”*
+*“ingenious targeting laboratory has done a tremendous job assisting us with our projects. Not only have they provided successful mouse lines, but their project management has always been on top of things. Communication was excellent, and at all times I felt I could trust the scientists at ingenious targeting laboratory with my work.”*
 
 *— **Thomas G.H. Diekwisch, DMD, PhD (sc), PhD (phil.)**, Texas A&amp;M University College of Dentistry*
 
@@ -189,9 +189,9 @@ Our scientific consultants are ready to discuss your research goals and recommen
 
 ## Frequently Asked Questions
 
-**What types of model generation projects does ITL handle?**
+**What types of model generation projects does ingenious targeting laboratory handle?**
 
-ITL handles all types of genetically engineered mouse models including knockout, knockin (point mutations, reporters, humanized), conditional knockout, transgenic models, and complex multi-allele combinations. We also provide services for colony management, cryopreservation, backcrossing, and preclinical studies.
+ingenious targeting laboratory handles all types of genetically engineered mouse models including knockout, knockin (point mutations, reporters, humanized), conditional knockout, transgenic models, and complex multi-allele combinations. We also provide services for colony management, cryopreservation, backcrossing, and preclinical studies.
 
 **How does the model generation project process work?**
 
@@ -201,9 +201,9 @@ The process includes scientific consultation, materials design and synthesis, mo
 
 Standard deliverables include germline-transmitted F1 heterozygous mice, genotyping protocols, and complete project documentation including materials information and confirmation of all project milestone steps. 
 
-**Can ITL help with complex or unusual project requirements?**
+**Can ingenious targeting laboratory help with complex or unusual project requirements?**
 
-Yes. ITL excels at complex projects including multi-allele combinations, conditional approaches, humanized models, and other generated designs. Our scientific team provides consultation to evaluate feasibility and recommend optimal strategies. Contact us to discuss your specific project requirements.
+Yes. ingenious targeting laboratory excels at complex projects including multi-allele combinations, conditional approaches, humanized models, and other generated designs. Our scientific team provides consultation to evaluate feasibility and recommend optimal strategies. Contact us to discuss your specific project requirements.
 
 ## Related Resources
 

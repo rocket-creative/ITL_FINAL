@@ -19,7 +19,7 @@ Benefit from our expertise and generate a mouse model that allows for certainty 
 
 ## What Researchers Say
 
-> "I've been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!"
+> "I've been working with ingenious targeting laboratory over the past 5 years in the production of 3 different genetically altered mice. Not only did ingenious targeting laboratory help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!"
 >
 > — **Raghu Mirmira, MD, PhD**, University of Chicago
 

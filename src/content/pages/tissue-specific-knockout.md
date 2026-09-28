@@ -544,7 +544,7 @@ Genomic PCR using primers flanking the LoxP sites reveals deletion: wildtype and
 - 12+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Comprehensive Cre driver tables by organ system (5 tables)
 - Cre selection criteria and validation guidance
 - Breeding strategy and control considerations

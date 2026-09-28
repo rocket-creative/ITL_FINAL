@@ -6,8 +6,8 @@
 import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Careers at iTL',
-  description: 'Join the iTL team. Career opportunities in mouse genetics, molecular biology, animal care, and laboratory operations.',
+  title: 'Careers at ingenious targeting laboratory',
+  description: 'Join the ingenious targeting laboratory team. Career opportunities in mouse genetics, molecular biology, animal care, and laboratory operations.',
   path: '/current-openings',
   catalogFirst: false,
 });

@@ -3,12 +3,12 @@
 /**
  * Publications Page - ingenious targeting laboratory
  * 
- * This page displays peer-reviewed publications featuring ITL mouse models.
+ * This page displays peer-reviewed publications featuring ingenious targeting laboratory mouse models.
  * 
  * TO UPDATE PUBLICATIONS:
  * Edit the publicationsData.ts file in this same folder.
  * Add new publications to the beginning of the appropriate year array.
- * Follow the ITL source document: date order (most recent first), citation text exactly as approved for the website.
+ * Follow the ingenious targeting laboratory source document: date order (most recent first), citation text exactly as approved for the website.
  */
 
 import { useEffect, useRef, useState, useMemo } from 'react';
@@ -54,7 +54,7 @@ const testimonial = {
 
 // CTA Data
 const ctaData = makeFooterCta(
-  'Partner with iTL',
+  'Partner with ingenious targeting laboratory',
   'ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a generated line.',
   'publications',
 );

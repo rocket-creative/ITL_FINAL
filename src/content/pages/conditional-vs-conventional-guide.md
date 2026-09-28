@@ -218,7 +218,7 @@ This approach provides:
 
 ## What Researchers Say
 
-*“iTL generated a conventional knockout mouse for us, and we were very pleased with the entire process. The project manager was extremely helpful and efficient and promptly notified us whenever a step had been completed. I highly recommend iTL’s services for anyone considering knockout mouse models.”*
+*“ingenious targeting laboratory generated a conventional knockout mouse for us, and we were very pleased with the entire process. The project manager was extremely helpful and efficient and promptly notified us whenever a step had been completed. I highly recommend ingenious targeting laboratory's services for anyone considering knockout mouse models.”*
 
 *— **Edward Harhaj, PhD**, Penn State College of Medicine*
 
@@ -280,7 +280,7 @@ Choose conditional knockout if: the gene causes embryonic lethality, you need ti
 - 10+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Side by side comparison table
 - Decision scenarios section
 - Timeline comparison table

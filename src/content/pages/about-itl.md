@@ -1,5 +1,5 @@
 ---
-title: "About Itl"
+title: "About ingenious targeting laboratory"
 slug: "about-itl"
 extracted: "2026-01-09T17:03:02.893Z"
 ---
