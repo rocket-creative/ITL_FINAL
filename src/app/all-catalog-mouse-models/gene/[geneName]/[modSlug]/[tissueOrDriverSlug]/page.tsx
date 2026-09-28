@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import { getModelsByGene, getRelatedGenesWithModelType } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import CatalogReadyToShipBanner from '@/components/catalog/CatalogReadyToShipBanner';
 import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import { tier4GenerateStaticParams } from '@/data/seoKeywords';
@@ -167,6 +168,7 @@ export default async function GeneModContextTierPage({ params }: Props) {
                 <li style={{ color: 'rgba(255,255,255,0.9)' }}>{h1Third}</li>
               </ol>
             </nav>
+            <CatalogReadyToShipBanner availabilities={models.map((m) => m.availability)} />
             <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.35rem', fontWeight: 700, color: '#fff', marginBottom: '16px', lineHeight: 1.2 }}>
               {geneName} {modCanon} mouse — {h1Third}
             </h1>

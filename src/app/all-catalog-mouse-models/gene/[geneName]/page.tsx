@@ -15,6 +15,7 @@ import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes, indexableTier4ParamsForModels } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import CatalogReadyToShipBanner from '@/components/catalog/CatalogReadyToShipBanner';
 import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
 import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
@@ -453,6 +454,10 @@ export default async function GenePage({ params, searchParams }: Props) {
               >
                 {creDriverQuery} crossed to {geneName} floxed animals — submit a cohort plan for genotyping, QC, and dispatch milestones.
               </div>
+            ) : null}
+
+            {models.length > 0 ? (
+              <CatalogReadyToShipBanner availabilities={models.map((m) => m.availability)} />
             ) : null}
 
             {/* Keyword rich H1: matches "Brca1 knockout mouse", "Tp53 conditional knockout mouse" searches */}

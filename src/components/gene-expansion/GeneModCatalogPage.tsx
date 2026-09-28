@@ -5,6 +5,7 @@
 import Link from 'next/link';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import CatalogReadyToShipBanner from '@/components/catalog/CatalogReadyToShipBanner';
 import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import GeneModAiAnswerLead from '@/components/gene-expansion/GeneModAiAnswerLead';
@@ -96,6 +97,9 @@ export default function GeneModCatalogPage({
                 <li style={{ color: 'rgba(255,255,255,0.9)' }}>{modCanon}</li>
               </ol>
             </nav>
+            {models.length > 0 ? (
+              <CatalogReadyToShipBanner availabilities={models.map((m) => m.availability)} />
+            ) : null}
             <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.5rem', fontWeight: 700, color: '#fff', marginBottom: '16px', lineHeight: 1.2 }}>
               {geneName} {modCanon} mouse models
             </h1>
