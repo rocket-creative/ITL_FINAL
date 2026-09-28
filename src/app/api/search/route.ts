@@ -158,10 +158,17 @@ async function tieredFallback(
   const compact = rawTrim.replace(/\s+/g, '').replace(/%/g, '');
   const q3 = compact.length > 2 ? compact.slice(0, 40) : rawTrim.slice(0, 20).replace(/%/g, '');
   if (q3.length > 2) {
-    const conds = [`model_abbreviation.ilike.%${q3}%`, `itl_catalog_number.ilike.%${q3}%`];
+    const conds = [
+      `model_abbreviation.ilike.%${q3}%`,
+      `itl_catalog_number.ilike.%${q3}%`,
+      `description.ilike.%${q3}%`,
+    ];
     // Preserve the spaced form so "KI 253470" still matches the stored value.
     const rawSafe = sanitizeForOr(rawTrim);
-    if (rawSafe && rawSafe !== q3) conds.push(`itl_catalog_number.ilike.%${rawSafe}%`);
+    if (rawSafe && rawSafe !== q3) {
+      conds.push(`itl_catalog_number.ilike.%${rawSafe}%`);
+      conds.push(`description.ilike.%${rawSafe}%`);
+    }
     const { data: t3 } = await supabase
       .from('catalog_models')
       .select(ROW_FIELDS)

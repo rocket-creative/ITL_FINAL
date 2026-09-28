@@ -92,6 +92,7 @@ const publicationsData = getPublicationsForPage('/transgenic-mouse-service');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const bosmansTestimonial = getTestimonialById('bosmans-ghent')!;
 
@@ -308,12 +309,13 @@ export default function TransgenicMouseServicePage() {
 
         {/* Pricing anchor — captures "transgenic mouse" buyer queries */}
         <UXUIDCServicePricingAnchor
+          emitSchema={false}
           serviceLabel="Transgenic Mouse"
           headline="Generated transgenic mice — fixed-fee quote in 24 hours."
           unlockInterest="Transgenic Mouse"
           subline="Pronuclear injection, BAC transgenics, and targeted transgenesis at safe harbor loci. Pricing scales with construct size and integration strategy. Free scientific consultation included."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=transgenic-pricing-anchor"
-          secondaryHref="/all-catalog-mouse-models/?q=transgenic&utm_source=organic&utm_medium=service&utm_campaign=transgenic-catalog"
+          quoteHref="/request-quote/"
+          secondaryHref="/all-catalog-mouse-models/?q=transgenic"
           secondaryLabel="Browse Transgenic Catalog"
           faqs={[
             {
@@ -753,6 +755,7 @@ export default function TransgenicMouseServicePage() {
           { name: 'Transgenic Mouse Service', path: '/transgenic-mouse-service' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/transgenic-mouse-service" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -763,7 +766,7 @@ export default function TransgenicMouseServicePage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "alternateName": "iTL",
               "url": "https://www.genetargeting.com"
             },
@@ -790,13 +793,13 @@ export default function TransgenicMouseServicePage() {
             "author": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "publisher": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
             },
             "about": ["Transgenic mouse models", "BAC transgenics", "Rosa26", "H11 safe harbor", "Cre drivers", "Reporter mice", "Mouse model generation"],

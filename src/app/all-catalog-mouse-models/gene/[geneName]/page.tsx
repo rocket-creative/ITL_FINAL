@@ -15,8 +15,10 @@ import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes, indexableTier4ParamsForModels } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import { modelTypeAbbrev } from '@/lib/catalog/modelType';
+import CatalogReadyToShipBanner from '@/components/catalog/CatalogReadyToShipBanner';
 import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
-import { UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import {
   getPriorityGeneByMouseSymbol,
@@ -66,7 +68,7 @@ type Props = {
 // Strip any SMOC references from data fields before rendering
 function stripSmoc(s: string | undefined | null): string {
   if (!s) return '';
-  return s.replace(/smoc/gi, 'iTL').replace(/shanghai model organisms?( center)?/gi, 'iTL').trim();
+  return s.replace(/\bsmoc\b/gi, 'iTL').replace(/shanghai model organisms?(?:\s+center)?/gi, 'iTL').trim();
 }
 
 function fixCatalogTypos(s: string): string {
@@ -82,6 +84,7 @@ function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
     category:    stripSmoc(m.category),
     availability: stripSmoc(m.availability),
     catalogNumber: stripSmoc(m.catalogNumber),
+    description: stripSmoc(m.description),
   };
 }
 
@@ -339,7 +342,8 @@ export default async function GenePage({ params, searchParams }: Props) {
   const productSchemas = models.map((m) =>
     buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
-      description: `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}. ${m.category ? `Category: ${m.category}.` : ''} Availability: ${m.availability || 'On request'}.`,
+      description: m.description
+        || `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}. ${m.category ? `Category: ${m.category}.` : ''} Availability: ${m.availability || 'On request'}.`,
     }),
   );
 
@@ -455,6 +459,10 @@ export default async function GenePage({ params, searchParams }: Props) {
               </div>
             ) : null}
 
+            {models.length > 0 ? (
+              <CatalogReadyToShipBanner availabilities={models.map((m) => m.availability)} />
+            ) : null}
+
             {/* Keyword rich H1: matches "Brca1 knockout mouse", "Tp53 conditional knockout mouse" searches */}
             <h1 style={{
               fontFamily: 'Poppins, sans-serif',
@@ -505,6 +513,18 @@ export default async function GenePage({ params, searchParams }: Props) {
                 }}
               >
                 Search All Models
+              </Link>
+              <Link
+                href={`/request-quote?gene=${encodeURIComponent(geneName)}`}
+                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md border-2 border-white/30 px-6 py-3 text-[.9rem] font-semibold text-white no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00d4d4] focus-visible:ring-offset-2 focus-visible:ring-offset-[#134978] sm:w-auto"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  background: 'transparent', color: '#fff', padding: '12px 24px',
+                  borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
+                  border: '2px solid rgba(255,255,255,0.3)',
+                }}
+              >
+                Request a Quote
               </Link>
             </div>
           </div>
@@ -586,14 +606,19 @@ export default async function GenePage({ params, searchParams }: Props) {
                           {model.modelAbbrev || geneName}
                         </p>
                         {model.modelType ? (
-                          <span className="inline-flex max-w-full items-center rounded px-2.5 py-1 text-[.75rem] font-semibold leading-snug text-white bg-[#134978]">
-                            {model.modelType}
+                          <span title={model.modelType} className="inline-flex max-w-full items-center rounded px-2.5 py-1 text-[.75rem] font-semibold leading-snug text-white bg-[#134978]">
+                            {modelTypeAbbrev(model.modelType)}
                           </span>
                         ) : null}
                       </div>
                       {model.category ? (
                         <p className="mt-1.5 mb-0 text-[.82rem] leading-snug text-[#666] break-words">
                           {model.category}
+                        </p>
+                      ) : null}
+                      {model.description ? (
+                        <p className="mt-1.5 mb-0 text-[.85rem] leading-relaxed text-[#444] break-words">
+                          {model.description}
                         </p>
                       ) : null}
                       <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-[.82rem]">
@@ -912,12 +937,15 @@ export default async function GenePage({ params, searchParams }: Props) {
           </section>
         )}
 
+        <BreedThisLineWithItl lineName={geneName} />
+
         {/* CTA */}
         <section style={{ backgroundColor: '#f5f5f4', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <CatalogCustomDualCta
               slug={geneName}
               utmMedium="gene-page-closing"
+              geneSymbol={geneName}
               flush
               catalogOverrides={{
                 eyebrow: hasLiveModels ? 'Live colonies' : 'Catalog Models',

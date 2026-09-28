@@ -64,7 +64,7 @@ Working from a Venezuelan pedigree, the Yamamoto lab at Columbia, with collabora
 
 The next question was whether the variant itself was causal, or merely correlated with protection. Answering that required moving from human genetics to a mouse model with the exact variant introduced at the orthologous position.`,
 
-  bodyTheModel: `Ingenious Targeting Laboratory generated the <strong>point mutation knockin</strong> introducing the orthologous SNP into the endogenous mouse <em>Wdfy3</em> locus. The team also built a <strong>Rosa26 cDNA knockin</strong> overexpressing human ALFY, the protein encoded by WDFY3. Both models were generated on a C57BL/6 background.
+  bodyTheModel: `Ingenious targeting laboratory generated the <strong>point mutation knockin</strong> introducing the orthologous SNP into the endogenous mouse <em>Wdfy3</em> locus. The team also built a <strong>Rosa26 cDNA knockin</strong> overexpressing human ALFY, the protein encoded by WDFY3. Both models were generated on a C57BL/6 background.
 
 The point mutation strategy was the critical piece. A transgenic would have introduced the variant at a random locus with variable expression; a straight knockout would have told them nothing about the SNP specifically. The knockin preserved endogenous regulation and made the resulting phenotype directly attributable to the variant.`,
 

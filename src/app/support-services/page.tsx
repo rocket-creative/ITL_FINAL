@@ -7,6 +7,7 @@ import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import Link from 'next/link';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
+import BreedThisLineWithItl from '@/components/UXUIDC/BreedThisLineWithItl';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconSettings, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
@@ -35,7 +36,7 @@ const colonyManagementServices = [
   },
   {
     name: "Genotyping Services",
-    description: "PCR based assays to identify carriers, homozygotes, and compound mutants. ingenious targeting laboratory develops generated genotyping protocols for each targeted allele."
+    description: "PCR based assays to identify carriers, homozygotes, and compound mutants. Ingenious targeting laboratory develops generated genotyping protocols for each targeted allele."
   },
   {
     name: "Cohort Development",
@@ -115,6 +116,9 @@ const serviceComparison = [
 
 // Related Services
 const relatedServices = [
+  { title: "Contract Mouse Breeding Services", href: "/mouse-breeding-services/" },
+  { title: "Mouse Cohort Development Services", href: "/mouse-cohort-development/" },
+  { title: "Conditional Knockout Cohort Breeding", href: "/conditional-knockout-cohort-breeding/" },
   { title: "Colony Management Services", href: "/colony-management-services" },
   { title: "Cryopreservation Services", href: "/cryopreservation-services" },
   { title: "Rederivation Services", href: "/rederivation-services" },
@@ -131,6 +135,7 @@ const relatedModels = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const saidTestimonial = getTestimonialById('said-uci')!;
 
@@ -142,7 +147,7 @@ const testimonials = [
 const faqData = [
   {
     question: "What support services does ingenious targeting laboratory provide beyond model generation?",
-    answer: "ingenious targeting laboratory provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, and targeted clone archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation)."
+    answer: "Ingenious targeting laboratory provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, and targeted clone archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation)."
   },
   {
     question: "How do colony management services help maintain mouse lines?",
@@ -245,7 +250,7 @@ export default function SupportServicesPage() {
 
                 <div className="hero-animate flex flex-wrap gap-4">
                   <Link
-                    href="/request-quote"
+                    href="/cohort-consultation/?ref=support-hero#request-form"
                     className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                     style={{
                       backgroundColor: 'white',
@@ -256,11 +261,11 @@ export default function SupportServicesPage() {
                       fontWeight: 500
                     }}
                   >
-                    <span>Request a Quote</span>
+                    <span>Get a Breeding Quote</span>
                     <span>→</span>
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/cohort-consultation/#schedule"
                     className="inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                     style={{
                       backgroundColor: 'transparent',
@@ -578,6 +583,7 @@ export default function SupportServicesPage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       <UXUIDCFooter />
@@ -586,8 +592,15 @@ export default function SupportServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/support-services', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -595,10 +608,12 @@ export default function SupportServicesPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://www.genetargeting.com/support-services/#service",
             "name": "Mouse Model Support Services",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse colony management, cryopreservation, rederivation, and breeding services. Comprehensive support for your mouse model projects since 1998.",
             "serviceType": "Mouse Model Support Services"

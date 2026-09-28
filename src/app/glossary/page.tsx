@@ -71,7 +71,7 @@ export default function GlossaryPage() {
             "description": "Technical terminology reference for gene targeting and mouse genetics including knockout, knockin, conditional, and transgenic mouse model terms.",
             "publisher": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })

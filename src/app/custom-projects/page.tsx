@@ -87,6 +87,7 @@ const projectTypesData = [
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 
@@ -157,7 +158,8 @@ export default function CustomProjectsPage() {
             "description": "Mouse model generation services including knockout, knockin, conditional, and humanized models. Over 2,800 models generated since 1998.",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Generated Genetic Engineering Services"
@@ -619,6 +621,12 @@ export default function CustomProjectsPage() {
           { name: 'Home', path: '/' },
           { name: 'Model Generation Projects', path: '/custom-projects' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/custom-projects', faqData)),
+        }}
       />
     </div>
   );

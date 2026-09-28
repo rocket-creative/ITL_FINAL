@@ -32,7 +32,7 @@ const statsData = [
 const modelTypes = [
   {
     title: "Knockout Mouse Models",
-    description: "Knockout mice enable loss of function studies by eliminating specific gene activity. ingenious targeting laboratory offers both conventional knockouts for complete gene inactivation and conditional knockouts that allow spatial and temporal control of gene deletion.",
+    description: "Knockout mice enable loss of function studies by eliminating specific gene activity. Ingenious targeting laboratory offers both conventional knockouts for complete gene inactivation and conditional knockouts that allow spatial and temporal control of gene deletion.",
     features: [
       { name: "Conventional Knockout", desc: "Permanently disrupt target gene function in all tissues throughout development, ideal for understanding essential gene function and creating disease models where complete loss of function is required." },
       { name: "Conditional Knockout", desc: "Use the Cre lox system to enable gene deletion in specific tissues or at defined timepoints, essential for studying genes with embryonic lethal phenotypes or investigating tissue specific gene function." }
@@ -72,7 +72,7 @@ const modelTypes = [
 // Advanced Technologies
 const advancedTech = {
   title: "Conditional Gene Targeting",
-  description: "ingenious targeting laboratory specializes in conditional allele design using the Cre lox recombination system. Our derivative allele approach creates flexible alleles that can generate multiple model types from a single targeted ES cell clone.",
+  description: "Ingenious targeting laboratory specializes in conditional allele design using the Cre lox recombination system. Our derivative allele approach creates flexible alleles that can generate multiple model types from a single targeted ES cell clone.",
   alleles: [
     { name: "tm1a", desc: "Knockout first allele (LacZ reporter intact)" },
     { name: "tm1b", desc: "Complete null allele" },
@@ -95,7 +95,7 @@ const strainOptions = [
 const additionalServices = [
   {
     title: "Genotyping Services",
-    description: "ingenious targeting laboratory provides comprehensive genotyping services to support your mouse model research.",
+    description: "Ingenious targeting laboratory provides comprehensive genotyping services to support your mouse model research.",
     items: [
       "PCR based genotyping for targeted alleles",
       "Quantitative PCR for copy number determination",
@@ -115,7 +115,7 @@ const additionalServices = [
   },
   {
     title: "Microinjection Services",
-    description: "ingenious targeting laboratory's microinjection services deliver targeted ES cells into blastocysts for chimera generation.",
+    description: "Ingenious targeting laboratory's microinjection services deliver targeted ES cells into blastocysts for chimera generation.",
     items: [
       "Blastocyst injection with characterized ES cell clones",
       "Morula injection for accelerated timelines",
@@ -128,6 +128,7 @@ const additionalServices = [
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const dunaiefTestimonial = getTestimonialById('dunaief-upenn')!;
 
@@ -157,7 +158,7 @@ const faqData = [
   },
   {
     question: "What strain backgrounds are available for model generation?",
-    answer: "ingenious targeting laboratory offers C57BL/6, BALB/c, and 129 strain ES cells for targeted models. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological and metabolic studies. Strain selection depends on your research requirements and downstream breeding plans."
+    answer: "Ingenious targeting laboratory offers C57BL/6, BALB/c, and 129 strain ES cells for targeted models. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological and metabolic studies. Strain selection depends on your research requirements and downstream breeding plans."
   },
   {
     question: "How long does it take to generate a mouse model?",
@@ -682,13 +683,20 @@ export default function MouseModelServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/mouse-model-services', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Mouse Model Generation",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse model generation services including knockout, knockin, conditional, and humanized mice. 2,800+ models generated since 1998.",
             "serviceType": "Mouse Model Generation"

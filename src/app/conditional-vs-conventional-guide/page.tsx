@@ -179,6 +179,7 @@ const quickDecisionData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const harhajTestimonial = getTestimonialById('harhaj-pennstate')!;
 
@@ -246,7 +247,7 @@ export default function ConditionalVsConventionalGuidePage() {
             "description": "Compare conditional and conventional knockout strategies. Side by side analysis of timeline, cost, flexibility, and applications. Expert guidance since 1998.",
             "publisher": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "articleSection": "Research Guides"
@@ -1029,6 +1030,12 @@ export default function ConditionalVsConventionalGuidePage() {
           { name: 'Resources', path: '/resources' },
           { name: 'Conditional vs Conventional Guide', path: '/conditional-vs-conventional-guide' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/conditional-vs-conventional-guide', faqData)),
+        }}
       />
     </div>
   );

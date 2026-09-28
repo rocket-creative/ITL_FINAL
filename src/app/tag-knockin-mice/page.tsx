@@ -141,6 +141,7 @@ const publicationsData = getPublicationsForPage('/tag-knockin-mice');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const rothTestimonial = getTestimonialById('roth-upenn')!;
 
@@ -749,13 +750,20 @@ export default function TagKnockinMicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/tag-knockin-mice', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Tag Knockin Mice",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Epitope tag knockin mouse models with FLAG, HA, V5, and other tags. Track endogenous proteins without gene-specific antibodies. Model generation since 1998.",
             "serviceType": "Mouse Model Generation"

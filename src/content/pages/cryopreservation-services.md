@@ -4,7 +4,7 @@ slug: "cryopreservation-services"
 extracted: "2026-01-09T17:03:03.893Z"
 ---
 
-# Cryopreservation Services | Sperm &amp; Embryo Freezing | Ingenious Targeting Laboratory
+# Cryopreservation Services | Sperm &amp; Embryo Freezing | ingenious targeting laboratory
 
 **Url: /cryopreservation-services**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:03.893Z"
 
 # Mouse Cryopreservation Services
 
-Since 1998, Ingenious Targeting Laboratory has provided cryopreservation services to protect valuable genetically engineered mouse lines for researchers worldwide. Our cryopreservation expertise ensures your mouse models remain available for future research, protected against colony loss due to disease outbreak, breeding failure, or facility disruption.
+Since 1998, ingenious targeting laboratory has provided cryopreservation services to protect valuable genetically engineered mouse lines for researchers worldwide. Our cryopreservation expertise ensures your mouse models remain available for future research, protected against colony loss due to disease outbreak, breeding failure, or facility disruption.
 
 Cryopreservation converts living mouse lines into stable frozen archives that can be stored indefinitely and recovered when needed. Whether preserving sperm for rapid archiving or embryos for maximum genetic preservation, cryopreservation provides insurance for your research investment and enables efficient management of mouse model resources.
 

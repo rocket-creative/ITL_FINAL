@@ -4,7 +4,7 @@ slug: "cardiovascular-mouse-models"
 extracted: "2026-01-09T17:03:03.251Z"
 ---
 
-# Cardiovascular Mouse Models | Heart Disease Research Models | Ingenious Targeting Laboratory
+# Cardiovascular Mouse Models | Heart Disease Research Models | ingenious targeting laboratory
 
 **Url: /cardiovascular-mouse-models**
 

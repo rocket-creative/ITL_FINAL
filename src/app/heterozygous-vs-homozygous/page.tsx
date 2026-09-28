@@ -143,7 +143,9 @@ export default function HetVsHomPage() {
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link
-                href="/breeding-scheme-architect/?utm_source=organic&utm_medium=resource&utm_campaign=het-vs-hom-hero"
+                href="/breeding-scheme-architect/"
+                data-cta="resource-hero"
+                data-cta-location="resource"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -161,7 +163,9 @@ export default function HetVsHomPage() {
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
-                href="/request-quote/?utm_source=organic&utm_medium=resource&utm_campaign=het-vs-hom-hero"
+                href="/request-quote/"
+                data-cta="resource-hero-quote"
+                data-cta-location="resource"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',

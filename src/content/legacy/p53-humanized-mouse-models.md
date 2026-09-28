@@ -11,7 +11,7 @@ title: "p53 Humanized Mouse Models"
 
 ## Customizable and regulatable p53 mutations: convenient, validated, and cost-effective
 
-ingenious targeting laboratory has developed over 100 p53 humanized mouse models. Using our elegant targeting system, investigators studying the p53 gene and relevant protein pathways now have at their fingertips a suite of validated, cost effective products at their disposal.
+Ingenious targeting laboratory has developed over 100 p53 humanized mouse models. Using our elegant targeting system, investigators studying the p53 gene and relevant protein pathways now have at their fingertips a suite of validated, cost effective products at their disposal.
 
 These time-saving ready-made models offer the opportunity to gain new insights into cancer, as well as other diseases and conditions in which p53 has implications including neurodegenerative disorders, certain autoimmune diseases, and developmental abnormalities.
 

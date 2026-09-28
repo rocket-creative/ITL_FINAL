@@ -194,14 +194,6 @@ export default async function CreDriverPage({ params }: Props) {
       </main>
       <UXUIDCFooter />
 
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', path: '/' },
-          { name: 'Cre recombinase mice', path: '/cre-recombinase-mice' },
-          { name: row.driver, path: `/cre-drivers/${driverSlug}` },
-        ]}
-      />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -218,6 +210,7 @@ export default async function CreDriverPage({ params }: Props) {
               },
               {
                 '@type': 'FAQPage',
+                '@id': `${BASE_URL}/cre-drivers/${driverSlug}/#faq`,
                 mainEntity: faqs.map((f) => ({
                   '@type': 'Question',
                   name: f.question,

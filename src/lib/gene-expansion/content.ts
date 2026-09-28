@@ -38,7 +38,7 @@ function alleleGap(gene: GeneRow): string {
   const ko = gene.existing_knockout_count;
 
   if (total === 0) {
-    return `No published alleles are indexed for ${gene.symbol} in the sources we track. ingenious targeting laboratory designs the first targeted line to your specification, with homologous recombination targeting and pre germline characterization.`;
+    return `No published alleles are indexed for ${gene.symbol} in the sources we track. Ingenious targeting laboratory designs the first targeted line to your specification, with homologous recombination targeting and pre germline characterization.`;
   }
 
   const parts = [`${total} existing allele${total === 1 ? '' : 's'} are indexed for ${gene.symbol}`];
@@ -101,7 +101,7 @@ export function buildPageCopy(gene: GeneRow, modelType: ModelTypeRow): PageCopy 
   const h1 = `${gene.symbol} ${modelType.display_name} Mouse`;
   const heroIntro =
     'Since 1998, ingenious targeting laboratory has delivered 2,800+ projects with 100% germline transmission guarantee and 800+ peer reviewed publications.';
-  const geneFraming = `${gene.symbol}${gene.name ? ` (${gene.name})` : ''} is a common request for ${modelType.display_name.toLowerCase()} mouse models. ingenious targeting laboratory designs and delivers the line to your study specification with documented milestones.`;
+  const geneFraming = `${gene.symbol}${gene.name ? ` (${gene.name})` : ''} is a common request for ${modelType.display_name.toLowerCase()} mouse models. Ingenious targeting laboratory designs and delivers the line to your study specification with documented milestones.`;
   const viab = viabilityNote(gene);
   const gap = alleleGap(gene);
   const rationale = modificationRationale(modelType);
@@ -123,7 +123,7 @@ export function buildPageCopy(gene: GeneRow, modelType: ModelTypeRow): PageCopy 
     modelType.slug === 'reporter'
       ? REPORTER_FLUOROPHORES.map((f) => ({
           title: `${gene.symbol} ${f.name} reporter`,
-          body: `${f.label} fused to ${gene.symbol} regulatory elements reports native expression. ingenious targeting laboratory engineers the knockin and confirms pattern before germline transmission.`,
+          body: `${f.label} fused to ${gene.symbol} regulatory elements reports native expression. Ingenious targeting laboratory engineers the knockin and confirms pattern before germline transmission.`,
         }))
       : undefined;
 

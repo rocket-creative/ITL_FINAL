@@ -22,7 +22,7 @@ const REQUEST_QUOTE_THANK_YOU = '/request-quote/thank-you/';
 const heroData = {
   badge: "Our Services",
   title: "Mouse Model Quote Request",
-  intro: "Submit your mouse model project details to receive a project quote including timeline, deliverables, and pricing. ingenious targeting laboratory\'s scientific consultants will review your request and provide strategic recommendations along with project pricing.",
+  intro: "Submit your mouse model project details to receive a project quote including timeline, deliverables, and pricing. Ingenious targeting laboratory\'s scientific consultants will review your request and provide strategic recommendations along with project pricing.",
   description: ""
 };
 
@@ -369,29 +369,6 @@ export default function RequestQuoteClient() {
         )}
       
       {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.genetargeting.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Request Quote",
-                "item": "https://www.genetargeting.com/request-quote"
-              }
-            ]
-          })
-        }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

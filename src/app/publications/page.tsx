@@ -29,7 +29,7 @@ import { publicationsByYear, getYears, getTotalPublicationCount, Publication } f
 const heroData = {
   badge: "Publications",
   title: "Groundbreaking Publications in Genetic Research",
-  intro: "ingenious targeting laboratory generated mouse models have contributed to more than 800 peer-reviewed publications across all major therapeutic areas.",
+  intro: "Ingenious targeting laboratory generated mouse models have contributed to more than 800 peer-reviewed publications across all major therapeutic areas.",
   description: "Our generated knockout, knockin, and humanized mouse models have supported groundbreaking research published in Nature, Cell, Science, and specialty journals worldwide."
 };
 
@@ -133,7 +133,7 @@ export default function PublicationsPage() {
             "description": "Peer-reviewed publications featuring ingenious targeting laboratory mouse models. Over 800 publications in Nature, Cell, Science, and specialty journals.",
             "publisher": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })

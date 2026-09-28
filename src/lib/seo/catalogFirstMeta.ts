@@ -34,6 +34,7 @@ const CATALOG_HUB_PREFIXES = [
   '/reporter-mouse-catalog',
   '/order-catalog-models',
   '/featured-model',
+  '/live-humanized-mice',
 ];
 
 const QUOTE_PATH_PREFIXES = ['/request-quote', '/start-your-project'];

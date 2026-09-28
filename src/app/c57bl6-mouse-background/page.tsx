@@ -188,6 +188,7 @@ const publicationsData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { FEATURED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonialsData = FEATURED_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -261,7 +262,7 @@ export default function C57BL6MouseBackgroundPage() {
             "description": "C57BL/6 mouse strain background for gene targeting. Compare C57BL/6J and C57BL/6N substrains. Expert guidance on strain selection since 1998.",
             "publisher": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })
@@ -994,6 +995,12 @@ export default function C57BL6MouseBackgroundPage() {
           { name: 'Mouse Strain Backgrounds', path: '/mouse-strain-backgrounds' },
           { name: 'C57BL/6 Mouse Background', path: '/c57bl6-mouse-background' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/c57bl6-mouse-background', faqData)),
+        }}
       />
     </div>
   );

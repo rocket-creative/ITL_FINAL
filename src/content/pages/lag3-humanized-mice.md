@@ -4,7 +4,7 @@ slug: "lag3-humanized-mice"
 extracted: "2026-01-09T17:03:04.801Z"
 ---
 
-# LAG3 Humanized Mice | Immune Checkpoint Mouse Models | Ingenious Targeting Laboratory
+# LAG3 Humanized Mice | Immune Checkpoint Mouse Models | ingenious targeting laboratory
 
 **Url: /lag3-humanized-mice**
 

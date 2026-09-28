@@ -16,7 +16,7 @@ import { StandardPageCtaStack } from '@/components/UXUIDC';
 const heroData = {
   badge: "Model Characterization",
   title: "Mouse Phenotyping Services",
-  intro: "ingenious targeting laboratory provides comprehensive phenotyping services to characterize your mouse model generation across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.",
+  intro: "Ingenious targeting laboratory provides comprehensive phenotyping services to characterize your mouse model generation across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.",
   description: "From basic clinical observations through specialized disease specific endpoints, our phenotyping capabilities help you understand your model's biology and validate its utility for your research program."
 };
 
@@ -133,6 +133,7 @@ const studyDesignElements = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const saidTestimonial = getTestimonialById('said-uci')!;
 
@@ -669,9 +670,16 @@ export default function PhenotypingServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Phenotyping Services', path: '/phenotyping-services' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/phenotyping-services', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -682,7 +690,8 @@ export default function PhenotypingServicesPage() {
             "name": "Mouse Phenotyping Services",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Comprehensive mouse phenotyping services including histopathology, clinical chemistry, behavioral testing, and disease specific phenotyping. Since 1998.",
             "serviceType": "Phenotyping Services"

@@ -74,6 +74,7 @@ const publicationsData = getPublicationsForPage('/diabetes-mouse-models');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 
@@ -598,13 +599,20 @@ export default function DiabetesMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/diabetes-mouse-models', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Diabetes Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated diabetes mouse models for type 1 and type 2 diabetes research. Beta cell knockouts, insulin signaling models, and metabolic phenotyping.",
             "serviceType": "Diabetes Mouse Model Generation"

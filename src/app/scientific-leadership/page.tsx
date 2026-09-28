@@ -447,21 +447,7 @@ export default function ScientificLeadershipPage() {
         ]}
       />
 
-      {/* Organization Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'ingenious targeting laboratory',
-            url: 'https://www.genetargeting.com',
-            foundingDate: '1998',
-            description: 'Mouse model generation with over 26 years of expertise in gene targeting, conditional alleles, and gene targeting technology.',
-            areaServed: 'Worldwide',
-          }),
-        }}
-      />
+      {/* Organization is emitted once sitewide from src/app/layout.tsx. */}
     </div>
   );
 }

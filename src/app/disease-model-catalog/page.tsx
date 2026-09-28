@@ -17,7 +17,7 @@ import { CatalogCustomDualCta, StandardPageCtaStack } from '@/components/UXUIDC'
 const heroData = {
   badge: "Catalog Models",
   title: "Disease Model Catalog",
-  intro: "ingenious targeting laboratory maintains a catalog of disease model mouse lines available for research applications. These models represent disease relevant genotypes available for immediate use in your studies.",
+  intro: "Ingenious targeting laboratory maintains a catalog of disease model mouse lines available for research applications. These models represent disease relevant genotypes available for immediate use in your studies.",
   description: "Our disease model catalog includes models across all major therapeutic areas, from oncology and neuroscience to metabolic disease and immunology. All catalog models include genotyping protocols, strain background information, and health documentation."
 };
 
@@ -176,7 +176,8 @@ export default function DiseaseModelCatalogPage() {
             "description": "Catalog of disease model mouse lines available for research. Oncology, neuroscience, metabolic, cardiovascular, and immunology disease models.",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Disease Model Mouse Lines"
@@ -270,7 +271,7 @@ export default function DiseaseModelCatalogPage() {
                 Order Inquiry
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
-              <Link href="/catalog-mouse-models" style={{
+              <Link href="/all-catalog-mouse-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -283,7 +284,7 @@ export default function DiseaseModelCatalogPage() {
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.3)'
               }}>
-                All Catalog Models
+                Search All Models
               </Link>
             </div>
           </div>

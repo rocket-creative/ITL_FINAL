@@ -11,7 +11,7 @@ images:
   - url: "https://cdn.prod.website-files.com/665dc660af52559c0ed6ec51/665dc660af52559c0ed6ed0a_New-Model-Diagram.webp"
     alt: "Model development diagram"
   - url: "https://cdn.prod.website-files.com/665dc660af52559c0ed6ec51/6663354ca1047c6ac2e625aa_Guaranteed-Generated-Mouse-Model.webp"
-    alt: "Ingenious Targeting Laboratory Guarantee Badge"
+    alt: "Ingenious targeting laboratory Guarantee Badge"
 ---
 
 # Animal Model Generation

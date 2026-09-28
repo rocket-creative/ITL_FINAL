@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.399Z"
 
 # Mouse Phenotyping Services
 
-Ingenious Targeting Laboratory provides comprehensive phenotyping services to characterize your mouse model generation across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.
+Ingenious targeting laboratory provides comprehensive phenotyping services to characterize your mouse model generation across multiple biological parameters. Phenotyping reveals the functional consequences of genetic modifications and informs experimental design for downstream studies.
 
 From basic clinical observations through specialized disease specific endpoints, our phenotyping capabilities help you understand your model's biology and validate its utility for your research program.
 

@@ -209,14 +209,6 @@ export default async function CreLinesTissuePage({ params }: Props) {
       </main>
       <UXUIDCFooter />
 
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', path: '/' },
-          { name: 'Tissue specific knockout', path: '/tissue-specific-knockout' },
-          { name: `${label} specific`, path: `/cre-lines/${tissueSlug}` },
-        ]}
-      />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -233,6 +225,7 @@ export default async function CreLinesTissuePage({ params }: Props) {
               },
               {
                 '@type': 'FAQPage',
+                '@id': `${BASE_URL}/cre-lines/${tissueSlug}/#faq`,
                 mainEntity: faqs.map((f) => ({
                   '@type': 'Question',
                   name: f.question,

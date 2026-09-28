@@ -55,3 +55,56 @@ export function availabilityLabel(a?: string | null): string {
   const v = (a || '').trim();
   return v || 'Inquire';
 }
+
+/** Short stock tokens for tight table columns (LIVE, SPERM, EMBRYO). */
+export function availabilityShortLabel(a?: string | null): string {
+  const forms = stockFormsFromAvailability(a);
+  return forms.length > 0 ? forms.join(' · ') : 'Inquire';
+}
+
+/** Canonical stock forms, in hero display order. Unknown statuses follow these. */
+export const STOCK_FORM_ORDER = ['LIVE', 'SPERM', 'EMBRYO', 'DEVELOPING', 'IN PRODUCTION'] as const;
+
+export type KnownStockForm = (typeof STOCK_FORM_ORDER)[number];
+
+function isKnownStockForm(form: string): form is KnownStockForm {
+  return (STOCK_FORM_ORDER as readonly string[]).includes(form);
+}
+
+/**
+ * Tokens for one availability string.
+ * Embryo or other cryo is EMBRYO only (not a second cryo label).
+ * Sperm cryo is SPERM only. A string can still yield more than one token
+ * when it names distinct forms (live and sperm, for example).
+ */
+export function stockFormsFromAvailability(a?: string | null): string[] {
+  const raw = (a || '').trim();
+  if (!raw) return [];
+
+  const forms: string[] = [];
+  const v = raw.toLowerCase();
+
+  if (isLive(raw)) forms.push('LIVE');
+  if (v.includes('sperm')) forms.push('SPERM');
+  // Embryo, or cryo that is not sperm, is EMBRYO only — not a second cryo label.
+  if (v.includes('embryo') || (v.includes('cryo') && !v.includes('sperm'))) {
+    forms.push('EMBRYO');
+  }
+  if (isDeveloping(raw)) forms.push('DEVELOPING');
+  if (isFounderOnly(raw)) forms.push('IN PRODUCTION');
+
+  if (forms.length === 0) forms.push(raw.toUpperCase());
+  return forms;
+}
+
+/** Unique forms across the models on a page, in display order. */
+export function stockFormsFor(availabilities: readonly (string | null | undefined)[]): string[] {
+  const seen = new Set<string>();
+  for (const availability of availabilities) {
+    for (const form of stockFormsFromAvailability(availability)) seen.add(form);
+  }
+
+  const known = STOCK_FORM_ORDER.filter((form) => seen.has(form));
+  const rest = [...seen].filter((form) => !isKnownStockForm(form)).sort();
+  return [...known, ...rest];
+}

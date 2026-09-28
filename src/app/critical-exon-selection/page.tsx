@@ -100,6 +100,7 @@ const publicationsData = getPublicationsForPage('/critical-exon-selection');
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 const testimonials = [
   { quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation },
@@ -615,13 +616,20 @@ export default function CriticalExonSelectionPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/critical-exon-selection', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Critical Exon Selection",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Expert guidance on critical exon selection for knockout mouse design. Choose optimal exons for effective gene inactivation since 1998.",
             "serviceType": "Critical Exon Selection"

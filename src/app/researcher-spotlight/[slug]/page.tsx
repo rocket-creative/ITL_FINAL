@@ -32,7 +32,7 @@ export async function generateMetadata(
     };
   }
 
-  const canonical = `https://www.genetargeting.com/researcher-spotlight/${spotlight.slug}`;
+  const canonical = `https://www.genetargeting.com/researcher-spotlight/${spotlight.slug}/`;
   const description = spotlight.metaDescription;
 
   return {
@@ -66,7 +66,7 @@ export default async function SpotlightPage(
     notFound();
   }
 
-  const canonical = `https://www.genetargeting.com/researcher-spotlight/${spotlight.slug}`;
+  const canonical = `https://www.genetargeting.com/researcher-spotlight/${spotlight.slug}/`;
   const cleanTitle = spotlight.title.replace(/<\/?em>/g, '');
   const cleanCitation = spotlight.paperCitation.replace(/<\/?em>/g, '');
 

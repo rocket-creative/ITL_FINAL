@@ -7,6 +7,7 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { ROOT_CATALOG_FIRST_META } from '@/lib/seo';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 import {
   UXUIDCNavigation,
   UXUIDCFooter,
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
 // Hero Section - lines 8-13
 const heroData = {
   headline: 'Mouse Model Generation Designed for Study Ready, Reproducible Research',
-  description1: 'ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
+  description1: 'Ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
   description2: 'For more than two decades, researchers have partnered with our U.S. based scientific team for sequence informed allele design, rigorous QC oversight, and study ready germline transmitting mouse lines. iTL helps researchers determine the most appropriate approach for long term allele stability, clear genotype interpretation, and successful model creation.',
   cta1: { label: 'Browse Catalog Models', href: '/catalog-mouse-models' },
   cta2: { label: 'Request a Quote', href: '/request-quote' },
@@ -81,7 +82,7 @@ const servicesData = [
   {
     title: 'Cohort Development',
     description: 'Study ready cohorts on C57BL/6 backgrounds with structured breeding to support statistical power and multi-site reproducibility.',
-    href: '/colony-management-services',
+    href: '/mouse-cohort-development',
   },
   {
     title: 'Catalog Library',
@@ -121,7 +122,7 @@ const landscapeData = {
 
 // High-Level Approach - lines 39-47
 const approachData = {
-  title: "ingenious targeting laboratory's High-Level Approach",
+  title: "Ingenious targeting laboratory's High-Level Approach",
   features: [
     {
       title: 'Optimized Targeting Strategy',
@@ -172,6 +173,7 @@ const workflowData = {
       number: 5,
       title: 'Cohort Development',
       description: 'Study ready cohort expansion with structured breeding for statistical power.',
+      href: '/mouse-cohort-development/',
     },
   ],
 };
@@ -180,7 +182,7 @@ const workflowData = {
 const trustedData = {
   title: 'Trusted by Researchers Worldwide',
   stats: 'Since 1998 · 2,800+ Models Generated · 800+ Peer Reviewed Publications · Nature · Science · Cell',
-  content: 'ingenious targeting laboratory has generated mouse models for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.',
+  content: 'Ingenious targeting laboratory has generated mouse models for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.',
   ctaHref: '/publications',
 };
 
@@ -204,11 +206,11 @@ const faqData = {
   faqs: [
     {
       question: 'What types of mouse models does ingenious targeting laboratory generate?',
-      answer: 'ingenious targeting laboratory generates mouse models including conventional knockouts, conditional knockouts (floxed alleles), knockins (point mutations, cDNA, gene replacement, reporters), Rosa26 and other targeted transgenics, and humanized models.',
+      answer: 'Ingenious targeting laboratory generates mouse models including conventional knockouts, conditional knockouts (floxed alleles), knockins (point mutations, cDNA, gene replacement, reporters), Rosa26 and other targeted transgenics, and humanized models.',
     },
     {
       question: 'What strain backgrounds are available for model generation?',
-      answer: 'ingenious targeting laboratory primarily works with C57BL/6 background. Other strain backgrounds (BALB/c, 129) are available upon request.',
+      answer: 'Ingenious targeting laboratory primarily works with C57BL/6 background. Other strain backgrounds (BALB/c, 129) are available upon request.',
     },
     {
       question: 'How do I get started with a mouse model generation project?',
@@ -286,90 +288,14 @@ export default function HomePage() {
 
       <UXUIDCCookieConsent />
 
+      {/*
+        Organization and WebSite are emitted once sitewide from src/app/layout.tsx.
+        Duplicating them here produced two WebSite nodes and a drifted phone number.
+      */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            '@id': 'https://www.genetargeting.com/#organization',
-            name: 'ingenious targeting laboratory',
-            alternateName: ['iTL', 'ingenious targeting lab'],
-            url: 'https://www.genetargeting.com',
-            logo: 'https://www.genetargeting.com/images/logo.png',
-            description:
-              'ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
-            slogan: 'Mouse model generation, U.S. scientific oversight, 100% germline transmission guarantee.',
-            foundingDate: '1998',
-            foundingLocation: 'Holbrook, NY, United States',
-            numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 50, maxValue: 200 },
-            award: [
-              '100% germline transmission guarantee on every model generation project',
-              '800+ peer reviewed publications citing iTL generated models',
-            ],
-            knowsAbout: [
-              'Mouse model generation',
-              'Knockout mouse models',
-              'Conditional knockout mouse models',
-              'Knockin mouse models',
-              'Humanized mouse models',
-              'Transgenic mouse models',
-              'CRISPR/Cas9 genome editing',
-              'gene targeting',
-              'Cre/loxP system',
-              'Flp/FRT recombination',
-              'BAC transgenics',
-              'Rosa26 safe harbor targeting',
-              'C57BL/6 strain backgrounds',
-              'Sequence informed allele design',
-              'Germline transmission',
-              'Colony management',
-              'Cryopreservation',
-            ],
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: '761-80 Coates Avenue',
-              addressLocality: 'Holbrook',
-              addressRegion: 'NY',
-              postalCode: '11741',
-              addressCountry: 'US',
-            },
-            contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: '+1-631-468-8530',
-              contactType: 'customer service',
-              email: 'inquiry@genetargeting.com',
-              areaServed: 'Worldwide',
-              availableLanguage: 'English',
-            },
-            sameAs: [
-              'https://www.linkedin.com/company/ingenious-targeting-laboratory',
-              'https://www.youtube.com/@ingeniouslab',
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            '@id': 'https://www.genetargeting.com/#website',
-            url: 'https://www.genetargeting.com',
-            name: 'ingenious targeting laboratory',
-            description:
-              'U.S. based mouse model generation company. Knockout, knockin, humanized, and transgenic models since 1998 with a 100% germline transmission guarantee.',
-            publisher: { '@id': 'https://www.genetargeting.com/#organization' },
-            potentialAction: {
-              '@type': 'SearchAction',
-              target: {
-                '@type': 'EntryPoint',
-                urlTemplate: 'https://www.genetargeting.com/search?q={search_term_string}',
-              },
-              'query-input': 'required name=search_term_string',
-            },
-          }),
+          __html: JSON.stringify(buildFAQSchema('/', faqData.faqs)),
         }}
       />
     </div>

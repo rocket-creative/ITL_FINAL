@@ -4,7 +4,7 @@ slug: "disease-model-catalog"
 extracted: "2026-01-09T17:03:04.111Z"
 ---
 
-# Disease Model Catalog | Ready to Use Mouse Models | Ingenious Targeting Laboratory
+# Disease Model Catalog | Ready to Use Mouse Models | ingenious targeting laboratory
 
 **Url: /disease-model-catalog**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.111Z"
 
 # Disease Model Catalog
 
-Ingenious Targeting Laboratory maintains a catalog of disease model mouse lines available for research applications. These models represent disease relevant genotypes available for immediate use in your studies.
+Ingenious targeting laboratory maintains a catalog of disease model mouse lines available for research applications. These models represent disease relevant genotypes available for immediate use in your studies.
 
 Our disease model catalog includes models across all major therapeutic areas, from oncology and neuroscience to metabolic disease and immunology. All catalog models include genotyping protocols, strain background information, and health documentation.
 

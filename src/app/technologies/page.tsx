@@ -16,7 +16,7 @@ const heroData = {
   badge: "Gene Targeting Technologies",
   title: "Gene Targeting Technologies",
   intro: "Since 1998, ingenious targeting laboratory has refined gene targeting technologies through more than 2,800 model generation projects. Our methodology combines proven gene targeting with sophisticated allele design strategies to deliver mouse models with verified genetic modifications and predictable performance.",
-  description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. ingenious targeting laboratory's scientific consultants guide project design from initial concept through final allele verification."
+  description: "Understanding these technologies helps researchers design optimal targeting strategies and interpret model capabilities. Ingenious targeting laboratory's scientific consultants guide project design from initial concept through final allele verification."
 };
 
 // Stats Data
@@ -81,6 +81,7 @@ const relatedModelTypes = [
 // Testimonials
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { TECHNOLOGY_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonials = TECHNOLOGY_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -473,13 +474,20 @@ export default function TechnologiesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/technologies', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Gene Targeting Technologies",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "gene targeting, Cre lox conditional systems, and derivative allele design. Pre germline characterization for verified mouse models since 1998.",
             "serviceType": "Gene Targeting Technologies"

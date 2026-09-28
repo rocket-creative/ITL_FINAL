@@ -10,13 +10,13 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
-import { StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Health Reestablishment",
   title: "Rederivation Services",
-  intro: "ingenious targeting laboratory provides mouse rederivation services to reestablish specific pathogen free (SPF) health status for valuable mouse lines. Since 1998, we have successfully rederived hundreds of mouse lines, enabling transfer to SPF facilities and restoration of colony health.",
+  intro: "Ingenious targeting laboratory provides mouse rederivation services to reestablish specific pathogen free (SPF) health status for valuable mouse lines. Since 1998, we have successfully rederived hundreds of mouse lines, enabling transfer to SPF facilities and restoration of colony health.",
   description: "Rederivation eliminates pathogens through embryo transfer or cesarean section, producing offspring free of maternal pathogens. This process is essential when mouse lines have been exposed to pathogens or when transferring lines to SPF facilities requiring specific health status."
 };
 
@@ -88,6 +88,7 @@ const postRederivationSteps = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const francoTestimonial = getTestimonialById('franco-colorado')!;
 
@@ -536,6 +537,7 @@ export default function RederivationServicesPage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       <StandardPageCtaStack
@@ -548,9 +550,16 @@ export default function RederivationServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Rederivation Services', path: '/rederivation-services' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/rederivation-services', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -561,7 +570,8 @@ export default function RederivationServicesPage() {
             "name": "Rederivation Services",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse rederivation services to reestablish SPF health status. Embryo transfer and cesarean section rederivation for pathogen free colonies.",
             "serviceType": "Rederivation Services"

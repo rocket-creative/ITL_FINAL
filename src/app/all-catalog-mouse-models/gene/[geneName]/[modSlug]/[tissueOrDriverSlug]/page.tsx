@@ -4,12 +4,15 @@
  */
 
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getModelsByGene, getRelatedGenesWithModelType } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
-import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
-import { UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
+import { availabilityColor, availabilityLabel, availabilityShortLabel } from '@/lib/catalog/availability';
+import { modelTypeAbbrev } from '@/lib/catalog/modelType';
+import CatalogReadyToShipBanner from '@/components/catalog/CatalogReadyToShipBanner';
+import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 import { tier4GenerateStaticParams } from '@/data/seoKeywords';
 import {
@@ -44,7 +47,7 @@ type Props = {
 
 function stripSmoc(s: string | undefined | null): string {
   if (!s) return '';
-  return s.replace(/smoc/gi, 'iTL').replace(/shanghai model organisms?( center)?/gi, 'iTL').trim();
+  return s.replace(/\bsmoc\b/gi, 'iTL').replace(/shanghai model organisms?(?:\s+center)?/gi, 'iTL').trim();
 }
 
 function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
@@ -55,6 +58,7 @@ function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
     category: stripSmoc(m.category),
     availability: stripSmoc(m.availability),
     catalogNumber: stripSmoc(m.catalogNumber),
+    description: stripSmoc(m.description),
   };
 }
 
@@ -138,7 +142,7 @@ export default async function GeneModContextTierPage({ params }: Props) {
   const productSchemas = models.map((m) =>
     buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
-      description: `${m.modelType} mouse model for ${geneName}.`,
+      description: m.description || `${m.modelType} mouse model for ${geneName}.`,
       additionalProperty: [{ '@type': 'PropertyValue', name: 'Modification type', value: modCanon }, ...extraProps],
     }),
   );
@@ -167,6 +171,7 @@ export default async function GeneModContextTierPage({ params }: Props) {
                 <li style={{ color: 'rgba(255,255,255,0.9)' }}>{h1Third}</li>
               </ol>
             </nav>
+            <CatalogReadyToShipBanner availabilities={models.map((m) => m.availability)} />
             <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.35rem', fontWeight: 700, color: '#fff', marginBottom: '16px', lineHeight: 1.2 }}>
               {geneName} {modCanon} mouse — {h1Third}
             </h1>
@@ -174,9 +179,12 @@ export default async function GeneModContextTierPage({ params }: Props) {
               {curated && <p style={{ color: 'rgba(255,255,255,0.92)', marginBottom: '14px' }}>{curated}</p>}
               <p style={{ color: 'rgba(255,255,255,0.92)' }}>{template}</p>
             </div>
-            <div style={{ marginTop: '20px' }}>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '20px' }}>
               <Link href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#008080', color: '#fff', padding: '12px 24px', borderRadius: '6px', fontWeight: 600, textDecoration: 'none' }}>
                 Order catalog model <IconChevronRight size={16} color="#fff" />
+              </Link>
+              <Link href={`/request-quote?gene=${encodeURIComponent(geneName)}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'transparent', color: '#fff', padding: '12px 24px', borderRadius: '6px', fontWeight: 600, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.3)' }}>
+                Request a Quote
               </Link>
             </div>
           </div>
@@ -221,8 +229,8 @@ export default async function GeneModContextTierPage({ params }: Props) {
             {models.length === 0 ? (
               <p style={{ color: '#666' }}>No published {modCanon} line is listed for {geneName} today. Request a generated build using the quote link above.</p>
             ) : (
-              <div style={{ overflowX: 'auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '700px', fontSize: '.9rem' }}>
+              <div>
+                <table style={{ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed', fontSize: '.9rem' }}>
                   <thead>
                     <tr style={{ background: '#f7f7f7' }}>
                       {['Model', 'Type', 'Category', 'Availability', 'Catalog #', ''].map((h) => (
@@ -232,16 +240,23 @@ export default async function GeneModContextTierPage({ params }: Props) {
                   </thead>
                   <tbody>
                     {models.map((model, i) => (
-                      <tr key={model.id} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                      <Fragment key={model.id}>
+                      <tr style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                         <td style={{ padding: '12px', fontFamily: 'monospace', fontWeight: 600 }}>{model.modelAbbrev}</td>
-                        <td style={{ padding: '12px' }}>{model.modelType}</td>
+                        <td style={{ padding: '12px' }} title={model.modelType || undefined}>{modelTypeAbbrev(model.modelType)}</td>
                         <td style={{ padding: '12px', color: '#666' }}>{model.category}</td>
-                        <td style={{ padding: '12px', color: availabilityColor(model.availability) }}>{availabilityLabel(model.availability)}</td>
+                        <td title={availabilityLabel(model.availability)} style={{ padding: '12px', color: availabilityColor(model.availability) }}>{availabilityShortLabel(model.availability)}</td>
                         <td style={{ padding: '12px', fontFamily: 'monospace', color: '#134978' }}>{model.catalogNumber}</td>
                         <td style={{ padding: '12px', textAlign: 'center' }}>
                           <Link href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`} style={{ background: '#008080', color: '#fff', padding: '8px 12px', borderRadius: '4px', textDecoration: 'none', fontWeight: 600, fontSize: '.8rem' }}>Inquire</Link>
                         </td>
                       </tr>
+                      {model.description ? (
+                        <tr style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                          <td colSpan={6} style={{ padding: '0 12px 12px', color: '#444', fontSize: '.85rem', lineHeight: 1.6 }}>{model.description}</td>
+                        </tr>
+                      ) : null}
+                      </Fragment>
                     ))}
                   </tbody>
                 </table>
@@ -327,6 +342,8 @@ export default async function GeneModContextTierPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        <BreedThisLineWithItl lineName={`${geneName} ${modCanon}`} />
 
         {/* Bottom dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>

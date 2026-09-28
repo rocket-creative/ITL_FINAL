@@ -158,6 +158,7 @@ const comparisonData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { FEATURED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonialsData = FEATURED_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -177,7 +178,7 @@ const faqData = [
   },
   {
     question: "Can I backcross my existing model to BALB/c background?",
-    answer: "Yes. ingenious targeting laboratory provides backcrossing services to transfer models to BALB/c or other backgrounds. Contact us for more information."
+    answer: "Yes. Ingenious targeting laboratory provides backcrossing services to transfer models to BALB/c or other backgrounds. Contact us for more information."
   },
   {
     question: "How do strain backgrounds affect model phenotypes?",
@@ -226,7 +227,7 @@ export default function BALBcMouseBackgroundPage() {
             "description": "BALB/c mouse strain characteristics, immunological applications, and gene targeting considerations. Mouse model generation on BALB/c background since 1998.",
             "publisher": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })
@@ -815,6 +816,12 @@ export default function BALBcMouseBackgroundPage() {
           { name: 'Mouse Strain Backgrounds', path: '/mouse-strain-backgrounds' },
           { name: 'BALB/c Mouse Background', path: '/balbc-mouse-background' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/balbc-mouse-background', faqData)),
+        }}
       />
     </div>
   );

@@ -13,7 +13,7 @@ title: "TruView Conditional Knockout™ Models"
 
 With traditional conditional knockout mouse models, verifying that the recombination event has occurred, and has occurred where desired, can be challenging.
 
-ingenious targeting laboratory provides the next step in gene knockout technology: our patented TruView Conditional Knockout™ system. Our proprietary split cassette technology allows for positive identification of your recombination event via GFP expression, all from within your gene's locus.
+Ingenious targeting laboratory provides the next step in gene knockout technology: our patented TruView Conditional Knockout™ system. Our proprietary split cassette technology allows for positive identification of your recombination event via GFP expression, all from within your gene's locus.
 
 Benefit from our expertise and generate a mouse model that allows for certainty of knockout through an internal, allele-specific GFP control.
 

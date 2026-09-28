@@ -4,7 +4,7 @@ slug: "double-checkpoint-mice"
 extracted: "2026-01-09T17:03:04.181Z"
 ---
 
-# Double Immune Checkpoint Humanized Mice | Dual Checkpoint Models | Ingenious Targeting Laboratory
+# Double Immune Checkpoint Humanized Mice | Dual Checkpoint Models | ingenious targeting laboratory
 
 **Url: /double-checkpoint-mice**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.181Z"
 
 # Double Immune Checkpoint Mice
 
-Double immune checkpoint humanized mouse models express two human immune checkpoint proteins simultaneously, enabling evaluation of combination checkpoint inhibitor therapies. Since 1998, Ingenious Targeting Laboratory has mouse model generation, including dual checkpoint models such as PD1+CTLA4, PD1+PDL1, and other combinations for immunotherapy research.
+Double immune checkpoint humanized mouse models express two human immune checkpoint proteins simultaneously, enabling evaluation of combination checkpoint inhibitor therapies. Since 1998, ingenious targeting laboratory has mouse model generation, including dual checkpoint models such as PD1+CTLA4, PD1+PDL1, and other combinations for immunotherapy research.
 
 Combination checkpoint blockade has shown enhanced efficacy compared to monotherapy in multiple cancer types. Double immune checkpoint humanized models enable preclinical evaluation of combination therapies using clinical antibody candidates, supporting therapeutic development programs.
 
@@ -115,7 +115,7 @@ Double immune checkpoint models enable testing of combination checkpoint blockad
 
 **Can triple or multi-checkpoint models be created?**
 
-Yes. ingenious targeting laboratory can combine three or more checkpoint humanizations for complex immunotherapy combination studies. Multiple humanizations require careful breeding and genotyping to maintain all alleles. Triple-checkpoint models enable testing of triple combination therapies or more sophisticated experimental designs.
+Yes. Ingenious targeting laboratory can combine three or more checkpoint humanizations for complex immunotherapy combination studies. Multiple humanizations require careful breeding and genotyping to maintain all alleles. Triple-checkpoint models enable testing of triple combination therapies or more sophisticated experimental designs.
 
 ## Quality Confirmation
 

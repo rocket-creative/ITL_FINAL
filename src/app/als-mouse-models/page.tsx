@@ -101,6 +101,7 @@ const publicationsData = getPublicationsForPage('/als-mouse-models');
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
@@ -635,13 +636,20 @@ export default function ALSMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/als-mouse-models', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "ALS Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated ALS mouse models for amyotrophic lateral sclerosis research. SOD1, TDP43, FUS, and C9orf72 models for motor neuron disease studies.",
             "serviceType": "ALS Mouse Model Generation"

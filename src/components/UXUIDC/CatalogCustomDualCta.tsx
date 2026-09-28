@@ -17,15 +17,23 @@ export type { CatalogGene, CatalogLookup } from './catalogLookupMap';
 export { getCatalogLookup, hasEducationalCatalogMap } from './catalogLookupMap';
 
 export interface CatalogCustomDualCtaProps {
-  /** Page slug for lookup data and UTM campaign */
+  /** Page slug for lookup data and click attribution */
   slug?: string;
   /** Override catalog column fields (e.g. page-specific closing copy) */
   catalogOverrides?: Partial<CatalogLookup>;
+  /** Former utm_medium. Sent as cta_location on click, not written onto the URL. */
   utmMedium?: string;
   utmSource?: string;
+  /** Gene symbol on catalog gene pages. Sent as gene_symbol on click. */
+  geneSymbol?: string;
   className?: string;
   /** Remove outer margin when nested inside a padded section */
   flush?: boolean;
+  /**
+   * Heading level for the widget title. Use 2 when the widget is the first
+   * section after the page h1, otherwise it skips a level.
+   */
+  headingLevel?: 2 | 3;
 }
 
 const panelEyebrow: CSSProperties = {
@@ -79,9 +87,14 @@ export default function CatalogCustomDualCta({
   catalogOverrides,
   utmMedium = 'site-cta',
   utmSource = 'organic',
+  geneSymbol,
   className = '',
   flush = false,
+  headingLevel = 3,
 }: CatalogCustomDualCtaProps) {
+  const Heading = `h${headingLevel}` as 'h2' | 'h3';
+  // Panel titles sit one level under the widget title.
+  const PanelHeading = `h${headingLevel + 1}` as 'h3' | 'h4';
   const lookup = mergeLookup(slug, catalogOverrides);
   const catalogSearchUrl = commercialUtmHref(lookup.searchHref, {
     source: utmSource,
@@ -108,7 +121,7 @@ export default function CatalogCustomDualCta({
     >
       <div style={{ marginBottom: '20px', textAlign: 'center' }}>
         <div style={{ ...panelEyebrow, color: '#0a253c' }}>{CATALOG_OR_CUSTOM_WIDGET_INTRO.eyebrow}</div>
-        <h3
+        <Heading
           style={{
             ...panelTitle,
             fontSize: '1.35rem',
@@ -116,7 +129,7 @@ export default function CatalogCustomDualCta({
           }}
         >
           {CATALOG_OR_CUSTOM_WIDGET_INTRO.headline}
-        </h3>
+        </Heading>
         <p style={{ ...panelBody, marginBottom: 0, maxWidth: '640px', margin: '0 auto' }}>
           {CATALOG_OR_CUSTOM_WIDGET_INTRO.subline}
         </p>
@@ -143,7 +156,7 @@ export default function CatalogCustomDualCta({
           }}
         >
           <div style={{ ...panelEyebrow, color: '#008080' }}>{lookup.eyebrow}</div>
-          <h4 style={panelTitle}>{lookup.headline}</h4>
+          <PanelHeading style={panelTitle}>{lookup.headline}</PanelHeading>
           <p style={panelBody}>{lookup.subline}</p>
 
           <div
@@ -165,6 +178,7 @@ export default function CatalogCustomDualCta({
                 })}
                 data-cta="catalog-gene-chip"
                 data-cta-slug={slug}
+                data-cta-location={utmMedium}
                 data-cta-gene={gene.symbol}
                 style={{
                   display: 'flex',
@@ -197,6 +211,8 @@ export default function CatalogCustomDualCta({
             href={catalogSearchUrl}
             data-cta="catalog-search"
             data-cta-slug={slug}
+            data-cta-location={utmMedium}
+            data-cta-gene={geneSymbol}
             style={{
               ...panelBtn,
               backgroundColor: '#008080',
@@ -222,12 +238,14 @@ export default function CatalogCustomDualCta({
           }}
         >
           <div style={{ ...panelEyebrow, color: '#0a253c' }}>{CUSTOM_MODEL_PANEL.eyebrow}</div>
-          <h4 style={panelTitle}>{CUSTOM_MODEL_PANEL.headline}</h4>
+          <PanelHeading style={panelTitle}>{CUSTOM_MODEL_PANEL.headline}</PanelHeading>
 
           <ul
             style={{
-              margin: '0 0 16px 0',
-              paddingLeft: '18px',
+              margin: '12px 0 16px 0',
+              paddingLeft: '20px',
+              listStyleType: 'disc',
+              listStylePosition: 'outside',
               color: '#444',
               fontFamily: 'Lato, -apple-system, sans-serif',
               fontSize: '0.88rem',
@@ -248,6 +266,8 @@ export default function CatalogCustomDualCta({
             href={quoteUrl}
             data-cta="catalog-widget-request-quote"
             data-cta-slug={slug}
+            data-cta-location={utmMedium}
+            data-cta-gene={geneSymbol}
             style={{
               ...panelBtn,
               backgroundColor: '#0a253c',
@@ -259,9 +279,11 @@ export default function CatalogCustomDualCta({
             <span aria-hidden="true">→</span>
           </Link>
           <Link
-            href={COMMERCIAL_LINKS.customHub}
+            href={commercialUtmHref(COMMERCIAL_LINKS.customHub)}
             data-cta="catalog-widget-generated-services"
             data-cta-slug={slug}
+            data-cta-location={utmMedium}
+            data-cta-gene={geneSymbol}
             style={{
               ...panelBtn,
               backgroundColor: 'transparent',

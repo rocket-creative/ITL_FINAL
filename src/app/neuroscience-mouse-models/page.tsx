@@ -30,7 +30,7 @@ const statsData = [
 // Intro Data
 const introData = {
   text: "Neuroscience mouse models enable researchers to investigate the molecular and cellular mechanisms underlying brain function and dysfunction. From cell type specific knockouts that dissect neural circuit function to disease mutation knockins that model neurological conditions, the right model design is critical for understanding the nervous system and developing treatments for neurological disorders.",
-  highlight: "Conditional approaches are particularly important in neuroscience, where the same gene often has distinct functions in different neuronal populations, glial cells, and developmental stages. ingenious targeting laboratory designs and generates neuroscience models for your specific research questions."
+  highlight: "Conditional approaches are particularly important in neuroscience, where the same gene often has distinct functions in different neuronal populations, glial cells, and developmental stages. Ingenious targeting laboratory designs and generates neuroscience models for your specific research questions."
 };
 
 // Neuronal Cre Drivers Table
@@ -217,6 +217,7 @@ const publicationsData = getPublicationsForPage('/neuroscience-mouse-models');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
@@ -959,6 +960,7 @@ export default function NeuroscienceMouseModelsPage() {
           { name: 'Neuroscience Mouse Models', path: '/neuroscience-mouse-models' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/neuroscience-mouse-models" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -968,7 +970,8 @@ export default function NeuroscienceMouseModelsPage() {
             "name": "Neuroscience Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated neuroscience mouse models for brain and behavior research. Neuronal knockouts, circuit dissection, and neurodegenerative disease models. Since 1998.",
             "serviceType": "Mouse Model Generation"

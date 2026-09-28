@@ -28,6 +28,8 @@ export type { PublicationData } from './PublicationCard';
 // Reusable Animated Components
 export { default as UXUIDCAnimatedCounter } from './AnimatedCounter';
 export { default as UXUIDCAnimatedFAQ } from './AnimatedFAQ';
+export { default as UXUIDCDataTable } from './DataTable';
+export type { DataTableProps, DataTableColumn, DataTableRow } from './DataTable';
 export { default as UXUIDCStartProjectCTA } from './StartProjectCTA';
 export { default as CatalogCustomCtaButtons } from './CatalogCustomCtaButtons';
 export { default as CatalogCustomDualCta } from './CatalogCustomDualCta';
@@ -35,6 +37,7 @@ export type { CatalogCustomDualCtaProps } from './CatalogCustomDualCta';
 export { default as PageClosingCta } from './PageClosingCta';
 export { default as StandardPageCtaStack } from './StandardPageCtaStack';
 export type { StandardPageCtaStackProps } from './StandardPageCtaStack';
+export { default as BreedThisLineWithItl } from './BreedThisLineWithItl';
 export { default as UXUIDCEducationalSalesBanner, getEducationalOffer } from './EducationalSalesBanner';
 export type { EducationalSalesOffer } from './EducationalSalesBanner';
 export { default as CatalogGeneLookup, getCatalogLookup, hasEducationalCatalogMap } from './CatalogGeneLookup';

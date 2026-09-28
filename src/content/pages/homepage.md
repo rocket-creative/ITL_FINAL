@@ -117,7 +117,7 @@ Study ready cohort expansion with structured breeding for statistical power.
 
 Since 1998 · 2,800+ Models Generated Completed · 800+ Peer Reviewed Publications · Nature · Science · Cell
 
-ingenious targeting laboratory has mouse model generation for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.
+Ingenious targeting laboratory has mouse model generation for researchers at leading academic institutions, pharmaceutical companies, and biotechnology organizations worldwide. Our models have contributed to research published in the most prestigious scientific journals.
 
 (/publications)
 
@@ -149,11 +149,11 @@ Our scientific consultants are ready to discuss your research requirements and r
 
 **What types of mouse model generation does ingenious targeting laboratory generate?**
 
-ingenious targeting laboratory generates mouse model generation including conventional knockouts, conditional knockouts (floxed alleles), knockins (point mutations, cDNA, gene replacement, reporters), Rosa26 and other targeted transgenics, and humanized models. 
+Ingenious targeting laboratory generates mouse model generation including conventional knockouts, conditional knockouts (floxed alleles), knockins (point mutations, cDNA, gene replacement, reporters), Rosa26 and other targeted transgenics, and humanized models. 
 
 **What strain backgrounds are available for model generation?**
 
-ingenious targeting laboratory primarily works with C57BL/6 background. Other strain backgrounds (BALB/c, 129) are available upon request.
+Ingenious targeting laboratory primarily works with C57BL/6 background. Other strain backgrounds (BALB/c, 129) are available upon request.
 
 **How do I get started with a mouse model generation project?**
 

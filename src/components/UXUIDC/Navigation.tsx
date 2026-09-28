@@ -76,6 +76,7 @@ const navigationItems: NavItem[] = [
           title: 'All Models',
           items: [
             { label: 'All Catalog Models', href: '/all-catalog-mouse-models' },
+            { label: 'Live Humanized Mice', href: '/live-humanized-mice' },
             { label: 'Order Catalog Models', href: '/order-catalog-models' },
           ],
         },
@@ -202,6 +203,15 @@ const navigationItems: NavItem[] = [
     categorizedChildren: {
       categories: [
         {
+          title: 'Breeding and Cohorts',
+          items: [
+            { label: 'Mouse Breeding Services', href: '/mouse-breeding-services' },
+            { label: 'Cohort Development', href: '/mouse-cohort-development' },
+            { label: 'Conditional KO Breeding', href: '/conditional-knockout-cohort-breeding' },
+            { label: 'Backcrossing', href: '/backcrossing-services' },
+          ],
+        },
+        {
           title: 'Model Creation',
           items: [
             { label: 'Model Generation Projects', href: '/custom-projects' },
@@ -238,6 +248,7 @@ const navigationItems: NavItem[] = [
       { label: 'Researcher Spotlight', href: '/researcher-spotlight' },
       { label: 'Lab Signals Newsletter', href: '/lab-signals' },
       { label: 'Breeding Scheme Architect', href: '/breeding-scheme-architect' },
+      { label: 'In House vs Outsourced Breeding', href: '/in-house-vs-outsourced-mouse-breeding' },
       { label: 'Glossary', href: '/glossary' },
       { label: 'All FAQs', href: '/faq' },
     ],
@@ -335,7 +346,7 @@ export function UXUIDCNavigation() {
               <Link href="/" className="mr-auto shrink-0 pt-0.5" aria-label="Home">
                 <Image
                   src="/images/logo.png"
-                  alt="ingenious targeting laboratory"
+                  alt="Ingenious targeting laboratory"
                   width={224}
                   height={54}
                   className="h-auto w-[148px] sm:w-[180px] lg:w-[224px]"

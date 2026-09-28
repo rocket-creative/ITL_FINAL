@@ -79,6 +79,7 @@ const publicationsData = getPublicationsForPage('/atherosclerosis-mouse-models')
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const rateriTestimonial = getTestimonialById('rateri-kentucky')!;
 
@@ -120,7 +121,7 @@ const faqData = [
   },
   {
     question: "Can you combine multiple gene modifications for atherosclerosis research?",
-    answer: "Yes. ingenious targeting laboratory can combine conditional gene modifications with hyperlipidemic backgrounds and additional genetic modifications. For example, macrophage specific knockout on ApoE null background enables study of how specific genes affect plaque formation and inflammation in atherogenic context."
+    answer: "Yes. Ingenious targeting laboratory can combine conditional gene modifications with hyperlipidemic backgrounds and additional genetic modifications. For example, macrophage specific knockout on ApoE null background enables study of how specific genes affect plaque formation and inflammation in atherogenic context."
   }
 ];
 
@@ -576,13 +577,20 @@ export default function AtherosclerosisMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/atherosclerosis-mouse-models', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Atherosclerosis Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated atherosclerosis mouse models for cardiovascular research. Study plaque formation, lipid metabolism, and vascular disease mechanisms.",
             "serviceType": "Atherosclerosis Mouse Model Generation"

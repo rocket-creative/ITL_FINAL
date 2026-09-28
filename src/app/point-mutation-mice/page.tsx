@@ -168,6 +168,7 @@ const publicationsData = getPublicationsForPage('/point-mutation-mice');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const rothTestimonial = getTestimonialById('roth-upenn')!;
 
@@ -818,13 +819,20 @@ export default function PointMutationMicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/point-mutation-mice', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Point Mutation Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated point mutation mouse models for disease variant modeling. Precise SNP knockin at endogenous loci with pre germline verification. Since 1998.",
             "serviceType": "Mouse Model Generation"

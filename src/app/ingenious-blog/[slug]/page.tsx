@@ -1,5 +1,5 @@
 import fs from 'fs';
-import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import { stripInternalUtms } from '@/data/commercialCtas';
 
 import path from 'path';
 import { applyCatalogFirstMeta } from '@/lib/seo';
@@ -501,9 +501,7 @@ export default async function IngeniousBlogPost({
       : `https://www.genetargeting.com/ingenious-blog/${slug}`;
 
   const catalogLookup = getCatalogLookup(slug);
-  const catalogRelatedHref = `${catalogLookup.searchHref}${
-    catalogLookup.searchHref.includes('?') ? '&' : '?'
-  }utm_source=organic&utm_medium=blog&utm_campaign=related-resources-${encodeURIComponent(slug)}`;
+  const catalogRelatedHref = stripInternalUtms(catalogLookup.searchHref);
 
   const getCategoryColor = (cat: string) => {
     const colors: Record<string, string> = {
@@ -524,7 +522,7 @@ export default async function IngeniousBlogPost({
           {
             question: 'How do I get a generated point mutation mouse model?',
             answer:
-              'ingenious targeting laboratory generates point mutation knockin mice at endogenous loci. Request a quote to discuss your project requirements, timeline, and pricing.',
+              'Ingenious targeting laboratory generates point mutation knockin mice at endogenous loci. Request a quote to discuss your project requirements, timeline, and pricing.',
           },
           {
             question: 'What types of point mutations can be modeled?',
@@ -537,7 +535,7 @@ export default async function IngeniousBlogPost({
             {
               question: 'Can you model substitution, deletion, or insertion mutations?',
               answer:
-                'Yes. ingenious targeting laboratory generates point mutation knockin mice for all mutation types. Request a quote to discuss your specific variant and allele design.',
+                'Yes. Ingenious targeting laboratory generates point mutation knockin mice for all mutation types. Request a quote to discuss your specific variant and allele design.',
             },
             {
               question: 'How do I choose which point mutation type to model?',
@@ -550,7 +548,7 @@ export default async function IngeniousBlogPost({
               {
                 question: 'Can you model disease-associated point mutations in mice?',
                 answer:
-                  'Yes. ingenious targeting laboratory generates point mutation knockin mice for sickle cell, cystic fibrosis, cancer, and other disease variants. Request a quote to discuss your project.',
+                  'Yes. Ingenious targeting laboratory generates point mutation knockin mice for sickle cell, cystic fibrosis, cancer, and other disease variants. Request a quote to discuss your project.',
               },
               {
                 question: 'How do mouse models help study point mutation diseases?',
@@ -936,8 +934,8 @@ export default async function IngeniousBlogPost({
               {[
                 ...(contentExists
                   ? [
-                      { label: 'Browse 14,774+ Catalog Models', href: catalogRelatedHref },
-                      { label: 'Request a Quote', href: '/request-quote' },
+                      { label: 'Browse 14,774+ Catalog Models', href: catalogRelatedHref, ctaLocation: 'blog' },
+                      { label: 'Request a Quote', href: '/request-quote/', ctaLocation: 'blog' },
                     ]
                   : [
                       { label: 'Browse 14,774+ Catalog Models', href: '/all-catalog-mouse-models/' },
@@ -970,6 +968,8 @@ export default async function IngeniousBlogPost({
                 <Link
                   key={`${link.href}-${idx}`}
                   href={link.href}
+                  data-cta={'ctaLocation' in link ? 'related-resource' : undefined}
+                  data-cta-location={'ctaLocation' in link ? link.ctaLocation : undefined}
                   style={{
                     padding: '8px 16px',
                     backgroundColor: '#f7f7f7',

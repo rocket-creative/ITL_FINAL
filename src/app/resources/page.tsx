@@ -101,6 +101,11 @@ const planningGuidesData: {
       description: "Service paths for knockout, knockin, humanized, conditional, and transgenic programs with quote timelines."
     },
     {
+      href: "/in-house-vs-outsourced-mouse-breeding/",
+      title: "In House vs Outsourced Mouse Breeding",
+      description: "Compare cost, capacity, timeline, and risk when deciding whether to breed experimental cohorts in your own facility or outsource the breeding."
+    },
+    {
       href: "/faq",
       title: "Project FAQs",
       description: "Answers to common questions about quoting, breeding, QC, and shipping live or cryopreserved materials."
@@ -135,7 +140,7 @@ const technicalResourcesData = {
 // Publications Data
 const publicationsData = {
   title: "Publications",
-  description: "ingenious targeting laboratory generated mouse models have contributed to more than 800 peer reviewed publications across all major therapeutic areas and journals including Nature, Cell, Science, and specialty publications.",
+  description: "Ingenious targeting laboratory generated mouse models have contributed to more than 800 peer reviewed publications across all major therapeutic areas and journals including Nature, Cell, Science, and specialty publications.",
   features: [
     "Searchable archive by therapeutic area",
     "Publications organized by model type",
@@ -218,6 +223,7 @@ const downloadableResourcesData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { RESOURCES_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonialsData = RESOURCES_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -1225,6 +1231,12 @@ export default function ResourcesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/resources', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
@@ -1232,7 +1244,8 @@ export default function ResourcesPage() {
             "description": "Mouse model selection guides, case studies, FAQs, and technical resources. Expert guidance for knockout, knockin, and humanized model projects since 1998.",
             "publisher": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             }
           })

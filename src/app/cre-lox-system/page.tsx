@@ -9,7 +9,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconSettings, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { UXUIDCResourceLinks, creResources, breedingResources, getRelatedLabSignalsArticles, GlossaryTermLink, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, UXUIDCResourceLinks, creResources, breedingResources, getRelatedLabSignalsArticles, GlossaryTermLink, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -164,6 +164,7 @@ const publicationsData = getPublicationsForPage('/cre-lox-system');
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const coetzeeTestimonial = getTestimonialById('coetzee-nyu')!;
 
@@ -186,6 +187,7 @@ const relatedRecombinaseSystems = [
 
 const relatedModelTypes = [
   { title: "Conditional Knockout Mouse Models", href: "/conditional-knockout-mouse-models" },
+  { title: "Conditional Knockout Cohort Breeding", href: "/conditional-knockout-cohort-breeding/" },
   { title: "Tissue Specific Knockout", href: "/tissue-specific-knockout" },
   { title: "Inducible Conditional Knockout", href: "/inducible-conditional-knockout" },
   { title: "Knockout Mouse Models", href: "/knockout-mouse-models" }
@@ -551,6 +553,9 @@ export default function CreLoxSystemPage() {
             
             <p className="animate-in" style={{ color: 'rgba(255,255,255,0.85)', fontSize: '.9rem', fontStyle: 'italic', marginTop: '25px' }}>
               This design enables gene inactivation restricted to specific cell types, tissues, or developmental stages based on the Cre driver used.
+            </p>
+            <p className="animate-in" style={{ color: 'rgba(255,255,255,0.9)', fontSize: '.9rem', lineHeight: '1.6rem', marginTop: '15px' }}>
+              Combining the floxed allele and the Cre driver in the same animal requires breeding, and ingenious can run those crosses and produce the experimental and control genotypes for your study through <Link href="/conditional-knockout-cohort-breeding/" style={{ color: 'white', fontWeight: 600, textDecoration: 'underline' }}>conditional knockout cohort breeding</Link>.
             </p>
           </div>
         </section>
@@ -956,6 +961,7 @@ export default function CreLoxSystemPage() {
           </div>
         </section>
 
+        <BreedThisLineWithItl />
       </main>
 
       <StandardPageCtaStack
@@ -976,16 +982,19 @@ export default function CreLoxSystemPage() {
           { name: 'Cre Lox System', path: '/cre-lox-system' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/cre-lox-system" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://www.genetargeting.com/cre-lox-system/#service",
             "name": "Cre Lox System",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Cre lox system for conditional gene targeting in mice. LoxP site design, Cre recombinase drivers, and floxed allele generation. 2,800+ models generated since 1998.",
             "serviceType": "Conditional Gene Targeting Technology"

@@ -4,7 +4,7 @@ slug: "rederivation-services"
 extracted: "2026-01-09T17:03:05.626Z"
 ---
 
-# Rederivation Services | Mouse Health Reestablishment | Ingenious Targeting Laboratory
+# Rederivation Services | Mouse Health Reestablishment | ingenious targeting laboratory
 
 **Url: /rederivation-services**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.626Z"
 
 # Rederivation Services
 
-Ingenious Targeting Laboratory provides mouse rederivation services to reestablish specific pathogen free (SPF) health status for valuable mouse lines. Since 1998, we have successfully rederived hundreds of mouse lines, enabling transfer to SPF facilities and restoration of colony health.
+Ingenious targeting laboratory provides mouse rederivation services to reestablish specific pathogen free (SPF) health status for valuable mouse lines. Since 1998, we have successfully rederived hundreds of mouse lines, enabling transfer to SPF facilities and restoration of colony health.
 
 Rederivation eliminates pathogens through embryo transfer or cesarean section, producing offspring free of maternal pathogens. This process is essential when mouse lines have been exposed to pathogens or when transferring lines to SPF facilities requiring specific health status.
 

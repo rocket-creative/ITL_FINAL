@@ -87,6 +87,7 @@ export default function CatalogCustomCtaButtons({
             href={href}
             data-cta={role === 'catalog' ? 'dual-cta-catalog' : 'dual-cta-generated-quote'}
             data-cta-slug={slug}
+            data-cta-location={utmMedium ?? 'dual-cta'}
             className="group inline-flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             style={{
               ...styles,

@@ -91,7 +91,7 @@ const approachesData = [
 const technicalData = {
   title: 'Technical Approach',
   subtitle: 'Allele Design',
-  content: 'ingenious targeting laboratory designs knockout alleles based on your specific experimental requirements. Critical exons are selected for loss of function after deletion. For conditional alleles, LoxP sites are positioned to preserve normal gene expression in the absence of Cre while supporting null phenotypes after excision.',
+  content: 'Ingenious targeting laboratory designs knockout alleles based on your specific experimental requirements. Critical exons are selected for loss of function after deletion. For conditional alleles, LoxP sites are positioned to preserve normal gene expression in the absence of Cre while supporting null phenotypes after excision.',
 };
 
 import { getPublicationsForPage } from '@/data/pagePublications';
@@ -103,6 +103,7 @@ const publicationsData = {
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { KNOCKOUT_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const testimonialsData = KNOCKOUT_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -946,6 +947,7 @@ export default function KnockoutMouseModelsPage() {
           { name: 'Knockout Mouse Models', path: '/knockout-mouse-models' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/knockout-mouse-models" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

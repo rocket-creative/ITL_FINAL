@@ -10,6 +10,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import { IconQuote, IconChevronRight } from '@/components/UXUIDC/Icons';
 import { BreadcrumbSchema } from '@/components/UXUIDC';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
+import CatalogGeneHeroActions from '@/components/UXUIDC/CatalogGeneHeroActions';
 
 const heroData = {
   badge: "Catalog Models",
@@ -44,6 +45,7 @@ const compatibleTumors = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const bassonTestimonial = getTestimonialById('basson-kings')!;
 const testimonials = [
   { quote: bassonTestimonial.quote, author: formatAuthorWithCredentials(bassonTestimonial), affiliation: bassonTestimonial.affiliation },
@@ -104,23 +106,7 @@ export default function HumanizedImmuneCheckpointMicePage() {
             }}>
               {heroData.intro}
             </p>
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/request-quote" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: '#008080',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                Request a Quote
-                <IconChevronRight size={16} color="#ffffff" />
-              </Link>
-            </div>
+            <CatalogGeneHeroActions />
           </div>
         </section>
 
@@ -237,7 +223,13 @@ export default function HumanizedImmuneCheckpointMicePage() {
           { name: 'Humanized Immune Checkpoint Mice', path: '/humanized-immune-checkpoint-mice' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Humanized Immune Checkpoint Mice", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Humanized immune checkpoint mouse models for immunotherapy testing since 1998.", "serviceType": "Humanized Immune Checkpoint Mice" }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/humanized-immune-checkpoint-mice', faqData)),
+        }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Humanized Immune Checkpoint Mice", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "Humanized immune checkpoint mouse models for immunotherapy testing since 1998.", "serviceType": "Humanized Immune Checkpoint Mice" }) }} />
     </div>
   );
 }

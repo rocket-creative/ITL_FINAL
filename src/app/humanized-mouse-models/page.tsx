@@ -127,7 +127,7 @@ const strategiesData = {
 // TruHumanization Data
 const truHumanizationData = {
   title: "TruHumanization™ Technology",
-  description: "ingenious targeting laboratory's proprietary TruHumanization™ technology optimizes humanization strategies for maximum therapeutic relevance and physiological compatibility with complete gene replacement.",
+  description: "Ingenious targeting laboratory's proprietary TruHumanization™ technology optimizes humanization strategies for maximum therapeutic relevance and physiological compatibility with complete gene replacement.",
   note: "Quality Assurance: All TruHumanization™ projects include pre-germline analysis to verify correct human sequence integration before mouse generation."
 };
 
@@ -216,6 +216,7 @@ const checkpointTableData = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { HUMANIZED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const testimonialsData = HUMANIZED_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -366,7 +367,10 @@ export default function HumanizedMouseModelsPage() {
                 maxWidth: '800px'
               }}
             >
-              {heroData.description}
+              {heroData.description}{' '}
+              <Link href="/live-humanized-mice/" style={{ color: '#00d4d4', fontWeight: 600 }}>
+                Browse live humanized mice ready to ship.
+              </Link>
             </p>
             
           </div>
@@ -396,12 +400,13 @@ export default function HumanizedMouseModelsPage() {
 
         {/* Pricing anchor — captures "humanized mice price" buyer queries */}
         <UXUIDCServicePricingAnchor
+          emitSchema={false}
           serviceLabel="Humanized Mouse"
           headline="Generated humanized mice — get a quote in 24 hours."
           unlockInterest="Humanized Mouse"
           subline="Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), and complete gene replacement. Pricing scales with strategy and allele complexity."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=humanized-pricing-anchor"
-          secondaryHref="/all-catalog-mouse-models/?q=humanized&utm_source=organic&utm_medium=service&utm_campaign=humanized-catalog"
+          quoteHref="/request-quote/"
+          secondaryHref="/all-catalog-mouse-models/?q=humanized"
           secondaryLabel="Browse Humanized Catalog"
           faqs={[
             {
@@ -931,6 +936,7 @@ export default function HumanizedMouseModelsPage() {
           { name: 'Humanized Mouse Models', path: '/humanized-mouse-models' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/humanized-mouse-models" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -941,7 +947,7 @@ export default function HumanizedMouseModelsPage() {
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "alternateName": "iTL",
               "url": "https://www.genetargeting.com"
             },
@@ -968,13 +974,13 @@ export default function HumanizedMouseModelsPage() {
             "author": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "publisher": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "logo": { "@type": "ImageObject", "url": "https://www.genetargeting.com/images/logo.png" }
             },
             "about": ["Humanized mouse models", "Immune checkpoint humanization", "PD1", "PDL1", "CTLA4", "Gene replacement", "Mouse model generation"],

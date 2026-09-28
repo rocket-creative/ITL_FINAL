@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:06.229Z"
 
 # Tumor Suppressor Knockout Mice
 
-Since 1998, Ingenious Targeting Laboratory has generated tumor suppressor knockout models for cancer researchers worldwide. Disruption of tumor suppressor genes is fundamental to understanding cancer initiation, progression, and therapeutic response. Our gene targeting expertise spans p53, Rb, PTEN, APC, BRCA1/2, and other tumor suppressor genes across all cancer types.
+Since 1998, ingenious targeting laboratory has generated tumor suppressor knockout models for cancer researchers worldwide. Disruption of tumor suppressor genes is fundamental to understanding cancer initiation, progression, and therapeutic response. Our gene targeting expertise spans p53, Rb, PTEN, APC, BRCA1/2, and other tumor suppressor genes across all cancer types.
 
-Whether you need constitutive knockouts for germline tumor predisposition studies or conditional models for tissue specific tumorigenesis, Ingenious Targeting Laboratory provides the scientific consultation and technical execution to deliver models optimized for your oncology research.
+Whether you need constitutive knockouts for germline tumor predisposition studies or conditional models for tissue specific tumorigenesis, ingenious targeting laboratory provides the scientific consultation and technical execution to deliver models optimized for your oncology research.
 
 ## Tumor Suppressor Biology
 
@@ -110,7 +110,7 @@ Tumor suppressor knockout models on immunocompetent backgrounds enable study of 
 
 ## What Researchers Say
 
-*"Ingenious Targeting Laboratory developed 2 conditional knockout mouse lines for us. The scientific consulting was superb and exceeded our expectations."*
+*"Ingenious targeting laboratory developed 2 conditional knockout mouse lines for us. The scientific consulting was superb and exceeded our expectations."*
 
 *— **Hyekyung Plumley, PhD**, Regeneron Pharmaceuticals*
 
@@ -118,7 +118,7 @@ Tumor suppressor knockout models on immunocompetent backgrounds enable study of 
 
 ## Selected Publications
 
-Tumor suppressor knockout models from Ingenious Targeting Laboratory have contributed to cancer research published in leading journals including Cancer Cell, Cancer Research, and Genes &amp; Development.
+Tumor suppressor knockout models from ingenious targeting laboratory have contributed to cancer research published in leading journals including Cancer Cell, Cancer Research, and Genes &amp; Development.
 
 (/publications)
 

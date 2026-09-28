@@ -193,7 +193,7 @@ export default function HCD3EDGPage() {
     sku: 'HU 220120',
     brand: {
       '@type': 'Organization',
-      name: 'Ingenious Targeting Laboratory',
+      name: 'ingenious targeting laboratory',
       url: 'https://genetargeting.com',
       foundingDate: '1998',
     },

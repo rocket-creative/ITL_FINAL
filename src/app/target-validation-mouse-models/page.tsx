@@ -15,13 +15,14 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Target Validation Mouse Models",
   intro: "Since 1998, ingenious targeting laboratory has supported pharmaceutical and biotech companies with mouse model generation for drug target validation. Our target validation models have contributed to therapeutic development programs across oncology, immunology, neuroscience, metabolic disease, and other therapeutic areas, with results published in peer reviewed journals and presented at major scientific conferences.",
-  description: "Target validation mouse models provide genetic evidence that modulating a specific target produces the desired therapeutic effect. Before committing significant resources to drug development, target validation answers fundamental questions: Does inhibiting this target affect disease biology? What are the consequences of target loss in normal tissues? Are there compensatory mechanisms or resistance pathways? ingenious targeting laboratory designs and generates target validation models for your therapeutic program, from conventional knockouts demonstrating proof of concept to sophisticated conditional and humanized models supporting clinical development."
+  description: "Target validation mouse models provide genetic evidence that modulating a specific target produces the desired therapeutic effect. Before committing significant resources to drug development, target validation answers fundamental questions: Does inhibiting this target affect disease biology? What are the consequences of target loss in normal tissues? Are there compensatory mechanisms or resistance pathways? Ingenious targeting laboratory designs and generates target validation models for your therapeutic program, from conventional knockouts demonstrating proof of concept to sophisticated conditional and humanized models supporting clinical development."
 };
 
 // Stats Data
@@ -216,41 +217,7 @@ export default function TargetValidationMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.genetargeting.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Target Validation Mouse Models",
-                "item": "https://www.genetargeting.com/target-validation-mouse-models"
-              }
-            ]
-          })
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
+          __html: JSON.stringify(buildFAQSchema('/target-validation-mouse-models', faqData))
         }}
       />
       </main>

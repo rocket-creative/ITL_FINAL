@@ -4,7 +4,7 @@ slug: "mouse-genotyping-service"
 extracted: "2026-01-09T17:03:04.906Z"
 ---
 
-# Mouse Genotyping Services | PCR, Southern Blot, Sequencing | Ingenious Targeting Laboratory
+# Mouse Genotyping Services | PCR, Southern Blot, Sequencing | ingenious targeting laboratory
 
 **Url: /mouse-genotyping-service**
 
@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:04.906Z"
 
 # Mouse Genotyping Services
 
-Since 1998, Ingenious Targeting Laboratory has provided comprehensive genotyping services supporting thousands of mouse model projects. Our genotyping capabilities ensure accurate breeding decisions and experimental design throughout your research program.
+Since 1998, ingenious targeting laboratory has provided comprehensive genotyping services supporting thousands of mouse model projects. Our genotyping capabilities ensure accurate breeding decisions and experimental design throughout your research program.
 
-Reliable genotyping is essential for maintaining mouse colonies, verifying genetic modifications, and ensuring experimental reproducibility. Ingenious Targeting Laboratory offers multiple genotyping methods tailored to your specific allele design and verification requirements.
+Reliable genotyping is essential for maintaining mouse colonies, verifying genetic modifications, and ensuring experimental reproducibility. Ingenious targeting laboratory offers multiple genotyping methods tailored to your specific allele design and verification requirements.
 
 ## Genotyping Methods
 
@@ -117,7 +117,7 @@ Genotyping results are provided with:
 
 ### Assay Design
 
-Ingenious Targeting Laboratory can design generated genotyping assays for:
+Ingenious targeting laboratory can design generated genotyping assays for:
 
 - Novel Alleles**: New targeting projects
 - Complex Alleles**: Multi component alleles

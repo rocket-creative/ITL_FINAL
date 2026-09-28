@@ -4,7 +4,7 @@ slug: "resources"
 extracted: "2026-01-09T17:03:05.796Z"
 ---
 
-# Resources and Guides | Mouse Model Selection, Timeline | Ingenious Targeting Laboratory
+# Resources and Guides | Mouse Model Selection, Timeline | ingenious targeting laboratory
 
 **Url: /resources**
 
@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:05.796Z"
 
 # Mouse Model Resources
 
-Ingenious Targeting Laboratory provides comprehensive resources to help researchers design, implement, and optimize mouse model generation projects. From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,800 models generated since 1998.
+Ingenious targeting laboratory provides comprehensive resources to help researchers design, implement, and optimize mouse model generation projects. From selection guides that clarify strategic decisions to technical resources and FAQs answering common questions, these resources draw on our experience from more than 2,800 models generated since 1998.
 
 ## Selection Guides
 
@@ -64,7 +64,7 @@ End to end overview of the mouse model generation process including decision poi
 
 ### Technology Documentation
 
-Detailed technical information about Ingenious Targeting Laboratory's gene targeting approaches:
+Detailed technical information about ingenious targeting laboratory's gene targeting approaches:
 
 - (/es-cell-gene-targeting)
 - (/cre-lox-system)
@@ -80,7 +80,7 @@ Detailed technical information about Ingenious Targeting Laboratory's gene targe
 
 ## Publications
 
-Ingenious Targeting Laboratory generated mouse models have contributed to more than 800 peer reviewed publications across all major therapeutic areas and journals including Nature, Cell, Science, and specialty publications.
+Ingenious targeting laboratory generated mouse models have contributed to more than 800 peer reviewed publications across all major therapeutic areas and journals including Nature, Cell, Science, and specialty publications.
 
 Our publications database includes:
 
@@ -113,7 +113,7 @@ Complete projects include targeting vector design and construction, gene targeti
 
 **Can you work with my existing targeting vector or other reagents?**
 
-Yes, Ingenious Targeting Laboratory offers partial services including gene targeting with client provided vectors, microinjection of client provided targeted clones, and project completion from various starting points.
+Yes, ingenious targeting laboratory offers partial services including gene targeting with client provided vectors, microinjection of client provided targeted clones, and project completion from various starting points.
 
 (/faqs)
 

@@ -50,7 +50,7 @@ async function getStats(): Promise<NextResponse> {
 }
 
 // ─── Search ───────────────────────────────────────────────────────────────────
-const FIELDS = 'id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number';
+const FIELDS = 'id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number,description';
 
 async function searchCatalog(query: string, limit: number): Promise<NextResponse> {
   const q    = query.trim();
@@ -86,7 +86,7 @@ async function searchCatalog(query: string, limit: number): Promise<NextResponse
     const { data: t3 } = await supabase
       .from('catalog_models')
       .select(FIELDS)
-      .or(`model_abbreviation.ilike.%${q}%,category.ilike.%${q}%,itl_catalog_number.ilike.%${q}%`)
+      .or(`model_abbreviation.ilike.%${q}%,category.ilike.%${q}%,itl_catalog_number.ilike.%${q}%,description.ilike.%${q}%`)
       .order('gene_name')
       .limit(limit);
 
@@ -103,6 +103,7 @@ async function searchCatalog(query: string, limit: number): Promise<NextResponse
     category:      r.category,
     availability:  r.availability,
     catalogNumber: r.itl_catalog_number,
+    description:   r.description ?? '',
   }));
 
   return NextResponse.json({ models, total: models.length }, { headers: cache1m });

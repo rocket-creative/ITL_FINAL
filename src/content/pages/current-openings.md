@@ -4,11 +4,11 @@ slug: "current-openings"
 extracted: "2026-01-09T17:03:03.943Z"
 ---
 
-# Current Openings | Careers at Ingenious Targeting Laboratory
+# Current Openings | Careers at ingenious targeting laboratory
 
 **Url: /current-openings**
 
-**Meta Description: Career opportunities at Ingenious Targeting Laboratory. Join our team of scientists developing mouse model generation for research worldwide.**
+**Meta Description: Career opportunities at ingenious targeting laboratory. Join our team of scientists developing mouse model generation for research worldwide.**
 
 **Primary Keyword: current openings**
 
@@ -18,11 +18,11 @@ extracted: "2026-01-09T17:03:03.943Z"
 
 # Current Openings
 
-Ingenious Targeting Laboratory is always looking for talented scientists to join our team. Since 1998, we have built a team of experts dedicated to advancing research through mouse model generation. We offer opportunities for scientists at all career stages to contribute to cutting edge research while working with leading academic and industry partners.
+Ingenious targeting laboratory is always looking for talented scientists to join our team. Since 1998, we have built a team of experts dedicated to advancing research through mouse model generation. We offer opportunities for scientists at all career stages to contribute to cutting edge research while working with leading academic and industry partners.
 
 Our team members work on diverse projects across all therapeutic areas, from oncology and neuroscience to metabolic disease and immunology. We provide a collaborative environment where scientists can develop expertise in gene targeting, mouse genetics, and model development.
 
-## Why Work at Ingenious Targeting Laboratory
+## Why Work at ingenious targeting laboratory
 
 ### Scientific Excellence
 
@@ -71,7 +71,7 @@ For questions about positions or to submit applications:
 
 ## Interested in Joining Our Team?
 
-Contact us to learn more about current openings and career opportunities at Ingenious Targeting Laboratory.
+Contact us to learn more about current openings and career opportunities at ingenious targeting laboratory.
 
 (/general-contact)
 

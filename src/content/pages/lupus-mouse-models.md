@@ -18,9 +18,9 @@ extracted: "2026-01-09T17:03:04.848Z"
 
 # Lupus Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has supported systemic lupus erythematosus research with generated knockout, knockin, and conditional mouse models. Our gene targeting expertise enables study of the genetic and immunological mechanisms driving lupus pathogenesis, autoantibody production, and organ damage.
+Since 1998, ingenious targeting laboratory has supported systemic lupus erythematosus research with generated knockout, knockin, and conditional mouse models. Our gene targeting expertise enables study of the genetic and immunological mechanisms driving lupus pathogenesis, autoantibody production, and organ damage.
 
-Whether you are investigating novel lupus susceptibility genes, testing therapeutic interventions, or studying specific aspects of lupus immunopathology, Ingenious Targeting Laboratory provides models optimized for your SLE research goals.
+Whether you are investigating novel lupus susceptibility genes, testing therapeutic interventions, or studying specific aspects of lupus immunopathology, ingenious targeting laboratory provides models optimized for your SLE research goals.
 
 ## Lupus Disease Mechanisms
 
@@ -74,7 +74,7 @@ C57BL/6 is resistant to spontaneous autoimmunity but provides a well characteriz
 
 ### Mixed Background Considerations
 
-Backcrossing onto defined genetic backgrounds ensures reproducible phenotypes and enables comparison across studies. Ingenious Targeting Laboratory provides backcrossing services to establish your model on the optimal strain background.
+Backcrossing onto defined genetic backgrounds ensures reproducible phenotypes and enables comparison across studies. Ingenious targeting laboratory provides backcrossing services to establish your model on the optimal strain background.
 
 (/backcrossing-services)
 
@@ -106,7 +106,7 @@ Reporter knockins and tissue specific models support identification of biomarker
 
 ## Selected Publications
 
-Model generation from Ingenious Targeting Laboratory have contributed to immunology and autoimmune disease research published in leading journals.
+Model generation from ingenious targeting laboratory have contributed to immunology and autoimmune disease research published in leading journals.
 
 (/publications)
 

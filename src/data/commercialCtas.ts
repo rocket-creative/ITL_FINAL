@@ -100,19 +100,68 @@ export const heroCtaPair = {
   custom: EQUAL_WEIGHT_BUTTONS[1],
 };
 
-/** Build UTM query string for commercial CTAs. */
+const INTERNAL_HOSTS = new Set(['genetargeting.com']);
+
+function isUtmParam(key: string): boolean {
+  return key === 'utm_source' || key === 'utm_medium' || key === 'utm_campaign' || key === 'utm_content' || key === 'utm_term' || key.startsWith('utm_');
+}
+
+/**
+ * Canonical internal href. Drops campaign parameters that would overwrite
+ * the visitor's real GA4 source, keeps functional query params (catalog
+ * search, gene), and adds the trailing slash Next.js already redirects to.
+ * External URLs, including go.genetargeting.com, are returned unchanged.
+ */
+export function stripInternalUtms(href: string): string {
+  if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+    return href;
+  }
+
+  let url: URL;
+  try {
+    url = new URL(href, 'https://www.genetargeting.com');
+  } catch {
+    return href;
+  }
+
+  const host = url.hostname.replace(/^www\./, '');
+  if (!INTERNAL_HOSTS.has(host)) return href;
+
+  for (const key of [...url.searchParams.keys()]) {
+    if (isUtmParam(key)) url.searchParams.delete(key);
+  }
+
+  if (!url.pathname.endsWith('/')) {
+    url.pathname = `${url.pathname}/`;
+  }
+
+  const qs = url.searchParams.toString();
+  const path = `${url.pathname}${qs ? `?${qs}` : ''}${url.hash}`;
+  if (/^https?:\/\//i.test(href)) {
+    return `${url.origin}${path}`;
+  }
+  return path;
+}
+
+/** Read a campaign medium off a href before it is stripped. */
+export function utmMediumFromHref(href: string): string | undefined {
+  try {
+    return new URL(href, 'https://www.genetargeting.com').searchParams.get('utm_medium') ?? undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Internal CTA href. The medium/campaign arguments used to be written onto
+ * the URL; they are ignored here so existing call sites keep compiling.
+ * Pass the medium as `data-cta-location` on the anchor instead.
+ */
 export function commercialUtmHref(
   baseHref: string,
-  params: { source?: string; medium?: string; campaign?: string },
+  _params?: { source?: string; medium?: string; campaign?: string },
 ): string {
-  const search = new URLSearchParams();
-  if (params.source) search.set('utm_source', params.source);
-  if (params.medium) search.set('utm_medium', params.medium);
-  if (params.campaign) search.set('utm_campaign', params.campaign);
-  const qs = search.toString();
-  if (!qs) return baseHref;
-  const sep = baseHref.includes('?') ? '&' : '?';
-  return `${baseHref}${sep}${qs}`;
+  return stripInternalUtms(baseHref);
 }
 
 /** Append catalog bridge when page-specific copy does not mention the catalog. */
@@ -140,7 +189,7 @@ export const footerCta: Record<'default' | 'catalog' | 'publications' | 'disease
   publications: {
     title: 'Partner with iTL',
     description:
-      'ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a generated line.',
+      'Ingenious targeting laboratory provided the mouse model. Scientific findings are the work of the authors. Most programs start in the catalog. When your study outgrows off the shelf, request a generated line.',
     primaryButton: EQUAL_WEIGHT_BUTTONS[0],
     secondaryButton: EQUAL_WEIGHT_BUTTONS[1],
   },

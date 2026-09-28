@@ -55,6 +55,7 @@ const creERT2Lines = [
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 const testimonials = [{ quote: mirmiraTestimonial.quote, author: formatAuthorWithCredentials(mirmiraTestimonial), affiliation: mirmiraTestimonial.affiliation }];
 
@@ -136,12 +137,13 @@ export default function TamoxifenInducibleCrePage() {
 
         {/* Pricing anchor — converts the 11K monthly impression CreERT2 query cluster */}
         <UXUIDCServicePricingAnchor
+          emitSchema={false}
           serviceLabel="Tamoxifen Inducible Cre"
           headline="Generated CreERT2 mice — fixed-fee quote in 24 hours."
           unlockInterest="Tamoxifen Inducible Cre"
           subline="Generated CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,800+ models generated. Free scientific consultation."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-pricing-anchor"
-          secondaryHref="/all-catalog-mouse-models/?q=cre&utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-catalog"
+          quoteHref="/request-quote/"
+          secondaryHref="/all-catalog-mouse-models/?q=cre"
           secondaryLabel="Browse Cre Driver Catalog"
           faqs={[
             {
@@ -290,12 +292,13 @@ export default function TamoxifenInducibleCrePage() {
 
         {/* Pricing anchor — converts the 11K monthly impression CreERT2 query cluster */}
         <UXUIDCServicePricingAnchor
+          emitSchema={false}
           serviceLabel="Tamoxifen Inducible Cre"
           headline="Generated CreERT2 mice — fixed-fee quote in 24 hours."
           unlockInterest="Tamoxifen Inducible Cre"
           subline="Generated CreERT2 / Cre-ERT2 driver lines, floxed alleles paired with CreERT2, and inducible conditional knockouts. 2,800+ models generated. Free scientific consultation."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-pricing-anchor"
-          secondaryHref="/all-catalog-mouse-models/?q=cre&utm_source=organic&utm_medium=service&utm_campaign=tamoxifen-cre-catalog"
+          quoteHref="/request-quote/"
+          secondaryHref="/all-catalog-mouse-models/?q=cre"
           secondaryLabel="Browse Cre Driver Catalog"
           faqs={[
             {
@@ -428,7 +431,13 @@ export default function TamoxifenInducibleCrePage() {
           { name: 'Tamoxifen Inducible Cre', path: '/tamoxifen-inducible-cre' },
         ]}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tamoxifen Inducible Cre", "provider": { "@type": "Organization", "name": "ingenious targeting laboratory" }, "description": "Tamoxifen inducible Cre systems for temporal gene control. CreERT2 for time controlled gene activation since 1998.", "serviceType": "Tamoxifen Inducible Cre" }) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/tamoxifen-inducible-cre', faqData)),
+        }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "name": "Tamoxifen Inducible Cre", "provider": { "@type": "Organization", "@id": "https://www.genetargeting.com/#organization", "name": "Ingenious targeting laboratory" }, "description": "Tamoxifen inducible Cre systems for temporal gene control. CreERT2 for time controlled gene activation since 1998.", "serviceType": "Tamoxifen Inducible Cre" }) }} />
     </div>
   );
 }

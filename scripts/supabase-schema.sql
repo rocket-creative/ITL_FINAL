@@ -15,15 +15,17 @@ CREATE TABLE IF NOT EXISTS catalog_models (
   category            TEXT NOT NULL DEFAULT '',
   availability        TEXT NOT NULL DEFAULT '',
   itl_catalog_number  TEXT NOT NULL DEFAULT '',
+  description         TEXT NOT NULL DEFAULT '',
 
   -- Auto-computed full-text search vector
-  -- gene_name weighted A (highest), model_abbreviation B, catalog number / type / category C/D
+  -- gene_name weighted A (highest), model_abbreviation B, catalog number / type C, category / description D
   search_vector TSVECTOR GENERATED ALWAYS AS (
     setweight(to_tsvector('simple', coalesce(gene_name, '')),           'A') ||
     setweight(to_tsvector('simple', coalesce(model_abbreviation, '')), 'B') ||
     setweight(to_tsvector('simple', coalesce(itl_catalog_number, '')), 'C') ||
     setweight(to_tsvector('simple', coalesce(model_type, '')),         'C') ||
-    setweight(to_tsvector('simple', coalesce(category, '')),           'D')
+    setweight(to_tsvector('simple', coalesce(category, '')),           'D') ||
+    setweight(to_tsvector('simple', coalesce(description, '')),        'D')
   ) STORED,
 
   created_at TIMESTAMPTZ DEFAULT now()
@@ -81,3 +83,4 @@ FROM catalog_models;
 --      "Category"           → category
 --      "Availability"       → availability
 --      "ITL Catalog #"      → itl_catalog_number
+--      "Description"        → description

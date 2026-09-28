@@ -237,7 +237,7 @@ export default async function GlossaryTermPage({
             "inDefinedTermSet": {
               "@type": "DefinedTermSet",
               "name": "Mouse Genetics Glossary",
-              "url": "https://www.genetargeting.com/glossary"
+              "url": "https://www.genetargeting.com/glossary/"
             }
           })
         }}
@@ -251,6 +251,7 @@ export default async function GlossaryTermPage({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "@id": `https://www.genetargeting.com/mouse-genetics-glossary/${slug}/#faq`,
               "mainEntity": term.faqs.map(faq => ({
                 "@type": "Question",
                 "name": faq.question,
@@ -303,6 +304,7 @@ export default async function GlossaryTermPage({
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
+            '@id': `https://www.genetargeting.com/mouse-genetics-glossary/${slug}/#service`,
             name: getEducationalOffer(slug).eyebrow,
             serviceType: 'Mouse model generation',
             provider: {

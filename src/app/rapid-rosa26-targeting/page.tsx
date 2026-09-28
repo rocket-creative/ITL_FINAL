@@ -16,12 +16,13 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 import { StandardPageCtaStack } from '@/components/UXUIDC';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Rapid ROSA26 Targeting",
-  intro: "ingenious targeting laboratory\'s Rapid Rosa26™ technology accelerates transgenic model generation through established protocols and proven vector backbones. This proprietary approach enables shorter timelines while maintaining reliable, high quality models with predictable expression patterns.",
+  intro: "Ingenious targeting laboratory\'s Rapid Rosa26™ technology accelerates transgenic model generation through established protocols and proven vector backbones. This proprietary approach enables shorter timelines while maintaining reliable, high quality models with predictable expression patterns.",
   description: "Rosa26 remains the most widely used safe harbor locus for targeted transgenics due to its strong ubiquitous expression, well characterized regulatory elements, and minimal positional effects. Rapid Rosa26™ targeting leverages decades of experience with Rosa26 to streamline project execution."
 };
 
@@ -240,41 +241,7 @@ export default function RapidRosa26TargetingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.genetargeting.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Rapid Rosa26 Targeting",
-                "item": "https://www.genetargeting.com/rapid-rosa26-targeting"
-              }
-            ]
-          })
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
+          __html: JSON.stringify(buildFAQSchema('/rapid-rosa26-targeting', faqData))
         }}
       />
       </main>

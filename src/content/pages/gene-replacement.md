@@ -18,7 +18,7 @@ extracted: "2026-01-09T17:03:04.281Z"
 
 # Gene Replacement Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has generated gene replacement humanized models that substitute mouse genes with their human orthologs. This approach enables preclinical testing of human specific therapeutics and study of human disease mechanisms in physiologically relevant contexts.
+Since 1998, ingenious targeting laboratory has generated gene replacement humanized models that substitute mouse genes with their human orthologs. This approach enables preclinical testing of human specific therapeutics and study of human disease mechanisms in physiologically relevant contexts.
 
 Gene replacement humanization maintains expression under endogenous regulatory control, preserving tissue specific and temporal expression patterns while providing human target sequences for drug development and mechanistic research.
 
@@ -66,11 +66,11 @@ Gene therapy vectors designed for human sequences require humanized models for p
 
 Gene replacement allele design must account for sequence differences between mouse and human genes, including gene length, exon number, regulatory element locations, and protein domains.
 
-Ingenious Targeting Laboratory's scientific team evaluates each project to determine replacement boundaries and targeting strategy based on your specific research goals.
+Ingenious targeting laboratory's scientific team evaluates each project to determine replacement boundaries and targeting strategy based on your specific research goals.
 
 ### Large Fragment Targeting
 
-When the human gene is larger than can be accommodated in standard targeting vectors, Ingenious Targeting Laboratory uses bacterial artificial chromosome (BAC) based approaches or sequential targeting strategies to achieve complete replacement.
+When the human gene is larger than can be accommodated in standard targeting vectors, ingenious targeting laboratory uses bacterial artificial chromosome (BAC) based approaches or sequential targeting strategies to achieve complete replacement.
 
 ## Common Gene Replacement Applications
 
@@ -98,7 +98,7 @@ Metabolic enzymes, particularly those relevant to drug metabolism or inherited m
 
 ## Selected Publications
 
-Humanized models from Ingenious Targeting Laboratory.
+Humanized models from ingenious targeting laboratory.
 
 Jiang Y, Sachdeva K, Goulbourne CN, Berg MJ, Peddy J, Stavrides PH, Pensalfini A, Pawlik M, Malampati S, Whyte L, Basavarajappa BS, Shivakumar S, Bleiwas C, Smiley JF, Mathews PM, Nixon RA. 2025. [Increased neuronal expression of the early endosomal adaptor APPL1 leads to endosomal and synaptic dysfunction with cholinergic neurodegeneration](https://pubmed.ncbi.nlm.nih.gov/39345644/). *J Neurosci* **29**(45): e2331242025.
 

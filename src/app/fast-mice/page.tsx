@@ -16,12 +16,13 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
 import { StandardPageCtaStack } from '@/components/UXUIDC';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "F.A.S.T. Technology Mice",
-  intro: "F.A.S.T.™ (Flexible Accelerated STOP Tetracycline Operator) technology provides versatile inducible and reversible gene expression control, enabling multiple experimental approaches from a single knockin allele. ingenious targeting laboratory incorporated F.A.S.T.™ technology into mouse model generation for neuroscience, immunology, and metabolic disease research.",
+  intro: "F.A.S.T.™ (Flexible Accelerated STOP Tetracycline Operator) technology provides versatile inducible and reversible gene expression control, enabling multiple experimental approaches from a single knockin allele. Ingenious targeting laboratory incorporated F.A.S.T.™ technology into mouse model generation for neuroscience, immunology, and metabolic disease research.",
   description: "The F.A.S.T.™ system achieves a spectrum of controllable expression levels, streamlining mouse model generation by enabling knockout first, inducible expression, and conditional knockdown modes from one targeted allele. This flexibility maximizes research value while minimizing project timelines and costs."
 };
 
@@ -240,41 +241,7 @@ export default function FastMicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.genetargeting.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Fast Mice",
-                "item": "https://www.genetargeting.com/fast-mice"
-              }
-            ]
-          })
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
+          __html: JSON.stringify(buildFAQSchema('/fast-mice', faqData))
         }}
       />
       </main>

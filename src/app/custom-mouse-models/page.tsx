@@ -12,7 +12,7 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
-import { LabSignalsSignup, BreedingSchemeArchitectCTA, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, LabSignalsSignup, BreedingSchemeArchitectCTA, getRelatedLabSignalsArticles } from '@/components/UXUIDC';
 import { IconDNA, IconTarget, IconFlask, IconChevronRight, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 import ModelGenerationPrioritySection from '@/components/gene-expansion/ModelGenerationPrioritySection';
@@ -21,7 +21,7 @@ import ModelGenerationPrioritySection from '@/components/gene-expansion/ModelGen
 const heroData = {
   badge: "Mouse Model Generation Services",
   title: "Mouse Model Generation",
-  intro: "ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+  intro: "Ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
   description: "Whether you need complete gene deletion, precise sequence insertion, human gene replacement, or targeted transgenic models, ingenious provides the PhD level scientific consultation and U.S. based technical execution to deliver models optimized for your specific research goals."
 };
 
@@ -36,7 +36,7 @@ const statsData = [
 // Knockout Models Data
 const knockoutData = {
   title: "Knockout Mouse Models",
-  intro: "Knockout mice carry targeted deletions that eliminate gene function, enabling loss of function studies across every therapeutic area. ingenious targeting laboratory offers multiple knockout strategies for your experimental requirements.",
+  intro: "Knockout mice carry targeted deletions that eliminate gene function, enabling loss of function studies across every therapeutic area. Ingenious targeting laboratory offers multiple knockout strategies for your experimental requirements.",
   models: [
     {
       title: "Conventional Knockout",
@@ -203,13 +203,14 @@ const testimonialsData = [
 ];
 
 import { getPublicationsForPage } from '@/data/pagePublications';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 const publicationsData = getPublicationsForPage('/custom-mouse-models');
 
 // FAQ Data
 const faqData = [
   {
     question: "What strain backgrounds are available for model generation?",
-    answer: "ingenious targeting laboratory offers C57BL/6, BALB/c, and HYBRID 129 x C57BL/6 strains. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological studies. Strain selection depends on your research requirements and downstream breeding plans."
+    answer: "Ingenious targeting laboratory offers C57BL/6, BALB/c, and HYBRID 129 x C57BL/6 strains. C57BL/6 is most commonly requested for its well-characterized genetics and suitability for immunological studies. Strain selection depends on your research requirements and downstream breeding plans."
   },
   {
     question: "What is included in a complete mouse model generation project?",
@@ -221,7 +222,7 @@ const faqData = [
   },
   {
     question: "What does the 100% germline transmission guarantee mean?",
-    answer: "ingenious targeting laboratory guarantees that every mouse model generation project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to all generated models."
+    answer: "Ingenious targeting laboratory guarantees that every mouse model generation project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to all generated models."
   }
 ];
 
@@ -237,6 +238,8 @@ const relatedLinksData = {
   selectionGuides: [
     { href: "/knockout-strategy-guide", label: "Knockout Strategy Guide" },
     { href: "/conditional-vs-conventional-guide", label: "Conditional vs Conventional Guide" },
+    { href: "/mouse-cohort-development/", label: "Mouse Cohort Development" },
+    { href: "/mouse-breeding-services/", label: "Contract Mouse Breeding Services" },
     { href: "/request-quote", label: "Request a Quote" },
     { href: "/pricing-guide", label: "Pricing Overview" }
   ]
@@ -263,12 +266,13 @@ export default function CustomMouseModelsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://www.genetargeting.com/custom-mouse-models/#service",
             "name": "Mouse Model Generation",
-            "description": "ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
+            "description": "Ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.",
             "provider": {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
-              "name": "ingenious targeting laboratory",
+              "name": "Ingenious targeting laboratory",
               "alternateName": "iTL",
               "url": "https://www.genetargeting.com",
               "description": "U.S. based mouse model generation company since 1998 with a 100% germline transmission guarantee."
@@ -306,18 +310,7 @@ export default function CustomMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
+          __html: JSON.stringify(buildFAQSchema('/custom-mouse-models', faqData))
         }}
       />
       <UXUIDCNavigation />
@@ -798,6 +791,15 @@ export default function CustomMouseModelsPage() {
                 </div>
               ))}
             </div>
+            <p className="animate-in" style={{
+              fontSize: '.9rem',
+              color: '#666',
+              lineHeight: 1.7,
+              marginTop: '24px',
+              maxWidth: '800px'
+            }}>
+              After germline transmission is confirmed and your F1 heterozygous mice are delivered, ingenious can scale those founders into a study ready cohort through <Link href="/mouse-cohort-development/" style={{ color: '#008080', fontWeight: 600, textDecoration: 'none' }}>mouse cohort development</Link>, or continue running the colony for you with <Link href="/mouse-breeding-services/" style={{ color: '#008080', fontWeight: 600, textDecoration: 'none' }}>contract mouse breeding services</Link>.
+            </p>
           </div>
         </section>
 
@@ -990,6 +992,7 @@ export default function CustomMouseModelsPage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
       <UXUIDCFooter />
           

@@ -1010,12 +1010,19 @@ export const PI_TAXONOMY_GROUPS: PiTaxonomyGroup[] = [
     label: 'Knockout',
     children: [
       { id: 'conventional-ko', label: 'Conventional / global / constitutive KO', canonicalModSlug: 'knockout' },
-      { id: 'conditional-ko', label: 'Conditional KO (floxed / loxP)', canonicalModSlug: 'conditional-knockout' },
+      { id: 'conditional-ko', label: 'Conditional KO', canonicalModSlug: 'conditional-knockout' },
+      { id: 'inducible-cko', label: 'Inducible conditional KO', canonicalModSlug: 'inducible-knockout' },
       {
         id: 'tissue-specific-ko',
         label: 'Tissue specific KO',
         canonicalModSlug: 'conditional-knockout',
         quoteNote: 'Specify tissue or Cre driver on quote',
+      },
+      {
+        id: 'knockout-first',
+        label: 'Knockout first',
+        canonicalModSlug: 'knockout',
+        quoteNote: 'Convertible floxed allele pathway',
       },
       {
         id: 'compound-ko',
@@ -1038,13 +1045,13 @@ export const PI_TAXONOMY_GROUPS: PiTaxonomyGroup[] = [
       { id: 'cdna-ki', label: 'cDNA KI', canonicalModSlug: 'cdna-knockin' },
       {
         id: 'reporter-ki',
-        label: 'Reporter KI (GFP, YFP, RFP, mCherry, tdTomato, lacZ, luciferase)',
+        label: 'Reporter KI',
         canonicalModSlug: 'reporter',
       },
-      { id: 'tag-ki', label: 'Tag KI (FLAG, HA, Myc, V5)', canonicalModSlug: 'tag-knockin' },
+      { id: 'tag-ki', label: 'Tag KI', canonicalModSlug: 'tag-knockin' },
       {
         id: 'conditional-ki',
-        label: 'Conditional KI (e.g. Rosa26 LSL)',
+        label: 'Conditional KI',
         canonicalModSlug: 'overexpression',
         quoteNote: 'LSL or conditional expression knockin',
       },
@@ -1087,7 +1094,7 @@ export const PI_TAXONOMY_GROUPS: PiTaxonomyGroup[] = [
     children: [
       {
         id: 'safe-harbor',
-        label: 'Safe harbor (ROSA26, HPRT, H11, Col1a1)',
+        label: 'Safe harbor',
         canonicalModSlug: 'overexpression',
       },
       { id: 'overexpression-tg', label: 'Overexpression transgenic', canonicalModSlug: 'overexpression' },
@@ -1110,8 +1117,14 @@ export const PI_TAXONOMY_GROUPS: PiTaxonomyGroup[] = [
         siteHref: '/cre-driver-catalog',
       },
       {
+        id: 'inducible-cre',
+        label: 'Inducible Cre',
+        canonicalModSlug: 'cre-driver',
+        quoteNote: 'Tamoxifen or dox inducible Cre',
+      },
+      {
         id: 'dual-recombinase',
-        label: 'Dual recombinase (Cre+Dre / Cre+Flp)',
+        label: 'Dual recombinase',
         siteHref: '/flp-frt-system',
         quoteNote: 'Dual recombinase breeding scheme',
       },
@@ -1129,12 +1142,12 @@ export const PI_TAXONOMY_GROUPS: PiTaxonomyGroup[] = [
     children: [
       {
         id: 'reporter-ki-hub',
-        label: 'Reporter knockin (gene specific)',
+        label: 'Gene specific reporter knockin',
         canonicalModSlug: 'reporter',
       },
       {
         id: 'standalone-reporter-catalog',
-        label: 'Standalone reporter catalog (lineage tracing, constitutive, dual reporter)',
+        label: 'Standalone reporter catalog',
         siteHref: '/all-catalog-mouse-models',
         quoteNote: 'Catalog reporter lines not tied to a single gene allele',
       },
@@ -1158,7 +1171,7 @@ export const PI_TAXONOMY_GROUPS: PiTaxonomyGroup[] = [
       },
       {
         id: 'c57bl6-background',
-        label: 'C57BL/6 (B6J / B6N)',
+        label: 'C57BL/6',
         siteHref: '/c57bl6-mouse-background',
         quoteNote: 'Background substrain on quote',
       },

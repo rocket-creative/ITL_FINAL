@@ -44,7 +44,7 @@ export default function ResearcherSpotlightIndexPage() {
     hasPart: spotlights.map((s) => ({
       '@type': 'Article',
       headline: s.title.replace(/<\/?em>/g, ''),
-      url: `https://www.genetargeting.com/researcher-spotlight/${s.slug}`,
+      url: `https://www.genetargeting.com/researcher-spotlight/${s.slug}/`,
       datePublished: s.publishDate,
       author: {
         '@type': 'Person',

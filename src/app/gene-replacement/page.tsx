@@ -99,7 +99,7 @@ const targetingData = {
     {
       title: "Allele Design Considerations",
       description: "Gene replacement allele design must account for sequence differences between mouse and human genes, including gene length, exon number, regulatory element locations, and protein domains.",
-      note: "ingenious targeting laboratory's scientific team evaluates each project to determine replacement boundaries and targeting strategy based on your specific research goals."
+      note: "Ingenious targeting laboratory's scientific team evaluates each project to determine replacement boundaries and targeting strategy based on your specific research goals."
     },
     {
       title: "Large Fragment Targeting",
@@ -131,6 +131,7 @@ const commonApplicationsData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { FEATURED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonialsData = FEATURED_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -197,7 +198,8 @@ export default function GeneReplacementPage() {
             "description": "Gene replacement humanization substitutes mouse genes with human orthologs for preclinical testing of human specific therapeutics. Model generation since 1998.",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Mouse Model Generation",
@@ -738,6 +740,12 @@ export default function GeneReplacementPage() {
           { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Gene Replacement', path: '/gene-replacement' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/gene-replacement', faqData)),
+        }}
       />
     </div>
   );

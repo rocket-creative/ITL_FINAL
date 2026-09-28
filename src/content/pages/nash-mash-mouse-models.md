@@ -4,7 +4,7 @@ slug: "nash-mash-mouse-models"
 extracted: "2026-01-09T17:03:05.019Z"
 ---
 
-# NASH MASH Mouse Models | Fatty Liver Disease Models | Ingenious Targeting Laboratory
+# NASH MASH Mouse Models | Fatty Liver Disease Models | ingenious targeting laboratory
 
 **Url: /nash-mash-mouse-models**
 

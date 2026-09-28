@@ -8,9 +8,10 @@
  * No more loading 14k rows client-side. Fast, SEO-friendly, scalable.
  */
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { Fragment, useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
-import { availabilityColor, availabilityLabel, isDeveloping, isLive } from '@/lib/catalog/availability';
+import { availabilityColor, availabilityLabel, availabilityShortLabel, isDeveloping, isLive } from '@/lib/catalog/availability';
+import { modelTypeAbbrev } from '@/lib/catalog/modelType';
 
 export interface CatalogModel {
   id: string;
@@ -20,6 +21,7 @@ export interface CatalogModel {
   category: string;
   availability: string;
   catalogNumber: string;
+  description: string;
   [key: string]: string;
 }
 
@@ -291,12 +293,21 @@ export function CatalogSearch({
           )}
 
           {filteredResults.length > 0 && (
-            <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'auto', minWidth: '750px' }}>
+            <div>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.82rem', tableLayout: 'fixed' }}>
+                <colgroup>
+                  <col style={{ width: '12%' }} />
+                  <col style={{ width: '24%' }} />
+                  <col style={{ width: '8%' }} />
+                  <col style={{ width: '16%' }} />
+                  <col style={{ width: '14%' }} />
+                  <col style={{ width: '14%' }} />
+                  <col style={{ width: '12%' }} />
+                </colgroup>
                 <thead>
                   <tr style={{ background: '#f7f7f7' }}>
-                    {['Gene Name', 'Model Abbreviation', 'Model Type', 'Category', 'Availability', 'iTL Catalog #', ''].map((h) => (
-                      <th key={h} style={{ padding: '12px 16px', textAlign: h === '' ? 'center' : 'left', fontWeight: 600, color: '#333', borderBottom: '2px solid #e0e0e0', whiteSpace: 'nowrap' }}>
+                    {['Gene', 'Model', 'Type', 'Category', 'Status', 'Catalog', ''].map((h) => (
+                      <th key={h || 'action'} style={{ padding: '10px 8px', textAlign: h === '' ? 'center' : 'left', fontWeight: 600, color: '#333', borderBottom: '2px solid #e0e0e0' }}>
                         {h}
                       </th>
                     ))}
@@ -304,48 +315,49 @@ export function CatalogSearch({
                 </thead>
                 <tbody>
                   {filteredResults.map((model, index) => (
-                    <tr key={model.id}
+                    <Fragment key={model.id}>
+                    <tr
                       style={{ background: index % 2 === 0 ? '#fff' : '#fafafa', transition: 'background 0.2s' }}
                       onMouseOver={(e) => e.currentTarget.style.background = '#f0f9f9'}
                       onMouseOut={(e)  => e.currentTarget.style.background = index % 2 === 0 ? '#fff' : '#fafafa'}
                     >
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', fontWeight: 600, color: '#008080', whiteSpace: 'nowrap' }}>
+                      <td style={{ padding: '10px 8px', borderBottom: '1px solid #e0e0e0', fontWeight: 600, color: '#008080', overflowWrap: 'anywhere' }}>
                         {model.geneName}
                       </td>
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', color: '#333', fontFamily: 'monospace', fontSize: '.85rem' }}>
+                      <td title={model.modelAbbrev} style={{ padding: '10px 8px', borderBottom: '1px solid #e0e0e0', color: '#333', fontFamily: 'monospace', overflowWrap: 'anywhere' }}>
                         {model.modelAbbrev}
                       </td>
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0' }}>
-                        <span style={{ display: 'inline-block', padding: '4px 10px', background: getModelTypeColor(model.modelType), color: '#fff', borderRadius: '4px', fontSize: '.8rem', fontWeight: 500, whiteSpace: 'nowrap' }}>
-                          {model.modelType || 'N/A'}
-                        </span>
+                      <td title={model.modelType || undefined} style={{ padding: '10px 8px', borderBottom: '1px solid #e0e0e0', fontWeight: 700, color: getModelTypeColor(model.modelType) }}>
+                        {modelTypeAbbrev(model.modelType) || 'N/A'}
                       </td>
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', color: '#666', maxWidth: '180px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={model.category || ''}>
+                      <td title={model.category || ''} style={{ padding: '10px 8px', borderBottom: '1px solid #e0e0e0', color: '#666', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                         {model.category || 'N/A'}
                       </td>
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', minWidth: '120px' }}>
-                        <span style={{ display: 'inline-flex', alignItems: 'flex-start', gap: '6px', fontSize: '.85rem', color: availabilityColor(model.availability) }}>
-                          <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: availabilityColor(model.availability), flexShrink: 0, marginTop: '4px' }} />
-                          <span>{availabilityLabel(model.availability)}</span>
-                        </span>
+                      <td title={availabilityLabel(model.availability)} style={{ padding: '10px 8px', borderBottom: '1px solid #e0e0e0', color: availabilityColor(model.availability), fontWeight: 600 }}>
+                        {availabilityShortLabel(model.availability)}
                       </td>
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', color: '#555', fontSize: '.85rem', fontFamily: 'monospace', whiteSpace: 'nowrap', minWidth: '100px' }}>
+                      <td style={{ padding: '10px 8px', borderBottom: '1px solid #e0e0e0', color: '#555', fontFamily: 'monospace', overflowWrap: 'anywhere' }}>
                         {model.catalogNumber}
                       </td>
-                      <td style={{ padding: '14px 16px', borderBottom: '1px solid #e0e0e0', textAlign: 'center' }}>
+                      <td style={{ padding: '10px 8px', borderBottom: '1px solid #e0e0e0', textAlign: 'center' }}>
                         <Link
                           href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || model.geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`}
-                          style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', padding: '8px 14px', background: '#008080', color: '#fff', borderRadius: '4px', fontSize: '.8rem', fontWeight: 600, textDecoration: 'none', whiteSpace: 'nowrap' }}
+                          style={{ display: 'inline-block', padding: '6px 8px', background: '#008080', color: '#fff', borderRadius: '4px', fontSize: '.75rem', fontWeight: 600, textDecoration: 'none' }}
                           onMouseOver={(e) => e.currentTarget.style.background = '#006666'}
                           onMouseOut={(e)  => e.currentTarget.style.background = '#008080'}
                         >
                           Inquire
-                          <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                          </svg>
                         </Link>
                       </td>
                     </tr>
+                    {model.description ? (
+                      <tr style={{ background: index % 2 === 0 ? '#fff' : '#fafafa' }}>
+                        <td colSpan={7} style={{ padding: '0 16px 14px', borderBottom: '1px solid #e0e0e0', color: '#444', fontSize: '.85rem', lineHeight: 1.55 }}>
+                          {model.description}
+                        </td>
+                      </tr>
+                    ) : null}
+                    </Fragment>
                   ))}
                 </tbody>
               </table>

@@ -6,7 +6,7 @@
  */
 
 import Link from 'next/link';
-import { COMMERCIAL_LINKS, commercialUtmHref } from '@/data/commercialCtas';
+import { COMMERCIAL_LINKS, commercialUtmHref, stripInternalUtms } from '@/data/commercialCtas';
 
 interface Props {
   /** Page slug for analytics attribution */
@@ -39,19 +39,8 @@ export default function CatalogStickyRail({
   catalogHref,
   href,
 }: Props) {
-  const catalogUrl =
-    catalogHref ||
-    href ||
-    commercialUtmHref(COMMERCIAL_LINKS.catalogAll, {
-      source: 'organic',
-      medium: 'sticky-rail',
-      campaign: slug,
-    });
-  const quoteUrl = commercialUtmHref(COMMERCIAL_LINKS.requestQuote, {
-    source: 'organic',
-    medium: 'sticky-rail-quote',
-    campaign: slug,
-  });
+  const catalogUrl = stripInternalUtms(catalogHref || href || COMMERCIAL_LINKS.catalogAll);
+  const quoteUrl = commercialUtmHref(COMMERCIAL_LINKS.requestQuote);
 
   return (
     <>
@@ -107,6 +96,7 @@ export default function CatalogStickyRail({
           style={linkBase}
           data-cta="catalog-sticky-rail"
           data-cta-slug={slug}
+          data-cta-location="sticky-rail"
         >
           <span aria-hidden="true">⚡</span>
           Browse catalog
@@ -117,12 +107,13 @@ export default function CatalogStickyRail({
           style={linkBase}
           data-cta="sticky-rail-request-quote"
           data-cta-slug={slug}
+          data-cta-location="sticky-rail-quote"
         >
           Request quote
           <span aria-hidden="true">→</span>
         </Link>
         <Link
-          href={COMMERCIAL_LINKS.customHub}
+          href={stripInternalUtms(COMMERCIAL_LINKS.customHub)}
           style={{
             ...linkBase,
             padding: '6px 12px',
@@ -135,6 +126,7 @@ export default function CatalogStickyRail({
           }}
           data-cta="sticky-rail-generated-services"
           data-cta-slug={slug}
+          data-cta-location="sticky-rail"
         >
           Generated model services
         </Link>

@@ -14,6 +14,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconTarget, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
+import CatalogGeneHeroActions from '@/components/UXUIDC/CatalogGeneHeroActions';
 import TestimonialsSection from '@/app/components/TestimonialsSection';
 
 // Hero Data
@@ -105,6 +106,7 @@ const applicationsData = {
 // Testimonials Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { HUMANIZED_TESTIMONIALS, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const testimonialsData = HUMANIZED_TESTIMONIALS.map(t => ({
   quote: t.quote,
@@ -171,7 +173,8 @@ export default function DoubleCheckpointMicePage() {
             "description": "Double checkpoint humanized mouse models for combination immunotherapy testing. PD1+CTLA4, PD1+PDL1, and other dual checkpoint combinations.",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Mouse Model Generation",
@@ -250,37 +253,8 @@ export default function DoubleCheckpointMicePage() {
             }}>
               {heroData.description}
             </p>
-            <div className="hero-animate" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/request-quote" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: '#008080',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                Request a Quote
-                <IconChevronRight size={16} color="#ffffff" />
-              </Link>
-              <Link href="/humanized-immune-checkpoint-mice" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'transparent',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                border: '2px solid rgba(255,255,255,0.3)'
-              }}>
-                All Checkpoint Models
-              </Link>
+            <div className="hero-animate">
+              <CatalogGeneHeroActions />
             </div>
           </div>
         </section>
@@ -643,6 +617,12 @@ export default function DoubleCheckpointMicePage() {
           { name: 'Mouse Model Generation', path: '/custom-mouse-models' },
           { name: 'Double Checkpoint Mice', path: '/double-checkpoint-mice' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/double-checkpoint-mice', faqData)),
+        }}
       />
     </div>
   );

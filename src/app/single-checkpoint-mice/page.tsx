@@ -8,6 +8,7 @@ import {
 } from '@/components/UXUIDC';
 import Link from 'next/link';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import CatalogGeneHeroActions from '@/components/UXUIDC/CatalogGeneHeroActions';
 
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
 
@@ -52,23 +53,7 @@ export default function SingleCheckpointMicePage() {
             }}>
               Single immune checkpoint humanized mouse models express one human checkpoint protein, enabling preclinical testing of checkpoint inhibitor antibodies in immunocompetent mice.
             </p>
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/request-quote" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: '#008080',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                Request a Quote
-                <IconChevronRight size={16} color="#ffffff" />
-              </Link>
-            </div>
+            <CatalogGeneHeroActions />
           </div>
         </section>
 

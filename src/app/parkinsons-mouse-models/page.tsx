@@ -73,6 +73,7 @@ const publicationsData = getPublicationsForPage('/parkinsons-mouse-models');
 // Testimonial Data
 // Verified testimonial from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const plumleyTestimonial = getTestimonialById('plumley-warren')!;
 
@@ -539,13 +540,20 @@ export default function ParkinsonsMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/parkinsons-mouse-models', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Parkinson Disease Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Generated Parkinson disease mouse models for neurodegenerative research. Study alpha synuclein, dopamine pathways, and motor dysfunction.",
             "serviceType": "Parkinson Disease Mouse Model Generation"

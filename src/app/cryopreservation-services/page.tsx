@@ -9,7 +9,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconImage, IconQuote, IconChevronRight, IconCheckCircle, IconShield } from '@/components/UXUIDC/Icons';
-import { BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, BreadcrumbSchema, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
@@ -127,6 +127,7 @@ const methodSelectionGuide = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const saidTestimonial = getTestimonialById('said-uci')!;
 
@@ -837,6 +838,7 @@ export default function CryopreservationServicesPage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       <StandardPageCtaStack
@@ -849,9 +851,16 @@ export default function CryopreservationServicesPage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Cryopreservation Services', path: '/cryopreservation-services' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/cryopreservation-services', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -862,7 +871,8 @@ export default function CryopreservationServicesPage() {
             "name": "Mouse Cryopreservation Services",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse cryopreservation services for long term line preservation. Sperm and embryo freezing with validated recovery. Protect your mouse models since 1998.",
             "serviceType": "Cryopreservation Services"

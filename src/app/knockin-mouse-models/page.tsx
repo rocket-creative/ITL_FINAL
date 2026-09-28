@@ -117,6 +117,7 @@ const publicationsData = {
 
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import FAQPageSchema from '@/components/UXUIDC/FAQPageSchema';
 
 const rothTestimonial = getTestimonialById('roth-upenn')!;
 
@@ -720,6 +721,7 @@ export default function KnockinMouseModelsPage() {
           { name: 'Knockin Mouse Models', path: '/knockin-mouse-models' },
         ]}
       />
+      <FAQPageSchema faqs={getFaqData()} path="/knockin-mouse-models" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

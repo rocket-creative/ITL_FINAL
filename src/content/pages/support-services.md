@@ -4,7 +4,7 @@ slug: "support-services"
 extracted: "2026-01-09T17:03:05.906Z"
 ---
 
-# Support Services | Colony Management, Cryopreservation, Breeding | Ingenious Targeting Laboratory
+# Support Services | Colony Management, Cryopreservation, Breeding | ingenious targeting laboratory
 
 **Url: /support-services**
 
@@ -18,15 +18,15 @@ extracted: "2026-01-09T17:03:05.906Z"
 
 # Mouse Model Support Services
 
-Beyond mouse model generation, Ingenious Targeting Laboratory provides comprehensive support services to maintain, expand, and preserve your valuable mouse colonies. Since 1998, we have supported researchers with colony management, cryopreservation, rederivation, and breeding services that maximize research productivity while ensuring genetic integrity.
+Beyond mouse model generation, ingenious targeting laboratory provides comprehensive support services to maintain, expand, and preserve your valuable mouse colonies. Since 1998, we have supported researchers with colony management, cryopreservation, rederivation, and breeding services that maximize research productivity while ensuring genetic integrity.
 
 ## Colony Management Services
 
-Maintaining a productive mouse colony requires consistent husbandry, accurate genotyping, and strategic breeding decisions. Ingenious Targeting Laboratory's colony management services provide:
+Maintaining a productive mouse colony requires consistent husbandry, accurate genotyping, and strategic breeding decisions. Ingenious targeting laboratory's colony management services provide:
 
 **Breeding Colony Maintenance** with documented pedigrees, organized mating schemes, and regular health monitoring to ensure colony productivity and genetic integrity.
 
-**Genotyping Services** using PCR based assays to identify carriers, homozygotes, and compound mutants. Ingenious Targeting Laboratory develops generated genotyping protocols for each targeted allele.
+**Genotyping Services** using PCR based assays to identify carriers, homozygotes, and compound mutants. Ingenious targeting laboratory develops generated genotyping protocols for each targeted allele.
 
 **Cohort Development** to generate study ready animals on your timeline. We can expand from founders to experimental cohorts while you focus on research design and data analysis.
 
@@ -36,7 +36,7 @@ Maintaining a productive mouse colony requires consistent husbandry, accurate ge
 
 ## Cryopreservation Services
 
-Cryopreservation protects your mouse lines against colony loss while reducing ongoing maintenance costs. Ingenious Targeting Laboratory offers multiple preservation approaches:
+Cryopreservation protects your mouse lines against colony loss while reducing ongoing maintenance costs. Ingenious targeting laboratory offers multiple preservation approaches:
 
 **Sperm Cryopreservation** provides the most cost effective archival solution. Frozen sperm from characterized males can regenerate your line through IVF when needed.
 
@@ -76,7 +76,7 @@ Accelerate timeline from founders to experimental cohorts:
 
 ## Preclinical Services
 
-Ingenious Targeting Laboratory's preclinical solutions extend beyond model generation to support therapeutic development programs:
+Ingenious targeting laboratory's preclinical solutions extend beyond model generation to support therapeutic development programs:
 
 ### In Vivo Efficacy Studies
 
@@ -111,7 +111,7 @@ Support drug development with in vivo pharmacology:
 
 ### Partial Services
 
-Not every project requires end to end service. Ingenious Targeting Laboratory offers flexible engagement options:
+Not every project requires end to end service. Ingenious targeting laboratory offers flexible engagement options:
 
 **Targeting Vector Only** provides designed and constructed targeting vector for projects using in house targeting facilities.
 
@@ -201,7 +201,7 @@ Variable
 
 ## Start Your Project
 
-Whether you need ongoing colony support, archival services, or complete project management, Ingenious Targeting Laboratory's service team can design a support plan aligned with your research goals.
+Whether you need ongoing colony support, archival services, or complete project management, ingenious targeting laboratory's service team can design a support plan aligned with your research goals.
 
 (/request-quote)
 

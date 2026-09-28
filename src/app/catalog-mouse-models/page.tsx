@@ -14,6 +14,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconFlask, IconSettings, IconChevronRight, IconCheckCircle, IconShield, IconLayers } from '@/components/UXUIDC/Icons';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
 const heroData = {
@@ -178,7 +179,8 @@ export default function CatalogMouseModelsPage() {
             "description": "Catalog mouse models ready for immediate shipment. Humanized immune checkpoint mice, Cre driver lines, and reporter strains.",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory",
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory",
               "url": "https://www.genetargeting.com"
             },
             "serviceType": "Mouse Model Distribution",
@@ -706,6 +708,12 @@ export default function CatalogMouseModelsPage() {
           { name: 'Resources', path: '/resources' },
           { name: 'Catalog Mouse Models', path: '/catalog-mouse-models' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/catalog-mouse-models', faqData)),
+        }}
       />
     </div>
   );

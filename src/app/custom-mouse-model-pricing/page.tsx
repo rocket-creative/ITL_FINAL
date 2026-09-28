@@ -54,7 +54,7 @@ const tiers = [
     description:
       'CRISPR or gene targeting knockout. Constitutive (full-body) loss-of-function with germline-confirmed founders.',
     bestFor: ['Loss-of-function studies', 'Recessive disease models', 'Pathway analysis'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=knockout-tier',
+    quoteHref: '/request-quote/',
     learnMoreHref: '/knockout-mouse-models/',
   },
   {
@@ -63,7 +63,7 @@ const tiers = [
     description:
       'Floxed allele for Cre-mediated conditional deletion. Tissue-specific, inducible, or temporally controlled with CreERT2.',
     bestFor: ['Tissue-specific knockouts', 'Embryonic-lethal genes', 'Adult-onset modeling'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=conditional-tier',
+    quoteHref: '/request-quote/',
     learnMoreHref: '/conditional-knockout-mouse-models/',
   },
   {
@@ -72,7 +72,7 @@ const tiers = [
     description:
       'Point mutation, reporter, tag, or ORF replacement at the endogenous locus. Precise, single-copy integration.',
     bestFor: ['Disease variant modeling', 'Reporter lines', 'Protein tagging'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=knockin-tier',
+    quoteHref: '/request-quote/',
     learnMoreHref: '/knockin-mouse-models/',
   },
   {
@@ -82,7 +82,7 @@ const tiers = [
       'Drug-target humanization, immune checkpoint humanization (PD1, PDL1, CTLA4, LAG3, TIM3), or complete gene replacement.',
     
     bestFor: ['Drug development', 'Immuno-oncology', 'Therapeutic antibody testing'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=humanized-tier',
+    quoteHref: '/request-quote/',
     learnMoreHref: '/humanized-mouse-models/',
   },
   {
@@ -91,7 +91,7 @@ const tiers = [
     description:
       'BAC, pronuclear, or targeted transgenesis at safe harbor loci (Rosa26, H11). Reporter, Cre driver, or overexpression lines.',
     bestFor: ['Cre driver lines', 'Reporter lines', 'Overexpression studies'],
-    quoteHref: '/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=transgenic-tier',
+    quoteHref: '/request-quote/',
     learnMoreHref: '/transgenic-mouse-service/',
   },
   {
@@ -100,7 +100,7 @@ const tiers = [
     description:
       '14,774 ready-to-ship genetically engineered mouse models. Live colonies for many top-requested knockouts, knockins, Cre drivers, and humanized lines.',
     bestFor: ['Fast project starts', 'Established alleles', 'Lower upfront cost'],
-    quoteHref: '/all-catalog-mouse-models/?utm_source=organic&utm_medium=pricing&utm_campaign=catalog-tier',
+    quoteHref: '/all-catalog-mouse-models/',
     learnMoreHref: '/all-catalog-mouse-models/',
   },
 ];
@@ -257,7 +257,9 @@ export default function PricingPage() {
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link
-                href="/request-quote?utm_source=organic&utm_medium=pricing&utm_campaign=hero"
+                href="/request-quote/"
+                data-cta="pricing-hero-quote"
+                data-cta-location="pricing"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -275,7 +277,9 @@ export default function PricingPage() {
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
-                href="/all-catalog-mouse-models/?utm_source=organic&utm_medium=pricing&utm_campaign=hero-catalog"
+                href="/all-catalog-mouse-models/"
+                data-cta="pricing-hero-catalog"
+                data-cta-location="pricing"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -373,7 +377,9 @@ export default function PricingPage() {
                     Starting at
                   </div>
                   <Link
-                    href={`/start-your-project/?utm_source=organic&utm_medium=pricing&utm_campaign=${tier.sku}-tier-unlock`}
+                    href="/start-your-project/"
+                    data-cta="pricing-tier-unlock"
+                    data-cta-location="pricing"
                     style={{
                       display: 'inline-block',
                       color: '#008080',
@@ -424,6 +430,8 @@ export default function PricingPage() {
                   <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                     <Link
                       href={tier.quoteHref}
+                      data-cta="pricing-tier-quote"
+                      data-cta-location="pricing"
                       style={{
                         display: 'inline-flex',
                         justifyContent: 'center',
@@ -439,7 +447,9 @@ export default function PricingPage() {
                       Get a Quote →
                     </Link>
                     <Link
-                      href={`${tier.learnMoreHref}?utm_source=organic&utm_medium=pricing&utm_campaign=${tier.sku}-learn`}
+                      href={tier.learnMoreHref}
+                      data-cta="pricing-learn"
+                      data-cta-location="pricing"
                       style={{
                         display: 'inline-flex',
                         justifyContent: 'center',
@@ -544,7 +554,9 @@ export default function PricingPage() {
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link
-                href="/request-quote/?utm_source=organic&utm_medium=pricing&utm_campaign=footer"
+                href="/request-quote/"
+                data-cta="pricing-footer-quote"
+                data-cta-location="pricing"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -562,7 +574,9 @@ export default function PricingPage() {
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
-                href="/contact/?utm_source=organic&utm_medium=pricing&utm_campaign=footer-contact"
+                href="/contact/"
+                data-cta="pricing-footer-contact"
+                data-cta-location="pricing"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',

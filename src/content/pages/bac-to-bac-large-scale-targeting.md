@@ -4,7 +4,7 @@ slug: "bac-to-bac-large-scale-targeting"
 extracted: "2026-01-09T17:03:03.079Z"
 ---
 
-# BACTERIAL ARTIFICIAL CHROMOSOME (BAC) Targeting | Large-Scale Genomic Integration | Ingenious Targeting Laboratory
+# BACTERIAL ARTIFICIAL CHROMOSOME (BAC) Targeting | Large-Scale Genomic Integration | ingenious targeting laboratory
 
 **Url: /bac-to-bac-large-scale-targeting**
 

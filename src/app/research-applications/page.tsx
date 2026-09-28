@@ -15,13 +15,14 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconChevronRight } from '@/components/UXUIDC/Icons';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 // Hero Data
 const heroData = {
   badge: "Our Services",
   title: "Mouse Model Research Applications",
   intro: "Since 1998, ingenious targeting laboratory has mouse model generation supporting research across every major therapeutic area. Our models have contributed to more than 800 peer reviewed publications and advanced drug discovery programs from target validation through preclinical efficacy testing.",
-  description: "Mouse models remain essential tools for understanding disease mechanisms, validating therapeutic targets, and testing novel interventions before clinical trials. ingenious targeting laboratory\'s expertise spans oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare diseases, and ophthalmology."
+  description: "Mouse models remain essential tools for understanding disease mechanisms, validating therapeutic targets, and testing novel interventions before clinical trials. Ingenious targeting laboratory\'s expertise spans oncology, neuroscience, metabolic disease, immunology, cardiovascular research, rare diseases, and ophthalmology."
 };
 
 // Stats Data
@@ -245,41 +246,7 @@ export default function ResearchApplicationsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.genetargeting.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Research Applications",
-                "item": "https://www.genetargeting.com/research-applications"
-              }
-            ]
-          })
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqData.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })
+          __html: JSON.stringify(buildFAQSchema('/research-applications', faqData))
         }}
       />
       </main>

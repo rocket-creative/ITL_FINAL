@@ -44,16 +44,38 @@ const BATCH    = 500;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-function parseCSVLine(line) {
-  const fields = []; let current = ''; let inQ = false;
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
-    if (ch === '"') { if (inQ && line[i+1] === '"') { current += '"'; i++; } else inQ = !inQ; }
-    else if (ch === ',' && !inQ) { fields.push(current); current = ''; }
-    else current += ch;
+function parseCSV(text) {
+  const rows = [];
+  let row = [];
+  let current = '';
+  let inQ = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (inQ) {
+      if (ch === '"') {
+        if (text[i + 1] === '"') { current += '"'; i++; }
+        else inQ = false;
+      } else current += ch;
+      continue;
+    }
+    if (ch === '"') inQ = true;
+    else if (ch === ',') { row.push(current); current = ''; }
+    else if (ch === '\n' || ch === '\r') {
+      if (ch === '\r' && text[i + 1] === '\n') i++;
+      row.push(current);
+      if (row.some((cell) => cell.trim())) rows.push(row);
+      row = [];
+      current = '';
+    } else current += ch;
   }
-  fields.push(current);
-  return fields;
+  row.push(current);
+  if (row.some((cell) => cell.trim())) rows.push(row);
+  return rows;
+}
+
+function headerIndex(header, name) {
+  const target = name.toLowerCase();
+  return header.findIndex((h) => String(h).trim().toLowerCase() === target);
 }
 
 async function main() {
@@ -77,21 +99,33 @@ async function main() {
   const supabase = createClient(url, key, { auth: { persistSession: false } });
 
   // Parse CSV
-  const lines = fs.readFileSync(CSV_PATH, 'utf8').split('\n').filter(l => l.trim());
-  const header = parseCSVLine(lines[0]);
+  const parsed = parseCSV(fs.readFileSync(CSV_PATH, 'utf8'));
+  const header = parsed[0] || [];
   console.log(`\nColumns: ${header.join(' | ')}`);
 
-  const rows = lines.slice(1).map(line => {
-    const f = parseCSVLine(line);
-    return {
-      gene_name:           f[0] || '',
-      model_abbreviation:  f[1] || '',
-      model_type:          f[2] || '',
-      category:            f[3] || '',
-      availability:        f[4] || '',
-      itl_catalog_number:  f[5] || '',
-    };
-  }).filter(r => r.gene_name || r.model_abbreviation);
+  const idx = {
+    gene: headerIndex(header, 'Gene Name'),
+    abbrev: headerIndex(header, 'Model Abbreviation'),
+    type: headerIndex(header, 'Model Type'),
+    category: headerIndex(header, 'Category'),
+    availability: headerIndex(header, 'Availability'),
+    catalog: headerIndex(header, 'ITL Catalog #'),
+    description: headerIndex(header, 'Description'),
+  };
+  const at = (fields, index, fallback) => {
+    const i = index === -1 ? fallback : index;
+    return (fields[i] || '').trim();
+  };
+
+  const rows = parsed.slice(1).map(f => ({
+    gene_name:           at(f, idx.gene, 0),
+    model_abbreviation:  at(f, idx.abbrev, 1),
+    model_type:          at(f, idx.type, 2),
+    category:            at(f, idx.category, 3),
+    availability:        at(f, idx.availability, 4),
+    itl_catalog_number:  at(f, idx.catalog, 5),
+    description:         at(f, idx.description, 6),
+  })).filter(r => r.gene_name || r.model_abbreviation);
 
   console.log(`\nRows to insert: ${rows.length}`);
 

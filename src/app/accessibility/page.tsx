@@ -48,26 +48,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Breadcrumb schema
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://www.genetargeting.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Accessibility',
-      item: 'https://www.genetargeting.com/accessibility/',
-    },
-  ],
-};
-
 // WebPage schema
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -109,10 +89,6 @@ const accessibilityFeatures = [
 export default function AccessibilityPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}

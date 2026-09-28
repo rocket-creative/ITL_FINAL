@@ -4,7 +4,7 @@ slug: "ophthalmology-mouse-models"
 extracted: "2026-01-09T17:03:05.217Z"
 ---
 
-# Ophthalmology Mouse Models | Eye Disease Research | Ingenious Targeting Laboratory
+# Ophthalmology Mouse Models | Eye Disease Research | ingenious targeting laboratory
 
 **Url: /ophthalmology-mouse-models**
 

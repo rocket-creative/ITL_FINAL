@@ -4,21 +4,21 @@ slug: "contact"
 extracted: "2026-01-09T17:03:03.640Z"
 ---
 
-# Contact Ingenious Targeting Laboratory | Request Quote, Schedule Consultation
+# Contact ingenious targeting laboratory | Request Quote, Schedule Consultation
 
 **Url: /general-contact**
 
-**Meta Description: Contact Ingenious Targeting Laboratory for mouse model generation projects. Request quotes, schedule consultations, and discuss research needs.**
+**Meta Description: Contact ingenious targeting laboratory for mouse model generation projects. Request quotes, schedule consultations, and discuss research needs.**
 
-**Primary Keyword: contact Ingenious Targeting Laboratory**
+**Primary Keyword: contact ingenious targeting laboratory**
 
 **Secondary Keywords: mouse model quote, project consultation, gene targeting services**
 
 **Word Count: 1200**
 
-# Contact Ingenious Targeting Laboratory
+# Contact ingenious targeting laboratory
 
-Ready to discuss your mouse model project? Ingenious Targeting Laboratory's scientific consultants are available to review your research goals and recommend optimal targeting strategies. We provide complimentary project consultations for new and existing clients.
+Ready to discuss your mouse model project? Ingenious targeting laboratory's scientific consultants are available to review your research goals and recommend optimal targeting strategies. We provide complimentary project consultations for new and existing clients.
 
 ## Request a Quote
 
@@ -40,9 +40,9 @@ Prefer to discuss your project directly? Schedule a virtual consultation with ou
 - Understand timeline and deliverables
 - Address technical questions
 
-## Why Choose Ingenious Targeting Laboratory
+## Why Choose ingenious targeting laboratory
 
-With over 2,800 mouse model generation projects completed, Ingenious Targeting Laboratory brings extensive experience to every project. Our scientific consultants work closely with researchers to design optimal targeting strategies and ensure project success.
+With over 2,800 mouse model generation projects completed, ingenious targeting laboratory brings extensive experience to every project. Our scientific consultants work closely with researchers to design optimal targeting strategies and ensure project success.
 
 We understand that each research program has unique requirements, and we tailor our approach to match your experimental goals, timeline, and budget. From initial consultation through delivery of study ready cohorts, we provide comprehensive support for your mouse model needs.
 
@@ -62,7 +62,7 @@ Available Monday through Friday, 9 AM to 5 PM Eastern Time
 
 **Mailing Address**:
 
-Ingenious Targeting Laboratory
+Ingenious targeting laboratory
 
 761-80 Coates Avenue Holbrook, NY, 11741
 
@@ -88,7 +88,7 @@ Current clients can reach project managers for:
 
 ### Catalog Model Inquiries
 
-Interested in Ingenious Targeting Laboratory's catalog mouse models, including humanized mice?
+Interested in ingenious targeting laboratory's catalog mouse models, including humanized mice?
 
 (/order-catalog-models)
 
@@ -112,7 +112,7 @@ These resources may answer common questions:
 
 ## Partners and Collaborators
 
-Ingenious Targeting Laboratory welcomes collaboration inquiries from:
+Ingenious targeting laboratory welcomes collaboration inquiries from:
 
 - Academic core facilities
 - Contract research organizations
@@ -123,16 +123,16 @@ Ingenious Targeting Laboratory welcomes collaboration inquiries from:
 
 ## Careers
 
-Interested in joining Ingenious Targeting Laboratory? View current openings:
+Interested in joining ingenious targeting laboratory? View current openings:
 
 (/current-openings)
 
 ## Stay Connected
 
-Follow Ingenious Targeting Laboratory for news, publications, and resources:
+Follow ingenious targeting laboratory for news, publications, and resources:
 
 - New model capabilities and service announcements
-- Recent publications featuring Ingenious Targeting Laboratory models
+- Recent publications featuring ingenious targeting laboratory models
 - Technical resources and guides
 - Webinars and educational content
 

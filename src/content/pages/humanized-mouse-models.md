@@ -4,7 +4,7 @@ slug: "humanized-mouse-models"
 extracted: "2026-01-09T17:03:04.440Z"
 ---
 
-# Humanized Mouse Models | Human Gene Knockin | Ingenious Targeting Laboratory
+# Humanized Mouse Models | Human Gene Knockin | ingenious targeting laboratory
 
 **Url: /humanized-mouse-models**
 
@@ -18,11 +18,11 @@ extracted: "2026-01-09T17:03:04.440Z"
 
 # Humanized Mouse Models
 
-Since 1998, Ingenious Targeting Laboratory has generated hundreds of humanized mouse models for researchers and pharmaceutical companies worldwide. Our humanized models have supported therapeutic development programs across immuno-oncology, metabolic disease, neuroscience, and other areas, with results published in peer reviewed journals.
+Since 1998, ingenious targeting laboratory has generated hundreds of humanized mouse models for researchers and pharmaceutical companies worldwide. Our humanized models have supported therapeutic development programs across immuno-oncology, metabolic disease, neuroscience, and other areas, with results published in peer reviewed journals.
 
 Humanized mouse models express human proteins or protein domains in place of their mouse counterparts. This humanization enables testing of human specific therapeutics, study of human specific biology, and improved translation from preclinical models to clinical outcomes. When therapeutic antibodies or biologics are designed specifically for human targets, humanized mice provide the only way to evaluate efficacy in an immunocompetent in vivo system.
 
-From single domain humanization for antibody epitope testing to complete gene replacement for comprehensive human biology studies, Ingenious Targeting Laboratory designs humanized models tailored to your specific research and therapeutic development requirements.
+From single domain humanization for antibody epitope testing to complete gene replacement for comprehensive human biology studies, ingenious targeting laboratory designs humanized models tailored to your specific research and therapeutic development requirements.
 
 ## Why Humanize Mouse Genes
 
@@ -96,7 +96,7 @@ Human promoter or enhancer sequences replace mouse regulatory regions:
 
 ### TruHumanization™ Technology
 
-Ingenious Targeting Laboratory's proprietary TruHumanization™ technology optimizes humanization strategies for maximum therapeutic relevance and physiological compatibility with complete gene replacement. 
+Ingenious targeting laboratory's proprietary TruHumanization™ technology optimizes humanization strategies for maximum therapeutic relevance and physiological compatibility with complete gene replacement. 
 
 **Quality Assurance**: All TruHumanization™ projects include pre-germline analysis to verify correct human sequence integration before mouse generation.
 
@@ -282,4 +282,4 @@ Yes. Dual or triple humanized mice are commonly used for combination therapy stu
 
 **Which humanized immune checkpoint models are available?**
 
-Ingenious Targeting Laboratory offers humanized models for PD1, PDL1, CTLA4, LAG3, and TIM3, and others, as well as combinations. These models express human checkpoint proteins recognized by clinical antibodies while maintaining functional mouse immune systems for syngeneic tumor studies.
+Ingenious targeting laboratory offers humanized models for PD1, PDL1, CTLA4, LAG3, and TIM3, and others, as well as combinations. These models express human checkpoint proteins recognized by clinical antibodies while maintaining functional mouse immune systems for syngeneic tumor studies.

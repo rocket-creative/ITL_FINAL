@@ -10,7 +10,7 @@
  */
 
 import Link from 'next/link';
-import { COMMERCIAL_LINKS } from '@/data/commercialCtas';
+import { COMMERCIAL_LINKS, stripInternalUtms, utmMediumFromHref } from '@/data/commercialCtas';
 import PricingUnlockForm from './PricingUnlockForm';
 
 export interface ServicePricingFaq {
@@ -25,7 +25,7 @@ interface Props {
   headline: string;
   /** Subline under price block */
   subline: string;
-  /** Quote CTA href + UTM params */
+  /** Quote CTA href. Campaign parameters are stripped before render. */
   quoteHref: string;
   /** Optional secondary CTA (catalog) */
   secondaryHref?: string;
@@ -33,6 +33,12 @@ interface Props {
   secondaryLabel?: string;
   /** FAQs to render + emit as schema */
   faqs?: ServicePricingFaq[];
+  /**
+   * Emit a FAQPage node for `faqs`. Set false when the host page already emits
+   * its own FAQPage: two FAQPage nodes on one URL is invalid and Google may
+   * discard both.
+   */
+  emitSchema?: boolean;
   /** Anchor id for in-page jump links */
   id?: string;
   /**
@@ -50,9 +56,15 @@ export default function UXUIDCServicePricingAnchor({
   secondaryHref,
   secondaryLabel,
   faqs = [],
+  emitSchema = true,
   id = 'pricing',
   unlockInterest,
 }: Props) {
+  const cleanQuoteHref = stripInternalUtms(quoteHref);
+  const cleanSecondaryHref = stripInternalUtms(secondaryHref ?? COMMERCIAL_LINKS.catalogAll);
+  const quoteLocation = utmMediumFromHref(quoteHref) ?? 'service';
+  const secondaryLocation = (secondaryHref && utmMediumFromHref(secondaryHref)) || quoteLocation;
+
   return (
     <section
       id={id}
@@ -141,8 +153,9 @@ export default function UXUIDCServicePricingAnchor({
             </div>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <Link
-                href={secondaryHref ?? COMMERCIAL_LINKS.catalogAll}
+                href={cleanSecondaryHref}
                 data-cta="service-pricing-catalog"
+                data-cta-location={secondaryLocation}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -161,8 +174,9 @@ export default function UXUIDCServicePricingAnchor({
                 <span aria-hidden="true">→</span>
               </Link>
               <Link
-                href={quoteHref}
+                href={cleanQuoteHref}
                 data-cta="service-pricing-generated-quote"
+                data-cta-location={quoteLocation}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -223,23 +237,25 @@ export default function UXUIDCServicePricingAnchor({
                 </details>
               ))}
             </div>
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                  '@context': 'https://schema.org',
-                  '@type': 'FAQPage',
-                  mainEntity: faqs.map((faq) => ({
-                    '@type': 'Question',
-                    name: faq.question,
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: faq.answer,
-                    },
-                  })),
-                }),
-              }}
-            />
+            {emitSchema ? (
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: faqs.map((faq) => ({
+                      '@type': 'Question',
+                      name: faq.question,
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: faq.answer,
+                      },
+                    })),
+                  }),
+                }}
+              />
+            ) : null}
           </>
         )}
       </div>

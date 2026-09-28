@@ -79,7 +79,7 @@ const strainBackgrounds = [
   },
   {
     title: "Mixed Background Considerations",
-    description: "Backcrossing onto defined genetic backgrounds ensures reproducible phenotypes and enables comparison across studies. ingenious targeting laboratory provides backcrossing services to establish your model on the optimal strain background."
+    description: "Backcrossing onto defined genetic backgrounds ensures reproducible phenotypes and enables comparison across studies. Ingenious targeting laboratory provides backcrossing services to establish your model on the optimal strain background."
   }
 ];
 
@@ -127,6 +127,7 @@ const phenotypingEndpoints = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const mirmiraTestimonial = getTestimonialById('mirmira-chicago')!;
 
@@ -590,13 +591,20 @@ export default function LupusMouseModelsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/lupus-mouse-models', faqData)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Lupus Mouse Models",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Mouse model generation for systemic lupus erythematosus research. Study autoantibody production, immune complex disease, and lupus nephritis. Since 1998.",
             "serviceType": "Lupus Mouse Model Generation"

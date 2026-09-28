@@ -10,14 +10,14 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconDNA, IconImage, IconQuote, IconChevronRight, IconCheckCircle } from '@/components/UXUIDC/Icons';
-import { UXUIDCServicePricingAnchor, StandardPageCtaStack } from '@/components/UXUIDC';
+import { BreedThisLineWithItl, UXUIDCServicePricingAnchor, StandardPageCtaStack } from '@/components/UXUIDC';
 
 // Hero Data
 const heroData = {
   badge: "Reliable Analysis",
   title: "Mouse Genotyping Services",
   intro: "Since 1998, ingenious targeting laboratory has provided comprehensive genotyping services supporting thousands of mouse model projects. Our genotyping capabilities ensure accurate breeding decisions and experimental design throughout your research program.",
-  description: "Reliable genotyping is essential for maintaining mouse colonies, verifying genetic modifications, and ensuring experimental reproducibility. ingenious targeting laboratory offers multiple genotyping methods tailored to your specific allele design and verification requirements."
+  description: "Reliable genotyping is essential for maintaining mouse colonies, verifying genetic modifications, and ensuring experimental reproducibility. Ingenious targeting laboratory offers multiple genotyping methods tailored to your specific allele design and verification requirements."
 };
 
 // Stats Data
@@ -131,6 +131,7 @@ const protocolOptimization = [
 // Testimonial Data
 // Verified testimonials from master data - https://www.genetargeting.com/testimonials
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
+import { buildFAQSchema } from '@/lib/seo/schemaBlocks';
 
 const francoTestimonial = getTestimonialById('franco-colorado')!;
 
@@ -154,11 +155,11 @@ const relatedResources = [
 const faqData = [
   {
     question: "What genotyping methods does ingenious targeting laboratory use?",
-    answer: "ingenious targeting laboratory uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements."
+    answer: "Ingenious targeting laboratory uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements."
   },
   {
     question: "Can ingenious targeting laboratory develop generated genotyping assays for new alleles?",
-    answer: "Yes. ingenious targeting laboratory can design generated genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Generated assay development includes protocol optimization and validation."
+    answer: "Yes. Ingenious targeting laboratory can design generated genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Generated assay development includes protocol optimization and validation."
   },
   {
     question: "What information is provided with genotyping results?",
@@ -166,7 +167,7 @@ const faqData = [
   },
   {
     question: "Do you provide high-throughput genotyping for large colonies?",
-    answer: "Yes. ingenious targeting laboratory provides high-throughput genotyping services optimized for rapid screening of large colonies. Optimized protocols reduce reagent costs while maintaining reliability and specificity. We work with you to determine the most efficient approach for your colony size and genotyping frequency needs."
+    answer: "Yes. Ingenious targeting laboratory provides high-throughput genotyping services optimized for rapid screening of large colonies. Optimized protocols reduce reagent costs while maintaining reliability and specificity. We work with you to determine the most efficient approach for your colony size and genotyping frequency needs."
   }
 ];
 
@@ -319,12 +320,13 @@ export default function MouseGenotypingServicePage() {
 
         {/* Pricing anchor — captures "mouse genotyping service" buyer queries */}
         <UXUIDCServicePricingAnchor
+          emitSchema={false}
           serviceLabel="Mouse Genotyping"
           headline="Outsource your genotyping. 48-hour turnaround."
           unlockInterest="Mouse Genotyping Service"
           subline="PCR and qPCR genotyping for knockouts, knockins, transgenics, floxed alleles, and Cre lines. Validated assays. Pricing scales with sample volume and assay complexity."
-          quoteHref="/request-quote?utm_source=organic&utm_medium=service&utm_campaign=genotyping-pricing-anchor"
-          secondaryHref="/contact?utm_source=organic&utm_medium=service&utm_campaign=genotyping-contact"
+          quoteHref="/request-quote/"
+          secondaryHref="/contact/"
           secondaryLabel="Talk to a Scientist"
           faqs={[
             {
@@ -618,6 +620,7 @@ export default function MouseGenotypingServicePage() {
             </div>
           </div>
         </section>
+        <BreedThisLineWithItl />
       </main>
 
       <StandardPageCtaStack
@@ -630,9 +633,16 @@ export default function MouseGenotypingServicePage() {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', path: '/' },
+          { name: 'Services', path: '/mouse-model-services' },
           { name: 'Support Services', path: '/support-services' },
           { name: 'Mouse Genotyping Service', path: '/mouse-genotyping-service' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFAQSchema('/mouse-genotyping-service', faqData)),
+        }}
       />
       <script
         type="application/ld+json"
@@ -643,7 +653,8 @@ export default function MouseGenotypingServicePage() {
             "name": "Mouse Genotyping Services",
             "provider": {
               "@type": "Organization",
-              "name": "ingenious targeting laboratory"
+              "@id": "https://www.genetargeting.com/#organization",
+              "name": "Ingenious targeting laboratory"
             },
             "description": "Comprehensive mouse genotyping services including PCR, Southern blot, and sequencing analysis. Reliable genotyping for breeding decisions since 1998.",
             "serviceType": "Genotyping Services"

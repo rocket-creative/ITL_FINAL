@@ -21,13 +21,19 @@ interface AnimatedFAQProps {
   faqs: FAQ[];
   backgroundColor?: string;
   showViewAllLink?: boolean;
+  /**
+   * Prefix for the generated element ids. Set this when more than one FAQ
+   * accordion renders on the same page so the ids stay unique.
+   */
+  idPrefix?: string;
 }
 
 export function UXUIDCAnimatedFAQ({ 
   title, 
   faqs, 
   backgroundColor = 'white',
-  showViewAllLink = true
+  showViewAllLink = true,
+  idPrefix = 'faq'
 }: AnimatedFAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   
@@ -78,6 +84,8 @@ export function UXUIDCAnimatedFAQ({
           >
             {/* Question Button */}
             <button
+              id={`${idPrefix}-question-${index}`}
+              type="button"
               onClick={() => toggleFAQ(index)}
               className="w-full text-left flex justify-between items-center transition-colors duration-300 hover:bg-opacity-80"
               style={{ 
@@ -86,6 +94,7 @@ export function UXUIDCAnimatedFAQ({
                 backgroundColor: 'transparent',
               }}
               aria-expanded={openIndex === index}
+              aria-controls={`${idPrefix}-answer-${index}`}
             >
               <span
                 style={{
@@ -110,11 +119,18 @@ export function UXUIDCAnimatedFAQ({
 
             {/* Answer Content - CSS transition instead of GSAP */}
             <div
+              id={`${idPrefix}-answer-${index}`}
+              role="region"
+              aria-labelledby={`${idPrefix}-question-${index}`}
               style={{
                 maxHeight: openIndex === index ? '1000px' : '0',
                 opacity: openIndex === index ? 1 : 0,
+                // visibility keeps collapsed answers out of the accessibility
+                // tree and out of the tab order while still animating.
+                visibility: openIndex === index ? 'visible' : 'hidden',
                 overflow: 'hidden',
-                transition: 'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out',
+                transition:
+                  'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out',
               }}
             >
               <p

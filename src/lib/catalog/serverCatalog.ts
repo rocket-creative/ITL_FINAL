@@ -4,9 +4,11 @@
  * Queries Supabase directly, never expose in 'use client' files.
  */
 
+import { cache } from 'react';
 import { supabase, type CatalogRow } from './supabaseClient';
 import { tier4GenerateStaticParams } from '@/data/seoKeywords';
 import { modCanonicalToSlug } from '@/lib/seo/slugs';
+import { isLive } from './availability';
 
 export interface ServerCatalogModel {
   id: string;
@@ -16,6 +18,7 @@ export interface ServerCatalogModel {
   category: string;
   availability: string;
   catalogNumber: string;
+  description: string;
 }
 
 /**
@@ -39,8 +42,15 @@ function toModel(row: CatalogRow): ServerCatalogModel {
     category:      row.category,
     availability:  row.availability,
     catalogNumber: row.itl_catalog_number,
+    description:   row.description ?? '',
   };
 }
+
+/** Fields for pages and search. The A–Z index omits description so it does not ship every paragraph. */
+const MODEL_FIELDS =
+  'id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number,description';
+const INDEX_FIELDS =
+  'id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number';
 
 /**
  * Server-side search, used by page.tsx SSR preload.
@@ -60,7 +70,7 @@ export async function serverSearch(
   // Tier 1: gene_name starts with query (most relevant for "Flt4")
   const { data: prefixData } = await supabase
     .from('catalog_models')
-    .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+    .select(MODEL_FIELDS)
     .ilike('gene_name', `${q}%`)
     .order('gene_name')
     .limit(limit);
@@ -76,7 +86,7 @@ export async function serverSearch(
   const ftQuery = q.split(/\s+/).filter(Boolean).join(' & ');
   const { data: ftData } = await supabase
     .from('catalog_models')
-    .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+    .select(MODEL_FIELDS)
     .textSearch('search_vector', ftQuery, { type: 'plain', config: 'simple' })
     .limit(limit);
 
@@ -89,8 +99,8 @@ export async function serverSearch(
   // Tier 3: broad contains on abbreviation or catalog number
   const { data: broadData } = await supabase
     .from('catalog_models')
-    .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
-    .or(`model_abbreviation.ilike.%${q}%,itl_catalog_number.ilike.%${q}%`)
+    .select(MODEL_FIELDS)
+    .or(`model_abbreviation.ilike.%${q}%,itl_catalog_number.ilike.%${q}%,description.ilike.%${q}%`)
     .order('gene_name')
     .limit(limit);
 
@@ -145,7 +155,7 @@ export async function getAllModels(): Promise<ServerCatalogModel[]> {
   for (;;) {
     const { data, error } = await supabase
       .from('catalog_models')
-      .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+      .select(INDEX_FIELDS)
       .neq('gene_name', '')
       .order('gene_name')
       .range(from, from + PAGE - 1);
@@ -164,13 +174,81 @@ export async function getAllModels(): Promise<ServerCatalogModel[]> {
 }
 
 /**
+ * Humanized models whose availability is established Live.
+ * F0/F1 founder colonies are excluded. Deduped per request.
+ */
+export const getLiveHumanizedModels = cache(async (): Promise<ServerCatalogModel[]> => {
+  const results: CatalogRow[] = [];
+  const PAGE = 1000;
+  let from = 0;
+
+  for (;;) {
+    const { data, error } = await supabase
+      .from('catalog_models')
+      .select(INDEX_FIELDS)
+      .eq('model_type', 'Humanized')
+      .eq('availability', 'Live')
+      .order('model_abbreviation')
+      .range(from, from + PAGE - 1);
+
+    if (error) {
+      throw new Error(`Live humanized catalog query failed: ${error.message}`);
+    }
+    if (!data || data.length === 0) break;
+
+    results.push(...data);
+    if (data.length < PAGE) break;
+    from += PAGE;
+  }
+
+  return results
+    .filter((row) => isLive(row.availability))
+    .map(toModel)
+    .toSorted(
+      (a, b) =>
+        a.modelAbbrev.localeCompare(b.modelAbbrev, 'en', { sensitivity: 'base' }) ||
+        a.catalogNumber.localeCompare(b.catalogNumber, 'en', { numeric: true }),
+    );
+});
+
+/**
  * All models for a specific gene name.
  * Used by individual gene pages (on-demand ISR).
  */
+/**
+ * Models whose abbreviation starts with one of the prefixes.
+ * Used by checkpoint marketing pages (hPD-1, hCTLA, hLAG3).
+ */
+export async function getModelsByAbbrevPrefixes(prefixes: string[]): Promise<ServerCatalogModel[]> {
+  const lists = await Promise.all(
+    prefixes.map(async (prefix) => {
+      const { data, error } = await supabase
+        .from('catalog_models')
+        .select(MODEL_FIELDS)
+        .ilike('model_abbreviation', `${prefix}%`)
+        .order('model_abbreviation')
+        .limit(60);
+      if (error || !data) return [];
+      return data.map(toModel);
+    }),
+  );
+
+  const seen = new Set<string>();
+  const models: ServerCatalogModel[] = [];
+  for (const list of lists) {
+    for (const model of list) {
+      if (seen.has(model.id)) continue;
+      seen.add(model.id);
+      models.push(model);
+    }
+  }
+  return models;
+}
+
 export async function getModelsByGene(geneName: string): Promise<ServerCatalogModel[]> {
   const { data, error } = await supabase
     .from('catalog_models')
-    .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+    .select(MODEL_FIELDS)
     .eq('gene_name', geneName)
     .order('model_type');
 
