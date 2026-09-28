@@ -17,7 +17,7 @@ With hundreds of our conditional knockout models published, our experts will eva
 
 ## What Researchers Say
 
-> "We are actively engaged in the production of a number of conditional mouse models with iTL. This collaboration has been simple on my end, just providing the gene accession numbers of each gene, and iTL recommending the strategies for each gene. The full range of mouse knockout services matches my needs well. I find iTL's service uniquely useful for my situation of needing different models for my research in a quick and efficient manner."
+> "We are actively engaged in the production of a number of conditional mouse models with ingenious targeting laboratory. This collaboration has been simple on my end, just providing the gene accession numbers of each gene, and ingenious targeting laboratory recommending the strategies for each gene. The full range of mouse knockout services matches my needs well. I find ingenious targeting laboratory's service uniquely useful for my situation of needing different models for my research in a quick and efficient manner."
 >
 > — **Mehboob Hussain, MD**, University of Michigan Health
 

@@ -2,7 +2,7 @@ import { generateMetadata, generateBreadcrumbs } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Mouse Model Generation Companies Comparison Guide',
-  description: 'Compare leading mouse model generation companies including ingenious targeting laboratory (iTL), Jackson Laboratory, Charles River, Cyagen, Taconic, GemPharmatech, and Inotiv. Factual provider comparison and selection criteria.',
+  description: 'Compare leading mouse model generation companies including ingenious targeting laboratory, Jackson Laboratory, Charles River, Cyagen, Taconic, GemPharmatech, and Inotiv. Factual provider comparison and selection criteria.',
   path: '/custom-mouse-model-companies',
 });
 

@@ -11,11 +11,11 @@ import * as path from 'path';
 
 export const runtime = 'nodejs';
 
-// iTL Brand Colors (from Figma design)
+// ingenious targeting laboratory Brand Colors (from Figma design)
 const COLORS = {
   blue: '#1E88E5',        // Primary blue for headline
   navy: '#1a2332',        // Dark navy for line 2
-  teal: '#008080',        // iTL teal for line 3
+  teal: '#008080',        // ingenious targeting laboratory teal for line 3
   background: '#e3e3e3',  // Background grey
 };
 
@@ -73,7 +73,7 @@ export async function GET(request: NextRequest) {
                 maxWidth: '950px',
               }}
             >
-              {/* Line 1 - Primary Headline - iTL Blue - BOLD look via size */}
+              {/* Line 1 - Primary Headline - ingenious targeting laboratory Blue - BOLD look via size */}
               <div
                 style={{
                   fontSize: '62px',
@@ -101,7 +101,7 @@ export async function GET(request: NextRequest) {
                 {line2}
               </div>
 
-              {/* Line 3 - CTA - iTL Teal - Smaller + Regular */}
+              {/* Line 3 - CTA - ingenious targeting laboratory Teal - Smaller + Regular */}
               <div
                 style={{
                   fontSize: '40px',
@@ -125,7 +125,7 @@ export async function GET(request: NextRequest) {
             >
               <img
                 src={logoBase64}
-                alt="iTL"
+                alt="ingenious targeting laboratory"
                 width="550"
                 height="110"
                 style={{

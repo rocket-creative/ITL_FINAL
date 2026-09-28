@@ -308,7 +308,7 @@ Proliferation, cytokine production following TIM3 blockade.
 
 Changes in TIL populations and phenotype.
 
-## ITL's Approach to TIM3 Humanized Models
+## ingenious targeting laboratory's Approach to TIM3 Humanized Models
 
 ### Pre Germline Characterization
 
@@ -324,7 +324,7 @@ Optional early validation of human TIM3 expression.
 
 ### Quality Assurance
 
-ITL validates TIM3 humanized models:
+ingenious targeting laboratory validates TIM3 humanized models:
 
 **Flow Cytometry**
 
@@ -354,7 +354,7 @@ Soltantoyeh T et al. (2024) Simultaneous targeting of Tim3 and A2a receptors mod
 
 *— **Albert Basson, PhD**, King's College London*
 
-*“I’ve been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!”*
+*“I’ve been working with ingenious targeting laboratory over the past 5 years in the production of 3 different genetically altered mice. Not only did ingenious targeting laboratory help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!”*
 
 *— *****Raghu Mirmira, MD/Phd*****, ***University of Chicago**
 

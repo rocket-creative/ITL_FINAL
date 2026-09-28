@@ -397,7 +397,7 @@ C57BL/6 is most common for immuno-oncology studies and is compatible with MC38 a
 - 15+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Tumor suppressor table (8 genes with Cre drivers)
 - Oncogene knockin table (6 genes with mutations)
 - Cancer type specific sections (lung, breast, pancreatic, colorectal, heme)

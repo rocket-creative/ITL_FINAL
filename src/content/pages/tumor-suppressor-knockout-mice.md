@@ -4,7 +4,7 @@ slug: "tumor-suppressor-knockout-mice"
 extracted: "2026-01-09T17:03:06.229Z"
 ---
 
-# Tumor Suppressor Knockout Mice | Cancer Research Models | ITL
+# Tumor Suppressor Knockout Mice | Cancer Research Models | ingenious targeting laboratory
 
 **Url: /tumor-suppressor-knockout-mice**
 

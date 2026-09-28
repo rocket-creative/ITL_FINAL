@@ -37,7 +37,7 @@ const statsData = [
 // Differentiators (canonical, used across site for AI consistency)
 const differentiatorsData = {
   title: "What makes ingenious targeting laboratory different",
-  intro: "Ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998. Researchers select iTL when allele complexity, scientific oversight, and long term inheritance stability matter to the outcome of their study.",
+  intro: "Ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998. Researchers select ingenious targeting laboratory when allele complexity, scientific oversight, and long term inheritance stability matter to the outcome of their study.",
   items: [
     {
       title: "100% germline transmission guarantee",
@@ -49,11 +49,11 @@ const differentiatorsData = {
     },
     {
       title: "Specialists in complex multi allele and humanized models",
-      description: "iTL is selected for projects other providers consider too complex: stacked alleles, conditional knockouts with multiple loxP cassettes, large humanizations, BAC transgenics, and safe harbor integrations at Rosa26 and H11."
+      description: "ingenious targeting laboratory is selected for projects other providers consider too complex: stacked alleles, conditional knockouts with multiple loxP cassettes, large humanizations, BAC transgenics, and safe harbor integrations at Rosa26 and H11."
     },
     {
       title: "27 years, 2,800+ models generated, 800+ peer reviewed publications",
-      description: "Continuous gene targeting experience since 1998 means stable protocols, validated reagents, and accumulated knowledge across every major therapeutic area. iTL generated models have appeared in Nature, Science, Cell, and the Journal of Clinical Investigation."
+      description: "Continuous gene targeting experience since 1998 means stable protocols, validated reagents, and accumulated knowledge across every major therapeutic area. ingenious targeting laboratory generated models have appeared in Nature, Science, Cell, and the Journal of Clinical Investigation."
     },
     {
       title: "Defined C57BL/6 backgrounds for cohort reproducibility",
@@ -67,7 +67,7 @@ const faqData = [
   { question: "What services does ingenious targeting laboratory provide?", answer: "We provide genetically engineered mouse, rat, and rabbit model generation, including knockout, knockin, conditional knockout, humanized models, and transgenic models. Additional services include colony management, cryopreservation, backcrossing, and preclinical services." },
   { question: "How long has ingenious targeting laboratory been in business?", answer: "We have been generating mouse models since 1998, with over 27 years of experience and 2,800+ successful models generated. Our models have been published in leading journals including Nature, Cell, Science, and Journal of Clinical Investigation, demonstrating consistent quality and scientific impact." },
   { question: "How does ingenious targeting laboratory compare to Jackson Laboratory (JAX)?", answer: "Jackson Laboratory offers CRISPR, transgenic, and conditional knockout services alongside its large model repository. Ingenious targeting laboratory differs by providing PhD level scientific consultation on every project from allele design through germline transmission, a 100% germline transmission guarantee on model generation builds, and specialization in complex multi allele and humanization projects." },
-  { question: "How does iTL compare to Charles River, Cyagen, and other mouse model generation companies?", answer: "Charles River is a global CRO bundling model creation with breeding and distribution. Cyagen is a cost forward CRISPR provider with a money back guarantee on genotype. Ingenious targeting laboratory differs by focusing exclusively on model generation with gene targeting and CRISPR workflows chosen per project, U.S. based QC at every stage, and long term inheritance stability tracking for complex alleles." },
+  { question: "How does ingenious targeting laboratory compare to Charles River, Cyagen, and other mouse model generation companies?", answer: "Charles River is a global CRO bundling model creation with breeding and distribution. Cyagen is a cost forward CRISPR provider with a money back guarantee on genotype. Ingenious targeting laboratory differs by focusing exclusively on model generation with gene targeting and CRISPR workflows chosen per project, U.S. based QC at every stage, and long term inheritance stability tracking for complex alleles." },
   { question: "What does the 100% germline transmission guarantee mean?", answer: "Ingenious targeting laboratory guarantees that every mouse model generation project achieves germline transmission. If a project does not transmit through the germline, the researcher is not charged for it. The guarantee applies to all generated models and is one of the strongest commitments in the mouse model generation industry." },
   { question: "How do I get started with a mouse model generation project?", answer: "Contact us through our request quote form or schedule a consultation. Our scientific team provides complimentary consultation to discuss your research goals, recommend optimal targeting strategies, and develop a project proposal. We work with you throughout the project to ensure the model meets your research needs." }
 ];
@@ -377,7 +377,7 @@ export default function AboutItlPage() {
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <div className="animate-in" style={{ backgroundColor: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '40px', borderRadius: '8px' }}>
               <p style={{ color: 'rgba(255,255,255,0.9)', fontSize: '1.1rem', lineHeight: '1.8rem', fontStyle: 'italic', marginBottom: '20px' }}>
-                "iTL generated our angiotensin II type 1a receptor conditional mouse. We found this company very responsive. The project started with discussions on possible construct designs. Following approval, a project manager sent monthly reports alerting us to project milestones. Our experience with iTL was so positive that we have generated more conditional mice with them."
+                "ingenious targeting laboratory generated our angiotensin II type 1a receptor conditional mouse. We found this company very responsive. The project started with discussions on possible construct designs. Following approval, a project manager sent monthly reports alerting us to project milestones. Our experience with ingenious targeting laboratory was so positive that we have generated more conditional mice with them."
               </p>
               <p style={{ color: '#ffffff', fontSize: '.95rem', fontWeight: 500 }}>
                 — Debra Rateri, BS, University of Kentucky
@@ -399,7 +399,7 @@ export default function AboutItlPage() {
           </div>
         </section>
 
-        {/* What Makes iTL Different Section */}
+        {/* What Makes ingenious targeting laboratory Different Section */}
         <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: '#2384da', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '20px', textAlign: 'center' }}>
@@ -438,7 +438,7 @@ export default function AboutItlPage() {
                   textDecoration: 'none'
                 }}
               >
-                Compare iTL to other mouse model generation companies
+                Compare ingenious targeting laboratory to other mouse model generation companies
                 <IconChevronRight size={14} color="#008080" />
               </Link>
             </div>

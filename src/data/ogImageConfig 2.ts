@@ -99,7 +99,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   },
   '/current-openings': {
     slug: 'current-openings',
-    line1: 'Careers at iTL',
+    line1: 'Careers at ingenious targeting laboratory',
     line2: 'Join Our Scientific Team',
     line3: 'Learn More',
     tier: 3,
@@ -988,7 +988,7 @@ export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   },
   '/general-contact': {
     slug: 'general-contact',
-    line1: 'Contact iTL',
+    line1: 'Contact ingenious targeting laboratory',
     line2: 'Expert Mouse Model Support',
     line3: 'Learn More',
     tier: 3,

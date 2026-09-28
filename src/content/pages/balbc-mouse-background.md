@@ -4,7 +4,7 @@ slug: "balbc-mouse-background"
 extracted: "2026-01-09T17:03:03.129Z"
 ---
 
-# BALB/c Mouse Background | Strain Characteristics &amp; Applications | ITL
+# BALB/c Mouse Background | Strain Characteristics &amp; Applications | ingenious targeting laboratory
 
 **Url: /balbc-mouse-background**
 
@@ -159,7 +159,7 @@ Choose BALB/c for Th2-biased immune responses, infectious disease models where B
 
 **Can I backcross my existing model to BALB/c background?**
 
-Yes. ITL provides backcrossing services to transfer models to BALB/c or other backgrounds. Contact us for more information.
+Yes. ingenious targeting laboratory provides backcrossing services to transfer models to BALB/c or other backgrounds. Contact us for more information.
 
 **How do strain backgrounds affect model phenotypes?**
 

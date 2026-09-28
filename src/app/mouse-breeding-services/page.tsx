@@ -24,7 +24,7 @@ import {
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 import { breedingFaqData } from './structuredData';
 
-// TODO(byline): named ITL PhD scientist + reviewer date. The build doc asks for a
+// TODO(byline): named ingenious targeting laboratory PhD scientist + reviewer date. The build doc asks for a
 // byline with credential and bio link plus a "Scientifically reviewed by" line;
 // both are held until Ops assigns the scientist.
 
@@ -150,7 +150,7 @@ const relatedBreedingServices = [
 
 const relatedResources = [
   { title: 'In House vs Outsourced Mouse Breeding', href: '/in-house-vs-outsourced-mouse-breeding/' },
-  { title: 'View all 800+ publications featuring ITL models', href: '/publications/' },
+  { title: 'View all 800+ publications featuring ingenious targeting laboratory models', href: '/publications/' },
   { title: 'Read more researcher testimonials', href: '/testimonials/' },
   { title: 'Get a Breeding Quote', href: '/cohort-consultation/' },
 ];
@@ -750,7 +750,7 @@ export default function MouseBreedingServicesPage() {
                 className={`inline-flex items-center gap-2 transition-colors duration-300 hover:text-teal-700 ${focusRing}`}
                 style={inlineLinkStyle}
               >
-                <span>View all 800+ publications featuring ITL models</span>
+                <span>View all 800+ publications featuring ingenious targeting laboratory models</span>
                 <span aria-hidden="true" style={{ display: 'inline-flex' }}>
                   <IconChevronRight size={14} color="#008080" />
                 </span>

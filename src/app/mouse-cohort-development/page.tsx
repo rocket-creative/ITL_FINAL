@@ -18,7 +18,7 @@ import {
 import { buildServiceSchema, buildFAQSchema } from '@/lib/seo/schemaBlocks';
 import { getTestimonialById, formatAuthorWithCredentials } from '@/data/verifiedTestimonials';
 
-// TODO(byline): named ITL PhD scientist with title and credential, linked to a bio page,
+// TODO(byline): named ingenious targeting laboratory PhD scientist with title and credential, linked to a bio page,
 // plus a "Scientifically reviewed by" line with a review date. No author is published
 // until Ops assigns one, so the page is attributed to the organization in schema.
 
@@ -84,7 +84,7 @@ const buildSteps = [
   },
 ];
 
-// TODO(ops): confirm in writing (a) the tightest age window ITL will commit to, (b) the largest
+// TODO(ops): confirm in writing (a) the tightest age window ingenious targeting laboratory will commit to, (b) the largest
 // single cohort delivered to date, and (c) genotyping turnaround in business days. All three are
 // unpublished today, so no number appears in this list. Add them here once Ops confirms.
 const cohortSpecifications = [
@@ -196,7 +196,7 @@ const relatedResources = [
     title: 'In House vs Outsourced Mouse Breeding',
     href: '/in-house-vs-outsourced-mouse-breeding/',
   },
-  { title: 'Publications featuring ITL models', href: '/publications/' },
+  { title: 'Publications featuring ingenious targeting laboratory models', href: '/publications/' },
   { title: 'Researcher testimonials', href: '/testimonials/' },
 ];
 
@@ -849,7 +849,7 @@ export default function MouseCohortDevelopmentPage() {
                 className={inlineLinkClass}
                 style={{ color: '#2384da', fontSize: '.9rem', fontWeight: 500 }}
               >
-                <span>View all 800+ publications featuring ITL models</span>
+                <span>View all 800+ publications featuring ingenious targeting laboratory models</span>
                 <IconChevronRight size={14} color="currentColor" />
               </Link>
             </div>

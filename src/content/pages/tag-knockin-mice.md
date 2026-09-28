@@ -4,7 +4,7 @@ slug: "tag-knockin-mice"
 extracted: "2026-01-09T17:03:05.959Z"
 ---
 
-# Tag Knockin Mice | Epitope Tagged Protein Models | ITL
+# Tag Knockin Mice | Epitope Tagged Protein Models | ingenious targeting laboratory
 
 **Url: /tag-knockin-mice**
 

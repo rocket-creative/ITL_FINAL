@@ -207,9 +207,9 @@ Whether you need ongoing colony support, archival services, or complete project 
 
 ## Frequently Asked Questions
 
-**What support services does ITL provide beyond model generation?**
+**What support services does ingenious targeting laboratory provide beyond model generation?**
 
-ITL provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, and targeted clone archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation).
+ingenious targeting laboratory provides comprehensive support services including colony management (breeding colony maintenance, genotyping, cohort development, strain background management), cryopreservation (sperm, embryo, and targeted clone archival), rederivation (pathogen-free line establishment), and speed expansion breeding (rapid cohort generation).
 
 **How do colony management services help maintain mouse lines?**
 

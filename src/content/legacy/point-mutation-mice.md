@@ -17,7 +17,7 @@ Examples of design approaches include conventional point mutation knockin, where
 
 ## What Researchers Say
 
-> "iTL has generated three knockout and conditional KO mice for my lab. One of them is now published and we would like to thank iTL for the very nice service."
+> "ingenious targeting laboratory has generated three knockout and conditional KO mice for my lab. One of them is now published and we would like to thank ingenious targeting laboratory for the very nice service."
 >
 > — **Kai Ge, PhD**, NIDDK, National Institutes of Health
 

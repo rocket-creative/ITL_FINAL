@@ -30,7 +30,7 @@ const BRAND = {
 
 export const metadata: Metadata = {
   title: 'Accessibility Statement',
-  description: 'Our commitment to digital accessibility. Learn about WCAG 2.1 AA compliance, assistive technology support, and how to request accommodations at iTL.',
+  description: 'Our commitment to digital accessibility. Learn about WCAG 2.1 AA compliance, assistive technology support, and how to request accommodations at ingenious targeting laboratory.',
   alternates: {
     canonical: 'https://www.genetargeting.com/accessibility/',
   },

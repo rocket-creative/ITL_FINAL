@@ -216,7 +216,7 @@ Standard complete projects include targeting vector design and construction, gen
 
 **Can I get pricing for partial services?**
 
-Yes. ITL provides pricing for partial services including targeting vector only, gene targeting only, microinjection only, or other partial services. Partial service pricing is based on the specific scope of work. Contact ITL to discuss your partial service needs and receive a project quote.
+Yes. ingenious targeting laboratory provides pricing for partial services including targeting vector only, gene targeting only, microinjection only, or other partial services. Partial service pricing is based on the specific scope of work. Contact ingenious targeting laboratory to discuss your partial service needs and receive a project quote.
 
 ## Related Resources
 

@@ -311,7 +311,7 @@ Heterozygous models are used for dominant mutations or haploinsufficiency studie
 - 12+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Phosphorylation site mutation table
 - Common disease mutations table
 - Types of point mutations explained

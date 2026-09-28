@@ -214,7 +214,7 @@ const modelDesignData = {
   ]
 };
 
-// ITL Approach Data
+// ingenious targeting laboratory Approach Data
 const itlApproachData = {
   title: "Our Approach to LAG3 Humanization",
   points: [
@@ -766,7 +766,7 @@ export default function LAG3HumanizedMicePage({
           </div>
         </section>
 
-        {/* ITL Approach Section */}
+        {/* ingenious targeting laboratory Approach Section */}
         <section style={{ background: '#f7f7f7', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <div className="animate-in group cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1" style={{

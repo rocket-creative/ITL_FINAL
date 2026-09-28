@@ -627,7 +627,7 @@ export default function TIM3HumanizedMicePage({
           </div>
         </section>
 
-        {/* ITL's Approach */}
+        {/* ingenious targeting laboratory's Approach */}
         <section style={{ backgroundColor: '#0a253c', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{ color: 'white', fontFamily: 'Poppins, sans-serif', fontSize: '2rem', fontWeight: 700, marginBottom: '30px' }}>

@@ -204,7 +204,7 @@ export default function AdminDashboardPage() {
                   </svg>
                 </div>
                 <div>
-                  <h1 className="font-bold text-[#002B5C]">ITL Analytics</h1>
+                  <h1 className="font-bold text-[#002B5C]">ingenious targeting laboratory Analytics</h1>
                   <p className="text-xs text-gray-500">Dashboard</p>
                 </div>
               </div>
@@ -811,7 +811,7 @@ export default function AdminDashboardPage() {
 
       {/* Footer */}
       <footer className="border-t mt-12 py-6 text-center text-sm text-gray-500">
-        <p>ITL Analytics Dashboard • Data refreshes every 30 seconds</p>
+        <p>ingenious targeting laboratory Analytics Dashboard • Data refreshes every 30 seconds</p>
       </footer>
     </div>
   );

@@ -296,7 +296,7 @@ Proliferation, cytokine production, and effector function.
 
 Changes in immune cell infiltration and phenotype.
 
-## ITL's Approach to LAG3 Humanized Models
+## ingenious targeting laboratory's Approach to LAG3 Humanized Models
 
 ### Pre Germline Characterization
 
@@ -312,7 +312,7 @@ Optional early validation of human LAG3 expression.
 
 ### Quality Assurance
 
-ITL validates LAG3 humanized models:
+ingenious targeting laboratory validates LAG3 humanized models:
 
 **Flow Cytometry**
 
@@ -340,11 +340,11 @@ Shi N et al. (2022) PD1/LAG3 bispecific antibody potentiates T cell activation a
 
 ## What Researchers Say
 
-*“iTL produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the need comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves.”*
+*“ingenious targeting laboratory produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the need comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves.”*
 
 – **William A. Coetzee, DSc** NYU School of Medicine
 
-*“I’ve been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!”*
+*“I’ve been working with ingenious targeting laboratory over the past 5 years in the production of 3 different genetically altered mice. Not only did ingenious targeting laboratory help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!”*
 
 *— ***Raghu Mirmira, MD/Phd***, *University of Chicago
 

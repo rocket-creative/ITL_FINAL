@@ -96,7 +96,7 @@ Allergic disease models address IgE mediated hypersensitivity and airway inflamm
 
 ### Other Inflammatory Conditions
 
-ITL has generated models for psoriasis, inflammatory arthritis, vasculitis, and other inflammatory diseases. Each model is designed based on the specific immune mechanisms driving the research program.
+ingenious targeting laboratory has generated models for psoriasis, inflammatory arthritis, vasculitis, and other inflammatory diseases. Each model is designed based on the specific immune mechanisms driving the research program.
 
 ## Immune Cell Specific Models
 

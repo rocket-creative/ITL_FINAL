@@ -733,10 +733,9 @@ export default function KnockinMouseModelsPage() {
               '@type': 'Organization',
               '@id': 'https://www.genetargeting.com/#organization',
               name: 'ingenious targeting laboratory',
-              alternateName: 'iTL',
               url: 'https://www.genetargeting.com',
             },
-            description: 'Generated knockin mouse models from ingenious targeting laboratory (iTL), a U.S. based mouse model generation company with a 100% germline transmission guarantee. Point mutations, reporters, tags, and cDNA insertions since 1998.',
+            description: 'Generated knockin mouse models from ingenious targeting laboratory, a U.S. based mouse model generation company with a 100% germline transmission guarantee. Point mutations, reporters, tags, and cDNA insertions since 1998.',
             serviceType: 'Generated Knockin Mouse Model Generation',
             areaServed: 'Worldwide',
             award: '100% germline transmission guarantee',
@@ -769,7 +768,7 @@ export default function KnockinMouseModelsPage() {
               logo: { '@type': 'ImageObject', url: 'https://www.genetargeting.com/images/logo.png' },
             },
             about: ['Knockin mouse models', 'Point mutation', 'Reporter knockin', 'Tag knockin', 'cDNA knockin', 'Mouse model generation'],
-            keywords: 'knockin mouse models, point mutation knockin, reporter knockin, tag knockin, cDNA knockin, mouse model generation company, ingenious targeting laboratory, iTL',
+            keywords: 'knockin mouse models, point mutation knockin, reporter knockin, tag knockin, cDNA knockin, mouse model generation company, ingenious targeting laboratory',
           }),
         }}
       />

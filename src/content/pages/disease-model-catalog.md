@@ -114,7 +114,7 @@ Models are shipped:
 
 ## What Researchers Say
 
-*“iTL has done a tremendous job assisting us with our projects. Not only have they provided successful mouse lines, but their project management has always been on top of things. Communication was excellent, and at all times I felt I could trust the scientists at iTL with my work.”*
+*“ingenious targeting laboratory has done a tremendous job assisting us with our projects. Not only have they provided successful mouse lines, but their project management has always been on top of things. Communication was excellent, and at all times I felt I could trust the scientists at ingenious targeting laboratory with my work.”*
 
 *— **– Thomas G.H. Diekwisch, DMD, PhD (sc), PhD (phil.)**, Texas A&amp;M University College of Dentistry*
 

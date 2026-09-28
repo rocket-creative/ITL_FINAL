@@ -314,7 +314,7 @@ Knockin models with APP or PSEN mutations typically develop amyloid pathology ov
 - 12+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Covers APP knockin, transgenic, tau models
 - Knockin vs transgenic comparison table
 - Tau model table included

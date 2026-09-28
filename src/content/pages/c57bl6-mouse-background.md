@@ -308,7 +308,7 @@ Ingenious targeting laboratory can provide guidance on substrain selection based
 - 12+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Covers Nnt mutation, rd8, substrain differences
 - Comparison table included
 - CTA to /request-quote

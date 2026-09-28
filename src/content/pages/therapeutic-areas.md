@@ -4,7 +4,7 @@ slug: "therapeutic-areas"
 extracted: "2026-01-09T17:03:06.008Z"
 ---
 
-# Therapeutic Area Mouse Models | Disease Research Models | ITL
+# Therapeutic Area Mouse Models | Disease Research Models | ingenious targeting laboratory
 
 **Url: /therapeutic-areas**
 
@@ -145,7 +145,7 @@ Therapeutic area models include knockout models (loss-of-function studies), knoc
 
 **How do you select the right model type for a therapeutic area?**
 
-Model type selection depends on research question: use knockout for loss-of-function studies, knockin for patient mutations or reporters, conditional for tissue-specific studies or essential genes, and humanized for therapeutic testing requiring human targets. ITL's scientific consultants help match model type to research goals.
+Model type selection depends on research question: use knockout for loss-of-function studies, knockin for patient mutations or reporters, conditional for tissue-specific studies or essential genes, and humanized for therapeutic testing requiring human targets. ingenious targeting laboratory's scientific consultants help match model type to research goals.
 
 **Can models be combined across therapeutic areas?**
 

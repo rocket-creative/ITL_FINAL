@@ -1,5 +1,5 @@
 ---
-title: "Why Choose Itl"
+title: "Why Choose ingenious targeting laboratory"
 slug: "why-choose-itl"
 extracted: "2026-01-09T17:03:06.286Z"
 ---

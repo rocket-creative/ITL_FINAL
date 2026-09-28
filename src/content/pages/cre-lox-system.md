@@ -385,7 +385,7 @@ Yes. This is a major advantage of conditional systems. A single floxed allele ca
 - 12+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Multiple Cre driver tables by system
 - Inducible systems covered (CreERT2, Tet)
 - Derivative allele system explained

@@ -414,7 +414,7 @@ Standardize age, sex, circadian timing, and environmental conditions. Use litter
 - 15+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Comprehensive neuronal Cre driver table (10 drivers)
 - Glial Cre driver table (5 drivers)
 - Neurodegenerative disease coverage (AD, PD, ALS, HD)

@@ -4,7 +4,7 @@ slug: "preclinical-services"
 extracted: "2026-01-09T17:03:05.510Z"
 ---
 
-# Preclinical Services | In Vivo Studies &amp; Phenotyping | ITL
+# Preclinical Services | In Vivo Studies &amp; Phenotyping | ingenious targeting laboratory
 
 **Url: /preclinical-services**
 

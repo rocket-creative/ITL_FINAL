@@ -4,7 +4,7 @@ slug: "catalog-mouse-models"
 extracted: "2026-01-09T17:03:03.299Z"
 ---
 
-# Catalog Mouse Models | Ready to Ship Models | ITL
+# Catalog Mouse Models | Ready to Ship Models | ingenious targeting laboratory
 
 **Url: /catalog-mouse-models**
 

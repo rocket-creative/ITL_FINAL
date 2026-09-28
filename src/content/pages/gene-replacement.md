@@ -4,7 +4,7 @@ slug: "gene-replacement"
 extracted: "2026-01-09T17:03:04.281Z"
 ---
 
-# Gene Replacement Mouse Models | Humanized Gene Knockin | ITL
+# Gene Replacement Mouse Models | Humanized Gene Knockin | ingenious targeting laboratory
 
 **Url: /gene-replacement**
 
@@ -90,7 +90,7 @@ Metabolic enzymes, particularly those relevant to drug metabolism or inherited m
 
 ## What Researchers Say
 
-*“I’ve been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!”*
+*“I’ve been working with ingenious targeting laboratory over the past 5 years in the production of 3 different genetically altered mice. Not only did ingenious targeting laboratory help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!”*
 
 *— **Raghu Mirmira, MD, PhD**, University of Chicago*
 

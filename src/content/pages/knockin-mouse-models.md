@@ -22,7 +22,7 @@ Since 1998, ingenious targeting laboratory has completed over 2,800 mouse model 
 
 Knockin mouse models enable precise genetic modifications at endogenous loci. Unlike knockout models that eliminate gene function, knockin models modify genes in specific ways: introducing point mutations that mimic human disease alleles, inserting reporter genes to visualize expression patterns, or adding epitope tags to track protein localization. Because modifications occur at the native locus, knockin alleles maintain endogenous regulatory control over expression timing, tissue distribution, and transcript processing.
 
-From single nucleotide changes to complete gene replacements, ITL designs and delivers knockin mice for your experimental requirements.
+From single nucleotide changes to complete gene replacements, ingenious targeting laboratory designs and delivers knockin mice for your experimental requirements.
 
 ## Knockin Approaches
 

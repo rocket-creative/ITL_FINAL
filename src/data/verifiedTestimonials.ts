@@ -73,7 +73,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'hussain-michigan',
-    quote: "We are actively engaged in the production of a number of conditional mouse models with iTL. This collaboration has been simple on my end, just providing the gene accession numbers of each gene, and iTL recommending the strategies for each gene. The full range of mouse knockout services matches my needs well. I find iTL's service uniquely useful for my situation of needing different models for my research in a quick and efficient manner.",
+    quote: "We are actively engaged in the production of a number of conditional mouse models with ingenious targeting laboratory. This collaboration has been simple on my end, just providing the gene accession numbers of each gene, and ingenious targeting laboratory recommending the strategies for each gene. The full range of mouse knockout services matches my needs well. I find ingenious targeting laboratory's service uniquely useful for my situation of needing different models for my research in a quick and efficient manner.",
     author: 'Mehboob Hussain',
     credentials: 'MD',
     affiliation: 'University of Michigan Health',
@@ -81,7 +81,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'mirmira-chicago',
-    quote: "I've been working with iTL over the past 5 years in the production of 3 different genetically altered mice. Not only did iTL help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!",
+    quote: "I've been working with ingenious targeting laboratory over the past 5 years in the production of 3 different genetically altered mice. Not only did ingenious targeting laboratory help in the design of the mice, but the entire process was transparent with the opportunity at any time along the way to discuss my questions or concerns with scientists who had significant insight into the process. The mice were delivered on time, as billed!",
     author: 'Raghu Mirmira',
     credentials: 'MD, PhD',
     affiliation: 'University of Chicago',
@@ -105,7 +105,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'andersson-carrygenes',
-    quote: "iTL has generated a conditional knockout mouse as well as a knockin mouse for my laboratory. As a repeat customer I am obviously happy with their gene targeting services. iTL has consistently proven to be very flexible and easy to work with. This was especially apparent when we phenotyped mice at iTL's animal facilities as their personnel helped us with lab work until 4 am in the morning. Highly recommended!",
+    quote: "ingenious targeting laboratory has generated a conditional knockout mouse as well as a knockin mouse for my laboratory. As a repeat customer I am obviously happy with their gene targeting services. ingenious targeting laboratory has consistently proven to be very flexible and easy to work with. This was especially apparent when we phenotyped mice at ingenious targeting laboratory's animal facilities as their personnel helped us with lab work until 4 am in the morning. Highly recommended!",
     author: 'John Andersson',
     credentials: 'PhD',
     affiliation: 'CarryGenes Therapeutics',
@@ -113,7 +113,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'franco-colorado',
-    quote: "We found iTL's service to be exceptionally efficient and very well managed. We generated several mouse lines with iTL, and every step for each project was performed quickly and precisely, without any delays or problems.",
+    quote: "We found ingenious targeting laboratory's service to be exceptionally efficient and very well managed. We generated several mouse lines with ingenious targeting laboratory, and every step for each project was performed quickly and precisely, without any delays or problems.",
     author: 'Santos Franco',
     credentials: 'PhD',
     affiliation: 'University of Colorado Anschutz Medical Campus',
@@ -121,7 +121,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'creemers-leuven',
-    quote: "I am very happy with iTL's mouse knockout services. It was pleasant to collaborate with my project manager. She was very thorough and communicative, an excellent combination. I will certainly use iTL again when needed, and I'm happy to share my positive experience with colleagues.",
+    quote: "I am very happy with ingenious targeting laboratory's mouse knockout services. It was pleasant to collaborate with my project manager. She was very thorough and communicative, an excellent combination. I will certainly use ingenious targeting laboratory again when needed, and I'm happy to share my positive experience with colleagues.",
     author: 'John Creemers',
     credentials: 'PhD',
     affiliation: 'University of Leuven, Belgium',
@@ -129,7 +129,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'fimmel-loyola',
-    quote: "The project was very well managed…in fact, using iTL validated my decision to not try and do this in my own lab. It would have been a catastrophe… (My project manager) was very helpful, always getting back to us in time and explaining every step of the project. I would be glad to serve as a reference for iTL and its staff.",
+    quote: "The project was very well managed…in fact, using ingenious targeting laboratory validated my decision to not try and do this in my own lab. It would have been a catastrophe… (My project manager) was very helpful, always getting back to us in time and explaining every step of the project. I would be glad to serve as a reference for ingenious targeting laboratory and its staff.",
     author: 'Claus Fimmel',
     credentials: 'MD',
     affiliation: 'Loyola University Medical Center',
@@ -153,7 +153,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'rateri-kentucky',
-    quote: 'iTL generated our angiotensin II type 1a receptor conditional mouse. We found this company very responsive. The project started with discussions on possible construct designs. Following approval, a project manager sent monthly reports alerting us to project milestones. Our experience with iTL was so positive that we have generated more conditional mice with them.',
+    quote: 'ingenious targeting laboratory generated our angiotensin II type 1a receptor conditional mouse. We found this company very responsive. The project started with discussions on possible construct designs. Following approval, a project manager sent monthly reports alerting us to project milestones. Our experience with ingenious targeting laboratory was so positive that we have generated more conditional mice with them.',
     author: 'Debra Rateri',
     credentials: 'BS',
     affiliation: 'University of Kentucky',
@@ -161,7 +161,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'coetzee-nyu',
-    quote: 'iTL produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the needs comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves.',
+    quote: 'ingenious targeting laboratory produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the needs comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves.',
     author: 'William A. Coetzee',
     credentials: 'DSc',
     affiliation: 'NYU School of Medicine',
@@ -169,7 +169,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'ge-nih',
-    quote: 'iTL has generated three knockout and conditional KO mice for my lab. One of them is now published and we would like to thank iTL for the very nice service.',
+    quote: 'ingenious targeting laboratory has generated three knockout and conditional KO mice for my lab. One of them is now published and we would like to thank ingenious targeting laboratory for the very nice service.',
     author: 'Kai Ge',
     credentials: 'PhD',
     affiliation: 'NIDDK, National Institutes of Health',
@@ -177,7 +177,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'means-sanofi',
-    quote: 'iTL generated a conventional knockout mouse for my lab. The entire process was smooth and the quality of service provided by the iTL team and our project manager was exceptional. Several other researchers in my Center are creating mice with iTL and all of us have been extremely satisfied. I strongly recommend iTL for generation of your next mouse model!!!',
+    quote: 'ingenious targeting laboratory generated a conventional knockout mouse for my lab. The entire process was smooth and the quality of service provided by the ingenious targeting laboratory team and our project manager was exceptional. Several other researchers in my Center are creating mice with ingenious targeting laboratory and all of us have been extremely satisfied. I strongly recommend ingenious targeting laboratory for generation of your next mouse model!!!',
     author: 'Terry K. Means',
     credentials: 'PhD',
     affiliation: 'Sanofi',
@@ -193,7 +193,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'diekwisch-tamu',
-    quote: 'iTL has done a tremendous job assisting us with our projects. Not only have they provided successful mouse lines, but their project management has always been on top of things. Communication was excellent, and at all times I felt I could trust the scientists at iTL with my work.',
+    quote: 'ingenious targeting laboratory has done a tremendous job assisting us with our projects. Not only have they provided successful mouse lines, but their project management has always been on top of things. Communication was excellent, and at all times I felt I could trust the scientists at ingenious targeting laboratory with my work.',
     author: 'Thomas G.H. Diekwisch',
     credentials: 'DMD, PhD (sc), PhD (phil.)',
     affiliation: 'Texas A&M University College of Dentistry',
@@ -209,7 +209,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'harhaj-pennstate',
-    quote: "iTL generated a conventional knockout mouse for us, and we were very pleased with the entire process. The project manager was extremely helpful and efficient and promptly notified us whenever a step had been completed. I highly recommend iTL's services for anyone considering knockout mouse models.",
+    quote: "ingenious targeting laboratory generated a conventional knockout mouse for us, and we were very pleased with the entire process. The project manager was extremely helpful and efficient and promptly notified us whenever a step had been completed. I highly recommend ingenious targeting laboratory's services for anyone considering knockout mouse models.",
     author: 'Edward Harhaj',
     credentials: 'PhD',
     affiliation: 'Penn State College of Medicine',
@@ -217,7 +217,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'aifantis-nyu',
-    quote: 'We have worked with ingenious targeting laboratory, Inc. on a variety of conventional, conditional and knockin projects, and we are very impressed with how flexible their service was to our needs and expectations. We look forward to our continued success in generating different mouse models with iTL.',
+    quote: 'We have worked with ingenious targeting laboratory, Inc. on a variety of conventional, conditional and knockin projects, and we are very impressed with how flexible their service was to our needs and expectations. We look forward to our continued success in generating different mouse models with ingenious targeting laboratory.',
     author: 'Iannis Aifantis',
     credentials: 'PhD',
     affiliation: 'NYU School of Medicine',
@@ -225,7 +225,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'groenendyk-alberta',
-    quote: 'We recently generated a conditional knockout mouse model using iTL (ingenious targeting laboratory). We chose iTL based on time, cost, recommendation and location. We were pleased with the technical help we received in identifying the scope of the project. As well, information and services provided by the project manager were timely and extremely helpful and we were very impressed with the customer service. We were promptly updated throughout the project and upon completion, information was provided to help with genotyping and continuation of the project. We are very happy with the prompt services provided by iTL and would happily recommend them to our colleagues.',
+    quote: 'We recently generated a conditional knockout mouse model using ingenious targeting laboratory (ingenious targeting laboratory). We chose ingenious targeting laboratory based on time, cost, recommendation and location. We were pleased with the technical help we received in identifying the scope of the project. As well, information and services provided by the project manager were timely and extremely helpful and we were very impressed with the customer service. We were promptly updated throughout the project and upon completion, information was provided to help with genotyping and continuation of the project. We are very happy with the prompt services provided by ingenious targeting laboratory and would happily recommend them to our colleagues.',
     author: 'Jody Groenendyk',
     credentials: 'PhD',
     affiliation: 'University of Alberta',
@@ -233,7 +233,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'arenzana-pasteur',
-    quote: 'Our experience with ingenious is a long one with several knock-in models engineered in the last seven years. Everytime the entire process was efficiently and successfully achieved even when challenged by unexpected difficulties. We are fully satisfied with their services and we would like to underline the quality of the ingenious professionals with a very special mention for project managers. We enthusiastically recommend iTL and we will request their services in the future. No doubts about it.',
+    quote: 'Our experience with ingenious is a long one with several knock-in models engineered in the last seven years. Everytime the entire process was efficiently and successfully achieved even when challenged by unexpected difficulties. We are fully satisfied with their services and we would like to underline the quality of the ingenious professionals with a very special mention for project managers. We enthusiastically recommend ingenious targeting laboratory and we will request their services in the future. No doubts about it.',
     author: 'Fernando Arenzana-Seisdedos',
     credentials: 'Professor & Head of Laboratory',
     affiliation: 'Institut Pasteur',
@@ -241,7 +241,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'fullerton-ottawa',
-    quote: "iTL recently produced a new knockout model for us from a KOMP targeting vector (knockout first, conditional potential). The entire process was extremely efficient and the staff at iTL were both knowledgeable and helpful. We chose iTL because of their cost-effective service and their guarantee of germline transmission when using a KOMP targeting vector. Now that the project is complete, I would definitely use their services again in the future and would recommend them highly to anyone looking to create a new mouse model.",
+    quote: "ingenious targeting laboratory recently produced a new knockout model for us from a KOMP targeting vector (knockout first, conditional potential). The entire process was extremely efficient and the staff at ingenious targeting laboratory were both knowledgeable and helpful. We chose ingenious targeting laboratory because of their cost-effective service and their guarantee of germline transmission when using a KOMP targeting vector. Now that the project is complete, I would definitely use their services again in the future and would recommend them highly to anyone looking to create a new mouse model.",
     author: 'Morgan Fullerton',
     credentials: 'PhD',
     affiliation: 'University of Ottawa',
@@ -249,7 +249,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'wu-ucla',
-    quote: 'My experience with iTL has been great. This is a very professional and efficient team. Everything went smoothly throughout the process and we got our mouse model in a very timely manner. I would highly recommend iTL to my colleagues.',
+    quote: 'My experience with ingenious targeting laboratory has been great. This is a very professional and efficient team. Everything went smoothly throughout the process and we got our mouse model in a very timely manner. I would highly recommend ingenious targeting laboratory to my colleagues.',
     author: 'Emily Wu',
     credentials: 'PhD',
     affiliation: 'University of California, Los Angeles',
@@ -257,7 +257,7 @@ export const VERIFIED_TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 'basson-kings',
-    quote: 'iTL produced a new conditional mouse model for us and the quality of service was exceptional. The team is extremely knowledgeable and the work was completed at the highest possible standards. My project manager was excellent and always happy to answer technical questions and keep me up to date with progress and potential problems. I would recommend iTL highly and will use them again in the future if I need to generate a new mouse line.',
+    quote: 'ingenious targeting laboratory produced a new conditional mouse model for us and the quality of service was exceptional. The team is extremely knowledgeable and the work was completed at the highest possible standards. My project manager was excellent and always happy to answer technical questions and keep me up to date with progress and potential problems. I would recommend ingenious targeting laboratory highly and will use them again in the future if I need to generate a new mouse line.',
     author: 'Albert Basson',
     credentials: 'PhD',
     affiliation: "King's College London",

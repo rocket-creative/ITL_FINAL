@@ -166,7 +166,7 @@ export default function PrivacyPage() {
               {/* Introduction */}
               <div style={sectionStyle}>
                 <p style={paragraphStyle}>
-                  ingenious targeting laboratory (&quot;iTL,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates the website 
+                  ingenious targeting laboratory (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates the website 
                   genetargeting.com (the &quot;Site&quot;). This Privacy Policy describes our policies and 
                   procedures regarding the collection, use, and disclosure of your information 
                   when you use our Site and services.

@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
  * 
  * @example
  * export const metadata = generateOGMetadata('/', {
- *   title: 'Mouse Model Generation | iTL',
+ *   title: 'Mouse Model Generation | ingenious targeting laboratory',
  *   description: 'Expert gene targeting since 1998...'
  * });
  */

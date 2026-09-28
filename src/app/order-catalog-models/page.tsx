@@ -1,12 +1,12 @@
 /**
  * Order Inquiry - Catalog Models Page
- * Request form for ordering from the ITL catalog of mouse models
+ * Request form for ordering from the ingenious targeting laboratory catalog of mouse models
  * Server Component: passes searchParams into client form prefill
  *
  * Prefill URL params:
  *   model   — Model Abbreviation (preferred)
  *   gene    — legacy fallback when model is absent
- *   catalog — ITL Catalog Number
+ *   catalog — ingenious targeting laboratory Catalog Number
  */
 
 import OrderCatalogFormClient from './OrderCatalogFormClient';

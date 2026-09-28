@@ -21,7 +21,7 @@ Ingenious offers various strategies for genetic humanization, including our prop
 
 ## What Researchers Say
 
-> "iTL produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the needs comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves."
+> "ingenious targeting laboratory produced four conditional knockout mouse models on our behalf. They have been extremely helpful and informative at all stages of the project; all the way from construct design to breeding strategies and genotyping the new mouse models. I know where to turn when the needs comes up again for another mouse project; it is certainly faster and cheaper than doing this by ourselves."
 >
 > — **William A. Coetzee, DSc**, NYU School of Medicine
 

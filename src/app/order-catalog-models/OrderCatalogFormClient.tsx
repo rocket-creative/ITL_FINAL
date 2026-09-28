@@ -2,7 +2,7 @@
 
 /**
  * Order Catalog Form - Client Component
- * Form and interactive content for ordering from the ITL catalog
+ * Form and interactive content for ordering from the ingenious targeting laboratory catalog
  * Receives initialModel from Server Component (searchParams)
  */
 

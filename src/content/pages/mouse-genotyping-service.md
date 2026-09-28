@@ -163,13 +163,13 @@ Our team can help you determine the optimal genotyping approach for your mouse m
 
 ## Frequently Asked Questions
 
-**What genotyping methods does ITL use?**
+**What genotyping methods does ingenious targeting laboratory use?**
 
-ITL uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements.
+ingenious targeting laboratory uses multiple genotyping methods including PCR-based genotyping (standard for routine colony screening), Southern blot analysis (for complex alleles or validation), and sequencing (for point mutations or sequence verification). Method selection depends on allele complexity, throughput needs, and validation requirements.
 
-**Can ITL develop generated genotyping assays for new alleles?**
+**Can ingenious targeting laboratory develop generated genotyping assays for new alleles?**
 
-Yes. ITL can design generated genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Generated assay development includes protocol optimization and validation.
+Yes. ingenious targeting laboratory can design generated genotyping assays for novel alleles, complex multi-component alleles, optimized protocols for improved efficiency or specificity, and multiplex assays for simultaneous detection of multiple alleles. Generated assay development includes protocol optimization and validation.
 
 **What information is provided with genotyping results?**
 
@@ -177,7 +177,7 @@ Genotyping results include clear genotype calls (heterozygous, homozygous, or wi
 
 **Do you provide high-throughput genotyping for large colonies?**
 
-Yes. ITL provides high-throughput genotyping services optimized for rapid screening of large colonies. Optimized protocols reduce reagent costs while maintaining reliability and specificity. We work with you to determine the most efficient approach for your colony size and genotyping frequency needs.
+Yes. ingenious targeting laboratory provides high-throughput genotyping services optimized for rapid screening of large colonies. Optimized protocols reduce reagent costs while maintaining reliability and specificity. We work with you to determine the most efficient approach for your colony size and genotyping frequency needs.
 
 ## Quality Confirmation
 

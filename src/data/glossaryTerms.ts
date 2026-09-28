@@ -1,4 +1,4 @@
-// Complete ITL Mouse Genetics Glossary - 60 Terms across 7 Categories
+// Complete ingenious targeting laboratory Mouse Genetics Glossary - 60 Terms across 7 Categories
 // Source: ITL_Mouse_Genetics_Glossary_Complete.md
 
 export interface GlossaryTerm {

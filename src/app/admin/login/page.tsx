@@ -129,7 +129,7 @@ export default function AdminLoginPage() {
           </form>
 
           <p className="text-center text-xs text-gray-400 mt-6">
-            ITL Admin Dashboard • Secure Access Only
+            ingenious targeting laboratory Admin Dashboard • Secure Access Only
           </p>
         </div>
       </div>

@@ -12,7 +12,7 @@ import { useEffect, useRef, useState } from 'react';
 interface HubSpotFormProps {
   /** HubSpot form ID */
   formId: string;
-  /** HubSpot portal ID (default: ITL's portal) */
+  /** HubSpot portal ID (default: ingenious targeting laboratory's portal) */
   portalId?: string;
   /** HubSpot region (default: na1) */
   region?: string;

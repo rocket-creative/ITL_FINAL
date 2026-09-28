@@ -7,7 +7,7 @@
  * @description Fully generated-styled form that submits programmatically to HubSpot
  * 
  * Features:
- * - Generated ITL brand styling (no HubSpot embed)
+ * - Generated ingenious targeting laboratory brand styling (no HubSpot embed)
  * - Programmatic API submission
  * - Client-side validation
  * - Loading & success/error states

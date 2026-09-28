@@ -175,7 +175,7 @@ const transgenicCreData = {
   ]
 };
 
-// ITL Approach Data
+// ingenious targeting laboratory Approach Data
 const itlApproachData = {
   title: "The ingenious targeting laboratory Approach",
   sections: [
@@ -273,7 +273,6 @@ export default function CustomMouseModelsPage() {
               "@type": "Organization",
               "@id": "https://www.genetargeting.com/#organization",
               "name": "Ingenious targeting laboratory",
-              "alternateName": "iTL",
               "url": "https://www.genetargeting.com",
               "description": "U.S. based mouse model generation company since 1998 with a 100% germline transmission guarantee."
             },
@@ -743,7 +742,7 @@ export default function CustomMouseModelsPage() {
           </div>
         </section>
 
-        {/* ITL Approach Section */}
+        {/* ingenious targeting laboratory Approach Section */}
         <section style={{ background: '#ffffff', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={{

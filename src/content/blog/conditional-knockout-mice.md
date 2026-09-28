@@ -24,7 +24,7 @@ As a gene elimination process, the conditional knockout has many important uses 
 
 The Cre-lox recombination system is the most prevalent method used for obtaining conditional knockout mice. Recombination between two LoxP sites is catalyzed by the Cre recombinase enzyme. This process causes the two recombining strands of DNA to exchange information and results in a deletion or an inversion between the two LoxP sites. The Cre-lox system thus enables conditional gene knockout by the introduction of LoxP sites into or surrounding the gene of interest and subsequent deletion of the LoxP-flanked gene by tissue-specific Cre. To further advance the versatility of conditional knockouts, drug-inducible Cre enzymes have been developed, the most common of which is the tamoxifen-inducible CreERT2. By using inducible Cre enzymes, researchers are able to achieve both tissue-specific and temporal-specific knockout of the LoxP-flanked gene.
 
-“We are 100% satisfied with iTL’s service in generating this mouse model for us. The model was completed quickly, with the utmost efficiency and each member of their team was extremely responsive and helpful. The full service guarantee, as well as the company’s excellent reputation were major decision factors for us.”
+“We are 100% satisfied with ingenious targeting laboratory's service in generating this mouse model for us. The model was completed quickly, with the utmost efficiency and each member of their team was extremely responsive and helpful. The full service guarantee, as well as the company’s excellent reputation were major decision factors for us.”
 
 Joseph A. Fraietta, PhDPerelman School of Medicine, University of Pennsylvania
 

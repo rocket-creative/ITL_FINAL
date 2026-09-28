@@ -66,8 +66,8 @@ export const metadata: Metadata = {
 // Hero Section - lines 8-13
 const heroData = {
   headline: 'Mouse Model Generation Designed for Study Ready, Reproducible Research',
-  description1: 'Ingenious targeting laboratory (iTL) is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
-  description2: 'For more than two decades, researchers have partnered with our U.S. based scientific team for sequence informed allele design, rigorous QC oversight, and study ready germline transmitting mouse lines. iTL helps researchers determine the most appropriate approach for long term allele stability, clear genotype interpretation, and successful model creation.',
+  description1: 'Ingenious targeting laboratory is a U.S. based mouse model generation company that has delivered 2,800+ genetically engineered mouse models since 1998, backed by a 100% germline transmission guarantee, in house U.S. scientific oversight at every QC stage, and specialization in complex multi allele and humanized models on defined C57BL/6 backgrounds.',
+  description2: 'For more than two decades, researchers have partnered with our U.S. based scientific team for sequence informed allele design, rigorous QC oversight, and study ready germline transmitting mouse lines. ingenious targeting laboratory helps researchers determine the most appropriate approach for long term allele stability, clear genotype interpretation, and successful model creation.',
   cta1: { label: 'Browse Catalog Models', href: '/catalog-mouse-models' },
   cta2: { label: 'Request a Quote', href: '/request-quote' },
 };

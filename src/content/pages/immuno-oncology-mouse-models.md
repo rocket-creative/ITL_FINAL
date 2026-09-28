@@ -400,7 +400,7 @@ C57BL/6 is most common for Th1-biased immune responses and compatibility with MC
 - 15+ internal links with keyword anchor text
 - No hyphens in copy
 - No prohibited terms
-- No "ITL" abbreviation used
+- Full company name used
 - Checkpoint targets table included
 - Syngeneic tumor cell line table included
 - Covers humanized checkpoints, genetic tumor models, syngeneic models
