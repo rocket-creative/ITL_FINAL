@@ -15,6 +15,7 @@ import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes, indexableTier4ParamsForModels } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import { modelTypeAbbrev } from '@/lib/catalog/modelType';
 import CatalogReadyToShipBanner from '@/components/catalog/CatalogReadyToShipBanner';
 import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
 import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter } from '@/components/UXUIDC';
@@ -605,8 +606,8 @@ export default async function GenePage({ params, searchParams }: Props) {
                           {model.modelAbbrev || geneName}
                         </p>
                         {model.modelType ? (
-                          <span className="inline-flex max-w-full items-center rounded px-2.5 py-1 text-[.75rem] font-semibold leading-snug text-white bg-[#134978]">
-                            {model.modelType}
+                          <span title={model.modelType} className="inline-flex max-w-full items-center rounded px-2.5 py-1 text-[.75rem] font-semibold leading-snug text-white bg-[#134978]">
+                            {modelTypeAbbrev(model.modelType)}
                           </span>
                         ) : null}
                       </div>

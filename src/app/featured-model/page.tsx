@@ -6,6 +6,7 @@ import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
+import CatalogGeneHeroActions from '@/components/UXUIDC/CatalogGeneHeroActions';
 import { IconChevronRight, IconFlask, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
 
 type FeaturedModelEntry = {
@@ -164,6 +165,9 @@ export default function FeaturedModelPage() {
                 and triple humanized mouse models that deliver immediate insights for your latest
                 experiments. Contact us today to get started on your project.
               </p>
+              <div style={{ marginTop: '30px' }}>
+                <CatalogGeneHeroActions />
+              </div>
             </div>
           </section>
 

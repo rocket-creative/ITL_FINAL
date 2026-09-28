@@ -9,7 +9,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getModelsByGene, getRelatedGenesWithModelType } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
-import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import { availabilityColor, availabilityLabel, availabilityShortLabel } from '@/lib/catalog/availability';
+import { modelTypeAbbrev } from '@/lib/catalog/modelType';
 import CatalogReadyToShipBanner from '@/components/catalog/CatalogReadyToShipBanner';
 import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
@@ -228,8 +229,8 @@ export default async function GeneModContextTierPage({ params }: Props) {
             {models.length === 0 ? (
               <p style={{ color: '#666' }}>No published {modCanon} line is listed for {geneName} today. Request a generated build using the quote link above.</p>
             ) : (
-              <div style={{ overflowX: 'auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '700px', fontSize: '.9rem' }}>
+              <div>
+                <table style={{ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed', fontSize: '.9rem' }}>
                   <thead>
                     <tr style={{ background: '#f7f7f7' }}>
                       {['Model', 'Type', 'Category', 'Availability', 'Catalog #', ''].map((h) => (
@@ -242,9 +243,9 @@ export default async function GeneModContextTierPage({ params }: Props) {
                       <Fragment key={model.id}>
                       <tr style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                         <td style={{ padding: '12px', fontFamily: 'monospace', fontWeight: 600 }}>{model.modelAbbrev}</td>
-                        <td style={{ padding: '12px' }}>{model.modelType}</td>
+                        <td style={{ padding: '12px' }} title={model.modelType || undefined}>{modelTypeAbbrev(model.modelType)}</td>
                         <td style={{ padding: '12px', color: '#666' }}>{model.category}</td>
-                        <td style={{ padding: '12px', color: availabilityColor(model.availability) }}>{availabilityLabel(model.availability)}</td>
+                        <td title={availabilityLabel(model.availability)} style={{ padding: '12px', color: availabilityColor(model.availability) }}>{availabilityShortLabel(model.availability)}</td>
                         <td style={{ padding: '12px', fontFamily: 'monospace', color: '#134978' }}>{model.catalogNumber}</td>
                         <td style={{ padding: '12px', textAlign: 'center' }}>
                           <Link href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`} style={{ background: '#008080', color: '#fff', padding: '8px 12px', borderRadius: '4px', textDecoration: 'none', fontWeight: 600, fontSize: '.8rem' }}>Inquire</Link>

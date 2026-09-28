@@ -56,6 +56,12 @@ export function availabilityLabel(a?: string | null): string {
   return v || 'Inquire';
 }
 
+/** Short stock tokens for tight table columns (LIVE, SPERM, EMBRYO). */
+export function availabilityShortLabel(a?: string | null): string {
+  const forms = stockFormsFromAvailability(a);
+  return forms.length > 0 ? forms.join(' · ') : 'Inquire';
+}
+
 /** Canonical stock forms, in hero display order. Unknown statuses follow these. */
 export const STOCK_FORM_ORDER = ['LIVE', 'SPERM', 'EMBRYO', 'DEVELOPING', 'IN PRODUCTION'] as const;
 

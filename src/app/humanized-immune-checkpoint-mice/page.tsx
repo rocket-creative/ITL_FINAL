@@ -10,6 +10,7 @@ import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import { IconQuote, IconChevronRight } from '@/components/UXUIDC/Icons';
 import { BreadcrumbSchema } from '@/components/UXUIDC';
 import CatalogSearch from '@/components/UXUIDC/CatalogSearch';
+import CatalogGeneHeroActions from '@/components/UXUIDC/CatalogGeneHeroActions';
 
 const heroData = {
   badge: "Catalog Models",
@@ -105,23 +106,7 @@ export default function HumanizedImmuneCheckpointMicePage() {
             }}>
               {heroData.intro}
             </p>
-            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <Link href="/request-quote" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: '#008080',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '6px',
-                fontSize: '.9rem',
-                fontWeight: 600,
-                textDecoration: 'none'
-              }}>
-                Request a Quote
-                <IconChevronRight size={16} color="#ffffff" />
-              </Link>
-            </div>
+            <CatalogGeneHeroActions />
           </div>
         </section>
 

@@ -271,7 +271,7 @@ export default function DiseaseModelCatalogPage() {
                 Order Inquiry
                 <IconChevronRight size={16} color="#ffffff" />
               </Link>
-              <Link href="/catalog-mouse-models" style={{
+              <Link href="/all-catalog-mouse-models" style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
@@ -284,7 +284,7 @@ export default function DiseaseModelCatalogPage() {
                 textDecoration: 'none',
                 border: '2px solid rgba(255,255,255,0.3)'
               }}>
-                All Catalog Models
+                Search All Models
               </Link>
             </div>
           </div>

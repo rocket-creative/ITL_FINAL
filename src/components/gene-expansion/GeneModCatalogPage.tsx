@@ -5,7 +5,8 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
-import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import { availabilityColor, availabilityLabel, availabilityShortLabel } from '@/lib/catalog/availability';
+import { modelTypeAbbrev } from '@/lib/catalog/modelType';
 import CatalogReadyToShipBanner from '@/components/catalog/CatalogReadyToShipBanner';
 import { BreedThisLineWithItl, UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
@@ -141,8 +142,8 @@ export default function GeneModCatalogPage({
               Catalog table
             </h2>
             {models.length === 0 ? null : (
-              <div style={{ overflowX: 'auto' }}>
-                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', minWidth: '700px' }}>
+              <div>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem', tableLayout: 'fixed' }}>
                   <thead>
                     <tr style={{ background: '#f7f7f7' }}>
                       {['Model', 'Type', 'Category', 'Availability', 'Catalog #', 'Action'].map((h) => (
@@ -155,10 +156,10 @@ export default function GeneModCatalogPage({
                       <Fragment key={model.id}>
                       <tr style={{ background: index % 2 === 0 ? '#fff' : '#fafafa', borderBottom: '1px solid #f0f0f0' }}>
                         <td style={{ padding: '14px 16px', fontWeight: 600, fontFamily: 'monospace', fontSize: '.85rem' }}>{model.modelAbbrev}</td>
-                        <td style={{ padding: '14px 16px' }}>{model.modelType}</td>
+                        <td style={{ padding: '14px 16px' }} title={model.modelType || undefined}>{modelTypeAbbrev(model.modelType)}</td>
                         <td style={{ padding: '14px 16px', color: '#666', fontSize: '.85rem' }}>{model.category}</td>
                         <td style={{ padding: '14px 16px' }}>
-                          <span style={{ color: availabilityColor(model.availability) }}>{availabilityLabel(model.availability)}</span>
+                          <span title={availabilityLabel(model.availability)} style={{ color: availabilityColor(model.availability) }}>{availabilityShortLabel(model.availability)}</span>
                         </td>
                         <td style={{ padding: '14px 16px', fontFamily: 'monospace', color: '#134978' }}>{model.catalogNumber}</td>
                         <td style={{ padding: '14px 16px', textAlign: 'center' }}>

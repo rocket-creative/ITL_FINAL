@@ -11,7 +11,8 @@ export const dynamic = 'force-dynamic';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllModels } from '@/lib/catalog/serverCatalog';
-import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import { availabilityColor, availabilityLabel, availabilityShortLabel } from '@/lib/catalog/availability';
+import { modelTypeAbbrev } from '@/lib/catalog/modelType';
 import { buildStandalonePageMetadata } from '@/lib/seo';
 import { UXUIDCNavigation, UXUIDCFooter, CatalogCustomDualCta } from '@/components/UXUIDC';
 import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
@@ -272,8 +273,8 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                   </div>
 
                   {/* Model table with catalog numbers */}
-                  <div style={{ overflowX: 'auto' }}>
-                    <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.875rem' }}>
+                  <div>
+                    <table style={{ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed', fontSize: '.875rem' }}>
                       <thead>
                         <tr style={{ background: '#f7f7f7' }}>
                           {['Gene Name', 'Model Abbreviation', 'Model Type', 'Availability', 'iTL Catalog #', ''].map((h) => (
@@ -284,7 +285,7 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                                 textAlign: h === '' ? 'center' : 'left',
                                 fontWeight: 600, color: '#333',
                                 borderBottom: '2px solid #e0e0e0',
-                                whiteSpace: 'nowrap', fontSize: '.8rem',
+                                fontSize: '.8rem',
                               }}
                             >
                               {h}
@@ -309,28 +310,16 @@ export default async function GeneIndexPage({ searchParams }: Props) {
                             <td style={{ padding: '10px 14px', color: '#444' }}>
                               {model.modelAbbrev}
                             </td>
-                            <td style={{ padding: '10px 14px', color: '#666', fontSize: '.82rem' }}>
-                              {model.modelType}
+                            <td style={{ padding: '10px 14px', color: '#666', fontSize: '.82rem' }} title={model.modelType || undefined}>
+                              {modelTypeAbbrev(model.modelType)}
                             </td>
-                            <td style={{ padding: '10px 14px', whiteSpace: 'nowrap' }}>
-                              {model.availability ? (
-                                <span style={{
-                                  display: 'inline-flex', alignItems: 'center', gap: '5px',
-                                  fontSize: '.78rem',
-                                  color: availabilityColor(model.availability),
-                                }}>
-                                  <span style={{
-                                    width: '6px', height: '6px', borderRadius: '50%', flexShrink: 0,
-                                    background: availabilityColor(model.availability),
-                                  }} />
-                                  {availabilityLabel(model.availability)}
-                                </span>
-                              ) : '—'}
+                            <td title={availabilityLabel(model.availability)} style={{ padding: '10px 14px', color: availabilityColor(model.availability), fontWeight: 600, fontSize: '.78rem' }}>
+                              {model.availability ? availabilityShortLabel(model.availability) : '—'}
                             </td>
                             <td style={{
                               padding: '10px 14px', color: '#134978',
                               fontFamily: 'monospace', fontSize: '.82rem',
-                              whiteSpace: 'nowrap', fontWeight: 600,
+                              overflowWrap: 'anywhere', fontWeight: 600,
                             }}>
                               {model.catalogNumber}
                             </td>

@@ -175,6 +175,36 @@ export async function getAllModels(): Promise<ServerCatalogModel[]> {
  * All models for a specific gene name.
  * Used by individual gene pages (on-demand ISR).
  */
+/**
+ * Models whose abbreviation starts with one of the prefixes.
+ * Used by checkpoint marketing pages (hPD-1, hCTLA, hLAG3).
+ */
+export async function getModelsByAbbrevPrefixes(prefixes: string[]): Promise<ServerCatalogModel[]> {
+  const lists = await Promise.all(
+    prefixes.map(async (prefix) => {
+      const { data, error } = await supabase
+        .from('catalog_models')
+        .select(MODEL_FIELDS)
+        .ilike('model_abbreviation', `${prefix}%`)
+        .order('model_abbreviation')
+        .limit(60);
+      if (error || !data) return [];
+      return data.map(toModel);
+    }),
+  );
+
+  const seen = new Set<string>();
+  const models: ServerCatalogModel[] = [];
+  for (const list of lists) {
+    for (const model of list) {
+      if (seen.has(model.id)) continue;
+      seen.add(model.id);
+      models.push(model);
+    }
+  }
+  return models;
+}
+
 export async function getModelsByGene(geneName: string): Promise<ServerCatalogModel[]> {
   const { data, error } = await supabase
     .from('catalog_models')
