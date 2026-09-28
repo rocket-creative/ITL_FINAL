@@ -45,7 +45,7 @@ export default function LiveHumanizedInventory({ rows }: { rows: LiveHumanizedRo
   const visible = needle ? rows.filter((row) => matches(row, needle)) : rows;
 
   return (
-    <div>
+    <div className="live-humanized-inventory">
       <form
         role="search"
         onSubmit={(event) => {
@@ -57,7 +57,7 @@ export default function LiveHumanizedInventory({ rows }: { rows: LiveHumanizedRo
         <label htmlFor="live-humanized-search" style={{ display: 'block', fontSize: '.85rem', fontWeight: 600, color: '#0a253c', marginBottom: '8px' }}>
           Search the live list
         </label>
-        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center', maxWidth: '720px' }}>
+        <div className="live-search-row" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center', maxWidth: '720px' }}>
           <input
             id="live-humanized-search"
             type="search"
@@ -128,7 +128,7 @@ export default function LiveHumanizedInventory({ rows }: { rows: LiveHumanizedRo
         Showing {visible.length.toLocaleString()} of {rows.length.toLocaleString()} live humanized models.
       </p>
       <div style={{ overflowX: 'auto' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.875rem', minWidth: '720px' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.875rem' }}>
           <caption style={{ captionSide: 'top', textAlign: 'left', padding: '0 0 10px', fontSize: '.95rem', fontWeight: 600, color: '#0a253c' }}>
             Humanized models with Live availability
           </caption>
@@ -145,9 +145,9 @@ export default function LiveHumanizedInventory({ rows }: { rows: LiveHumanizedRo
           <tbody>
             {visible.map((row) => (
               <tr key={row.id}>
-                <td style={{ ...TD, color: '#0a253c', fontWeight: 600 }}>{row.modelAbbrev}</td>
-                <td style={{ ...TD, color: '#134978', fontFamily: 'monospace', fontWeight: 600 }}>{row.catalogNumber}</td>
-                <td style={TD}>
+                <td data-label="Model" style={{ ...TD, color: '#0a253c', fontWeight: 600 }}>{row.modelAbbrev}</td>
+                <td data-label="Catalog #" style={{ ...TD, color: '#134978', fontFamily: 'monospace', fontWeight: 600 }}>{row.catalogNumber}</td>
+                <td data-label="Gene" style={TD}>
                   {row.geneHref ? (
                     <Link href={row.geneHref} style={{ color: '#008080', fontWeight: 600, textDecoration: 'none' }}>
                       {row.geneName}
@@ -156,20 +156,23 @@ export default function LiveHumanizedInventory({ rows }: { rows: LiveHumanizedRo
                     row.geneName
                   )}
                 </td>
-                <td style={{ ...TD, color: '#555', fontSize: '.82rem' }}>{row.category}</td>
-                <td style={{ ...TD, color: '#2e7d32', fontWeight: 700, fontSize: '.78rem' }}>LIVE</td>
-                <td style={{ ...TD, textAlign: 'center' }}>
+                <td data-label="Category" style={{ ...TD, color: '#555', fontSize: '.82rem' }}>{row.category}</td>
+                <td data-label="Availability" style={{ ...TD, color: '#2e7d32', fontWeight: 700, fontSize: '.78rem' }}>LIVE</td>
+                <td data-label="Order" style={{ ...TD, textAlign: 'center' }}>
                   <Link
                     href={orderHref(row)}
+                    aria-label={`Order ${row.modelAbbrev}`}
                     style={{
                       display: 'inline-flex',
                       alignItems: 'center',
+                      justifyContent: 'center',
                       gap: '4px',
                       background: '#008080',
                       color: '#fff',
-                      padding: '5px 12px',
+                      minHeight: '44px',
+                      padding: '10px 16px',
                       borderRadius: '4px',
-                      fontSize: '.78rem',
+                      fontSize: '.85rem',
                       fontWeight: 600,
                       textDecoration: 'none',
                       whiteSpace: 'nowrap',
