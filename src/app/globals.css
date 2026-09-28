@@ -567,6 +567,87 @@ li {
   z-index: 1;
 }
 
+/* Live humanized inventory: cards below 810px, table from the site desktop breakpoint */
+.live-humanized-inventory tbody tr {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 52px;
+}
+
+@media (max-width: 809px) {
+  .live-humanized-inventory .live-search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .live-humanized-inventory .live-search-row input,
+  .live-humanized-inventory .live-search-row button {
+    width: 100%;
+  }
+
+  .live-humanized-inventory table {
+    min-width: 0;
+  }
+
+  .live-humanized-inventory thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .live-humanized-inventory tbody tr {
+    display: block;
+    margin: 0 0 12px;
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid #008080;
+    border-radius: 8px;
+    background: #fff;
+    contain-intrinsic-size: auto 220px;
+  }
+
+  .live-humanized-inventory tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: right;
+  }
+
+  .live-humanized-inventory tbody td::before {
+    content: attr(data-label);
+    flex: 0 0 auto;
+    color: #666;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .live-humanized-inventory tbody td:last-child {
+    display: block;
+    border-bottom: 0;
+    text-align: left;
+  }
+
+  .live-humanized-inventory tbody td:last-child::before {
+    content: none;
+  }
+
+  .live-humanized-inventory tbody td:last-child a {
+    display: flex;
+    width: 100%;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* Legacy Page Layout (all legacy/[slug] pages) */
 .legacy-page-wrapper {
   max-width: 1200px;
