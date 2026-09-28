@@ -4,9 +4,11 @@
  * Queries Supabase directly, never expose in 'use client' files.
  */
 
+import { cache } from 'react';
 import { supabase, type CatalogRow } from './supabaseClient';
 import { tier4GenerateStaticParams } from '@/data/seoKeywords';
 import { modCanonicalToSlug } from '@/lib/seo/slugs';
+import { isLive } from './availability';
 
 export interface ServerCatalogModel {
   id: string;
@@ -170,6 +172,44 @@ export async function getAllModels(): Promise<ServerCatalogModel[]> {
     .filter((row) => isUrlSafeGeneName((row.gene_name ?? '').trim()))
     .map(toModel);
 }
+
+/**
+ * Humanized models whose availability is established Live.
+ * F0/F1 founder colonies are excluded. Deduped per request.
+ */
+export const getLiveHumanizedModels = cache(async (): Promise<ServerCatalogModel[]> => {
+  const results: CatalogRow[] = [];
+  const PAGE = 1000;
+  let from = 0;
+
+  for (;;) {
+    const { data, error } = await supabase
+      .from('catalog_models')
+      .select(INDEX_FIELDS)
+      .eq('model_type', 'Humanized')
+      .eq('availability', 'Live')
+      .order('model_abbreviation')
+      .range(from, from + PAGE - 1);
+
+    if (error) {
+      throw new Error(`Live humanized catalog query failed: ${error.message}`);
+    }
+    if (!data || data.length === 0) break;
+
+    results.push(...data);
+    if (data.length < PAGE) break;
+    from += PAGE;
+  }
+
+  return results
+    .filter((row) => isLive(row.availability))
+    .map(toModel)
+    .toSorted(
+      (a, b) =>
+        a.modelAbbrev.localeCompare(b.modelAbbrev, 'en', { sensitivity: 'base' }) ||
+        a.catalogNumber.localeCompare(b.catalogNumber, 'en', { numeric: true }),
+    );
+});
 
 /**
  * All models for a specific gene name.

@@ -83,6 +83,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/reporter-knockin',
     '/tag-knockin-mice',
     '/humanized-mouse-models',
+    '/live-humanized-mice',
     '/pd1-humanized-mice',
     '/pdl1-humanized-mice',
     '/ctla4-humanized-mice',

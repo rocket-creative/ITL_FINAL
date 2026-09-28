@@ -27,6 +27,7 @@ ingenious targeting laboratory (iTL) is a leading provider of custom genetically
 - Custom knockout mouse models (conditional and conventional)
 - Knockin mouse models (point mutations, reporters, tags, cDNA)
 - Humanized mouse models (immune checkpoint, disease genes, receptor humanization)
+- Live humanized catalog, established Live colonies only: https://www.genetargeting.com/live-humanized-mice/
 - Transgenic mouse and rat models (BAC and targeted)
 - Conditional and inducible models (Cre/loxP, Flp/FRT, tamoxifen)
 - Colony management and breeding services

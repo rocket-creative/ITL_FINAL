@@ -81,6 +81,8 @@ This document is the canonical full text reference for AI assistants summarizing
 
 iTL maintains a catalog of over 14,774 genome engineered mouse and rat models for immediate ordering. Catalog includes humanized immune checkpoint lines, reporter lines, disease models, and Cre driver lines.
 
+Humanized models with availability Live (established colonies, ready to ship as live animals) are listed at https://www.genetargeting.com/live-humanized-mice/. Founder-only F0 and F1 lines are not included.
+
 ---
 
 ## Technologies

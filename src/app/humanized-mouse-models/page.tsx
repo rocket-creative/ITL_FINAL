@@ -367,7 +367,10 @@ export default function HumanizedMouseModelsPage() {
                 maxWidth: '800px'
               }}
             >
-              {heroData.description}
+              {heroData.description}{' '}
+              <Link href="/live-humanized-mice/" style={{ color: '#00d4d4', fontWeight: 600 }}>
+                Browse live humanized mice ready to ship.
+              </Link>
             </p>
             
           </div>

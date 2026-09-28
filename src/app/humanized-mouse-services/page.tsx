@@ -73,8 +73,8 @@ const services = [
     title: 'Off-the-Shelf Humanized Lines',
     targets: ['hSCAP', 'hCFH', 'PD1 humanized', 'PDL1 humanized'],
     description:
-      'Skip the build entirely. Browse our catalog of ready-to-ship humanized mouse models from live colonies.',
-    href: '/all-catalog-mouse-models/?q=humanized',
+      'Skip the build entirely. Every humanized catalog line with Live availability is an established colony, ready to ship.',
+    href: '/live-humanized-mice/',
   },
 ];
 
