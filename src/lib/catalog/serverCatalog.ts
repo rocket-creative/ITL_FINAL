@@ -16,6 +16,7 @@ export interface ServerCatalogModel {
   category: string;
   availability: string;
   catalogNumber: string;
+  description: string;
 }
 
 /**
@@ -39,8 +40,15 @@ function toModel(row: CatalogRow): ServerCatalogModel {
     category:      row.category,
     availability:  row.availability,
     catalogNumber: row.itl_catalog_number,
+    description:   row.description ?? '',
   };
 }
+
+/** Fields for pages and search. The A–Z index omits description so it does not ship every paragraph. */
+const MODEL_FIELDS =
+  'id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number,description';
+const INDEX_FIELDS =
+  'id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number';
 
 /**
  * Server-side search, used by page.tsx SSR preload.
@@ -60,7 +68,7 @@ export async function serverSearch(
   // Tier 1: gene_name starts with query (most relevant for "Flt4")
   const { data: prefixData } = await supabase
     .from('catalog_models')
-    .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+    .select(MODEL_FIELDS)
     .ilike('gene_name', `${q}%`)
     .order('gene_name')
     .limit(limit);
@@ -76,7 +84,7 @@ export async function serverSearch(
   const ftQuery = q.split(/\s+/).filter(Boolean).join(' & ');
   const { data: ftData } = await supabase
     .from('catalog_models')
-    .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+    .select(MODEL_FIELDS)
     .textSearch('search_vector', ftQuery, { type: 'plain', config: 'simple' })
     .limit(limit);
 
@@ -89,8 +97,8 @@ export async function serverSearch(
   // Tier 3: broad contains on abbreviation or catalog number
   const { data: broadData } = await supabase
     .from('catalog_models')
-    .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
-    .or(`model_abbreviation.ilike.%${q}%,itl_catalog_number.ilike.%${q}%`)
+    .select(MODEL_FIELDS)
+    .or(`model_abbreviation.ilike.%${q}%,itl_catalog_number.ilike.%${q}%,description.ilike.%${q}%`)
     .order('gene_name')
     .limit(limit);
 
@@ -145,7 +153,7 @@ export async function getAllModels(): Promise<ServerCatalogModel[]> {
   for (;;) {
     const { data, error } = await supabase
       .from('catalog_models')
-      .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+      .select(INDEX_FIELDS)
       .neq('gene_name', '')
       .order('gene_name')
       .range(from, from + PAGE - 1);
@@ -170,7 +178,7 @@ export async function getAllModels(): Promise<ServerCatalogModel[]> {
 export async function getModelsByGene(geneName: string): Promise<ServerCatalogModel[]> {
   const { data, error } = await supabase
     .from('catalog_models')
-    .select('id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number')
+    .select(MODEL_FIELDS)
     .eq('gene_name', geneName)
     .order('model_type');
 

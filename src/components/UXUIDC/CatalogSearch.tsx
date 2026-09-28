@@ -8,7 +8,7 @@
  * No more loading 14k rows client-side. Fast, SEO-friendly, scalable.
  */
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { Fragment, useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { availabilityColor, availabilityLabel, isDeveloping, isLive } from '@/lib/catalog/availability';
 
@@ -20,6 +20,7 @@ export interface CatalogModel {
   category: string;
   availability: string;
   catalogNumber: string;
+  description: string;
   [key: string]: string;
 }
 
@@ -304,7 +305,8 @@ export function CatalogSearch({
                 </thead>
                 <tbody>
                   {filteredResults.map((model, index) => (
-                    <tr key={model.id}
+                    <Fragment key={model.id}>
+                    <tr
                       style={{ background: index % 2 === 0 ? '#fff' : '#fafafa', transition: 'background 0.2s' }}
                       onMouseOver={(e) => e.currentTarget.style.background = '#f0f9f9'}
                       onMouseOut={(e)  => e.currentTarget.style.background = index % 2 === 0 ? '#fff' : '#fafafa'}
@@ -346,6 +348,14 @@ export function CatalogSearch({
                         </Link>
                       </td>
                     </tr>
+                    {model.description ? (
+                      <tr style={{ background: index % 2 === 0 ? '#fff' : '#fafafa' }}>
+                        <td colSpan={7} style={{ padding: '0 16px 14px', borderBottom: '1px solid #e0e0e0', color: '#444', fontSize: '.85rem', lineHeight: 1.55 }}>
+                          {model.description}
+                        </td>
+                      </tr>
+                    ) : null}
+                    </Fragment>
                   ))}
                 </tbody>
               </table>

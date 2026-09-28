@@ -35,6 +35,8 @@ export interface CatalogRow {
   category: string;
   availability: string;
   itl_catalog_number: string;
+  /** Absent on the gene-index query, which does not load descriptions. */
+  description?: string;
 }
 
 export interface CatalogStats {

@@ -67,7 +67,7 @@ type Props = {
 // Strip any SMOC references from data fields before rendering
 function stripSmoc(s: string | undefined | null): string {
   if (!s) return '';
-  return s.replace(/smoc/gi, 'iTL').replace(/shanghai model organisms?( center)?/gi, 'iTL').trim();
+  return s.replace(/\bsmoc\b/gi, 'iTL').replace(/shanghai model organisms?(?:\s+center)?/gi, 'iTL').trim();
 }
 
 function fixCatalogTypos(s: string): string {
@@ -83,6 +83,7 @@ function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
     category:    stripSmoc(m.category),
     availability: stripSmoc(m.availability),
     catalogNumber: stripSmoc(m.catalogNumber),
+    description: stripSmoc(m.description),
   };
 }
 
@@ -340,7 +341,8 @@ export default async function GenePage({ params, searchParams }: Props) {
   const productSchemas = models.map((m) =>
     buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
-      description: `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}. ${m.category ? `Category: ${m.category}.` : ''} Availability: ${m.availability || 'On request'}.`,
+      description: m.description
+        || `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}. ${m.category ? `Category: ${m.category}.` : ''} Availability: ${m.availability || 'On request'}.`,
     }),
   );
 
@@ -511,6 +513,18 @@ export default async function GenePage({ params, searchParams }: Props) {
               >
                 Search All Models
               </Link>
+              <Link
+                href={`/request-quote?gene=${encodeURIComponent(geneName)}`}
+                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md border-2 border-white/30 px-6 py-3 text-[.9rem] font-semibold text-white no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00d4d4] focus-visible:ring-offset-2 focus-visible:ring-offset-[#134978] sm:w-auto"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  background: 'transparent', color: '#fff', padding: '12px 24px',
+                  borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none',
+                  border: '2px solid rgba(255,255,255,0.3)',
+                }}
+              >
+                Request a Quote
+              </Link>
             </div>
           </div>
         </section>
@@ -599,6 +613,11 @@ export default async function GenePage({ params, searchParams }: Props) {
                       {model.category ? (
                         <p className="mt-1.5 mb-0 text-[.82rem] leading-snug text-[#666] break-words">
                           {model.category}
+                        </p>
+                      ) : null}
+                      {model.description ? (
+                        <p className="mt-1.5 mb-0 text-[.85rem] leading-relaxed text-[#444] break-words">
+                          {model.description}
                         </p>
                       ) : null}
                       <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-[.82rem]">

@@ -4,6 +4,7 @@
  */
 
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getModelsByGene, getRelatedGenesWithModelType } from '@/lib/catalog/serverCatalog';
@@ -45,7 +46,7 @@ type Props = {
 
 function stripSmoc(s: string | undefined | null): string {
   if (!s) return '';
-  return s.replace(/smoc/gi, 'iTL').replace(/shanghai model organisms?( center)?/gi, 'iTL').trim();
+  return s.replace(/\bsmoc\b/gi, 'iTL').replace(/shanghai model organisms?(?:\s+center)?/gi, 'iTL').trim();
 }
 
 function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
@@ -56,6 +57,7 @@ function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
     category: stripSmoc(m.category),
     availability: stripSmoc(m.availability),
     catalogNumber: stripSmoc(m.catalogNumber),
+    description: stripSmoc(m.description),
   };
 }
 
@@ -139,7 +141,7 @@ export default async function GeneModContextTierPage({ params }: Props) {
   const productSchemas = models.map((m) =>
     buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
-      description: `${m.modelType} mouse model for ${geneName}.`,
+      description: m.description || `${m.modelType} mouse model for ${geneName}.`,
       additionalProperty: [{ '@type': 'PropertyValue', name: 'Modification type', value: modCanon }, ...extraProps],
     }),
   );
@@ -176,9 +178,12 @@ export default async function GeneModContextTierPage({ params }: Props) {
               {curated && <p style={{ color: 'rgba(255,255,255,0.92)', marginBottom: '14px' }}>{curated}</p>}
               <p style={{ color: 'rgba(255,255,255,0.92)' }}>{template}</p>
             </div>
-            <div style={{ marginTop: '20px' }}>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '20px' }}>
               <Link href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#008080', color: '#fff', padding: '12px 24px', borderRadius: '6px', fontWeight: 600, textDecoration: 'none' }}>
                 Order catalog model <IconChevronRight size={16} color="#fff" />
+              </Link>
+              <Link href={`/request-quote?gene=${encodeURIComponent(geneName)}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'transparent', color: '#fff', padding: '12px 24px', borderRadius: '6px', fontWeight: 600, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.3)' }}>
+                Request a Quote
               </Link>
             </div>
           </div>
@@ -234,7 +239,8 @@ export default async function GeneModContextTierPage({ params }: Props) {
                   </thead>
                   <tbody>
                     {models.map((model, i) => (
-                      <tr key={model.id} style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                      <Fragment key={model.id}>
+                      <tr style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
                         <td style={{ padding: '12px', fontFamily: 'monospace', fontWeight: 600 }}>{model.modelAbbrev}</td>
                         <td style={{ padding: '12px' }}>{model.modelType}</td>
                         <td style={{ padding: '12px', color: '#666' }}>{model.category}</td>
@@ -244,6 +250,12 @@ export default async function GeneModContextTierPage({ params }: Props) {
                           <Link href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`} style={{ background: '#008080', color: '#fff', padding: '8px 12px', borderRadius: '4px', textDecoration: 'none', fontWeight: 600, fontSize: '.8rem' }}>Inquire</Link>
                         </td>
                       </tr>
+                      {model.description ? (
+                        <tr style={{ background: i % 2 ? '#fafafa' : '#fff' }}>
+                          <td colSpan={6} style={{ padding: '0 12px 12px', color: '#444', fontSize: '.85rem', lineHeight: 1.6 }}>{model.description}</td>
+                        </tr>
+                      ) : null}
+                      </Fragment>
                     ))}
                   </tbody>
                 </table>

@@ -2,6 +2,7 @@
  * Extracted catalog tier-1 page, unchanged output from original [modSlug]/page.tsx.
  */
 
+import { Fragment } from 'react';
 import Link from 'next/link';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
@@ -22,7 +23,7 @@ const BASE_URL = 'https://www.genetargeting.com';
 
 function stripSmoc(s: string | undefined | null): string {
   if (!s) return '';
-  return s.replace(/smoc/gi, 'iTL').replace(/shanghai model organisms?( center)?/gi, 'iTL').trim();
+  return s.replace(/\bsmoc\b/gi, 'iTL').replace(/shanghai model organisms?(?:\s+center)?/gi, 'iTL').trim();
 }
 
 function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
@@ -33,6 +34,7 @@ function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
     category: stripSmoc(m.category),
     availability: stripSmoc(m.availability),
     catalogNumber: stripSmoc(m.catalogNumber),
+    description: stripSmoc(m.description),
   };
 }
 
@@ -71,7 +73,7 @@ export default function GeneModCatalogPage({
   const productSchemas = models.map((m) =>
     buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
-      description: `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}.`,
+      description: m.description || `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}.`,
       additionalProperty: [{ '@type': 'PropertyValue', name: 'Modification type', value: modCanon }],
     }),
   );
@@ -111,6 +113,9 @@ export default function GeneModCatalogPage({
               <Link href={`/order-catalog-models?gene=${encodeURIComponent(geneName)}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#008080', color: '#fff', padding: '12px 24px', borderRadius: '4px', fontWeight: 600, textDecoration: 'none' }}>
                 Order catalog model <IconChevronRight size={16} color="#fff" />
               </Link>
+              <Link href={`/request-quote?gene=${encodeURIComponent(geneName)}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'transparent', color: '#fff', padding: '12px 24px', borderRadius: '4px', fontWeight: 600, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.3)' }}>
+                Request a Quote
+              </Link>
             </div>
           </div>
         </section>
@@ -147,7 +152,8 @@ export default function GeneModCatalogPage({
                   </thead>
                   <tbody>
                     {models.map((model, index) => (
-                      <tr key={model.id} style={{ background: index % 2 === 0 ? '#fff' : '#fafafa', borderBottom: '1px solid #f0f0f0' }}>
+                      <Fragment key={model.id}>
+                      <tr style={{ background: index % 2 === 0 ? '#fff' : '#fafafa', borderBottom: '1px solid #f0f0f0' }}>
                         <td style={{ padding: '14px 16px', fontWeight: 600, fontFamily: 'monospace', fontSize: '.85rem' }}>{model.modelAbbrev}</td>
                         <td style={{ padding: '14px 16px' }}>{model.modelType}</td>
                         <td style={{ padding: '14px 16px', color: '#666', fontSize: '.85rem' }}>{model.category}</td>
@@ -159,6 +165,12 @@ export default function GeneModCatalogPage({
                           <Link href={`/order-catalog-models?model=${encodeURIComponent(model.modelAbbrev || geneName)}&catalog=${encodeURIComponent(model.catalogNumber)}`} style={{ background: '#008080', color: '#fff', padding: '8px 14px', borderRadius: '4px', fontSize: '.8rem', fontWeight: 600, textDecoration: 'none' }}>Inquire</Link>
                         </td>
                       </tr>
+                      {model.description ? (
+                        <tr style={{ background: index % 2 === 0 ? '#fff' : '#fafafa', borderBottom: '1px solid #f0f0f0' }}>
+                          <td colSpan={6} style={{ padding: '0 16px 14px', color: '#444', fontSize: '.85rem', lineHeight: 1.6 }}>{model.description}</td>
+                        </tr>
+                      ) : null}
+                      </Fragment>
                     ))}
                   </tbody>
                 </table>
