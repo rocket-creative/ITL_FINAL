@@ -2,6 +2,7 @@
  * Product JSON-LD helpers, tier-based AggregateOffer pricing for GSC compliance.
  */
 
+import { stockFormsFromAvailability } from '../catalog/availability';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { BASE_URL } from './types';
 
@@ -156,12 +157,26 @@ export function buildServiceOffer(url: string, modelTypeLabel = 'Mouse model gen
   };
 }
 
+export type SchemaPropertyValue = {
+  '@type': 'PropertyValue';
+  name: string;
+  value: string;
+};
+
+/** Banner copy as structured data: READY TO SHIP, plus the stock state. */
+export function buildReadyToShipProperty(
+  availability: string | null | undefined,
+): SchemaPropertyValue {
+  const state = stockFormsFromAvailability(availability).join(' · ') || 'Inquire';
+  return { '@type': 'PropertyValue', name: 'READY TO SHIP', value: state };
+}
+
 export function buildCatalogProductSchema(
   model: ServerCatalogModel,
   extra: {
     name?: string;
     description?: string;
-    additionalProperty?: Array<{ '@type': 'PropertyValue'; name: string; value: string }>;
+    additionalProperty?: SchemaPropertyValue[];
   } = {},
 ) {
   const geneName = model.geneName;
