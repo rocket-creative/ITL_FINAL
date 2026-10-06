@@ -166,7 +166,8 @@ export default async function LabSignalsArticlePage({
             fontFamily: 'Poppins, sans-serif',
             fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
             fontWeight: 700,
-            lineHeight: 1.3,
+            lineHeight: 1.25,
+            letterSpacing: '-0.02em',
             marginBottom: '15px',
             maxWidth: '900px',
           }}>

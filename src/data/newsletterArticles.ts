@@ -1189,7 +1189,7 @@ export const newsletterArticles: NewsletterArticle[] = [
     category: "Technical Guide",
     relatedPage: "/custom-mouse-models",
     body: infertilityReproductiveDiseaseArticleBody,
-    publishedAt: "2026-10-13",
+    publishedAt: "2026-10-07",
   },
 ];
 
