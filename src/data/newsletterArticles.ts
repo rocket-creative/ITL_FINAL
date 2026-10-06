@@ -16,6 +16,7 @@ import { hivVaccineArticleBody } from './_labSignalsHivVaccineArticle';
 import { rareDiseaseMouseModelInnovationArticleBody } from './_labSignalsRareDiseaseMouseModelInnovationArticle';
 import { beyondReplacementNamsArticleBody } from './_labSignalsBeyondReplacementNamsArticle';
 import { geneTherapyMatchModelMechanismArticleBody } from './_labSignalsGeneTherapyMatchModelMechanismArticle';
+import { infertilityReproductiveDiseaseArticleBody } from './_labSignalsInfertilityReproductiveDiseaseArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1177,6 +1178,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/gene-therapy-mouse-models",
     body: geneTherapyMatchModelMechanismArticleBody,
     publishedAt: "2026-09-01",
+  },
+  {
+    id: "beyond-breeding-logistics-mouse-models-infertility-reproductive-disease",
+    slug: "beyond-breeding-logistics-mouse-models-infertility-reproductive-disease",
+    title: "Beyond Breeding Logistics: Mouse Models Advancing Infertility and Reproductive Disease Research",
+    subtitle: "Start with the mechanism, not the litter count",
+    description:
+      "Mouse models for infertility and reproductive disease are most useful when allele design, timing, and phenotyping match a specific biological question.",
+    category: "Technical Guide",
+    relatedPage: "/custom-mouse-models",
+    body: infertilityReproductiveDiseaseArticleBody,
+    publishedAt: "2026-10-13",
   },
 ];
 
