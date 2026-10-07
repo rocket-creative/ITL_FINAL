@@ -7,7 +7,17 @@
 
 import { useState, useCallback, useSyncExternalStore } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useBannerVisibility } from './BannerVisibilityContext';
+
+function isBlogPage(pathname: string | null) {
+  return (
+    pathname === '/lab-signals' ||
+    pathname?.startsWith('/lab-signals/') ||
+    pathname === '/ingenious-blog' ||
+    pathname?.startsWith('/ingenious-blog/')
+  );
+}
 
 const STORAGE_KEY = 'build-awareness-dismissed';
 
@@ -24,11 +34,13 @@ function useDismissed() {
 }
 
 export default function BuildAwarenessBanner() {
+  const pathname = usePathname();
   const { suppressBanner } = useBannerVisibility();
   const isDismissedFromStorage = useDismissed();
   const [localDismissed, setLocalDismissed] = useState(false);
   const isDismissed = isDismissedFromStorage || localDismissed;
 
+  if (isBlogPage(pathname)) return null;
   if (suppressBanner) return null;
   if (isDismissed) return null;
 
