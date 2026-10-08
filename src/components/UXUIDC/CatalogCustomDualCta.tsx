@@ -82,8 +82,8 @@ const microBtn: CSSProperties = {
   alignItems: 'center',
   justifyContent: 'center',
   gap: '8px',
-  minHeight: '44px',
-  padding: '10px 16px',
+  minHeight: '48px',
+  padding: '12px 22px',
   borderRadius: '4px',
   textDecoration: 'none',
   fontWeight: 600,
@@ -128,33 +128,35 @@ export default function CatalogCustomDualCta({
       <aside
         aria-label="Catalog or mouse model generation options"
         data-variant="micro"
-        className={`flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between ${className}`}
+        className={`@container flex flex-col items-stretch gap-4 ${className}`}
         style={{
           margin: flush ? 0 : '1rem 0',
-          padding: '12px 16px',
+          padding: '20px 24px',
           backgroundColor: '#f7f9fa',
           border: '1px solid #d8e3e6',
           borderRadius: '6px',
         }}
       >
         <p
-          className="sm:flex-1"
+          className="whitespace-normal @min-[980px]:whitespace-nowrap"
           style={{
             ...panelBody,
             margin: 0,
-            fontSize: '0.9rem',
+            fontSize: '0.95rem',
+            lineHeight: 1.4,
+            textAlign: 'center',
           }}
         >
           {CATALOG_OR_CUSTOM_WIDGET_INTRO.subline}
         </p>
-        <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:shrink-0">
+        <div className="mx-auto grid w-full grid-cols-1 gap-3 sm:w-max sm:grid-cols-2">
           <Link
             href={catalogSearchUrl}
             data-cta="catalog-search"
             data-cta-slug={slug}
             data-cta-location={utmMedium}
             data-cta-gene={geneSymbol}
-            className="w-full whitespace-normal sm:w-auto sm:whitespace-nowrap"
+            className="w-full whitespace-nowrap sm:w-[19rem]"
             style={{
               ...microBtn,
               backgroundColor: '#008080',
@@ -170,7 +172,7 @@ export default function CatalogCustomDualCta({
             data-cta-slug={slug}
             data-cta-location={utmMedium}
             data-cta-gene={geneSymbol}
-            className="w-full whitespace-normal sm:w-auto sm:whitespace-nowrap"
+            className="w-full whitespace-nowrap sm:w-[19rem]"
             style={{
               ...microBtn,
               backgroundColor: '#0a253c',
