@@ -3,6 +3,7 @@
 import { useState, type CSSProperties } from 'react';
 import Link from 'next/link';
 import { IconChevronRight } from '@/components/UXUIDC/Icons';
+import { textMatchesQuery } from '@/lib/catalog/catalogQuery';
 
 export type LiveHumanizedRow = {
   id: string;
@@ -35,8 +36,8 @@ function orderHref(row: LiveHumanizedRow): string {
 
 function matches(row: LiveHumanizedRow, query: string): boolean {
   if (!query) return true;
-  const haystack = `${row.modelAbbrev} ${row.catalogNumber} ${row.geneName} ${row.category}`.toLowerCase();
-  return haystack.includes(query);
+  const haystack = `${row.modelAbbrev} ${row.catalogNumber} ${row.geneName} ${row.category}`;
+  return textMatchesQuery(haystack, query);
 }
 
 export default function LiveHumanizedInventory({ rows }: { rows: LiveHumanizedRow[] }) {

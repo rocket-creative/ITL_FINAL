@@ -6,6 +6,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { searchSiteIndex } from '@/lib/search/siteIndex';
 import { checkRateLimit } from '@/lib/search/rateLimit';
+import { catalogNumberCanonical, normalizeCatalogQuery } from '@/lib/catalog/catalogQuery';
 import { supabase } from '@/lib/catalog/supabaseClient';
 import { getCachedCatalogGeneNames } from '@/lib/search/catalogGeneCache';
 import { parseQuery } from '@/lib/search/parseQuery';
@@ -206,8 +207,19 @@ async function mergedCatalogResults(
   };
 
   // Catalog-number queries first, so the cap is not consumed by unrelated gene hits.
-  // Numbers are stored with a prefix + space ("KI 253470"); match both the raw form
-  // and the digit run so "KI 253470", "KI253470" and "253470" all resolve.
+  // Exact prefix match keeps "KO00001" off "CKO 00001". Bare digit runs still
+  // use the contains fallback below ("254074").
+  const canonical = catalogNumberCanonical(rawQuery);
+  if (canonical) {
+    const { data } = await supabase
+      .from('catalog_models')
+      .select(ROW_FIELDS)
+      .ilike('itl_catalog_number', canonical)
+      .limit(limit);
+    pushRows((data ?? []) as DbCatalogRow[]);
+    if (rows.length > 0) return rows.slice(0, limit).map(rowToCatalogPayload);
+  }
+
   const catNum = catalogNumberDigits(rawQuery);
   if (catNum) {
     const rawSafe = sanitizeForOr(rawQuery.trim());
@@ -281,6 +293,7 @@ export async function GET(request: NextRequest) {
 
   const query = parsedZ.data.q;
   if (!query) return NextResponse.json({ catalog: [], site: [] });
+  const catalogQuery = normalizeCatalogQuery(query);
 
   const catalogCap = parsedZ.data.limit ?? NAV_DEFAULT_LIMIT;
 
@@ -290,7 +303,7 @@ export async function GET(request: NextRequest) {
     const parsed = parseQuery(query, catalogGenesArr);
 
     const [catalogHits, siteResults] = await Promise.all([
-      mergedCatalogResults(query, parsed, catalogCap),
+      mergedCatalogResults(catalogQuery, parsed, catalogCap),
       Promise.resolve(searchSiteIndex(query, SITE_MAX_RESULTS, { parsed })),
     ]);
 

@@ -5,6 +5,7 @@
  */
 
 import { cache } from 'react';
+import { catalogNumberCanonical, normalizeCatalogQuery } from './catalogQuery';
 import { supabase, type CatalogRow } from './supabaseClient';
 import { tier4GenerateStaticParams } from '@/data/seoKeywords';
 import { modCanonicalToSlug } from '@/lib/seo/slugs';
@@ -61,7 +62,17 @@ export async function serverSearch(
   query: string,
   limit = 25
 ): Promise<ServerCatalogModel[]> {
-  const q = query.trim();
+  const canonical = catalogNumberCanonical(query);
+  if (canonical) {
+    const { data } = await supabase
+      .from('catalog_models')
+      .select(MODEL_FIELDS)
+      .ilike('itl_catalog_number', canonical)
+      .limit(limit);
+    if (data && data.length > 0) return data.map(toModel);
+  }
+
+  const q = normalizeCatalogQuery(query);
   if (!q) return [];
 
   const seen = new Set<number>();

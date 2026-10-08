@@ -13,6 +13,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { catalogNumberCanonical, normalizeCatalogQuery } from '@/lib/catalog/catalogQuery';
 import { supabase, type CatalogRow, type CatalogStats } from '@/lib/catalog/supabaseClient';
 
 export const dynamic   = 'force-dynamic';
@@ -53,7 +54,34 @@ async function getStats(): Promise<NextResponse> {
 const FIELDS = 'id,gene_name,model_abbreviation,model_type,category,availability,itl_catalog_number,description';
 
 async function searchCatalog(query: string, limit: number): Promise<NextResponse> {
-  const q    = query.trim();
+  const canonical = catalogNumberCanonical(query);
+  if (canonical) {
+    const { data } = await supabase
+      .from('catalog_models')
+      .select(FIELDS)
+      .ilike('itl_catalog_number', canonical)
+      .limit(limit);
+    if (data && data.length > 0) {
+      return NextResponse.json(
+        {
+          models: data.map((r) => ({
+            id: String(r.id),
+            geneName: r.gene_name,
+            modelAbbrev: r.model_abbreviation,
+            modelType: r.model_type,
+            category: r.category,
+            availability: r.availability,
+            catalogNumber: r.itl_catalog_number,
+            description: r.description ?? '',
+          })),
+          total: data.length,
+        },
+        { headers: cache1m }
+      );
+    }
+  }
+
+  const q    = normalizeCatalogQuery(query);
   const seen = new Set<number>();
   const rows: CatalogRow[] = [];
 
