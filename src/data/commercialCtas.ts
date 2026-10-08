@@ -5,9 +5,9 @@
  * CTA priority (sitewide). Place higher priorities first; Lab Signals last.
  *
  * Canonical page stack:
- *   1. Near ATF, CatalogCustomDualCta (utmMedium="page-hero")
+ *   1. Near ATF, CatalogCustomDualCta micro bar (utmMedium="page-hero")
  *   2. Content / proof
- *   3. Close, CatalogCustomDualCta / StartProjectCTA / PageClosingCta (P0)
+ *   3. Close, full CatalogCustomDualCta / StartProjectCTA / PageClosingCta (P0)
  *   4. BreedingSchemeArchitectCTA (P1)
  *   5. LabSignalsSignup (P2, always last content CTA)
  */
