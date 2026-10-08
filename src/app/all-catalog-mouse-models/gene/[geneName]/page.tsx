@@ -14,7 +14,7 @@ import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes, indexableTier4ParamsForModels } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
-import { availabilityColor, availabilityLabel } from '@/lib/catalog/availability';
+import { availabilityColor, availabilityLabel, stockFormsFor } from '@/lib/catalog/availability';
 import { modelTypeAbbrev } from '@/lib/catalog/modelType';
 import CatalogReadyToShipBanner from '@/components/catalog/CatalogReadyToShipBanner';
 import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
@@ -46,7 +46,7 @@ import {
 } from '@/lib/seo/catalogSerp';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { modCanonicalToSlug, modSlugToCanonical, resolveTissueOrDriverSlug } from '@/lib/seo/slugs';
-import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
+import { buildCatalogProductSchema, buildReadyToShipProperty } from '@/lib/seo/productSchema';
 import { getIndexableBuildInquiryLinksForGene, CANONICAL_MOD_SLUGS } from '@/lib/gene-expansion/db';
 import { slugToCatalogDisplay } from '@/lib/gene-expansion/catalogTypeMap';
 import { resolveCanonicalModSlug } from '@/lib/gene-expansion/synonymRedirects';
@@ -339,11 +339,13 @@ export default async function GenePage({ params, searchParams }: Props) {
     ? models.filter((m) => m.modelType === focusType).length
     : 0;
 
+  const stockStateLine = stockFormsFor(models.map((m) => m.availability)).join(' · ');
   const productSchemas = models.map((m) =>
     buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
       description: m.description
         || `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}. ${m.category ? `Category: ${m.category}.` : ''} Availability: ${m.availability || 'On request'}.`,
+      additionalProperty: [buildReadyToShipProperty(m.availability)],
     }),
   );
 
@@ -1003,14 +1005,27 @@ export default async function GenePage({ params, searchParams }: Props) {
                   acceptedAnswer: { '@type': 'Answer', text: f.answer },
                 })),
               },
-              ...(priority
+              ...(models.length > 0 || priority
                 ? [
                     {
                       '@type': 'WebPage',
                       '@id': `${canonical}#webpage`,
-                      name: `${geneName} (${priority.humanSymbol}) mouse models`,
+                      name: priority
+                        ? `${geneName} (${priority.humanSymbol}) mouse models`
+                        : `${geneName} mouse models`,
                       url: canonical,
-                      alternateName: buildGeneHubAlternateNames(),
+                      ...(priority ? { alternateName: buildGeneHubAlternateNames() } : {}),
+                      ...(models.length > 0
+                        ? {
+                            additionalProperty: [
+                              {
+                                '@type': 'PropertyValue',
+                                name: 'READY TO SHIP',
+                                value: stockStateLine || 'Inquire',
+                              },
+                            ],
+                          }
+                        : {}),
                     },
                   ]
                 : []),

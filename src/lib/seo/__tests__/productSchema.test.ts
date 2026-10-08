@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   buildCatalogProductOffer,
+  buildReadyToShipProperty,
   buildServiceOffer,
   getTierLowPrice,
 } from '../productSchema';
@@ -34,6 +35,17 @@ describe('productSchema', () => {
     expect(offer.url).toContain('model=Tp53-KO');
     expect(offer.url).toContain('catalog=HU%20123456');
     expect(offer.url).not.toContain('gene=');
+  });
+
+  it('records READY TO SHIP and the stock state', () => {
+    expect(buildReadyToShipProperty('Live')).toEqual({
+      '@type': 'PropertyValue',
+      name: 'READY TO SHIP',
+      value: 'LIVE',
+    });
+    expect(buildReadyToShipProperty('Sperm cryopreservation').value).toBe('SPERM');
+    expect(buildReadyToShipProperty('F0 live').value).toBe('IN PRODUCTION');
+    expect(buildReadyToShipProperty('').value).toBe('Inquire');
   });
 
   it('emits numeric price on service Offer', () => {

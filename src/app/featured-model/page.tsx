@@ -8,6 +8,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
 import CatalogGeneHeroActions from '@/components/UXUIDC/CatalogGeneHeroActions';
 import { IconChevronRight, IconFlask, IconCheckCircle, IconLayers } from '@/components/UXUIDC/Icons';
+import { textMatchesQuery } from '@/lib/catalog/catalogQuery';
 
 type FeaturedModelEntry = {
   month: string;
@@ -70,12 +71,11 @@ const pastModels: FeaturedModelEntry[] = [
 export default function FeaturedModelPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredModels = featuredModels.filter(
-    (m) =>
-      m.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      m.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      m.teaser.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      m.month.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredModels = featuredModels.filter((m) =>
+    textMatchesQuery(
+      `${m.name} ${m.fullName} ${m.teaser} ${m.month} ${m.catalogNumber}`,
+      searchQuery
+    )
   );
 
   const jsonLd = {

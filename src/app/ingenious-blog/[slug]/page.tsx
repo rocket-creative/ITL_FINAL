@@ -1,6 +1,4 @@
 import fs from 'fs';
-import { stripInternalUtms } from '@/data/commercialCtas';
-
 import path from 'path';
 import { applyCatalogFirstMeta } from '@/lib/seo';
 import { buildServiceOffer } from '@/lib/seo/productSchema';
@@ -12,9 +10,7 @@ import {
   UXUIDCStartProjectCTA,
   FAQPageSchema,
   UXUIDCEducationalSalesBanner,
-  CatalogStickyRail,
   getEducationalOffer,
-  getCatalogLookup,
 } from '@/components/UXUIDC';
 
 const BLOG_CONTENT_DIR = path.join(process.cwd(), 'src/content/blog');
@@ -500,9 +496,6 @@ export default async function IngeniousBlogPost({
       ? String(rawLegacyUrl)
       : `https://www.genetargeting.com/ingenious-blog/${slug}`;
 
-  const catalogLookup = getCatalogLookup(slug);
-  const catalogRelatedHref = stripInternalUtms(catalogLookup.searchHref);
-
   const getCategoryColor = (cat: string) => {
     const colors: Record<string, string> = {
       'Technical Guide': '#008080',
@@ -932,15 +925,6 @@ export default async function IngeniousBlogPost({
             </h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
               {[
-                ...(contentExists
-                  ? [
-                      { label: 'Browse 14,774+ Catalog Models', href: catalogRelatedHref, ctaLocation: 'blog' },
-                      { label: 'Request a Quote', href: '/request-quote/', ctaLocation: 'blog' },
-                    ]
-                  : [
-                      { label: 'Browse 14,774+ Catalog Models', href: '/all-catalog-mouse-models/' },
-                      { label: 'Request a Quote', href: '/request-quote' },
-                    ]),
                 ...(slug === 'what-is-a-point-mutation'
                   ? [
                       { label: 'Point Mutation Mice', href: '/point-mutation-mice' },
@@ -1010,8 +994,6 @@ export default async function IngeniousBlogPost({
       </main>
 
       <UXUIDCFooter />
-      {/* Floating commercial nudge — desktop only */}
-      <CatalogStickyRail slug={slug} href={getCatalogLookup(slug).searchHref} />
     </div>
   );
 }

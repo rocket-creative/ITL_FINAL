@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { NewsletterGate, SocialShare, IngeniousAd } from '@/components/UXUIDC';
+import { NewsletterGate, SocialShare } from '@/components/UXUIDC';
 import type { NewsletterArticle } from '@/data/newsletterArticles';
 import fixArticleLinks from '@/utils/fixArticleLinks';
 
@@ -64,14 +64,6 @@ export default function LabSignalsArticleClient({
           className="lab-signals-article"
           dangerouslySetInnerHTML={{ __html: fixArticleLinks(article.body) }}
         />
-
-        {article.relatedPage && (
-          <IngeniousAd
-            relatedPage={article.relatedPage}
-            category={article.category}
-            catalogCtaHref={article.catalogCtaHref}
-          />
-        )}
 
         <div style={{
           marginTop: '50px',

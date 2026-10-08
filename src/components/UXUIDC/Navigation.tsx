@@ -9,6 +9,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { NavbarSearch } from './NavbarSearch';
 
 interface NavItem {
@@ -279,6 +280,12 @@ const navigationItems: NavItem[] = [
 ];
 
 export function UXUIDCNavigation() {
+  const pathname = usePathname();
+  const onBlogPage =
+    pathname === '/lab-signals' ||
+    pathname?.startsWith('/lab-signals/') ||
+    pathname === '/ingenious-blog' ||
+    pathname?.startsWith('/ingenious-blog/');
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
@@ -501,7 +508,7 @@ export function UXUIDCNavigation() {
       </nav>
 
         {/* Announcement bar - scrolls away on mobile so it does not cover hero content */}
-        <div className="w-full flex justify-center items-center py-1.5 sm:py-2 px-4" style={{ backgroundColor: '#008080' }}>
+        {onBlogPage ? null : <div className="w-full flex justify-center items-center py-1.5 sm:py-2 px-4" style={{ backgroundColor: '#008080' }}>
           <Link href="/contact" className="text-center">
             {/* Mobile: single line */}
             <span className="block sm:hidden text-[11px] leading-snug" style={{ fontFamily: 'var(--system-ui)', color: 'white', fontWeight: 600 }}>
@@ -512,7 +519,7 @@ export function UXUIDCNavigation() {
               Is uncertain NIH funding holding you back from starting a much needed mouse model project? <span className="font-semibold">We have ways for you to start your project now and pay later.</span>
             </span>
           </Link>
-        </div>
+        </div>}
 
         {/* Mobile Menu - with all sub-links */}
         {isOpen ? (

@@ -10,7 +10,6 @@ import {
 } from '@/data/newsletterArticles';
 import LabSignalsArticleClient from './LabSignalsArticleClient';
 import RelatedArticles from './RelatedArticles';
-import ServiceLink from './ServiceLink';
 
 // Lab Signals colors - gold, black, grey, white only
 const BRAND = {
@@ -166,7 +165,8 @@ export default async function LabSignalsArticlePage({
             fontFamily: 'Poppins, sans-serif',
             fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
             fontWeight: 700,
-            lineHeight: 1.3,
+            lineHeight: 1.25,
+            letterSpacing: '-0.02em',
             marginBottom: '15px',
             maxWidth: '900px',
           }}>
@@ -202,9 +202,6 @@ export default async function LabSignalsArticlePage({
 
         {/* Related Articles */}
         <RelatedArticles articles={relatedArticles} categoryName={article.category} />
-
-        {/* Related Service */}
-        {article.relatedPage && <ServiceLink href={article.relatedPage} />}
 
         {/* Newsletter CTA */}
         <section style={{ backgroundColor: BRAND.gold, padding: '55px 20px' }}>

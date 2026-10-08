@@ -6,7 +6,6 @@ import UXUIDCNavigation from '@/components/UXUIDC/Navigation';
 import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import CatalogCustomDualCta from '@/components/UXUIDC/CatalogCustomDualCta';
-import BreadcrumbSchema from '@/components/UXUIDC/BreadcrumbSchema';
 import { StandardPageCtaStack } from '@/components/UXUIDC';
 import {
   IconMouse,
@@ -32,7 +31,7 @@ const heroData = {
   badge: 'Breeding and Cohorts',
   title: 'Mouse Breeding Services',
   snippet:
-    'Ingenious targeting laboratory maintains your genetically engineered lines, executes breeding schemes, genotypes animals, and delivers study-ready cohorts from a U.S.-based barrier facility. Services include colony maintenance, cohort production, and complex multi-allelic breeding schemes.',
+    'Ingenious targeting laboratory runs mouse breeding services for your genetically engineered lines. We execute breeding schemes, genotype animals, and deliver study ready cohorts from a U.S. based barrier facility. Scopes include colony maintenance, cohort production, and complex multi allele schemes.',
   body: 'We have served 900+ laboratories since 1998 and generated 2,800+ custom genetically engineered models. Lines we did not create are welcome. Send us your strain and we will run the colony.',
 };
 
@@ -313,21 +312,11 @@ export default function MouseBreedingServicesPage() {
           </div>
         </section>
 
-        {/* Top dual-path CTA */}
-        <section
-          className="px-5"
-          style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}
-        >
-          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-            <CatalogCustomDualCta slug="mouse-breeding-services" utmMedium="page-hero" headingLevel={2} flush />
-          </div>
-        </section>
-
-        {/* What contract mouse breeding covers */}
+        {/* What mouse breeding services cover */}
         <section style={{ backgroundColor: 'white', padding: '60px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 className="animate-in" style={sectionHeadingStyle}>
-              What contract mouse breeding covers
+              What mouse breeding services cover
             </h2>
             <p className="animate-in" style={bodyStyle}>
               Contract breeding moves the daily work of a mouse colony out of your vivarium and into
@@ -338,6 +327,15 @@ export default function MouseBreedingServicesPage() {
             <p className="animate-in" style={{ ...bodyStyle, marginBottom: 0 }}>
               You keep ownership of the line and the data. We handle the animals.
             </p>
+          </div>
+        </section>
+
+        <section
+          className="px-5"
+          style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}
+        >
+          <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
+            <CatalogCustomDualCta slug="mouse-breeding-services" utmMedium="page-hero" headingLevel={3} flush />
           </div>
         </section>
 
@@ -886,15 +884,6 @@ export default function MouseBreedingServicesPage() {
         labSignalsTitle="Breeding and Colony Management Insights"
       />
       <UXUIDCFooter />
-
-      {/* Schema.org structured data */}
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', path: '/' },
-          { name: 'Services', path: '/mouse-model-services' },
-          { name: 'Mouse Breeding Services', path: '/mouse-breeding-services' },
-        ]}
-      />
     </div>
   );
 }

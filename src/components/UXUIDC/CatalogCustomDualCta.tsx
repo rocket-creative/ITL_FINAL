@@ -1,6 +1,7 @@
 /**
- * |UXUIDC| Sitewide dual-path CTA, equal catalog + generation columns.
- * Use everywhere a commercial CTA appears (closing sections, heroes, banners).
+ * |UXUIDC| Sitewide dual-path CTA.
+ * utmMedium="page-hero" renders a one-line bar. Every other placement keeps
+ * the equal catalog + generation columns for closing sections.
  */
 
 import type { CSSProperties } from 'react';
@@ -76,6 +77,21 @@ const panelBtn: CSSProperties = {
   boxSizing: 'border-box',
 };
 
+const microBtn: CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '8px',
+  minHeight: '48px',
+  padding: '12px 22px',
+  borderRadius: '4px',
+  textDecoration: 'none',
+  fontWeight: 600,
+  fontSize: '0.88rem',
+  letterSpacing: '0.3px',
+  boxSizing: 'border-box',
+};
+
 function mergeLookup(slug: string, catalogOverrides?: Partial<CatalogLookup>): CatalogLookup {
   const base = getCatalogLookup(slug);
   if (!catalogOverrides) return base;
@@ -106,6 +122,70 @@ export default function CatalogCustomDualCta({
     medium: utmMedium,
     campaign: `catalog-widget-generated-${slug}`,
   });
+
+  if (utmMedium === 'page-hero') {
+    return (
+      <aside
+        aria-label="Catalog or mouse model generation options"
+        data-variant="micro"
+        className={`@container flex flex-col items-stretch gap-4 ${className}`}
+        style={{
+          margin: flush ? 0 : '1rem 0',
+          padding: '20px 24px',
+          backgroundColor: '#f7f9fa',
+          border: '1px solid #d8e3e6',
+          borderRadius: '6px',
+        }}
+      >
+        <p
+          className="whitespace-normal @min-[980px]:whitespace-nowrap"
+          style={{
+            ...panelBody,
+            margin: 0,
+            fontSize: '0.95rem',
+            lineHeight: 1.4,
+            textAlign: 'center',
+          }}
+        >
+          {CATALOG_OR_CUSTOM_WIDGET_INTRO.subline}
+        </p>
+        <div className="mx-auto grid w-full grid-cols-1 gap-3 sm:w-max sm:grid-cols-2">
+          <Link
+            href={catalogSearchUrl}
+            data-cta="catalog-search"
+            data-cta-slug={slug}
+            data-cta-location={utmMedium}
+            data-cta-gene={geneSymbol}
+            className="w-full whitespace-nowrap sm:w-[19rem]"
+            style={{
+              ...microBtn,
+              backgroundColor: '#008080',
+              color: '#ffffff',
+            }}
+          >
+            {lookup.searchLabel}
+            <span aria-hidden="true">→</span>
+          </Link>
+          <Link
+            href={quoteUrl}
+            data-cta="catalog-widget-request-quote"
+            data-cta-slug={slug}
+            data-cta-location={utmMedium}
+            data-cta-gene={geneSymbol}
+            className="w-full whitespace-nowrap sm:w-[19rem]"
+            style={{
+              ...microBtn,
+              backgroundColor: '#0a253c',
+              color: '#ffffff',
+            }}
+          >
+            {CUSTOM_MODEL_PANEL.quoteLabel}
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </aside>
+    );
+  }
 
   return (
     <aside

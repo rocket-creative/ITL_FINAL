@@ -12,6 +12,7 @@ export const REVENUE_PILLAR_PATHS = [
   '/tamoxifen-inducible-cre',
   '/transgenic-mouse-service',
   '/mouse-genotyping-service',
+  '/mouse-breeding-services',
   '/custom-mouse-models',
   '/cre-recombinase-mice',
   '/cre-lox-system',
