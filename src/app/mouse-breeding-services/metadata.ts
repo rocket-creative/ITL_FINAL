@@ -2,24 +2,20 @@
  * SEO Metadata for Mouse Breeding Services
  * Hub page for the breeding cluster.
  *
- * catalogFirst is off so the title helper does not replace the second
- * segment with "Catalog + Generation". The description still gets the
- * catalog-first prefix.
+ * catalogFirst is off, and the path is a revenue pillar, so the title and
+ * description are not rewritten with catalog language.
  */
 
-import { applyCatalogFirstDescription, generateBreadcrumbs, generateMetadata } from '@/lib/seo';
-
-const DESCRIPTION =
-  'Outsource your mouse breeding to a U.S. barrier facility. Colony maintenance, cohort production, genotyping, and monthly reporting. Serving 900+ labs since 1998.';
+import { generateBreadcrumbs, generateMetadata } from '@/lib/seo';
+import { BREEDING_DESCRIPTION } from './structuredData';
 
 export const metadata = generateMetadata({
   title: 'Mouse Breeding Services | Contract Colony Breeding',
-  description: applyCatalogFirstDescription(DESCRIPTION, '/mouse-breeding-services'),
+  description: BREEDING_DESCRIPTION,
   path: '/mouse-breeding-services',
   catalogFirst: false,
 });
 
-// BreadcrumbList structured data
 export const breadcrumbSchema = generateBreadcrumbs({
   items: [
     { name: 'Home', path: '/' },

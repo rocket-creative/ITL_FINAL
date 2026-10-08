@@ -116,7 +116,7 @@ const serviceComparison = [
 
 // Related Services
 const relatedServices = [
-  { title: "Contract Mouse Breeding Services", href: "/mouse-breeding-services/" },
+  { title: "Mouse Breeding Services", href: "/mouse-breeding-services/" },
   { title: "Mouse Cohort Development Services", href: "/mouse-cohort-development/" },
   { title: "Conditional Knockout Cohort Breeding", href: "/conditional-knockout-cohort-breeding/" },
   { title: "Colony Management Services", href: "/colony-management-services" },

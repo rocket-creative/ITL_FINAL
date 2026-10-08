@@ -106,6 +106,7 @@ const KNOWS_ABOUT = [
   'Sequence informed allele design',
   'Germline transmission',
   'Mouse cohort development',
+  'Mouse breeding services',
   'Contract mouse breeding',
   'Colony management',
   'Cryopreservation',

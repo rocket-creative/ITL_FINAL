@@ -124,7 +124,7 @@ const testimonials = [
 
 // Related Links
 const relatedServices = [
-  { title: "Contract Mouse Breeding Services", href: "/mouse-breeding-services/" },
+  { title: "Mouse Breeding Services", href: "/mouse-breeding-services/" },
   { title: "Mouse Cohort Development Services", href: "/mouse-cohort-development/" },
   { title: "Cryopreservation Services", href: "/cryopreservation-services" },
   { title: "Rederivation Services", href: "/rederivation-services" },
@@ -822,7 +822,7 @@ export default function ColonyManagementServicesPage() {
                   path: '/mouse-cohort-development',
                 },
                 {
-                  name: 'Contract breeding programs',
+                  name: 'Mouse breeding services',
                   path: '/mouse-breeding-services',
                 },
               ],

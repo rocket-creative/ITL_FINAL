@@ -1,13 +1,22 @@
 /**
- * Service and FAQPage JSON-LD for /mouse-breeding-services.
- * Emitted from the server layout so both nodes are in the initial HTML.
+ * Service, WebPage, and FAQPage JSON-LD for /mouse-breeding-services.
+ * Emitted from the server layout so every node is in the initial HTML.
  */
 
-import { buildFAQSchema, buildServiceSchema } from '@/lib/seo/schemaBlocks';
+import { absoluteUrl, buildFAQSchema, buildServiceSchema } from '@/lib/seo/schemaBlocks';
 
 export const BREEDING_PAGE_PATH = '/mouse-breeding-services';
 
+/** Shared by the meta description and the Service and WebPage nodes. */
+export const BREEDING_DESCRIPTION =
+  'Mouse breeding services for genetically engineered lines. Colony maintenance, cohort production, genotyping, and monthly reporting from a U.S. barrier facility.';
+
 export const breedingFaqData = [
+  {
+    question: 'What do mouse breeding services include?',
+    answer:
+      'Mouse breeding services include colony maintenance, cohort production, complex multi allele schemes, rapid expansion, and backcrossing to a defined background. Genotyping, health monitoring, and monthly colony reporting are included with each scope.',
+  },
   {
     question: 'Can I outsource my mouse breeding to ingenious targeting laboratory?',
     answer:
@@ -53,9 +62,8 @@ export const breedingFaqData = [
 export const breedingServiceSchema = buildServiceSchema({
   name: 'Mouse Breeding Services',
   path: BREEDING_PAGE_PATH,
-  serviceType: 'Contract mouse breeding',
-  description:
-    'Contract breeding of genetically engineered mouse lines from a U.S. barrier facility, including colony maintenance, cohort production, multi allele breeding schemes, PCR genotyping, health monitoring, and monthly colony reporting.',
+  serviceType: 'Mouse breeding services',
+  description: BREEDING_DESCRIPTION,
   alternateName: [
     'Contract colony breeding',
     'Contract mouse breeding',
@@ -63,9 +71,9 @@ export const breedingServiceSchema = buildServiceSchema({
     'GEM colony management',
   ],
   keywords:
-    'mouse breeding services, contract mouse breeding, contract colony breeding, outsource mouse breeding, mouse colony management, GEM colony management, mouse colony husbandry, genetically engineered mouse breeding, PCR genotyping service',
+    'mouse breeding services, colony maintenance, cohort production, speed expansion breeding, backcrossing, rederivation, cryopreservation',
   audienceType: 'Academic laboratories, biotechnology companies, preclinical drug discovery teams',
-  offerCatalogName: 'Contract breeding scopes',
+  offerCatalogName: 'Mouse breeding service scopes',
   offerCatalog: [
     { name: 'Colony maintenance', path: '/colony-management-services/' },
     { name: 'Cohort production', path: '/mouse-cohort-development/' },
@@ -77,3 +85,15 @@ export const breedingServiceSchema = buildServiceSchema({
 });
 
 export const breedingFaqSchema = buildFAQSchema(BREEDING_PAGE_PATH, breedingFaqData);
+
+const breedingPageUrl = absoluteUrl(BREEDING_PAGE_PATH);
+
+export const breedingWebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': breedingPageUrl,
+  name: 'Mouse Breeding Services',
+  description: BREEDING_DESCRIPTION,
+  url: breedingPageUrl,
+  mainEntity: { '@id': `${breedingPageUrl}#service` },
+};
