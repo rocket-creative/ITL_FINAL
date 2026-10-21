@@ -92,7 +92,7 @@ const pricingFaqs = [
   {
     question: 'Do you have ready-to-ship humanized mice?',
     answer:
-      'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, PD1 humanized, and PDL1 humanized. Search the catalog by gene to see live-colony availability before commissioning a generated build.',
+      'Yes. Our catalog includes 18,541+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, PD1 humanized, and PDL1 humanized. Search the catalog by gene to see live-colony availability before commissioning a generated build.',
   },
   {
     question: 'Do you guarantee germline transmission?',

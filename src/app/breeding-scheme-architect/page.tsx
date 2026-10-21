@@ -341,7 +341,7 @@ function BreedingSchemeArchitectContent() {
               }}
               className="hover:-translate-y-1 hover:shadow-lg"
             >
-              Browse 14,774+ Catalog Models
+              Browse 18,541+ Catalog Models
               <IconArrowRight size={16} />
             </Link>
             <Link

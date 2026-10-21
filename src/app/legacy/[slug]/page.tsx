@@ -81,7 +81,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const pageTitle = String(data.title || slug);
     const meta = applyCatalogFirstMeta(
       `${pageTitle} | Catalog + Generation | Legacy`,
-      `Archived guide on ${pageTitle}. Browse 14,774+ catalog strains or request a generated mouse model build from ingenious targeting laboratory.`,
+      `Archived guide on ${pageTitle}. Browse 18,541+ catalog strains or request a generated mouse model build from ingenious targeting laboratory.`,
       `/legacy/${slug}`,
     );
 

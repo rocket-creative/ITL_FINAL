@@ -425,7 +425,7 @@ export default function StartYourProjectPage() {
                 Catalog Mouse Models
               </h2>
               <p style={{ color: '#666', fontSize: '1rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.7 }}>
-                Not every project requires a generated build. Our catalog of <strong>14,774+ mouse models</strong> offers study ready solutions for a wide range of research areas.
+                Not every project requires a generated build. Our catalog of <strong>18,541+ mouse models</strong> offers study ready solutions for a wide range of research areas.
               </p>
             </div>
 

@@ -76,12 +76,12 @@ export const CATALOG_OR_CUSTOM_WIDGET_INTRO = {
   eyebrow: 'Mouse Models',
   headline: 'Two paths. One scientific team.',
   subline:
-    'Search 14,774+ study ready strains, or commission the exact knockout, knockin, or humanized model your program requires.',
+    'Search 18,541+ study ready strains, or commission the exact knockout, knockin, or humanized model your program requires.',
 } as const;
 
 /** Equal weight dual path: catalog + model generation quote (sitewide standard). */
 export const EQUAL_WEIGHT_BUTTONS: CtaButton[] = [
-  { label: 'Browse 14,774+ Catalog Models', href: COMMERCIAL_LINKS.catalogAll },
+  { label: 'Browse 18,541+ Catalog Models', href: COMMERCIAL_LINKS.catalogAll },
   { label: 'Request a Quote', href: COMMERCIAL_LINKS.requestQuote },
 ];
 
@@ -169,7 +169,7 @@ export function withCatalogBridge(content: string): string {
   if (/catalog/i.test(content)) {
     return content;
   }
-  return `${content} Browse 14,774+ catalog models for a faster start, or request a generated line when your program needs a specific allele configuration.`;
+  return `${content} Browse 18,541+ catalog models for a faster start, or request a generated line when your program needs a specific allele configuration.`;
 }
 
 export const footerCta: Record<'default' | 'catalog' | 'publications' | 'diseaseCatalog', FooterCtaData> = {
@@ -182,7 +182,7 @@ export const footerCta: Record<'default' | 'catalog' | 'publications' | 'disease
   catalog: {
     title: 'Find your line in the catalog',
     description:
-      'Explore 14,774+ study ready mouse and rat models. Need conditional, mutation, or humanization beyond the library? Request a quote and our scientific team will scope the exact line for your program.',
+      'Explore 18,541+ study ready mouse and rat models. Need conditional, mutation, or humanization beyond the library? Request a quote and our scientific team will scope the exact line for your program.',
     primaryButton: EQUAL_WEIGHT_BUTTONS[0],
     secondaryButton: EQUAL_WEIGHT_BUTTONS[1],
   },

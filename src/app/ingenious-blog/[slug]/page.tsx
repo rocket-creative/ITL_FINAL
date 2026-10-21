@@ -308,7 +308,7 @@ const COMMERCIAL_META: Record<string, { title: string; description: string }> = 
   'difference-between-knock-in-and-knockout': {
     title: 'Knock-in vs Knockout Mice + Generated & Catalog Models',
     description:
-      'Knock-in vs knockout explained. Search 14,774+ catalog models or order a generated build. 100% germline guarantee. 800+ publications.',
+      'Knock-in vs knockout explained. Search 18,541+ catalog models or order a generated build. 100% germline guarantee. 800+ publications.',
   },
   'conventional-vs-conditional-knockout': {
     title: 'Conventional vs Conditional Knockout + Generated Mice',
@@ -450,7 +450,7 @@ export async function generateMetadata({
     const enhanced = applyCatalogFirstMeta(
       commercial?.title ?? 'Mouse Model Generation Insights | Catalog + Generation',
       commercial?.description ??
-        'Mouse model insights from ingenious targeting laboratory. Browse 14,774+ catalog strains or generated knockout, knockin, and humanized mice.',
+        'Mouse model insights from ingenious targeting laboratory. Browse 18,541+ catalog strains or generated knockout, knockin, and humanized mice.',
       blogPath,
     );
     return {

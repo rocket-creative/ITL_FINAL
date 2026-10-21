@@ -170,7 +170,7 @@ export default function UXUIDCServicePricingAnchor({
                   letterSpacing: '0.3px',
                 }}
               >
-                {secondaryLabel ?? 'Browse 14,774+ Catalog Models'}
+                {secondaryLabel ?? 'Browse 18,541+ Catalog Models'}
                 <span aria-hidden="true">→</span>
               </Link>
               <Link

@@ -15,7 +15,7 @@ export interface OGImageConfig {
 export const OG_IMAGE_DATA: Record<string, OGImageConfig> = {
   '/': {
     slug: 'homepage',
-    line1: '14,774+ Catalog Mouse Models',
+    line1: '18,541+ Catalog Mouse Models',
     line2: 'Catalog First | Generate When Ready',
     line3: '2,800+ Models Generated | 800+ Publications',
     tier: 1,

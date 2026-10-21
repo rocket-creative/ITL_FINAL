@@ -26,7 +26,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 
   if (query) {
     const title       = `${query} Mouse Models`;
-    const description = `Find ${query} genetically engineered mouse models from our catalog of 14,774+ knockout, knockin, humanized, and Cre driver strains. Request a model or get a quote.`;
+    const description = `Find ${query} genetically engineered mouse models from our catalog of 18,541+ knockout, knockin, humanized, and Cre driver strains. Request a model or get a quote.`;
     const canonical   = `${BASE_URL}/all-catalog-mouse-models/`;
 
     return {
@@ -41,8 +41,8 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 
   // Default metadata — targets buyer-intent queries: "lab mice for sale",
   // "knock out mice model market", "knock in mice", "transgenic mouse models".
-  const title       = `Lab mice for sale: 14,774 knockout, knockin & humanized`;
-  const description = '14,774 genetically engineered mouse models ready to ship: knockout, knockin, humanized, Cre driver, transgenic and reporter strains. Live colonies. Request a quote when your allele is not listed.';
+  const title       = `Lab mice for sale: 18,541 knockout, knockin & humanized`;
+  const description = '18,541 genetically engineered mouse models ready to ship: knockout, knockin, humanized, Cre driver, transgenic and reporter strains. Live colonies. Request a quote when your allele is not listed.';
   const canonical   = `${BASE_URL}/all-catalog-mouse-models/`;
   const branded = `${title} | ${SITE_NAME}`;
 

@@ -39,7 +39,7 @@ function faqsFor(count: number) {
     {
       question: 'What does Live availability mean for a humanized mouse?',
       answer:
-        'Live means an established colony, ready to ship as live animals. Sperm cryopreservation, embryo cryopreservation, and In Development are not on this page. F0 Live and F1 Live are founder animals still being established, so they are excluded.',
+        'Live means an established colony, ready to ship as live animals. Sperm cryopreservation, embryo cryopreservation, and In Development are not on this page. F0 Live are founder animals that are still being established, and so they are also excluded.',
     },
     {
       question: 'How do I order a live humanized mouse?',

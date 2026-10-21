@@ -98,7 +98,7 @@ const tiers = [
     name: 'Off-the-Shelf Catalog',
     sku: 'CATALOG',
     description:
-      '14,774 ready-to-ship genetically engineered mouse models. Live colonies for many top-requested knockouts, knockins, Cre drivers, and humanized lines.',
+      '18,541 ready-to-ship genetically engineered mouse models. Live colonies for many top-requested knockouts, knockins, Cre drivers, and humanized lines.',
     bestFor: ['Fast project starts', 'Established alleles', 'Lower upfront cost'],
     quoteHref: '/all-catalog-mouse-models/',
     learnMoreHref: '/all-catalog-mouse-models/',
@@ -129,7 +129,7 @@ const faqs = [
   {
     question: 'Are catalog mouse models cheaper than generated?',
     answer:
-      'Catalog mouse models typically have lower upfront cost and ship in weeks from live colonies. We have 14,774 ready-to-ship models including knockouts, knockins, Cre drivers, transgenic lines, and humanized strains. If a model already exists in our catalog or can be derived from one, this is almost always faster and cheaper than commissioning a generated build.',
+      'Catalog mouse models typically have lower upfront cost and ship in weeks from live colonies. We have 18,541 ready-to-ship models including knockouts, knockins, Cre drivers, transgenic lines, and humanized strains. If a model already exists in our catalog or can be derived from one, this is almost always faster and cheaper than commissioning a generated build.',
   },
   {
     question: 'Why does ingenious targeting laboratory cost what it does?',
@@ -252,7 +252,7 @@ export default function PricingPage() {
             >
               Knockout, knockin, humanized, conditional, and transgenic mice —
               fixed-fee pricing, 100% germline transmission guarantee, free
-              scientific consultation. Or pick from 14,774 ready-to-ship
+              scientific consultation. Or pick from 18,541 ready-to-ship
               catalog models.
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -294,7 +294,7 @@ export default function PricingPage() {
                   border: '2px solid rgba(255,255,255,0.55)',
                 }}
               >
-                Browse 14,774 Catalog Models
+                Browse 18,541 Catalog Models
                 <span aria-hidden="true">→</span>
               </Link>
             </div>

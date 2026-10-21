@@ -5,7 +5,7 @@
 
 import { isRevenuePillarPath } from './revenuePillars';
 
-export const CATALOG_MODEL_COUNT = '14,774+';
+export const CATALOG_MODEL_COUNT = '18,541+';
 
 const DESCRIPTION_MAX = 160;
 const TITLE_MAX = 58;
@@ -181,7 +181,7 @@ export function applyCatalogFirstMeta(
  * then catalog / study ready so both business paths are clear in the snippet.
  */
 export const ROOT_CATALOG_FIRST_META = {
-  title: 'Mouse Model Generation & Catalog | 14,774+ Lines',
+  title: 'Mouse Model Generation & Catalog | 18,541+ Lines',
   description:
     `Generate knockout, knockin, and humanized mouse models, or browse ${CATALOG_MODEL_COUNT} study ready catalog strains. U.S. PhD oversight and germline guarantee since 1998.`,
   ogLine1: 'Mouse Model Generation & Catalog',

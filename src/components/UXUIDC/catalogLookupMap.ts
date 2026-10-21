@@ -28,7 +28,7 @@ export interface CatalogLookup {
 
 const DEFAULT_LOOKUP: CatalogLookup = {
   eyebrow: 'Ready to ship',
-  headline: 'Search 14,774 strains. Many ship from live colonies.',
+  headline: 'Search 18,541 strains. Many ship from live colonies.',
   subline:
     'Browse by gene, model type, or therapeutic area. Live colonies available for many top requested knockouts, knockins, and humanized lines.',
   searchHref: '/all-catalog-mouse-models/',
@@ -100,7 +100,7 @@ const LOOKUP_MAP: Record<string, CatalogLookup> = {
     eyebrow: 'Already in our catalog?',
     headline: 'Knockout & knockin mice, ready to ship.',
     subline:
-      '14,774 catalog models. Many ship from live colonies in weeks, not months.',
+      '18,541 catalog models. Many ship from live colonies in weeks, not months.',
     searchHref: '/all-catalog-mouse-models/',
     searchLabel: 'Search the Full Catalog',
     genes: [
@@ -126,7 +126,7 @@ const LOOKUP_MAP: Record<string, CatalogLookup> = {
     eyebrow: 'Already in our catalog?',
     headline: 'Knockout already built? Save months.',
     subline:
-      '14,774 catalog models. Live colonies for many top-requested knockouts.',
+      '18,541 catalog models. Live colonies for many top-requested knockouts.',
     searchHref: '/all-catalog-mouse-models/?q=knockout',
     searchLabel: 'Browse Knockout Catalog',
     genes: [
@@ -221,7 +221,7 @@ const LOOKUP_MAP: Record<string, CatalogLookup> = {
     eyebrow: 'Already in our catalog?',
     headline: 'CRISPR knockouts, many already built.',
     subline:
-      '14,774 ready models. Search by gene to skip the build entirely.',
+      '18,541 ready models. Search by gene to skip the build entirely.',
     searchHref: '/all-catalog-mouse-models/?q=knockout',
     searchLabel: 'Browse Knockout Catalog',
     genes: [
@@ -271,7 +271,7 @@ const LOOKUP_MAP: Record<string, CatalogLookup> = {
   },
   'allele-genotype-phenotype': {
     eyebrow: 'Already in our catalog?',
-    headline: '14,774 mouse models with known alleles.',
+    headline: '18,541 mouse models with known alleles.',
     subline:
       'Skip allele design, search live colonies by gene.',
     searchHref: '/all-catalog-mouse-models/',
@@ -355,7 +355,7 @@ const LOOKUP_MAP: Record<string, CatalogLookup> = {
     eyebrow: 'Already in our catalog?',
     headline: 'Transgenic mice, already built. Skip the protocol.',
     subline:
-      '14,774 catalog models with live colonies. Search by gene.',
+      '18,541 catalog models with live colonies. Search by gene.',
     searchHref: '/all-catalog-mouse-models/?q=transgenic',
     searchLabel: 'Browse Transgenic Catalog',
     genes: [
