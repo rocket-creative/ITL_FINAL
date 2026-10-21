@@ -65,7 +65,7 @@ ingenious targeting laboratory (iTL) is a leading provider of custom genetically
 
 - Humanized immune checkpoint mice (PD1, PDL1, CTLA4, LAG3, TIM3)
 - Reporter mouse models (GFP, tdTomato, LacZ)
-- Disease model catalog with 14,774+ genome engineered mouse and rat models
+- Disease model catalog with 18,541+ genome engineered mouse and rat models
 
 ## Strain backgrounds
 

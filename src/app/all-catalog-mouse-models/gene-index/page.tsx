@@ -22,7 +22,7 @@ import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 
 export const metadata: Metadata = buildStandalonePageMetadata({
   path: '/all-catalog-mouse-models/gene-index',
-  title: 'Mouse Model Gene Index A–Z | 14,774+ Catalog',
+  title: 'Mouse Model Gene Index A–Z | 18,541+ Catalog',
   description:
     'Complete alphabetical index of gene names in our mouse model catalog. Search knockout, knockin, humanized, and Cre driver models by target, or request a generated line.',
 });

@@ -47,7 +47,7 @@ const COMMERCIAL_GLOSSARY_META: Record<string, { title: string; description: str
   'c57bl6j-vs-c57bl6n': {
     title: 'C57BL/6J vs C57BL/6N + Generated Mice on Either Background',
     description:
-      'C57BL/6J vs 6N: substrain differences. We build mice on the background you need. 14,774 catalog models. Quote in 24h.',
+      'C57BL/6J vs 6N: substrain differences. We build mice on the background you need. 18,541 catalog models. Quote in 24h.',
   },
   'point-mutation': {
     title: 'Point Mutation Definition + Generated Knockin Mouse Models',
@@ -726,7 +726,7 @@ export default async function GlossaryTermPage({
       <StandardPageCtaStack
         slug={slug}
         closingTitle="Need Help with Your Mouse Model Project?"
-        closingDescription="Our scientific consultants can help you understand the best approach for your research goals. Browse 14,774+ catalog models or request a quote."
+        closingDescription="Our scientific consultants can help you understand the best approach for your research goals. Browse 18,541+ catalog models or request a quote."
         showBreedingScheme={false}
         showLabSignals={false}
       />

@@ -138,7 +138,7 @@ export default function IngeniousAd({
             e.currentTarget.style.boxShadow = 'none';
           }}
         >
-          Browse 14,774+ Catalog Models
+          Browse 18,541+ Catalog Models
           <span aria-hidden>→</span>
         </Link>
         <Link

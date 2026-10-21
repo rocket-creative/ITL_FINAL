@@ -86,7 +86,7 @@ const servicesData = [
   },
   {
     title: 'Catalog Library',
-    description: 'Access our catalog of 14,774+ genome engineered mouse and rat models for study ready scientific discovery.',
+    description: 'Access our catalog of 18,541+ genome engineered mouse and rat models for study ready scientific discovery.',
     href: '/catalog-mouse-models',
   },
   {
@@ -108,7 +108,7 @@ const overviewData = {
     items: [
       'Mouse model generation including conventional knockouts, conditional knockouts, knock-ins (point mutation, cDNA, gene replacement), reporter alleles, Rosa26 and other targeted transgenics, and humanized models.',
       'Multi-generation cohort development and colony planning for study readiness.',
-      'Animal model catalog access to 14,774+ lines for study ready biomedical research.',
+      'Animal model catalog access to 18,541+ lines for study ready biomedical research.',
       'Integrated non-GLP preclinical services for your generated or catalog model to support translational decisions.',
     ],
   },

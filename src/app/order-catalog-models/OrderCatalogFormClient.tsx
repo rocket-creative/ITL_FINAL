@@ -151,7 +151,7 @@ const alternativeContactData = [
   },
   {
     title: 'Browse Full Catalog',
-    content: 'Search 14,774+ available models',
+    content: 'Search 18,541+ available models',
     href: '/all-catalog-mouse-models',
     label: 'View Catalog',
   },
@@ -208,7 +208,7 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
               >
                 <IconLayers size={14} color="#00d4d4" />
                 <span style={{ color: '#ffffff', fontSize: '.75rem', fontWeight: 500 }}>
-                  14,774+ Models Available
+                  18,541+ Models Available
                 </span>
               </div>
               <h1
@@ -317,7 +317,7 @@ export default function OrderCatalogFormClient({ initialModel, initialCatalog }:
                 >
                   <div className="grid grid-cols-1 md:grid-cols-1 md:grid-cols-2 gap-4">
                     {[
-                      { num: '14,774+', label: 'Models' },
+                      { num: '18,541+', label: 'Models' },
                       { num: '26+', label: 'Years' },
                       { num: 'Global', label: 'Shipping' },
                       { num: '100%', label: 'QC Tested' },

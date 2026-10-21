@@ -330,7 +330,7 @@ export default function TransgenicMouseServicePage() {
             },            {
               question: 'Do you have ready-to-ship transgenic mice?',
               answer:
-                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models including Rosa26 reporter and Cre driver transgenic lines. Many ship from live colonies in weeks, not months.',
+                'Yes. Our catalog includes 18,541+ ready-to-ship genetically engineered mouse models including Rosa26 reporter and Cre driver transgenic lines. Many ship from live colonies in weeks, not months.',
             },
           ]}
         />

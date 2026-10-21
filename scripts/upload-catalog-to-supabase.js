@@ -1,7 +1,7 @@
 /**
  * Upload ITL Catalog to Supabase
  *
- * Clears the catalog_models table and bulk-inserts all 14,774 rows.
+ * Clears the catalog_models table and bulk-inserts all 18,541+ rows.
  *
  * Usage:
  *   NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co \

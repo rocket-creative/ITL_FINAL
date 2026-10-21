@@ -34,9 +34,9 @@ const DEFAULT_OFFER: EducationalSalesOffer = {
   eyebrow: 'Mouse Model Generation',
   headline: 'We turn this concept into your model.',
   subline:
-    'Start in the 14,774+ model catalog when a line fits your study. Need knockout, knockin, or humanization beyond the library? Generated quote in 24 hours. 800+ peer reviewed publications.',
+    'Start in the 18,541+ model catalog when a line fits your study. Need knockout, knockin, or humanization beyond the library? Generated quote in 24 hours. 800+ peer reviewed publications.',
   primaryCta: { label: 'Request a Quote', href: COMMERCIAL_LINKS.requestQuote },
-  secondaryCta: { label: 'Browse 14,774+ Catalog Models', href: COMMERCIAL_LINKS.catalogAll },
+  secondaryCta: { label: 'Browse 18,541+ Catalog Models', href: COMMERCIAL_LINKS.catalogAll },
 };
 
 /**
@@ -168,7 +168,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'C57BL/6J & C57BL/6N Backgrounds',
     headline: 'We build on C57BL/6J and C57BL/6N, your choice.',
     subline:
-      'Mouse model generation on the background you need. 14,774 ready catalog models on multiple strains. Quote in 24 hours.',
+      'Mouse model generation on the background you need. 18,541 ready catalog models on multiple strains. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote/' },
     secondaryCta: { label: 'Browse Catalog by Strain', href: '/all-catalog-mouse-models/?q=C57BL%2F6' },
   },
@@ -178,7 +178,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     subline:
       'Our scientists help design floxed, knockin, knockout, and humanized alleles. Quote in 24 hours. Free consultation.',
     primaryCta: { label: 'Free Consultation', href: '/contact/' },
-    secondaryCta: { label: 'Browse 14,774 Catalog Models', href: '/all-catalog-mouse-models/' },
+    secondaryCta: { label: 'Browse 18,541 Catalog Models', href: '/all-catalog-mouse-models/' },
   },
   'promoter-enhancer-regulatory-element': {
     eyebrow: 'Regulatory Element Knockin Mice',
@@ -309,7 +309,7 @@ const OFFER_MAP: Record<string, EducationalSalesOffer> = {
     eyebrow: 'C57BL/6 Mouse Background',
     headline: 'Mice on C57BL/6J or C57BL/6N, your choice.',
     subline:
-      'We build on the background you need. 14,774 ready catalog models. Quote in 24 hours.',
+      'We build on the background you need. 18,541 ready catalog models. Quote in 24 hours.',
     primaryCta: { label: 'Request a Quote', href: '/request-quote/' },
     secondaryCta: { label: 'Browse Catalog by Strain', href: '/all-catalog-mouse-models/?q=C57BL%2F6' },
   },

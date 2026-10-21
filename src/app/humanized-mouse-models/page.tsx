@@ -421,7 +421,7 @@ export default function HumanizedMouseModelsPage() {
             },            {
               question: 'Do you offer off-the-shelf humanized mice?',
               answer:
-                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, and humanized immune checkpoint mice. Search the catalog by gene to see availability before commissioning a generated build.',
+                'Yes. Our catalog includes 18,541+ ready-to-ship genetically engineered mouse models, including humanized lines such as hSCAP, hCFH, and humanized immune checkpoint mice. Search the catalog by gene to see availability before commissioning a generated build.',
             },
           ]}
         />

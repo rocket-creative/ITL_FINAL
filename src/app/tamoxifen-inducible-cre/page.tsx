@@ -164,7 +164,7 @@ export default function TamoxifenInducibleCrePage() {
             {
               question: 'Do you have ready-to-ship CreERT2 driver lines?',
               answer:
-                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models including Rosa26-CreERT2 ubiquitous driver and tissue-specific CreERT2 lines. Search the catalog by tissue or gene to see live-colony availability.',
+                'Yes. Our catalog includes 18,541+ ready-to-ship genetically engineered mouse models including Rosa26-CreERT2 ubiquitous driver and tissue-specific CreERT2 lines. Search the catalog by tissue or gene to see live-colony availability.',
             },
           ]}
         />
@@ -319,7 +319,7 @@ export default function TamoxifenInducibleCrePage() {
             {
               question: 'Do you have ready-to-ship CreERT2 driver lines?',
               answer:
-                'Yes. Our catalog includes 14,774+ ready-to-ship genetically engineered mouse models including Rosa26-CreERT2 ubiquitous driver and tissue-specific CreERT2 lines. Search the catalog by tissue or gene to see live-colony availability.',
+                'Yes. Our catalog includes 18,541+ ready-to-ship genetically engineered mouse models including Rosa26-CreERT2 ubiquitous driver and tissue-specific CreERT2 lines. Search the catalog by tissue or gene to see live-colony availability.',
             },
           ]}
         />

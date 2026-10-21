@@ -162,7 +162,7 @@ export function CatalogSearch({
             Search Our Catalog Models
           </h2>
           <p style={{ fontSize: '.9rem', color: '#666', margin: 0 }}>
-            Explore {stats ? `${stats.total_models.toLocaleString()}+` : '14,774+'} genetically engineered mouse and rat models
+            Explore {stats ? `${stats.total_models.toLocaleString()}+` : '18,541+'} genetically engineered mouse and rat models
           </p>
         </div>
       )}
@@ -376,7 +376,7 @@ export function CatalogSearch({
               <p style={{ margin: '0 0 20px', color: '#999', fontSize: '.85rem' }}>Try a different gene name or keyword, or request a generated knockout, knockin, or humanized line.</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
                 <Link href="/all-catalog-mouse-models" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 24px', background: '#008080', color: '#fff', borderRadius: '6px', fontSize: '.9rem', fontWeight: 600, textDecoration: 'none' }}>
-                  Browse 14,774+ Catalog Models
+                  Browse 18,541+ Catalog Models
                   <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -411,7 +411,7 @@ export function CatalogSearch({
       {!hasSearched && !compact && (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6" style={{ gap: '12px', marginTop: '24px' }}>
           {[
-            { label: 'Total Models',  value: stats ? `${stats.total_models.toLocaleString()}+`         : '14,774+', color: '#008080' },
+            { label: 'Total Models',  value: stats ? `${stats.total_models.toLocaleString()}+`         : '18,541+', color: '#008080' },
             { label: 'Unique Genes',  value: stats ? `${stats.unique_genes.toLocaleString()}+`          : '5,000+',  color: '#008080' },
             { label: 'Live Models',   value: stats ? `${stats.live_models.toLocaleString()}+`           : '2,400+',  color: '#2e7d32' },
             { label: 'Sperm Cryo',    value: stats?.sperm_cryo_models  != null ? `${stats.sperm_cryo_models.toLocaleString()}+`  : '7,700+',  color: '#e65100' },

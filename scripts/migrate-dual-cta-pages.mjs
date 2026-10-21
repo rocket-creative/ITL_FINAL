@@ -29,7 +29,7 @@ const CATALOG_LINK = `              <Link
                   fontWeight: 500
                 }}
               >
-                <span>Browse 14,774+ Catalog Models</span>
+                <span>Browse 18,541+ Catalog Models</span>
                 <span>→</span>
               </Link>`;
 
