@@ -31,7 +31,7 @@ const heroData = {
   badge: 'Breeding and Cohorts',
   title: 'Mouse Breeding Services',
   snippet:
-    'Ingenious targeting laboratory runs mouse breeding services for your genetically engineered lines. We execute breeding schemes, genotype animals, and deliver study ready cohorts from a U.S. based barrier facility. Scopes include colony maintenance, cohort production, and complex multi allele schemes.',
+    'Ingenious targeting laboratory runs mouse breeding services for your genetically engineered lines. We execute breeding schemes, genotype animals, and deliver study ready cohorts from a U.S. based barrier facility. Scopes include mouse colony management, cohort production, and complex multi allele schemes.',
   body: 'We have served 900+ laboratories since 1998 and generated 2,800+ custom genetically engineered models. Lines we did not create are welcome. Send us your strain and we will run the colony.',
 };
 

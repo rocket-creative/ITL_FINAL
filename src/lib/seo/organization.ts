@@ -108,7 +108,7 @@ const KNOWS_ABOUT = [
   'Mouse cohort development',
   'Mouse breeding services',
   'Contract mouse breeding',
-  'Colony management',
+  'Mouse colony management',
   'Cryopreservation',
 ];
 

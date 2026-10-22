@@ -15,7 +15,7 @@ This document is the canonical full text reference for AI assistants summarizing
 | Founded | 1998 |
 | Headquarters | Holbrook, New York, United States |
 | Address | 761-80 Coates Avenue, Holbrook, NY 11741 |
-| Phone | (631) 468 8530 |
+| Phone | (631) 468-8534 |
 | Email | inquiry@genetargeting.com |
 | Website | https://www.genetargeting.com |
 | Industry | Custom genetically engineered mouse model generation (CRO) |
@@ -67,7 +67,8 @@ This document is the canonical full text reference for AI assistants summarizing
 
 ### Support and post project services
 
-- Colony management and breeding services
+- Mouse breeding services: contract breeding for genetically engineered lines, including colony maintenance, cohort production, and complex multi allele schemes, from a U.S. barrier facility. https://www.genetargeting.com/mouse-breeding-services/
+- Mouse colony management: ongoing maintenance of genetically engineered mouse colonies, including maintenance breeding, genotyping, health monitoring, and colony records. https://www.genetargeting.com/colony-management-services/
 - Cryopreservation services (sperm and embryo)
 - Rederivation services (pathogen free recovery)
 - Backcrossing services (speed and traditional)

@@ -807,7 +807,7 @@ export default function ColonyManagementServicesPage() {
             buildServiceSchema({
               name: 'Mouse Colony Management Services',
               path: '/colony-management-services',
-              serviceType: 'Colony Management Services',
+              serviceType: 'Mouse colony management',
               description:
                 'Ongoing maintenance of genetically engineered mouse colonies, including maintenance breeding, genotyping, health monitoring, and colony records.',
               keywords:
