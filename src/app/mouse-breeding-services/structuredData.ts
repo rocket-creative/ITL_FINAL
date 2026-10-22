@@ -9,7 +9,7 @@ export const BREEDING_PAGE_PATH = '/mouse-breeding-services';
 
 /** Shared by the meta description and the Service and WebPage nodes. */
 export const BREEDING_DESCRIPTION =
-  'Mouse breeding services for genetically engineered lines. Colony maintenance, cohort production, genotyping, and monthly reporting from a U.S. barrier facility.';
+  'Mouse breeding services for genetically engineered lines, including mouse colony management. Colony maintenance, cohort production, genotyping, and monthly reporting from a U.S. barrier facility.';
 
 export const breedingFaqData = [
   {
@@ -65,17 +65,18 @@ export const breedingServiceSchema = buildServiceSchema({
   serviceType: 'Mouse breeding services',
   description: BREEDING_DESCRIPTION,
   alternateName: [
+    'Mouse colony management',
     'Contract colony breeding',
     'Contract mouse breeding',
     'Outsourced mouse colony management',
     'GEM colony management',
   ],
   keywords:
-    'mouse breeding services, colony maintenance, cohort production, speed expansion breeding, backcrossing, rederivation, cryopreservation',
+    'mouse breeding services, mouse colony management, colony maintenance, cohort production, speed expansion breeding, backcrossing, rederivation, cryopreservation',
   audienceType: 'Academic laboratories, biotechnology companies, preclinical drug discovery teams',
   offerCatalogName: 'Mouse breeding service scopes',
   offerCatalog: [
-    { name: 'Colony maintenance', path: '/colony-management-services/' },
+    { name: 'Mouse colony management', path: '/colony-management-services/' },
     { name: 'Cohort production', path: '/mouse-cohort-development/' },
     { name: 'Speed expansion breeding', path: '/speed-expansion-breeding/' },
     { name: 'Backcrossing to defined background', path: '/backcrossing-services/' },
