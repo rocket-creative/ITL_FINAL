@@ -41,6 +41,29 @@ const linkStyle: CSSProperties = {
   textDecoration: 'none',
 };
 
+const CUSTOM_QUOTE_LABEL = 'Request a Custom Model Quote';
+
+function customQuoteHref(symbol?: string): string {
+  if (!symbol) return '/request-quote/';
+  return `/request-quote/?gene=${encodeURIComponent(symbol)}`;
+}
+
+const quoteButtonStyle: CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  gap: '8px',
+  marginTop: '24px',
+  minHeight: '48px',
+  padding: '14px 22px',
+  borderRadius: '4px',
+  textDecoration: 'none',
+  fontWeight: 600,
+  fontSize: '0.95rem',
+  backgroundColor: '#0a253c',
+  color: '#ffffff',
+};
+
 function sectionStyle(background: string): CSSProperties {
   return { backgroundColor: background, padding: '60px 20px' };
 }
@@ -179,7 +202,14 @@ export function CustomGeneIndex() {
       <Hero title="Gene model pages" crumbs={crumbs} />
       <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
         <div className="mx-auto w-full" style={{ maxWidth: '1100px' }}>
-          <CatalogCustomDualCta slug="custom-mouse-models-gene" utmMedium="page-hero" flush />
+          <CatalogCustomDualCta
+            slug="custom-mouse-models-gene"
+            utmMedium="page-hero"
+            flush
+            quoteLabel={CUSTOM_QUOTE_LABEL}
+            quoteHref={customQuoteHref()}
+            quoteFirst
+          />
         </div>
       </section>
       <section style={sectionStyle('#ffffff')}>
@@ -195,13 +225,19 @@ export function CustomGeneIndex() {
           </ul>
         </div>
       </section>
-      <StandardPageCtaStack slug="custom-mouse-models-gene" />
+      <StandardPageCtaStack
+        slug="custom-mouse-models-gene"
+        quoteLabel={CUSTOM_QUOTE_LABEL}
+        quoteHref={customQuoteHref()}
+        quoteFirst
+      />
     </PageFrame>
   );
 }
 
 export default function CustomGenePage({ page }: { page: CustomGenePageData }) {
   const catalogOverrides = catalogLookupForGene(page);
+  const quoteHref = customQuoteHref(page.symbol);
   const symbols = relatedTargetSymbols(page.relatedLine);
   const relatedPrefix = page.relatedLine.startsWith('Related gene targets: ')
     ? 'Related gene targets: '
@@ -225,6 +261,9 @@ export default function CustomGenePage({ page }: { page: CustomGenePageData }) {
             geneSymbol={page.symbol}
             catalogOverrides={catalogOverrides}
             flush
+            quoteLabel={CUSTOM_QUOTE_LABEL}
+            quoteHref={quoteHref}
+            quoteFirst
           />
         </div>
       </section>
@@ -288,6 +327,10 @@ export default function CustomGenePage({ page }: { page: CustomGenePageData }) {
               );
             })}
           </ul>
+          <Link href={quoteHref} style={quoteButtonStyle}>
+            {`Request a custom ${pageStem(page)} model quote`}
+            <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 
@@ -338,6 +381,9 @@ export default function CustomGenePage({ page }: { page: CustomGenePageData }) {
         slug={`custom-gene-${page.symbol}`}
         geneSymbol={page.symbol}
         catalogLookupOverrides={catalogOverrides}
+        quoteLabel={CUSTOM_QUOTE_LABEL}
+        quoteHref={quoteHref}
+        quoteFirst
       />
     </PageFrame>
   );

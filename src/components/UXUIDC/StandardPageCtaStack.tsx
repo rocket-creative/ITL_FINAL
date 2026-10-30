@@ -23,6 +23,12 @@ export interface StandardPageCtaStackProps {
   catalogLookupOverrides?: Partial<CatalogLookup>;
   /** Gene symbol sent as gene_symbol on click */
   geneSymbol?: string;
+  /** Generation quote button label on the closing dual CTA */
+  quoteLabel?: string;
+  /** Generation quote destination on the closing dual CTA */
+  quoteHref?: string;
+  /** Place the custom-model quote before the catalog button. */
+  quoteFirst?: boolean;
   showBreedingScheme?: boolean;
   breedingSchemeVariant?: 'dark' | 'light' | 'gradient';
   showLabSignals?: boolean;
@@ -43,6 +49,9 @@ export default function StandardPageCtaStack({
   closingDescription,
   catalogLookupOverrides,
   geneSymbol,
+  quoteLabel,
+  quoteHref,
+  quoteFirst,
   showBreedingScheme = true,
   breedingSchemeVariant = 'gradient',
   showLabSignals = true,
@@ -77,6 +86,9 @@ export default function StandardPageCtaStack({
             utmMedium="page-closing"
             flush
             geneSymbol={geneSymbol}
+            quoteLabel={quoteLabel}
+            quoteHref={quoteHref}
+            quoteFirst={quoteFirst}
             catalogOverrides={catalogOverrides}
           />
         </div>

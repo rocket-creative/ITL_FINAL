@@ -90,6 +90,7 @@ export default function RequestQuoteClient() {
   const [quoteInitialValues, setQuoteInitialValues] = useState<Record<string, string> | undefined>(
     undefined
   );
+  const [quoteParamsReady, setQuoteParamsReady] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -121,6 +122,7 @@ export default function RequestQuoteClient() {
     if (d) lines.push(`Cre driver discussion: ${d}`);
     if (lines.length) o.additional_notes = lines.join('\n');
     if (Object.values(o).some(Boolean)) setQuoteInitialValues(o);
+    setQuoteParamsReady(true);
   }, []);
 
   return (
@@ -250,20 +252,25 @@ export default function RequestQuoteClient() {
                   borderRadius: '12px',
                   padding: '32px',
                   boxShadow: '0 8px 30px rgba(0,0,0,0.15)'}}>
-                  <HubSpotFormWithFallback
-                    formId="b854ed46-fed3-4b54-9d01-62173106ad8c"
-                    formName="Request Quote"
-                    portalId="3977953"
-                    region="na1"
-                    fallbackFields={fallbackFields}
-                    initialValues={quoteInitialValues}
-                    submitButtonText="Request Quote"
-                    successMessage="Thank you! A scientific consultant will contact you within 1 business day."
-                    redirectAfterSubmit={REQUEST_QUOTE_THANK_YOU}
-                    onFallbackSuccess={() => {
-                      window.location.assign(REQUEST_QUOTE_THANK_YOU);
-                    }}
-                  />
+                  {quoteParamsReady ? (
+                    <HubSpotFormWithFallback
+                      key={quoteInitialValues?.gene_symbol ?? 'blank'}
+                      formId="b854ed46-fed3-4b54-9d01-62173106ad8c"
+                      formName="Request Quote"
+                      portalId="3977953"
+                      region="na1"
+                      fallbackFields={fallbackFields}
+                      initialValues={quoteInitialValues}
+                      submitButtonText="Request Quote"
+                      successMessage="Thank you! A scientific consultant will contact you within 1 business day."
+                      redirectAfterSubmit={REQUEST_QUOTE_THANK_YOU}
+                      onFallbackSuccess={() => {
+                        window.location.assign(REQUEST_QUOTE_THANK_YOU);
+                      }}
+                    />
+                  ) : (
+                    <div aria-hidden="true" style={{ minHeight: '420px' }} />
+                  )}
                 </div>
               </div>
             </div>

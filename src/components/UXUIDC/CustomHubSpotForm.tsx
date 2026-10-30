@@ -123,6 +123,24 @@ export default function CustomHubSpotForm({
   const fieldRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
+    if (!initialValues) return;
+    setFormData((current) => {
+      let changed = false;
+      const next = { ...current };
+      for (const [name, value] of Object.entries(initialValues)) {
+        if (!value) continue;
+        const existing = current[name];
+        if (typeof existing === 'string' && existing.length > 0) continue;
+        if (Array.isArray(existing) && existing.length > 0) continue;
+        if (existing === value) continue;
+        next[name] = value;
+        changed = true;
+      }
+      return changed ? next : current;
+    });
+  }, [initialValues]);
+
+  useEffect(() => {
     if (submitStatus !== 'error') return;
     errorBannerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }, [submitStatus]);

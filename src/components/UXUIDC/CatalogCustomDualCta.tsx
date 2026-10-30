@@ -35,6 +35,12 @@ export interface CatalogCustomDualCtaProps {
    * section after the page h1, otherwise it skips a level.
    */
   headingLevel?: 2 | 3;
+  /** Generation quote button label. Defaults to the sitewide quote label. */
+  quoteLabel?: string;
+  /** Generation quote destination. Defaults to the request-quote page. */
+  quoteHref?: string;
+  /** Place the custom-model quote before the catalog button. */
+  quoteFirst?: boolean;
 }
 
 const panelEyebrow: CSSProperties = {
@@ -107,6 +113,9 @@ export default function CatalogCustomDualCta({
   className = '',
   flush = false,
   headingLevel = 3,
+  quoteLabel = CUSTOM_MODEL_PANEL.quoteLabel,
+  quoteHref = COMMERCIAL_LINKS.requestQuote,
+  quoteFirst = false,
 }: CatalogCustomDualCtaProps) {
   const Heading = `h${headingLevel}` as 'h2' | 'h3';
   // Panel titles sit one level under the widget title.
@@ -117,11 +126,15 @@ export default function CatalogCustomDualCta({
     medium: utmMedium,
     campaign: `catalog-search-${slug}`,
   });
-  const quoteUrl = commercialUtmHref(COMMERCIAL_LINKS.requestQuote, {
+  const quoteUrl = commercialUtmHref(quoteHref, {
     source: utmSource,
     medium: utmMedium,
     campaign: `catalog-widget-generated-${slug}`,
   });
+  const quoteMicroClass =
+    quoteLabel === CUSTOM_MODEL_PANEL.quoteLabel
+      ? 'w-full whitespace-nowrap sm:w-[19rem]'
+      : 'w-full whitespace-nowrap sm:w-max sm:min-w-[19rem]';
 
   if (utmMedium === 'page-hero') {
     return (
@@ -161,6 +174,7 @@ export default function CatalogCustomDualCta({
               ...microBtn,
               backgroundColor: '#008080',
               color: '#ffffff',
+              order: quoteFirst ? 2 : 0,
             }}
           >
             {lookup.searchLabel}
@@ -172,14 +186,15 @@ export default function CatalogCustomDualCta({
             data-cta-slug={slug}
             data-cta-location={utmMedium}
             data-cta-gene={geneSymbol}
-            className="w-full whitespace-nowrap sm:w-[19rem]"
+            className={quoteMicroClass}
             style={{
               ...microBtn,
               backgroundColor: '#0a253c',
               color: '#ffffff',
+              order: quoteFirst ? 1 : 0,
             }}
           >
-            {CUSTOM_MODEL_PANEL.quoteLabel}
+            {quoteLabel}
             <span aria-hidden="true">→</span>
           </Link>
         </div>
@@ -233,6 +248,7 @@ export default function CatalogCustomDualCta({
             border: '1px solid #d8e3e6',
             borderLeft: '4px solid #008080',
             borderRadius: '6px',
+            order: quoteFirst ? 2 : 0,
           }}
         >
           <div style={{ ...panelEyebrow, color: '#008080' }}>{lookup.eyebrow}</div>
@@ -315,6 +331,7 @@ export default function CatalogCustomDualCta({
             border: '1px solid #d8e3e6',
             borderLeft: '4px solid #0a253c',
             borderRadius: '6px',
+            order: quoteFirst ? 1 : 0,
           }}
         >
           <div style={{ ...panelEyebrow, color: '#0a253c' }}>{CUSTOM_MODEL_PANEL.eyebrow}</div>
@@ -355,7 +372,7 @@ export default function CatalogCustomDualCta({
               marginBottom: '10px',
             }}
           >
-            {CUSTOM_MODEL_PANEL.quoteLabel}
+            {quoteLabel}
             <span aria-hidden="true">→</span>
           </Link>
           <Link
