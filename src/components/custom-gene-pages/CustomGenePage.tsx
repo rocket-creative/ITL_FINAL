@@ -11,6 +11,7 @@ import {
   catalogLookupForGene,
   customGeneHref,
   customGeneIndexPath,
+  fieldValue,
   getCustomGenePage,
   listCustomGenePages,
   relatedTargetSymbols,
@@ -189,8 +190,34 @@ function FieldValue({ label, value }: { label: string; value: string }) {
   return value;
 }
 
+function geneIndexGroups(pages: CustomGenePageData[]): [string, CustomGenePageData[]][] {
+  const sorted = pages.toSorted((a, b) => a.h1.localeCompare(b.h1, 'en', { sensitivity: 'base' }));
+  const groups = new Map<string, CustomGenePageData[]>();
+  for (const page of sorted) {
+    const letter = page.h1.charAt(0).toUpperCase();
+    const list = groups.get(letter);
+    if (list) list.push(page);
+    else groups.set(letter, [page]);
+  }
+  return [...groups.entries()];
+}
+
+function GeneIndexCard({ page }: { page: CustomGenePageData }) {
+  const aliases = fieldValue(page, 'Aliases');
+  return (
+    <li>
+      <Link href={customGeneHref(page.symbol)} className="gene-index-card">
+        <span className="gene-index-symbol">{page.symbol}</span>
+        <span className="gene-index-title">{page.h1}</span>
+        {aliases ? <span className="gene-index-aliases">{aliases}</span> : null}
+      </Link>
+    </li>
+  );
+}
+
 export function CustomGeneIndex() {
   const pages = listCustomGenePages();
+  const groups = geneIndexGroups(pages);
   const crumbs = [
     { name: 'Home', path: '/' },
     { name: 'Mouse Model Generation', path: '/custom-mouse-models/' },
@@ -212,17 +239,28 @@ export function CustomGeneIndex() {
           />
         </div>
       </section>
-      <section style={sectionStyle('#ffffff')}>
+      <nav className="gene-index-letters" aria-label="Genes by letter">
+        <div className="gene-index-letters-inner">
+          {groups.map(([letter]) => (
+            <a key={letter} href={`#gene-letter-${letter}`}>
+              {letter}
+            </a>
+          ))}
+        </div>
+      </nav>
+      <section className="gene-index-directory">
         <div style={column}>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: '12px' }}>
-            {pages.map((page) => (
-              <li key={page.symbol}>
-                <Link href={customGeneHref(page.symbol)} style={{ ...linkStyle, fontSize: '1.05rem' }}>
-                  {page.h1}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <p className="gene-index-count">{pages.length} model generation pages.</p>
+          {groups.map(([letter, letterPages]) => (
+            <div key={letter} className="gene-index-group">
+              <h2 id={`gene-letter-${letter}`}>{letter}</h2>
+              <ul>
+                {letterPages.map((page) => (
+                  <GeneIndexCard key={page.symbol} page={page} />
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
       <StandardPageCtaStack
@@ -231,9 +269,116 @@ export function CustomGeneIndex() {
         quoteHref={customQuoteHref()}
         quoteFirst
       />
+      <style>{geneIndexCss}</style>
     </PageFrame>
   );
 }
+
+const geneIndexCss = `
+.gene-index-letters {
+  position: sticky;
+  top: 108px;
+  z-index: 30;
+  background: #ffffff;
+  border-bottom: 1px solid #d8e3e6;
+}
+.gene-index-letters-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.gene-index-letters a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0 8px;
+  border-radius: 4px;
+  color: #0a253c;
+  background: #f7f9fa;
+  border: 1px solid #d8e3e6;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.gene-index-letters a:hover,
+.gene-index-letters a:focus-visible {
+  color: #ffffff;
+  background: #008080;
+  border-color: #008080;
+  outline: none;
+}
+.gene-index-directory {
+  background: #f7f9fa;
+  padding: 36px 20px 72px;
+}
+.gene-index-count {
+  margin: 0 0 28px;
+  color: #555;
+  font-size: 0.95rem;
+}
+.gene-index-group {
+  margin-bottom: 36px;
+}
+.gene-index-group h2 {
+  scroll-margin-top: 168px;
+  margin: 0 0 14px;
+  color: #0a253c;
+  font-family: Poppins, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.gene-index-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+.gene-index-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  padding: 16px 18px;
+  background: #ffffff;
+  border: 1px solid #d8e3e6;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.gene-index-card:hover,
+.gene-index-card:focus-visible {
+  border-color: #008080;
+  outline: none;
+}
+.gene-index-symbol {
+  color: #008080;
+  font-family: Poppins, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.gene-index-title {
+  color: #0a253c;
+  font-family: Poppins, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.gene-index-aliases {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+`;
 
 export default function CustomGenePage({ page }: { page: CustomGenePageData }) {
   const catalogOverrides = catalogLookupForGene(page);
