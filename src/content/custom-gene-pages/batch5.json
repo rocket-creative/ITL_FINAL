@@ -1,0 +1,675 @@
+[
+  {
+    "symbol": "Tnfrsf4",
+    "h1": "TNFRSF4 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Tnfrsf4"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "TNFRSF4"
+      },
+      {
+        "label": "Aliases",
+        "value": "OX40, CD134"
+      },
+      {
+        "label": "Protein class",
+        "value": "TNF receptor superfamily member (costimulatory)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1p36.33"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:104512"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:11918 · NCBI Gene 7293"
+      }
+    ],
+    "why": [
+      "Tnfrsf4 is the mouse ortholog of human TNFRSF4 and encodes OX40 (CD134), a costimulatory TNF-receptor-superfamily member expressed mainly on activated T cells. Engagement of OX40 by OX40 ligand has been associated with enhanced T-cell proliferation, survival, and cytokine production.",
+      "OX40 is a target of agonist antibodies in cancer immunotherapy and of antagonist approaches in inflammatory diseases such as atopic dermatitis. Tnfrsf4-deficient mice are viable with altered T-cell responses in some models."
+    ],
+    "applications": [
+      "Humanized TNFRSF4 (OX40) models, in which the human receptor replaces the mouse counterpart, have been used to evaluate OX40 agonists and antagonists in immunocompetent mice, sometimes combined with OX40L humanization."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "OX40/OX40 ligand and its role in precision immune oncology. Cancer Metastasis Rev. 2024. doi:10.1007/s10555-024-10184-9",
+      "Mallett S et al. Characterization of the MRC OX40 antigen of activated CD4-positive T lymphocytes. EMBO J. 1990. doi:10.1002/j.1460-2075.1990.tb08211.x"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Tnfsf4 · Cd28 · Tnfrsf9 · Tnfrsf18"
+  },
+  {
+    "symbol": "Icos",
+    "h1": "ICOS Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Icos"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "ICOS"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD278, AILIM"
+      },
+      {
+        "label": "Protein class",
+        "value": "Ig-superfamily costimulatory receptor (CD28 family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2q33.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1858745"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5351 · NCBI Gene 29851"
+      }
+    ],
+    "why": [
+      "Icos is the mouse ortholog of human ICOS and encodes the inducible T-cell costimulator (CD278), a CD28-family receptor expressed on activated T cells. ICOS binds ICOS ligand and has been associated with support of T-cell activation, follicular helper T-cell responses, and antibody production.",
+      "ICOS is under study as a target in cancer immunotherapy and in inflammatory and autoimmune disease. Icos-deficient mice are viable and show impaired germinal-center and T-cell-dependent antibody responses."
+    ],
+    "applications": [
+      "Humanized ICOS models, in which the human receptor replaces the mouse counterpart, have been used to evaluate ICOS-directed agents in defined experimental settings, sometimes combined with ICOS-ligand humanization."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Inducible costimulator and its ligand promote proliferation and migration of tumor cells in cutaneous T-cell lymphoma. Int J Mol Sci. 2026. doi:10.3390/ijms27031408",
+      "Hutloff A et al. ICOS is an inducible T-cell co-stimulator structurally and functionally related to CD28. Nature. 1999. doi:10.1038/16717"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Icoslg · Cd28 · Ctla4 · Cd40lg"
+  },
+  {
+    "symbol": "Ccr8",
+    "h1": "CCR8 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ccr8"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CCR8"
+      },
+      {
+        "label": "Aliases",
+        "value": "CDw198, CMKBR8"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (chemokine receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "3p22.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1201402"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1609 · NCBI Gene 1237"
+      }
+    ],
+    "why": [
+      "Ccr8 is the mouse ortholog of human CCR8 and encodes CC chemokine receptor 8, a class A G-protein-coupled receptor. CCR8 is expressed on certain regulatory T cells and other cells and has been associated with their migration and tissue localization.",
+      "CCR8 is expressed on tumor-infiltrating regulatory T cells, and CCR8-directed agents are under study for selective depletion of these cells in cancer. Ccr8-deficient mice are viable with altered type 2 and regulatory T-cell responses in some models."
+    ],
+    "applications": [
+      "Humanized CCR8 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate CCR8-directed antibodies intended to target tumor-infiltrating regulatory T cells in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "CCR8: a promising therapeutic target against tumor-infiltrating regulatory T cells. Trends Immunol. 2025. doi:10.1016/j.it.2025.01.001",
+      "Tiffany HL et al. Identification of CCR8: a human monocyte and thymus receptor for the CC chemokine I-309. J Exp Med. 1997. doi:10.1084/jem.186.1.165"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ccl1 · Ccr4 · Foxp3 · Ccr10"
+  },
+  {
+    "symbol": "Clec12a",
+    "h1": "CLEC12A Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Clec12a"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CLEC12A"
+      },
+      {
+        "label": "Aliases",
+        "value": "CLL-1, MICL, CD371"
+      },
+      {
+        "label": "Protein class",
+        "value": "C-type lectin-like inhibitory receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "12p13.31"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:3040968"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:31713 · NCBI Gene 160364"
+      }
+    ],
+    "why": [
+      "Clec12a is the mouse ortholog of human CLEC12A and encodes CLEC12A (CLL-1, MICL), a C-type lectin-like inhibitory receptor expressed on myeloid cells. CLEC12A has been associated with regulation of myeloid-cell activation and inflammation.",
+      "CLEC12A is expressed on acute myeloid leukemia cells, including on leukemic-stem-cell-enriched populations, and CLEC12A-directed agents, including bispecific antibodies and CAR approaches, have been evaluated. Clec12a-deficient mice are viable with altered myeloid inflammatory responses."
+    ],
+    "applications": [
+      "Humanized CLEC12A models, in which the human protein replaces the mouse counterpart, have been used to evaluate CLEC12A-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "CLEC12A-directed immunocytokine with target cell-restricted IL-15 activity for treatment of acute myeloid leukemia. Front Immunol. 2025. doi:10.3389/fimmu.2025.1561823",
+      "Marshall ASJ et al. Identification and characterization of a novel human myeloid inhibitory C-type lectin-like receptor (MICL). J Biol Chem. 2004. doi:10.1074/jbc.m313127200"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Clec12b · Clec7a · Clec9a · Trem2"
+  },
+  {
+    "symbol": "Lilrb4b",
+    "h1": "LILRB4 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Lilrb4b"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "LILRB4"
+      },
+      {
+        "label": "Aliases",
+        "value": "ILT3, CD85k; mouse paralogs Lilrb4a/Lilrb4b"
+      },
+      {
+        "label": "Protein class",
+        "value": "Ig-superfamily inhibitory receptor (LILR family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19q13.42"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:102702"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6608 · NCBI Gene 11006"
+      }
+    ],
+    "why": [
+      "LILRB4 (ILT3, CD85k) encodes an immunoglobulin-superfamily inhibitory receptor expressed on myeloid and other cells; the mouse genome contains related paralogs, including Lilrb4b. LILRB4 has been associated with inhibitory signaling and modulation of myeloid-cell and T-cell responses.",
+      "LILRB4 is expressed on monocytic acute myeloid leukemia and on myeloid-derived suppressor cells, and LILRB4-directed agents are under study in cancer. Mouse models have been used to study LILRB4-pathway biology."
+    ],
+    "applications": [
+      "Humanized LILRB4 models, in which the human receptor is expressed in mice, have been used to evaluate LILRB4-directed antibodies and related agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Discovery of galectin-8 as an LILRB4 ligand driving M-MDSCs defines a class of antibodies to fight solid tumors. Cell Rep Med. 2024. doi:10.1016/j.xcrm.2023.101374",
+      "Cella M et al. A novel inhibitory receptor (ILT3) expressed on monocytes, macrophages, and dendritic cells involved in antigen processing. J Exp Med. 1997. doi:10.1084/jem.185.10.1743"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Lilrb2 · Lair1 · Pirb · Fcgr2b"
+  },
+  {
+    "symbol": "Cldn6",
+    "h1": "CLDN6 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cldn6"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CLDN6"
+      },
+      {
+        "label": "Aliases",
+        "value": "claudin-6"
+      },
+      {
+        "label": "Protein class",
+        "value": "Tight-junction claudin (oncofetal antigen)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "16p13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1859284"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:2048 · NCBI Gene 9074"
+      }
+    ],
+    "why": [
+      "Cldn6 is the mouse ortholog of human CLDN6 and encodes claudin-6, a tight-junction membrane protein of the claudin family. Claudin-6 has been associated with epithelial barrier formation and is expressed during development.",
+      "Claudin-6 shows limited expression in most normal adult tissues and re-expression in several tumors, which has made it a target of CAR T-cell and antibody approaches under study. Mice with altered Cldn6 expression show epithelial barrier changes."
+    ],
+    "applications": [
+      "Humanized CLDN6 models, in which the human protein replaces the mouse counterpart, have been used to evaluate claudin-6-directed therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Claudin 1, 4, 6 and 18 isoform 2 as targets for the treatment of cancer (Review). Int J Mol Med. 2024. doi:10.3892/ijmm.2024.5424",
+      "Turksen K, Troy TC. Permeability barrier dysfunction in transgenic mice overexpressing claudin 6. Development. 2002. doi:10.1242/dev.129.7.1775"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cldn3 · Cldn4 · Cldn9 · Cldn18"
+  },
+  {
+    "symbol": "Muc1",
+    "h1": "MUC1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Muc1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MUC1"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD227, PEM, EMA"
+      },
+      {
+        "label": "Protein class",
+        "value": "Transmembrane mucin glycoprotein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1q22"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:97231"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:7508 · NCBI Gene 4582"
+      }
+    ],
+    "why": [
+      "Muc1 is the mouse ortholog of human MUC1 and encodes mucin 1 (CD227), a transmembrane glycoprotein expressed on the apical surface of many epithelia. MUC1 has been associated with lubrication, barrier protection, and cell signaling.",
+      "MUC1 is overexpressed and aberrantly glycosylated on many carcinomas, and MUC1-directed antibodies, antibody–drug conjugates, vaccines, and cell therapies have been evaluated; clinical results have varied. Muc1-deficient mice are viable with increased susceptibility to certain infections."
+    ],
+    "applications": [
+      "Humanized MUC1 models, which express human MUC1 (including tumor-associated forms), have been used to study MUC1 biology and to evaluate MUC1-directed therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "A descriptive summary of tumor-associated MUC1 (TA-MUC1) expression in epithelial malignancies: a systematic review. Cureus. 2025. doi:10.7759/cureus.95636",
+      "Gendler SJ et al. Molecular cloning and expression of human tumor-associated polymorphic epithelial mucin. J Biol Chem. 1990. doi:10.1016/s0021-9258(18)77254-2"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Muc16 · Muc4 · Muc5ac · Erbb2"
+  },
+  {
+    "symbol": "Il1b",
+    "h1": "IL1B Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il1b"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL1B"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-1β, IL1F2"
+      },
+      {
+        "label": "Protein class",
+        "value": "IL-1 family cytokine"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2q14.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96543"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5992 · NCBI Gene 3553"
+      }
+    ],
+    "why": [
+      "Il1b is the mouse ortholog of human IL1B and encodes interleukin-1 beta, an IL-1-family cytokine produced largely by myeloid cells. IL-1β is generated from a precursor by inflammasome-associated processing and has been associated with promotion of inflammation and fever.",
+      "IL-1β is implicated in a range of inflammatory and autoinflammatory conditions, and IL-1β-directed agents are in clinical use. Il1b-deficient mice are viable and show reduced inflammatory responses in several models."
+    ],
+    "applications": [
+      "Humanized IL1B models, in which the human cytokine replaces the mouse counterpart, have been used to evaluate IL-1β-directed agents in defined experimental settings.",
+      "Il1b knockout mice have been used to study inflammation."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Safety and efficacy of canakinumab for the prevention and control of type 2 diabetes mellitus and its complications: a systematic review. Cureus. 2024. doi:10.7759/cureus.67065",
+      "March CJ et al. Cloning, sequence and expression of two distinct human interleukin-1 complementary DNAs. Nature. 1985. doi:10.1038/315641a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il1a · Il1rn · Il18 · Nlrp3"
+  },
+  {
+    "symbol": "Il18",
+    "h1": "IL18 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il18"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL18"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-1F4, IGIF"
+      },
+      {
+        "label": "Protein class",
+        "value": "IL-1 family cytokine"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11q23.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:107936"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5986 · NCBI Gene 3606"
+      }
+    ],
+    "why": [
+      "Il18 is the mouse ortholog of human IL18 and encodes interleukin-18, an IL-1-family cytokine that, like IL-1β, is processed from a precursor. IL-18 signals through its receptor and has been associated with promotion of interferon-gamma production and regulation of innate and adaptive immunity.",
+      "IL-18 is implicated in autoinflammatory and other immune-mediated conditions, and IL-18-pathway-directed approaches are under study; IL-18 binding protein regulates its activity. Il18-deficient mice are viable with altered interferon-gamma responses."
+    ],
+    "applications": [
+      "Humanized IL18 models, in which the human cytokine replaces the mouse counterpart, have been used to evaluate IL-18-pathway-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Associations between circulating interleukin-18 levels and adult-onset Still’s disease: a meta-analysis. J Rheum Dis. 2024. doi:10.4078/jrd.2024.0095",
+      "Okamura H et al. Cloning of a new cytokine that induces IFN-gamma production by T cells. Nature. 1995. doi:10.1038/378088a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il18bp · Il18r1 · Il1b · Ifng"
+  },
+  {
+    "symbol": "Ifnar1",
+    "h1": "IFNAR1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ifnar1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IFNAR1"
+      },
+      {
+        "label": "Aliases",
+        "value": "IFNAR, AVP"
+      },
+      {
+        "label": "Protein class",
+        "value": "Type I interferon receptor subunit (class II cytokine receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "21q22.11"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:107658"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5432 · NCBI Gene 3454"
+      }
+    ],
+    "why": [
+      "Ifnar1 is the mouse ortholog of human IFNAR1 and encodes a subunit of the type I interferon receptor, which together with IFNAR2 binds type I interferons. IFNAR1 signaling, through the JAK-STAT pathway, has been associated with antiviral and immunomodulatory responses.",
+      "Excess type I interferon signaling is implicated in systemic lupus erythematosus and related conditions, and an antibody blocking IFNAR1 is approved for lupus. Ifnar1-deficient mice are viable and show impaired antiviral responses."
+    ],
+    "applications": [
+      "Humanized IFNAR1 models, in which the human subunit replaces the mouse counterpart, have been used to evaluate IFNAR1-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Rationale for investigating the use of anifrolumab in neuropsychiatric systemic lupus erythematosus: a combined narrative and case-based systematic literature review. Front Immunol. 2026. doi:10.3389/fimmu.2026.1750071",
+      "Uzé G et al. Genetic transfer of a functional human interferon alpha receptor into mouse cells: cloning and expression of its cDNA. Cell. 1990. doi:10.1016/0092-8674(90)90738-z"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ifnar2 · Ifnb1 · Jak1 · Stat1"
+  },
+  {
+    "symbol": "Apoc3",
+    "h1": "APOC3 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Apoc3"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "APOC3"
+      },
+      {
+        "label": "Aliases",
+        "value": "APOCIII, apoC-III"
+      },
+      {
+        "label": "Protein class",
+        "value": "Apolipoprotein (lipid metabolism)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11q23.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88055"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:610 · NCBI Gene 345"
+      }
+    ],
+    "why": [
+      "Apoc3 is the mouse ortholog of human APOC3 and encodes apolipoprotein C-III, a small secreted apolipoprotein produced mainly by the liver. APOC3 has been associated with inhibition of lipoprotein lipase and with regulation of plasma triglycerides.",
+      "Loss-of-function APOC3 variants are associated with low triglycerides, and APOC3-directed agents are used or under study for severe hypertriglyceridemia. Apoc3-deficient mice show reduced plasma triglycerides, while transgenic overexpression raises them."
+    ],
+    "applications": [
+      "Humanized APOC3 models, in which the human protein replaces the mouse counterpart, have been used to evaluate APOC3-directed agents, including antisense and related approaches, in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Safety and efficacy of antisense oligonucleotides on triglyceride, apolipoprotein C-III, and other lipid parameters in hypertriglyceridemia: a network meta-analysis of randomized controlled trials. Lipids Health Dis. 2025. doi:10.1186/s12944-024-02389-2",
+      "Ito Y et al. Hypertriglyceridemia as a result of human apo CIII gene expression in transgenic mice. Science. 1990. doi:10.1126/science.2300801"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Apoa1 · Apoa4 · Apoa5 · Lpl"
+  },
+  {
+    "symbol": "Fcgrt",
+    "h1": "FCGRT Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Fcgrt"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "FCGRT"
+      },
+      {
+        "label": "Aliases",
+        "value": "FcRn, neonatal Fc receptor"
+      },
+      {
+        "label": "Protein class",
+        "value": "MHC class I-like Fc receptor (neonatal Fc receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19q13.33"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:103017"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3621 · NCBI Gene 2217"
+      }
+    ],
+    "why": [
+      "Fcgrt is the mouse ortholog of human FCGRT and encodes the neonatal Fc receptor (FcRn), an MHC class I-like receptor that binds IgG and albumin. FcRn has been associated with recycling and extended half-life of IgG and albumin and with transfer of IgG across cellular barriers.",
+      "FcRn blockade reduces circulating IgG and is used in antibody-mediated autoimmune diseases; FcRn also influences the pharmacokinetics of therapeutic antibodies. Fcgrt-deficient mice show reduced IgG and albumin half-life."
+    ],
+    "applications": [
+      "Humanized FCGRT (FcRn) models, often combined with human albumin or IgG components, have been used to study antibody and albumin pharmacokinetics and to evaluate FcRn-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Neonatal Fc receptor — biology and therapeutics. N Engl J Med. 2025. doi:10.1056/nejmra2312718",
+      "Story CM et al. A major histocompatibility complex class I-like Fc receptor cloned from human placenta: possible role in transfer of immunoglobulin G from mother to fetus. J Exp Med. 1994. doi:10.1084/jem.180.6.2377"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: B2m · Fcgr2b · Alb · Lrp2"
+  }
+]

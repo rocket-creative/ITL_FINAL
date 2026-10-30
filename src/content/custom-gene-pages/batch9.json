@@ -1,0 +1,674 @@
+[
+  {
+    "symbol": "Mpl",
+    "h1": "MPL Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Mpl"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MPL"
+      },
+      {
+        "label": "Aliases",
+        "value": "TPOR, CD110"
+      },
+      {
+        "label": "Protein class",
+        "value": "Type I cytokine receptor (thrombopoietin receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1p34.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:97076"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:7217 · NCBI Gene 4352"
+      }
+    ],
+    "why": [
+      "Mpl is the mouse ortholog of human MPL and encodes the thrombopoietin receptor (CD110, TPOR), a type I cytokine receptor on megakaryocytes and hematopoietic progenitors. MPL binds thrombopoietin and has been associated with platelet production and hematopoietic stem-cell maintenance.",
+      "MPL mutations are associated with myeloproliferative neoplasms and inherited thrombocytopenias, and thrombopoietin-receptor agonists are used for immune thrombocytopenia and other conditions. Mpl-deficient mice show reduced platelets and megakaryocytes."
+    ],
+    "applications": [
+      "Humanized MPL models, in which the human receptor replaces the mouse counterpart, have been used to evaluate thrombopoietin-receptor-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Thrombopoietin receptor agonists and thrombotic events in immune thrombocytopenia: a systematic review and meta-analysis of randomized controlled trials. Biomed Rep. 2024. doi:10.3892/br.2024.1732",
+      "Vigon I et al. Molecular cloning and characterization of MPL, the human homolog of the v-mpl oncogene: identification of a member of the hematopoietic growth factor receptor superfamily. Proc Natl Acad Sci U S A. 1992. doi:10.1073/pnas.89.12.5640"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Thpo · Jak2 · Gata1 · Calr"
+  },
+  {
+    "symbol": "Csf1",
+    "h1": "CSF1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Csf1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CSF1"
+      },
+      {
+        "label": "Aliases",
+        "value": "M-CSF, MCSF"
+      },
+      {
+        "label": "Protein class",
+        "value": "Secreted/membrane cytokine (macrophage CSF)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1p13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1339753"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:2432 · NCBI Gene 1435"
+      }
+    ],
+    "why": [
+      "Csf1 is the mouse ortholog of human CSF1 and encodes macrophage colony-stimulating factor (M-CSF), a cytokine that signals through the receptor CSF1R. CSF1 has been associated with the differentiation, survival, and function of macrophages and related myeloid cells.",
+      "The CSF1/CSF1R axis has been associated with tumor-associated macrophages, tenosynovial giant cell tumor, and fibrotic and inflammatory conditions, and CSF1-pathway-directed agents are used or under study. Csf1-deficient mice (op/op) show reduced macrophages and osteopetrosis."
+    ],
+    "applications": [
+      "Humanized CSF1 models, in which the human cytokine replaces the mouse counterpart, have been used to support human myeloid-cell functions and to evaluate CSF1-pathway-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Efficacy and safety of CSF1R inhibitors for recurrent or unresectable tenosynovial giant cell tumor: a systematic review and meta-analysis of phase III randomized controlled trials. Asia Pac J Clin Oncol. 2026. doi:10.1111/ajco.70211",
+      "Kawasaki ES et al. Molecular cloning of a complementary DNA encoding human macrophage-specific colony-stimulating factor (CSF-1). Science. 1985. doi:10.1126/science.2996129"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Csf1r · Csf2 · Il34 · Spi1"
+  },
+  {
+    "symbol": "Il7r",
+    "h1": "IL7R Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il7r"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL7R"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD127, IL7RA"
+      },
+      {
+        "label": "Protein class",
+        "value": "Type I cytokine receptor subunit (CD127)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "5p13.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96562"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6024 · NCBI Gene 3575"
+      }
+    ],
+    "why": [
+      "Il7r is the mouse ortholog of human IL7R and encodes the interleukin-7 receptor alpha chain (CD127), which pairs with the common gamma chain. IL-7 receptor signaling has been associated with development and homeostasis of T cells and other lymphocytes.",
+      "IL7R alterations are associated with severe combined immunodeficiency and with T-cell acute lymphoblastic leukemia, and IL-7-pathway-directed approaches are under study. Il7r-deficient mice show impaired lymphocyte development."
+    ],
+    "applications": [
+      "Humanized IL7R models, in which the human chain replaces the mouse counterpart, have been used to study IL-7-dependent lymphocyte biology and to evaluate IL-7-pathway-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Potential of interleukin-7 in sepsis as a biomarker and therapeutic agent: a narrative review. Front Med (Lausanne). 2025. doi:10.3389/fmed.2025.1649049",
+      "Goodwin RG et al. Cloning of the human and murine interleukin-7 receptors: demonstration of a soluble form and homology to a new receptor superfamily. Cell. 1990. doi:10.1016/0092-8674(90)90342-c"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il7 · Il2rg · Jak3 · Tslp"
+  },
+  {
+    "symbol": "Dkk1",
+    "h1": "DKK1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Dkk1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "DKK1"
+      },
+      {
+        "label": "Aliases",
+        "value": "Dickkopf-1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Secreted Wnt antagonist"
+      },
+      {
+        "label": "Location (human)",
+        "value": "10q21.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1329040"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:2891 · NCBI Gene 22943"
+      }
+    ],
+    "why": [
+      "Dkk1 is the mouse ortholog of human DKK1 and encodes Dickkopf-1, a secreted antagonist of the Wnt/β-catenin pathway. DKK1 has been associated with regulation of Wnt signaling in development and bone.",
+      "DKK1 has been associated with bone loss in multiple myeloma and with roles in several cancers and immune regulation, and DKK1-directed agents are under study. Dkk1-deficient and mutant mice show skeletal and developmental phenotypes."
+    ],
+    "applications": [
+      "Humanized DKK1 models, in which the human protein replaces the mouse counterpart, have been used to evaluate DKK1-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Stroma-derived Dickkopf-1 contributes to the suppression of NK cell cytotoxicity in breast cancer. Nat Commun. 2025. doi:10.1038/s41467-025-56420-w",
+      "Glinka A et al. Dickkopf-1 is a member of a new family of secreted proteins and functions in head induction. Nature. 1998. doi:10.1038/34848"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Wnt3a · Lrp6 · Kremen1 · Ctnnb1"
+  },
+  {
+    "symbol": "Gpnmb",
+    "h1": "GPNMB Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Gpnmb"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "GPNMB"
+      },
+      {
+        "label": "Aliases",
+        "value": "osteoactivin, DC-HIL, NMB"
+      },
+      {
+        "label": "Protein class",
+        "value": "Transmembrane glycoprotein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "7p15.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1934765"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4462 · NCBI Gene 10457"
+      }
+    ],
+    "why": [
+      "Gpnmb is the mouse ortholog of human GPNMB and encodes glycoprotein NMB (osteoactivin, DC-HIL), a transmembrane glycoprotein expressed on several cell types including macrophages and melanocytes. GPNMB has been associated with roles in tissue repair and modulation of immune responses.",
+      "GPNMB is overexpressed on melanoma and other tumors and has been studied as an antibody–drug-conjugate target; it has also been associated with Parkinson’s disease risk. Gpnmb-deficient mice show altered tissue responses in some models."
+    ],
+    "applications": [
+      "Humanized GPNMB models, in which the human protein replaces the mouse counterpart, have been used to evaluate GPNMB-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Tumor associated microglia/macrophages utilize GPNMB to promote tumor growth and alter immune cell infiltration in glioma. Acta Neuropathol Commun. 2024. doi:10.1186/s40478-024-01754-7",
+      "Weterman MA et al. nmb, a novel gene, is expressed in low-metastatic human melanoma cell lines and xenografts. Int J Cancer. 1995. doi:10.1002/ijc.2910600111"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Mitf · Pmel · Cd63 · Sdc4"
+  },
+  {
+    "symbol": "Cx3cl1",
+    "h1": "CX3CL1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cx3cl1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CX3CL1"
+      },
+      {
+        "label": "Aliases",
+        "value": "fractalkine, neurotactin"
+      },
+      {
+        "label": "Protein class",
+        "value": "CX3C chemokine (membrane-bound and soluble)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "16q21"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1097153"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:10647 · NCBI Gene 6376"
+      }
+    ],
+    "why": [
+      "Cx3cl1 is the mouse ortholog of human CX3CL1 and encodes fractalkine, a chemokine that exists in membrane-bound and soluble forms and signals through the receptor CX3CR1. CX3CL1 has been associated with adhesion and recruitment of monocytes and with neuron-microglia communication.",
+      "CX3CL1-CX3CR1 signaling has been associated with neuroinflammatory, inflammatory, and other conditions, and CX3CL1-pathway-directed approaches are under study. Cx3cl1-deficient mice show altered monocyte and microglial responses."
+    ],
+    "applications": [
+      "Humanized CX3CL1 models, in which the human chemokine replaces the mouse counterpart, have been used to evaluate CX3CL1-pathway-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The complex role of the chemokine CX3CL1/fractalkine in major depressive disorder: a narrative review of preclinical and clinical studies. Brain Behav Immun Health. 2024. doi:10.1016/j.bbih.2024.100778",
+      "Bazan JF et al. A new class of membrane-bound chemokine with a CX3C motif. Nature. 1997. doi:10.1038/385640a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cx3cr1 · Ccl2 · Cxcl12 · Itgb1"
+  },
+  {
+    "symbol": "Cxcr5",
+    "h1": "CXCR5 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cxcr5"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CXCR5"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD185, BLR1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (chemokine receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11q23.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:103567"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1060 · NCBI Gene 643"
+      }
+    ],
+    "why": [
+      "Cxcr5 is the mouse ortholog of human CXCR5 and encodes CXCR5 (CD185), a class A G-protein-coupled chemokine receptor that binds CXCL13. CXCR5 has been associated with homing of B cells and follicular helper T cells to lymphoid follicles.",
+      "CXCR5 has been associated with germinal-center responses, autoimmune conditions, and certain lymphomas, and CXCR5-directed approaches are under study, including in cell therapies. Cxcr5-deficient mice show disrupted lymphoid architecture."
+    ],
+    "applications": [
+      "Humanized CXCR5 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate CXCR5-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Chemokine CXCL13-CXCR5 signaling in neuroinflammation and pathogenesis of chronic pain and neurological diseases. Cell Mol Biol Lett. 2024. doi:10.1186/s11658-024-00653-y",
+      "Förster R et al. A putative chemokine receptor, BLR1, directs B cell migration to defined lymphoid organs and specific anatomic compartments of the spleen. Cell. 1996. doi:10.1016/s0092-8674(00)81798-5"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cxcl13 · Bcl6 · Cxcr4 · Ccr7"
+  },
+  {
+    "symbol": "Agt",
+    "h1": "AGT Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Agt"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "AGT"
+      },
+      {
+        "label": "Aliases",
+        "value": "angiotensinogen, SERPINA8"
+      },
+      {
+        "label": "Protein class",
+        "value": "Secreted serpin / renin-angiotensin precursor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1q42.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:87963"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:333 · NCBI Gene 183"
+      }
+    ],
+    "why": [
+      "Agt is the mouse ortholog of human AGT and encodes angiotensinogen, a secreted precursor of the renin-angiotensin system produced mainly by the liver. Angiotensinogen is cleaved by renin to generate angiotensin I and has been associated with regulation of blood pressure and fluid balance.",
+      "The renin-angiotensin system is central to blood-pressure regulation, and angiotensinogen is targeted by RNA-interference approaches under study for hypertension. Agt-deficient mice show low blood pressure and kidney abnormalities."
+    ],
+    "applications": [
+      "Humanized AGT models, in which the human protein replaces the mouse counterpart, have been used to evaluate angiotensinogen-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "RNA interference with zilebesiran for mild to moderate hypertension. JAMA. 2024. doi:10.1001/jama.2024.0728",
+      "Kunapuli SP, Kumar A. Molecular cloning of human angiotensinogen cDNA and evidence for the presence of its mRNA in rat heart. Circ Res. 1987. doi:10.1161/01.res.60.5.786"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ren1 · Ace · Agtr1a · Agtr2"
+  },
+  {
+    "symbol": "Ren1",
+    "h1": "REN Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ren1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "REN"
+      },
+      {
+        "label": "Aliases",
+        "value": "renin; mouse Ren1/Ren2"
+      },
+      {
+        "label": "Protein class",
+        "value": "Aspartyl protease (renin-angiotensin system)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1q32.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:97898"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:9958 · NCBI Gene 5972"
+      }
+    ],
+    "why": [
+      "REN encodes renin, an aspartyl protease secreted mainly by the kidney; mouse strains carry one or two renin genes (Ren1, Ren2). Renin cleaves angiotensinogen to generate angiotensin I and has been associated with the rate-limiting step of the renin-angiotensin system.",
+      "The renin-angiotensin system is central to blood-pressure and fluid regulation, and renin and its pathway are targeted by several antihypertensive therapies. Mice with altered renin genes show changes in blood pressure and kidney physiology."
+    ],
+    "applications": [
+      "Humanized REN models, in which the human gene replaces the mouse counterpart, have been used to study renin biology and to evaluate renin-system-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The emerging role of aldosterone synthase inhibitors in overcoming renin-angiotensin-aldosterone system therapy limitations: a narrative review. Card Fail Rev. 2025. doi:10.15420/cfr.2025.09",
+      "Imai T et al. Cloning and sequence analysis of cDNA for human renin precursor. Proc Natl Acad Sci U S A. 1983. doi:10.1073/pnas.80.24.7405"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Agt · Ace · Agtr1a · Kng1"
+  },
+  {
+    "symbol": "Dsg2",
+    "h1": "DSG2 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Dsg2"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "DSG2"
+      },
+      {
+        "label": "Aliases",
+        "value": "desmoglein-2"
+      },
+      {
+        "label": "Protein class",
+        "value": "Desmosomal cadherin"
+      },
+      {
+        "label": "Location (human)",
+        "value": "18q12.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1196466"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3049 · NCBI Gene 1829"
+      }
+    ],
+    "why": [
+      "Dsg2 is the mouse ortholog of human DSG2 and encodes desmoglein-2, a desmosomal cadherin that mediates cell-cell adhesion in epithelia and cardiac muscle. Desmoglein-2 has been associated with maintenance of tissue integrity.",
+      "DSG2 mutations are associated with arrhythmogenic cardiomyopathy, and desmoglein-2 has roles in epithelial cancers; it also serves as a receptor for certain adenoviruses. Dsg2 mutant mice develop cardiac phenotypes resembling the human disease."
+    ],
+    "applications": [
+      "Humanized DSG2 models, including those carrying disease-associated alleles, have been used to study desmoglein-2 biology and cardiac disease in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Endurance training and preload reduction in heterozygous DSG2 mutant mice with an arrhythmogenic cardiomyopathy-like phenotype. Biomedicines. 2024. doi:10.3390/biomedicines12050985",
+      "Pilichou K et al. Mutations in desmoglein-2 gene are associated with arrhythmogenic right ventricular cardiomyopathy. Circulation. 2006. doi:10.1161/circulationaha.105.583674"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Dsp · Pkp2 · Dsg1 · Jup"
+  },
+  {
+    "symbol": "Aplnr",
+    "h1": "APLNR Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Aplnr"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "APLNR"
+      },
+      {
+        "label": "Aliases",
+        "value": "APJ, apelin receptor"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (apelin receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11q12.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1346086"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:339 · NCBI Gene 187"
+      }
+    ],
+    "why": [
+      "Aplnr is the mouse ortholog of human APLNR and encodes the apelin receptor (APJ), a class A G-protein-coupled receptor that binds the peptides apelin and ELABELA/Toddler. APLNR signaling has been associated with cardiovascular function and fluid homeostasis.",
+      "The apelin-APLNR system has been studied as a target in heart failure, pulmonary hypertension, and other cardiovascular conditions. Aplnr-deficient mice show cardiovascular and developmental phenotypes."
+    ],
+    "applications": [
+      "Humanized APLNR models, in which the human receptor replaces the mouse counterpart, have been used to evaluate apelin-receptor-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Apelin receptor pharmacology in the human cardiovascular system and emerging clinical applications. Pharmacol Rev. 2026. doi:10.1016/j.pharmr.2026.100130",
+      "O’Dowd BF et al. A human gene that shows identity with the gene encoding the angiotensin receptor is located on chromosome 11. Gene. 1993. doi:10.1016/0378-1119(93)90495-o"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Apln · Apela · Agtr1a · Gnai1"
+  },
+  {
+    "symbol": "Il21",
+    "h1": "IL21 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il21"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL21"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-21"
+      },
+      {
+        "label": "Protein class",
+        "value": "Type I cytokine (common gamma chain)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "4q27"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1890474"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6005 · NCBI Gene 59067"
+      }
+    ],
+    "why": [
+      "Il21 is the mouse ortholog of human IL21 and encodes interleukin-21, a common-gamma-chain cytokine produced mainly by follicular helper T cells and other T-cell subsets. IL-21 has been associated with regulation of B-cell, T-cell, and natural killer-cell responses.",
+      "IL-21 has been associated with antitumor immunity and with autoimmune conditions, and IL-21-pathway-directed approaches are under study. Il21-deficient mice show altered antibody and lymphocyte responses."
+    ],
+    "applications": [
+      "Humanized IL21 models, in which the human cytokine replaces the mouse counterpart, have been used to evaluate IL-21-pathway-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Therapeutic potential of interleukin-21 in cancer. Front Immunol. 2024. doi:10.3389/fimmu.2024.1369743",
+      "Parrish-Novak J et al. Interleukin 21 and its receptor are involved in NK cell expansion and regulation of lymphocyte function. Nature. 2000. doi:10.1038/35040504"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il21r · Il2rg · Bcl6 · Il4"
+  }
+]

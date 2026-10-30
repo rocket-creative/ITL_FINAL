@@ -20,6 +20,7 @@ import {
 import { CRE_DRIVERS } from '@/lib/search/creDrivers';
 import { REVENUE_PILLAR_PATHS } from '@/lib/seo/revenuePillars';
 import { resolveCanonicalModSlug } from '@/lib/gene-expansion/synonymRedirects';
+import { customGeneSitemapPaths } from '@/content/custom-gene-pages/registry';
 
 type SitemapEntry = {
   url: string;
@@ -304,6 +305,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
+    });
+  }
+
+  for (const route of customGeneSitemapPaths()) {
+    entries.push({
+      url: url(route),
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     });
   }
 

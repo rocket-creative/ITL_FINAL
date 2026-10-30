@@ -1,0 +1,674 @@
+[
+  {
+    "symbol": "Cd2",
+    "h1": "CD2 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd2"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD2"
+      },
+      {
+        "label": "Aliases",
+        "value": "LFA-2, T11"
+      },
+      {
+        "label": "Protein class",
+        "value": "Ig-superfamily T/NK adhesion receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1p13.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88320"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1639 · NCBI Gene 914"
+      }
+    ],
+    "why": [
+      "Cd2 is the mouse ortholog of human CD2 and encodes CD2 (LFA-2, T11), an immunoglobulin-superfamily adhesion receptor on T cells and natural killer cells. CD2 binds CD58 (or CD48 in mice) and has been associated with cell adhesion and costimulation of T-cell activation.",
+      "CD2 is a target of agents used in psoriasis and transplantation and has been studied in T-cell-directed therapy. Cd2-deficient mice are viable with altered T-cell responses in some settings."
+    ],
+    "applications": [
+      "Humanized CD2 models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD2-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Revisiting T-cell adhesion molecules as potential targets for cancer immunotherapy: CD226 and CD2. Exp Mol Med. 2024. doi:10.1038/s12276-024-01317-9",
+      "Sewell WA et al. Molecular cloning of the human T-lymphocyte surface CD2 (T11) antigen. Proc Natl Acad Sci U S A. 1986. doi:10.1073/pnas.83.22.8718"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd58 · Cd48 · Cd2ap · Lck"
+  },
+  {
+    "symbol": "Ccr6",
+    "h1": "CCR6 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ccr6"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CCR6"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD196, CMKBR6"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (chemokine receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "6q27"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1333797"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1607 · NCBI Gene 1235"
+      }
+    ],
+    "why": [
+      "Ccr6 is the mouse ortholog of human CCR6 and encodes CCR6 (CD196), a class A G-protein-coupled chemokine receptor that binds CCL20. CCR6 is expressed on Th17 cells, regulatory T cells, and other leukocytes and has been associated with their recruitment to mucosal and inflamed tissues.",
+      "CCR6 has been associated with psoriasis, inflammatory bowel disease, and tumor immunity, and CCR6-pathway-directed approaches are under study. Ccr6-deficient mice show altered mucosal immune responses."
+    ],
+    "applications": [
+      "Humanized CCR6 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate CCR6-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Tumor-associated macrophages promote bladder cancer metastasis through the CCL20-CCR6 axis. Neoplasia. 2024. doi:10.1016/j.neo.2024.101103",
+      "Baba M et al. Identification of CCR6, the specific receptor for a novel lymphocyte-directed CC chemokine LARC. J Biol Chem. 1997. doi:10.1074/jbc.272.23.14893"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ccl20 · Rorc · Il17a · Ccr7"
+  },
+  {
+    "symbol": "Cxcr6",
+    "h1": "CXCR6 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cxcr6"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CXCR6"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD186, Bonzo"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (chemokine receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "3p21.31"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1934582"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:16647 · NCBI Gene 10663"
+      }
+    ],
+    "why": [
+      "Cxcr6 is the mouse ortholog of human CXCR6 and encodes CXCR6 (CD186), a class A G-protein-coupled chemokine receptor that binds CXCL16. CXCR6 has been associated with the positioning and retention of tissue-resident and other T cells.",
+      "CXCR6 has been associated with antitumor immunity, liver disease, and inflammation, and the CXCL16-CXCR6 axis is under study. Cxcr6-deficient mice show altered tissue-resident T-cell populations."
+    ],
+    "applications": [
+      "Humanized CXCR6 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate CXCR6-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Advancements in understanding and treating CXCL16/CXCR6 in tumors and in inflammatory diseases: a narrative review. Front Immunol. 2026. doi:10.3389/fimmu.2026.1802735",
+      "Matloubian M et al. A transmembrane CXC chemokine is a ligand for HIV-coreceptor Bonzo. Nat Immunol. 2000. doi:10.1038/79738"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cxcl16 · Cxcr3 · Itgae · S1pr1"
+  },
+  {
+    "symbol": "Il12b",
+    "h1": "IL12B Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il12b"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL12B"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-12/IL-23 p40, NKSF2"
+      },
+      {
+        "label": "Protein class",
+        "value": "Cytokine subunit (shared IL-12/IL-23 p40)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "5q33.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96540"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5970 · NCBI Gene 3593"
+      }
+    ],
+    "why": [
+      "Il12b is the mouse ortholog of human IL12B and encodes the p40 subunit shared by interleukin-12 and interleukin-23. The p40 subunit pairs with p35 to form IL-12 and with p19 to form IL-23, cytokines that have been associated with Th1 and Th17 responses.",
+      "The shared p40 subunit is targeted by antibodies used in psoriasis and inflammatory bowel disease. Il12b-deficient mice show impaired IL-12- and IL-23-dependent responses."
+    ],
+    "applications": [
+      "Humanized IL12B models, in which the human subunit replaces the mouse counterpart, have been used to evaluate p40-directed biologics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Risankizumab versus ustekinumab for moderate-to-severe Crohn’s disease. N Engl J Med. 2024. doi:10.1056/nejmoa2314585",
+      "Gubler U et al. Coexpression of two distinct genes is required to generate secreted bioactive cytotoxic lymphocyte maturation factor. Proc Natl Acad Sci U S A. 1991. doi:10.1073/pnas.88.10.4143"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il12a · Il23a · Il12rb1 · Il12rb2"
+  },
+  {
+    "symbol": "Cd46",
+    "h1": "CD46 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd46"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD46"
+      },
+      {
+        "label": "Aliases",
+        "value": "MCP, membrane cofactor protein"
+      },
+      {
+        "label": "Protein class",
+        "value": "Complement regulatory protein (RCA family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1q32.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1203290"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6953 · NCBI Gene 4179"
+      }
+    ],
+    "why": [
+      "Cd46 is the mouse ortholog of human CD46 and encodes membrane cofactor protein (MCP), a complement-regulatory protein that acts as a cofactor for inactivation of complement components C3b and C4b. CD46 has been associated with protection of host cells from complement.",
+      "CD46 serves as a receptor for certain measles virus strains and other pathogens and has been associated with roles in cancer, and CD46-directed approaches are under study. In mice, Cd46 is expressed mainly in the testis, unlike the broad expression of human CD46."
+    ],
+    "applications": [
+      "Humanized CD46 models, which express human CD46, have been used to study CD46 biology, including as a viral receptor, and to evaluate CD46-directed approaches in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Complement regulatory protein CD46 promotes bladder cancer metastasis through activation of MMP9. Int J Oncol. 2024. doi:10.3892/ijo.2024.5659",
+      "Dörig RE et al. The human CD46 molecule is a receptor for measles virus (Edmonston strain). Cell. 1993. doi:10.1016/0092-8674(93)80071-l"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd55 · Cd59a · Cr1l · C3"
+  },
+  {
+    "symbol": "Cd24a",
+    "h1": "CD24 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd24a"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD24"
+      },
+      {
+        "label": "Aliases",
+        "value": "HSA, SBA (mouse Cd24a)"
+      },
+      {
+        "label": "Protein class",
+        "value": "GPI-anchored cell-surface protein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "6q21"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88323"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1645 · NCBI Gene 100133941"
+      }
+    ],
+    "why": [
+      "CD24 (mouse symbol Cd24a) encodes CD24, a small GPI-anchored cell-surface protein expressed on many cell types. CD24 binds the inhibitory receptor Siglec-10 and has been associated with modulation of immune responses.",
+      "CD24 has been associated with a macrophage ‘don’t eat me’ signal in several tumors, and CD24-directed approaches are under study. Cd24a-deficient mice are viable with altered immune and hematopoietic responses."
+    ],
+    "applications": [
+      "Humanized CD24 models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD24-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Targeting CD24/Siglec-10 signal pathway for cancer immunotherapy: recent advances and future directions. Cancer Immunol Immunother. 2024. doi:10.1007/s00262-023-03606-0",
+      "Barkal AA et al. CD24 signalling through macrophage Siglec-10 is a target for cancer immunotherapy. Nature. 2019. doi:10.1038/s41586-019-1456-0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Siglecg · Selp · Cd44 · Spn"
+  },
+  {
+    "symbol": "Angpt2",
+    "h1": "ANGPT2 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Angpt2"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "ANGPT2"
+      },
+      {
+        "label": "Aliases",
+        "value": "Ang-2"
+      },
+      {
+        "label": "Protein class",
+        "value": "Secreted angiopoietin (Tie2 ligand)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "8p23.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1202890"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:485 · NCBI Gene 285"
+      }
+    ],
+    "why": [
+      "Angpt2 is the mouse ortholog of human ANGPT2 and encodes angiopoietin-2, a secreted ligand of the endothelial receptor Tie2. Angiopoietin-2 has been associated with context-dependent regulation of blood-vessel stability and angiogenesis.",
+      "Angiopoietin-2 has been associated with tumor angiogenesis, retinal vascular disease, and vascular leak, and ANGPT2-directed approaches, including in combination with VEGF inhibition, are in use or under study. Angpt2-deficient mice show lymphatic and vascular defects."
+    ],
+    "applications": [
+      "Humanized ANGPT2 models, in which the human protein replaces the mouse counterpart, have been used to evaluate angiopoietin-2-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The correlation between serum angiopoietin-2 levels and acute kidney injury (AKI): a meta-analysis. Clin Chem Lab Med. 2024. doi:10.1515/cclm-2024-0365",
+      "Maisonpierre PC et al. Angiopoietin-2, a natural antagonist for Tie2 that disrupts in vivo angiogenesis. Science. 1997. doi:10.1126/science.277.5322.55"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Angpt1 · Tek · Vegfa · Tie1"
+  },
+  {
+    "symbol": "Agtr1a",
+    "h1": "AGTR1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Agtr1a"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "AGTR1"
+      },
+      {
+        "label": "Aliases",
+        "value": "AT1, AT1R (mouse Agtr1a/Agtr1b)"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (angiotensin II type 1)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "3q24"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:87965"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:336 · NCBI Gene 185"
+      }
+    ],
+    "why": [
+      "AGTR1 (mouse ortholog Agtr1a, with a related Agtr1b) encodes the angiotensin II type 1 receptor (AT1), a class A G-protein-coupled receptor. AT1 signaling in response to angiotensin II has been associated with vasoconstriction and regulation of blood pressure and fluid balance.",
+      "The AT1 receptor is the target of angiotensin-receptor blockers used widely in hypertension and cardiovascular and kidney disease. Mice lacking AT1 receptors show low blood pressure and kidney changes."
+    ],
+    "applications": [
+      "Humanized AGTR1 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate AT1-receptor-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Association of the angiotensin II type 1 receptor A1166C polymorphism with essential hypertension: a meta-analysis with ethnic and geographic subgroup analyses. Blood Press. 2026. doi:10.1080/08037051.2026.2676370",
+      "Murphy TJ et al. Isolation of a cDNA encoding the vascular type-1 angiotensin II receptor. Nature. 1991. doi:10.1038/351233a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Agt · Ren1 · Agtr2 · Ace"
+  },
+  {
+    "symbol": "Asgr1",
+    "h1": "ASGR1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Asgr1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "ASGR1"
+      },
+      {
+        "label": "Aliases",
+        "value": "ASGPR1, HL-1"
+      },
+      {
+        "label": "Protein class",
+        "value": "C-type lectin receptor (hepatocyte)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "17p13.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88081"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:742 · NCBI Gene 432"
+      }
+    ],
+    "why": [
+      "Asgr1 is the mouse ortholog of human ASGR1 and encodes the major subunit of the asialoglycoprotein receptor, a C-type lectin on hepatocytes that binds galactose- and N-acetylgalactosamine-terminated glycoproteins and mediates their uptake. ASGR1 has been associated with clearance of desialylated glycoproteins.",
+      "ASGR1 is used for liver-targeted drug delivery (for example, GalNAc-conjugated therapeutics), and loss-of-function ASGR1 variants have been associated with lower non-HDL cholesterol and cardiovascular risk. Asgr1-deficient mice show altered glycoprotein clearance."
+    ],
+    "applications": [
+      "Humanized ASGR1 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate ASGR1-targeted delivery and agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Hepatocyte targeting via the asialoglycoprotein receptor. RSC Med Chem. 2024. doi:10.1039/d4md00652f",
+      "Spiess M, Lodish HF. Sequence of a second human asialoglycoprotein receptor: conservation of two receptor genes during evolution. Proc Natl Acad Sci U S A. 1985. doi:10.1073/pnas.82.19.6465"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Asgr2 · Lrp1 · Ldlr · Mrc1"
+  },
+  {
+    "symbol": "Alb",
+    "h1": "ALB Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Alb"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "ALB"
+      },
+      {
+        "label": "Aliases",
+        "value": "albumin"
+      },
+      {
+        "label": "Protein class",
+        "value": "Secreted serum carrier protein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "4q13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:87991"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:399 · NCBI Gene 213"
+      }
+    ],
+    "why": [
+      "Alb is the mouse ortholog of human ALB and encodes serum albumin, the most abundant protein in blood plasma, produced by the liver. Albumin has been associated with maintenance of plasma oncotic pressure and with transport of many endogenous and exogenous molecules.",
+      "Albumin’s long circulating half-life is used in drug design to extend the half-life of therapeutics, and albumin is used clinically as a volume expander. Alb-deficient mice are viable with altered plasma protein handling."
+    ],
+    "applications": [
+      "Humanized ALB models, in which the human protein replaces the mouse counterpart, have been used to study the pharmacokinetics of albumin-binding and albumin-fused therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Revolutionizing Alzheimer’s treatment: harnessing human serum albumin for targeted drug delivery and therapy advancements. Ageing Res Rev. 2024. doi:10.1016/j.arr.2024.102379",
+      "Dugaiczyk A et al. Nucleotide sequence and the encoded amino acids of human serum albumin mRNA. Proc Natl Acad Sci U S A. 1982. doi:10.1073/pnas.79.1.71"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Afp · Gc · Ttr · Serpina1a"
+  },
+  {
+    "symbol": "Hba-a1",
+    "h1": "HBA1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Hba-a1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "HBA1"
+      },
+      {
+        "label": "Aliases",
+        "value": "alpha-globin; mouse Hba-a1/Hba-a2"
+      },
+      {
+        "label": "Protein class",
+        "value": "Hemoglobin subunit alpha (globin)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "16p13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96015"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4823 · NCBI Gene 3039"
+      }
+    ],
+    "why": [
+      "HBA1 encodes an alpha-globin subunit of adult hemoglobin; in mice the orthologous alpha-globin genes include Hba-a1 and Hba-a2. Alpha-globin combines with beta-globin and heme to form hemoglobin, which has been associated with oxygen transport in red blood cells.",
+      "Deletions and mutations affecting the alpha-globin genes cause alpha-thalassemia, and the alpha-globin locus is studied in hematology and gene-therapy research. Mouse models carrying human alpha-globin alleles have been developed to study these conditions."
+    ],
+    "applications": [
+      "Humanized HBA1 models, including those carrying human alpha-globin alleles, have been used to study alpha-globin disorders in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Systematic review and evidence gap assessment of the clinical, quality of life, and economic burden of alpha-thalassemia. eJHaem. 2024. doi:10.1002/jha2.882",
+      "Liebhaber SA et al. Cloning and complete nucleotide sequence of human 5’-alpha-globin gene. Proc Natl Acad Sci U S A. 1980. doi:10.1073/pnas.77.12.7054"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Hbb-bs · Hba-a2 · Alas2 · Slc4a1"
+  },
+  {
+    "symbol": "Mecp2",
+    "h1": "MECP2 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Mecp2"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MECP2"
+      },
+      {
+        "label": "Aliases",
+        "value": "Rett syndrome, RTT"
+      },
+      {
+        "label": "Protein class",
+        "value": "Methyl-CpG-binding transcriptional regulator"
+      },
+      {
+        "label": "Location (human)",
+        "value": "Xq28"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:99918"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6990 · NCBI Gene 4204"
+      }
+    ],
+    "why": [
+      "Mecp2 is the mouse ortholog of human MECP2 and encodes methyl-CpG-binding protein 2, a transcriptional regulator that binds methylated DNA and is highly expressed in neurons. MeCP2 has been associated with regulation of gene expression in the nervous system.",
+      "MECP2 mutations cause Rett syndrome, and duplication of the gene causes MECP2 duplication syndrome; MECP2-directed gene therapies are under study. Mecp2-deficient and mutant mice reproduce many features of Rett syndrome."
+    ],
+    "applications": [
+      "Humanized MECP2 models, including those carrying disease-associated alleles, have been used to study MeCP2 biology and Rett syndrome and to evaluate MECP2-directed approaches in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Exploring the complexity of MECP2 function in Rett syndrome. Nat Rev Neurosci. 2025. doi:10.1038/s41583-025-00926-1",
+      "Amir RE et al. Rett syndrome is caused by mutations in X-linked MECP2, encoding methyl-CpG-binding protein 2. Nat Genet. 1999. doi:10.1038/13810"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Foxg1 · Cdkl5 · Mbd1 · Bdnf"
+  }
+]

@@ -8,6 +8,7 @@
  */
 
 import CatalogCustomDualCta from './CatalogCustomDualCta';
+import type { CatalogLookup } from './catalogLookupMap';
 import BreedingSchemeArchitectCTA from './BreedingSchemeArchitectCTA';
 import LabSignalsSignup from './LabSignalsSignup';
 import { withCatalogBridge } from '@/data/commercialCtas';
@@ -18,6 +19,10 @@ export interface StandardPageCtaStackProps {
   closingTitle?: string;
   /** Override dual-CTA catalog subline at close */
   closingDescription?: string;
+  /** Point the catalog side at a gene hub or other lookup, without changing widget chrome */
+  catalogLookupOverrides?: Partial<CatalogLookup>;
+  /** Gene symbol sent as gene_symbol on click */
+  geneSymbol?: string;
   showBreedingScheme?: boolean;
   breedingSchemeVariant?: 'dark' | 'light' | 'gradient';
   showLabSignals?: boolean;
@@ -36,6 +41,8 @@ export default function StandardPageCtaStack({
   slug,
   closingTitle,
   closingDescription,
+  catalogLookupOverrides,
+  geneSymbol,
   showBreedingScheme = true,
   breedingSchemeVariant = 'gradient',
   showLabSignals = true,
@@ -46,8 +53,9 @@ export default function StandardPageCtaStack({
   className = '',
 }: StandardPageCtaStackProps) {
   const catalogOverrides =
-    closingTitle || closingDescription
+    closingTitle || closingDescription || catalogLookupOverrides
       ? {
+          ...catalogLookupOverrides,
           ...(closingTitle ? { headline: closingTitle } : {}),
           ...(closingDescription
             ? { subline: withCatalogBridge(closingDescription) }
@@ -68,6 +76,7 @@ export default function StandardPageCtaStack({
             slug={slug}
             utmMedium="page-closing"
             flush
+            geneSymbol={geneSymbol}
             catalogOverrides={catalogOverrides}
           />
         </div>
