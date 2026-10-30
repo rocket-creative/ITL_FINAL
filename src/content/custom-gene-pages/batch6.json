@@ -1,0 +1,676 @@
+[
+  {
+    "symbol": "Cxcr4",
+    "h1": "CXCR4 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cxcr4"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CXCR4"
+      },
+      {
+        "label": "Aliases",
+        "value": "fusin, CD184, LESTR"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (chemokine receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2q22.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:109563"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:2561 · NCBI Gene 7852"
+      }
+    ],
+    "why": [
+      "Cxcr4 is the mouse ortholog of human CXCR4 and encodes CXCR4 (CD184), a class A G-protein-coupled chemokine receptor that binds the chemokine CXCL12 (SDF-1). CXCR4 has been associated with hematopoietic cell trafficking, retention of stem cells in bone marrow, and immune-cell migration; it also serves as a co-receptor for certain strains of HIV.",
+      "CXCR4 is implicated in cancer metastasis and in WHIM syndrome, and CXCR4-directed agents are used for stem-cell mobilization and are under study in cancer. Homozygous Cxcr4-null mice show embryonic lethality with defects in hematopoiesis and vascular and neural development."
+    ],
+    "applications": [
+      "Humanized CXCR4 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate CXCR4-directed agents in defined experimental settings.",
+      "Conditional Cxcr4 models have been used to study cell trafficking and hematopoiesis."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The clinical role of CXCR4-targeted PET on lymphoproliferative disorders: a systematic review. J Clin Med. 2024. doi:10.3390/jcm13102945",
+      "Feng Y et al. HIV-1 entry cofactor: functional cDNA cloning of a seven-transmembrane, G protein-coupled receptor. Science. 1996. doi:10.1126/science.272.5263.872"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cxcl12 · Ackr3 · Ccr5 · Cxcr2"
+  },
+  {
+    "symbol": "Epcam",
+    "h1": "EPCAM Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Epcam"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "EPCAM"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD326, TACSTD1, 17-1A"
+      },
+      {
+        "label": "Protein class",
+        "value": "Epithelial cell adhesion molecule"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2p21"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:106653"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:11529 · NCBI Gene 4072"
+      }
+    ],
+    "why": [
+      "Epcam is the mouse ortholog of human EPCAM and encodes the epithelial cell adhesion molecule (CD326), a transmembrane glycoprotein expressed on many epithelia. EpCAM has been associated with cell-cell adhesion and with signaling that influences proliferation.",
+      "EpCAM is overexpressed on many carcinomas and is used as a tumor marker and therapeutic target, and EPCAM mutations cause congenital tufting enteropathy. Epcam-deficient mice show intestinal defects and early lethality."
+    ],
+    "applications": [
+      "Humanized EPCAM models, in which the human protein replaces the mouse counterpart, have been used to evaluate EpCAM-directed therapeutics, including bispecific antibodies and cell therapies, in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Innovative approaches in the therapeutic application of EpCAM aptamer for targeted cancer treatment: a review. Biochim Biophys Acta Gen Subj. 2026. doi:10.1016/j.bbagen.2026.130982",
+      "Litvinov SV et al. Ep-CAM: a human epithelial antigen is a homophilic cell-cell adhesion molecule. J Cell Biol. 1994. doi:10.1083/jcb.125.2.437"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cldn7 · Tacstd2 · Cdh1 · Muc1"
+  },
+  {
+    "symbol": "Cd22",
+    "h1": "CD22 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd22"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD22"
+      },
+      {
+        "label": "Aliases",
+        "value": "Siglec-2, BL-CAM"
+      },
+      {
+        "label": "Protein class",
+        "value": "Ig-superfamily sialic-acid-binding receptor (Siglec-2)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19q13.12"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88322"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1643 · NCBI Gene 933"
+      }
+    ],
+    "why": [
+      "Cd22 is the mouse ortholog of human CD22 and encodes CD22 (Siglec-2), an immunoglobulin-superfamily sialic-acid-binding receptor expressed on B cells. CD22 has been associated with regulation of B-cell receptor signaling.",
+      "CD22 is expressed across most B-cell malignancies, and CD22-directed agents, including an antibody–drug conjugate and CAR T cells, are used or under study. Cd22-deficient mice are viable with altered B-cell responses."
+    ],
+    "applications": [
+      "Humanized CD22 models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD22-directed therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "CD22-directed CAR T-cell therapy for large B-cell lymphomas progressing after CD19-directed CAR T-cell therapy: a dose-finding phase 1 study. Lancet. 2024. doi:10.1016/s0140-6736(24)00746-3",
+      "Stamenkovic I, Seed B. The B-cell antigen CD22 mediates monocyte and erythrocyte adhesion. Nature. 1990. doi:10.1038/345074a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd19 · Ms4a1 · Siglecg · Cd79a"
+  },
+  {
+    "symbol": "Cd79b",
+    "h1": "CD79B Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd79b"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD79B"
+      },
+      {
+        "label": "Aliases",
+        "value": "Ig-beta, B29"
+      },
+      {
+        "label": "Protein class",
+        "value": "B-cell receptor signaling subunit (Ig superfamily)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "17q23.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96431"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1699 · NCBI Gene 974"
+      }
+    ],
+    "why": [
+      "Cd79b is the mouse ortholog of human CD79B and encodes Ig-beta (B29), a subunit of the B-cell receptor signaling complex. CD79B pairs with CD79A and has been associated with assembly and signaling of the B-cell receptor.",
+      "CD79B is expressed on B-cell lymphomas, and a CD79B-directed antibody–drug conjugate is used in diffuse large B-cell lymphoma. Cd79b alterations affect B-cell development in model systems."
+    ],
+    "applications": [
+      "Humanized CD79B models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD79B-directed therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Molecular determinants of sensitivity to polatuzumab vedotin in diffuse large B-cell lymphoma. Cancer Discov. 2024. doi:10.1158/2159-8290.cd-23-0802",
+      "Hermanson GG et al. B29: a member of the immunoglobulin gene superfamily exclusively expressed on B-lineage cells. Proc Natl Acad Sci U S A. 1988. doi:10.1073/pnas.85.18.6890"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd79a · Ms4a1 · Cd19 · Blnk"
+  },
+  {
+    "symbol": "Dll4",
+    "h1": "DLL4 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Dll4"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "DLL4"
+      },
+      {
+        "label": "Aliases",
+        "value": "Delta-like 4"
+      },
+      {
+        "label": "Protein class",
+        "value": "Notch ligand (DSL family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "15q15.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1859388"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:2910 · NCBI Gene 54567"
+      }
+    ],
+    "why": [
+      "Dll4 is the mouse ortholog of human DLL4 and encodes Delta-like 4, a membrane-bound ligand of the Notch pathway expressed in arterial and tumor endothelium. DLL4-Notch signaling has been associated with regulation of blood-vessel branching and development.",
+      "DLL4 has been associated with tumor angiogenesis, and DLL4-directed agents have been evaluated in cancer. Heterozygous loss of Dll4 causes vascular defects and embryonic lethality in mice, consistent with a dose-sensitive role in vascular development."
+    ],
+    "applications": [
+      "Humanized DLL4 models, in which the human protein replaces the mouse counterpart, have been used to evaluate DLL4-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Clinicopathological and prognostic value of DLL4 expression in gastric cancer: a systematic review and meta-analysis. Adv Clin Exp Med. 2026. doi:10.17219/acem/220455",
+      "Shutter JR et al. Dll4, a novel Notch ligand expressed in arterial endothelium. Genes Dev. 2000. doi:10.1101/gad.14.11.1313"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Notch1 · Notch4 · Jag1 · Hey1"
+  },
+  {
+    "symbol": "Mstn",
+    "h1": "MSTN Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Mstn"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MSTN"
+      },
+      {
+        "label": "Aliases",
+        "value": "GDF8, myostatin"
+      },
+      {
+        "label": "Protein class",
+        "value": "TGF-β superfamily secreted factor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2q32.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:95691"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4223 · NCBI Gene 2660"
+      }
+    ],
+    "why": [
+      "Mstn is the mouse ortholog of human MSTN and encodes myostatin (GDF8), a secreted TGF-β-superfamily factor produced mainly by skeletal muscle. Myostatin has been associated with negative regulation of muscle mass.",
+      "Loss of myostatin function increases muscle mass in several species, and myostatin-pathway-directed agents are under study for muscle-wasting and metabolic conditions. Mstn-deficient mice show marked increases in skeletal muscle mass."
+    ],
+    "applications": [
+      "Humanized MSTN models, in which the human protein replaces the mouse counterpart, have been used to evaluate myostatin-directed agents in defined experimental settings.",
+      "Mstn knockout mice have been used to study the regulation of muscle growth."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Myostatin modulation in spinal muscular atrophy: a systematic review of preclinical and clinical evidence. Int J Mol Sci. 2025. doi:10.3390/ijms26125858",
+      "McPherron AC et al. Regulation of skeletal muscle mass in mice by a new TGF-β superfamily member. Nature. 1997. doi:10.1038/387083a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Gdf11 · Acvr2b · Fst · Tgfb1"
+  },
+  {
+    "symbol": "Mc4r",
+    "h1": "MC4R Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Mc4r"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MC4R"
+      },
+      {
+        "label": "Aliases",
+        "value": "melanocortin 4 receptor"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (melanocortin)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "18q21.32"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:99457"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6932 · NCBI Gene 4160"
+      }
+    ],
+    "why": [
+      "Mc4r is the mouse ortholog of human MC4R and encodes the melanocortin-4 receptor, a class A G-protein-coupled receptor expressed in the brain. MC4R signaling has been associated with regulation of appetite and energy balance.",
+      "MC4R mutations are among the more common monogenic causes of severe obesity, and an MC4R agonist is approved for certain genetic obesity syndromes. Mc4r-deficient mice develop obesity, hyperphagia, and increased body mass."
+    ],
+    "applications": [
+      "Humanized MC4R models, in which the human receptor replaces the mouse counterpart, have been used to evaluate MC4R-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The effect of melanocortin-4 receptor agonist drugs on obesity and metabolic risk factors: a systematic review and meta-analysis. Diabetol Metab Syndr. 2025. doi:10.1186/s13098-025-02071-2",
+      "Huszar D et al. Targeted disruption of the melanocortin-4 receptor results in obesity in mice. Cell. 1997. doi:10.1016/s0092-8674(00)81865-6"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Pomc · Agrp · Mc3r · Lepr"
+  },
+  {
+    "symbol": "Hbb-bs",
+    "h1": "HBB Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Hbb-bs"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "HBB"
+      },
+      {
+        "label": "Aliases",
+        "value": "beta-globin; mouse Hbb-bs/Hbb-bt"
+      },
+      {
+        "label": "Protein class",
+        "value": "Hemoglobin subunit beta (globin)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11p15.4"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:5474850"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4827 · NCBI Gene 3043"
+      }
+    ],
+    "why": [
+      "HBB encodes the beta-globin subunit of adult hemoglobin; in mice the orthologous beta-globin genes include Hbb-bs and Hbb-bt. Beta-globin combines with alpha-globin and heme to form hemoglobin, which has been associated with oxygen transport in red blood cells.",
+      "Mutations in HBB cause sickle cell disease and beta-thalassemia, and gene-addition and gene-editing therapies targeting the beta-globin pathway are in clinical use and development. Mouse models carrying human HBB alleles have been developed to study these disorders."
+    ],
+    "applications": [
+      "Humanized HBB models, including those carrying human sickle or thalassemia alleles, have been used to study beta-globin disorders and to evaluate gene-therapy and pharmacologic approaches in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "How I treat sickle cell disease with gene therapy. Blood. 2024. doi:10.1182/blood.2024024519",
+      "Ingram VM. Gene mutations in human haemoglobin: the chemical difference between normal and sickle cell haemoglobin. Nature. 1957. doi:10.1038/180326a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Hba-a1 · Hbg1 · Bcl11a · Alas2"
+  },
+  {
+    "symbol": "Cftr",
+    "h1": "CFTR Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cftr"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CFTR"
+      },
+      {
+        "label": "Aliases",
+        "value": "ABCC7"
+      },
+      {
+        "label": "Protein class",
+        "value": "ABC-transporter chloride/bicarbonate channel"
+      },
+      {
+        "label": "Location (human)",
+        "value": "7q31.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88388"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1884 · NCBI Gene 1080"
+      }
+    ],
+    "why": [
+      "Cftr is the mouse ortholog of human CFTR and encodes the cystic fibrosis transmembrane conductance regulator, an ATP-binding-cassette protein that functions as a chloride and bicarbonate channel at epithelial surfaces. CFTR has been associated with regulation of fluid and ion transport.",
+      "Mutations in CFTR, including the common F508del, cause cystic fibrosis, and CFTR modulator therapies are in clinical use. Cftr-deficient and mutant mice reproduce some features of the disease, with differences from the human condition."
+    ],
+    "applications": [
+      "Humanized CFTR models, including those carrying human disease-associated alleles, have been used to study CFTR function and to evaluate CFTR-directed therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Unraveling the mechanism of action, binding sites, and therapeutic advances of CFTR modulators: a narrative review. Curr Issues Mol Biol. 2025. doi:10.3390/cimb47020119",
+      "Riordan JR et al. Identification of the cystic fibrosis gene: cloning and characterization of complementary DNA. Science. 1989. doi:10.1126/science.2475911"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Scnn1b · Slc26a9 · Ano1 · Muc5b"
+  },
+  {
+    "symbol": "Notch3",
+    "h1": "NOTCH3 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Notch3"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "NOTCH3"
+      },
+      {
+        "label": "Aliases",
+        "value": "CADASIL, CASIL"
+      },
+      {
+        "label": "Protein class",
+        "value": "Notch-family transmembrane receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19p13.12"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:99460"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:7883 · NCBI Gene 4854"
+      }
+    ],
+    "why": [
+      "Notch3 is the mouse ortholog of human NOTCH3 and encodes a Notch-family transmembrane receptor expressed mainly in vascular smooth muscle and pericytes. NOTCH3 signaling has been associated with maintenance of small blood vessels.",
+      "NOTCH3 mutations cause CADASIL, an inherited cerebral small-vessel disease causing stroke and dementia, and NOTCH3-directed approaches are under study. Notch3-deficient and mutant mice show vascular changes relevant to the disease."
+    ],
+    "applications": [
+      "Humanized NOTCH3 models, including those carrying CADASIL-associated alleles, have been used to study NOTCH3 biology and to evaluate NOTCH3-directed approaches in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Most common NOTCH3 mutations causing CADASIL or CADASIL-like cerebral small vessel disease: a systematic review. Cereb Circ Cogn Behav. 2024. doi:10.1016/j.cccb.2024.100227",
+      "Joutel A et al. Notch3 mutations in CADASIL, a hereditary adult-onset condition causing stroke and dementia. Nature. 1996. doi:10.1038/383707a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Notch1 · Jag1 · Dll4 · Hey1"
+  },
+  {
+    "symbol": "Ngf",
+    "h1": "NGF Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ngf"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "NGF"
+      },
+      {
+        "label": "Aliases",
+        "value": "beta-NGF, NGFB"
+      },
+      {
+        "label": "Protein class",
+        "value": "Neurotrophin (growth factor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1p13.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:97321"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:7808 · NCBI Gene 4803"
+      }
+    ],
+    "why": [
+      "Ngf is the mouse ortholog of human NGF and encodes nerve growth factor, a neurotrophin that binds the receptors TrkA and p75. NGF has been associated with the development and maintenance of certain sensory and sympathetic neurons and with pain signaling.",
+      "NGF has been associated with chronic pain, and anti-NGF antibodies have been evaluated for musculoskeletal pain; NGF mutations cause a hereditary sensory and autonomic neuropathy. Ngf-deficient mice show loss of certain sensory and sympathetic neurons."
+    ],
+    "applications": [
+      "Humanized NGF models, in which the human protein replaces the mouse counterpart, have been used to evaluate NGF-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Efficacy and safety of anti-nerve growth factor monoclonal antibodies in managing chronic musculoskeletal pain: a systematic review with network meta-analysis. Drugs. 2026. doi:10.1007/s40265-026-02304-2",
+      "Ullrich A et al. Human beta-nerve growth factor gene sequence highly homologous to that of mouse. Nature. 1983. doi:10.1038/303821a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ntrk1 · Ngfr · Bdnf · Ntf3"
+  },
+  {
+    "symbol": "Il22",
+    "h1": "IL22 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il22"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL22"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-22, IL-TIF"
+      },
+      {
+        "label": "Protein class",
+        "value": "IL-10 family cytokine"
+      },
+      {
+        "label": "Location (human)",
+        "value": "12q15"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1355307"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:14900 · NCBI Gene 50616"
+      }
+    ],
+    "why": [
+      "Il22 is the mouse ortholog of human IL22 and encodes interleukin-22, an IL-10-family cytokine produced by several immune-cell types. IL-22 signals to epithelial cells and has been associated with epithelial barrier function, antimicrobial responses, and tissue repair.",
+      "IL-22 has been associated with inflammatory bowel disease, psoriasis, and other conditions, and IL-22-pathway-directed approaches are under study. Il22-deficient mice show altered mucosal responses in disease models."
+    ],
+    "applications": [
+      "Humanized IL22 models, in which the human cytokine replaces the mouse counterpart, have been used to evaluate IL-22-pathway-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Interleukin-22: the hub bridging gut homeostasis and metabolism. Trends Immunol. 2025. doi:10.1016/j.it.2025.10.009",
+      "Dumoutier L et al. Human interleukin-10-related T cell-derived inducible factor (IL-TIF): molecular cloning and functional characterization. J Immunol. 2000. doi:10.4049/jimmunol.164.4.1814"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il22ra1 · Il10 · Il17a · Il23a"
+  }
+]

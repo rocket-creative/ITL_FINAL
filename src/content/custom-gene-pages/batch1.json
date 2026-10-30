@@ -1,0 +1,693 @@
+[
+  {
+    "symbol": "Pdcd1",
+    "h1": "Pdcd1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Pdcd1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "PDCD1"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD279, PD-1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Inhibitory immune receptor (Ig superfamily)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2q37.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:104879"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:8760 · NCBI Gene 5133"
+      }
+    ],
+    "why": [
+      "Pdcd1 is the mouse ortholog of human PDCD1 and encodes PD-1 (CD279), an inhibitory immunoreceptor expressed on activated T cells and other immune cells. Engagement of PD-1 by its ligands PD-L1 and PD-L2 delivers signals that attenuate T-cell receptor signaling and have been associated with limiting T-cell responses and maintaining peripheral tolerance.",
+      "Blockade of the PD-1 pathway can enhance anti-tumor T-cell responses, and anti-PD-1 antibodies are approved for several cancers; responses vary by tumor type and context. Pdcd1-deficient mice are viable and, depending on genetic background, can develop autoimmune features, consistent with a role in immune regulation."
+    ],
+    "applications": [
+      "Pdcd1 knockout mice have been used to study immune regulation and autoimmunity. Humanized PDCD1 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate anti-PD-1 antibody therapeutics in immunocompetent mice.",
+      "Compound humanized models combining PDCD1 with other checkpoint targets have been used to study combination immunotherapy in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Regulatory mechanisms of PD-1/PD-L1 in cancers. Mol Cancer. 2024. doi:10.1186/s12943-024-02023-w",
+      "Nishimura H et al. Development of lupus-like autoimmune diseases by disruption of the PD-1 gene encoding an ITIM motif-carrying immunoreceptor. Immunity. 1999. doi:10.1016/s1074-7613(00)80089-8",
+      "Ishida Y et al. Induced expression of PD-1, a novel member of the immunoglobulin gene superfamily, upon programmed cell death. EMBO J. 1992. doi:10.1002/j.1460-2075.1992.tb05481.x"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd274 · Pdcd1lg2 · Ctla4 · Lag3"
+  },
+  {
+    "symbol": "Cd274",
+    "h1": "Cd274 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd274"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD274"
+      },
+      {
+        "label": "Aliases",
+        "value": "PD-L1, B7-H1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Immune checkpoint ligand (B7 family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "9p24.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1926446"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:17635 · NCBI Gene 29126"
+      }
+    ],
+    "why": [
+      "Cd274 is the mouse ortholog of human CD274 and encodes PD-L1 (B7-H1), a cell-surface ligand expressed on various immune, epithelial, and tumor cells. PD-L1 binds the inhibitory receptor PD-1 and has been associated with downregulation of T-cell responses.",
+      "PD-L1 expression on tumor cells has been associated with immune evasion in some contexts, and antibodies targeting PD-L1 are approved for several cancers; responses depend on tumor type and other factors. Cd274-deficient mice are viable and show altered T-cell responses in disease models."
+    ],
+    "applications": [
+      "Humanized CD274 models, in which the human ligand replaces the mouse counterpart, have been used to evaluate anti-PD-L1 antibody therapeutics in immunocompetent mice, including in combination with other checkpoint-targeted agents.",
+      "Cd274 knockout mice have been used to study the ligand’s role in immune regulation."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "PD-1/PD-L1 immune checkpoint blockade in breast cancer: research insights and therapeutic strategies. Mol Cancer. 2024. doi:10.1186/s12943-024-02176-8",
+      "Freeman GJ et al. Engagement of the PD-1 immunoinhibitory receptor by a novel B7 family member leads to negative regulation of lymphocyte activation. J Exp Med. 2000. doi:10.1084/jem.192.7.1027",
+      "Dong H et al. B7-H1, a third member of the B7 family, co-stimulates T-cell proliferation and interleukin-10 secretion. Nat Med. 1999. doi:10.1038/70932"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Pdcd1 · Pdcd1lg2 · Cd80 · Cd86"
+  },
+  {
+    "symbol": "Ctla4",
+    "h1": "Ctla4 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ctla4"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CTLA4"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD152, CTLA-4"
+      },
+      {
+        "label": "Protein class",
+        "value": "Inhibitory immune receptor (Ig superfamily)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2q33.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88556"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:2505 · NCBI Gene 1493"
+      }
+    ],
+    "why": [
+      "Ctla4 is the mouse ortholog of human CTLA4 and encodes CTLA-4 (CD152), an inhibitory receptor expressed on activated T cells and constitutively on regulatory T cells. CTLA-4 competes with the costimulatory receptor CD28 for the ligands CD80 and CD86 and has been associated with downregulation of T-cell activation.",
+      "CTLA-4 blockade can enhance T-cell responses and is used in cancer immunotherapy; it is also associated with immune-related adverse effects. Homozygous Ctla4-null mice develop a severe lymphoproliferative disorder with early lethality, consistent with a role in restraining T-cell activation."
+    ],
+    "applications": [
+      "Because constitutive loss is lethal, humanized and conditional approaches are used. Humanized CTLA4 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate anti-CTLA-4 antibody therapeutics in immunocompetent mice, including in combination with other checkpoint-targeted agents.",
+      "Ctla4 alleles have been used to study the receptor’s role in immune regulation and tolerance."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "A comprehensive review of immune checkpoint inhibitors for cancer treatment. Int Immunopharmacol. 2024. doi:10.1016/j.intimp.2024.113365",
+      "Waterhouse P et al. Lymphoproliferative disorders with early lethality in mice deficient in Ctla-4. Science. 1995. doi:10.1126/science.270.5238.985",
+      "Tivol EA et al. Loss of CTLA-4 leads to massive lymphoproliferation and fatal multiorgan tissue destruction. Immunity. 1995. doi:10.1016/1074-7613(95)90125-6",
+      "Brunet JF et al. A new member of the immunoglobulin superfamily—CTLA-4. Nature. 1987. doi:10.1038/328267a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd28 · Cd80 · Cd86 · Pdcd1"
+  },
+  {
+    "symbol": "Lag3",
+    "h1": "Lag3 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Lag3"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "LAG3"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD223"
+      },
+      {
+        "label": "Protein class",
+        "value": "Inhibitory immune receptor (Ig superfamily)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "12p13.31"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:106588"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6476 · NCBI Gene 3902"
+      }
+    ],
+    "why": [
+      "Lag3 is the mouse ortholog of human LAG3 and encodes LAG-3 (CD223), an inhibitory receptor expressed on activated T cells and other lymphocytes. LAG-3 binds ligands including MHC class II and has been associated with negative regulation of T-cell responses.",
+      "LAG-3 is a target of cancer immunotherapy, and an anti-LAG-3 antibody is approved in combination with PD-1 blockade for melanoma. Lag3-deficient mice are viable and show altered T-cell regulation in some models."
+    ],
+    "applications": [
+      "Humanized LAG3 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate anti-LAG-3 therapeutics, including in combination with PD-1-targeted agents, in immunocompetent mice.",
+      "Lag3 knockout mice have been used to study its role in T-cell regulation."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Immune checkpoint inhibitors: breakthroughs in cancer treatment. 2024. doi:10.20892/j.issn.2095-3941.2024.0055",
+      "Workman CJ, Vignali DAA. Negative regulation of T cell homeostasis by lymphocyte activation gene-3 (CD223). J Immunol. 2005. doi:10.4049/jimmunol.174.2.688",
+      "Triebel F et al. LAG-3, a novel lymphocyte activation gene closely related to CD4. J Exp Med. 1990. doi:10.1084/jem.171.5.1393"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Pdcd1 · Havcr2 · Tigit · Ctla4"
+  },
+  {
+    "symbol": "Sirpa",
+    "h1": "Sirpa Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Sirpa"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "SIRPA"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD172a, SHPS-1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Inhibitory immune receptor (Ig superfamily)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "20p13"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:108563"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:9662 · NCBI Gene 140885"
+      }
+    ],
+    "why": [
+      "Sirpa is the mouse ortholog of human SIRPA and encodes SIRPα (CD172a), an inhibitory receptor expressed on myeloid cells including macrophages. SIRPα binds CD47 and has been associated with a signal that limits macrophage phagocytosis.",
+      "The CD47-SIRPα axis is a target of cancer immunotherapy aimed at promoting macrophage-mediated clearance of tumor cells; reported clinical results have varied. Species differences in SIRPα-CD47 binding affect engraftment of human cells, which is relevant to humanized mouse models."
+    ],
+    "applications": [
+      "Humanized SIRPA models, often combined with CD47 humanization and immunodeficiency alleles, have been used to support engraftment of human cells and to evaluate CD47-SIRPα-targeted therapeutics in defined experimental settings.",
+      "Sirpa variants have been shown to influence human hematopoietic cell engraftment in immunodeficient hosts."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Targeting phagocytosis checkpoints for cancer immunotherapy. Nat Rev Cancer. 2025. doi:10.1038/s41568-025-00893-w",
+      "Oldenborg PA et al. Role of CD47 as a marker of self on red blood cells. Science. 2000. doi:10.1126/science.288.5473.2051",
+      "Kharitonenkov A et al. A family of proteins that inhibit signalling through tyrosine kinase receptors. Nature. 1997. doi:10.1038/386181a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd47 · Sirpb1 · Sirpg · Pdcd1"
+  },
+  {
+    "symbol": "Il4",
+    "h1": "Il4 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il4"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL4"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-4, BSF1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Cytokine (type 2 immunity)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "5q31.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96556"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6014 · NCBI Gene 3565"
+      }
+    ],
+    "why": [
+      "Il4 is the mouse ortholog of human IL4 and encodes interleukin-4, a cytokine produced mainly by T helper 2 cells, mast cells, and basophils. IL-4 signals through receptors containing IL-4Rα and has been associated with promotion of Th2 differentiation, B-cell class switching to IgE, and type 2 immune responses.",
+      "IL-4, together with related type 2 cytokines, is implicated in allergic and atopic diseases, and components of the IL-4/IL-13 pathway are targeted therapeutically. Il4-deficient mice are viable and show impaired Th2 responses."
+    ],
+    "applications": [
+      "Il4 knockout mice have been used to study type 2 immunity and allergic inflammation. Humanized IL4 models, often with humanized IL-4 receptor components, have been used to evaluate therapeutics targeting the type 2 cytokine pathway in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Role of IL-4 and IL-13 in cutaneous T-cell lymphoma. Life (Basel). 2024. doi:10.3390/life14020245",
+      "Kopf M et al. Disruption of the murine IL-4 gene blocks Th2 cytokine responses. Nature. 1993. doi:10.1038/362245a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il13 · Il4ra · Il5 · Stat6"
+  },
+  {
+    "symbol": "Il6",
+    "h1": "Il6 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il6"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL6"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-6, BSF2"
+      },
+      {
+        "label": "Protein class",
+        "value": "Cytokine (IL-6 family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "7p15.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96559"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6018 · NCBI Gene 3569"
+      }
+    ],
+    "why": [
+      "Il6 is the mouse ortholog of human IL6 and encodes interleukin-6, a pleiotropic cytokine produced by many cell types. IL-6 signals through IL-6Rα and gp130 and the JAK/STAT3 pathway and has been associated with regulation of inflammation, the acute-phase response, and immune cell differentiation.",
+      "IL-6 is implicated in inflammatory and autoimmune conditions, and IL-6 pathway inhibitors are used clinically. Il6-deficient mice are viable and show impaired acute-phase and immune responses."
+    ],
+    "applications": [
+      "Il6 knockout mice have been used to study inflammation and immune regulation. Humanized IL6 models, often paired with the IL-6 receptor, have been used to evaluate IL-6-pathway-targeted biologics in immunocompetent mice."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "STAT3 signaling pathway in health and disease. MedComm (2020). 2025. doi:10.1002/mco2.70152",
+      "Kopf M et al. Impaired immune and acute-phase responses in interleukin-6-deficient mice. Nature. 1994. doi:10.1038/368339a0",
+      "Hirano T et al. Complementary DNA for a novel human interleukin (BSF-2) that induces B lymphocytes to produce immunoglobulin. Nature. 1986. doi:10.1038/324073a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il6r · Il6st · Stat3 · Il11"
+  },
+  {
+    "symbol": "Il23a",
+    "h1": "Il23a Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il23a"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL23A"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-23, p19"
+      },
+      {
+        "label": "Protein class",
+        "value": "Cytokine subunit (IL-12 family, p19)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "12q13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1932410"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:15488 · NCBI Gene 51561"
+      }
+    ],
+    "why": [
+      "Il23a is the mouse ortholog of human IL23A and encodes the p19 subunit of interleukin-23, which pairs with the p40 subunit (shared with IL-12) to form IL-23. IL-23 signals through a receptor complex and has been associated with maintenance and function of Th17 and other IL-17-producing cells.",
+      "IL-23 is implicated in psoriasis and other chronic inflammatory diseases, and antibodies targeting IL-23 (p19) or the shared p40 subunit are used clinically. Il23a-deficient mice are viable and show reduced Th17-associated inflammation in disease models."
+    ],
+    "applications": [
+      "Il23a knockout mice have been used to study IL-23-dependent inflammation. Humanized IL23A models, sometimes paired with IL-12B/p40 humanization, have been used to evaluate IL-23-targeted biologics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "IL-23 inhibition for chronic inflammatory disease. Lancet. 2024. doi:10.1016/S0140-6736(24)01750-1",
+      "Cua DJ et al. Interleukin-23 rather than interleukin-12 is the critical cytokine for autoimmune inflammation of the brain. Nature. 2003. doi:10.1038/nature01355",
+      "Oppmann B et al. Novel p19 protein engages IL-12p40 to form a cytokine, IL-23, with biological activities similar as well as distinct from IL-12. Immunity. 2000. doi:10.1016/s1074-7613(00)00070-4"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il12b · Il23r · Il17a · Il12a"
+  },
+  {
+    "symbol": "C3",
+    "h1": "C3 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "C3"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "C3"
+      },
+      {
+        "label": "Aliases",
+        "value": "C3a, C3b, CPAMD1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Complement component"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19p13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88227"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1318 · NCBI Gene 718"
+      }
+    ],
+    "why": [
+      "C3 is the mouse ortholog of human C3 and encodes complement component C3, a central protein of the complement system. C3 is cleaved during complement activation to generate fragments, including C3a and C3b, and has been associated with opsonization, inflammation, and amplification of complement responses.",
+      "Complement, including C3, contributes to host defense and is implicated in several inflammatory and autoimmune conditions; complement-targeted therapeutics are in clinical use and development. C3-deficient mice are viable and show impaired complement-dependent responses and increased susceptibility to certain infections."
+    ],
+    "applications": [
+      "C3 knockout mice have been used to study complement function in infection, inflammation, and autoimmunity. Humanized C3 models, in which the human protein replaces the mouse counterpart, have been used to evaluate complement-targeted therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Paroxysmal nocturnal hemoglobinuria: pathophysiology, diagnostics, and treatment. 2024. doi:10.1159/000540474",
+      "Ricklin D, Hajishengallis G, Yang K, Lambris JD. Complement: a key system for immune surveillance and homeostasis. Nat Immunol. 2010. doi:10.1038/ni.1923",
+      "Wessels MR et al. Studies of group B streptococcal infection in mice deficient in complement component C3 or C4 demonstrate an essential role for complement in both innate and acquired immunity. Proc Natl Acad Sci U S A. 1995. doi:10.1073/pnas.92.25.11490"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: C5 · Cfb · Cfh · C3ar1"
+  },
+  {
+    "symbol": "Apoe",
+    "h1": "Apoe Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Apoe"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "APOE"
+      },
+      {
+        "label": "Aliases",
+        "value": "—"
+      },
+      {
+        "label": "Protein class",
+        "value": "Apolipoprotein (lipid transport)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19q13.32"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88057"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:613 · NCBI Gene 348"
+      }
+    ],
+    "why": [
+      "Apoe is the mouse ortholog of human APOE and encodes apolipoprotein E, a lipid-transport protein that mediates binding of lipoproteins to cell-surface receptors. The human gene has three common isoforms (ε2, ε3, ε4), and APOE has been associated with lipid metabolism in the periphery and the central nervous system.",
+      "The APOE ε4 allele is associated with increased risk of late-onset Alzheimer’s disease, and APOE influences amyloid and lipid biology; mechanisms remain an active area of research. Apoe-deficient mice develop hypercholesterolemia and atherosclerosis and are widely used in cardiovascular research."
+    ],
+    "applications": [
+      "Apoe knockout mice are widely used to study atherosclerosis and lipid metabolism. Humanized APOE models expressing specific human isoforms (ε2, ε3, ε4) have been used to investigate isoform-specific effects on lipid biology and features of Alzheimer’s disease."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Alzheimer’s disease: a comprehensive review of epidemiology, risk factors, pathophysiology, and management. Front Med (Lausanne). 2024. doi:10.3389/fmed.2024.1474043",
+      "Corder EH et al. Gene dose of apolipoprotein E type 4 allele and the risk of Alzheimer’s disease in late onset families. Science. 1993. doi:10.1126/science.8346443",
+      "Plump AS et al. Severe hypercholesterolemia and atherosclerosis in apolipoprotein E-deficient mice created by homologous recombination in ES cells. Cell. 1992. doi:10.1016/0092-8674(92)90362-g"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ldlr · App · Abca1 · Apob"
+  },
+  {
+    "symbol": "App",
+    "h1": "App Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "App"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "APP"
+      },
+      {
+        "label": "Aliases",
+        "value": "alpha-sAPP"
+      },
+      {
+        "label": "Protein class",
+        "value": "Transmembrane glycoprotein (amyloid precursor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "21q21.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88059"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:620 · NCBI Gene 351"
+      }
+    ],
+    "why": [
+      "App is the mouse ortholog of human APP and encodes the amyloid precursor protein, a transmembrane protein processed by secretases. Sequential cleavage of APP generates amyloid-β peptides, which have been associated with amyloid plaque formation in Alzheimer’s disease.",
+      "Mutations in APP and altered amyloid-β processing are linked to familial Alzheimer’s disease, and the amyloid hypothesis has guided much research, though disease mechanisms remain under study. Humanized and knock-in App alleles have been developed to study amyloid biology."
+    ],
+    "applications": [
+      "Humanized App knock-in models, including alleles carrying familial Alzheimer’s disease mutations, express humanized amyloid-β from the endogenous locus and have been used to investigate amyloid pathology without APP overexpression.",
+      "These models have been used to study disease-relevant mechanisms and to evaluate amyloid-targeted approaches in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Alzheimer’s disease: a comprehensive review of epidemiology, risk factors, pathophysiology, and management. Front Med (Lausanne). 2024. doi:10.3389/fmed.2024.1474043",
+      "Saito T et al. Single App knock-in mouse models of Alzheimer’s disease. Nat Neurosci. 2014. doi:10.1038/nn.3697",
+      "Hardy J, Selkoe DJ. The amyloid hypothesis of Alzheimer’s disease: progress and problems on the road to therapeutics. Science. 2002. doi:10.1126/science.1072994",
+      "Kang J et al. The precursor of Alzheimer’s disease amyloid A4 protein resembles a cell-surface receptor. Nature. 1987. doi:10.1038/325733a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Psen1 · Psen2 · Mapt · Apoe"
+  },
+  {
+    "symbol": "Pcsk9",
+    "h1": "Pcsk9 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Pcsk9"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "PCSK9"
+      },
+      {
+        "label": "Aliases",
+        "value": "NARC-1, FH3"
+      },
+      {
+        "label": "Protein class",
+        "value": "Secreted serine protease (proprotein convertase)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1p32.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:2140260"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:20001 · NCBI Gene 255738"
+      }
+    ],
+    "why": [
+      "Pcsk9 is the mouse ortholog of human PCSK9 and encodes proprotein convertase subtilisin/kexin type 9, a secreted protein that binds the LDL receptor and promotes its degradation, which has been associated with increased plasma LDL cholesterol.",
+      "Gain-of-function PCSK9 variants are associated with familial hypercholesterolemia and loss-of-function variants with lower LDL cholesterol; PCSK9 inhibitors are used clinically to lower LDL cholesterol. Pcsk9-deficient mice show reduced plasma cholesterol."
+    ],
+    "applications": [
+      "Pcsk9 knockout and transgenic mice have been used to study LDL-receptor regulation and cholesterol metabolism. Humanized PCSK9 models, in which the human protein replaces the mouse counterpart, have been used to evaluate PCSK9-targeted therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "New oral PCSK9 inhibitor: “MK-0616”. Cardiol Rev. 2024. doi:10.1097/CRD.0000000000000655",
+      "Rashid S et al. Decreased plasma cholesterol and hypersensitivity to statins in mice lacking Pcsk9. Proc Natl Acad Sci U S A. 2005. doi:10.1073/pnas.0501652102",
+      "Abifadel M et al. Mutations in PCSK9 cause autosomal dominant hypercholesterolemia. Nat Genet. 2003. doi:10.1038/ng1161"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ldlr · Apob · Lpa · Hmgcr"
+  }
+]

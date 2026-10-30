@@ -1,0 +1,675 @@
+[
+  {
+    "symbol": "Klrc1",
+    "h1": "KLRC1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Klrc1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "KLRC1"
+      },
+      {
+        "label": "Aliases",
+        "value": "NKG2A, CD159a"
+      },
+      {
+        "label": "Protein class",
+        "value": "C-type lectin-like inhibitory NK receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "12p13"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1336161"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6374 · NCBI Gene 3821"
+      }
+    ],
+    "why": [
+      "Klrc1 is the mouse ortholog of human KLRC1 and encodes NKG2A (CD159a), an inhibitory C-type-lectin-like receptor that pairs with CD94 and is expressed on natural killer cells and some T cells. NKG2A binds the non-classical MHC molecule HLA-E and has been associated with inhibitory signaling.",
+      "The NKG2A-HLA-E axis is a target of cancer immunotherapy, and an anti-NKG2A antibody has been evaluated in combination regimens. Klrc1-deficient mice are viable with altered NK-cell responses."
+    ],
+    "applications": [
+      "Humanized KLRC1 (NKG2A) models, in which the human receptor replaces the mouse counterpart, have been used to evaluate NKG2A-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "A review of the NKG2A-HLA-E immune checkpoint pathway in T and NK cells for cancer immunotherapy. J Immunother Cancer. 2024. doi:10.1136/jitc-2024-009934",
+      "Houchins JP et al. DNA sequence analysis of NKG2, a family of related cDNA clones encoding type II integral membrane proteins on human natural killer cells. J Exp Med. 1991. doi:10.1084/jem.173.4.1017"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Klrd1 · Hcst · Klrc2 · Klrk1"
+  },
+  {
+    "symbol": "Cd8a",
+    "h1": "CD8A Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd8a"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD8A"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD8 alpha, Leu2, T8"
+      },
+      {
+        "label": "Protein class",
+        "value": "T-cell co-receptor (Ig superfamily)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2p11.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88346"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1706 · NCBI Gene 925"
+      }
+    ],
+    "why": [
+      "Cd8a is the mouse ortholog of human CD8A and encodes the CD8 alpha chain, part of the CD8 co-receptor on cytotoxic T cells. CD8 binds MHC class I and has been associated with support of T-cell-receptor recognition and cytotoxic T-cell function.",
+      "CD8 T cells are central to antitumor and antiviral immunity, and CD8 is used as a marker and imaging target in immunotherapy research. Cd8a-deficient mice show impaired development of cytotoxic T cells."
+    ],
+    "applications": [
+      "Humanized CD8A models, in which the human chain replaces the mouse counterpart, have been used to study CD8 T-cell biology and to evaluate CD8-directed agents and imaging approaches in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Molecular mechanisms governing CD8 T cell differentiation and checkpoint inhibitor response in cancer. Annu Rev Immunol. 2025. doi:10.1146/annurev-immunol-082223-044122",
+      "Littman DR et al. The isolation and sequence of the gene encoding T8: a molecule defining functional classes of T lymphocytes. Cell. 1985. doi:10.1016/0092-8674(85)90138-2"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd8b1 · Cd4 · Lck · Cd3e"
+  },
+  {
+    "symbol": "Cdh17",
+    "h1": "CDH17 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cdh17"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CDH17"
+      },
+      {
+        "label": "Aliases",
+        "value": "LI-cadherin, HPT-1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Cadherin (cell adhesion)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "8q22.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1095414"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1756 · NCBI Gene 1015"
+      }
+    ],
+    "why": [
+      "Cdh17 is the mouse ortholog of human CDH17 and encodes cadherin-17 (LI-cadherin), a calcium-dependent cell-adhesion molecule expressed mainly in intestinal and related epithelia. Cadherin-17 has been associated with cell adhesion in the gut.",
+      "Cadherin-17 is expressed on gastrointestinal adenocarcinomas with limited expression in many normal tissues, and CDH17-directed approaches, including CAR T cells, are under study. Cdh17-deficient mice show changes in intestinal mineral handling."
+    ],
+    "applications": [
+      "Humanized CDH17 models, in which the human protein replaces the mouse counterpart, have been used to evaluate CDH17-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Cadherin-17 (CDH17) expression in human cancer: a tissue microarray study on 18,131 tumors. Pathol Res Pract. 2024. doi:10.1016/j.prp.2024.155175",
+      "Berndorff D et al. Liver-intestine cadherin: molecular cloning and characterization of a novel Ca(2+)-dependent cell adhesion molecule expressed in liver and intestine. J Cell Biol. 1994. doi:10.1083/jcb.125.6.1353"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cdh1 · Cdh2 · Ceacam5 · Muc2"
+  },
+  {
+    "symbol": "Lgr5",
+    "h1": "LGR5 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Lgr5"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "LGR5"
+      },
+      {
+        "label": "Aliases",
+        "value": "GPR49"
+      },
+      {
+        "label": "Protein class",
+        "value": "Leucine-rich-repeat GPCR (Wnt/R-spondin)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "12q21.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1341817"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4504 · NCBI Gene 8549"
+      }
+    ],
+    "why": [
+      "Lgr5 is the mouse ortholog of human LGR5 and encodes a leucine-rich-repeat G-protein-coupled receptor that binds R-spondins and potentiates Wnt signaling. LGR5 marks stem cells in the intestine and other tissues and has been associated with tissue renewal.",
+      "LGR5 has been associated with cancer-stem-cell populations and treatment resistance in colorectal and other cancers, and LGR5-directed approaches are under study. Lgr5 reporter and lineage-tracing mice are widely used in stem-cell research."
+    ],
+    "applications": [
+      "Humanized LGR5 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate LGR5-directed agents in defined experimental settings.",
+      "Lgr5 reporter mice are used to track and study stem cells."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "LGR5: an emerging therapeutic target for cancer metastasis and chemotherapy resistance. Cancer Metastasis Rev. 2025. doi:10.1007/s10555-024-10239-x",
+      "Barker N et al. Identification of stem cells in small intestine and colon by marker gene Lgr5. Nature. 2007. doi:10.1038/nature06196"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Rspo1 · Lgr4 · Lgr6 · Wnt3"
+  },
+  {
+    "symbol": "Clec9a",
+    "h1": "CLEC9A Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Clec9a"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CLEC9A"
+      },
+      {
+        "label": "Aliases",
+        "value": "DNGR-1, CD370"
+      },
+      {
+        "label": "Protein class",
+        "value": "C-type lectin receptor (dendritic cells)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "12p13.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:2444608"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:26705 · NCBI Gene 283420"
+      }
+    ],
+    "why": [
+      "Clec9a is the mouse ortholog of human CLEC9A and encodes CLEC9A (DNGR-1, CD370), a C-type lectin receptor expressed on a subset of dendritic cells. CLEC9A binds exposed actin filaments on dead cells and has been associated with cross-presentation of antigens.",
+      "CLEC9A is a target for directing antigens to dendritic cells in vaccine and immunotherapy approaches under study. Clec9a-deficient mice show altered cross-presentation of cell-associated antigens."
+    ],
+    "applications": [
+      "Humanized CLEC9A models, in which the human receptor replaces the mouse counterpart, have been used to evaluate CLEC9A-targeted vaccine and immunotherapy approaches in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Exploring Clec9a in dendritic cell-based tumor immunotherapy for molecular insights and therapeutic potentials. npj Vaccines. 2025. doi:10.1038/s41541-025-01084-2",
+      "Sancho D et al. Identification of a dendritic cell receptor that couples sensing of necrosis to immunity. Nature. 2009. doi:10.1038/nature07750"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Xcr1 · Batf3 · Clec4c · Cd8a"
+  },
+  {
+    "symbol": "Fcer1a",
+    "h1": "FCER1A Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Fcer1a"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "FCER1A"
+      },
+      {
+        "label": "Aliases",
+        "value": "FcepsilonRI alpha"
+      },
+      {
+        "label": "Protein class",
+        "value": "High-affinity IgE receptor alpha subunit"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1q23.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:95494"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3609 · NCBI Gene 2205"
+      }
+    ],
+    "why": [
+      "Fcer1a is the mouse ortholog of human FCER1A and encodes the alpha subunit of the high-affinity IgE receptor (FcεRI), which binds immunoglobulin E. The alpha subunit has been associated with IgE binding, and the receptor complex signals in mast cells and basophils.",
+      "FcεRI is central to IgE-mediated allergic responses, and the IgE pathway is targeted therapeutically. Fcer1a-deficient mice show loss of IgE-mediated mast-cell responses."
+    ],
+    "applications": [
+      "Humanized FCER1A models, in which the human subunit replaces the mouse counterpart, have been used to study IgE-mediated responses and to evaluate agents targeting the IgE pathway in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Structural insights into the high-affinity IgE receptor FcεRI complex. Nature. 2024. doi:10.1038/s41586-024-07864-5",
+      "Kochan J et al. Isolation of the gene coding for the alpha subunit of the human high affinity IgE receptor. Nucleic Acids Res. 1988. doi:10.1093/nar/16.8.3584"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Fcer1g · Ms4a2 · Fcer2 · Il4"
+  },
+  {
+    "symbol": "Ager",
+    "h1": "AGER Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ager"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "AGER"
+      },
+      {
+        "label": "Aliases",
+        "value": "RAGE"
+      },
+      {
+        "label": "Protein class",
+        "value": "Ig-superfamily cell-surface receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "6p21.32"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:893592"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:320 · NCBI Gene 177"
+      }
+    ],
+    "why": [
+      "Ager is the mouse ortholog of human AGER and encodes RAGE, an immunoglobulin-superfamily cell-surface receptor that binds advanced glycation end products and other ligands. RAGE signaling has been associated with inflammatory responses.",
+      "RAGE has been associated with diabetic complications, inflammation, and other conditions, and RAGE-directed approaches are under study. Ager-deficient mice show reduced inflammatory responses in several models."
+    ],
+    "applications": [
+      "Humanized AGER (RAGE) models, in which the human receptor replaces the mouse counterpart, have been used to evaluate RAGE-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Role of the receptor for advanced glycation end products (RAGE) and its ligands in inflammatory responses. Biomolecules. 2024. doi:10.3390/biom14121550",
+      "Neeper M et al. Cloning and expression of a cell surface receptor for advanced glycosylation end products of proteins. J Biol Chem. 1992. doi:10.1016/s0021-9258(18)42138-2"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Hmgb1 · S100b · S100a12 · Diaph1"
+  },
+  {
+    "symbol": "Gpbar1",
+    "h1": "GPBAR1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Gpbar1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "GPBAR1"
+      },
+      {
+        "label": "Aliases",
+        "value": "TGR5, M-BAR, GPR131"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (bile acid receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2q35"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:2653863"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:19680 · NCBI Gene 151306"
+      }
+    ],
+    "why": [
+      "Gpbar1 is the mouse ortholog of human GPBAR1 and encodes TGR5, a class A G-protein-coupled receptor activated by bile acids. TGR5 signaling has been associated with regulation of energy metabolism, glucose homeostasis, and intestinal function.",
+      "TGR5 is studied as a target for metabolic and gastrointestinal conditions. Gpbar1-deficient mice show altered bile-acid and metabolic responses."
+    ],
+    "applications": [
+      "Humanized GPBAR1 (TGR5) models, in which the human receptor replaces the mouse counterpart, have been used to evaluate TGR5-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Bile acids affect intestinal barrier function through FXR and TGR5. Front Med (Lausanne). 2025. doi:10.3389/fmed.2025.1607899",
+      "Kawamata Y et al. A G protein-coupled receptor responsive to bile acids. J Biol Chem. 2003. doi:10.1074/jbc.m209706200"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Nr1h4 · Slc10a2 · Cyp7a1 · Fgf15"
+  },
+  {
+    "symbol": "Ghrl",
+    "h1": "GHRL Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ghrl"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "GHRL"
+      },
+      {
+        "label": "Aliases",
+        "value": "ghrelin, obestatin"
+      },
+      {
+        "label": "Protein class",
+        "value": "Secreted peptide hormone"
+      },
+      {
+        "label": "Location (human)",
+        "value": "3p25.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1930008"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:18129 · NCBI Gene 51738"
+      }
+    ],
+    "why": [
+      "Ghrl is the mouse ortholog of human GHRL and encodes preproghrelin, which is processed into the acylated peptide hormone ghrelin (and obestatin). Ghrelin acts on the growth-hormone-secretagogue receptor and has been associated with stimulation of appetite and release of growth hormone.",
+      "Ghrelin has been associated with regulation of food intake and energy balance, and the ghrelin system is studied as a target for metabolic and appetite-related conditions. Ghrl-deficient mice are viable with modest metabolic phenotypes."
+    ],
+    "applications": [
+      "Humanized GHRL models, in which the human gene replaces the mouse counterpart, have been used to study ghrelin biology and to evaluate ghrelin-system-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Effect of long-term exercise on circulating ghrelin in overweight and obese individuals: a systematic review and meta-analysis. Front Nutr. 2025. doi:10.3389/fnut.2025.1518143",
+      "Kojima M et al. Ghrelin is a growth-hormone-releasing acylated peptide from stomach. Nature. 1999. doi:10.1038/45230"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ghsr · Mboat4 · Lep · Gh"
+  },
+  {
+    "symbol": "Cxcr3",
+    "h1": "CXCR3 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cxcr3"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CXCR3"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD183, GPR9"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (chemokine receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "Xq13.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1277207"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4540 · NCBI Gene 2833"
+      }
+    ],
+    "why": [
+      "Cxcr3 is the mouse ortholog of human CXCR3 and encodes CXCR3 (CD183), a class A G-protein-coupled chemokine receptor that binds the chemokines CXCL9, CXCL10, and CXCL11. CXCR3 has been associated with recruitment of activated T cells and other cells to inflamed tissues.",
+      "CXCR3 has been associated with inflammatory, autoimmune, and antitumor immune responses, and CXCR3-pathway-directed approaches are under study. Cxcr3-deficient mice show altered T-cell trafficking."
+    ],
+    "applications": [
+      "Humanized CXCR3 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate CXCR3-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The central role of CXCL10-CXCR3 signaling in neuroinflammation and neuropathology. Cytokine Growth Factor Rev. 2025. doi:10.1016/j.cytogfr.2025.05.003",
+      "Loetscher M et al. Chemokine receptor specific for IP10 and mig: structure, function, and expression in activated T-lymphocytes. J Exp Med. 1996. doi:10.1084/jem.184.3.963"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cxcl9 · Cxcl10 · Cxcl11 · Ccr5"
+  },
+  {
+    "symbol": "F2rl1",
+    "h1": "F2RL1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "F2rl1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "F2RL1"
+      },
+      {
+        "label": "Aliases",
+        "value": "PAR2, PAR-2"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (protease-activated)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "5q13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:101910"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3538 · NCBI Gene 2150"
+      }
+    ],
+    "why": [
+      "F2rl1 is the mouse ortholog of human F2RL1 and encodes protease-activated receptor 2 (PAR2), a class A G-protein-coupled receptor activated by proteolytic cleavage. PAR2 signaling has been associated with inflammation, pain, and itch.",
+      "PAR2 has been associated with inflammatory skin and airway conditions and with sensory signaling, and PAR2-directed approaches are under study. F2rl1-deficient mice show altered inflammatory and sensory responses."
+    ],
+    "applications": [
+      "Humanized F2RL1 (PAR2) models, in which the human receptor replaces the mouse counterpart, have been used to evaluate PAR2-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Protease-activated receptor 2 in inflammatory skin disease: current evidence and future perspectives. Front Immunol. 2024. doi:10.3389/fimmu.2024.1448952",
+      "Nystedt S et al. Molecular cloning of a potential proteinase activated receptor. Proc Natl Acad Sci U S A. 1994. doi:10.1073/pnas.91.20.9208"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: F2r · F2rl3 · F2rl2 · Tmprss2"
+  },
+  {
+    "symbol": "Mmp9",
+    "h1": "MMP9 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Mmp9"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MMP9"
+      },
+      {
+        "label": "Aliases",
+        "value": "gelatinase B, 92-kDa type IV collagenase"
+      },
+      {
+        "label": "Protein class",
+        "value": "Matrix metalloproteinase (gelatinase B)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "20q13.12"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:97011"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:7176 · NCBI Gene 4318"
+      }
+    ],
+    "why": [
+      "Mmp9 is the mouse ortholog of human MMP9 and encodes matrix metalloproteinase-9 (gelatinase B), a secreted enzyme that degrades components of the extracellular matrix, including type IV collagen. MMP-9 has been associated with tissue remodeling, inflammation, and cell migration.",
+      "MMP-9 has been associated with cancer invasion, fibrosis, and inflammatory conditions, and MMP-9-directed approaches have been studied. Mmp9-deficient mice show altered tissue remodeling and inflammatory responses."
+    ],
+    "applications": [
+      "Humanized MMP9 models, in which the human protein replaces the mouse counterpart, have been used to evaluate MMP-9-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The role of matrix metalloproteinase 9 in fibrosis diseases and its molecular mechanisms. Biomed Pharmacother. 2024. doi:10.1016/j.biopha.2023.116116",
+      "Wilhelm SM et al. SV40-transformed human lung fibroblasts secrete a 92-kDa type IV collagenase which is identical to that secreted by normal human macrophages. J Biol Chem. 1989. doi:10.1016/s0021-9258(18)71480-4"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Mmp2 · Timp1 · Timp2 · Mmp14"
+  }
+]

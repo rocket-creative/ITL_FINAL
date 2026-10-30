@@ -1,0 +1,681 @@
+[
+  {
+    "symbol": "Cd38",
+    "h1": "Cd38 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd38"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD38"
+      },
+      {
+        "label": "Aliases",
+        "value": "T10, ADPRC1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Cell-surface ectoenzyme / glycoprotein (ADP-ribosyl cyclase)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "4p15.32"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:107474"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1667 · NCBI Gene 952"
+      }
+    ],
+    "why": [
+      "Cd38 is the mouse ortholog of human CD38 and encodes CD38, a cell-surface glycoprotein with ectoenzyme activity involved in the metabolism of NAD+ and cyclic ADP-ribose. CD38 is expressed on plasma cells and various immune cells and has been associated with roles in calcium signaling and cell adhesion.",
+      "CD38 is highly expressed on malignant plasma cells in multiple myeloma, and CD38-directed antibodies are used in that disease, often combined with other agents; responses vary. Cd38-deficient mice are viable and show altered immune and metabolic responses."
+    ],
+    "applications": [
+      "Humanized CD38 models, in which the human protein replaces the mouse counterpart, have been used to evaluate anti-CD38 antibodies in immunocompetent mice.",
+      "Cd38 knockout mice have been used to study NAD+ metabolism and immune regulation in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Efficacy and safety of anti-CD38 monoclonal antibodies-based therapy versus standard therapy in newly diagnosed multiple myeloma: a systematic review and meta-analysis. Ther Adv Hematol. 2025. doi:10.1177/20406207251314289",
+      "Jackson DG, Bell JI. Isolation of a cDNA encoding the human CD38 (T10) molecule, a cell surface glycoprotein with an unusual discontinuous pattern of expression during lymphocyte differentiation. J Immunol. 1990. doi:10.4049/jimmunol.144.7.2811"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Sdc1 · Cd19 · Slamf7 · Tnfrsf17"
+  },
+  {
+    "symbol": "Flt3",
+    "h1": "Flt3 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Flt3"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "FLT3"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD135, FLK2, STK1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Receptor tyrosine kinase (class III)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "13q12.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:95559"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3765 · NCBI Gene 2322"
+      }
+    ],
+    "why": [
+      "Flt3 is the mouse ortholog of human FLT3 and encodes FLT3 (CD135), a class III receptor tyrosine kinase expressed on hematopoietic progenitor cells. Binding of FLT3 ligand promotes signaling that has been associated with proliferation and survival of early progenitors.",
+      "Activating FLT3 mutations, including internal tandem duplications, have been associated with acute myeloid leukemia, and FLT3 inhibitors are used in FLT3-mutated disease; resistance can emerge. Flt3-deficient mice are viable with reduced numbers of certain progenitor populations."
+    ],
+    "applications": [
+      "Humanized FLT3 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate FLT3-targeted agents.",
+      "Flt3 models have been used to study hematopoiesis and FLT3-driven leukemia in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "A systematic review of second-generation FLT3 inhibitors for treatment of patients with relapsed/refractory acute myeloid leukemia. Leuk Res. 2024. doi:10.1016/j.leukres.2024.107505",
+      "Small D et al. STK-1, the human homolog of Flk-2/Flt-3, is selectively expressed in CD34+ human bone marrow cells and is involved in the proliferation of early progenitor/stem cells. Proc Natl Acad Sci U S A. 1994. doi:10.1073/pnas.91.2.459"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Flt3lg · Kit · Csf1r · Npm1"
+  },
+  {
+    "symbol": "Msln",
+    "h1": "Msln Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Msln"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MSLN"
+      },
+      {
+        "label": "Aliases",
+        "value": "MPF, mesothelin"
+      },
+      {
+        "label": "Protein class",
+        "value": "GPI-anchored cell-surface glycoprotein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "16p13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1888992"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:7371 · NCBI Gene 10232"
+      }
+    ],
+    "why": [
+      "Msln is the mouse ortholog of human MSLN and encodes mesothelin, a GPI-anchored cell-surface glycoprotein normally expressed on mesothelial cells. Mesothelin has been associated with cell adhesion, and its normal physiological role is not fully defined.",
+      "Mesothelin is overexpressed on several solid tumors, including mesothelioma and ovarian and pancreatic cancers, and mesothelin-directed antibody–drug conjugates, CAR T cells, and antibodies have been evaluated; clinical results have varied. Msln-deficient mice are viable without an overt phenotype under standard conditions."
+    ],
+    "applications": [
+      "Humanized MSLN models, in which the human protein replaces the mouse counterpart, have been used to evaluate mesothelin-targeted therapeutics, including antibody–drug conjugates and cell therapies, in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The role of mesothelin in gynecological tumors and its significance in targeted therapies—a review. Cancers. 2026. doi:10.3390/cancers18111692",
+      "Chang K, Pastan I. Molecular cloning of mesothelin, a differentiation antigen present on mesothelium, mesotheliomas, and ovarian cancers. Proc Natl Acad Sci U S A. 1996. doi:10.1073/pnas.93.1.136"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Muc16 · Folr1 · Gpc3 · Erbb2"
+  },
+  {
+    "symbol": "Folr1",
+    "h1": "Folr1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Folr1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "FOLR1"
+      },
+      {
+        "label": "Aliases",
+        "value": "FRα, FBP, FOLR"
+      },
+      {
+        "label": "Protein class",
+        "value": "GPI-anchored folate receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11q13.4"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:95568"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3791 · NCBI Gene 2348"
+      }
+    ],
+    "why": [
+      "Folr1 is the mouse ortholog of human FOLR1 and encodes folate receptor alpha, a GPI-anchored receptor that binds folate with high affinity and mediates its cellular uptake. Folate receptor alpha has been associated with folate transport in selected epithelial tissues.",
+      "Folate receptor alpha is overexpressed on several tumors, including ovarian cancer, and folate-receptor-alpha-directed antibody–drug conjugates are used in selected patients. Folr1-deficient mice show developmental defects related to folate transport."
+    ],
+    "applications": [
+      "Humanized FOLR1 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate folate-receptor-alpha-targeted agents, including antibody–drug conjugates, in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The efficacy and safety of folate receptor α-targeted antibody-drug conjugate therapy in patients with high-grade epithelial ovarian, primary peritoneal, or fallopian tube cancers: a systematic review and meta-analysis. Cancer Med. 2024. doi:10.1002/cam4.70392",
+      "Luhrs CA, Slomiany BL. A human membrane-associated folate binding protein is anchored by a glycosyl-phosphatidylinositol tail. J Clin Invest. 1992. doi:10.1172/jci115959"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Folr2 · Folh1 · Msln · Muc16"
+  },
+  {
+    "symbol": "Gpc3",
+    "h1": "Gpc3 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Gpc3"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "GPC3"
+      },
+      {
+        "label": "Aliases",
+        "value": "SGBS, DGSX, GTR2-2"
+      },
+      {
+        "label": "Protein class",
+        "value": "GPI-anchored heparan sulfate proteoglycan (glypican)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "Xq26.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:104903"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4451 · NCBI Gene 2719"
+      }
+    ],
+    "why": [
+      "Gpc3 is the mouse ortholog of human GPC3 and encodes glypican-3, a GPI-anchored heparan sulfate proteoglycan. Glypican-3 has been associated with regulation of cell growth and signaling during development, and loss-of-function variants are linked to an overgrowth syndrome.",
+      "Glypican-3 is expressed on most hepatocellular carcinomas with limited expression in normal adult liver, and glypican-3-directed agents, including CAR T cells and antibodies, have been evaluated; clinical results have varied. Gpc3-deficient mice show developmental overgrowth features."
+    ],
+    "applications": [
+      "Humanized GPC3 models, in which the human protein replaces the mouse counterpart, have been used to evaluate glypican-3-targeted therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Combination therapy strategies targeting glypican-3 in hepatocellular carcinoma: a comprehensive review. Cytokine Growth Factor Rev. 2025. doi:10.1016/j.cytogfr.2025.12.006",
+      "Capurro M et al. Glypican-3: a novel serum and histochemical marker for hepatocellular carcinoma. Gastroenterology. 2003. doi:10.1016/s0016-5085(03)00689-9"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Gpc1 · Igf2 · Sulf2 · Afp"
+  },
+  {
+    "symbol": "Cd3e",
+    "h1": "Cd3e Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd3e"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD3E"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD3ε, T3E, TCRE"
+      },
+      {
+        "label": "Protein class",
+        "value": "T-cell receptor/CD3 complex subunit (Ig superfamily)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11q23.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88332"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1674 · NCBI Gene 916"
+      }
+    ],
+    "why": [
+      "Cd3e is the mouse ortholog of human CD3E and encodes the CD3ε subunit of the T-cell receptor–CD3 complex. CD3ε contributes to assembly and surface expression of the complex and to transmission of T-cell-receptor signals.",
+      "CD3ε is the engagement point for T-cell-redirecting bispecific antibodies (T-cell engagers) used in several cancers, and anti-CD3 antibodies have other clinical uses; effects depend on the specific agent and context. Loss of CD3ε function has been associated with impaired T-cell development."
+    ],
+    "applications": [
+      "Humanized CD3E models, in which the human subunit replaces the mouse counterpart, have been used to evaluate T-cell-engaging bispecific antibodies in immunocompetent mice, often combined with humanization of a tumor-target antigen.",
+      "Cd3e models have been used to study T-cell-receptor signaling in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Navigating tarlatamab and bispecific T-cell engager therapy in small cell lung cancer: a narrative review. Cancer Treat Res Commun. 2026. doi:10.1016/j.ctarc.2026.101360",
+      "Gold DP et al. Isolation of cDNA clones encoding the 20K non-glycosylated polypeptide chain of the human T-cell receptor/T3 complex. Nature. 1986. doi:10.1038/321431a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd3d · Cd3g · Cd247 · Trac"
+  },
+  {
+    "symbol": "Mapt",
+    "h1": "Mapt Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Mapt"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MAPT"
+      },
+      {
+        "label": "Aliases",
+        "value": "tau, MTBT1, FTDP-17"
+      },
+      {
+        "label": "Protein class",
+        "value": "Microtubule-associated protein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "17q21.31"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:97180"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6893 · NCBI Gene 4137"
+      }
+    ],
+    "why": [
+      "Mapt is the mouse ortholog of human MAPT and encodes tau, a microtubule-associated protein enriched in neurons. Tau has been associated with regulation of microtubule stability and axonal transport, and it is expressed as multiple isoforms.",
+      "Aggregated tau is a feature of Alzheimer’s disease and other tauopathies, and MAPT mutations are linked to frontotemporal dementia; tau-directed therapies are under study, though clinical results to date have been mixed. Humanized and mutant Mapt alleles have been developed to study tau biology."
+    ],
+    "applications": [
+      "Humanized MAPT models, which express human tau isoforms, have been used to study tau aggregation and to evaluate tau-targeted approaches in defined experimental settings.",
+      "Mapt knockout and mutant models have been used to study tau function."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "From target engagement to translational disconnect: a systematic review and narrative synthesis of direct tau-targeted clinical trials in Alzheimer’s disease and primary tauopathies. Pharmacol Res. 2026. doi:10.1016/j.phrs.2026.108439",
+      "Goedert M et al. Multiple isoforms of human microtubule-associated protein tau: sequences and localization in neurofibrillary tangles of Alzheimer’s disease. Neuron. 1989. doi:10.1016/0896-6273(89)90210-9"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: App · Apoe · Psen1 · Gsk3b"
+  },
+  {
+    "symbol": "Lrrk2",
+    "h1": "Lrrk2 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Lrrk2"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "LRRK2"
+      },
+      {
+        "label": "Aliases",
+        "value": "PARK8, dardarin"
+      },
+      {
+        "label": "Protein class",
+        "value": "Leucine-rich repeat kinase (GTPase/kinase)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "12q12"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1913975"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:18618 · NCBI Gene 120892"
+      }
+    ],
+    "why": [
+      "Lrrk2 is the mouse ortholog of human LRRK2 and encodes a large protein containing both GTPase and kinase domains. LRRK2 has been associated with regulation of vesicle trafficking, lysosomal function, and other cellular processes.",
+      "LRRK2 mutations, including the common G2019S variant, are among the more frequent genetic contributors to Parkinson’s disease, and LRRK2 kinase inhibitors are under clinical investigation. Lrrk2-deficient mice are viable and show changes in lung and kidney and in lysosomal markers."
+    ],
+    "applications": [
+      "Humanized and mutant LRRK2 models, including knock-in of disease-associated variants, have been used to study LRRK2 biology and to evaluate LRRK2-targeted agents in defined experimental settings.",
+      "Lrrk2 knockout models have been used to study LRRK2 function."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "LRRK2 in Parkinson’s disease: upstream regulation and therapeutic targeting. Trends Mol Med. 2024. doi:10.1016/j.molmed.2024.07.003",
+      "Zimprich A et al. Mutations in LRRK2 cause autosomal-dominant parkinsonism with pleomorphic pathology. Neuron. 2004. doi:10.1016/j.neuron.2004.11.005"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Snca · Park7 · Pink1 · Prkn"
+  },
+  {
+    "symbol": "Ldlr",
+    "h1": "Ldlr Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ldlr"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "LDLR"
+      },
+      {
+        "label": "Aliases",
+        "value": "FH, FHC"
+      },
+      {
+        "label": "Protein class",
+        "value": "Cell-surface receptor (LDL receptor family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19p13.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96765"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6547 · NCBI Gene 3949"
+      }
+    ],
+    "why": [
+      "Ldlr is the mouse ortholog of human LDLR and encodes the low-density lipoprotein (LDL) receptor, a cell-surface receptor that mediates uptake of LDL particles and has been associated with regulation of plasma cholesterol.",
+      "Loss-of-function LDLR mutations cause familial hypercholesterolemia, and the LDL-receptor pathway is central to lipid-lowering therapy; agents such as statins and PCSK9 inhibitors act in part by increasing LDL-receptor activity. Ldlr-deficient mice develop elevated cholesterol and atherosclerosis on appropriate diets and are widely used in cardiovascular research."
+    ],
+    "applications": [
+      "Ldlr knockout mice are widely used to study atherosclerosis and lipid metabolism. Humanized LDLR models, in which the human receptor replaces the mouse counterpart, have been used to study LDL-receptor regulation and lipid-lowering agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "A comparative analysis of low-density lipoprotein cholesterol (LDL-C)-lowering activities of bempedoic acid, inclisiran, and PCSK9 inhibitors: a systematic review. Cureus. 2024. doi:10.7759/cureus.69900",
+      "Sudhof TC et al. The LDL receptor gene: a mosaic of exons shared with different proteins. Science. 1985. doi:10.1126/science.2988123"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Pcsk9 · Apob · Ldlrap1 · Apoe"
+  },
+  {
+    "symbol": "Angptl3",
+    "h1": "Angptl3 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Angptl3"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "ANGPTL3"
+      },
+      {
+        "label": "Aliases",
+        "value": "ANG-5, FHBL2"
+      },
+      {
+        "label": "Protein class",
+        "value": "Secreted angiopoietin-like protein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1p31.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1353627"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:491 · NCBI Gene 27329"
+      }
+    ],
+    "why": [
+      "Angptl3 is the mouse ortholog of human ANGPTL3 and encodes angiopoietin-like 3, a secreted protein produced mainly by the liver. ANGPTL3 has been associated with inhibition of lipoprotein lipase and endothelial lipase and with regulation of plasma lipids.",
+      "Loss-of-function ANGPTL3 variants are associated with low plasma lipids, and ANGPTL3-directed agents are used or under study for lipid lowering. Angptl3-deficient mice show reduced plasma triglycerides and cholesterol."
+    ],
+    "applications": [
+      "Humanized ANGPTL3 models, in which the human protein replaces the mouse counterpart, have been used to evaluate ANGPTL3-targeted agents, including antibodies and nucleic-acid-based approaches, in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Lipid, lipoprotein, and biomarker changes with ANGPTL3 inhibition: a meta-analysis of controlled randomized trials. Atherosclerosis. 2026. doi:10.1016/j.atherosclerosis.2026.121167",
+      "Koishi R et al. Angptl3 regulates lipid metabolism in mice. Nat Genet. 2002. doi:10.1038/ng814"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Angptl4 · Lpl · Apoc3 · Angptl8"
+  },
+  {
+    "symbol": "Il5",
+    "h1": "Il5 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il5"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL5"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-5, EDF, TRF"
+      },
+      {
+        "label": "Protein class",
+        "value": "Type 2 cytokine"
+      },
+      {
+        "label": "Location (human)",
+        "value": "5q31.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96557"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6016 · NCBI Gene 3567"
+      }
+    ],
+    "why": [
+      "Il5 is the mouse ortholog of human IL5 and encodes interleukin-5, a type 2 cytokine produced mainly by T helper 2 cells and group 2 innate lymphoid cells. IL-5 has been associated with the differentiation, survival, and recruitment of eosinophils.",
+      "IL-5 is implicated in eosinophilic asthma and other eosinophil-associated diseases, and IL-5-directed antibodies are in clinical use. Il5-deficient mice are viable and show reduced eosinophil responses."
+    ],
+    "applications": [
+      "Humanized IL5 models, often paired with the IL-5 receptor, have been used to evaluate IL-5-targeted antibodies in defined experimental settings.",
+      "Il5 knockout mice have been used to study eosinophil biology."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Efficacy and safety of mepolizumab in severe eosinophilic asthma: a systematic review and meta-analysis. J Thorac Dis. 2025. doi:10.21037/jtd-2025-1596",
+      "Campbell HD et al. Molecular cloning, nucleotide sequence, and expression of the gene encoding human eosinophil differentiation factor (interleukin 5). Proc Natl Acad Sci U S A. 1987. doi:10.1073/pnas.84.19.6629"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il5ra · Il4 · Il13 · Csf2"
+  },
+  {
+    "symbol": "Il33",
+    "h1": "Il33 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il33"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL33"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-33, NF-HEV, DVS27"
+      },
+      {
+        "label": "Protein class",
+        "value": "IL-1 family cytokine (alarmin)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "9p24.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1924375"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:16028 · NCBI Gene 90865"
+      }
+    ],
+    "why": [
+      "Il33 is the mouse ortholog of human IL33 and encodes interleukin-33, an IL-1-family cytokine that can be released from epithelial and endothelial cells and acts as an alarmin. IL-33 signals through the receptor ST2 and has been associated with promotion of type 2 immune responses.",
+      "IL-33 is implicated in asthma and other inflammatory conditions, and IL-33- and ST2-directed antibodies are under clinical study. Il33-deficient mice are viable and show altered type 2 responses in disease models."
+    ],
+    "applications": [
+      "Humanized IL33 models, in which the human cytokine replaces the mouse counterpart, have been used to evaluate IL-33-targeted antibodies in defined experimental settings.",
+      "Il33 knockout mice have been used to study alarmin biology and type 2 immunity."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The immunomodulatory of interleukin-33 in rheumatoid arthritis: a systematic review. Clin Immunol. 2024. doi:10.1016/j.clim.2024.110264",
+      "Schmitz J et al. IL-33, an interleukin-1-like cytokine that signals via the IL-1 receptor-related protein ST2 and induces T helper type 2-associated cytokines. Immunity. 2005. doi:10.1016/j.immuni.2005.09.015"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il1rl1 · Il1b · Tslp · Il25"
+  }
+]

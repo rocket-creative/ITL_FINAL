@@ -65,6 +65,12 @@ const navigationItems: NavItem[] = [
             { label: 'Rabbit Models', href: '/custom-rabbit-models' },
           ],
         },
+        {
+          title: 'By gene',
+          items: [
+            { label: 'Gene model pages', href: '/custom-mouse-models/gene' },
+          ],
+        },
       ],
     },
   },

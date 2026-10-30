@@ -189,6 +189,10 @@ export async function getAllModels(): Promise<ServerCatalogModel[]> {
  * F0/F1 founder colonies are excluded. Deduped per request.
  */
 export const getLiveHumanizedModels = cache(async (): Promise<ServerCatalogModel[]> => {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return [];
+  }
+
   const results: CatalogRow[] = [];
   const PAGE = 1000;
   let from = 0;

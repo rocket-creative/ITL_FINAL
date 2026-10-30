@@ -1,0 +1,678 @@
+[
+  {
+    "symbol": "Il2",
+    "h1": "Il2 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il2"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL2"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-2, TCGF"
+      },
+      {
+        "label": "Protein class",
+        "value": "Type I cytokine (four-helix bundle)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "4q27"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96548"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6001 · NCBI Gene 3558"
+      }
+    ],
+    "why": [
+      "Il2 is the mouse ortholog of human IL2 and encodes interleukin-2, a cytokine produced mainly by activated T cells. IL-2 signals through receptors containing the IL-2 receptor alpha, beta, and gamma chains and has been associated with proliferation and regulation of T cells, including effector and regulatory T-cell populations.",
+      "IL-2-based agents are used in cancer and are under study in autoimmune disease, where high- and low-dose approaches have different effects; engineered IL-2 variants aim to bias these responses. Il2-deficient mice are viable and develop immune dysregulation, consistent with a role in immune homeostasis."
+    ],
+    "applications": [
+      "Humanized IL2 models, in which the human cytokine replaces the mouse counterpart, have been used to evaluate IL-2-based agents and engineered IL-2 variants in defined experimental settings.",
+      "Il2 knockout mice have been used to study T-cell regulation and tolerance."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Safety of adoptive therapy with tumor-infiltrating lymphocytes and high-dose IL-2 in advanced cutaneous melanoma: a systematic review and meta-analysis. Ann Oncol. 2025. doi:10.1016/j.annonc.2025.04.001",
+      "Taniguchi T et al. Structure and expression of a cloned cDNA for human interleukin-2. Nature. 1983. doi:10.1038/302305a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il2ra · Il2rb · Il2rg · Foxp3"
+  },
+  {
+    "symbol": "Il15",
+    "h1": "Il15 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il15"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL15"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-15"
+      },
+      {
+        "label": "Protein class",
+        "value": "Type I cytokine (IL-2 family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "4q31.21"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:103014"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5977 · NCBI Gene 3600"
+      }
+    ],
+    "why": [
+      "Il15 is the mouse ortholog of human IL15 and encodes interleukin-15, a cytokine that shares receptor components with IL-2 and is often presented in trans by IL-15 receptor alpha. IL-15 has been associated with the development and maintenance of natural killer cells and memory CD8 T cells.",
+      "IL-15-based agents, including IL-15 superagonists, are under study in cancer immunotherapy. Il15-deficient mice are viable and show reduced natural killer and memory T-cell populations."
+    ],
+    "applications": [
+      "Humanized IL15 models, often paired with IL-15 receptor components, have been used to evaluate IL-15-based agents and to support human immune-cell functions in defined experimental settings.",
+      "Il15 knockout mice have been used to study natural killer and memory T-cell biology."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Interleukin-15 responses to acute and chronic exercise in adults: a systematic review and meta-analysis. Front Immunol. 2024. doi:10.3389/fimmu.2023.1288537",
+      "Grabstein KH et al. Cloning of a T cell growth factor that interacts with the β chain of the interleukin-2 receptor. Science. 1994. doi:10.1126/science.8178155"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il15ra · Il2rb · Il2rg · Ncr1"
+  },
+  {
+    "symbol": "Cd40",
+    "h1": "Cd40 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd40"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD40"
+      },
+      {
+        "label": "Aliases",
+        "value": "TNFRSF5, Bp50"
+      },
+      {
+        "label": "Protein class",
+        "value": "TNF receptor superfamily member (costimulatory)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "20q13.12"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88336"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:11919 · NCBI Gene 958"
+      }
+    ],
+    "why": [
+      "Cd40 is the mouse ortholog of human CD40 and encodes CD40, a TNF-receptor-superfamily member expressed on antigen-presenting cells and other cells. CD40 binds CD40 ligand (CD154) and has been associated with activation of antigen-presenting cells and support of T-cell and B-cell responses.",
+      "CD40 agonists are under study in cancer immunotherapy, and the CD40-CD40L axis is also implicated in inflammatory and vascular disease. Cd40-deficient mice are viable and show impaired antibody class switching and germinal-center responses."
+    ],
+    "applications": [
+      "Humanized CD40 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate agonistic CD40 antibodies in immunocompetent mice, sometimes combined with CD40L humanization."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Agonistic anti-CD40 antibodies in patients with solid tumors: a systematic review and evidence map of clinical safety. Front Immunol. 2026. doi:10.3389/fimmu.2026.1908586",
+      "Clark EA, Ledbetter JA. Activation of human B cells mediated through two distinct cell surface differentiation antigens, Bp35 and Bp50. Proc Natl Acad Sci U S A. 1986. doi:10.1073/pnas.83.12.4494"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd40lg · Traf6 · Cd80 · Cd86"
+  },
+  {
+    "symbol": "Tnfrsf9",
+    "h1": "Tnfrsf9 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Tnfrsf9"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "TNFRSF9"
+      },
+      {
+        "label": "Aliases",
+        "value": "4-1BB, CD137, ILA"
+      },
+      {
+        "label": "Protein class",
+        "value": "TNF receptor superfamily member (costimulatory)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1p36.23"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1101059"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:11924 · NCBI Gene 3604"
+      }
+    ],
+    "why": [
+      "Tnfrsf9 is the mouse ortholog of human TNFRSF9 and encodes 4-1BB (CD137), a costimulatory TNF-receptor-superfamily member expressed on activated T cells and other immune cells. Engagement of 4-1BB by its ligand has been associated with enhanced T-cell proliferation and survival.",
+      "4-1BB is a target of agonist antibodies and bispecific agents in cancer immunotherapy, and the 4-1BB signaling domain is used in some chimeric antigen receptors. Tnfrsf9-deficient mice are viable with altered T-cell responses in some models."
+    ],
+    "applications": [
+      "Humanized TNFRSF9 (4-1BB) models, in which the human receptor replaces the mouse counterpart, have been used to evaluate 4-1BB agonists and bispecific agents in immunocompetent mice."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "4-1BB immunotherapy: advances and hurdles. Exp Mol Med. 2024. doi:10.1038/s12276-023-01136-4",
+      "Kwon BS, Weissman SM. cDNA sequences of two inducible T-cell genes. Proc Natl Acad Sci U S A. 1989. doi:10.1073/pnas.86.6.1963"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Tnfsf9 · Cd28 · Tnfrsf4 · Tnfrsf18"
+  },
+  {
+    "symbol": "Cd276",
+    "h1": "Cd276 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd276"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD276"
+      },
+      {
+        "label": "Aliases",
+        "value": "B7-H3"
+      },
+      {
+        "label": "Protein class",
+        "value": "B7-family immune-regulatory ligand"
+      },
+      {
+        "label": "Location (human)",
+        "value": "15q24.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:2183926"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:19137 · NCBI Gene 80381"
+      }
+    ],
+    "why": [
+      "Cd276 is the mouse ortholog of human CD276 and encodes B7-H3, a member of the B7 family of immune-regulatory cell-surface proteins. B7-H3 has been associated with modulation of T-cell responses, though its receptor and precise roles remain under study.",
+      "B7-H3 is overexpressed on several tumors with limited expression in many normal tissues, and B7-H3-directed antibodies, antibody–drug conjugates, and CAR T cells have been evaluated; clinical results have varied. Cd276-deficient mice are viable with altered responses in some disease models."
+    ],
+    "applications": [
+      "Humanized CD276 (B7-H3) models, in which the human protein replaces the mouse counterpart, have been used to evaluate B7-H3-targeted therapeutics, including antibody–drug conjugates and cell therapies, in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The B7-H3 (CD276) pathway: emerging biology and clinical therapeutics. Trends Pharmacol Sci. 2025. doi:10.1016/j.tips.2025.08.008",
+      "Chapoval AI et al. B7-H3: a costimulatory molecule for T cell activation and IFN-γ production. Nat Immunol. 2001. doi:10.1038/85339"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd80 · Cd86 · Pdcd1lg2 · Vtcn1"
+  },
+  {
+    "symbol": "Nt5e",
+    "h1": "Nt5e Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Nt5e"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "NT5E"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD73, eN, NT5"
+      },
+      {
+        "label": "Protein class",
+        "value": "GPI-anchored ecto-5’-nucleotidase"
+      },
+      {
+        "label": "Location (human)",
+        "value": "6q14.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:99782"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:8021 · NCBI Gene 4907"
+      }
+    ],
+    "why": [
+      "Nt5e is the mouse ortholog of human NT5E and encodes CD73, a GPI-anchored ecto-5’-nucleotidase that converts AMP to adenosine. CD73, together with CD39, has been associated with generation of extracellular adenosine and with regulation of immune responses.",
+      "The CD39-CD73-adenosine pathway has been associated with an immunosuppressive tumor microenvironment, and CD73-directed agents are under study in cancer. Nt5e-deficient mice are viable and show altered vascular permeability and immune responses."
+    ],
+    "applications": [
+      "Humanized NT5E (CD73) models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD73-targeted agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Regulatory role of CD39 and CD73 in tumor immunity. Future Oncol. 2024. doi:10.2217/fon-2023-0871",
+      "Synnestvedt K et al. Ecto-5’-nucleotidase (CD73) regulation by hypoxia-inducible factor-1 mediates permeability changes in intestinal epithelia. J Clin Invest. 2002. doi:10.1172/jci15337"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Entpd1 · Adora2a · Adora2b · Alpl"
+  },
+  {
+    "symbol": "Adora2a",
+    "h1": "Adora2a Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Adora2a"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "ADORA2A"
+      },
+      {
+        "label": "Aliases",
+        "value": "A2aR, ADORA2"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class A G-protein-coupled receptor (adenosine)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "22q11.23"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:99402"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:263 · NCBI Gene 135"
+      }
+    ],
+    "why": [
+      "Adora2a is the mouse ortholog of human ADORA2A and encodes the adenosine A2A receptor, a class A G-protein-coupled receptor. A2A-receptor signaling has been associated with regulation of immune-cell activity and with neurological functions in the basal ganglia.",
+      "A2A-receptor antagonists are used in Parkinson’s disease and are under study in cancer immunotherapy, where adenosine signaling can dampen immune responses. Adora2a-deficient mice are viable and show altered responses to adenosine and changes in motor and inflammatory phenotypes."
+    ],
+    "applications": [
+      "Humanized ADORA2A models, in which the human receptor replaces the mouse counterpart, have been used to evaluate A2A-receptor-targeted agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Comparative efficacy and safety of adenosine A2A receptor antagonists for Parkinson’s disease: a systematic review and network meta-analysis. Brain Netw Disord. 2026. doi:10.1016/j.bnd.2026.03.001",
+      "Meng F et al. Cloning and expression of the A2a adenosine receptor from guinea pig brain. Neurochem Res. 1994. doi:10.1007/bf00971338"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Adora1 · Adora2b · Adora3 · Drd2"
+  },
+  {
+    "symbol": "Ido1",
+    "h1": "Ido1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ido1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IDO1"
+      },
+      {
+        "label": "Aliases",
+        "value": "INDO, IDO"
+      },
+      {
+        "label": "Protein class",
+        "value": "Heme-containing dioxygenase (tryptophan catabolism)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "8p11.21"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96416"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6059 · NCBI Gene 3620"
+      }
+    ],
+    "why": [
+      "Ido1 is the mouse ortholog of human IDO1 and encodes indoleamine 2,3-dioxygenase 1, a heme-containing enzyme that catalyzes the first step of tryptophan catabolism along the kynurenine pathway. IDO1 activity has been associated with modulation of immune responses.",
+      "IDO1 has been associated with an immunosuppressive tumor microenvironment, and IDO1 inhibitors have been evaluated in cancer; clinical results have varied. Ido1-deficient mice are viable and show altered immune responses in several models."
+    ],
+    "applications": [
+      "Humanized IDO1 models, in which the human enzyme replaces the mouse counterpart, have been used to evaluate IDO1-targeted agents in defined experimental settings.",
+      "Ido1 knockout mice have been used to study tryptophan metabolism and immune regulation."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Prognostic and clinicopathological value of indoleamine 2,3-dioxygenase (IDO) expression in head and neck squamous cell carcinoma: a systematic review and meta-analysis. J Stomatol Oral Maxillofac Surg. 2024. doi:10.1016/j.jormas.2024.102130",
+      "Munn DH et al. Prevention of allogeneic fetal rejection by tryptophan catabolism. Science. 1998. doi:10.1126/science.281.5380.1191"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ido2 · Tdo2 · Kmo · Afmid"
+  },
+  {
+    "symbol": "Met",
+    "h1": "Met Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Met"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MET"
+      },
+      {
+        "label": "Aliases",
+        "value": "c-Met, HGFR"
+      },
+      {
+        "label": "Protein class",
+        "value": "Receptor tyrosine kinase (HGF receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "7q31.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96969"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:7029 · NCBI Gene 4233"
+      }
+    ],
+    "why": [
+      "Met is the mouse ortholog of human MET and encodes MET (c-MET), a receptor tyrosine kinase that binds hepatocyte growth factor. MET signaling has been associated with cell proliferation, survival, and migration.",
+      "MET alterations, including exon 14 skipping and amplification, have been associated with non-small cell lung cancer and other tumors, and MET inhibitors are used in selected MET-driven cancers; resistance can emerge. Homozygous Met-null mice show embryonic lethality with defects in placenta, liver, and muscle development."
+    ],
+    "applications": [
+      "Humanized MET models, in which the human receptor replaces the mouse counterpart, have been used to evaluate MET-targeted antibodies and inhibitors.",
+      "Conditional Met models have been used to study MET signaling in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Research progress on resistance and mechanisms of c-Met inhibitors in treating MET exon 14 skipping mutant non-small cell lung cancer: a narrative review. J Thorac Dis. 2026. doi:10.21037/jtd-2026-0949",
+      "Bottaro DP et al. Identification of the hepatocyte growth factor receptor as the c-met proto-oncogene product. Science. 1991. doi:10.1126/science.1846706"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Hgf · Egfr · Erbb2 · Kras"
+  },
+  {
+    "symbol": "Folh1",
+    "h1": "Folh1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Folh1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "FOLH1"
+      },
+      {
+        "label": "Aliases",
+        "value": "PSMA, GCPII, NAALADase"
+      },
+      {
+        "label": "Protein class",
+        "value": "Transmembrane glutamate carboxypeptidase"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11p11.12"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1858193"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3788 · NCBI Gene 2346"
+      }
+    ],
+    "why": [
+      "Folh1 is the mouse ortholog of human FOLH1 and encodes prostate-specific membrane antigen (PSMA), a transmembrane glutamate carboxypeptidase. PSMA has been associated with folate and glutamate metabolism and is expressed in prostate epithelium and some other tissues.",
+      "PSMA is highly expressed on most prostate cancers, and PSMA-directed imaging and radioligand therapies are used clinically. Folh1-deficient mice are viable under standard conditions."
+    ],
+    "applications": [
+      "Humanized FOLH1 (PSMA) models, in which the human protein replaces the mouse counterpart, have been used to evaluate PSMA-directed imaging and therapeutic agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Diagnostic performance of PSMA PET for the detection of prostate cancer and primary staging before definitive treatment: a systematic review and meta-analysis. Eur Urol. 2025. doi:10.1016/j.eururo.2025.03.003",
+      "Carter RE et al. Prostate-specific membrane antigen is a hydrolase with substrate and pharmacologic characteristics of a neuropeptidase. Proc Natl Acad Sci U S A. 1996. doi:10.1073/pnas.93.2.749"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Folr1 · Naalad2 · Klk3 · Steap1"
+  },
+  {
+    "symbol": "F11",
+    "h1": "F11 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "F11"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "F11"
+      },
+      {
+        "label": "Aliases",
+        "value": "FXI, coagulation factor XI"
+      },
+      {
+        "label": "Protein class",
+        "value": "Serine protease zymogen (coagulation)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "4q35.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:99481"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3529 · NCBI Gene 2160"
+      }
+    ],
+    "why": [
+      "F11 is the mouse ortholog of human F11 and encodes coagulation factor XI, a serine protease zymogen of the intrinsic coagulation pathway. Activated factor XI has been associated with amplification of thrombin generation.",
+      "Factor XI has been associated with thrombosis while having a comparatively limited role in normal hemostasis, and factor XI inhibitors are under study as anticoagulants intended to reduce bleeding risk. F11-deficient mice are viable with prolonged clotting times and reduced experimental thrombosis."
+    ],
+    "applications": [
+      "Humanized F11 models, in which the human protein replaces the mouse counterpart, have been used to evaluate factor XI-directed anticoagulants in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Factor XI inhibitors for the prevention and treatment of venous and arterial thromboembolism. Nat Rev Cardiol. 2025. doi:10.1038/s41569-025-01144-z",
+      "Fujikawa K et al. Amino acid sequence of human factor XI, a blood coagulation factor with four tandem repeats that are highly homologous with plasma prekallikrein. Biochemistry. 1986. doi:10.1021/bi00357a018"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: F12 · Klkb1 · F9 · Kng1"
+  },
+  {
+    "symbol": "Dpp4",
+    "h1": "Dpp4 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Dpp4"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "DPP4"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD26, DPPIV, ADABP"
+      },
+      {
+        "label": "Protein class",
+        "value": "Serine exopeptidase (dipeptidyl peptidase)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2q24.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:94919"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3009 · NCBI Gene 1803"
+      }
+    ],
+    "why": [
+      "Dpp4 is the mouse ortholog of human DPP4 and encodes dipeptidyl peptidase-4 (CD26), a cell-surface and soluble serine exopeptidase. DPP-4 cleaves several peptides, including the incretin hormones GLP-1 and GIP, and has been associated with regulation of their activity.",
+      "DPP-4 inhibitors are used in type 2 diabetes, and DPP-4 has additional roles in immune regulation; in some species DPP-4 serves as a receptor for certain coronaviruses. Dpp4-deficient mice are viable and show altered glucose tolerance and incretin levels."
+    ],
+    "applications": [
+      "Humanized DPP4 models, in which the human protein replaces the mouse counterpart, have been used to study DPP-4 biology, DPP-4-targeted agents, and human DPP-4-dependent coronavirus infection in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Dipeptidyl peptidase-4 inhibitors: a systematic review of structure-activity relationship studies. Iran J Pharm Res. 2024. doi:10.5812/ijpr-151581",
+      "Misumi Y et al. Molecular cloning and sequence analysis of human dipeptidyl peptidase IV, a serine proteinase on the cell surface. Biochim Biophys Acta. 1992. doi:10.1016/0167-4781(92)90036-y"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Glp1r · Gipr · Fap · Dpp8"
+  }
+]

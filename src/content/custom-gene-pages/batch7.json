@@ -1,0 +1,674 @@
+[
+  {
+    "symbol": "Itgb7",
+    "h1": "ITGB7 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Itgb7"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "ITGB7"
+      },
+      {
+        "label": "Aliases",
+        "value": "integrin β7"
+      },
+      {
+        "label": "Protein class",
+        "value": "Integrin beta subunit (α4β7 / αEβ7)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "12q13.13"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96616"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6162 · NCBI Gene 3695"
+      }
+    ],
+    "why": [
+      "Itgb7 is the mouse ortholog of human ITGB7 and encodes the integrin β7 subunit, which pairs with α4 to form α4β7 and with αE to form αEβ7. The α4β7 integrin binds MAdCAM-1 and has been associated with homing of lymphocytes to gut-associated tissues.",
+      "The α4β7 integrin is the target of the antibody vedolizumab used in inflammatory bowel disease. Itgb7-deficient mice are viable with reduced gut-associated lymphoid tissue."
+    ],
+    "applications": [
+      "Humanized ITGB7 models, in which the human subunit replaces the mouse counterpart, have been used to evaluate α4β7-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Effectiveness and treatment persistence of vedolizumab compared to anti-tumour necrosis factor-α in patients with Crohn’s disease: a systematic literature review and meta-analysis. United European Gastroenterol J. 2024. doi:10.1002/ueg2.12705",
+      "Erle DJ et al. Complete amino acid sequence of an integrin beta subunit (beta 7) identified in leukocytes. J Biol Chem. 1991. doi:10.1016/s0021-9258(18)99120-9"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Itga4 · Itgae · Madcam1 · Vcam1"
+  },
+  {
+    "symbol": "Madcam1",
+    "h1": "MADCAM1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Madcam1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MADCAM1"
+      },
+      {
+        "label": "Aliases",
+        "value": "MAdCAM-1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Ig-superfamily mucosal addressin adhesion molecule"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19p13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:103579"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:6765 · NCBI Gene 8174"
+      }
+    ],
+    "why": [
+      "Madcam1 is the mouse ortholog of human MADCAM1 and encodes mucosal addressin cell adhesion molecule-1 (MAdCAM-1), an immunoglobulin-superfamily adhesion molecule expressed on endothelium in the gut and associated lymphoid tissue. MAdCAM-1 binds the α4β7 integrin and has been associated with lymphocyte homing to the intestine.",
+      "The MAdCAM-1/α4β7 axis is a target in inflammatory bowel disease, and MAdCAM-1-directed agents have been evaluated. Madcam1-deficient mice show altered gut lymphocyte homing."
+    ],
+    "applications": [
+      "Humanized MADCAM1 models, in which the human protein replaces the mouse counterpart, have been used to evaluate MAdCAM-1-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Selective targeting of α4β7/MAdCAM-1 axis suppresses fibrosis progression by reducing proinflammatory T cell recruitment to the liver. Cells. 2024. doi:10.3390/cells13090756",
+      "Briskin MJ et al. MAdCAM-1 has homology to immunoglobulin and mucin-like adhesion receptors and to IgA1. Nature. 1993. doi:10.1038/363461a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Itgb7 · Itga4 · Glycam1 · Sell"
+  },
+  {
+    "symbol": "Cd5",
+    "h1": "CD5 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd5"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD5"
+      },
+      {
+        "label": "Aliases",
+        "value": "Leu-1, T1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Scavenger-receptor-cysteine-rich family receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11q12.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88340"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1685 · NCBI Gene 921"
+      }
+    ],
+    "why": [
+      "Cd5 is the mouse ortholog of human CD5 and encodes CD5, a scavenger-receptor-cysteine-rich family glycoprotein expressed on T cells and a subset of B cells. CD5 has been associated with modulation of antigen-receptor signaling.",
+      "CD5 is expressed on several T-cell malignancies, and CD5-directed CAR T cells are under study. Cd5-deficient mice are viable with altered lymphocyte responses."
+    ],
+    "applications": [
+      "Humanized CD5 models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD5-directed therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Allogeneic CD5-specific CAR-T therapy for relapsed/refractory T-ALL: a phase 1 trial. Nat Med. 2024. doi:10.1038/s41591-024-03282-2",
+      "Jones NH et al. Isolation of complementary DNA clones encoding the human lymphocyte glycoprotein T1/Leu-1. Nature. 1986. doi:10.1038/323346a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd6 · Cd5l · Ptprc · Lck"
+  },
+  {
+    "symbol": "Cd7",
+    "h1": "CD7 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd7"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD7"
+      },
+      {
+        "label": "Aliases",
+        "value": "TP41, Tp40"
+      },
+      {
+        "label": "Protein class",
+        "value": "Ig-superfamily T-cell surface glycoprotein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "17q25.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88344"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1695 · NCBI Gene 924"
+      }
+    ],
+    "why": [
+      "Cd7 is the mouse ortholog of human CD7 and encodes CD7, an immunoglobulin-superfamily glycoprotein expressed on T cells and natural killer cells. CD7 has been associated with roles in T-cell activation.",
+      "CD7 is expressed on T-cell acute lymphoblastic leukemia and other T-cell malignancies, and CD7-directed CAR T cells are under study. Cd7-deficient mice are viable with largely preserved lymphocyte development."
+    ],
+    "applications": [
+      "Humanized CD7 models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD7-directed therapeutics in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Sequential CD7 CAR T-cell therapy and allogeneic HSCT without GVHD prophylaxis. N Engl J Med. 2024. doi:10.1056/nejmoa2313812",
+      "Aruffo A, Seed B. Molecular cloning of two CD7 (T-cell leukemia antigen) cDNAs by a COS cell expression system. EMBO J. 1987. doi:10.1002/j.1460-2075.1987.tb02651.x"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd2 · Cd3e · Klrb1c · Itk"
+  },
+  {
+    "symbol": "Cd44",
+    "h1": "CD44 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd44"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD44"
+      },
+      {
+        "label": "Aliases",
+        "value": "HCAM, Pgp-1, Hermes"
+      },
+      {
+        "label": "Protein class",
+        "value": "Hyaluronan receptor / cell-adhesion glycoprotein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11p13"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88338"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1681 · NCBI Gene 960"
+      }
+    ],
+    "why": [
+      "Cd44 is the mouse ortholog of human CD44 and encodes CD44, a cell-surface glycoprotein and a principal receptor for hyaluronan, expressed as multiple isoforms. CD44 has been associated with cell adhesion, migration, and signaling.",
+      "CD44, including certain variant isoforms, has been associated with cancer-stem-cell properties and drug resistance in several tumors, and CD44-directed approaches are under study. Cd44-deficient mice are viable with altered hematopoietic and inflammatory responses."
+    ],
+    "applications": [
+      "Humanized CD44 models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD44-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "CD44 overexpression as a mediator of drug resistance in oral cancer: a meta-analysis unveiling molecular underpinnings and therapeutic implications. Discov Oncol. 2025. doi:10.1007/s12672-025-03436-9",
+      "Goldstein LA et al. A human lymphocyte homing receptor, the Hermes antigen, is related to cartilage proteoglycan core and link proteins. Cell. 1989. doi:10.1016/0092-8674(89)90639-9"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Hmmr · Hyal1 · Spp1 · Sell"
+  },
+  {
+    "symbol": "Bsg",
+    "h1": "BSG Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Bsg"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "BSG"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD147, EMMPRIN, basigin"
+      },
+      {
+        "label": "Protein class",
+        "value": "Ig-superfamily transmembrane glycoprotein"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19p13.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88208"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1116 · NCBI Gene 682"
+      }
+    ],
+    "why": [
+      "Bsg is the mouse ortholog of human BSG and encodes basigin (CD147, EMMPRIN), an immunoglobulin-superfamily transmembrane glycoprotein. Basigin has been associated with induction of matrix metalloproteinases and with transport functions, and it interacts with several partner proteins.",
+      "CD147 is overexpressed on many tumors and has been associated with invasion and with roles in other conditions, and CD147-directed approaches are under study. Bsg-deficient mice show defects in reproduction and sensory function."
+    ],
+    "applications": [
+      "Humanized BSG (CD147) models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD147-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "CD147 expression as a clinicopathological and prognostic indicator in breast cancer: a meta-analysis and bioinformatics analysis. BMC Cancer. 2024. doi:10.1186/s12885-024-13202-9",
+      "Igakura T et al. A null mutation in basigin, an immunoglobulin superfamily member, indicates its important roles in peri-implantation development and spermatogenesis. Dev Biol. 1998. doi:10.1006/dbio.1997.8819"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Slc16a1 · Mmp2 · Cav1 · Slc7a11"
+  },
+  {
+    "symbol": "Il11",
+    "h1": "IL11 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il11"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL11"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-11, AGIF"
+      },
+      {
+        "label": "Protein class",
+        "value": "IL-6 family cytokine (gp130)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19q13.42"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:107613"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5966 · NCBI Gene 3589"
+      }
+    ],
+    "why": [
+      "Il11 is the mouse ortholog of human IL11 and encodes interleukin-11, an IL-6-family cytokine that signals through a receptor complex containing gp130. IL-11 has been associated with effects on hematopoiesis and on stromal and epithelial cells.",
+      "IL-11 has been associated with fibrosis in several organs, and anti-IL-11 approaches are under study; a recombinant IL-11 has been used to raise platelet counts. Mice with altered IL-11 signaling show developmental and skeletal phenotypes."
+    ],
+    "applications": [
+      "Humanized IL11 models, often paired with the IL-11 receptor, have been used to evaluate IL-11-pathway-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Interleukin-11: a central integrative hub driving pathological progression from pulmonary inflammation and fibrosis to cancer. Pharmacol Res. 2025. doi:10.1016/j.phrs.2025.107966",
+      "Paul SR et al. Molecular cloning of a cDNA encoding interleukin 11, a stromal cell-derived lymphopoietic and hematopoietic cytokine. Proc Natl Acad Sci U S A. 1990. doi:10.1073/pnas.87.19.7512"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il11ra1 · Il6st · Il6 · Lif"
+  },
+  {
+    "symbol": "Il1rl1",
+    "h1": "IL1RL1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il1rl1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL1RL1"
+      },
+      {
+        "label": "Aliases",
+        "value": "ST2, IL-33R"
+      },
+      {
+        "label": "Protein class",
+        "value": "IL-1 receptor family member (IL-33 receptor)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "2q12.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:98427"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5997 · NCBI Gene 9173"
+      }
+    ],
+    "why": [
+      "Il1rl1 is the mouse ortholog of human IL1RL1 and encodes ST2, a member of the IL-1 receptor family that serves as the receptor for interleukin-33. ST2 exists in membrane-bound and soluble forms and has been associated with type 2 immune responses.",
+      "The IL-33/ST2 axis is implicated in asthma and other type 2 inflammatory conditions, and ST2- and IL-33-directed antibodies are under study. Il1rl1-deficient mice show altered type 2 responses."
+    ],
+    "applications": [
+      "Humanized IL1RL1 (ST2) models, in which the human protein replaces the mouse counterpart, have been used to evaluate ST2- and IL-33-pathway-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "ST2-mediated neutrophilic airway inflammation: a therapeutic target for patients with uncontrolled asthma. Allergy Asthma Immunol Res. 2024. doi:10.4168/aair.2024.16.1.22",
+      "Yanagisawa K et al. Presence of a novel primary response gene ST2L, encoding a product highly similar to the interleukin 1 receptor type 1. FEBS Lett. 1993. doi:10.1016/0014-5793(93)81333-u"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il33 · Il1rap · Il1r1 · Il18r1"
+  },
+  {
+    "symbol": "Cfh",
+    "h1": "CFH Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cfh"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CFH"
+      },
+      {
+        "label": "Aliases",
+        "value": "HF1, factor H"
+      },
+      {
+        "label": "Protein class",
+        "value": "Complement regulatory protein (alternative pathway)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "1q31.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88385"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4883 · NCBI Gene 3075"
+      }
+    ],
+    "why": [
+      "Cfh is the mouse ortholog of human CFH and encodes complement factor H, a soluble regulator of the alternative complement pathway. Factor H has been associated with restraining complement activation on host surfaces.",
+      "CFH variants are associated with age-related macular degeneration and with complement-mediated kidney diseases, and complement-targeted therapies are relevant to these conditions. Cfh-deficient mice develop complement dysregulation and kidney disease resembling C3 glomerulopathy."
+    ],
+    "applications": [
+      "Humanized CFH models, in which the human protein replaces the mouse counterpart, have been used to study factor H regulation and to evaluate complement-targeted approaches in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Complement factor H in molecular regulation of angiogenesis. Med Rev. 2024. doi:10.1515/mr-2023-0048",
+      "Klein RJ et al. Complement factor H polymorphism in age-related macular degeneration. Science. 2005. doi:10.1126/science.1109557"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cfi · C3 · Cfb · Cfhr1"
+  },
+  {
+    "symbol": "Cfb",
+    "h1": "CFB Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cfb"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CFB"
+      },
+      {
+        "label": "Aliases",
+        "value": "factor B, BF"
+      },
+      {
+        "label": "Protein class",
+        "value": "Complement serine protease (alternative pathway)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "6p21.33"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:105975"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1037 · NCBI Gene 629"
+      }
+    ],
+    "why": [
+      "Cfb is the mouse ortholog of human CFB and encodes complement factor B, a serine protease zymogen of the alternative complement pathway. Factor B contributes to formation of the alternative-pathway C3 convertase and has been associated with amplification of complement activation.",
+      "The alternative pathway, including factor B, is implicated in several complement-mediated diseases, and factor B inhibitors are in clinical use and development. Cfb-deficient mice show impaired alternative-pathway activity."
+    ],
+    "applications": [
+      "Humanized CFB models, in which the human protein replaces the mouse counterpart, have been used to evaluate factor B-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Alternative complement pathway inhibition with iptacopan in IgA nephropathy. N Engl J Med. 2024. doi:10.1056/nejmoa2410316",
+      "Woods DE et al. Isolation of cDNA clones for the human complement protein factor B, a class III major histocompatibility complex gene product. Proc Natl Acad Sci U S A. 1982. doi:10.1073/pnas.79.18.5661"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cfd · C3 · Cfh · Cfp"
+  },
+  {
+    "symbol": "Osm",
+    "h1": "OSM Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Osm"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "OSM"
+      },
+      {
+        "label": "Aliases",
+        "value": "oncostatin M"
+      },
+      {
+        "label": "Protein class",
+        "value": "IL-6 family cytokine"
+      },
+      {
+        "label": "Location (human)",
+        "value": "22q12.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:104749"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:8506 · NCBI Gene 5008"
+      }
+    ],
+    "why": [
+      "Osm is the mouse ortholog of human OSM and encodes oncostatin M, an IL-6-family cytokine produced by several immune and other cells. OSM signals through receptor complexes containing gp130 and has been associated with regulation of inflammation, tissue remodeling, and hematopoiesis.",
+      "OSM has been associated with inflammatory bowel disease and fibrotic conditions, and OSM-pathway-directed approaches are under study. Osm-deficient and receptor-deficient mice show altered inflammatory responses."
+    ],
+    "applications": [
+      "Humanized OSM models, in which the human cytokine replaces the mouse counterpart, have been used to evaluate OSM-pathway-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Role of oncostatin M in the prognosis of inflammatory bowel disease: a meta-analysis. World J Gastrointest Surg. 2024. doi:10.4240/wjgs.v16.i1.228",
+      "Zarling JM et al. Oncostatin M: a growth regulator produced by differentiated histiocytic lymphoma cells. Proc Natl Acad Sci U S A. 1986. doi:10.1073/pnas.83.24.9739"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Osmr · Lifr · Il6st · Lif"
+  },
+  {
+    "symbol": "Igf1r",
+    "h1": "IGF1R Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Igf1r"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IGF1R"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD221, IGFIR"
+      },
+      {
+        "label": "Protein class",
+        "value": "Receptor tyrosine kinase (insulin-receptor family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "15q26.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96433"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5465 · NCBI Gene 3480"
+      }
+    ],
+    "why": [
+      "Igf1r is the mouse ortholog of human IGF1R and encodes the type 1 insulin-like growth factor receptor, a receptor tyrosine kinase that binds IGF-1 and IGF-2. IGF1R signaling has been associated with cell growth, survival, and metabolism.",
+      "IGF1R has been studied as a target in cancer, with mixed clinical results, and an anti-IGF1R antibody is used in thyroid eye disease. Homozygous Igf1r-null mice show growth deficiency and perinatal lethality."
+    ],
+    "applications": [
+      "Humanized IGF1R models, in which the human receptor replaces the mouse counterpart, have been used to evaluate IGF1R-directed agents in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Teprotumumab for the treatment of thyroid eye disease. Endocr Rev. 2024. doi:10.1210/endrev/bnae018",
+      "Baker J et al. Role of insulin-like growth factors in embryonic and postnatal growth. Cell. 1993. doi:10.1016/0092-8674(93)90680-o"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Igf1 · Igf2 · Insr · Irs1"
+  }
+]

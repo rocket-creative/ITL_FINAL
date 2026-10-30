@@ -1,0 +1,687 @@
+[
+  {
+    "symbol": "Erbb2",
+    "h1": "Erbb2 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Erbb2"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "ERBB2"
+      },
+      {
+        "label": "Aliases",
+        "value": "HER2, HER2/neu, CD340"
+      },
+      {
+        "label": "Protein class",
+        "value": "Receptor tyrosine kinase (ErbB family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "17q12"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:95410"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3430 · NCBI Gene 2064"
+      }
+    ],
+    "why": [
+      "Erbb2 is the mouse ortholog of human ERBB2 and encodes HER2 (ErbB2), a receptor tyrosine kinase of the ErbB/EGFR family. HER2 has no known direct ligand and signals through heterodimerization with other ErbB receptors, and has been associated with activation of downstream pathways including RAS–MAPK and PI3K–AKT.",
+      "ERBB2 amplification or overexpression has been associated with a subset of breast and gastric cancers, and HER2-directed antibodies, antibody–drug conjugates, and kinase inhibitors are used in HER2-positive disease; responses vary by tumor type and prior therapy. Mouse models expressing human ERBB2 have been used to study HER2 biology and HER2-targeted agents."
+    ],
+    "applications": [
+      "Humanized ERBB2 models, in which the human receptor replaces the mouse counterpart, have been used to evaluate HER2-directed antibodies and antibody–drug conjugates in immunocompetent mice.",
+      "Transgenic and knock-in Erbb2 models have been used to study HER2-driven tumorigenesis in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Management of patients with advanced-stage HER2-positive breast cancer: current evidence and future perspectives. Nat Rev Clin Oncol. 2024. doi:10.1038/s41571-023-00849-9",
+      "Slamon DJ et al. Human breast cancer: correlation of relapse and survival with amplification of the HER-2/neu oncogene. Science. 1987. doi:10.1126/science.3798106"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Egfr · Erbb3 · Erbb4 · Grb7"
+  },
+  {
+    "symbol": "Egfr",
+    "h1": "Egfr Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Egfr"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "EGFR"
+      },
+      {
+        "label": "Aliases",
+        "value": "HER1, ERBB1"
+      },
+      {
+        "label": "Protein class",
+        "value": "Receptor tyrosine kinase (ErbB family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "7p11.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:95294"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:3236 · NCBI Gene 1956"
+      }
+    ],
+    "why": [
+      "Egfr is the mouse ortholog of human EGFR and encodes the epidermal growth factor receptor (HER1/ErbB1), a receptor tyrosine kinase activated by ligands including EGF and TGF-α. Ligand binding promotes receptor dimerization and signaling through pathways including RAS–MAPK and PI3K–AKT, which have been associated with cell proliferation and survival.",
+      "Activating EGFR mutations and overexpression have been associated with non-small cell lung cancer and other tumors, and EGFR tyrosine kinase inhibitors and antibodies are used in selected EGFR-driven cancers; resistance commonly emerges. Homozygous Egfr-null mice show strain-dependent lethality and epithelial defects."
+    ],
+    "applications": [
+      "Humanized EGFR models, in which the human receptor replaces the mouse counterpart, have been used to evaluate EGFR-targeted antibodies and inhibitors.",
+      "Conditional and mutant Egfr models have been used to study EGFR signaling and EGFR-driven disease in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "The changing treatment landscape of EGFR-mutant non-small-cell lung cancer. Nat Rev Clin Oncol. 2024. doi:10.1038/s41571-024-00971-2",
+      "Ullrich A et al. Human epidermal growth factor receptor cDNA sequence and aberrant expression of the amplified gene in A431 epidermoid carcinoma cells. Nature. 1984. doi:10.1038/309418a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Erbb2 · Erbb3 · Kras · Egf"
+  },
+  {
+    "symbol": "Cd47",
+    "h1": "Cd47 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd47"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD47"
+      },
+      {
+        "label": "Aliases",
+        "value": "IAP, MER6"
+      },
+      {
+        "label": "Protein class",
+        "value": "Cell-surface protein (Ig superfamily; integrin-associated protein)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "3q13.12"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96617"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1682 · NCBI Gene 961"
+      }
+    ],
+    "why": [
+      "Cd47 is the mouse ortholog of human CD47 and encodes CD47 (integrin-associated protein), a widely expressed cell-surface protein. CD47 binds the myeloid receptor SIRPα and has been associated with a signal that limits macrophage phagocytosis, sometimes described as a ‘don’t-eat-me’ signal.",
+      "CD47 overexpression on tumor cells has been associated with evasion of macrophage clearance in some contexts, and CD47-SIRPα-targeted agents have been evaluated in cancer; reported clinical results have varied. Cd47-deficient mice are viable and show altered clearance of circulating cells."
+    ],
+    "applications": [
+      "Humanized CD47 models, often combined with SIRPα humanization, have been used to evaluate CD47-SIRPα-targeted therapeutics and to support engraftment of human cells.",
+      "Cd47 knockout mice have been used to study macrophage regulation in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Targeting the CD47/SIRPα pathway in malignancies: recent progress, difficulties and future perspectives. Front Oncol. 2024. doi:10.3389/fonc.2024.1378647",
+      "Jaiswal S et al. CD47 is upregulated on circulating hematopoietic stem cells and leukemia cells to avoid phagocytosis. Cell. 2009. doi:10.1016/j.cell.2009.05.046"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Sirpa · Thbs1 · Itgav · Sirpg"
+  },
+  {
+    "symbol": "Cd19",
+    "h1": "Cd19 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Cd19"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "CD19"
+      },
+      {
+        "label": "Aliases",
+        "value": "B4, CVID3"
+      },
+      {
+        "label": "Protein class",
+        "value": "B-cell co-receptor (Ig superfamily)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "16p11.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88319"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1633 · NCBI Gene 930"
+      }
+    ],
+    "why": [
+      "Cd19 is the mouse ortholog of human CD19 and encodes CD19, a B-lymphocyte surface protein of the immunoglobulin superfamily that functions as part of a B-cell co-receptor complex. CD19 has been associated with modulation of B-cell receptor signaling and B-cell development.",
+      "CD19 is expressed across most B-cell malignancies, and CD19-directed CAR T cells and antibodies are used in certain B-cell cancers; responses and durability vary. Cd19-deficient mice are viable and show impaired B-cell responses."
+    ],
+    "applications": [
+      "Humanized CD19 models, in which the human protein replaces the mouse counterpart, have been used to evaluate CD19-directed therapeutics, including CAR T cells and antibodies, in immunocompetent mice.",
+      "Cd19 knockout mice have been used to study B-cell signaling and development."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Outcome correlates of approved CD19-targeted CAR T cells for large B cell lymphoma. Nat Rev Clin Oncol. 2025. doi:10.1038/s41571-025-00992-5",
+      "Maude SL et al. Chimeric antigen receptor T cells for sustained remissions in leukemia. N Engl J Med. 2014. doi:10.1056/NEJMoa1407222",
+      "Tedder TF, Isaacs CM. Isolation of cDNAs encoding the CD19 antigen of human and mouse B lymphocytes. J Immunol. 1989. doi:10.4049/jimmunol.143.2.712"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Ms4a1 · Cd79a · Cd79b · Cr2"
+  },
+  {
+    "symbol": "Ms4a1",
+    "h1": "Ms4a1 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Ms4a1"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "MS4A1"
+      },
+      {
+        "label": "Aliases",
+        "value": "CD20, B1, Bp35"
+      },
+      {
+        "label": "Protein class",
+        "value": "B-lymphocyte surface protein (MS4A family)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "11q12.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:88321"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:7315 · NCBI Gene 931"
+      }
+    ],
+    "why": [
+      "Ms4a1 is the mouse ortholog of human MS4A1 and encodes CD20, a membrane protein of the MS4A family expressed on B lymphocytes from the pre-B through mature stages. CD20 has been associated with roles in B-cell activation and calcium signaling.",
+      "CD20 is a target of antibody therapy in B-cell lymphomas, leukemias, and some autoimmune diseases, and several anti-CD20 antibodies are in clinical use. Ms4a1-deficient mice are viable and show largely preserved B-cell development with altered responses in some settings."
+    ],
+    "applications": [
+      "Humanized MS4A1 (CD20) models, in which the human protein replaces the mouse counterpart, have been used to evaluate anti-CD20 antibodies and CD20-directed cell therapies in immunocompetent mice.",
+      "Ms4a1 models have been used to study CD20 biology in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Advancements in cancer immunotherapies targeting CD20: from pioneering monoclonal antibodies to chimeric antigen receptor-modified T cells. Front Immunol. 2024. doi:10.3389/fimmu.2024.1363102",
+      "Tedder TF et al. Isolation and structure of a cDNA encoding the B1 (CD20) cell-surface antigen of human B lymphocytes. Proc Natl Acad Sci U S A. 1988. doi:10.1073/pnas.85.1.208"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Cd19 · Cd79a · Cd79b · Ms4a2"
+  },
+  {
+    "symbol": "Tnfrsf17",
+    "h1": "Tnfrsf17 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Tnfrsf17"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "TNFRSF17"
+      },
+      {
+        "label": "Aliases",
+        "value": "BCMA, CD269"
+      },
+      {
+        "label": "Protein class",
+        "value": "TNF receptor superfamily member"
+      },
+      {
+        "label": "Location (human)",
+        "value": "16p13.13"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1343050"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:11913 · NCBI Gene 608"
+      }
+    ],
+    "why": [
+      "Tnfrsf17 is the mouse ortholog of human TNFRSF17 and encodes BCMA (B-cell maturation antigen, CD269), a TNF-receptor-superfamily member expressed mainly on plasma cells and late-stage B cells. BCMA binds the ligands BAFF and APRIL and has been associated with plasma-cell survival and antibody responses.",
+      "BCMA is expressed on malignant plasma cells in multiple myeloma, and BCMA-directed CAR T cells and bispecific antibodies are used in relapsed or refractory disease; responses vary and relapse can occur. Tnfrsf17-deficient mice are viable with reduced numbers of long-lived plasma cells."
+    ],
+    "applications": [
+      "Humanized TNFRSF17 (BCMA) models, in which the human protein replaces the mouse counterpart, have been used to evaluate BCMA-directed CAR T cells and bispecific antibodies in immunocompetent mice, including in combination settings.",
+      "Tnfrsf17 models have been used to study plasma-cell biology in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Comparative efficacy and safety of BCMA-targeted CAR T cells and bispecific antibodies in relapsed/refractory multiple myeloma: a meta-analysis. Ann Hematol. 2025. doi:10.1007/s00277-025-06524-6",
+      "Munshi NC et al. Idecabtagene vicleucel in relapsed and refractory multiple myeloma. N Engl J Med. 2021. doi:10.1056/NEJMoa2024850"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Tnfsf13b · Tnfsf13 · Tnfrsf13b · Tnfrsf13c"
+  },
+  {
+    "symbol": "Glp1r",
+    "h1": "Glp1r Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Glp1r"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "GLP1R"
+      },
+      {
+        "label": "Aliases",
+        "value": "GLP-1R"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class B G-protein-coupled receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "6p21.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:99571"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4324 · NCBI Gene 2740"
+      }
+    ],
+    "why": [
+      "Glp1r is the mouse ortholog of human GLP1R and encodes the glucagon-like peptide-1 receptor, a class B G-protein-coupled receptor. GLP-1R signaling, primarily through Gs and cAMP, has been associated with glucose-dependent insulin secretion, slowed gastric emptying, and reduced food intake.",
+      "GLP-1 receptor agonists are used in type 2 diabetes and obesity, and the receptor is a target of several marketed and investigational agents. Glp1r-deficient mice are viable and show altered glucose tolerance and insulin secretion."
+    ],
+    "applications": [
+      "Humanized GLP1R models, in which the human receptor replaces the mouse counterpart, have been used to evaluate GLP-1-receptor-targeted peptides and small molecules in vivo.",
+      "Glp1r knockout and reporter models have been used to study incretin signaling and receptor distribution."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Effect of glucagon-like peptide-1 receptor agonists and co-agonists on body composition: a systematic review and network meta-analysis. Metabolism. 2024. doi:10.1016/j.metabol.2024.156113",
+      "Thorens B. Expression cloning of the pancreatic beta cell receptor for the gluco-incretin hormone glucagon-like peptide 1. Proc Natl Acad Sci U S A. 1992. doi:10.1073/pnas.89.18.8641"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Gcgr · Gipr · Glp2r · Gcg"
+  },
+  {
+    "symbol": "Gipr",
+    "h1": "Gipr Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Gipr"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "GIPR"
+      },
+      {
+        "label": "Aliases",
+        "value": "GIP-R"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class B G-protein-coupled receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "19q13.32"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:1352753"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4271 · NCBI Gene 2696"
+      }
+    ],
+    "why": [
+      "Gipr is the mouse ortholog of human GIPR and encodes the glucose-dependent insulinotropic polypeptide (GIP) receptor, a class B G-protein-coupled receptor. GIP-receptor signaling has been associated with glucose-dependent insulin secretion and with effects on adipose tissue and energy metabolism.",
+      "The GIP receptor is a component of dual GIP/GLP-1 receptor agonists used in type 2 diabetes and obesity, and its pharmacology is an active area of research. Gipr-deficient mice are viable and show altered responses to nutrient loading and to diet-induced obesity."
+    ],
+    "applications": [
+      "Humanized GIPR models, in which the human receptor replaces the mouse counterpart, have been used to evaluate GIP-receptor-targeted and dual-incretin agents in vivo.",
+      "Gipr models have been used to study incretin biology in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Tirzepatide against obesity and insulin-resistance: pathophysiological aspects and clinical evidence. Front Endocrinol. 2024. doi:10.3389/fendo.2024.1402583",
+      "Usdin TB et al. Gastric inhibitory polypeptide receptor, a member of the secretin-vasoactive intestinal peptide receptor family, is widely distributed in peripheral organs and the brain. Endocrinology. 1993. doi:10.1210/endo.133.6.8243312"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Glp1r · Gcgr · Dpp4 · Gip"
+  },
+  {
+    "symbol": "Gcgr",
+    "h1": "Gcgr Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Gcgr"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "GCGR"
+      },
+      {
+        "label": "Aliases",
+        "value": "GL-R"
+      },
+      {
+        "label": "Protein class",
+        "value": "Class B G-protein-coupled receptor"
+      },
+      {
+        "label": "Location (human)",
+        "value": "17q25.3"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:99572"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:4192 · NCBI Gene 2642"
+      }
+    ],
+    "why": [
+      "Gcgr is the mouse ortholog of human GCGR and encodes the glucagon receptor, a class B G-protein-coupled receptor expressed mainly in liver and kidney. Glucagon-receptor signaling, primarily through Gs and cAMP, has been associated with hepatic glucose production and lipid metabolism.",
+      "Glucagon-receptor agonism is a component of GLP-1/glucagon dual agonists under study for obesity and metabolic liver disease, and glucagon-receptor antagonism has been explored for diabetes. Gcgr-deficient mice are viable and show low blood glucose and pancreatic islet changes."
+    ],
+    "applications": [
+      "Humanized GCGR models, in which the human receptor replaces the mouse counterpart, have been used to evaluate glucagon-receptor-targeted and dual-agonist agents in vivo.",
+      "Gcgr models have been used to study glucagon signaling in metabolism in defined experimental settings."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Effect of survodutide, a glucagon and GLP-1 receptor dual agonist, on weight loss: a systematic review and meta-analysis. Diabetol Metab Syndr. 2024. doi:10.1186/s13098-024-01501-x",
+      "Jelinek LJ et al. Expression cloning and signaling properties of the rat glucagon receptor. Science. 1993. doi:10.1126/science.8384375"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Glp1r · Gipr · Gcg · Ins2"
+  },
+  {
+    "symbol": "Il13",
+    "h1": "Il13 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il13"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL13"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-13, ALRH"
+      },
+      {
+        "label": "Protein class",
+        "value": "Type 2 cytokine"
+      },
+      {
+        "label": "Location (human)",
+        "value": "5q31.1"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96541"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5973 · NCBI Gene 3596"
+      }
+    ],
+    "why": [
+      "Il13 is the mouse ortholog of human IL13 and encodes interleukin-13, a type 2 cytokine produced mainly by T helper 2 cells and other immune cells. IL-13 signals through receptor complexes that include IL-4Rα and has been associated with promotion of IgE responses, mucus production, and tissue changes in type 2 inflammation.",
+      "IL-13, together with IL-4, is implicated in atopic dermatitis, asthma, and other allergic diseases, and IL-13-directed antibodies are in clinical use. Il13-deficient mice are viable and show impaired type 2 responses in disease models."
+    ],
+    "applications": [
+      "Humanized IL13 models, often paired with humanized IL-13 or IL-4 receptor components, have been used to evaluate IL-13-targeted antibodies in defined experimental settings.",
+      "Il13 knockout mice have been used to study type 2 immunity and allergic inflammation."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Efficacy and safety of lebrikizumab for the treatment of moderate-to-severe atopic dermatitis: a systematic review and meta-analysis. Front Pharmacol. 2024. doi:10.3389/fphar.2024.1429709",
+      "Minty A et al. Interleukin-13 is a new human lymphokine regulating inflammatory and immune responses. Nature. 1993. doi:10.1038/362248a0"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il4 · Il4ra · Il13ra1 · Stat6"
+  },
+  {
+    "symbol": "Il17a",
+    "h1": "Il17a Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "Il17a"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "IL17A"
+      },
+      {
+        "label": "Aliases",
+        "value": "IL-17, CTLA8"
+      },
+      {
+        "label": "Protein class",
+        "value": "IL-17 family cytokine"
+      },
+      {
+        "label": "Location (human)",
+        "value": "6p12.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:107364"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:5981 · NCBI Gene 3605"
+      }
+    ],
+    "why": [
+      "Il17a is the mouse ortholog of human IL17A and encodes interleukin-17A, a cytokine produced mainly by Th17 cells and other innate and adaptive immune cells. IL-17A signals through IL-17 receptor complexes and has been associated with recruitment of neutrophils and promotion of inflammatory responses at barrier tissues.",
+      "IL-17A is implicated in psoriasis, psoriatic arthritis, and other inflammatory diseases, and IL-17A-directed antibodies are in clinical use. Il17a-deficient mice are viable and show reduced inflammation in several disease models and altered host defense."
+    ],
+    "applications": [
+      "Humanized IL17A models, in which the human cytokine replaces the mouse counterpart, have been used to evaluate IL-17A-targeted antibodies in immunocompetent mice.",
+      "Il17a knockout mice have been used to study IL-17-dependent inflammation."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Efficacy and safety of IL-17, IL-12/23, and IL-23 inhibitors for psoriatic arthritis: a network meta-analysis of randomized controlled trials. Front Immunol. 2025. doi:10.3389/fimmu.2025.1654343",
+      "Yao Z et al. Human IL-17: a novel cytokine derived from T cells. J Immunol. 1995. doi:10.4049/jimmunol.155.12.5483"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: Il17f · Il17ra · Il23a · Rorc"
+  },
+  {
+    "symbol": "C5",
+    "h1": "C5 Mouse Models",
+    "fields": [
+      {
+        "label": "Mouse symbol",
+        "value": "C5"
+      },
+      {
+        "label": "Human ortholog",
+        "value": "C5"
+      },
+      {
+        "label": "Aliases",
+        "value": "CPAMD4, C5a, C5b"
+      },
+      {
+        "label": "Protein class",
+        "value": "Complement component (terminal pathway)"
+      },
+      {
+        "label": "Location (human)",
+        "value": "9q33.2"
+      },
+      {
+        "label": "Mouse gene (MGI)",
+        "value": "MGI:96031"
+      },
+      {
+        "label": "Human gene",
+        "value": "HGNC:1331 · NCBI Gene 727"
+      }
+    ],
+    "why": [
+      "C5 is the mouse ortholog of human C5 and encodes complement component C5, a protein of the terminal complement pathway. C5 is cleaved to generate the anaphylatoxin C5a and the fragment C5b, which initiates assembly of the membrane attack complex, and has been associated with inflammation and cell lysis.",
+      "The terminal complement pathway, including C5, is implicated in paroxysmal nocturnal hemoglobinuria, atypical hemolytic uremic syndrome, and other conditions, and C5-directed antibodies are in clinical use. Mouse strains deficient in C5 activity show altered complement-dependent responses and susceptibility to certain challenges."
+    ],
+    "applications": [
+      "Humanized C5 models, in which the human protein replaces the mouse counterpart, have been used to evaluate C5-targeted therapeutics in defined experimental settings.",
+      "C5 models have been used to study terminal complement activity."
+    ],
+    "optionsIntro": "Engineered to your specifications, with molecular validation of the targeted allele and germline transmission guaranteed.",
+    "options": [
+      "Conventional knockout",
+      "Conditional knockout",
+      "Point mutation / knockin",
+      "Reporter knockin",
+      "Humanized",
+      "Targeted transgenic"
+    ],
+    "sources": [
+      "Complement inhibition in paroxysmal nocturnal hemoglobinuria: from biology to therapy. Int J Lab Hematol. 2024. doi:10.1111/ijlh.14281",
+      "Rother RP et al. Discovery and development of the complement inhibitor eculizumab for the treatment of paroxysmal nocturnal hemoglobinuria. Nat Biotechnol. 2007. doi:10.1038/nbt1344"
+    ],
+    "reviewed": "Last reviewed: October 22, 2026 · Reviewed by: Paul Sheiffele",
+    "relatedLine": "Related gene targets: C3 · C5ar1 · C6 · C7"
+  }
+]
