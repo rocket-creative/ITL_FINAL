@@ -58,8 +58,12 @@ export default function HubSpotFormWithFallback({
   useEffect(() => {
     // When pre-fill values are present the generated form handles everything via API.
     // Loading the HubSpot iframe would replace pre-filled fields with an empty embed.
-    // This works now that reCAPTCHA is disabled on the form.
-    if (initialValues && Object.values(initialValues).some(Boolean)) return;
+    // Values can arrive after the first paint, because the quote page reads them in an effect.
+    if (initialValues && Object.values(initialValues).some(Boolean)) {
+      setShouldLoadHubSpot(false);
+      setFormState('fallback');
+      return;
+    }
 
     let mounted = true;
     let idleId: number | undefined;
