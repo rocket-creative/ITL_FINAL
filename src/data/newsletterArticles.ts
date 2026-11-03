@@ -17,6 +17,7 @@ import { rareDiseaseMouseModelInnovationArticleBody } from './_labSignalsRareDis
 import { beyondReplacementNamsArticleBody } from './_labSignalsBeyondReplacementNamsArticle';
 import { geneTherapyMatchModelMechanismArticleBody } from './_labSignalsGeneTherapyMatchModelMechanismArticle';
 import { infertilityReproductiveDiseaseArticleBody } from './_labSignalsInfertilityReproductiveDiseaseArticle';
+import { optogeneticsChemogeneticsArticleBody } from './_labSignalsOptogeneticsChemogeneticsArticle';
 
 export interface NewsletterArticle {
   id: string;
@@ -1190,6 +1191,18 @@ export const newsletterArticles: NewsletterArticle[] = [
     relatedPage: "/custom-mouse-models",
     body: infertilityReproductiveDiseaseArticleBody,
     publishedAt: "2026-10-07",
+  },
+  {
+    id: "optogenetics-and-chemogenetics-how-mouse-models-help-test-neuronal-function",
+    slug: "optogenetics-and-chemogenetics-how-mouse-models-help-test-neuronal-function",
+    title: "Optogenetics and Chemogenetics: How Mouse Models Help Test Neuronal Function",
+    subtitle: "",
+    description:
+      "How optogenetics and chemogenetics in mouse models test defined neurons in working memory, MS-related neuroinflammation, and psychedelic receptor studies.",
+    category: "Neuroscience",
+    relatedPage: "/neuroscience-mouse-models",
+    body: optogeneticsChemogeneticsArticleBody,
+    publishedAt: "2026-11-04",
   },
 ];
 
