@@ -13,6 +13,7 @@ Articles release **every 2 weeks**. This file tracks upcoming and past releases.
 
 | Release Date | Article Title | Slug | Status |
 |--------------|---------------|------|--------|
+| 2026-11-04 | Optogenetics and Chemogenetics: How Mouse Models Help Test Neuronal Function | optogenetics-and-chemogenetics-how-mouse-models-help-test-neuronal-function | Staged |
 | 2026-10-07 | Beyond Breeding Logistics: Mouse Models Advancing Infertility and Reproductive Disease Research | beyond-breeding-logistics-mouse-models-infertility-reproductive-disease | Staged |
 | 2026-09-01 | Designing Mouse Models for Gene Therapy Research: Match the Model to the Mechanism | designing-mouse-models-gene-therapy-research-match-model-to-mechanism | Staged |
 | 2026-08-18 | Beyond Replacement: An Update on NAMs and the Continuing Role of Mouse Models | beyond-replacement-nams-continuing-role-mouse-models | Staged |
