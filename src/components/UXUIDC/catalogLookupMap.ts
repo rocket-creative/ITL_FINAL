@@ -392,6 +392,50 @@ const LOOKUP_MAP: Record<string, CatalogLookup> = {
       { symbol: 'Pgm3', slug: 'Pgm3', blurb: 'Conditional knockin' },
     ],
   },
+
+  // INDICATION pages. Without these entries the widget fell through to
+  // DEFAULT_LOOKUP (Trp53 / Brca1 / Rosa26), so the atherosclerosis,
+  // Alzheimer's and cardiovascular pages linked to cancer and safe-harbour
+  // genes and to none of the APOE lines they discuss in prose.
+  'atherosclerosis-mouse-models': {
+    eyebrow: 'Catalog Models',
+    headline: 'Atherosclerosis backgrounds, many from live colonies.',
+    subline:
+      'Apoe and Ldlr nulls plus lipid-pathway humanized crosses. Availability is listed per line; search by gene or start from one below.',
+    searchHref: '/all-catalog-mouse-models/?q=atherosclerosis',
+    searchLabel: 'Browse Atherosclerosis Models',
+    genes: [
+      { symbol: 'Apoe', slug: 'Apoe', blurb: 'Apoe null and floxed, plus hPCSK9 and hANGPTL3 crosses' },
+      { symbol: 'Ldlr', slug: 'Ldlr', blurb: 'LDL receptor null, apoB100-like lipoprotein profiles' },
+      { symbol: 'Pcsk9', slug: 'Pcsk9', blurb: 'Humanized locus for antibody and siRNA pharmacology' },
+    ],
+  },
+  'alzheimers-mouse-models': {
+    eyebrow: 'Ready to ship',
+    headline: 'APOE isoform and amyloid lines in live colonies.',
+    subline:
+      'Human APOE2, APOE3 and APOE4 at the endogenous locus, including crosses to humanized App and MAPT alleles.',
+    searchHref: '/all-catalog-mouse-models/?q=alzheimer',
+    searchLabel: 'Browse Alzheimer Models',
+    genes: [
+      { symbol: 'Apoe', slug: 'Apoe', blurb: 'Human APOE2, APOE3 and APOE4 at the endogenous locus' },
+      { symbol: 'App', slug: 'App', blurb: 'Humanized App knockin alleles' },
+      { symbol: 'Trem2', slug: 'Trem2', blurb: 'Microglial risk locus, pairs with APOE lines' },
+    ],
+  },
+  'cardiovascular-mouse-models': {
+    eyebrow: 'Ready to ship',
+    headline: 'Cardiovascular and lipid models in live colonies.',
+    subline:
+      'Lipid handling, plaque biology and endothelial function lines, with humanized targets for drug pharmacology.',
+    searchHref: '/all-catalog-mouse-models/?q=cardiovascular',
+    searchLabel: 'Browse Cardiovascular Models',
+    genes: [
+      { symbol: 'Apoe', slug: 'Apoe', blurb: 'Reference hyperlipidemia background, many crosses' },
+      { symbol: 'Ldlr', slug: 'Ldlr', blurb: 'Familial hypercholesterolemia comparator' },
+      { symbol: 'Nos3', slug: 'Nos3', blurb: 'Endothelial NO synthase, Apoe-KO/Nos3-KO cryopreserved' },
+    ],
+  },
 };
 
 export function getCatalogLookup(slug: string): CatalogLookup {

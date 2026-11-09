@@ -13,6 +13,7 @@ import GeneHubPiTaxonomyMatrix from '@/components/gene-expansion/GeneHubPiTaxono
 import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { getModelsByGene, getRelatedGenes, indexableTier4ParamsForModels } from '@/lib/catalog/serverCatalog';
+import { canonicalGeneFor } from '@/lib/catalog/geneAliases';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
 import { availabilityColor, availabilityLabel, stockFormsFor } from '@/lib/catalog/availability';
 import { modelTypeAbbrev } from '@/lib/catalog/modelType';
@@ -168,7 +169,9 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   let title =
     override?.title ??
     (usePriorityMeta && priority && !(focusType !== undefined && focusType.length > 0)
-      ? buildPriorityGeneTitle(geneName, priority.humanSymbol, models.length)
+      ? buildPriorityGeneTitle(geneName, priority.humanSymbol, models.length, {
+          hasHumanized: types.some((t) => /humanized/i.test(t)),
+        })
       : buildCatalogGeneTitle(geneName, types, {
           focusType,
           humanSymbol: priority?.humanSymbol,
@@ -211,6 +214,14 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 export default async function GenePage({ params, searchParams }: Props) {
   const { geneName: rawParam } = await params;
   const geneName = decodeURIComponent(rawParam);
+
+  // Aliased catalog gene names (hAPOE2, hAPOE4, hAPOE4(E1, ...) consolidate
+  // onto their canonical gene hub so link equity and relevance land on one URL.
+  const aliasTarget = canonicalGeneFor(geneName);
+  if (aliasTarget) {
+    permanentRedirect(`/all-catalog-mouse-models/gene/${encodeURIComponent(aliasTarget)}/`);
+  }
+
   const qs = await searchParams;
 
   if (qs?.type || qs?.tissue || qs?.driver) {

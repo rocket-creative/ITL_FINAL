@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { computeIsIndexable, countDataSignals } from '../gates';
 import type { GeneRow, ModelTypeRow } from '../db';
 import { lintBuildInquiryCopy } from '../copyLint';
+import { buildBuildInquiryMetadata, effectiveIndexable } from '../metadata';
 
 const baseGene: GeneRow = {
   id: '1',
@@ -70,5 +71,34 @@ describe('copy lint', () => {
       bodyParagraphs: [],
     });
     expect(r.pass).toBe(false);
+  });
+});
+
+/**
+ * These exercise the REAL metadata call path rather than hand-built lint
+ * input. The copy lint requires the full brand name in the title, but
+ * buildBuildInquiryMetadata builds a deliberately bare title (the root layout
+ * appends the brand). Linting that bare title failed the brand rule on every
+ * build_inquiry page and silently forced noindex regardless of the database
+ * flag. The older lint tests passed a pre-branded title by hand, so they
+ * never caught it.
+ */
+describe('build_inquiry robots directive (real call path)', () => {
+  it('honours dbIndexable=true for humanized', () => {
+    expect(effectiveIndexable(baseGene, humanizedType, true)).toBe(true);
+  });
+
+  it('still respects dbIndexable=false', () => {
+    expect(effectiveIndexable(baseGene, humanizedType, false)).toBe(false);
+  });
+
+  it('emits index,follow in the metadata object itself', () => {
+    const meta = buildBuildInquiryMetadata(baseGene, humanizedType, true);
+    expect(meta.robots).toEqual({ index: true, follow: true });
+  });
+
+  it('does not leak the brand into the bare title', () => {
+    const meta = buildBuildInquiryMetadata(baseGene, humanizedType, true);
+    expect(meta.title).toBe('Trp53 Humanized mouse');
   });
 });

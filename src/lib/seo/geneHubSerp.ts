@@ -48,11 +48,23 @@ export function buildPriorityGeneTitle(
   mouse: string,
   human: string,
   catalogCount: number,
+  options?: { hasHumanized?: boolean },
 ): string {
   // Brand is applied by the root layout title template only.
+
+  // When the gene genuinely has humanized catalog inventory, lead with it.
+  // "<gene> humanized mouse model" is the highest-intent commercial phrasing
+  // for a humanization vendor, and the generic priority-gene title dropped the
+  // token entirely.
+  const humanizedFirst =
+    options?.hasHumanized && catalogCount > 0
+      ? [`${mouse} (${human}) humanized mouse models`, `${mouse} humanized mouse models`]
+      : [];
+
   const candidates =
     catalogCount > 0
       ? [
+          ...humanizedFirst,
           `${mouse} (${human}) mouse models`,
           `${mouse} knockout & knockin mice`,
           `${mouse} mouse models`,

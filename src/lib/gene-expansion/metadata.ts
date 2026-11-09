@@ -22,8 +22,13 @@ export function buildBuildInquiryMetadata(
   const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(gene.symbol)}/${modelType.slug}/`;
   const brandedTitle = `${title} | ${BRAND}`;
 
+  // Lint the BRANDED title. `title` is deliberately bare because the root
+  // layout template appends " | ingenious targeting laboratory", but the lint
+  // requires the full brand name to be present — so linting the bare title
+  // failed that rule on every build_inquiry page and forced them all to
+  // noindex regardless of gene_type_page.is_indexable.
   const lint = lintBuildInquiryCopy({
-    title,
+    title: brandedTitle,
     h1: copy.h1,
     headings: copy.headings,
     bodyParagraphs: copy.bodyParagraphs,
@@ -54,9 +59,11 @@ export function effectiveIndexable(
   dbIndexable: boolean,
 ): boolean {
   const copy = buildPageCopy(gene, modelType);
-  const title = `${gene.symbol} ${modelType.display_name} mouse`;
+  // Must mirror buildBuildInquiryMetadata exactly, branded title included,
+  // or this helper disagrees with the robots tag actually emitted.
+  const brandedTitle = `${gene.symbol} ${modelType.display_name} mouse | ${BRAND}`;
   const lint = lintBuildInquiryCopy({
-    title,
+    title: brandedTitle,
     h1: copy.h1,
     headings: copy.headings,
     bodyParagraphs: copy.bodyParagraphs,

@@ -7,6 +7,7 @@
 import { cache } from 'react';
 import { catalogNumberCanonical, normalizeCatalogQuery } from './catalogQuery';
 import { supabase, type CatalogRow } from './supabaseClient';
+import { canonicalGeneFor, catalogGeneNamesFor, isAliasedGeneName } from './geneAliases';
 import { tier4GenerateStaticParams } from '@/data/seoKeywords';
 import { modCanonicalToSlug } from '@/lib/seo/slugs';
 import { isLive } from './availability';
@@ -143,7 +144,10 @@ export async function getAllGeneNames(): Promise<string[]> {
 
     for (const row of data) {
       const g = (row.gene_name ?? '').trim();
-      if (isUrlSafeGeneName(g)) seen.add(g);
+      // Aliased names (hAPOE2, hAPOE4, ...) redirect to their canonical gene,
+      // so they must not be emitted as gene URLs of their own — otherwise the
+      // sitemap advertises pages that 301 away.
+      if (isUrlSafeGeneName(g) && !isAliasedGeneName(g)) seen.add(g);
     }
 
     if (data.length < PAGE) break; // last page
@@ -260,12 +264,20 @@ export async function getModelsByAbbrevPrefixes(prefixes: string[]): Promise<Ser
   return models;
 }
 
+/**
+ * Every catalog model for a gene, including rows stored under an aliased
+ * `gene_name` (see `geneAliases.ts`). Aliasing is what makes the humanized
+ * isoform lines — stored as hAPOE2 / hAPOE3 / hAPOE4 rather than Apoe —
+ * visible on the Apoe hub and on `/gene/Apoe/humanized/`.
+ */
 export async function getModelsByGene(geneName: string): Promise<ServerCatalogModel[]> {
-  const { data, error } = await supabase
-    .from('catalog_models')
-    .select(MODEL_FIELDS)
-    .eq('gene_name', geneName)
-    .order('model_type');
+  const geneNames = catalogGeneNamesFor(geneName);
+  const query = supabase.from('catalog_models').select(MODEL_FIELDS);
+
+  const { data, error } = await (geneNames.length > 1
+    ? query.in('gene_name', geneNames)
+    : query.eq('gene_name', geneName)
+  ).order('model_type');
 
   if (error || !data) return [];
   return data.map(toModel);
@@ -286,7 +298,18 @@ export async function getRelatedGenes(geneName: string, limit = 10): Promise<str
     .limit(limit * 3);
 
   if (!data) return [];
-  return [...new Set(data.map((r) => (r.gene_name ?? '').trim()).filter(isUrlSafeGeneName))].slice(0, limit);
+  // Exclude this gene's own aliases — they redirect to this page, so offering
+  // them as "related genes" would advertise self-redirects.
+  const own = new Set(catalogGeneNamesFor(geneName).map((g) => g.toLowerCase()));
+  return [
+    ...new Set(
+      data
+        .map((r) => (r.gene_name ?? '').trim())
+        .filter(isUrlSafeGeneName)
+        .filter((g) => !own.has(g.toLowerCase()))
+        .filter((g) => !isAliasedGeneName(g)),
+    ),
+  ].slice(0, limit);
 }
 
 // Legacy alias used by gene-index page
@@ -312,9 +335,15 @@ export async function getDistinctGeneModelTypePairs(): Promise<
     if (error || !data || data.length === 0) break;
 
     for (const row of data) {
-      const g = (row.gene_name ?? '').trim();
+      const raw = (row.gene_name ?? '').trim();
       const t = (row.model_type ?? '').trim();
-      if (t && isUrlSafeGeneName(g)) keys.add(`${g}\u0001${t}`);
+      if (!t) continue;
+      // Re-parent aliased rows onto their canonical gene. This both drops the
+      // alias-only URLs and surfaces the pair the alias contributes — e.g.
+      // hAPOE2/hAPOE3/hAPOE4 "Humanized" rows become Apoe x Humanized, so
+      // /gene/Apoe/humanized/ is a catalog-backed, sitemapped page.
+      const g = canonicalGeneFor(raw) ?? raw;
+      if (isUrlSafeGeneName(g)) keys.add(`${g}\u0001${t}`);
     }
     if (data.length < PAGE) break;
     from += PAGE;

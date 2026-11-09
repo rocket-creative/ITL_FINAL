@@ -11,6 +11,7 @@ import {
   indexableTier4ParamsForModels,
 } from '@/lib/catalog/serverCatalog';
 import type { ServerCatalogModel } from '@/lib/catalog/serverCatalog';
+import { canonicalGeneFor } from '@/lib/catalog/geneAliases';
 import { modSlugToCanonical, resolveTissueOrDriverSlug } from '@/lib/seo/slugs';
 import { getDisplayLabelForTissueKey } from '@/lib/search/creDrivers';
 import { tier1GenerateStaticParams } from '@/data/seoKeywords';
@@ -121,6 +122,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function GeneModTierPage({ params }: Props) {
   const { geneName: rawG, modSlug: rawSlug } = await params;
   const geneName = decodeURIComponent(rawG);
+
+  // Aliased gene names consolidate onto the canonical gene, preserving the
+  // modification segment: /gene/hAPOE4/humanized/ -> /gene/Apoe/humanized/.
+  const aliasTarget = canonicalGeneFor(geneName);
+  if (aliasTarget) {
+    permanentRedirect(
+      `/all-catalog-mouse-models/gene/${encodeURIComponent(aliasTarget)}/${rawSlug.toLowerCase().trim()}/`,
+    );
+  }
 
   const redirectPath = buildGeneModRedirectPath(geneName, rawSlug);
   if (redirectPath) permanentRedirect(redirectPath);
