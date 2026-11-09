@@ -20,12 +20,22 @@
  *
  * SCOPE AND SAFETY
  * ----------------
- * Aliasing is deliberately OPT-IN per canonical gene rather than derived
- * automatically (e.g. by stripping a leading "h" and splitting on "/").
- * An automatic rule would silently re-parent thousands of rows across the
- * whole catalog; a curated map keeps each merge reviewable and lets the
- * rollout proceed gene by gene. Add a gene here only after checking the raw
- * `gene_name` values it should absorb.
+ * Two layers, curated first:
+ *
+ *   CURATED   (below) genes checked by hand, including values a mechanical
+ *             rule must not touch: truncated names and "/" crosses.
+ *   GENERATED (generatedGeneAliases.ts) the mechanical cases, emitted only
+ *             when the de-prefixed name matches a gene that already has a
+ *             catalog page and the name shows no sign of truncation.
+ *
+ * Naive de-prefixing is NOT safe and the generator rejects these on purpose:
+ * "hPD" is hPD-1/hPD-L1 truncated at the hyphen (two genes, Pdcd1 and Cd274,
+ * so no single parent is right), "h4" is h4-1BB (Tnfrsf9), and 237 other
+ * candidates name a parent with no catalog page, which would have turned a
+ * working page into a 301 into a 404.
+ *
+ * Curated entries win on conflict, so hand review is never overwritten by a
+ * regenerated file.
  *
  * A cross such as "hAPOE4/hMAPT" legitimately belongs to more than one gene.
  * Listing it under several canonical genes is intended: the cross should
@@ -35,12 +45,14 @@
  * between genes.
  */
 
+import { GENERATED_GENE_ALIASES } from './generatedGeneAliases';
+
 /**
- * Canonical gene symbol -> additional raw `catalog_models.gene_name` values
- * that belong to that gene. The canonical symbol itself is implicit and must
- * not be repeated here.
+ * Hand-checked aliases. Canonical gene symbol -> additional raw
+ * `catalog_models.gene_name` values that belong to that gene. The canonical
+ * symbol itself is implicit and must not be repeated here.
  */
-export const CATALOG_GENE_ALIASES: Readonly<Record<string, readonly string[]>> = {
+export const CURATED_GENE_ALIASES: Readonly<Record<string, readonly string[]>> = {
   Apoe: [
     'hAPOE2',
     'hAPOE3',
@@ -56,6 +68,28 @@ export const CATALOG_GENE_ALIASES: Readonly<Record<string, readonly string[]>> =
     'hCD3EDG/Apoe',
   ],
 };
+
+/**
+ * Curated merged over generated. Curated wins so a regenerated file can never
+ * drop a hand-reviewed decision; a gene present in both keeps its curated
+ * aliases plus any generated ones not already listed.
+ */
+export const CATALOG_GENE_ALIASES: Readonly<Record<string, readonly string[]>> = (() => {
+  const merged: Record<string, string[]> = {};
+  for (const [canonical, aliases] of Object.entries(GENERATED_GENE_ALIASES)) {
+    merged[canonical] = [...aliases];
+  }
+  for (const [canonical, curated] of Object.entries(CURATED_GENE_ALIASES)) {
+    const seen = new Set<string>();
+    merged[canonical] = [...curated, ...(merged[canonical] ?? [])].filter((alias) => {
+      const key = alias.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+  return merged;
+})();
 
 /** Reverse index: raw gene_name (lowercased) -> canonical symbol. */
 const REVERSE_ALIASES: ReadonlyMap<string, string> = (() => {

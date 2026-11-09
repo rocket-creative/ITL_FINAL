@@ -26,7 +26,10 @@ export const CATALOG_MATCH_BY_SLUG: Record<CanonicalModSlug, CatalogMatchRule> =
   },
   knockin: {
     modelTypes: ['Knockin'],
-    categoryExcludes: ['point mutation', 'reporter', 'tag', 'cdna', 'humanized'],
+    // "fluorescent" is excluded so plain knockin and reporter stay disjoint:
+    // the catalog's category vocabulary says "Fluorescent Model" where this
+    // table said "reporter", so without it both slugs matched the same rows.
+    categoryExcludes: ['point mutation', 'reporter', 'fluorescent', 'tag', 'cdna', 'humanized'],
   },
   'point-mutation': {
     modelTypes: ['Knockin'],
@@ -39,7 +42,20 @@ export const CATALOG_MATCH_BY_SLUG: Record<CanonicalModSlug, CatalogMatchRule> =
   humanized: { modelTypes: ['Humanized'] },
   reporter: {
     modelTypes: ['Knockin'],
-    categoryIncludes: ['reporter', 'gfp', 'yfp', 'rfp', 'mcherry', 'tdtomato', 'lacz', 'luciferase'],
+    // "fluorescent" is how the catalog actually labels reporter lines
+    // ("Fluorescent Model"); none of the marker names below appear in the
+    // category column, so without it this rule matched nothing.
+    categoryIncludes: [
+      'reporter',
+      'fluorescent',
+      'gfp',
+      'yfp',
+      'rfp',
+      'mcherry',
+      'tdtomato',
+      'lacz',
+      'luciferase',
+    ],
   },
   overexpression: { modelTypes: ['Transgenic'] },
   'cre-driver': {
@@ -84,6 +100,63 @@ export function filterCatalogForSlug(
   const rule = CATALOG_MATCH_BY_SLUG[slug];
   if (!rule) return [];
   return models.filter((m) => matchesRule(m, rule));
+}
+
+/**
+ * Human label for a modification slug, mirroring model_type.display_name.
+ *
+ * `slugToCatalogDisplay` returns the broad catalog model_type a slug matches
+ * against ("Knockin" for reporter, point-mutation, tag-knockin, cdna-knockin),
+ * which is the wrong string to show a reader: it put the H1 "<gene> Knockin
+ * mouse models" on five different URLs. Use this for anything user facing and
+ * `slugToCatalogDisplay` only for matching catalog rows.
+ */
+export const SLUG_DISPLAY_LABEL: Record<string, string> = {
+  knockout: 'Knockout',
+  'conditional-knockout': 'Conditional Knockout',
+  'inducible-knockout': 'Inducible Knockout',
+  knockin: 'Knockin',
+  'point-mutation': 'Point Mutation Knockin',
+  'cdna-knockin': 'cDNA Knockin',
+  humanized: 'Humanized',
+  reporter: 'Reporter',
+  overexpression: 'Overexpression / Safe Harbor',
+  'cre-driver': 'Cre Driver Line',
+  'tag-knockin': 'Epitope Tag Knockin',
+};
+
+/** Display label for a slug, falling back to the catalog model type. */
+export function slugDisplayLabel(slug: string, fallback: string): string {
+  return SLUG_DISPLAY_LABEL[slug.toLowerCase().trim()] ?? fallback;
+}
+
+/** True when this slug has its own catalog match rule. */
+export function hasCatalogRuleForSlug(slug: string): boolean {
+  return Object.prototype.hasOwnProperty.call(CATALOG_MATCH_BY_SLUG, slug.toLowerCase().trim());
+}
+
+/**
+ * Catalog rows that genuinely belong to a modification slug.
+ *
+ * Prefer this over comparing `model.modelType` to the slug's broad catalog
+ * type. Several slugs collapse onto one model_type, so the bare comparison
+ * served identical model tables (and identical copy) from distinct URLs:
+ * knockin / reporter / point-mutation / tag-knockin / cdna-knockin all
+ * rendered every Knockin row, and inducible-knockout rendered every
+ * Conditional Knockout row — advertising floxed lines as inducible stock.
+ * Slugs without a rule (e.g. transgenic, immunodeficient) keep exact matching.
+ */
+export function catalogModelsForSlug(
+  models: ServerCatalogModel[],
+  slug: string,
+  modelType: string | null,
+): ServerCatalogModel[] {
+  const key = slug.toLowerCase().trim();
+  if (hasCatalogRuleForSlug(key)) {
+    return filterCatalogForSlug(models, key as CanonicalModSlug);
+  }
+  if (!modelType) return [];
+  return models.filter((m) => normalizeCatalogString(m.modelType) === modelType);
 }
 
 /** Map build_inquiry slug to request-quote modification_type select value. */

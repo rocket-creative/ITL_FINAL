@@ -17,8 +17,11 @@ import { getDisplayLabelForTissueKey } from '@/lib/search/creDrivers';
 import { tier1GenerateStaticParams } from '@/data/seoKeywords';
 import { getBuildInquiryPage } from '@/lib/gene-expansion/db';
 import { buildGeneModRedirectPath } from '@/lib/gene-expansion/synonymRedirects';
-import { filterCatalogForSlug, slugToCatalogDisplay } from '@/lib/gene-expansion/catalogTypeMap';
-import type { CanonicalModSlug } from '@/lib/gene-expansion/db';
+import {
+  catalogModelsForSlug,
+  slugDisplayLabel,
+  slugToCatalogDisplay,
+} from '@/lib/gene-expansion/catalogTypeMap';
 import { buildBuildInquiryMetadata } from '@/lib/gene-expansion/metadata';
 import {
   buildCatalogModTitle,
@@ -71,23 +74,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const modCanon = modSlugToCanonical(modSlug) ?? slugToCatalogDisplay(modSlug);
   const rawModels = await getModelsByGene(geneName);
 
+  const modLabel = slugDisplayLabel(modSlug, modCanon ?? '');
   if (modCanon && rawModels.length > 0) {
-    const models = rawModels.filter((m) => m.modelType === modCanon);
+    const models = catalogModelsForSlug(rawModels, modSlug, modCanon);
     if (models.length >= 1) {
       const hubOverride = getCatalogSerpOverride(geneName);
       const title =
-        /humanized/i.test(modCanon) && hubOverride?.title
+        /humanized/i.test(modLabel) && hubOverride?.title
           ? hubOverride.title
-          : buildCatalogModTitle(geneName, modCanon);
+          : buildCatalogModTitle(geneName, modLabel);
       const description =
-        /humanized/i.test(modCanon) && hubOverride?.description
+        /humanized/i.test(modLabel) && hubOverride?.description
           ? hubOverride.description
-          : buildCatalogModDescription(geneName, modCanon, models.length);
+          : buildCatalogModDescription(geneName, modLabel, models.length);
       const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}/`;
       const branded = `${title} | ${SITE_NAME}`;
       const ogParams = new URLSearchParams({
         line1: title,
-        line2: modCanon,
+        line2: modLabel,
         line3: `${models.length} catalog line${models.length === 1 ? '' : 's'}`,
       });
       const ogImage = `${BASE_URL}/api/og?${ogParams.toString()}`;
@@ -139,8 +143,16 @@ export default async function GeneModTierPage({ params }: Props) {
   const rawModels = await getModelsByGene(geneName);
 
   const modCanon = modSlugToCanonical(modSlug) ?? slugToCatalogDisplay(modSlug);
+
+  // One rule-aware check, not a broad match followed by a narrow one. The
+  // broad match (modelType === modCanon) used to win first, so slugs that
+  // share a catalog model_type each rendered the whole model_type: the
+  // reporter, point-mutation, tag-knockin and cdna-knockin URLs all served
+  // the Knockin page, and inducible-knockout served the Conditional Knockout
+  // page, presenting floxed lines as inducible stock. Slugs with no genuine
+  // inventory now fall through to build_inquiry instead.
   if (modCanon && rawModels.length > 0) {
-    const models = rawModels.filter((m) => m.modelType === modCanon);
+    const models = catalogModelsForSlug(rawModels, modSlug, modCanon);
     if (models.length >= 1) {
       const relatedGenes = await getRelatedGenesWithModelType(geneName, modCanon, 8);
       return (
@@ -148,27 +160,13 @@ export default async function GeneModTierPage({ params }: Props) {
           geneName={geneName}
           modSlug={modSlug}
           modCanon={modCanon}
+          modDisplay={slugDisplayLabel(modSlug, modCanon)}
           rawModels={rawModels}
           relatedGenes={relatedGenes}
           tier4Links={buildTier4Links(geneName, rawModels, modCanon)}
         />
       );
     }
-  }
-
-  const catalogFiltered = filterCatalogForSlug(rawModels, modSlug as CanonicalModSlug);
-  if (catalogFiltered.length >= 1 && modCanon) {
-    const relatedGenes = await getRelatedGenesWithModelType(geneName, modCanon, 8);
-    return (
-      <GeneModCatalogPage
-        geneName={geneName}
-        modSlug={modSlug}
-        modCanon={modCanon}
-        rawModels={rawModels}
-        relatedGenes={relatedGenes}
-        tier4Links={buildTier4Links(geneName, rawModels, modCanon)}
-      />
-    );
   }
 
   if (rawModels.length === 0) {

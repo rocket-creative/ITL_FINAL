@@ -264,6 +264,15 @@ export default async function GenePage({ params, searchParams }: Props) {
 
   const types = [...new Set(models.map(m => m.modelType))].filter(Boolean);
   const typeStr = types.length > 0 ? types.slice(0, 3).join(', ') : 'genetically engineered';
+
+  // Single source for the FAQ: this page emitted FAQPage JSON-LD whose
+  // questions appeared nowhere in the rendered body, which is exactly what
+  // Google's structured data policy prohibits. Render these and mark them up
+  // from the same array so the two can never drift apart again.
+  const hubFaqs = buildTierGeneModFaqs({
+    gene: geneName,
+    modLabel: types[0] || 'mouse model',
+  });
   const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`;
 
   const priority = getPriorityGeneByMouseSymbol(geneName);
@@ -950,6 +959,30 @@ export default async function GenePage({ params, searchParams }: Props) {
           </section>
         )}
 
+        {/* FAQ — must stay rendered: the FAQPage schema below is built from
+            this same array, and schema may only describe visible content. */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 style={{
+              fontSize: '1.5rem', fontWeight: 700, color: '#0a253c',
+              marginBottom: '24px',
+            }}>
+              {geneName} mouse model FAQ
+            </h2>
+            {hubFaqs.map((f) => (
+              <div key={f.question} style={{ marginBottom: '24px' }}>
+                <h3 style={{
+                  fontSize: '1.05rem', fontWeight: 700, color: '#0a253c',
+                  marginBottom: '6px',
+                }}>
+                  {f.question}
+                </h3>
+                <p style={{ color: '#444', lineHeight: 1.75, margin: 0 }}>{f.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <BreedThisLineWithItl lineName={geneName} />
 
         {/* CTA */}
@@ -1007,10 +1040,7 @@ export default async function GenePage({ params, searchParams }: Props) {
               },
               {
                 '@type': 'FAQPage',
-                mainEntity: buildTierGeneModFaqs({
-                  gene: geneName,
-                  modLabel: types[0] || 'mouse model',
-                }).map((f) => ({
+                mainEntity: hubFaqs.map((f) => ({
                   '@type': 'Question',
                   name: f.question,
                   acceptedAnswer: { '@type': 'Answer', text: f.answer },

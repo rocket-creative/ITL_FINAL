@@ -18,6 +18,7 @@ import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
 import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
+import { catalogModelsForSlug, slugDisplayLabel } from '@/lib/gene-expansion/catalogTypeMap';
 import { getPriorityGeneByMouseSymbol } from '@/data/priorityGenes';
 
 const BASE_URL = 'https://www.genetargeting.com';
@@ -42,7 +43,13 @@ function cleanModel(m: ServerCatalogModel): ServerCatalogModel {
 export interface GeneModCatalogPageProps {
   geneName: string;
   modSlug: string;
+  /** Broad catalog model_type this slug matches against (e.g. "Knockin"). */
   modCanon: string;
+  /**
+   * Reader facing label for this slug (e.g. "Reporter"). Several slugs share
+   * one `modCanon`, so this is what headings, copy and schema must use.
+   */
+  modDisplay?: string;
   rawModels: ServerCatalogModel[];
   relatedGenes: string[];
   /** Catalog-backed Tier 4 routes for this gene × mod; each resolves to a live page. */
@@ -53,29 +60,31 @@ export default function GeneModCatalogPage({
   geneName,
   modSlug,
   modCanon,
+  modDisplay,
   rawModels,
   relatedGenes,
   tier4Links,
 }: GeneModCatalogPageProps) {
-  const models = rawModels.map(cleanModel).filter((m) => m.modelType === modCanon);
+  const modLabel = modDisplay ?? slugDisplayLabel(modSlug, modCanon);
+  const models = catalogModelsForSlug(rawModels.map(cleanModel), modSlug, modCanon);
 
   const curated = getCuratedIntro(geneName);
   const template = buildTemplateIntro({ gene: geneName, modCanonical: modCanon });
   const rationale = rationaleForModTissue(modCanon, undefined);
   const modNote = getGeneModNote(geneName, modSlug);
-  const faqs = buildTierGeneModFaqs({ gene: geneName, modLabel: modCanon });
+  const faqs = buildTierGeneModFaqs({ gene: geneName, modLabel });
   const priority = getPriorityGeneByMouseSymbol(geneName);
   const commonName = priority?.aliases?.find(
     (a) => a.trim() && a.toLowerCase() !== geneName.toLowerCase() && a.toLowerCase() !== (priority.humanSymbol || '').toLowerCase(),
   );
-  const catalogQuoteNote = `The ${geneName} ${modCanon} lines listed above are catalog models. Send us the catalog number and our team confirms current availability, pricing, and whether the line ships cryopreserved or live.`;
+  const catalogQuoteNote = `The ${geneName} ${modLabel} lines listed above are catalog models. Send us the catalog number and our team confirms current availability, pricing, and whether the line ships cryopreserved or live.`;
   const generationQuoteNote = `If your study needs a ${geneName} allele configuration that is not listed above, our scientific team designs and generates it. Model generation quotes return in about twenty four hours with project milestones and pricing.`;
 
   const productSchemas = models.map((m) =>
     buildCatalogProductSchema(m, {
       name: m.modelAbbrev || `${geneName} ${m.modelType || ''} Mouse Model`.trim(),
       description: m.description || `${m.modelType || 'Genetically engineered'} mouse model for ${geneName}.`,
-      additionalProperty: [{ '@type': 'PropertyValue', name: 'Modification type', value: modCanon }],
+      additionalProperty: [{ '@type': 'PropertyValue', name: 'Modification type', value: modLabel }],
     }),
   );
 
@@ -97,14 +106,14 @@ export default function GeneModCatalogPage({
                 <li style={{ color: 'rgba(255,255,255,0.4)' }}>›</li>
                 <li><Link href={`/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/`} style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>{geneName}</Link></li>
                 <li style={{ color: 'rgba(255,255,255,0.4)' }}>›</li>
-                <li style={{ color: 'rgba(255,255,255,0.9)' }}>{modCanon}</li>
+                <li style={{ color: 'rgba(255,255,255,0.9)' }}>{modLabel}</li>
               </ol>
             </nav>
             {models.length > 0 ? (
               <CatalogReadyToShipBanner availabilities={models.map((m) => m.availability)} />
             ) : null}
             <h1 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '2.5rem', fontWeight: 700, color: '#fff', marginBottom: '16px', lineHeight: 1.2 }}>
-              {geneName} {modCanon} mouse models
+              {geneName} {modLabel} mouse models
             </h1>
             <div style={{ fontSize: '1rem', lineHeight: 1.75, maxWidth: '880px', marginBottom: '24px' }}>
               {curated ? <p style={{ color: 'rgba(255,255,255,0.92)', marginBottom: '16px' }}>{curated}</p> : null}
@@ -130,7 +139,7 @@ export default function GeneModCatalogPage({
 
         <GeneModAiAnswerLead
           geneSymbol={geneName}
-          modLabel={modCanon}
+          modLabel={modLabel}
           catalogCount={models.length}
           humanSymbol={priority?.humanSymbol}
           commonName={commonName}
@@ -183,7 +192,7 @@ export default function GeneModCatalogPage({
         <section style={{ background: '#f8f9fa', padding: '48px 20px' }}>
           <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <h2 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#0a253c', marginBottom: '12px' }}>
-              {modNote ? `Designing a ${geneName} ${modCanon} allele` : 'Why this approach'}
+              {modNote ? `Designing a ${geneName} ${modLabel} allele` : 'Why this approach'}
             </h2>
             {modNote ? <p style={{ color: '#444', lineHeight: 1.85, marginBottom: '12px' }}>{modNote}</p> : null}
             <p style={{ color: '#444', lineHeight: 1.85 }}>{rationale}</p>
@@ -233,7 +242,7 @@ export default function GeneModCatalogPage({
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                 {relatedGenes.map((g) => (
                   <Link key={g} href={`/all-catalog-mouse-models/gene/${encodeURIComponent(g)}/${modSlug}/`} style={{ padding: '6px 12px', background: '#f0f9f9', borderRadius: '4px', color: '#008080', textDecoration: 'none', fontSize: '.85rem', fontWeight: 600 }}>
-                    {g} {modCanon}
+                    {g} {modLabel}
                   </Link>
                 ))}
               </div>
@@ -256,7 +265,7 @@ export default function GeneModCatalogPage({
           </section>
         ) : null}
 
-        <BreedThisLineWithItl lineName={`${geneName} ${modCanon}`} />
+        <BreedThisLineWithItl lineName={`${geneName} ${modLabel}`} />
 
         {/* Bottom dual-path CTA */}
         <section className="px-5" style={{ backgroundColor: '#f5f5f4', paddingTop: '3rem', paddingBottom: '3rem' }}>
@@ -279,7 +288,7 @@ export default function GeneModCatalogPage({
                   { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
                   { '@type': 'ListItem', position: 2, name: 'Catalog', item: `${BASE_URL}/all-catalog-mouse-models/` },
                   { '@type': 'ListItem', position: 3, name: geneName, item: `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/` },
-                  { '@type': 'ListItem', position: 4, name: modCanon, item: `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}/` },
+                  { '@type': 'ListItem', position: 4, name: modLabel, item: `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}/` },
                 ],
               },
               ...(models.length > 0 ? productSchemas : []),
