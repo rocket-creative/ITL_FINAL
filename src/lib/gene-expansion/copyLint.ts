@@ -38,6 +38,20 @@ function checkBannedCustom(text: string, field: string, errors: string[]) {
   }
 }
 
+/**
+ * An H1 must not advertise the page as generated. `gates.test.ts` asserted
+ * this ("fails generated in h1") but no rule implemented it, so the
+ * assertion had been failing. Scoped to the H1 only: "generated" is
+ * legitimate elsewhere in site copy (e.g. "generated knockins" as a service
+ * description), and no model_type display_name contains it, so no real
+ * build_inquiry H1 is affected.
+ */
+function checkGeneratedWording(text: string, field: string, errors: string[]) {
+  if (/\bgenerated\b/i.test(text)) {
+    errors.push(`${field}: must not describe the page as generated`);
+  }
+}
+
 function checkProhibited(text: string, field: string, errors: string[]) {
   const lower = text.toLowerCase();
   for (const term of PROHIBITED_TERMS) {
@@ -63,6 +77,7 @@ export function lintBuildInquiryCopy(input: CopyLintInput): CopyLintResult {
 
   checkBannedCustom(input.title, 'title', errors);
   checkBannedCustom(input.h1, 'h1', errors);
+  checkGeneratedWording(input.h1, 'h1', errors);
 
   for (const h of input.headings) {
     checkBannedCustom(h, 'heading', errors);

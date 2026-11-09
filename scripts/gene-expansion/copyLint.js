@@ -49,6 +49,10 @@ function lintBuildInquiryCopy(input) {
 
   checkBannedCustom(title, 'title', errors);
   checkBannedCustom(h1, 'h1', errors);
+  // Keep in sync with src/lib/gene-expansion/copyLint.ts.
+  if (/\bgenerated\b/i.test(h1)) {
+    errors.push('h1: must not describe the page as generated');
+  }
 
   for (const h of headings) {
     checkBannedCustom(h, 'heading', errors);
