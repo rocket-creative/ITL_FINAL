@@ -137,9 +137,11 @@ describe('generated alias layer', () => {
     for (const [canonical, aliases] of Object.entries(CATALOG_GENE_ALIASES)) {
       for (const alias of aliases) {
         const resolved = canonicalGeneFor(alias);
+        // A name ITL curated keeps its own page, so it resolves to undefined
+        // by design even though its rows still roll up to `canonical`.
+        if (resolved === undefined) continue;
         // A cross listed under two parents resolves to its first owner; every
         // other alias must resolve to the gene it is listed under.
-        expect(resolved).toBeDefined();
         if (!alias.includes('/')) expect(resolved).toBe(canonical);
       }
     }
@@ -148,5 +150,34 @@ describe('generated alias layer', () => {
   it('does not alias a canonical gene onto something else', () => {
     expect(canonicalGeneFor('Apoe')).toBeUndefined();
     expect(canonicalGeneFor('Vegfa')).toBeUndefined();
+  });
+});
+
+describe('curated product pages keep their own URL', () => {
+  // ITL hand-wrote titles and descriptions for humanized product pages such as
+  // /gene/hB2M/. Redirecting one discarded that copy, because the override is
+  // looked up by the post-redirect gene name. Rows still roll up; the 301 does
+  // not happen.
+  const curated = ['hB2M', 'hSTING', 'hCFH', 'hICOS', 'hPLG', 'hNGF'];
+
+  it('does not redirect a gene ITL curated', () => {
+    for (const g of curated) {
+      expect(canonicalGeneFor(g)).toBeUndefined();
+    }
+  });
+
+  it('still rolls those rows up to the canonical gene hub', () => {
+    // hB2M remains an alias of B2m for inventory purposes.
+    expect(catalogGeneNamesFor('B2m')).toContain('hB2M');
+  });
+
+  it('keeps them out of the aliased set so they stay in the sitemap', () => {
+    for (const g of curated) {
+      expect(isAliasedGeneName(g)).toBe(false);
+    }
+  });
+
+  it('still redirects an uncurated humanized name', () => {
+    expect(canonicalGeneFor('hVEGFA')).toBe('Vegfa');
   });
 });

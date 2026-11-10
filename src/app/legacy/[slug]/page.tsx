@@ -85,9 +85,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       `/legacy/${slug}`,
     );
 
+    // Self-canonical. These 25 archived pages are indexable and carried no
+    // canonical at all, so any case or query-string variant of the URL was a
+    // free-standing duplicate. This only fixes that; it deliberately does NOT
+    // point legacy at its live counterpart, because several archived pages are
+    // LONGER than the live page (e.g. /legacy/conventional-knockout-mouse-models/
+    // at 2,097 words vs 1,672) and may be the version actually earning clicks.
+    // Deciding which wins needs Search Console data, not a guess.
     return {
       title: meta.title,
       description: meta.description,
+      alternates: { canonical: `https://www.genetargeting.com/legacy/${slug}/` },
     };
   } catch {
     const meta = applyCatalogFirstMeta(

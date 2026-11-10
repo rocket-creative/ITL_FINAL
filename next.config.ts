@@ -158,6 +158,13 @@ const nextConfig: NextConfig = {
   // rank.
   async redirects() {
     const aliasRedirects = [
+      // Missing index pages for two crawled clusters. /cre-drivers/<driver>/
+      // and /cre-lines/<tissue>/ are in the sitemap (39 and 28 URLs) but their
+      // parent paths returned 404, so anyone trimming the URL — or any crawler
+      // walking up it — hit a dead end. Point them at the hubs that already
+      // rank for those terms rather than adding competing index pages.
+      { source: '/cre-drivers', destination: '/cre-recombinase-mice/', permanent: true },
+      { source: '/cre-lines', destination: '/tissue-specific-cre-lines/', permanent: true },
       // CreERT2 cluster — funnel typed-URL variants to the service page
       { source: '/cre-ert2-system', destination: '/tamoxifen-inducible-cre/', permanent: true },
       { source: '/cre-ert2', destination: '/tamoxifen-inducible-cre/', permanent: true },

@@ -77,10 +77,29 @@ function modificationRationale(modelType: ModelTypeRow): string {
   return `Allele design follows published structure for this locus, with homologous recombination targeting and pre germline characterization.`;
 }
 
+/**
+ * Whether `human_ortholog_symbol` actually names a human ortholog.
+ *
+ * In the catalog it is the mouse symbol uppercased for 8,072 of the 8,073 rows
+ * that have it, so it asserts an ortholog that may not exist: the gene rows
+ * "R26" and "Pd" carry "R26" and "PD", and both rendered as "Human ortholog
+ * R26 guides humanization design" on a site selling to geneticists. Naming a
+ * human gene is a scientific claim, so make it only where the value is
+ * genuinely different from the mouse symbol rather than derived from it.
+ */
+export function hasRealHumanOrtholog(gene: GeneRow): boolean {
+  const human = gene.human_ortholog_symbol?.trim();
+  if (!human) return false;
+  return human.toUpperCase() !== gene.symbol.trim().toUpperCase();
+}
+
 function typeSpecificNote(gene: GeneRow, modelType: ModelTypeRow): string {
   const slug = modelType.slug;
-  if (slug === 'humanized' && gene.human_ortholog_symbol) {
+  if (slug === 'humanized' && hasRealHumanOrtholog(gene)) {
     return `Human ortholog ${gene.human_ortholog_symbol} guides humanization design so human coding sequence replaces the mouse exons under endogenous control.`;
+  }
+  if (slug === 'humanized') {
+    return `Humanization replaces the mouse coding sequence with the human sequence at the endogenous locus, so expression stays under native regulatory control. We confirm the replacement boundaries and the human transcript before germline transmission.`;
   }
   if (slug === 'point-mutation' && (gene.clinvar_pathogenic_count > 0 || gene.omim_ids.length > 0)) {
     const omim = gene.omim_ids.length ? ` OMIM entries ${gene.omim_ids.slice(0, 3).join(', ')} inform variant choice.` : '';

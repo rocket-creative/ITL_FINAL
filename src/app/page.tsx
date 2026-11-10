@@ -56,6 +56,10 @@ const FAQSection = dynamic(
 export const metadata: Metadata = {
   title: ROOT_CATALOG_FIRST_META.title,
   description: ROOT_CATALOG_FIRST_META.description,
+  // The homepage carried no canonical, so every variant that reaches it
+  // (trailing slash, utm parameters, www vs apex) stood on its own. Every
+  // other page type on the site declares one.
+  alternates: { canonical: 'https://www.genetargeting.com/' },
 };
 
 // ============================================

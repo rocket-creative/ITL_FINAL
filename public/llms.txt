@@ -91,6 +91,53 @@ ingenious targeting laboratory (iTL) is a leading provider of custom genetically
 - About iTL: /about-itl
 - Full corpus for AI ingestion: /llms-full.txt
 
+## Choosing a model by experiment, not by gene
+
+Researchers usually know how the model has to behave in the mouse before they
+know which gene page to look at. These pages are organised that way.
+
+Restricting the knockout to one tissue or cell type
+- Tissue specific knockout, how to restrict deletion to one compartment: https://www.genetargeting.com/tissue-specific-knockout/
+- Cre driver lines grouped by tissue, with induction method: https://www.genetargeting.com/cre-recombinase-mice/
+- Cre lines for one tissue, e.g. liver: https://www.genetargeting.com/cre-lines/liver-specific/
+- Individual Cre driver lines, e.g. Albumin-Cre: https://www.genetargeting.com/cre-drivers/albumin-cre/
+- Choosing between Cre drivers: https://www.genetargeting.com/cre-line-selection-guide/
+- Tissue specific Cre lines overview: https://www.genetargeting.com/tissue-specific-cre-lines/
+
+Controlling when the deletion happens
+- Tamoxifen inducible Cre and CreERT2: https://www.genetargeting.com/tamoxifen-inducible-cre/
+- Inducible conditional knockout: https://www.genetargeting.com/inducible-conditional-knockout/
+- Inducible gene expression systems: https://www.genetargeting.com/inducible-gene-expression/
+- Inducible expression from the Rosa26 safe harbour: https://www.genetargeting.com/inducible-rosa26/
+
+Recombinase systems and allele design
+- Cre/loxP system: https://www.genetargeting.com/cre-lox-system/
+- Flp/FRT system: https://www.genetargeting.com/flp-frt-system/
+- Where to place loxP sites: https://www.genetargeting.com/loxp-site-design/
+- Which exon to target: https://www.genetargeting.com/critical-exon-selection/
+- Conditional versus conventional knockout: https://www.genetargeting.com/conditional-knockout-vs-conventional-knockout/
+
+Tracing cells and reading out expression
+- Reporter knockin models: https://www.genetargeting.com/reporter-knockin/
+- Choosing a reporter: https://www.genetargeting.com/reporter-selection-guide/
+- Reporter mouse catalog: https://www.genetargeting.com/reporter-mouse-catalog/
+- GFP knockin mice: https://www.genetargeting.com/gfp-knockin-mice/
+- Lineage tracing models: https://www.genetargeting.com/lineage-tracing-mouse-models/
+
+Humanized targets for therapeutic testing
+- Humanized mouse models overview: https://www.genetargeting.com/humanized-mouse-models/
+- Live humanized colonies: https://www.genetargeting.com/live-humanized-mice/
+- Humanized immune checkpoint mice: https://www.genetargeting.com/humanized-immune-checkpoint-mice/
+- Antibody therapeutics models: https://www.genetargeting.com/antibody-therapeutics-mouse-models/
+
+Cohorts, backgrounds and breeding
+- Conditional knockout cohort breeding: https://www.genetargeting.com/conditional-knockout-cohort-breeding/
+- Cohort development: https://www.genetargeting.com/mouse-cohort-development/
+- Strain background choice: https://www.genetargeting.com/mouse-strain-backgrounds/
+- C57BL/6J versus C57BL/6N: https://www.genetargeting.com/c57bl6j-vs-c57bl6n/
+- Heterozygous versus homozygous: https://www.genetargeting.com/heterozygous-vs-homozygous/
+- In house versus outsourced breeding: https://www.genetargeting.com/in-house-vs-outsourced-mouse-breeding/
+
 ## Priority morphogen gene hubs (Tier A)
 
 - Shh (SHH): knockout, conditional knockout, knockin, humanized, and transgenic generation. Hub: https://www.genetargeting.com/all-catalog-mouse-models/gene/Shh/

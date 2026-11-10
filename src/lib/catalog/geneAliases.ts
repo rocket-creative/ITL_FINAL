@@ -45,7 +45,27 @@
  * between genes.
  */
 
+import { CATALOG_SERP_OVERRIDES } from '@/lib/seo/catalogSerp';
 import { GENERATED_GENE_ALIASES } from './generatedGeneAliases';
+
+/**
+ * Names that contribute their catalog rows to a canonical gene but KEEP their
+ * own page instead of redirecting to it.
+ *
+ * Absorbing rows and redirecting a URL are separate decisions, and conflating
+ * them cost real content: "hB2M" is an alias of "B2m" for inventory purposes,
+ * but ITL had written a curated title and description for /gene/hB2M/
+ * ("humanized mice expressing human beta 2 microglobulin for MHC class I and
+ * engraftment studies"). Redirecting it discarded that copy, because the
+ * override is looked up by the post-redirect gene name, which has no entry.
+ *
+ * A curated SERP override is the signal that the business sells this page on
+ * its own terms, so it is the one thing that withholds the 301. Fourteen
+ * humanized product pages are in this position.
+ */
+const KEEPS_OWN_PAGE: ReadonlySet<string> = new Set(
+  Object.keys(CATALOG_SERP_OVERRIDES).map((g) => g.toLowerCase()),
+);
 
 /**
  * Hand-checked aliases. Canonical gene symbol -> additional raw
@@ -137,6 +157,9 @@ export function catalogGeneNamesFor(geneName: string): string[] {
 export function canonicalGeneFor(geneName: string): string | undefined {
   const lower = geneName.toLowerCase();
   if (CANONICAL_KEYS.has(lower)) return undefined; // already canonical
+  // A curated page is never redirected away, though its rows still roll up
+  // into the canonical gene hub via catalogGeneNamesFor.
+  if (KEEPS_OWN_PAGE.has(lower)) return undefined;
   return REVERSE_ALIASES.get(lower);
 }
 

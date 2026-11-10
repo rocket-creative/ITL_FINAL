@@ -11,7 +11,7 @@ import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublication
 import { modCanonicalToSlug } from '@/lib/seo/slugs';
 import type { BuildInquiryPageContext } from '@/lib/gene-expansion/db';
 import { getSiblingBuildInquiryPages } from '@/lib/gene-expansion/db';
-import { buildPageCopy } from '@/lib/gene-expansion/content';
+import { buildPageCopy, hasRealHumanOrtholog } from '@/lib/gene-expansion/content';
 import GeneModAiAnswerLead from '@/components/gene-expansion/GeneModAiAnswerLead';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { buildBuildInquirySchemaGraph } from '@/lib/gene-expansion/schema';
@@ -46,8 +46,14 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
   const siblings = await getSiblingBuildInquiryPages(gene.symbol, modSlug);
   const catalogModels = await getModelsByGene(gene.symbol);
   const catalogTypes = [...new Set(catalogModels.map((m) => m.modelType).filter(Boolean))];
+  // Only match publications on a human symbol that is really one. The field
+  // is the mouse symbol uppercased for almost every row, and matching on it
+  // pulls in unrelated work: the gene "Pd" carries "PD", which collides with
+  // Parkinson disease in titles and abstracts.
   const pubs = getGeneMatchedPublications(
-    [gene.symbol, gene.human_ortholog_symbol].filter(Boolean) as string[],
+    [gene.symbol, hasRealHumanOrtholog(gene) ? gene.human_ortholog_symbol : null].filter(
+      Boolean,
+    ) as string[],
   );
   const quoteHref = `/request-quote/?gene=${encodeURIComponent(gene.symbol)}&type=${encodeURIComponent(modSlug)}`;
 

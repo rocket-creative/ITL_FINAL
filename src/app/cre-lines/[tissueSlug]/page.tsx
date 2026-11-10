@@ -40,14 +40,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canon = tissueSlugToCanonical(tissueSlug);
   if (!canon) return { title: 'Cre lines' };
   const label = getDisplayLabelForTissueKey(canon);
+  // Normalize the slug before it reaches the canonical. tissueSlugToCanonical
+  // lowercases its input, so /cre-lines/Liver-Specific/ and /LIVER-SPECIFIC/
+  // both render this page; building the canonical from the raw param made each
+  // casing declare ITSELF canonical, so every variant anyone links to became an
+  // indexable duplicate confirming itself as the original.
+  const normalizedSlug = tissueCanonicalToSlug(canon);
   const meta = applyCatalogFirstMeta(
     `${label} Cre Mouse Lines | Catalog + Generation`,
     `Browse ${label} biased Cre and CreERT2 drivers in the catalog. Request a generated conditional knockout when you need a paired floxed allele. Quote in twenty four hours.`,
-    `/cre-lines/${tissueSlug}`,
+    `/cre-lines/${normalizedSlug}`,
   );
   const title = meta.title;
   const description = meta.description;
-  const canonical = `${BASE_URL}/cre-lines/${tissueSlug}/`;
+  const canonical = `${BASE_URL}/cre-lines/${normalizedSlug}/`;
   return {
     title,
     description,

@@ -35,14 +35,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { driverSlug } = await params;
   const canon = driverSlugToCanonical(driverSlug);
   if (!canon) return { title: 'Cre driver' };
+  // Normalize the slug before it reaches the canonical. driverSlugToCanonical
+  // lowercases its input, so /cre-drivers/Alb-Cre/ and /ALB-CRE/ both render
+  // this page; building the canonical from the raw param made each casing
+  // declare ITSELF canonical, so every variant anyone links to became an
+  // indexable duplicate confirming itself as the original.
+  const normalizedSlug = driverCanonicalToSlug(canon);
   const meta = applyCatalogFirstMeta(
     `${canon} Mouse Line | Catalog + Generation`,
     `Use ${canon} for tissue restricted recombination in mouse models. Pair with floxed alleles from our catalog or request a generated Cre project. Quote in about twenty four hours.`,
-    `/cre-drivers/${driverSlug}`,
+    `/cre-drivers/${normalizedSlug}`,
   );
   const title = meta.title;
   const description = meta.description;
-  const canonical = `${BASE_URL}/cre-drivers/${driverSlug}/`;
+  const canonical = `${BASE_URL}/cre-drivers/${normalizedSlug}/`;
   return {
     title,
     description,

@@ -78,13 +78,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (modCanon && rawModels.length > 0) {
     const models = catalogModelsForSlug(rawModels, modSlug, modCanon);
     if (models.length >= 1) {
+      // CATALOG_SERP_OVERRIDES are hand-written GENE HUB titles, so one may
+      // only stand in for this page's title when it actually describes this
+      // modification. Testing the page's own label instead put "Trem2 knockout
+      // mouse models" on /gene/Trem2/humanized/; nine humanized URLs were
+      // titled after a different modification, eight of them pages that only
+      // exist since humanized rows started rolling up to their canonical gene.
       const hubOverride = getCatalogSerpOverride(geneName);
-      const title =
-        /humanized/i.test(modLabel) && hubOverride?.title
-          ? hubOverride.title
-          : buildCatalogModTitle(geneName, modLabel);
+      const overrideFitsThisMod =
+        /humanized/i.test(modLabel) && /humanized/i.test(hubOverride?.title ?? '');
+      const title = overrideFitsThisMod
+        ? (hubOverride?.title as string)
+        : buildCatalogModTitle(geneName, modLabel);
       const description =
-        /humanized/i.test(modLabel) && hubOverride?.description
+        overrideFitsThisMod && hubOverride?.description
           ? hubOverride.description
           : buildCatalogModDescription(geneName, modLabel, models.length);
       const canonical = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}/`;

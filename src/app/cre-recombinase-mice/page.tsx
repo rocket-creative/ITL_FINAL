@@ -10,6 +10,33 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedFAQ from '@/components/UXUIDC/AnimatedFAQ';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconQuote, IconChevronRight, IconCheckCircle, IconDNA } from '@/components/UXUIDC/Icons';
+import { CRE_DRIVERS, getDisplayLabelForTissueKey } from '@/lib/search/creDrivers';
+import { driverCanonicalToSlug, tissueCanonicalToSlug } from '@/lib/seo/slugs';
+
+/**
+ * Cre driver pages grouped by the tissue they recombine in.
+ *
+ * This hub is the logical parent of /cre-drivers/<driver>/ (39 in the sitemap)
+ * and /cre-lines/<tissue>/ (28 in the sitemap), but it linked to neither, so
+ * both clusters were crawled as orphans with no parent to reach them from.
+ * Built from CRE_DRIVERS so it cannot drift from the pages that exist.
+ */
+const DRIVERS_BY_TISSUE: { tissue: string; label: string; drivers: typeof CRE_DRIVERS }[] = (() => {
+  const byTissue = new Map<string, CreDriverRow[]>();
+  for (const d of CRE_DRIVERS) {
+    if (!byTissue.has(d.tissue)) byTissue.set(d.tissue, []);
+    byTissue.get(d.tissue)!.push(d);
+  }
+  return [...byTissue.entries()]
+    .map(([tissue, drivers]) => ({
+      tissue,
+      label: getDisplayLabelForTissueKey(tissue),
+      drivers: [...drivers].sort((a, b) => a.driver.localeCompare(b.driver)) as typeof CRE_DRIVERS,
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+})();
+
+type CreDriverRow = (typeof CRE_DRIVERS)[number];
 
 // Hero Data
 const heroData = {
@@ -708,6 +735,70 @@ export default function CreRecombinaseMicePage() {
                 </ul>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Cre driver directory — parents the /cre-drivers/ and /cre-lines/
+            clusters, which were previously crawled with no page linking to
+            them. Driver, tissue and induction come from CRE_DRIVERS. */}
+        <section style={{ backgroundColor: '#f8f9fa', padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <h2
+              className="animate-in"
+              style={{
+                color: '#2384da',
+                fontFamily: 'Poppins, sans-serif',
+                fontSize: '2rem',
+                fontWeight: 700,
+                marginBottom: '10px',
+              }}
+            >
+              Cre driver lines by tissue
+            </h2>
+            <p style={{ color: '#444', lineHeight: 1.8, marginBottom: '30px', maxWidth: '760px' }}>
+              Each driver below has its own page covering specificity, reported
+              recombination pattern and the floxed alleles it pairs with. Tissue
+              names link to every driver we track for that compartment.
+            </p>
+
+            {DRIVERS_BY_TISSUE.map((group) => (
+              <div key={group.tissue} style={{ marginBottom: '28px' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0a253c', marginBottom: '10px' }}>
+                  <Link
+                    href={`/cre-lines/${tissueCanonicalToSlug(group.tissue)}/`}
+                    style={{ color: '#0a253c', textDecoration: 'none' }}
+                  >
+                    {group.label.charAt(0).toUpperCase() + group.label.slice(1)} Cre lines
+                  </Link>
+                </h3>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                  {group.drivers.map((d) => (
+                    <Link
+                      key={d.driver}
+                      href={`/cre-drivers/${driverCanonicalToSlug(d.driver)}/`}
+                      style={{
+                        padding: '7px 13px',
+                        background: '#fff',
+                        border: '1px solid #008080',
+                        borderRadius: '4px',
+                        color: '#008080',
+                        fontSize: '.85rem',
+                        fontWeight: 600,
+                        textDecoration: 'none',
+                      }}
+                    >
+                      {d.driver}
+                      {d.inducible ? (
+                        <span style={{ color: '#666', fontWeight: 400 }}>
+                          {' '}
+                          · {d.inducer ?? 'inducible'}
+                        </span>
+                      ) : null}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>

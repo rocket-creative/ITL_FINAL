@@ -27,6 +27,11 @@
  *      do: both shapes have suffixed rows.
  *   4. the resolved parent is not the alias itself, so nothing self redirects
  *
+ * Emitting an alias here means "these rows roll up to that gene", NOT "301
+ * this URL away". geneAliases.ts withholds the redirect for any name ITL has
+ * written a curated SERP override for, so those product pages keep their own
+ * copy while still contributing inventory to the mouse gene hub.
+ *
  * Names that fail a guard are left alone: they keep their own gene page rather
  * than being filed under a parent that may be wrong. Fixing those needs the
  * underlying gene_name data corrected, not a broader alias rule.
