@@ -232,6 +232,23 @@ earn distinct content (ITL-supplied design detail per target) or the tier's
 indexability should be revisited. Decide it on Search Console data: if the tier
 earns no impressions, 8,061 identical paragraphs are a liability, not an asset.
 
+> **ANSWERED 2026-11-10 — Search Console read; see
+> `search-console-baseline-2026-11.md`.** This paragraph set the right test and
+> the condition did not hold. The humanized tier earns **234 clicks on 17,700
+> impressions at average position 9.4** over three months, so by its own
+> criterion it is not a liability. The wider catalog is the site's main click
+> driver: **2,440 of 3,900 site clicks (63%) at 1.6% CTR**, double the
+> site-wide 0.8%.
+>
+> Added by the APOE session, which was the one arguing for pruning. That
+> recommendation is withdrawn; it would have removed most of the organic clicks
+> the site earns. What Google does refuse is **24,345 URLs "Discovered –
+> currently not indexed"** plus 9,182 crawled-not-indexed — those are the safe
+> pruning target. The per-page economics in this section still stand: 8,061
+> pages producing 234 clicks is 0.03 clicks per page per quarter, and one blog
+> explainer produces 85 on its own. Weak is not the same as harmful, and the
+> distinction decides whether you prune or improve.
+
 Credit: this correction came from the APOE search-visibility session
 reviewing the commit on production, not from the session that wrote it.
 

@@ -234,15 +234,29 @@ correctness.
 the 67 orphaned Cre pages in `072`. Orphaned pages rank poorly for mechanical
 reasons, and that is now fixed.
 
-**The likeliest thing suppressing the whole site is untouched**: **8,061
-indexable humanized pages**, plus comparable templated tiers, against roughly
-70 catalog models with a real description. That is a scaled-content footprint
-generated from database fields. Google's scaled content abuse policy targets it
-directly, and site-wide quality assessment means those pages can suppress the
-pages you care about — including the APOE hub. If the four-week test comes back
-flat, that is the hypothesis to test, and the test is *subtractive*: noindex the
-thin tiers, keep a few hundred differentiated pages, see whether the survivors
-rise.
+**WITHDRAWN — this section recommended noindexing the thin tiers.** Search
+Console was read on 2026-11-10, after this report was written, and contradicts
+it. See `docs/search-console-baseline-2026-11.md` for the measured figures.
+
+The catalog delivers **2,440 of the site's 3,900 clicks — 63%** — at a 1.6%
+CTR against a site-wide 0.8%. Noindexing it would have removed most of the
+organic clicks the site earns. The humanized tier specifically is weaker but
+not dead: 234 clicks across ~8,061 pages at position 9.4.
+
+The thin-content concern was real but pointed at the wrong target. What Google
+actually reports is **24,345 URLs "Discovered – currently not indexed"** and
+9,182 "Crawled – currently not indexed" — 33,527 it has seen and refused, most
+without spending a crawl. Those are the safe thing to prune. Pages earning
+clicks are not.
+
+**And the real finding is elsewhere**: 475,000 impressions at **0.8% CTR**. The
+site ranks for definitional queries — "point mutation" alone draws 17,228
+impressions and 5 clicks — answered by glossary and blog pages, not by anyone
+sourcing a mouse model. Nine of the top ten pages are explainers. The only
+query converting properly is the brand name, at 49%.
+
+APOE itself: **4 impressions, 0 clicks, average position 25.5.** Not a
+click-through problem. The site is not in the running.
 
 **Schema is not the lever.** It has never been a ranking factor; it makes a
 page eligible for a rich result, which affects click-through, not position.
@@ -256,31 +270,44 @@ ranks. Full sourcing in `docs/seo-aeo-schema-framing-2026-11.md`.
 
 ## 7. What is needed from you
 
-1. **Search Console access.** Without it the four-week test produces a feeling,
-   not a result. It is also the only thing that distinguishes your two possible
-   APOE diagnoses: impressions without clicks is a snippet problem; no
-   impressions is an authority problem. Opposite fixes.
-2. **A decision on the 8,061 templated pages.** A catalog decision, not a code
-   change.
-3. **A named scientist and reviewer** for the byline work.
-4. **A decision on the 70-node Organization cleanup.**
-5. **Node is not installed on this machine** — `which -a node npm npx` returns
+1. ~~**Search Console access.**~~ **Done** — read on 2026-11-10, baseline in
+   `docs/search-console-baseline-2026-11.md`. It settled the APOE diagnosis
+   (no impressions, not a snippet problem) and overturned the recommendation
+   in §6.
+2. **A decision on CTR, which is now the biggest available win.** 475,000
+   impressions at 0.8%. Rewriting titles and meta descriptions on the ten
+   pages that carry the impressions would move more than anything shipped in
+   this engagement, and needs no new content. Those ten pages are listed in
+   the baseline.
+3. **A decision on what the educational content is for.** The glossary and
+   blog pages earn almost all the visibility and almost none of the buyers.
+   Either they are a brand-awareness play and the CTR does not matter, or they
+   should route readers toward the catalog. Right now they appear to do
+   neither. This is a positioning decision, not a technical one.
+4. **A narrower pruning decision.** Not the 8,061 — the 33,527 URLs Google has
+   already refused to index. Worth confirming what they are before deciding.
+5. **A named scientist and reviewer** for the byline work.
+6. **A decision on the 70-node Organization cleanup.**
+7. **Node is not installed on this machine** — `which -a node npm npx` returns
    nothing in your own login shell. The toolchain used for this work lives in a
    temporary session directory and will disappear. Install Node properly before
    the next session.
-6. **Two sessions worked on this branch.** Answers you give one can silently
+8. **Two sessions worked on this branch.** Answers you give one can silently
    override what you told the other. Worth keeping to one session per branch.
 
 ### Four-week expectations
 
-| Signal | By week 4 |
-|---|---|
-| Breadcrumb / Organization valid items in GSC | Improvement |
-| `ScholarlyArticle` parses | Valid, no rich result (none exists) |
-| Cre driver/tissue cluster impressions | **Most likely real movement** |
-| Catalog gene hubs | Flat to slightly up |
-| APOE query set | Probably flat |
-| Indexed page count | Watch for *drops*, not gains |
+Baselines are the 10 Nov figures in `search-console-baseline-2026-11.md`.
+
+| Signal | Week 0 | By week 4 |
+|---|---|---|
+| Cre driver/tissue cluster | 67 pages orphaned until 10 Nov | **Most likely real movement** — the clean before/after |
+| Catalog clicks | 2,440 | The floor to protect. A drop here is a loss whatever indexing does |
+| Discovered – currently not indexed | 24,345 | Falling = crawl budget recovering; rising = footprint outgrowing it |
+| Site CTR | 0.8% on 475K impressions | Flat unless titles and snippets are rewritten |
+| APOE position | 25.5, 4 impressions | Flat. If it moves, something larger changed |
+| Breadcrumb / Organization valid items | — | Improvement |
+| `ScholarlyArticle` parses | — | Valid, no rich result (none exists) |
 
 Four weeks is the earliest edge for ranking movement on a site this size, so a
 null result means little. AI Overview content changes ~70% for the same query,

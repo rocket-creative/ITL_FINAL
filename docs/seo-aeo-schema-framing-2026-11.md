@@ -138,16 +138,23 @@ adds more.
 
 ### The blocking problem
 
-**There is no Search Console access.** Without it this test cannot be measured.
-Everything in this document and the 2026-11 audit is structural inference from
-reading code and crawling pages. GSC is what distinguishes the two possible
-diagnoses for the APOE problem:
+**RESOLVED 2026-11-10.** Search Console was read; the baseline is in
+`search-console-baseline-2026-11.md`. Up to that point everything in this
+document and the 2026-11 audit was structural inference from reading code and
+crawling pages.
+
+It was going to distinguish two possible APOE diagnoses:
 
 - the hub gets impressions and loses on click-through → a titles/snippets problem
 - the hub gets no impressions at all → a relevance or authority problem
 
-Those have opposite fixes. Connect GSC and export a baseline before anything
-else, or the four weeks produce a feeling rather than a result.
+**It is the second.** APOE queries draw 4 impressions and 0 clicks at average
+position 25.5 over three months. The hub is not surfaced, so no amount of
+snippet work reaches it.
+
+The site-wide picture is the opposite, and is where the opportunity is: 475,000
+impressions at 0.8% CTR. Visibility exists and is not converting — just not on
+the pages or the queries this engagement was aimed at.
 
 ### Four weeks is short, and partly the wrong instrument
 
@@ -175,17 +182,23 @@ The schema work will show up as valid enhancements and little else. The change
 most likely to move rankings is not in this pass at all — it is the internal
 linking of the 67 orphaned Cre pages shipped in `88b7454c`.
 
-And the likeliest thing holding the whole site back is untouched: **8,061
-indexable humanized pages**, plus comparable templated tiers, against roughly
-70 catalog models with a real description. That is a scaled-content footprint
-built from database fields with one sentence varying. Google's scaled content
-abuse policy targets it directly, and site-wide quality assessment means those
-pages can suppress the pages you care about — including the APOE hub.
+**WITHDRAWN.** This section argued that 8,061 templated humanized pages were
+holding the site back, and recommended noindexing the thin tiers. Search
+Console was read on 2026-11-10, after this document was written, and
+contradicts it — see `search-console-baseline-2026-11.md`.
 
-If the four weeks come back flat, that is the hypothesis to test next, and the
-test is subtractive: noindex the thin tiers, keep a few hundred genuinely
-differentiated pages, and watch whether the survivors rise. That is a decision
-about the catalog, not a code change.
+The catalog delivers 2,440 of the site's 3,900 clicks at a 1.6% CTR against a
+site-wide 0.8%. It is the main click driver, not dead weight. The humanized
+tier is weaker but alive: 234 clicks at position 9.4.
+
+What Google does report is 24,345 URLs "Discovered – currently not indexed" and
+9,182 "Crawled – currently not indexed". Those 33,527 are the safe pruning
+target; pages earning clicks are not.
+
+The binding constraint is not indexing at all. It is **475,000 impressions
+converting at 0.8%**, on definitional queries answered by glossary and blog
+pages. That is a titles, snippets and positioning problem, and it is larger
+than anything in this document.
 
 ---
 
