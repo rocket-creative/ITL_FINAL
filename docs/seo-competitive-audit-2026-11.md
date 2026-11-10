@@ -175,6 +175,7 @@ it has no dedicated page stating scope and remedy.
 | 7 | Tier 4 tissue pages are shells | `/gene/Trp53/conditional-knockout/liver-specific/` says "liver" **once**, "Alb-Cre" **zero** times. `rationaleForModTissue()` is an 18-line template interpolating the tissue name |
 | 8 | Keyword cannibalisation on our strongest query | 6 live pages on "conditional knockout vs conventional knockout" (751/972/1,522/1,672/1,801/2,097 words), all indexable, all self-canonical. **We hold all 10 results** |
 | 9 | Pricing page publishes no prices | `/custom-mouse-model-pricing/` indexable, ranks, shows no figures, while university cores publish real numbers (MUSC $7,500 KO / $13,500 cKO; Münster €10,600/€20,100) |
+| 10 | Fabricated human-ortholog claims on 8,060 indexable pages | `gene.human_ortholog_symbol` is the mouse symbol uppercased for **8,072 of the 8,073** rows that carry it (exactly **1** real ortholog in 11,105 rows). `typeSpecificNote()` printed it as "Human ortholog R26 guides humanization design" / "Human ortholog PD …" — a scientific claim, to geneticists, that was false by construction |
 
 Our deep content is excellent but scarce: `geneModNotes.ts` (380 lines) names
 Pdx1-Cre, p48-Cre, K14-Cre, WAP-Cre, GFAP-Cre for Trp53 conditional, warns that
@@ -203,6 +204,36 @@ These are corrections to recommendations that came back from the scans.
   NSG/NOG/NCG inventory; that is competing on someone else's product.
 - **Do not force humanized APOE4 / Alzheimer's.** MODEL-AD consortium plus
   patents own it.
+
+### A second honesty item: what the ortholog fix traded
+
+Commit `88b7454c` stopped the false claim by gating it behind
+`hasRealHumanOrtholog()`. That is the right call — removing a fabricated
+scientific claim from 8,060 indexable pages beats keeping it — but the commit
+message's "no existing content rewritten" is **wrong**, and the trade should be
+stated plainly rather than buried.
+
+Measured on `gene_type_page` (model type `humanized`): **10,125** rows,
+**8,061** indexable. Of those, **8,060** previously rendered the false ortholog
+sentence and **1** carries a genuine ortholog. The replacement paragraph
+interpolates nothing, so:
+
+> ~8,060 near-duplicate sentences (varying only by the interpolated symbol)
+> became ~8,060 **byte-identical** ones.
+
+That is a net improvement in truthfulness and a net *worsening* in
+distinctiveness. It is acceptable only because the prior text was boilerplate
+too. What it actually exposes is the real finding:
+
+**8,061 indexable pages of templated humanized copy exist at all.** That is the
+same thin-content pattern section 7 argues against scaling to per-model pages —
+except it is already shipped. No wording change fixes it; either those pages
+earn distinct content (ITL-supplied design detail per target) or the tier's
+indexability should be revisited. Decide it on Search Console data: if the tier
+earns no impressions, 8,061 identical paragraphs are a liability, not an asset.
+
+Credit: this correction came from the APOE search-visibility session
+reviewing the commit on production, not from the session that wrote it.
 
 ### An honesty item
 
