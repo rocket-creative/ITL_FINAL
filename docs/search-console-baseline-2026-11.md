@@ -250,30 +250,76 @@ reported queries plus a long anonymised tail. The lesson is procedural: page
 totals aggregate across queries, so a page-level comparison cannot support a
 query-level claim. Do not consolidate these two pages.
 
-**What the check found instead is worse than cannibalisation.** On
-"tamoxifen inducible cre" the service page holds **position 5.3 and earns 0
-clicks from 105 impressions**. That is a commercial query — a researcher
-scoping an inducible system, which ITL sells — and the AI Overview answers it
-before any organic listing. The glossary page's technical queries show the same
-shape: positions 4.1 to 8.6, CTR at or near zero.
+**What the check found instead is worse than cannibalisation**, but the
+evidence has to be quoted in the right order.
 
-So the suppression established in §6b is **not confined to definitional
-queries**. It reaches the buying terms too. This closes off the easy reading of
-§6b — that the site merely attracts the wrong audience — and replaces it with a
-harder one: ITL ranks on page one for the right queries and earns nothing from
-them, because the SERP resolves the question above the fold.
+The robust row is the **CreERT2 family**: 22,932 impressions across 98 reported
+queries plus an anonymised tail, average position 6.0, **128 clicks — 0.56%**.
+A position-6 listing normally earns 4–5%. Against a true 5% CTR that family
+should have produced 1,147 clicks; it produced 128, a z of −30.9. Against even
+2% it is −15.6. That is not a sampling artefact at any plausible baseline.
 
-## 6c. What to watch instead
+The single commercial query is directionally the same and must not be leaned
+on: **`/tamoxifen-inducible-cre/` at position 5.3, 0 clicks from 105
+impressions.** Zero clicks from 105 impressions has a 0.5% probability against
+a true 5% CTR and a 1.4% probability against 4% — so it does firmly reject
+*normal* position-5 performance. But against a true 2% it happens 12% of the
+time, and against 1%, 35%. The row rejects "this converts normally"; it does
+not by itself establish "this converts at nothing". Credit to the
+competitive-audit session for catching that the strong conclusion was resting
+on the weak half of the evidence.
 
-Re-measure these exact figures at week 4:
+Taken together: the suppression established in §6b is **not confined to
+definitional queries**. It reaches the buying terms. That closes off the easy
+reading of §6b — that the site merely attracts the wrong audience — and
+replaces it with a harder one: ITL ranks on page one for the right queries and
+earns almost nothing from them, because the SERP resolves the question above
+the fold.
 
-1. **Commercial-term absence, which is the real pattern.** APOE at 4
-   impressions and position 25.5 is not an anomaly — it is what the site looks
-   like on every buying term. 475K impressions and the only high-converting
-   query is the company's own name. The competitive audit found ITL missing
-   from high-intent humanized and antibody-target queries while holding 1,620
-   Target-Humanized models, 578 of them live. Both reads agree: the site is
-   visible on definitional terms and absent on commercial ones.
+**But the commercial prize here is small, which redirects the work.** That
+query is 105 impressions a quarter. At a normal position-5 CTR it yields about
+5–7 clicks; even at a hypothetical 100% it is 105. The whole CreERT2 family at
+a normal 4–5% would be roughly 900–1,150 clicks, and that family leans
+definitional. So the commercial queries ITL *appears* on are both suppressed
+and tiny, while the high-volume impressions are definitional.
+
+Which sharpens the conclusion rather than softening it. **The gap is not
+conversion on existing commercial impressions — it is that ITL has no presence
+at all on the commercial queries that carry volume.** That is the humanized and
+antibody-target absence in `seo-competitive-audit-2026-11.md`: 1,620
+Target-Humanized models, 578 of them live, and no visibility on the queries a
+buyer of those models types. You cannot improve a listing that does not exist.
+
+### Procedural rule, which caught both sessions
+
+**An aggregate cannot support a claim at a finer grain than the aggregate.**
+The audit session read page totals as a query-level fact and proposed a
+consolidation Google had already decided against. This session read a site-wide
+CTR as a page-level problem and proposed a titles project. Same error, opposite
+directions, both caught by dropping one level down before acting.
+
+## 6c. What the four weeks can honestly measure
+
+**Not ranking, and not CTR.** Both measure a surface ITL already occupies. The
+site ranks 5.3 on the commercial query it appears for and 5.4–9.3 on the
+definitional ones; ranking is not the binding constraint. And CTR on those
+listings is suppressed by the SERP itself, which no on-site change reaches.
+
+**The only honest four-week metric is whether ITL begins to appear at all on
+commercial queries it is currently absent from** — new impressions on humanized
+and antibody-target terms, measured from zero. It is slower and less flattering
+than CTR movement, and it is the metric that corresponds to the authority
+problem all three findings point at.
+
+Re-measure these at week 4:
+
+1. **Commercial-term absence, the real pattern.** APOE at 4 impressions and
+   position 25.5 is not an anomaly — it is what the site looks like on every
+   buying term. 475K impressions and the only high-converting query is the
+   company's own name. The audit found ITL missing from high-intent humanized
+   and antibody-target queries while holding 1,620 Target-Humanized models, 578
+   live. Both reads agree from opposite directions. **Baseline: zero
+   impressions on those terms.** Any movement off zero is the result.
 2. **"Discovered – currently not indexed" (24,345).** If it falls, crawl budget
    is being recovered. If it rises, the footprint is still growing faster than
    Google will take it.
