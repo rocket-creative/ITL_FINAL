@@ -224,6 +224,45 @@ query converts at 49%; definitional traffic is the largest *traffic* win
 available and close to the smallest *revenue* win. A 300% traffic increase that
 moves no quotes reads as success in a report and failure in the pipeline.
 
+## 6b-ii. A cannibalisation claim, tested and rejected — and what it found instead
+
+The competitive-audit session read the page table and proposed that the
+glossary entry was cannibalising the service page on a commercial term:
+
+| Page | Impressions | Clicks | Position |
+|---|---|---|---|
+| `/mouse-genetics-glossary/tamoxifen-inducible-cre/` | 22,932 | 128 | 6.0 |
+| `/tamoxifen-inducible-cre/` | 9,831 | 41 | 6.6 |
+
+A reasonable read of page-level totals, and it does not survive the query-level
+check. Filtering to the query **"tamoxifen inducible cre"** itself:
+
+| Page | Impressions | Clicks | Position |
+|---|---|---|---|
+| `/tamoxifen-inducible-cre/` (the service page) | 105 | 0 | **5.3** |
+| `/mouse-genetics-glossary/tamoxifen-inducible-cre/` | 42 | 0 | 13.2 |
+
+**Google picks the service page, by eight positions.** There is no
+cannibalisation on that query. The glossary page's 22,932 impressions come from
+a different family — `creert2`, `creert2 system`, `cre ert2 system`,
+`tamoxifen cre`, `creert2 tamoxifen inducible recombination review` — 98
+reported queries plus a long anonymised tail. The lesson is procedural: page
+totals aggregate across queries, so a page-level comparison cannot support a
+query-level claim. Do not consolidate these two pages.
+
+**What the check found instead is worse than cannibalisation.** On
+"tamoxifen inducible cre" the service page holds **position 5.3 and earns 0
+clicks from 105 impressions**. That is a commercial query — a researcher
+scoping an inducible system, which ITL sells — and the AI Overview answers it
+before any organic listing. The glossary page's technical queries show the same
+shape: positions 4.1 to 8.6, CTR at or near zero.
+
+So the suppression established in §6b is **not confined to definitional
+queries**. It reaches the buying terms too. This closes off the easy reading of
+§6b — that the site merely attracts the wrong audience — and replaces it with a
+harder one: ITL ranks on page one for the right queries and earns nothing from
+them, because the SERP resolves the question above the fold.
+
 ## 6c. What to watch instead
 
 Re-measure these exact figures at week 4:
