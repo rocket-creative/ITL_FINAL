@@ -123,6 +123,18 @@ indexable pages carrying the claim, roughly **46 are demonstrably false** (14
 beyond capitalisation (mouse *Qk* → human **QKI**, *Hc* → **C5**). The rest
 were correct by nomenclature convention but asserted without a source.
 
+Follow-up measured 2026-11-10: `catalog_models.gene_name` is
+`model_abbreviation` cut at the first hyphen (true for 18,539 of 18,540 rows).
+That produces **144** distinct non-gene `gene_name` values — receptor names
+split mid-token (`hPD-1` → `hPD`, `h4-1BB` → `h4`, `hCTLA-4` → `hCTLA`), real
+hyphenated symbols decapitated (`H2-Aa` → `H2`, `Hba-a2` → `Hba`, `Nkx2-1` →
+`Nkx2`), promoters and loci treated as genes (`pAlb`, `R26`, `H11`, `Tigre`),
+and cuts inside parentheses (`hALB(M-NSG)` → `hALB(M`). All 144 exist as rows in
+`gene`; 35 claim a human ortholog; 281 indexable pages are affected. `gene.symbol`
+holds no hyphens at all (0 of 11,105), so the store cannot represent the correct
+values. Open for scientific review, not yet changed:
+`kristen-gene-name-worksheet-2026-11.md`.
+
 ### 074–076 — citation graph and entity consolidation
 
 **713 real publications had no structured data.** Every one is a peer-reviewed
@@ -164,9 +176,17 @@ Recorded because a report that omits them is not a report.
 2. **Overstated the duplicate-page defect**, calling the pages "byte-identical"
    and the scale "5,356 URLs". Measured: 120,878 vs 118,699 bytes, ~9,000 URLs.
    I also had the content difference backwards.
-3. **Overstated the ortholog fix** as removing "a false claim from ~8,060
-   pages". It removed an *unverified* claim from 8,060, of which ~46 are
-   demonstrably false. Corrected in §3 above.
+3. **Mis-framed the ortholog fix twice.** First as removing "a false claim from
+   ~8,060 pages"; then, over-correcting, as removing a merely *unverified* claim
+   of which ~46 were false. "Unverified" is too kind: the value was
+   `upper(symbol)` for **8,072 of 8,073** rows, so it was asserted by
+   construction, never looked up. It is right wherever mouse and human
+   nomenclature agree, which is why it reads as correct. Separately, on
+   2026-11-10 I measured **144** `gene` rows that are truncated fragments rather
+   than genes (`hPD` from `hPD-1`, `H2` from `H2-Aa`, `R26`, `pAlb`), 35 of them
+   carrying an ortholog claim. See
+   `kristen-gene-name-worksheet-2026-11.md`. The ~46 figure was a floor, not an
+   estimate.
 4. **Trusted a tool over ground truth.** `audit-schema` flagged
    `/mouse-breeding-services/` as exporting a breadcrumb it never rendered. I
    rendered it — then read the built HTML and found **two identical
