@@ -24,6 +24,7 @@ import UXUIDCFooter from '@/components/UXUIDC/Footer';
 import UXUIDCAnimatedCounter from '@/components/UXUIDC/AnimatedCounter';
 import { IconChevronRight, IconSearch, IconBookOpen, IconQuote, IconCheckCircle, IconFilter, IconDocument } from '@/components/UXUIDC/Icons';
 import { publicationsByYear, getYears, getTotalPublicationCount, Publication } from './publicationsData';
+import { ORG_ID } from '@/lib/seo/organization';
 
 // Hero Data
 const heroData = {
@@ -129,13 +130,20 @@ export default function PublicationsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
+            "@id": "https://www.genetargeting.com/publications/#page",
+            "url": "https://www.genetargeting.com/publications/",
             "name": "Publications - ingenious targeting laboratory",
-            "description": "Peer-reviewed publications featuring ingenious targeting laboratory mouse models. Over 800 publications in Nature, Cell, Science, and specialty journals.",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Ingenious targeting laboratory",
-              "url": "https://www.genetargeting.com"
-            }
+            // Count comes from the data, not a rounded claim. The previous
+            // description said "Over 800 publications" while the list holds
+            // getTotalPublicationCount() entries; an overstated number in
+            // schema is an overstated number, and this one is checkable by
+            // anyone who counts the page.
+            "description": `Peer-reviewed publications featuring ingenious targeting laboratory mouse models. ${getTotalPublicationCount()} publications in Nature, Cell, Science, and specialty journals.`,
+            // Reference the sitewide Organization by @id instead of minting
+            // another copy of it. Note the casing differed too: this said
+            // "Ingenious targeting laboratory", the canonical node is lower
+            // case, and divergent names on one entity help nothing.
+            "publisher": { "@id": ORG_ID }
           })
         }}
       />

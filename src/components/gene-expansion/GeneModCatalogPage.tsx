@@ -18,6 +18,8 @@ import { rationaleForModTissue } from '@/lib/seo/rationaleSnippets';
 import { buildTierGeneModFaqs } from '@/lib/seo/faqBuilders';
 import { getGeneMatchedPublications } from '@/lib/catalog/geneMatchedPublications';
 import { buildCatalogProductSchema } from '@/lib/seo/productSchema';
+import { citationNodes } from '@/lib/seo/citationSchema';
+import { organizationRef } from '@/lib/seo/organization';
 import { catalogModelsForSlug, slugDisplayLabel } from '@/lib/gene-expansion/catalogTypeMap';
 import { getPriorityGeneByMouseSymbol } from '@/data/priorityGenes';
 
@@ -91,6 +93,8 @@ export default function GeneModCatalogPage({
   const pubs = getGeneMatchedPublications(
     [geneName, priority?.humanSymbol, ...(priority?.aliases ?? [])].filter(Boolean) as string[],
   );
+
+  const pageUrl = `${BASE_URL}/all-catalog-mouse-models/gene/${encodeURIComponent(geneName)}/${modSlug}/`;
 
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -283,7 +287,22 @@ export default function GeneModCatalogPage({
             '@context': 'https://schema.org',
             '@graph': [
               {
+                // Primary node for the page. Before this the graph was a bag of
+                // Products with no anchor, so nothing said what the page itself
+                // was about or who stood behind it. `citation` lists the same
+                // papers rendered in the credibility block below — real
+                // articles with PMIDs, which is the one claim on this page a
+                // reader can independently check.
+                '@type': 'CollectionPage',
+                '@id': `${pageUrl}#page`,
+                url: pageUrl,
+                name: `${geneName} ${modLabel} mouse models`,
+                about: organizationRef,
+                ...(citationNodes(pubs) ? { citation: citationNodes(pubs) } : {}),
+              },
+              {
                 '@type': 'BreadcrumbList',
+                '@id': `${pageUrl}#breadcrumb`,
                 itemListElement: [
                   { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE_URL}/` },
                   { '@type': 'ListItem', position: 2, name: 'Catalog', item: `${BASE_URL}/all-catalog-mouse-models/` },
@@ -293,7 +312,9 @@ export default function GeneModCatalogPage({
               },
               ...(models.length > 0 ? productSchemas : []),
               {
+                // No SERP feature since 7 May 2026; see citationSchema.ts.
                 '@type': 'FAQPage',
+                '@id': `${pageUrl}#faq`,
                 mainEntity: faqs.map((f) => ({
                   '@type': 'Question',
                   name: f.question,

@@ -233,7 +233,9 @@ export default async function BuildInquiryGeneModPage({ ctx, modSlug }: BuildInq
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(buildBuildInquirySchemaGraph(gene, modelType, modSlug)),
+          // `pubs` is the same array the page renders above, so the citation
+          // nodes describe papers a reader can actually see and click.
+          __html: JSON.stringify(buildBuildInquirySchemaGraph(gene, modelType, modSlug, pubs)),
         }}
       />
     </div>

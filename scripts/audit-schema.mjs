@@ -376,7 +376,24 @@ function staticScan() {
     } else if (inlineBreadcrumbs > 1) {
       report('error', route, 'duplicate-type', `BreadcrumbList emitted ${inlineBreadcrumbs} times inline (${rel}).`);
     }
-    if (exportsBreadcrumb && !usesBreadcrumbComponent && inlineBreadcrumbs === 0 && !/\/thank-you\/$/.test(route) && route !== '/thank-you/') {
+    // A route may render the exported object directly —
+    // `JSON.stringify(breadcrumbSchema)` in layout.tsx — in which case there is
+    // no literal '@type': 'BreadcrumbList' anywhere in the route's own files,
+    // because generateBreadcrumbs() builds it in src/lib/seo. Counting only
+    // inline literals reported /mouse-breeding-services/ as unused when its
+    // layout.tsx had been rendering it all along, and acting on that warning
+    // added a second, duplicate BreadcrumbList to the page.
+    const rendersBreadcrumbExport = sources.some(
+      (s) => !/metadata\.tsx?$/.test(s.file) && /\bbreadcrumbSchema\b/.test(s.text),
+    );
+    if (
+      exportsBreadcrumb &&
+      !usesBreadcrumbComponent &&
+      !rendersBreadcrumbExport &&
+      inlineBreadcrumbs === 0 &&
+      !/\/thank-you\/$/.test(route) &&
+      route !== '/thank-you/'
+    ) {
       report(
         'warn',
         route,
