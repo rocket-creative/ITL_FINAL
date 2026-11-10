@@ -274,11 +274,14 @@ ranks. Full sourcing in `docs/seo-aeo-schema-framing-2026-11.md`.
    `docs/search-console-baseline-2026-11.md`. It settled the APOE diagnosis
    (no impressions, not a snippet problem) and overturned the recommendation
    in §6.
-2. **A decision on CTR, which is now the biggest available win.** 475,000
-   impressions at 0.8%. Rewriting titles and meta descriptions on the ten
-   pages that carry the impressions would move more than anything shipped in
-   this engagement, and needs no new content. Those ten pages are listed in
-   the baseline.
+2. ~~**A decision on CTR.**~~ **Struck 2026-11-10 after testing** — see §6b of
+   the baseline. Titles and snippets will not fix it. Positions are fine (5.4
+   to 9.3) and the homepage earns 9% CTR at position 8.5, so the site converts
+   at that depth; `what-is-a-point-mutation` earns 0.125% at position 8.2
+   because the SERP for "point mutation" is an AI Overview, a knowledge panel,
+   an image block and People Also Ask before any organic result. Same for
+   "tamoxifen inducible cre", where Nature and JAX hold the visible slots. Do
+   not spend the four weeks here.
 3. **A decision on what the educational content is for.** The glossary and
    blog pages earn almost all the visibility and almost none of the buyers.
    Either they are a brand-awareness play and the CTR does not matter, or they
@@ -304,7 +307,8 @@ Baselines are the 10 Nov figures in `search-console-baseline-2026-11.md`.
 | Cre driver/tissue cluster | 67 pages orphaned until 10 Nov | **Most likely real movement** — the clean before/after |
 | Catalog clicks | 2,440 | The floor to protect. A drop here is a loss whatever indexing does |
 | Discovered – currently not indexed | 24,345 | Falling = crawl budget recovering; rising = footprint outgrowing it |
-| Site CTR | 0.8% on 475K impressions | Flat unless titles and snippets are rewritten |
+| Site CTR | 0.8% on 475K impressions | Flat, and **not a target** — the high-impression SERPs are AI-Overview dominated (baseline §6b) |
+| Commercial-term visibility | APOE 4 impressions at 25.5; brand the only converting query | The real gap. Absent on buying terms, visible on definitional ones |
 | APOE position | 25.5, 4 impressions | Flat. If it moves, something larger changed |
 | Breadcrumb / Organization valid items | — | Improvement |
 | `ScholarlyArticle` parses | — | Valid, no rich result (none exists) |
