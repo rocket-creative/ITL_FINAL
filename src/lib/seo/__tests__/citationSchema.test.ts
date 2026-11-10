@@ -1,7 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import {
   citationNodes,
+  doiFromLink,
+  isPatent,
   parseAuthors,
+  pmcId,
   pubmedId,
   scholarlyArticleNode,
 } from '../citationSchema';
@@ -28,13 +31,55 @@ const noLink: Publication = {
 };
 
 describe('pubmedId', () => {
-  it('extracts the numeric id from a PubMed URL', () => {
+  it('extracts the numeric id from a modern PubMed URL', () => {
     expect(pubmedId(sod1.link)).toBe('42374077');
+  });
+
+  it('extracts the id from the LEGACY PubMed URL form too', () => {
+    // 453 of 713 records use this older host and path. Matching only the
+    // modern form left two thirds of the citations with no identifier.
+    expect(pubmedId('https://www.ncbi.nlm.nih.gov/pubmed/32160286')).toBe('32160286');
   });
 
   it('returns null for a missing or non-PubMed link', () => {
     expect(pubmedId(undefined)).toBeNull();
     expect(pubmedId('https://example.com/article')).toBeNull();
+  });
+});
+
+describe('pmcId', () => {
+  it('extracts a PMC id', () => {
+    expect(pmcId('https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10555862/')).toBe('PMC10555862');
+  });
+
+  it('returns null when there is no PMC id', () => {
+    expect(pmcId(sod1.link)).toBeNull();
+  });
+});
+
+describe('doiFromLink', () => {
+  it('pulls the DOI out of a bioRxiv preprint URL', () => {
+    // These 24 records have no PMID or PMCID; the DOI in the path is the only
+    // identifier they carry.
+    expect(doiFromLink('https://www.biorxiv.org/content/10.1101/2023.11.22.568286v1.article-info')).toBe(
+      '10.1101/2023.11.22.568286',
+    );
+  });
+
+  it('returns null when no DOI is embedded', () => {
+    expect(doiFromLink('https://www.nature.com/articles/s44298-024-00048-y#citeas')).toBeNull();
+  });
+});
+
+describe('isPatent', () => {
+  it('recognises the three patent hosts in the data', () => {
+    expect(isPatent('https://patents.google.com/patent/US1234567B2/en')).toBe(true);
+    expect(isPatent('https://www.freepatentsonline.com/1234567.html')).toBe(true);
+    expect(isPatent('https://patentimages.storage.googleapis.com/x.pdf')).toBe(true);
+  });
+
+  it('does not treat a paper as a patent', () => {
+    expect(isPatent(sod1.link)).toBe(false);
   });
 });
 
@@ -103,5 +148,21 @@ describe('citationNodes', () => {
     const nodes = citationNodes([sod1, noLink]);
     expect(nodes).toHaveLength(2);
     expect(nodes?.[0].headline).toBe(sod1.title);
+  });
+
+  it('excludes patents, which are not scholarly articles', () => {
+    // 13 records are patents. They are real and stay in the visible list, but
+    // typing one as a ScholarlyArticle asserts something false, and `citation`
+    // on a service page reads as peer-reviewed validation.
+    const patent: Publication = {
+      authors: 'Inventor A.',
+      year: 2020,
+      title: 'Method for generating a mouse',
+      journal: 'US Patent',
+      volume: 'US1234567B2',
+      link: 'https://patents.google.com/patent/US1234567B2/en',
+    };
+    expect(citationNodes([patent])).toBeUndefined();
+    expect(citationNodes([sod1, patent])).toHaveLength(1);
   });
 });

@@ -30,11 +30,53 @@
 
 import type { Publication } from '@/app/publications/publicationsData';
 
-/** PubMed numeric id, when the stored link is a PubMed URL. */
+/**
+ * PubMed numeric id, from either URL form the data actually uses.
+ *
+ * Matching only `pubmed.ncbi.nlm.nih.gov/<id>` covered 211 of 713 records.
+ * The majority — 453 — use the legacy `www.ncbi.nlm.nih.gov/pubmed/<id>`
+ * host and path, so two thirds of the citations carried no identifier at all
+ * until this matched both. Caught by verify-schema-live asserting that a node
+ * with a `url` must also carry an identifier.
+ */
 export function pubmedId(link: string | undefined): string | null {
   if (!link) return null;
-  const m = link.match(/pubmed\.ncbi\.nlm\.nih\.gov\/(\d+)/i);
+  const m = link.match(/ncbi\.nlm\.nih\.gov\/(?:pubmed\/|\?term=)?(\d+)/i)
+    ?? link.match(/pubmed\.ncbi\.nlm\.nih\.gov\/(\d+)/i);
   return m ? m[1] : null;
+}
+
+/** PubMed Central id, e.g. .../pmc/articles/PMC10555862/ */
+export function pmcId(link: string | undefined): string | null {
+  if (!link) return null;
+  const m = link.match(/\/pmc\/articles\/(PMC\d+)/i);
+  return m ? m[1].toUpperCase() : null;
+}
+
+/**
+ * DOI, where the link embeds one. bioRxiv preprint URLs carry the DOI in the
+ * path (`/content/10.1101/2023.11.22.568286v1...`), which is the only
+ * identifier those 24 records have.
+ */
+export function doiFromLink(link: string | undefined): string | null {
+  if (!link) return null;
+  const m = link.match(/\/(10\.\d{4,9}\/[^\s"?#]+?)(?:v\d+)?(?:\.(?:article-info|abstract|full))?(?:[?#]|$)/i);
+  return m ? m[1] : null;
+}
+
+/**
+ * True when the link points at a patent rather than a paper.
+ *
+ * 13 records are patents (patents.google.com, freepatentsonline,
+ * patentimages). They are real and they belong on the publications page, but
+ * typing a patent as a `ScholarlyArticle` asserts something false about what
+ * the document is, and `citation` on a service page is read as peer reviewed
+ * validation. They are excluded from the citation graph and keep their place
+ * in the visible list.
+ */
+export function isPatent(link: string | undefined): boolean {
+  if (!link) return false;
+  return /patents\.google\.com|freepatentsonline\.com|patentimages\.storage/i.test(link);
 }
 
 /**
@@ -67,6 +109,8 @@ function journalName(journal: string): string {
  */
 export function scholarlyArticleNode(pub: Publication): Record<string, unknown> {
   const pmid = pubmedId(pub.link);
+  const pmc = pmcId(pub.link);
+  const doi = pmid || pmc ? null : doiFromLink(pub.link);
   const authors = parseAuthors(pub.authors);
 
   const node: Record<string, unknown> = {
@@ -85,9 +129,18 @@ export function scholarlyArticleNode(pub: Publication): Record<string, unknown> 
     node.author = authors.map((name) => ({ '@type': 'Person', name }));
   }
 
-  if (pmid) {
-    node.identifier = { '@type': 'PropertyValue', propertyID: 'PMID', value: pmid };
-  }
+  // One identifier, most specific first. PMID and PMCID both resolve to a
+  // record; a DOI is used only where neither exists, as on the bioRxiv
+  // preprints, so a preprint is still identifiable without being passed off
+  // as a journal article.
+  const identifier = pmid
+    ? { '@type': 'PropertyValue', propertyID: 'PMID', value: pmid }
+    : pmc
+      ? { '@type': 'PropertyValue', propertyID: 'PMCID', value: pmc }
+      : doi
+        ? { '@type': 'PropertyValue', propertyID: 'DOI', value: doi }
+        : null;
+  if (identifier) node.identifier = identifier;
 
   return node;
 }
@@ -97,8 +150,9 @@ export function scholarlyArticleNode(pub: Publication): Record<string, unknown> 
  * matched papers — an empty array asserts nothing and only adds bytes.
  */
 export function citationNodes(pubs: Publication[]): Record<string, unknown>[] | undefined {
-  if (pubs.length === 0) return undefined;
-  return pubs.map(scholarlyArticleNode);
+  const papers = pubs.filter((p) => !isPatent(p.link));
+  if (papers.length === 0) return undefined;
+  return papers.map(scholarlyArticleNode);
 }
 
 /**
