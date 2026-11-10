@@ -165,15 +165,47 @@ console.log('\n3. the cited PMIDs are real, and say what we claim they say');
 // No contact address is sent. NCBI invites a tool and email parameter; the
 // tool name is enough to identify the client and the email is not ours to
 // share.
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+/**
+ * One esummary lookup, throttled and retried once.
+ *
+ * E-utilities allows 3 requests/second without an API key. Firing four in a
+ * tight loop got the fourth throttled, and the verifier reported PMID
+ * 20833395 as "not a real record" when a direct query returns it fine
+ * (Atherosclerosis, Zack M). A verifier that cries wolf is as useless as one
+ * that passes everything, so pace the requests and distinguish a throttle
+ * from a genuine miss.
+ */
+async function esummary(pmid) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    await sleep(attempt === 0 ? 400 : 1500);
+    try {
+      const res = await fetch(
+        `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${pmid}&retmode=json&tool=itl-schema-verifier`,
+      );
+      if (res.status === 429) continue;
+      const json = await res.json();
+      const rec = json?.result?.[pmid];
+      if (rec && !rec.error) return rec;
+      // An explicit error is a real answer; an absent record may be a throttle.
+      if (rec?.error) return { error: rec.error };
+    } catch {
+      /* retry */
+    }
+  }
+  return null;
+}
+
 for (const [r, pmid, claimed] of citationsToCheck.slice(0, 4)) {
   try {
-    const res = await fetch(
-      `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${pmid}&retmode=json&tool=itl-schema-verifier`,
-    );
-    const json = await res.json();
-    const rec = json?.result?.[pmid];
-    if (!rec || rec.error) {
-      bad(`PMID ${pmid} (${r}) is not a real record: ${rec?.error ?? 'no result'}`);
+    const rec = await esummary(pmid);
+    if (!rec) {
+      bad(`PMID ${pmid} (${r}) could not be checked after 2 attempts — treat as unverified, not as fake`);
+      continue;
+    }
+    if (rec.error) {
+      bad(`PMID ${pmid} (${r}) is not a real record: ${rec.error}`);
       continue;
     }
     ok(`PMID ${pmid} is a real record`);
